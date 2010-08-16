@@ -29,13 +29,19 @@ import org.eclipselabs.emf.scaffolding.tests.BaseTest;
 import org.eclipselabs.emf.scaffolding.tests.model1.Application;
 import org.eclipselabs.emf.scaffolding.tests.model1.DAO;
 import org.eclipselabs.emf.scaffolding.tests.model1.Entity;
+import org.eclipselabs.emf.scaffolding.tests.model1.Method;
 import org.eclipselabs.emf.scaffolding.tests.model1.Model1Factory;
 import org.junit.Test;
 
 public class DRLRuleTest extends BaseTest{
 
+	/**
+	 * Proves that scaffolding is fired on collection add
+	 * 
+	 * @throws Exception
+	 */
 	@Test
-	public void scaffoldFromDRL() throws Exception {
+	public void daoShouldBeScaffoldedWhenEntityWithNameIsAddedToApplication() throws Exception {
 		Application application = Model1Factory.eINSTANCE.createApplication();
 
 		//Init Knowledge Base from drl files
@@ -54,13 +60,92 @@ public class DRLRuleTest extends BaseTest{
 
 		Entity user = Model1Factory.eINSTANCE.createEntity();
 		user.setName("user");
+
 		application.getElements().add(user);
 
-		assertEquals(2, application.getElements().size());
+		assertEquals("DAO was not scaffolded on composition add", 2, application.getElements().size());
 		DAO userDao = (DAO) application.getElements().get(1);
 		assertNotNull(userDao);
 		assertEquals(user, userDao.getEntity());
 		
+	}
+
+	/**
+	 * Proves that scaffolding is fired on property set
+	 * 
+	 * @throws Exception
+	 */
+	@Test
+	public void daoShouldBeScaffoldedWhenEntityNameIsSet() throws Exception {
+		Application application = Model1Factory.eINSTANCE.createApplication();
+
+		//Init Knowledge Base from drl files
+		KnowledgeBase kbase = KnowledgeBaseFactory.newKnowledgeBase();
+		KnowledgeBuilderConfiguration knowledgeBuilderConfig = KnowledgeBuilderFactory.newKnowledgeBuilderConfiguration();
+		KnowledgeBuilder kbuilder = KnowledgeBuilderFactory
+				.newKnowledgeBuilder(knowledgeBuilderConfig);
+		kbuilder.add(ResourceFactory.newClassPathResource("/Entity2Dao.drl",
+				DRLRuleTest.class), ResourceType.DRL);
+		Collection<KnowledgePackage> pkgs = kbuilder.getKnowledgePackages();
+		kbase.addKnowledgePackages(pkgs);
+
+		//Init Exec environment
+		ScaffoldingExecutionEnvironment execEnv = new ScaffoldingExecutionEnvironment(kbase);
+		execEnv.register(application);
+
+		Entity user = Model1Factory.eINSTANCE.createEntity();
+		assertEquals(0, application.getElements().size());
+		application.getElements().add(user);
+		assertEquals("Something has been scaffolded when it shouldn't have been", 1, application.getElements().size());
+
+		user.setName("user");
+
+		assertEquals("DAO was not scaffolded on property set", 2, application.getElements().size());
+
+		DAO userDao = (DAO) application.getElements().get(1);
+		assertNotNull(userDao);
+		assertEquals(user, userDao.getEntity());
+	}
+
+	/**
+	 * Proves that scaffolded elements can themselves be scaffolded
+	 * 
+	 * @throws Exception
+	 */
+	@Test
+	public void daoFindByIdMethodShouldBeScaffoldedAfterDaoHasBeenScaffolded() throws Exception {
+		Application application = Model1Factory.eINSTANCE.createApplication();
+
+		//Init Knowledge Base from drl files
+		KnowledgeBase kbase = KnowledgeBaseFactory.newKnowledgeBase();
+		KnowledgeBuilderConfiguration knowledgeBuilderConfig = KnowledgeBuilderFactory.newKnowledgeBuilderConfiguration();
+		KnowledgeBuilder kbuilder = KnowledgeBuilderFactory
+				.newKnowledgeBuilder(knowledgeBuilderConfig);
+		kbuilder.add(ResourceFactory.newClassPathResource("/Entity2Dao.drl",
+				DRLRuleTest.class), ResourceType.DRL);
+		kbuilder.add(ResourceFactory.newClassPathResource("/Dao2CrudMethods.drl",
+				DRLRuleTest.class), ResourceType.DRL);
+		Collection<KnowledgePackage> pkgs = kbuilder.getKnowledgePackages();
+		kbase.addKnowledgePackages(pkgs);
+
+		//Init Exec environment
+		ScaffoldingExecutionEnvironment execEnv = new ScaffoldingExecutionEnvironment(kbase);
+		execEnv.register(application);
+
+		Entity user = Model1Factory.eINSTANCE.createEntity();
+		user.setName("user");
+		assertEquals(0, application.getElements().size());
+		application.getElements().add(user);
+		assertEquals(2, application.getElements().size());
+		DAO userDao = (DAO) application.getElements().get(1);
+		assertNotNull(userDao);
+		assertEquals(user, userDao.getEntity());
+
+		assertNotNull(userDao.getMethods());
+		assertEquals(1, userDao.getMethods().size());
+		
+		Method findById = userDao.getMethods().get(0);
+		assertEquals("findById", findById.getName());
 	}
 
 }

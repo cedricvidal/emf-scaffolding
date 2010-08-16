@@ -1,0 +1,21 @@
+package org.eclipselabs.emf.scaffolding.tests
+
+import org.eclipselabs.emf.scaffolding.tests.model1.Application
+import org.eclipselabs.emf.scaffolding.tests.model1.DAO
+import org.eclipselabs.emf.scaffolding.tests.model1.Entity
+import org.eclipselabs.emf.scaffolding.tests.model1.Model1Factory
+
+rule "DaoFindById"
+	when
+		$dao		: DAO( name : name )
+		not (
+			Method(name=="findById") from $dao.methods
+			)
+	then
+		System.out.println( "Scaffolding findBydId for DAO " + name ); 
+
+		Method findById = Model1Factory.eINSTANCE.createMethod();
+		findById.setName("findById");
+
+		$dao.getMethods().add(findById);
+end
