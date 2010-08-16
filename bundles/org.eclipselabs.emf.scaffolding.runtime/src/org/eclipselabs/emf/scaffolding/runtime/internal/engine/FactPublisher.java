@@ -14,7 +14,9 @@ package org.eclipselabs.emf.scaffolding.runtime.internal.engine;
 import org.drools.runtime.StatefulKnowledgeSession;
 import org.drools.runtime.rule.FactHandle;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.EContentAdapter;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 
 public class FactPublisher extends EContentAdapter {
 
@@ -30,7 +32,7 @@ public class FactPublisher extends EContentAdapter {
 		// System.out.println("FactPublisher.notifyChanged -> " +
 		// notification.getNewValue() + " - " + notification);
 
-		//Object notifier = notification.getNotifier();
+		Object notifier = notification.getNotifier();
 
 		// If the user modifies a scaffolded element, he takes ownership
 		/*
@@ -41,11 +43,12 @@ public class FactPublisher extends EContentAdapter {
 
 		super.notifyChanged(notification);
 
-		if (notification.getEventType() == Notification.ADD) {
-			Object added = notification.getNewValue();
-			insertOrUpdate(added);
-		}
-		// insertOrUpdate(notifier);
+//		if (notification.getEventType() == Notification.ADD) {
+//			Object added = notification.getNewValue();
+//			insertOrUpdate(added);
+//		}
+
+		insertOrUpdate(notifier);
 		statefulKnowledgeSession.fireAllRules();
 	}
 
@@ -63,18 +66,34 @@ public class FactPublisher extends EContentAdapter {
 				|| t == Notification.UNSET;
 	}
 */
-	private void insertOrUpdate(Object notifier) {
-		FactHandle factHandle = statefulKnowledgeSession.getFactHandle(notifier);
+	private void insertOrUpdate(Object object) {
+		FactHandle factHandle = statefulKnowledgeSession.getFactHandle(object);
 		if (factHandle == null) {
-			statefulKnowledgeSession.insert(notifier);
+			statefulKnowledgeSession.insert(object);
 		} else {
-			statefulKnowledgeSession.update(factHandle, notifier);
+			statefulKnowledgeSession.update(factHandle, object);
 		}
 	}
 
-	// @Override
-	// protected void setTarget(EObject target) {
-	// super.setTarget(target);
-	// insertOrUpdate(target);
-	// }
+	/**
+	 * When an eobject is configured with this adapter, it should be inserted into working memory
+	 * 
+	 * @see org.eclipse.emf.ecore.util.EContentAdapter#setTarget(org.eclipse.emf.ecore.EObject)
+	 */
+	@Override
+	protected void setTarget(EObject target) {
+		super.setTarget(target);
+		insertOrUpdate(target);
+	}
+
+	/**
+	 * Important for <code>EcoreUtil.getExistingAdapter(object, FactPublisher.class)</code> to work
+	 * 
+	 * @see org.eclipse.emf.common.notify.impl.AdapterImpl#isAdapterForType(java.lang.Object)
+	 */
+	@Override
+	public boolean isAdapterForType(Object type) {
+		return FactPublisher.class == type;
+	}
+
 }
