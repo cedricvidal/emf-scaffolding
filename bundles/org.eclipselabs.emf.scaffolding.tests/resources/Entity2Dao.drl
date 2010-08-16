@@ -1,4 +1,4 @@
-package org.eclipselabs.emf.scaffolding.tests
+package org.eclipselabs.emf.scaffolding.tests.entity2dao
 
 import org.eclipselabs.emf.scaffolding.tests.model1.Application
 import org.eclipselabs.emf.scaffolding.tests.model1.DAO

@@ -1,9 +1,10 @@
-package org.eclipselabs.emf.scaffolding.tests
+package org.eclipselabs.emf.scaffolding.tests.dao2crudMethods
 
 import org.eclipselabs.emf.scaffolding.tests.model1.Application
 import org.eclipselabs.emf.scaffolding.tests.model1.DAO
 import org.eclipselabs.emf.scaffolding.tests.model1.Entity
 import org.eclipselabs.emf.scaffolding.tests.model1.Model1Factory
+import org.eclipselabs.emf.scaffolding.tests.model1.Method
 
 rule "DaoFindById"
 	when

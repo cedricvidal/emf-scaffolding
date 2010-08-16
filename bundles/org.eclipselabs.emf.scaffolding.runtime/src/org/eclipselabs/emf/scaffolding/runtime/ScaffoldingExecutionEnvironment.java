@@ -26,12 +26,20 @@ public class ScaffoldingExecutionEnvironment {
 	FactPublisher factPublisher;
 
 	public ScaffoldingExecutionEnvironment(KnowledgeBase kbase) {
-	    StatefulKnowledgeSession statefulKnowledgeSession = kbase.newStatefulKnowledgeSession();
-	    statefulKnowledgeSession.addEventListener(new DebugWorkingMemoryEventListener());
+	    this(createSession(kbase));
+	}
+
+	public ScaffoldingExecutionEnvironment(StatefulKnowledgeSession statefulKnowledgeSession) {
 	    this.factPublisher = new FactPublisher();
 		factPublisher.setStatefulKnowledgeSession(statefulKnowledgeSession);
 	}
 
+	private static StatefulKnowledgeSession createSession(KnowledgeBase kbase) {
+		StatefulKnowledgeSession statefulKnowledgeSession = kbase.newStatefulKnowledgeSession();
+		statefulKnowledgeSession.addEventListener(new DebugWorkingMemoryEventListener());
+		return statefulKnowledgeSession;
+	}
+	
 	public void register(EObject object) {
 		if (!isConfigured(object)) {
 			object.eAdapters().add(factPublisher);

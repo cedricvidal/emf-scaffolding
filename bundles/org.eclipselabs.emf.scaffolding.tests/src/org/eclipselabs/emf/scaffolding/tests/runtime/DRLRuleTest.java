@@ -11,7 +11,8 @@
  *******************************************************************************/
 package org.eclipselabs.emf.scaffolding.tests.runtime;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 
 import java.util.Collection;
@@ -20,10 +21,13 @@ import org.drools.KnowledgeBase;
 import org.drools.KnowledgeBaseFactory;
 import org.drools.builder.KnowledgeBuilder;
 import org.drools.builder.KnowledgeBuilderConfiguration;
+import org.drools.builder.KnowledgeBuilderError;
 import org.drools.builder.KnowledgeBuilderFactory;
 import org.drools.builder.ResourceType;
 import org.drools.definition.KnowledgePackage;
+import org.drools.event.rule.DebugWorkingMemoryEventListener;
 import org.drools.io.ResourceFactory;
+import org.drools.runtime.StatefulKnowledgeSession;
 import org.eclipselabs.emf.scaffolding.runtime.ScaffoldingExecutionEnvironment;
 import org.eclipselabs.emf.scaffolding.tests.BaseTest;
 import org.eclipselabs.emf.scaffolding.tests.model1.Application;
@@ -68,7 +72,78 @@ public class DRLRuleTest extends BaseTest{
 		DAO userDao = (DAO) application.getElements().get(1);
 		assertNotNull(userDao);
 		assertEquals(user, userDao.getEntity());
+		assertScaffoldingAdapterIsRegistered(userDao);
+
+	}
+
+	@Test
+	public void adapterShouldBeAttachedToElementsAddedToContainmentReferences() throws Exception {
+		Application application = Model1Factory.eINSTANCE.createApplication();
+
+		//Init Knowledge Base from drl files
+		KnowledgeBase kbase = KnowledgeBaseFactory.newKnowledgeBase();
+		KnowledgeBuilderConfiguration knowledgeBuilderConfig = KnowledgeBuilderFactory.newKnowledgeBuilderConfiguration();
+		KnowledgeBuilder kbuilder = KnowledgeBuilderFactory
+				.newKnowledgeBuilder(knowledgeBuilderConfig);
+		Collection<KnowledgePackage> pkgs = kbuilder.getKnowledgePackages();
+		kbase.addKnowledgePackages(pkgs);
+
+		//Init Exec environment
+		StatefulKnowledgeSession ksession = kbase.newStatefulKnowledgeSession();
+		ksession.addEventListener(new DebugWorkingMemoryEventListener());
+
+		ScaffoldingExecutionEnvironment execEnv = new ScaffoldingExecutionEnvironment(ksession);
+		execEnv.register(application);
+
+		Entity user = Model1Factory.eINSTANCE.createEntity();
+		user.setName("user");
+
+		application.getElements().add(user);
 		assertScaffoldingAdapterIsRegistered(user);
+	}
+
+	@Test
+	public void adapterShouldNotBeAttachedToInsertedFacts() throws Exception {
+		Application application = Model1Factory.eINSTANCE.createApplication();
+
+		//Init Knowledge Base from drl files
+		KnowledgeBase kbase = KnowledgeBaseFactory.newKnowledgeBase();
+		KnowledgeBuilderConfiguration knowledgeBuilderConfig = KnowledgeBuilderFactory.newKnowledgeBuilderConfiguration();
+		KnowledgeBuilder kbuilder = KnowledgeBuilderFactory
+				.newKnowledgeBuilder(knowledgeBuilderConfig);
+		kbuilder.add(ResourceFactory.newClassPathResource("/Entity2Dao.drl",
+				DRLRuleTest.class), ResourceType.DRL);
+		Collection<KnowledgePackage> pkgs = kbuilder.getKnowledgePackages();
+		kbase.addKnowledgePackages(pkgs);
+
+		StatefulKnowledgeSession ksession = kbase.newStatefulKnowledgeSession();
+		ksession.addEventListener(new DebugWorkingMemoryEventListener());
+		
+		ksession.insert(application);
+		assertFalse("Scaffolding adapter should not be registered", ScaffoldingExecutionEnvironment.isConfigured(application));
+
+	}
+
+	@Test
+	public void configuredElementsShouldBeInsertedIntoWorkingMemory() throws Exception {
+		Application application = Model1Factory.eINSTANCE.createApplication();
+
+		//Init Knowledge Base from drl files
+		KnowledgeBase kbase = KnowledgeBaseFactory.newKnowledgeBase();
+		KnowledgeBuilderConfiguration knowledgeBuilderConfig = KnowledgeBuilderFactory.newKnowledgeBuilderConfiguration();
+		KnowledgeBuilder kbuilder = KnowledgeBuilderFactory
+				.newKnowledgeBuilder(knowledgeBuilderConfig);
+		Collection<KnowledgePackage> pkgs = kbuilder.getKnowledgePackages();
+		kbase.addKnowledgePackages(pkgs);
+
+		//Init Exec environment
+		StatefulKnowledgeSession ksession = kbase.newStatefulKnowledgeSession();
+		ksession.addEventListener(new DebugWorkingMemoryEventListener());
+
+		ScaffoldingExecutionEnvironment execEnv = new ScaffoldingExecutionEnvironment(ksession);
+		execEnv.register(application);
+
+		assertNotNull("Configured EObject has not been inserted into working memory", ksession.getFactHandle(application));
 
 	}
 
@@ -129,6 +204,11 @@ public class DRLRuleTest extends BaseTest{
 				DRLRuleTest.class), ResourceType.DRL);
 		kbuilder.add(ResourceFactory.newClassPathResource("/Dao2CrudMethods.drl",
 				DRLRuleTest.class), ResourceType.DRL);
+		for (KnowledgeBuilderError error : kbuilder.getErrors()) {
+			System.err.println(error);
+		}
+		assertEquals(0, kbuilder.getErrors().size());
+
 		Collection<KnowledgePackage> pkgs = kbuilder.getKnowledgePackages();
 		kbase.addKnowledgePackages(pkgs);
 
