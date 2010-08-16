@@ -11,7 +11,7 @@
  *******************************************************************************/
 package org.eclipselabs.emf.scaffolding.tests.runtime;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 import static org.junit.Assert.assertNotNull;
 
 import java.util.Collection;
@@ -62,12 +62,14 @@ public class DRLRuleTest extends BaseTest{
 		user.setName("user");
 
 		application.getElements().add(user);
+		assertScaffoldingAdapterIsRegistered(user);
 
 		assertEquals("DAO was not scaffolded on composition add", 2, application.getElements().size());
 		DAO userDao = (DAO) application.getElements().get(1);
 		assertNotNull(userDao);
 		assertEquals(user, userDao.getEntity());
-		
+		assertScaffoldingAdapterIsRegistered(user);
+
 	}
 
 	/**
@@ -97,6 +99,7 @@ public class DRLRuleTest extends BaseTest{
 		assertEquals(0, application.getElements().size());
 		application.getElements().add(user);
 		assertEquals("Something has been scaffolded when it shouldn't have been", 1, application.getElements().size());
+		assertScaffoldingAdapterIsRegistered(user);
 
 		user.setName("user");
 
@@ -105,6 +108,7 @@ public class DRLRuleTest extends BaseTest{
 		DAO userDao = (DAO) application.getElements().get(1);
 		assertNotNull(userDao);
 		assertEquals(user, userDao.getEntity());
+		assertScaffoldingAdapterIsRegistered(userDao);
 	}
 
 	/**
@@ -136,16 +140,20 @@ public class DRLRuleTest extends BaseTest{
 		user.setName("user");
 		assertEquals(0, application.getElements().size());
 		application.getElements().add(user);
+		assertScaffoldingAdapterIsRegistered(user);
+
 		assertEquals(2, application.getElements().size());
 		DAO userDao = (DAO) application.getElements().get(1);
 		assertNotNull(userDao);
 		assertEquals(user, userDao.getEntity());
+		assertScaffoldingAdapterIsRegistered(userDao);
 
 		assertNotNull(userDao.getMethods());
 		assertEquals(1, userDao.getMethods().size());
 		
 		Method findById = userDao.getMethods().get(0);
 		assertEquals("findById", findById.getName());
+		assertScaffoldingAdapterIsRegistered(findById);
 	}
 
 }

@@ -11,8 +11,12 @@
  *******************************************************************************/
 package org.eclipselabs.emf.scaffolding.tests;
 
+import static org.junit.Assert.assertTrue;
+
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipselabs.emf.scaffolding.language.EMFScaffoldingDSLStandaloneSetup;
+import org.eclipselabs.emf.scaffolding.runtime.ScaffoldingExecutionEnvironment;
 import org.eclipselabs.emf.scaffolding.tests.model1.Model1Package;
 import org.junit.After;
 import org.junit.Before;
@@ -34,5 +38,9 @@ public class BaseTest {
 	@After
 	public void doTearDown(){
 		Thread.currentThread().setContextClassLoader(origCl);	       
+	}
+
+	public static void assertScaffoldingAdapterIsRegistered(EObject object) {
+		assertTrue("Scaffolding adapter is not registered", ScaffoldingExecutionEnvironment.isConfigured(object));
 	}
 }

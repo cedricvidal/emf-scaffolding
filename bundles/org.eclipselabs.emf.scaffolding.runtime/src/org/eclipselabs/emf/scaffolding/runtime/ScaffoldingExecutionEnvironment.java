@@ -38,7 +38,7 @@ public class ScaffoldingExecutionEnvironment {
 		}
 	}
 
-	private boolean isConfigured(EObject object) {
+	public static boolean isConfigured(EObject object) {
 		return EcoreUtil.getExistingAdapter(object, FactPublisher.class) != null;
 	}
 
