@@ -1,0 +1,3 @@
+glob:bin
+glob:*_gen
+glob:src-gen

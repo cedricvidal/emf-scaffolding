@@ -1,0 +1,113 @@
+grammar org.eclipselabs.emf.scaffolding.language.EMFScaffoldingDSL with org.eclipse.xtext.common.Terminals
+
+
+generate emfscaffoldingdsl "http://www.eclipselabs.org/emf/scaffolding/1.0.0"
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+Scaffolding :
+	scaffold=Scaffold
+	(elements+=ScaffoldingElement)*
+	;
+
+ScaffoldingElement : Rule | Function;
+
+Scaffold:
+	'scaffold' refPackage=STRING;
+
+Rule :
+	'rule' name=ID
+		when=WhenBlock
+		then=ThenBlock
+	;
+
+WhenBlock :
+	'when' ('{'
+		matches += Match*
+	'}'
+	| matches += Match);
+
+Binding : Match | Param | Statement;
+
+Match :
+	(var=Variable ':')? type=[ecore::EClass] ('(' (params += Param (',' params += Param)*)? ')')?;
+
+Variable :
+	name = ID;
+
+Param :
+	 property=BindingExpression (':' var=Variable)?;
+
+BindingExpression :
+	BindingTerminalExpression ({BindingOperation.left=current} 
+		op=('<'|'>'|'='|'!='|'+'|'-'|'>='|'<='|'/'|'*') right=BindingExpression)?
+	;
+
+BindingTerminalExpression returns BindingExpression:
+	'(' BindingExpression ')' |
+	ListLiteral |
+	StringLiteral |
+	NullLiteral |
+	FeatureRefLiteral |
+//	{NotBindingExpression} '!' exp=BindingExpression |
+	{FunctionLiteral} function=[Function] ('(' exp=BindingExpression ')') |
+	{IntLiteral} value=INT
+	;
+
+FeatureRefLiteral :
+	 ref=[ecore::EStructuralFeature];
+
+ThenBlock :
+	('then' | '->') ('{'
+		statements += Statement*
+	'}'
+	| statements += Statement);
+
+Statement : CreateStatement | UpdateStatement;
+
+CreateStatement :
+	(var=Variable ':')? expression=Expression;
+
+CreateClass :
+	'new' type=[ecore::EClass] ('{' (setters += Setter (',' setters += Setter)*)? '}')?;
+
+StringLiteral :
+	value=STRING;
+
+NullLiteral : 'null';
+
+ListLiteral :
+	'[' (items+=Expression (',' items+=Expression)*)? ']';
+
+VarRefLiteral :
+	'$' varRef=[Variable];
+
+Setter :
+	property=[ecore::EStructuralFeature] (':'|'+=') expression=Expression (guard?='guard')?;
+
+Expression :
+	TerminalExpression ({Operation.left=current} 
+	op=('<'|'>'|'='|'+'|'-'|'>='|'<='|'/'|'*') right=Expression)?
+	;
+
+TerminalExpression returns Expression:
+	'(' Expression ')' |
+	VarRefLiteral |
+	ListLiteral |
+	CreateClass |
+	NullLiteral |
+	StringLiteral |
+	{FunctionLiteral} function=[Function] ('(' exp=Expression ')') |
+	{IntLiteral} value=INT
+	;
+
+Function:
+	'function' name=ID javaClass=ClassFqn;
+
+UpdateStatement :
+	'update' varRef=[Variable] ('{' (setters += Setter (',' setters += Setter)*)? '}')?;
+
+ClassFqn:
+  ID ('.' ID)*;
+
+	

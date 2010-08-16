@@ -1,0 +1,20 @@
+package org.eclipselabs.emf.scaffolding.tests
+
+import org.eclipselabs.emf.scaffolding.tests.model1.Application
+import org.eclipselabs.emf.scaffolding.tests.model1.DAO
+import org.eclipselabs.emf.scaffolding.tests.model1.Entity
+import org.eclipselabs.emf.scaffolding.tests.model1.Model1Factory
+
+rule "Entity2Dao"
+	when
+		$entity : Entity( name : name != null )
+		not DAO ( entity == $entity )
+	then
+		System.out.println( "Scaffolding DAO for entity " + name ); 
+
+		// Transform Entity to DAO
+		DAO dao = Model1Factory.eINSTANCE.createDAO();
+		dao.setName(name + "Dao");
+        dao.setEntity($entity);
+        dao.setApplication($entity.getApplication());
+end
