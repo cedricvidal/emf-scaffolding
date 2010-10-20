@@ -38,26 +38,26 @@ Variable :
 Param :
 	 property=BindingExpression (':' var=Variable)?;
 
-BindingExpression :
+BindingExpression returns Expression :
 	BindingTerminalExpression ({BindingOperation.left=current} 
 		op=('<'|'>'|'='|'!='|'+'|'-'|'>='|'<='|'/'|'*') right=BindingExpression)?
 	;
 
-BindingTerminalExpression returns BindingExpression:
+BindingTerminalExpression returns Expression:
 	'(' BindingExpression ')'
-	| ListLiteral
+	| FeatureRefLiteral
+	| {NotExpression} '!' exp=BindingTerminalExpression
+	| {FunctionLiteral} function=[Function] ('(' exp=BindingExpression ')')
+	| PrimitiveLiteral
+	;
+
+PrimitiveLiteral:
+	ListLiteral
 	| StringLiteral
 	| NullLiteral
-	| FeatureRefLiteral
-	| {NotBindingExpression} '!' exp=BindingTerminalExpression
-	| FunctionLiteral
 	| {IntLiteral} value=INT
 	| {BooleanLiteral} value=BOOLEAN
 	| {FloatLiteral} value=FLOAT
-	;
-
-FunctionLiteral :
-	function=[Function] ('(' exp=BindingExpression ')')
 	;
 
 FeatureRefLiteral :
@@ -99,14 +99,10 @@ Expression :
 TerminalExpression returns Expression:
 	'(' Expression ')'
 	| VarRefLiteral
-	| ListLiteral
 	| CreateClass
-	| NullLiteral
-	| StringLiteral
+	| {NotExpression} '!' exp=TerminalExpression
 	| {FunctionLiteral} function=[Function] ('(' exp=Expression ')')
-	| {IntLiteral} value=INT
-	| {BooleanLiteral} value=BOOLEAN
-	| {FloatLiteral} value=FLOAT
+	| PrimitiveLiteral
 	;
 
 Function:

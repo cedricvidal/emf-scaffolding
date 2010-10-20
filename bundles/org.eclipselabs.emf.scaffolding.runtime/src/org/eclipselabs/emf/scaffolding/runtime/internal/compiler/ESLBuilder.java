@@ -29,8 +29,8 @@ import org.drools.lang.descr.LiteralRestrictionDescr;
 import org.drools.lang.descr.PackageDescr;
 import org.drools.lang.descr.PatternDescr;
 import org.drools.lang.descr.RuleDescr;
-import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.BindingExpression;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.BindingOperation;
+import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Expression;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FeatureRefLiteral;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Match;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Param;
@@ -106,7 +106,7 @@ public class ESLBuilder implements ResourceTypeBuilder {
 	}
 
 	private BaseDescr createConstraint(Param param) {
-		BindingExpression expr = param.getProperty();
+		Expression expr = param.getProperty();
 		// TODO add variable assignment in order to store the result of
 		// constraint evaluation : Entity( name : name != null )
 		Variable var = param.getVar();
