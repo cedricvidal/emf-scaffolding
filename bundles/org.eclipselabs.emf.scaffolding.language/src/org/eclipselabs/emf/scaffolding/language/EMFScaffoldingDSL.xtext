@@ -1,9 +1,9 @@
 grammar org.eclipselabs.emf.scaffolding.language.EMFScaffoldingDSL with org.eclipse.xtext.common.Terminals
 
-
 generate emfscaffoldingdsl "http://www.eclipselabs.org/emf/scaffolding/1.0.0"
 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+import "http://www.eclipse.org/xtext/common/JavaVMTypes" as types
 
 Scaffolding :
 	scaffold=Scaffold
@@ -50,8 +50,12 @@ BindingTerminalExpression returns BindingExpression:
 	NullLiteral |
 	FeatureRefLiteral |
 //	{NotBindingExpression} '!' exp=BindingExpression |
-	{FunctionLiteral} function=[Function] ('(' exp=BindingExpression ')') |
+	FunctionLiteral |
 	{IntLiteral} value=INT
+	;
+
+FunctionLiteral :
+	function=[Function] ('(' exp=BindingExpression ')')
 	;
 
 FeatureRefLiteral :
@@ -104,13 +108,14 @@ TerminalExpression returns Expression:
 	;
 
 Function:
-	'function' name=ID javaClass=ClassFqn;
+	'function' name=ID javaClass=[types::JvmGenericType|FQN] '#' operation=[types::JvmOperation|ID]
+	;
 
 UpdateStatement :
 	'update' varRef=[Variable] ('{' (setters += Setter (',' setters += Setter)*)? '}')?;
 
-ClassFqn:
-  ID ('.' ID)*;
+FQN: ID ('.' ID)*;
+OperationFQN: FQN '(' ( FQN (',' FQN)* )? ')';
 
 terminal BOOLEAN returns ecore::EBoolean: 'true' | 'false';
 terminal FLOAT returns ecore::EFloat: ('-')?('0'..'9')+'.'('0'..'9');
