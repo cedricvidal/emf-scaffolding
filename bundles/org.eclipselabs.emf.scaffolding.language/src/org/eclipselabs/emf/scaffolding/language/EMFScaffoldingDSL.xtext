@@ -44,14 +44,16 @@ BindingExpression :
 	;
 
 BindingTerminalExpression returns BindingExpression:
-	'(' BindingExpression ')' |
-	ListLiteral |
-	StringLiteral |
-	NullLiteral |
-	FeatureRefLiteral |
-//	{NotBindingExpression} '!' exp=BindingExpression |
-	FunctionLiteral |
-	{IntLiteral} value=INT
+	'(' BindingExpression ')'
+	| ListLiteral
+	| StringLiteral
+	| NullLiteral
+	| FeatureRefLiteral
+	| {NotBindingExpression} '!' exp=BindingTerminalExpression
+	| FunctionLiteral
+	| {IntLiteral} value=INT
+	| {BooleanLiteral} value=BOOLEAN
+	| {FloatLiteral} value=FLOAT
 	;
 
 FunctionLiteral :
