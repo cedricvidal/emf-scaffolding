@@ -39,8 +39,13 @@ Param :
 	 property=BindingExpression (':' var=Variable)?;
 
 BindingExpression returns Expression :
+	BindingExpressionHigh ({Operation.left=current} 
+		op=OPERATOR_LOW_PRIORITY right=BindingExpression)?
+	;
+
+BindingExpressionHigh returns Expression :
 	BindingTerminalExpression ({Operation.left=current} 
-		op=('<'|'>'|'='|'!='|'+'|'-'|'>='|'<='|'/'|'*') right=BindingExpression)?
+		op=OPERATOR_HIGH_PRIORITY right=BindingExpressionHigh)?
 	;
 
 BindingTerminalExpression returns Expression:
@@ -48,6 +53,25 @@ BindingTerminalExpression returns Expression:
 	| FeatureRefLiteral
 	| {NotExpression} '!' exp=BindingTerminalExpression
 	| {FunctionLiteral} function=[Function] ('(' exp=BindingExpression ')')
+	| PrimitiveLiteral
+	;
+
+Expression returns Expression:
+	ExpressionHigh ({Operation.left=current} 
+	op=OPERATOR_LOW_PRIORITY right=Expression)?
+	;
+
+ExpressionHigh returns Expression :
+	TerminalExpression ({Operation.left=current} 
+	op=OPERATOR_HIGH_PRIORITY right=ExpressionHigh)?
+	;
+
+TerminalExpression returns Expression:
+	'(' Expression ')'
+	| VarRefLiteral
+	| CreateClass
+	| {NotExpression} '!' exp=TerminalExpression
+	| {FunctionLiteral} function=[Function] ('(' exp=Expression ')')
 	| PrimitiveLiteral
 	;
 
@@ -59,6 +83,9 @@ PrimitiveLiteral returns Expression:
 	| {BooleanLiteral} value=BOOLEAN
 	| {FloatLiteral} value=FLOAT
 	;
+
+terminal OPERATOR_HIGH_PRIORITY: '<'|'>'|'='|'!='|'>='|'<='|'/'|'*';
+terminal OPERATOR_LOW_PRIORITY: '+'|'-';
 
 FeatureRefLiteral :
 	 ref=[ecore::EStructuralFeature];
@@ -90,20 +117,6 @@ VarRefLiteral :
 
 Setter :
 	property=[ecore::EStructuralFeature] (':'|'+=') expression=Expression (guard?='guard')?;
-
-Expression :
-	TerminalExpression ({Operation.left=current} 
-	op=('<'|'>'|'='|'+'|'-'|'>='|'<='|'/'|'*') right=Expression)?
-	;
-
-TerminalExpression returns Expression:
-	'(' Expression ')'
-	| VarRefLiteral
-	| CreateClass
-	| {NotExpression} '!' exp=TerminalExpression
-	| {FunctionLiteral} function=[Function] ('(' exp=Expression ')')
-	| PrimitiveLiteral
-	;
 
 Function:
 	'function' name=ID javaClass=[types::JvmGenericType|FQN] '#' operation=[types::JvmOperation|ID]
