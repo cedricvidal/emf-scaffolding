@@ -29,10 +29,10 @@ import org.drools.lang.descr.LiteralRestrictionDescr;
 import org.drools.lang.descr.PackageDescr;
 import org.drools.lang.descr.PatternDescr;
 import org.drools.lang.descr.RuleDescr;
-import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.BindingOperation;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Expression;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FeatureRefLiteral;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Match;
+import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Operation;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Param;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Rule;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Scaffolding;
@@ -112,8 +112,8 @@ public class ESLBuilder implements ResourceTypeBuilder {
 		Variable var = param.getVar();
 		PatternDescr patternDescr = new PatternDescr();
 		patternDescr.setIdentifier(var.getName());
-		if (expr instanceof BindingOperation) {
-			BindingOperation op = (BindingOperation) expr;
+		if (expr instanceof Operation) {
+			Operation op = (Operation) expr;
 			String fieldName = ((FeatureRefLiteral) op.getLeft()).getRef().getName();
 			// (name
 			FieldConstraintDescr fieldConstraintDescr = new FieldConstraintDescr(fieldName);

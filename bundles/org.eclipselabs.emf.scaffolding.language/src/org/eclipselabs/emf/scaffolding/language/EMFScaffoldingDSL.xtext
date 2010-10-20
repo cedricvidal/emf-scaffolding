@@ -39,7 +39,7 @@ Param :
 	 property=BindingExpression (':' var=Variable)?;
 
 BindingExpression returns Expression :
-	BindingTerminalExpression ({BindingOperation.left=current} 
+	BindingTerminalExpression ({Operation.left=current} 
 		op=('<'|'>'|'='|'!='|'+'|'-'|'>='|'<='|'/'|'*') right=BindingExpression)?
 	;
 
@@ -51,7 +51,7 @@ BindingTerminalExpression returns Expression:
 	| PrimitiveLiteral
 	;
 
-PrimitiveLiteral:
+PrimitiveLiteral returns Expression:
 	ListLiteral
 	| StringLiteral
 	| NullLiteral
