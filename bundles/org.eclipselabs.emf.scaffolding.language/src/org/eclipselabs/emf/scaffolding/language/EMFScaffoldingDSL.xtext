@@ -52,7 +52,7 @@ BindingTerminalExpression returns Expression:
 	'(' BindingExpression ')'
 	| FeatureRefLiteral
 	| {NotExpression} '!' exp=BindingTerminalExpression
-	| {FunctionLiteral} function=[Function] ('(' exp=BindingExpression ')')
+	| {FunctionLiteral} function=[Function] ('(' (arguments+=BindingExpression ( ',' arguments+=BindingExpression)* )? ')')
 	| PrimitiveLiteral
 	;
 
