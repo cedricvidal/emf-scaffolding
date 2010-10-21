@@ -71,7 +71,7 @@ TerminalExpression returns Expression:
 	| VarRefLiteral
 	| CreateClass
 	| {NotExpression} '!' exp=TerminalExpression
-	| {FunctionLiteral} function=[Function] ('(' exp=Expression ')')
+	| {FunctionLiteral} function=[Function] ('(' (arguments+=Expression ( ',' arguments+=Expression)* )? ')')
 	| PrimitiveLiteral
 	;
 
