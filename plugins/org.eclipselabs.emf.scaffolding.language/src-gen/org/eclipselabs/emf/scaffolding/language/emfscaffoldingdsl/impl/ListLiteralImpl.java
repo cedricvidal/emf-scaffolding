@@ -2,6 +2,7 @@
  * <copyright>
  * </copyright>
  *
+
  */
 package org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl;
 
@@ -34,7 +35,7 @@ import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.ListLiteral;
  *
  * @generated
  */
-public class ListLiteralImpl extends BindingExpressionImpl implements ListLiteral
+public class ListLiteralImpl extends ExpressionImpl implements ListLiteral
 {
   /**
    * The cached value of the '{@link #getItems() <em>Items</em>}' containment reference list.

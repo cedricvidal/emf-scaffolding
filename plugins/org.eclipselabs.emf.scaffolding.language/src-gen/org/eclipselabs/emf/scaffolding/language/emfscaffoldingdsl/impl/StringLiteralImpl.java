@@ -2,6 +2,7 @@
  * <copyright>
  * </copyright>
  *
+
  */
 package org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl;
 
@@ -27,7 +28,7 @@ import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.StringLiteral;
  *
  * @generated
  */
-public class StringLiteralImpl extends BindingExpressionImpl implements StringLiteral
+public class StringLiteralImpl extends ExpressionImpl implements StringLiteral
 {
   /**
    * The default value of the '{@link #getValue() <em>Value</em>}' attribute.

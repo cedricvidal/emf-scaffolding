@@ -2,6 +2,7 @@
  * <copyright>
  * </copyright>
  *
+
  */
 package org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl;
 
@@ -12,20 +13,23 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.eclipse.xtext.common.types.TypesPackage;
+
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Binding;
-import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.BindingExpression;
-import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.BindingOperation;
+import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.BooleanLiteral;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.CreateClass;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.CreateStatement;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.EmfscaffoldingdslFactory;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.EmfscaffoldingdslPackage;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Expression;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FeatureRefLiteral;
+import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FloatLiteral;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Function;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FunctionLiteral;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.IntLiteral;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.ListLiteral;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Match;
+import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.NotExpression;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Operation;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Param;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Rule;
@@ -117,7 +121,7 @@ public class EmfscaffoldingdslPackageImpl extends EPackageImpl implements Emfsca
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass bindingExpressionEClass = null;
+  private EClass expressionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -187,13 +191,6 @@ public class EmfscaffoldingdslPackageImpl extends EPackageImpl implements Emfsca
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass expressionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass functionEClass = null;
 
   /**
@@ -208,7 +205,14 @@ public class EmfscaffoldingdslPackageImpl extends EPackageImpl implements Emfsca
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass bindingOperationEClass = null;
+  private EClass operationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass notExpressionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -229,7 +233,14 @@ public class EmfscaffoldingdslPackageImpl extends EPackageImpl implements Emfsca
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass operationEClass = null;
+  private EClass booleanLiteralEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass floatLiteralEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -278,6 +289,9 @@ public class EmfscaffoldingdslPackageImpl extends EPackageImpl implements Emfsca
     EmfscaffoldingdslPackageImpl theEmfscaffoldingdslPackage = (EmfscaffoldingdslPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof EmfscaffoldingdslPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new EmfscaffoldingdslPackageImpl());
 
     isInited = true;
+
+    // Initialize simple dependencies
+    TypesPackage.eINSTANCE.eClass();
 
     // Create package meta-data objects
     theEmfscaffoldingdslPackage.createPackageContents();
@@ -519,9 +533,9 @@ public class EmfscaffoldingdslPackageImpl extends EPackageImpl implements Emfsca
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getBindingExpression()
+  public EClass getExpression()
   {
-    return bindingExpressionEClass;
+    return expressionEClass;
   }
 
   /**
@@ -739,16 +753,6 @@ public class EmfscaffoldingdslPackageImpl extends EPackageImpl implements Emfsca
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getExpression()
-  {
-    return expressionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getFunction()
   {
     return functionEClass;
@@ -759,9 +763,19 @@ public class EmfscaffoldingdslPackageImpl extends EPackageImpl implements Emfsca
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getFunction_JavaClass()
+  public EReference getFunction_JavaClass()
   {
-    return (EAttribute)functionEClass.getEStructuralFeatures().get(0);
+    return (EReference)functionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFunction_Operation()
+  {
+    return (EReference)functionEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -792,96 +806,6 @@ public class EmfscaffoldingdslPackageImpl extends EPackageImpl implements Emfsca
   public EReference getUpdateStatement_Setters()
   {
     return (EReference)updateStatementEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getBindingOperation()
-  {
-    return bindingOperationEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getBindingOperation_Left()
-  {
-    return (EReference)bindingOperationEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getBindingOperation_Op()
-  {
-    return (EAttribute)bindingOperationEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getBindingOperation_Right()
-  {
-    return (EReference)bindingOperationEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getFunctionLiteral()
-  {
-    return functionLiteralEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getFunctionLiteral_Function()
-  {
-    return (EReference)functionLiteralEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getFunctionLiteral_Exp()
-  {
-    return (EReference)functionLiteralEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getIntLiteral()
-  {
-    return intLiteralEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getIntLiteral_Value()
-  {
-    return (EAttribute)intLiteralEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -922,6 +846,116 @@ public class EmfscaffoldingdslPackageImpl extends EPackageImpl implements Emfsca
   public EReference getOperation_Right()
   {
     return (EReference)operationEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getNotExpression()
+  {
+    return notExpressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getNotExpression_Exp()
+  {
+    return (EReference)notExpressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFunctionLiteral()
+  {
+    return functionLiteralEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFunctionLiteral_Function()
+  {
+    return (EReference)functionLiteralEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFunctionLiteral_Arguments()
+  {
+    return (EReference)functionLiteralEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getIntLiteral()
+  {
+    return intLiteralEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getIntLiteral_Value()
+  {
+    return (EAttribute)intLiteralEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getBooleanLiteral()
+  {
+    return booleanLiteralEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getBooleanLiteral_Value()
+  {
+    return (EAttribute)booleanLiteralEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFloatLiteral()
+  {
+    return floatLiteralEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFloatLiteral_Value()
+  {
+    return (EAttribute)floatLiteralEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -985,7 +1019,7 @@ public class EmfscaffoldingdslPackageImpl extends EPackageImpl implements Emfsca
     createEReference(paramEClass, PARAM__PROPERTY);
     createEReference(paramEClass, PARAM__VAR);
 
-    bindingExpressionEClass = createEClass(BINDING_EXPRESSION);
+    expressionEClass = createEClass(EXPRESSION);
 
     featureRefLiteralEClass = createEClass(FEATURE_REF_LITERAL);
     createEReference(featureRefLiteralEClass, FEATURE_REF_LITERAL__REF);
@@ -1017,31 +1051,34 @@ public class EmfscaffoldingdslPackageImpl extends EPackageImpl implements Emfsca
     createEReference(setterEClass, SETTER__EXPRESSION);
     createEAttribute(setterEClass, SETTER__GUARD);
 
-    expressionEClass = createEClass(EXPRESSION);
-
     functionEClass = createEClass(FUNCTION);
-    createEAttribute(functionEClass, FUNCTION__JAVA_CLASS);
+    createEReference(functionEClass, FUNCTION__JAVA_CLASS);
+    createEReference(functionEClass, FUNCTION__OPERATION);
 
     updateStatementEClass = createEClass(UPDATE_STATEMENT);
     createEReference(updateStatementEClass, UPDATE_STATEMENT__VAR_REF);
     createEReference(updateStatementEClass, UPDATE_STATEMENT__SETTERS);
 
-    bindingOperationEClass = createEClass(BINDING_OPERATION);
-    createEReference(bindingOperationEClass, BINDING_OPERATION__LEFT);
-    createEAttribute(bindingOperationEClass, BINDING_OPERATION__OP);
-    createEReference(bindingOperationEClass, BINDING_OPERATION__RIGHT);
-
-    functionLiteralEClass = createEClass(FUNCTION_LITERAL);
-    createEReference(functionLiteralEClass, FUNCTION_LITERAL__FUNCTION);
-    createEReference(functionLiteralEClass, FUNCTION_LITERAL__EXP);
-
-    intLiteralEClass = createEClass(INT_LITERAL);
-    createEAttribute(intLiteralEClass, INT_LITERAL__VALUE);
-
     operationEClass = createEClass(OPERATION);
     createEReference(operationEClass, OPERATION__LEFT);
     createEAttribute(operationEClass, OPERATION__OP);
     createEReference(operationEClass, OPERATION__RIGHT);
+
+    notExpressionEClass = createEClass(NOT_EXPRESSION);
+    createEReference(notExpressionEClass, NOT_EXPRESSION__EXP);
+
+    functionLiteralEClass = createEClass(FUNCTION_LITERAL);
+    createEReference(functionLiteralEClass, FUNCTION_LITERAL__FUNCTION);
+    createEReference(functionLiteralEClass, FUNCTION_LITERAL__ARGUMENTS);
+
+    intLiteralEClass = createEClass(INT_LITERAL);
+    createEAttribute(intLiteralEClass, INT_LITERAL__VALUE);
+
+    booleanLiteralEClass = createEClass(BOOLEAN_LITERAL);
+    createEAttribute(booleanLiteralEClass, BOOLEAN_LITERAL__VALUE);
+
+    floatLiteralEClass = createEClass(FLOAT_LITERAL);
+    createEAttribute(floatLiteralEClass, FLOAT_LITERAL__VALUE);
   }
 
   /**
@@ -1068,6 +1105,9 @@ public class EmfscaffoldingdslPackageImpl extends EPackageImpl implements Emfsca
     setNsPrefix(eNS_PREFIX);
     setNsURI(eNS_URI);
 
+    // Obtain other dependent packages
+    TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
+
     // Create type parameters
 
     // Set bounds for type parameters
@@ -1076,23 +1116,21 @@ public class EmfscaffoldingdslPackageImpl extends EPackageImpl implements Emfsca
     ruleEClass.getESuperTypes().add(this.getScaffoldingElement());
     matchEClass.getESuperTypes().add(this.getBinding());
     paramEClass.getESuperTypes().add(this.getBinding());
-    featureRefLiteralEClass.getESuperTypes().add(this.getBindingExpression());
+    featureRefLiteralEClass.getESuperTypes().add(this.getExpression());
     statementEClass.getESuperTypes().add(this.getBinding());
     createStatementEClass.getESuperTypes().add(this.getStatement());
     createClassEClass.getESuperTypes().add(this.getExpression());
-    stringLiteralEClass.getESuperTypes().add(this.getBindingExpression());
     stringLiteralEClass.getESuperTypes().add(this.getExpression());
-    listLiteralEClass.getESuperTypes().add(this.getBindingExpression());
     listLiteralEClass.getESuperTypes().add(this.getExpression());
     varRefLiteralEClass.getESuperTypes().add(this.getExpression());
     functionEClass.getESuperTypes().add(this.getScaffoldingElement());
     updateStatementEClass.getESuperTypes().add(this.getStatement());
-    bindingOperationEClass.getESuperTypes().add(this.getBindingExpression());
-    functionLiteralEClass.getESuperTypes().add(this.getBindingExpression());
-    functionLiteralEClass.getESuperTypes().add(this.getExpression());
-    intLiteralEClass.getESuperTypes().add(this.getBindingExpression());
-    intLiteralEClass.getESuperTypes().add(this.getExpression());
     operationEClass.getESuperTypes().add(this.getExpression());
+    notExpressionEClass.getESuperTypes().add(this.getExpression());
+    functionLiteralEClass.getESuperTypes().add(this.getExpression());
+    intLiteralEClass.getESuperTypes().add(this.getExpression());
+    booleanLiteralEClass.getESuperTypes().add(this.getExpression());
+    floatLiteralEClass.getESuperTypes().add(this.getExpression());
 
     // Initialize classes and features; add operations and parameters
     initEClass(scaffoldingEClass, Scaffolding.class, "Scaffolding", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1123,10 +1161,10 @@ public class EmfscaffoldingdslPackageImpl extends EPackageImpl implements Emfsca
     initEAttribute(getVariable_Name(), ecorePackage.getEString(), "name", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(paramEClass, Param.class, "Param", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getParam_Property(), this.getBindingExpression(), null, "property", null, 0, 1, Param.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getParam_Property(), this.getExpression(), null, "property", null, 0, 1, Param.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getParam_Var(), this.getVariable(), null, "var", null, 0, 1, Param.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(bindingExpressionEClass, BindingExpression.class, "BindingExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(featureRefLiteralEClass, FeatureRefLiteral.class, "FeatureRefLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getFeatureRefLiteral_Ref(), ecorePackage.getEStructuralFeature(), null, "ref", null, 0, 1, FeatureRefLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1158,31 +1196,34 @@ public class EmfscaffoldingdslPackageImpl extends EPackageImpl implements Emfsca
     initEReference(getSetter_Expression(), this.getExpression(), null, "expression", null, 0, 1, Setter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getSetter_Guard(), ecorePackage.getEBoolean(), "guard", null, 0, 1, Setter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
     initEClass(functionEClass, Function.class, "Function", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getFunction_JavaClass(), ecorePackage.getEString(), "javaClass", null, 0, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFunction_JavaClass(), theTypesPackage.getJvmGenericType(), null, "javaClass", null, 0, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFunction_Operation(), theTypesPackage.getJvmOperation(), null, "operation", null, 0, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(updateStatementEClass, UpdateStatement.class, "UpdateStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getUpdateStatement_VarRef(), this.getVariable(), null, "varRef", null, 0, 1, UpdateStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getUpdateStatement_Setters(), this.getSetter(), null, "setters", null, 0, -1, UpdateStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(bindingOperationEClass, BindingOperation.class, "BindingOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getBindingOperation_Left(), this.getBindingExpression(), null, "left", null, 0, 1, BindingOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getBindingOperation_Op(), ecorePackage.getEString(), "op", null, 0, 1, BindingOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getBindingOperation_Right(), this.getBindingExpression(), null, "right", null, 0, 1, BindingOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(functionLiteralEClass, FunctionLiteral.class, "FunctionLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getFunctionLiteral_Function(), this.getFunction(), null, "function", null, 0, 1, FunctionLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFunctionLiteral_Exp(), ecorePackage.getEObject(), null, "exp", null, 0, 1, FunctionLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(intLiteralEClass, IntLiteral.class, "IntLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getIntLiteral_Value(), ecorePackage.getEInt(), "value", null, 0, 1, IntLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
     initEClass(operationEClass, Operation.class, "Operation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getOperation_Left(), this.getExpression(), null, "left", null, 0, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getOperation_Op(), ecorePackage.getEString(), "op", null, 0, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getOperation_Right(), this.getExpression(), null, "right", null, 0, 1, Operation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(notExpressionEClass, NotExpression.class, "NotExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getNotExpression_Exp(), this.getExpression(), null, "exp", null, 0, 1, NotExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(functionLiteralEClass, FunctionLiteral.class, "FunctionLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getFunctionLiteral_Function(), this.getFunction(), null, "function", null, 0, 1, FunctionLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFunctionLiteral_Arguments(), this.getExpression(), null, "arguments", null, 0, -1, FunctionLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(intLiteralEClass, IntLiteral.class, "IntLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getIntLiteral_Value(), ecorePackage.getEInt(), "value", null, 0, 1, IntLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(booleanLiteralEClass, BooleanLiteral.class, "BooleanLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getBooleanLiteral_Value(), ecorePackage.getEBoolean(), "value", null, 0, 1, BooleanLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(floatLiteralEClass, FloatLiteral.class, "FloatLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getFloatLiteral_Value(), ecorePackage.getEFloat(), "value", null, 0, 1, FloatLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

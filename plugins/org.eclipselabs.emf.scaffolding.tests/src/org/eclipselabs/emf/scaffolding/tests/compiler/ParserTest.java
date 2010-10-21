@@ -19,8 +19,8 @@ import static org.junit.Assert.assertTrue;
 import java.io.InputStream;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.BindingOperation;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Match;
+import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Operation;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Param;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Rule;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Scaffold;
@@ -62,8 +62,8 @@ public class ParserTest extends BaseTest {
 		assertEquals("e", match.getVar().getName());
 		assertEquals(1, match.getParams().size());
 		Param param = match.getParams().get(0);
-		assertTrue(param.getProperty() instanceof BindingOperation);
-		BindingOperation bindingOperation = (BindingOperation) param
+		assertTrue(param.getProperty() instanceof Operation);
+		Operation bindingOperation = (Operation) param
 				.getProperty();
 		assertEquals("!=", bindingOperation.getOp());
 		assertNotNull(bindingOperation.getLeft());

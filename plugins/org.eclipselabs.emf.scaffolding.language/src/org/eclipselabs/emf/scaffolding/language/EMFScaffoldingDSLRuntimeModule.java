@@ -11,6 +11,9 @@
  *******************************************************************************/
 package org.eclipselabs.emf.scaffolding.language;
 
+import org.eclipse.xtext.conversion.IValueConverterService;
+import org.eclipselabs.emf.scaffolding.language.converter.EMFScaffoldingDSLConverterService;
+
 /**
  * Use this class to register components to be used at runtime / without the
  * Equinox extension registry.
@@ -18,5 +21,10 @@ package org.eclipselabs.emf.scaffolding.language;
 public class EMFScaffoldingDSLRuntimeModule
 		extends
 		org.eclipselabs.emf.scaffolding.language.AbstractEMFScaffoldingDSLRuntimeModule {
+
+	@Override
+	public Class<? extends IValueConverterService> bindIValueConverterService() {
+		return EMFScaffoldingDSLConverterService.class;
+	}
 
 }

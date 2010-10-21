@@ -2,6 +2,7 @@
  * <copyright>
  * </copyright>
  *
+
  */
 package org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl;
 
@@ -23,7 +24,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface ListLiteral extends BindingExpression, Expression
+public interface ListLiteral extends Expression
 {
   /**
    * Returns the value of the '<em><b>Items</b></em>' containment reference list.

@@ -2,6 +2,7 @@
  * <copyright>
  * </copyright>
  *
+
  */
 package org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl;
 
@@ -13,8 +14,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.BindingExpression;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.EmfscaffoldingdslPackage;
+import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Expression;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Param;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Variable;
 
@@ -42,7 +43,7 @@ public class ParamImpl extends BindingImpl implements Param
    * @generated
    * @ordered
    */
-  protected BindingExpression property;
+  protected Expression property;
 
   /**
    * The cached value of the '{@link #getVar() <em>Var</em>}' containment reference.
@@ -80,7 +81,7 @@ public class ParamImpl extends BindingImpl implements Param
    * <!-- end-user-doc -->
    * @generated
    */
-  public BindingExpression getProperty()
+  public Expression getProperty()
   {
     return property;
   }
@@ -90,9 +91,9 @@ public class ParamImpl extends BindingImpl implements Param
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetProperty(BindingExpression newProperty, NotificationChain msgs)
+  public NotificationChain basicSetProperty(Expression newProperty, NotificationChain msgs)
   {
-    BindingExpression oldProperty = property;
+    Expression oldProperty = property;
     property = newProperty;
     if (eNotificationRequired())
     {
@@ -107,7 +108,7 @@ public class ParamImpl extends BindingImpl implements Param
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setProperty(BindingExpression newProperty)
+  public void setProperty(Expression newProperty)
   {
     if (newProperty != property)
     {
@@ -218,7 +219,7 @@ public class ParamImpl extends BindingImpl implements Param
     switch (featureID)
     {
       case EmfscaffoldingdslPackage.PARAM__PROPERTY:
-        setProperty((BindingExpression)newValue);
+        setProperty((Expression)newValue);
         return;
       case EmfscaffoldingdslPackage.PARAM__VAR:
         setVar((Variable)newValue);
@@ -238,7 +239,7 @@ public class ParamImpl extends BindingImpl implements Param
     switch (featureID)
     {
       case EmfscaffoldingdslPackage.PARAM__PROPERTY:
-        setProperty((BindingExpression)null);
+        setProperty((Expression)null);
         return;
       case EmfscaffoldingdslPackage.PARAM__VAR:
         setVar((Variable)null);

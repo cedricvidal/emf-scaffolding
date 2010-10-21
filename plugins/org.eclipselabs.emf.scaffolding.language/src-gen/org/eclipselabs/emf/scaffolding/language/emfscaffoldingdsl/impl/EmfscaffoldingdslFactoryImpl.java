@@ -2,6 +2,7 @@
  * <copyright>
  * </copyright>
  *
+
  */
 package org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl;
 
@@ -76,7 +77,7 @@ public class EmfscaffoldingdslFactoryImpl extends EFactoryImpl implements Emfsca
       case EmfscaffoldingdslPackage.MATCH: return createMatch();
       case EmfscaffoldingdslPackage.VARIABLE: return createVariable();
       case EmfscaffoldingdslPackage.PARAM: return createParam();
-      case EmfscaffoldingdslPackage.BINDING_EXPRESSION: return createBindingExpression();
+      case EmfscaffoldingdslPackage.EXPRESSION: return createExpression();
       case EmfscaffoldingdslPackage.FEATURE_REF_LITERAL: return createFeatureRefLiteral();
       case EmfscaffoldingdslPackage.THEN_BLOCK: return createThenBlock();
       case EmfscaffoldingdslPackage.STATEMENT: return createStatement();
@@ -86,13 +87,14 @@ public class EmfscaffoldingdslFactoryImpl extends EFactoryImpl implements Emfsca
       case EmfscaffoldingdslPackage.LIST_LITERAL: return createListLiteral();
       case EmfscaffoldingdslPackage.VAR_REF_LITERAL: return createVarRefLiteral();
       case EmfscaffoldingdslPackage.SETTER: return createSetter();
-      case EmfscaffoldingdslPackage.EXPRESSION: return createExpression();
       case EmfscaffoldingdslPackage.FUNCTION: return createFunction();
       case EmfscaffoldingdslPackage.UPDATE_STATEMENT: return createUpdateStatement();
-      case EmfscaffoldingdslPackage.BINDING_OPERATION: return createBindingOperation();
+      case EmfscaffoldingdslPackage.OPERATION: return createOperation();
+      case EmfscaffoldingdslPackage.NOT_EXPRESSION: return createNotExpression();
       case EmfscaffoldingdslPackage.FUNCTION_LITERAL: return createFunctionLiteral();
       case EmfscaffoldingdslPackage.INT_LITERAL: return createIntLiteral();
-      case EmfscaffoldingdslPackage.OPERATION: return createOperation();
+      case EmfscaffoldingdslPackage.BOOLEAN_LITERAL: return createBooleanLiteral();
+      case EmfscaffoldingdslPackage.FLOAT_LITERAL: return createFloatLiteral();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -202,10 +204,10 @@ public class EmfscaffoldingdslFactoryImpl extends EFactoryImpl implements Emfsca
    * <!-- end-user-doc -->
    * @generated
    */
-  public BindingExpression createBindingExpression()
+  public Expression createExpression()
   {
-    BindingExpressionImpl bindingExpression = new BindingExpressionImpl();
-    return bindingExpression;
+    ExpressionImpl expression = new ExpressionImpl();
+    return expression;
   }
 
   /**
@@ -312,17 +314,6 @@ public class EmfscaffoldingdslFactoryImpl extends EFactoryImpl implements Emfsca
    * <!-- end-user-doc -->
    * @generated
    */
-  public Expression createExpression()
-  {
-    ExpressionImpl expression = new ExpressionImpl();
-    return expression;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public Function createFunction()
   {
     FunctionImpl function = new FunctionImpl();
@@ -345,10 +336,21 @@ public class EmfscaffoldingdslFactoryImpl extends EFactoryImpl implements Emfsca
    * <!-- end-user-doc -->
    * @generated
    */
-  public BindingOperation createBindingOperation()
+  public Operation createOperation()
   {
-    BindingOperationImpl bindingOperation = new BindingOperationImpl();
-    return bindingOperation;
+    OperationImpl operation = new OperationImpl();
+    return operation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotExpression createNotExpression()
+  {
+    NotExpressionImpl notExpression = new NotExpressionImpl();
+    return notExpression;
   }
 
   /**
@@ -378,10 +380,21 @@ public class EmfscaffoldingdslFactoryImpl extends EFactoryImpl implements Emfsca
    * <!-- end-user-doc -->
    * @generated
    */
-  public Operation createOperation()
+  public BooleanLiteral createBooleanLiteral()
   {
-    OperationImpl operation = new OperationImpl();
-    return operation;
+    BooleanLiteralImpl booleanLiteral = new BooleanLiteralImpl();
+    return booleanLiteral;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FloatLiteral createFloatLiteral()
+  {
+    FloatLiteralImpl floatLiteral = new FloatLiteralImpl();
+    return floatLiteral;
   }
 
   /**

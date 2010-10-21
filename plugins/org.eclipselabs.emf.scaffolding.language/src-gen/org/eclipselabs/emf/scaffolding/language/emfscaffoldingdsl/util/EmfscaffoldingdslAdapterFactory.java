@@ -2,6 +2,7 @@
  * <copyright>
  * </copyright>
  *
+
  */
 package org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.util;
 
@@ -123,9 +124,9 @@ public class EmfscaffoldingdslAdapterFactory extends AdapterFactoryImpl
         return createParamAdapter();
       }
       @Override
-      public Adapter caseBindingExpression(BindingExpression object)
+      public Adapter caseExpression(Expression object)
       {
-        return createBindingExpressionAdapter();
+        return createExpressionAdapter();
       }
       @Override
       public Adapter caseFeatureRefLiteral(FeatureRefLiteral object)
@@ -173,11 +174,6 @@ public class EmfscaffoldingdslAdapterFactory extends AdapterFactoryImpl
         return createSetterAdapter();
       }
       @Override
-      public Adapter caseExpression(Expression object)
-      {
-        return createExpressionAdapter();
-      }
-      @Override
       public Adapter caseFunction(Function object)
       {
         return createFunctionAdapter();
@@ -188,9 +184,14 @@ public class EmfscaffoldingdslAdapterFactory extends AdapterFactoryImpl
         return createUpdateStatementAdapter();
       }
       @Override
-      public Adapter caseBindingOperation(BindingOperation object)
+      public Adapter caseOperation(Operation object)
       {
-        return createBindingOperationAdapter();
+        return createOperationAdapter();
+      }
+      @Override
+      public Adapter caseNotExpression(NotExpression object)
+      {
+        return createNotExpressionAdapter();
       }
       @Override
       public Adapter caseFunctionLiteral(FunctionLiteral object)
@@ -203,9 +204,14 @@ public class EmfscaffoldingdslAdapterFactory extends AdapterFactoryImpl
         return createIntLiteralAdapter();
       }
       @Override
-      public Adapter caseOperation(Operation object)
+      public Adapter caseBooleanLiteral(BooleanLiteral object)
       {
-        return createOperationAdapter();
+        return createBooleanLiteralAdapter();
+      }
+      @Override
+      public Adapter caseFloatLiteral(FloatLiteral object)
+      {
+        return createFloatLiteralAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -365,16 +371,16 @@ public class EmfscaffoldingdslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.BindingExpression <em>Binding Expression</em>}'.
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Expression <em>Expression</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.BindingExpression
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Expression
    * @generated
    */
-  public Adapter createBindingExpressionAdapter()
+  public Adapter createExpressionAdapter()
   {
     return null;
   }
@@ -515,21 +521,6 @@ public class EmfscaffoldingdslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Expression <em>Expression</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Expression
-   * @generated
-   */
-  public Adapter createExpressionAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Function <em>Function</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -560,16 +551,31 @@ public class EmfscaffoldingdslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.BindingOperation <em>Binding Operation</em>}'.
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Operation <em>Operation</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.BindingOperation
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Operation
    * @generated
    */
-  public Adapter createBindingOperationAdapter()
+  public Adapter createOperationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.NotExpression <em>Not Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.NotExpression
+   * @generated
+   */
+  public Adapter createNotExpressionAdapter()
   {
     return null;
   }
@@ -605,16 +611,31 @@ public class EmfscaffoldingdslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Operation <em>Operation</em>}'.
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.BooleanLiteral <em>Boolean Literal</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Operation
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.BooleanLiteral
    * @generated
    */
-  public Adapter createOperationAdapter()
+  public Adapter createBooleanLiteralAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FloatLiteral <em>Float Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FloatLiteral
+   * @generated
+   */
+  public Adapter createFloatLiteralAdapter()
   {
     return null;
   }

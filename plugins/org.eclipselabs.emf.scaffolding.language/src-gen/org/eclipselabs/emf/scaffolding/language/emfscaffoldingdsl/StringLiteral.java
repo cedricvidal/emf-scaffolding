@@ -2,6 +2,7 @@
  * <copyright>
  * </copyright>
  *
+
  */
 package org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl;
 
@@ -22,7 +23,7 @@ package org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl;
  * @model
  * @generated
  */
-public interface StringLiteral extends BindingExpression, Expression
+public interface StringLiteral extends Expression
 {
   /**
    * Returns the value of the '<em><b>Value</b></em>' attribute.

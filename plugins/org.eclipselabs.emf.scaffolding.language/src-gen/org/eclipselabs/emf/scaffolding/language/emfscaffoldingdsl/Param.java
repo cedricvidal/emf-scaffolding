@@ -2,6 +2,7 @@
  * <copyright>
  * </copyright>
  *
+
  */
 package org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl;
 
@@ -34,12 +35,12 @@ public interface Param extends Binding
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Property</em>' containment reference.
-   * @see #setProperty(BindingExpression)
+   * @see #setProperty(Expression)
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.EmfscaffoldingdslPackage#getParam_Property()
    * @model containment="true"
    * @generated
    */
-  BindingExpression getProperty();
+  Expression getProperty();
 
   /**
    * Sets the value of the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Param#getProperty <em>Property</em>}' containment reference.
@@ -49,7 +50,7 @@ public interface Param extends Binding
    * @see #getProperty()
    * @generated
    */
-  void setProperty(BindingExpression value);
+  void setProperty(Expression value);
 
   /**
    * Returns the value of the '<em><b>Var</b></em>' containment reference.

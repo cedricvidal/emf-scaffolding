@@ -2,6 +2,7 @@
  * <copyright>
  * </copyright>
  *
+
  */
 package org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl;
 
@@ -357,23 +358,23 @@ public interface EmfscaffoldingdslPackage extends EPackage
   int PARAM_FEATURE_COUNT = BINDING_FEATURE_COUNT + 2;
 
   /**
-   * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.BindingExpressionImpl <em>Binding Expression</em>}' class.
+   * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.ExpressionImpl <em>Expression</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.BindingExpressionImpl
-   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getBindingExpression()
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.ExpressionImpl
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getExpression()
    * @generated
    */
-  int BINDING_EXPRESSION = 9;
+  int EXPRESSION = 9;
 
   /**
-   * The number of structural features of the '<em>Binding Expression</em>' class.
+   * The number of structural features of the '<em>Expression</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BINDING_EXPRESSION_FEATURE_COUNT = 0;
+  int EXPRESSION_FEATURE_COUNT = 0;
 
   /**
    * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.FeatureRefLiteralImpl <em>Feature Ref Literal</em>}' class.
@@ -392,7 +393,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FEATURE_REF_LITERAL__REF = BINDING_EXPRESSION_FEATURE_COUNT + 0;
+  int FEATURE_REF_LITERAL__REF = EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Feature Ref Literal</em>' class.
@@ -401,7 +402,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FEATURE_REF_LITERAL_FEATURE_COUNT = BINDING_EXPRESSION_FEATURE_COUNT + 1;
+  int FEATURE_REF_LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.ThenBlockImpl <em>Then Block</em>}' class.
@@ -488,25 +489,6 @@ public interface EmfscaffoldingdslPackage extends EPackage
   int CREATE_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
 
   /**
-   * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.ExpressionImpl <em>Expression</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.ExpressionImpl
-   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getExpression()
-   * @generated
-   */
-  int EXPRESSION = 19;
-
-  /**
-   * The number of structural features of the '<em>Expression</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXPRESSION_FEATURE_COUNT = 0;
-
-  /**
    * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.CreateClassImpl <em>Create Class</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -560,7 +542,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STRING_LITERAL__VALUE = BINDING_EXPRESSION_FEATURE_COUNT + 0;
+  int STRING_LITERAL__VALUE = EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>String Literal</em>' class.
@@ -569,7 +551,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STRING_LITERAL_FEATURE_COUNT = BINDING_EXPRESSION_FEATURE_COUNT + 1;
+  int STRING_LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.ListLiteralImpl <em>List Literal</em>}' class.
@@ -588,7 +570,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LIST_LITERAL__ITEMS = BINDING_EXPRESSION_FEATURE_COUNT + 0;
+  int LIST_LITERAL__ITEMS = EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>List Literal</em>' class.
@@ -597,7 +579,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LIST_LITERAL_FEATURE_COUNT = BINDING_EXPRESSION_FEATURE_COUNT + 1;
+  int LIST_LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.VarRefLiteralImpl <em>Var Ref Literal</em>}' class.
@@ -681,7 +663,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getFunction()
    * @generated
    */
-  int FUNCTION = 20;
+  int FUNCTION = 19;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -693,7 +675,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
   int FUNCTION__NAME = SCAFFOLDING_ELEMENT__NAME;
 
   /**
-   * The feature id for the '<em><b>Java Class</b></em>' attribute.
+   * The feature id for the '<em><b>Java Class</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -702,13 +684,22 @@ public interface EmfscaffoldingdslPackage extends EPackage
   int FUNCTION__JAVA_CLASS = SCAFFOLDING_ELEMENT_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>Operation</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNCTION__OPERATION = SCAFFOLDING_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
    * The number of structural features of the '<em>Function</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FUNCTION_FEATURE_COUNT = SCAFFOLDING_ELEMENT_FEATURE_COUNT + 1;
+  int FUNCTION_FEATURE_COUNT = SCAFFOLDING_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.UpdateStatementImpl <em>Update Statement</em>}' class.
@@ -718,7 +709,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getUpdateStatement()
    * @generated
    */
-  int UPDATE_STATEMENT = 21;
+  int UPDATE_STATEMENT = 20;
 
   /**
    * The feature id for the '<em><b>Var Ref</b></em>' reference.
@@ -748,117 +739,6 @@ public interface EmfscaffoldingdslPackage extends EPackage
   int UPDATE_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
 
   /**
-   * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.BindingOperationImpl <em>Binding Operation</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.BindingOperationImpl
-   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getBindingOperation()
-   * @generated
-   */
-  int BINDING_OPERATION = 22;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINDING_OPERATION__LEFT = BINDING_EXPRESSION_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Op</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINDING_OPERATION__OP = BINDING_EXPRESSION_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINDING_OPERATION__RIGHT = BINDING_EXPRESSION_FEATURE_COUNT + 2;
-
-  /**
-   * The number of structural features of the '<em>Binding Operation</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int BINDING_OPERATION_FEATURE_COUNT = BINDING_EXPRESSION_FEATURE_COUNT + 3;
-
-  /**
-   * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.FunctionLiteralImpl <em>Function Literal</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.FunctionLiteralImpl
-   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getFunctionLiteral()
-   * @generated
-   */
-  int FUNCTION_LITERAL = 23;
-
-  /**
-   * The feature id for the '<em><b>Function</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FUNCTION_LITERAL__FUNCTION = BINDING_EXPRESSION_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FUNCTION_LITERAL__EXP = BINDING_EXPRESSION_FEATURE_COUNT + 1;
-
-  /**
-   * The number of structural features of the '<em>Function Literal</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FUNCTION_LITERAL_FEATURE_COUNT = BINDING_EXPRESSION_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.IntLiteralImpl <em>Int Literal</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.IntLiteralImpl
-   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getIntLiteral()
-   * @generated
-   */
-  int INT_LITERAL = 24;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INT_LITERAL__VALUE = BINDING_EXPRESSION_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Int Literal</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INT_LITERAL_FEATURE_COUNT = BINDING_EXPRESSION_FEATURE_COUNT + 1;
-
-  /**
    * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.OperationImpl <em>Operation</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -866,7 +746,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getOperation()
    * @generated
    */
-  int OPERATION = 25;
+  int OPERATION = 21;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -903,6 +783,155 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @ordered
    */
   int OPERATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.NotExpressionImpl <em>Not Expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.NotExpressionImpl
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getNotExpression()
+   * @generated
+   */
+  int NOT_EXPRESSION = 22;
+
+  /**
+   * The feature id for the '<em><b>Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NOT_EXPRESSION__EXP = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Not Expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NOT_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.FunctionLiteralImpl <em>Function Literal</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.FunctionLiteralImpl
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getFunctionLiteral()
+   * @generated
+   */
+  int FUNCTION_LITERAL = 23;
+
+  /**
+   * The feature id for the '<em><b>Function</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNCTION_LITERAL__FUNCTION = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Arguments</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNCTION_LITERAL__ARGUMENTS = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Function Literal</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNCTION_LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.IntLiteralImpl <em>Int Literal</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.IntLiteralImpl
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getIntLiteral()
+   * @generated
+   */
+  int INT_LITERAL = 24;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INT_LITERAL__VALUE = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Int Literal</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INT_LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.BooleanLiteralImpl <em>Boolean Literal</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.BooleanLiteralImpl
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getBooleanLiteral()
+   * @generated
+   */
+  int BOOLEAN_LITERAL = 25;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOLEAN_LITERAL__VALUE = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Boolean Literal</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOOLEAN_LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.FloatLiteralImpl <em>Float Literal</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.FloatLiteralImpl
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getFloatLiteral()
+   * @generated
+   */
+  int FLOAT_LITERAL = 26;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FLOAT_LITERAL__VALUE = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Float Literal</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FLOAT_LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
 
   /**
@@ -1139,14 +1168,14 @@ public interface EmfscaffoldingdslPackage extends EPackage
   EReference getParam_Var();
 
   /**
-   * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.BindingExpression <em>Binding Expression</em>}'.
+   * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Expression <em>Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Binding Expression</em>'.
-   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.BindingExpression
+   * @return the meta object for class '<em>Expression</em>'.
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Expression
    * @generated
    */
-  EClass getBindingExpression();
+  EClass getExpression();
 
   /**
    * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FeatureRefLiteral <em>Feature Ref Literal</em>}'.
@@ -1371,16 +1400,6 @@ public interface EmfscaffoldingdslPackage extends EPackage
   EAttribute getSetter_Guard();
 
   /**
-   * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Expression <em>Expression</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Expression</em>'.
-   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Expression
-   * @generated
-   */
-  EClass getExpression();
-
-  /**
    * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Function <em>Function</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1391,15 +1410,26 @@ public interface EmfscaffoldingdslPackage extends EPackage
   EClass getFunction();
 
   /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Function#getJavaClass <em>Java Class</em>}'.
+   * Returns the meta object for the reference '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Function#getJavaClass <em>Java Class</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Java Class</em>'.
+   * @return the meta object for the reference '<em>Java Class</em>'.
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Function#getJavaClass()
    * @see #getFunction()
    * @generated
    */
-  EAttribute getFunction_JavaClass();
+  EReference getFunction_JavaClass();
+
+  /**
+   * Returns the meta object for the reference '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Function#getOperation <em>Operation</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Operation</em>'.
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Function#getOperation()
+   * @see #getFunction()
+   * @generated
+   */
+  EReference getFunction_Operation();
 
   /**
    * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.UpdateStatement <em>Update Statement</em>}'.
@@ -1432,102 +1462,6 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @generated
    */
   EReference getUpdateStatement_Setters();
-
-  /**
-   * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.BindingOperation <em>Binding Operation</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Binding Operation</em>'.
-   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.BindingOperation
-   * @generated
-   */
-  EClass getBindingOperation();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.BindingOperation#getLeft <em>Left</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Left</em>'.
-   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.BindingOperation#getLeft()
-   * @see #getBindingOperation()
-   * @generated
-   */
-  EReference getBindingOperation_Left();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.BindingOperation#getOp <em>Op</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Op</em>'.
-   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.BindingOperation#getOp()
-   * @see #getBindingOperation()
-   * @generated
-   */
-  EAttribute getBindingOperation_Op();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.BindingOperation#getRight <em>Right</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Right</em>'.
-   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.BindingOperation#getRight()
-   * @see #getBindingOperation()
-   * @generated
-   */
-  EReference getBindingOperation_Right();
-
-  /**
-   * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FunctionLiteral <em>Function Literal</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Function Literal</em>'.
-   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FunctionLiteral
-   * @generated
-   */
-  EClass getFunctionLiteral();
-
-  /**
-   * Returns the meta object for the reference '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FunctionLiteral#getFunction <em>Function</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Function</em>'.
-   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FunctionLiteral#getFunction()
-   * @see #getFunctionLiteral()
-   * @generated
-   */
-  EReference getFunctionLiteral_Function();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FunctionLiteral#getExp <em>Exp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Exp</em>'.
-   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FunctionLiteral#getExp()
-   * @see #getFunctionLiteral()
-   * @generated
-   */
-  EReference getFunctionLiteral_Exp();
-
-  /**
-   * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.IntLiteral <em>Int Literal</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Int Literal</em>'.
-   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.IntLiteral
-   * @generated
-   */
-  EClass getIntLiteral();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.IntLiteral#getValue <em>Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value</em>'.
-   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.IntLiteral#getValue()
-   * @see #getIntLiteral()
-   * @generated
-   */
-  EAttribute getIntLiteral_Value();
 
   /**
    * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Operation <em>Operation</em>}'.
@@ -1571,6 +1505,122 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @generated
    */
   EReference getOperation_Right();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.NotExpression <em>Not Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Not Expression</em>'.
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.NotExpression
+   * @generated
+   */
+  EClass getNotExpression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.NotExpression#getExp <em>Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exp</em>'.
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.NotExpression#getExp()
+   * @see #getNotExpression()
+   * @generated
+   */
+  EReference getNotExpression_Exp();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FunctionLiteral <em>Function Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Function Literal</em>'.
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FunctionLiteral
+   * @generated
+   */
+  EClass getFunctionLiteral();
+
+  /**
+   * Returns the meta object for the reference '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FunctionLiteral#getFunction <em>Function</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Function</em>'.
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FunctionLiteral#getFunction()
+   * @see #getFunctionLiteral()
+   * @generated
+   */
+  EReference getFunctionLiteral_Function();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FunctionLiteral#getArguments <em>Arguments</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Arguments</em>'.
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FunctionLiteral#getArguments()
+   * @see #getFunctionLiteral()
+   * @generated
+   */
+  EReference getFunctionLiteral_Arguments();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.IntLiteral <em>Int Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Int Literal</em>'.
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.IntLiteral
+   * @generated
+   */
+  EClass getIntLiteral();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.IntLiteral#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.IntLiteral#getValue()
+   * @see #getIntLiteral()
+   * @generated
+   */
+  EAttribute getIntLiteral_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.BooleanLiteral <em>Boolean Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Boolean Literal</em>'.
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.BooleanLiteral
+   * @generated
+   */
+  EClass getBooleanLiteral();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.BooleanLiteral#isValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.BooleanLiteral#isValue()
+   * @see #getBooleanLiteral()
+   * @generated
+   */
+  EAttribute getBooleanLiteral_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FloatLiteral <em>Float Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Float Literal</em>'.
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FloatLiteral
+   * @generated
+   */
+  EClass getFloatLiteral();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FloatLiteral#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FloatLiteral#getValue()
+   * @see #getFloatLiteral()
+   * @generated
+   */
+  EAttribute getFloatLiteral_Value();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -1790,14 +1840,14 @@ public interface EmfscaffoldingdslPackage extends EPackage
     EReference PARAM__VAR = eINSTANCE.getParam_Var();
 
     /**
-     * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.BindingExpressionImpl <em>Binding Expression</em>}' class.
+     * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.ExpressionImpl <em>Expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.BindingExpressionImpl
-     * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getBindingExpression()
+     * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.ExpressionImpl
+     * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getExpression()
      * @generated
      */
-    EClass BINDING_EXPRESSION = eINSTANCE.getBindingExpression();
+    EClass EXPRESSION = eINSTANCE.getExpression();
 
     /**
      * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.FeatureRefLiteralImpl <em>Feature Ref Literal</em>}' class.
@@ -1986,16 +2036,6 @@ public interface EmfscaffoldingdslPackage extends EPackage
     EAttribute SETTER__GUARD = eINSTANCE.getSetter_Guard();
 
     /**
-     * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.ExpressionImpl <em>Expression</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.ExpressionImpl
-     * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getExpression()
-     * @generated
-     */
-    EClass EXPRESSION = eINSTANCE.getExpression();
-
-    /**
      * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.FunctionImpl <em>Function</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2006,12 +2046,20 @@ public interface EmfscaffoldingdslPackage extends EPackage
     EClass FUNCTION = eINSTANCE.getFunction();
 
     /**
-     * The meta object literal for the '<em><b>Java Class</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Java Class</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute FUNCTION__JAVA_CLASS = eINSTANCE.getFunction_JavaClass();
+    EReference FUNCTION__JAVA_CLASS = eINSTANCE.getFunction_JavaClass();
+
+    /**
+     * The meta object literal for the '<em><b>Operation</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FUNCTION__OPERATION = eINSTANCE.getFunction_Operation();
 
     /**
      * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.UpdateStatementImpl <em>Update Statement</em>}' class.
@@ -2038,84 +2086,6 @@ public interface EmfscaffoldingdslPackage extends EPackage
      * @generated
      */
     EReference UPDATE_STATEMENT__SETTERS = eINSTANCE.getUpdateStatement_Setters();
-
-    /**
-     * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.BindingOperationImpl <em>Binding Operation</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.BindingOperationImpl
-     * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getBindingOperation()
-     * @generated
-     */
-    EClass BINDING_OPERATION = eINSTANCE.getBindingOperation();
-
-    /**
-     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference BINDING_OPERATION__LEFT = eINSTANCE.getBindingOperation_Left();
-
-    /**
-     * The meta object literal for the '<em><b>Op</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute BINDING_OPERATION__OP = eINSTANCE.getBindingOperation_Op();
-
-    /**
-     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference BINDING_OPERATION__RIGHT = eINSTANCE.getBindingOperation_Right();
-
-    /**
-     * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.FunctionLiteralImpl <em>Function Literal</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.FunctionLiteralImpl
-     * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getFunctionLiteral()
-     * @generated
-     */
-    EClass FUNCTION_LITERAL = eINSTANCE.getFunctionLiteral();
-
-    /**
-     * The meta object literal for the '<em><b>Function</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference FUNCTION_LITERAL__FUNCTION = eINSTANCE.getFunctionLiteral_Function();
-
-    /**
-     * The meta object literal for the '<em><b>Exp</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference FUNCTION_LITERAL__EXP = eINSTANCE.getFunctionLiteral_Exp();
-
-    /**
-     * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.IntLiteralImpl <em>Int Literal</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.IntLiteralImpl
-     * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getIntLiteral()
-     * @generated
-     */
-    EClass INT_LITERAL = eINSTANCE.getIntLiteral();
-
-    /**
-     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute INT_LITERAL__VALUE = eINSTANCE.getIntLiteral_Value();
 
     /**
      * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.OperationImpl <em>Operation</em>}' class.
@@ -2150,6 +2120,104 @@ public interface EmfscaffoldingdslPackage extends EPackage
      * @generated
      */
     EReference OPERATION__RIGHT = eINSTANCE.getOperation_Right();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.NotExpressionImpl <em>Not Expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.NotExpressionImpl
+     * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getNotExpression()
+     * @generated
+     */
+    EClass NOT_EXPRESSION = eINSTANCE.getNotExpression();
+
+    /**
+     * The meta object literal for the '<em><b>Exp</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference NOT_EXPRESSION__EXP = eINSTANCE.getNotExpression_Exp();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.FunctionLiteralImpl <em>Function Literal</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.FunctionLiteralImpl
+     * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getFunctionLiteral()
+     * @generated
+     */
+    EClass FUNCTION_LITERAL = eINSTANCE.getFunctionLiteral();
+
+    /**
+     * The meta object literal for the '<em><b>Function</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FUNCTION_LITERAL__FUNCTION = eINSTANCE.getFunctionLiteral_Function();
+
+    /**
+     * The meta object literal for the '<em><b>Arguments</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FUNCTION_LITERAL__ARGUMENTS = eINSTANCE.getFunctionLiteral_Arguments();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.IntLiteralImpl <em>Int Literal</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.IntLiteralImpl
+     * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getIntLiteral()
+     * @generated
+     */
+    EClass INT_LITERAL = eINSTANCE.getIntLiteral();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INT_LITERAL__VALUE = eINSTANCE.getIntLiteral_Value();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.BooleanLiteralImpl <em>Boolean Literal</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.BooleanLiteralImpl
+     * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getBooleanLiteral()
+     * @generated
+     */
+    EClass BOOLEAN_LITERAL = eINSTANCE.getBooleanLiteral();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BOOLEAN_LITERAL__VALUE = eINSTANCE.getBooleanLiteral_Value();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.FloatLiteralImpl <em>Float Literal</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.FloatLiteralImpl
+     * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getFloatLiteral()
+     * @generated
+     */
+    EClass FLOAT_LITERAL = eINSTANCE.getFloatLiteral();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FLOAT_LITERAL__VALUE = eINSTANCE.getFloatLiteral_Value();
 
   }
 

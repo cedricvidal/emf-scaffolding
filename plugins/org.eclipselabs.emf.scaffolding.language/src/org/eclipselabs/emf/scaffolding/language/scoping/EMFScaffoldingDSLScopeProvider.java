@@ -20,11 +20,14 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.xtext.common.types.JvmGenericType;
+import org.eclipse.xtext.common.types.JvmOperation;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.Scopes;
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
 import org.eclipse.xtext.scoping.impl.SimpleScope;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.CreateClass;
+import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Function;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Match;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Rule;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Scaffold;
@@ -147,6 +150,24 @@ public class EMFScaffoldingDSLScopeProvider extends
 		ArrayList<T> list = new ArrayList<T>();
 		Iterators.addAll(list, classes);
 		return list;
+	}
+
+	static class OperationNamingStrategy implements com.google.common.base.Function<JvmOperation, String> {
+		public static OperationNamingStrategy INSTANCE = new OperationNamingStrategy();
+		@Override
+		public String apply(JvmOperation from) {
+			return from.getSimpleName();
+		}
+		
+	}
+
+	IScope scope_JvmOperation(Function context, EReference eReference) {
+		JvmGenericType javaClass = context.getJavaClass();
+		if (javaClass != null) {
+			Iterable<JvmOperation> operations = filter(javaClass.getMembers(), JvmOperation.class);
+			return new SimpleScope(Scopes.scopedElementsFor(operations, OperationNamingStrategy.INSTANCE));
+		}
+		return null;
 	}
 
 }

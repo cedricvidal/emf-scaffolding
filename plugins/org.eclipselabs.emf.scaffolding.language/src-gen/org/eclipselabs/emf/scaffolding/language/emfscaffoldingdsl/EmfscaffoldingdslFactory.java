@@ -2,6 +2,7 @@
  * <copyright>
  * </copyright>
  *
+
  */
 package org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl;
 
@@ -107,13 +108,13 @@ public interface EmfscaffoldingdslFactory extends EFactory
   Param createParam();
 
   /**
-   * Returns a new object of class '<em>Binding Expression</em>'.
+   * Returns a new object of class '<em>Expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Binding Expression</em>'.
+   * @return a new object of class '<em>Expression</em>'.
    * @generated
    */
-  BindingExpression createBindingExpression();
+  Expression createExpression();
 
   /**
    * Returns a new object of class '<em>Feature Ref Literal</em>'.
@@ -197,15 +198,6 @@ public interface EmfscaffoldingdslFactory extends EFactory
   Setter createSetter();
 
   /**
-   * Returns a new object of class '<em>Expression</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Expression</em>'.
-   * @generated
-   */
-  Expression createExpression();
-
-  /**
    * Returns a new object of class '<em>Function</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -224,13 +216,22 @@ public interface EmfscaffoldingdslFactory extends EFactory
   UpdateStatement createUpdateStatement();
 
   /**
-   * Returns a new object of class '<em>Binding Operation</em>'.
+   * Returns a new object of class '<em>Operation</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Binding Operation</em>'.
+   * @return a new object of class '<em>Operation</em>'.
    * @generated
    */
-  BindingOperation createBindingOperation();
+  Operation createOperation();
+
+  /**
+   * Returns a new object of class '<em>Not Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Not Expression</em>'.
+   * @generated
+   */
+  NotExpression createNotExpression();
 
   /**
    * Returns a new object of class '<em>Function Literal</em>'.
@@ -251,13 +252,22 @@ public interface EmfscaffoldingdslFactory extends EFactory
   IntLiteral createIntLiteral();
 
   /**
-   * Returns a new object of class '<em>Operation</em>'.
+   * Returns a new object of class '<em>Boolean Literal</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Operation</em>'.
+   * @return a new object of class '<em>Boolean Literal</em>'.
    * @generated
    */
-  Operation createOperation();
+  BooleanLiteral createBooleanLiteral();
+
+  /**
+   * Returns a new object of class '<em>Float Literal</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Float Literal</em>'.
+   * @generated
+   */
+  FloatLiteral createFloatLiteral();
 
   /**
    * Returns the package supported by this factory.

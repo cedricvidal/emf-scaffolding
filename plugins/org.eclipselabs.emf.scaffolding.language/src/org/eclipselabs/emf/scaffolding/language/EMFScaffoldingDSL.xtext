@@ -1,9 +1,9 @@
 grammar org.eclipselabs.emf.scaffolding.language.EMFScaffoldingDSL with org.eclipse.xtext.common.Terminals
 
-
 generate emfscaffoldingdsl "http://www.eclipselabs.org/emf/scaffolding/1.0.0"
 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+import "http://www.eclipse.org/xtext/common/JavaVMTypes" as types
 
 Scaffolding :
 	scaffold=Scaffold
@@ -38,21 +38,54 @@ Variable :
 Param :
 	 property=BindingExpression (':' var=Variable)?;
 
-BindingExpression :
-	BindingTerminalExpression ({BindingOperation.left=current} 
-		op=('<'|'>'|'='|'!='|'+'|'-'|'>='|'<='|'/'|'*') right=BindingExpression)?
+BindingExpression returns Expression :
+	BindingExpressionHigh ({Operation.left=current} 
+		op=OPERATOR_LOW_PRIORITY right=BindingExpression)?
 	;
 
-BindingTerminalExpression returns BindingExpression:
-	'(' BindingExpression ')' |
-	ListLiteral |
-	StringLiteral |
-	NullLiteral |
-	FeatureRefLiteral |
-//	{NotBindingExpression} '!' exp=BindingExpression |
-	{FunctionLiteral} function=[Function] ('(' exp=BindingExpression ')') |
-	{IntLiteral} value=INT
+BindingExpressionHigh returns Expression :
+	BindingTerminalExpression ({Operation.left=current} 
+		op=OPERATOR_HIGH_PRIORITY right=BindingExpressionHigh)?
 	;
+
+BindingTerminalExpression returns Expression:
+	'(' BindingExpression ')'
+	| FeatureRefLiteral
+	| {NotExpression} '!' exp=BindingTerminalExpression
+	| {FunctionLiteral} function=[Function] ('(' exp=BindingExpression ')')
+	| PrimitiveLiteral
+	;
+
+Expression returns Expression:
+	ExpressionHigh ({Operation.left=current} 
+	op=OPERATOR_LOW_PRIORITY right=Expression)?
+	;
+
+ExpressionHigh returns Expression :
+	TerminalExpression ({Operation.left=current} 
+	op=OPERATOR_HIGH_PRIORITY right=ExpressionHigh)?
+	;
+
+TerminalExpression returns Expression:
+	'(' Expression ')'
+	| VarRefLiteral
+	| CreateClass
+	| {NotExpression} '!' exp=TerminalExpression
+	| {FunctionLiteral} function=[Function] ('(' (arguments+=Expression ( ',' arguments+=Expression)* )? ')')
+	| PrimitiveLiteral
+	;
+
+PrimitiveLiteral returns Expression:
+	ListLiteral
+	| StringLiteral
+	| NullLiteral
+	| {IntLiteral} value=INT
+	| {BooleanLiteral} value=BOOLEAN
+	| {FloatLiteral} value=FLOAT
+	;
+
+terminal OPERATOR_HIGH_PRIORITY: '<'|'>'|'='|'!='|'>='|'<='|'/'|'*';
+terminal OPERATOR_LOW_PRIORITY: '+'|'-';
 
 FeatureRefLiteral :
 	 ref=[ecore::EStructuralFeature];
@@ -85,29 +118,16 @@ VarRefLiteral :
 Setter :
 	property=[ecore::EStructuralFeature] (':'|'+=') expression=Expression (guard?='guard')?;
 
-Expression :
-	TerminalExpression ({Operation.left=current} 
-	op=('<'|'>'|'='|'+'|'-'|'>='|'<='|'/'|'*') right=Expression)?
-	;
-
-TerminalExpression returns Expression:
-	'(' Expression ')' |
-	VarRefLiteral |
-	ListLiteral |
-	CreateClass |
-	NullLiteral |
-	StringLiteral |
-	{FunctionLiteral} function=[Function] ('(' exp=Expression ')') |
-	{IntLiteral} value=INT
-	;
-
 Function:
-	'function' name=ID javaClass=ClassFqn;
+	'function' name=ID javaClass=[types::JvmGenericType|FQN] '#' operation=[types::JvmOperation|ID]
+	;
 
 UpdateStatement :
 	'update' varRef=[Variable] ('{' (setters += Setter (',' setters += Setter)*)? '}')?;
 
-ClassFqn:
-  ID ('.' ID)*;
+FQN: ID ('.' ID)*;
+OperationFQN: FQN '(' ( FQN (',' FQN)* )? ')';
 
-	
+terminal BOOLEAN returns ecore::EBoolean: 'true' | 'false';
+terminal FLOAT returns ecore::EFloat: ('-')?('0'..'9')+'.'('0'..'9');
+terminal INT returns ecore::EInt: ('-')?('0'..'9')+;

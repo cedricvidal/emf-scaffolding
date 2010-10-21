@@ -2,6 +2,7 @@
  * <copyright>
  * </copyright>
  *
+
  */
 package org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.util;
 
@@ -161,10 +162,10 @@ public class EmfscaffoldingdslSwitch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EmfscaffoldingdslPackage.BINDING_EXPRESSION:
+      case EmfscaffoldingdslPackage.EXPRESSION:
       {
-        BindingExpression bindingExpression = (BindingExpression)theEObject;
-        T result = caseBindingExpression(bindingExpression);
+        Expression expression = (Expression)theEObject;
+        T result = caseExpression(expression);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -172,7 +173,7 @@ public class EmfscaffoldingdslSwitch<T>
       {
         FeatureRefLiteral featureRefLiteral = (FeatureRefLiteral)theEObject;
         T result = caseFeatureRefLiteral(featureRefLiteral);
-        if (result == null) result = caseBindingExpression(featureRefLiteral);
+        if (result == null) result = caseExpression(featureRefLiteral);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -212,7 +213,6 @@ public class EmfscaffoldingdslSwitch<T>
       {
         StringLiteral stringLiteral = (StringLiteral)theEObject;
         T result = caseStringLiteral(stringLiteral);
-        if (result == null) result = caseBindingExpression(stringLiteral);
         if (result == null) result = caseExpression(stringLiteral);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -221,7 +221,6 @@ public class EmfscaffoldingdslSwitch<T>
       {
         ListLiteral listLiteral = (ListLiteral)theEObject;
         T result = caseListLiteral(listLiteral);
-        if (result == null) result = caseBindingExpression(listLiteral);
         if (result == null) result = caseExpression(listLiteral);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -238,13 +237,6 @@ public class EmfscaffoldingdslSwitch<T>
       {
         Setter setter = (Setter)theEObject;
         T result = caseSetter(setter);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case EmfscaffoldingdslPackage.EXPRESSION:
-      {
-        Expression expression = (Expression)theEObject;
-        T result = caseExpression(expression);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -265,11 +257,19 @@ public class EmfscaffoldingdslSwitch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EmfscaffoldingdslPackage.BINDING_OPERATION:
+      case EmfscaffoldingdslPackage.OPERATION:
       {
-        BindingOperation bindingOperation = (BindingOperation)theEObject;
-        T result = caseBindingOperation(bindingOperation);
-        if (result == null) result = caseBindingExpression(bindingOperation);
+        Operation operation = (Operation)theEObject;
+        T result = caseOperation(operation);
+        if (result == null) result = caseExpression(operation);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EmfscaffoldingdslPackage.NOT_EXPRESSION:
+      {
+        NotExpression notExpression = (NotExpression)theEObject;
+        T result = caseNotExpression(notExpression);
+        if (result == null) result = caseExpression(notExpression);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -277,7 +277,6 @@ public class EmfscaffoldingdslSwitch<T>
       {
         FunctionLiteral functionLiteral = (FunctionLiteral)theEObject;
         T result = caseFunctionLiteral(functionLiteral);
-        if (result == null) result = caseBindingExpression(functionLiteral);
         if (result == null) result = caseExpression(functionLiteral);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -286,16 +285,23 @@ public class EmfscaffoldingdslSwitch<T>
       {
         IntLiteral intLiteral = (IntLiteral)theEObject;
         T result = caseIntLiteral(intLiteral);
-        if (result == null) result = caseBindingExpression(intLiteral);
         if (result == null) result = caseExpression(intLiteral);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EmfscaffoldingdslPackage.OPERATION:
+      case EmfscaffoldingdslPackage.BOOLEAN_LITERAL:
       {
-        Operation operation = (Operation)theEObject;
-        T result = caseOperation(operation);
-        if (result == null) result = caseExpression(operation);
+        BooleanLiteral booleanLiteral = (BooleanLiteral)theEObject;
+        T result = caseBooleanLiteral(booleanLiteral);
+        if (result == null) result = caseExpression(booleanLiteral);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EmfscaffoldingdslPackage.FLOAT_LITERAL:
+      {
+        FloatLiteral floatLiteral = (FloatLiteral)theEObject;
+        T result = caseFloatLiteral(floatLiteral);
+        if (result == null) result = caseExpression(floatLiteral);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -448,17 +454,17 @@ public class EmfscaffoldingdslSwitch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Binding Expression</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Expression</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Binding Expression</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Expression</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseBindingExpression(BindingExpression object)
+  public T caseExpression(Expression object)
   {
     return null;
   }
@@ -608,22 +614,6 @@ public class EmfscaffoldingdslSwitch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Expression</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Expression</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseExpression(Expression object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Function</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -656,17 +646,33 @@ public class EmfscaffoldingdslSwitch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Binding Operation</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Operation</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Binding Operation</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Operation</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseBindingOperation(BindingOperation object)
+  public T caseOperation(Operation object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Not Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Not Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseNotExpression(NotExpression object)
   {
     return null;
   }
@@ -704,17 +710,33 @@ public class EmfscaffoldingdslSwitch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Operation</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Boolean Literal</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Operation</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Boolean Literal</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseOperation(Operation object)
+  public T caseBooleanLiteral(BooleanLiteral object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Float Literal</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Float Literal</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFloatLiteral(FloatLiteral object)
   {
     return null;
   }

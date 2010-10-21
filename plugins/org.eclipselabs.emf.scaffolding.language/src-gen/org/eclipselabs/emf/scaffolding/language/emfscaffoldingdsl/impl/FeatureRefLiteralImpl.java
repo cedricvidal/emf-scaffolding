@@ -2,6 +2,7 @@
  * <copyright>
  * </copyright>
  *
+
  */
 package org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl;
 
@@ -29,7 +30,7 @@ import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FeatureRefLite
  *
  * @generated
  */
-public class FeatureRefLiteralImpl extends BindingExpressionImpl implements FeatureRefLiteral
+public class FeatureRefLiteralImpl extends ExpressionImpl implements FeatureRefLiteral
 {
   /**
    * The cached value of the '{@link #getRef() <em>Ref</em>}' reference.

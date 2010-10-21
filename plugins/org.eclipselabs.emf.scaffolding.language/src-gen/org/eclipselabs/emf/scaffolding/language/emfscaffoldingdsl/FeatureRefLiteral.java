@@ -2,6 +2,7 @@
  * <copyright>
  * </copyright>
  *
+
  */
 package org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl;
 
@@ -23,7 +24,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
  * @model
  * @generated
  */
-public interface FeatureRefLiteral extends BindingExpression
+public interface FeatureRefLiteral extends Expression
 {
   /**
    * Returns the value of the '<em><b>Ref</b></em>' reference.

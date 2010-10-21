@@ -2,14 +2,19 @@
  * <copyright>
  * </copyright>
  *
+
  */
 package org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.xtext.common.types.JvmGenericType;
+import org.eclipse.xtext.common.types.JvmOperation;
 
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.EmfscaffoldingdslPackage;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Function;
@@ -22,6 +27,7 @@ import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Function;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.FunctionImpl#getJavaClass <em>Java Class</em>}</li>
+ *   <li>{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.FunctionImpl#getOperation <em>Operation</em>}</li>
  * </ul>
  * </p>
  *
@@ -30,24 +36,24 @@ import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Function;
 public class FunctionImpl extends ScaffoldingElementImpl implements Function
 {
   /**
-   * The default value of the '{@link #getJavaClass() <em>Java Class</em>}' attribute.
+   * The cached value of the '{@link #getJavaClass() <em>Java Class</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getJavaClass()
    * @generated
    * @ordered
    */
-  protected static final String JAVA_CLASS_EDEFAULT = null;
+  protected JvmGenericType javaClass;
 
   /**
-   * The cached value of the '{@link #getJavaClass() <em>Java Class</em>}' attribute.
+   * The cached value of the '{@link #getOperation() <em>Operation</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getJavaClass()
+   * @see #getOperation()
    * @generated
    * @ordered
    */
-  protected String javaClass = JAVA_CLASS_EDEFAULT;
+  protected JvmOperation operation;
 
   /**
    * <!-- begin-user-doc -->
@@ -75,7 +81,27 @@ public class FunctionImpl extends ScaffoldingElementImpl implements Function
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getJavaClass()
+  public JvmGenericType getJavaClass()
+  {
+    if (javaClass != null && javaClass.eIsProxy())
+    {
+      InternalEObject oldJavaClass = (InternalEObject)javaClass;
+      javaClass = (JvmGenericType)eResolveProxy(oldJavaClass);
+      if (javaClass != oldJavaClass)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, EmfscaffoldingdslPackage.FUNCTION__JAVA_CLASS, oldJavaClass, javaClass));
+      }
+    }
+    return javaClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public JvmGenericType basicGetJavaClass()
   {
     return javaClass;
   }
@@ -85,12 +111,55 @@ public class FunctionImpl extends ScaffoldingElementImpl implements Function
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setJavaClass(String newJavaClass)
+  public void setJavaClass(JvmGenericType newJavaClass)
   {
-    String oldJavaClass = javaClass;
+    JvmGenericType oldJavaClass = javaClass;
     javaClass = newJavaClass;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, EmfscaffoldingdslPackage.FUNCTION__JAVA_CLASS, oldJavaClass, javaClass));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public JvmOperation getOperation()
+  {
+    if (operation != null && operation.eIsProxy())
+    {
+      InternalEObject oldOperation = (InternalEObject)operation;
+      operation = (JvmOperation)eResolveProxy(oldOperation);
+      if (operation != oldOperation)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, EmfscaffoldingdslPackage.FUNCTION__OPERATION, oldOperation, operation));
+      }
+    }
+    return operation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public JvmOperation basicGetOperation()
+  {
+    return operation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setOperation(JvmOperation newOperation)
+  {
+    JvmOperation oldOperation = operation;
+    operation = newOperation;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EmfscaffoldingdslPackage.FUNCTION__OPERATION, oldOperation, operation));
   }
 
   /**
@@ -104,7 +173,11 @@ public class FunctionImpl extends ScaffoldingElementImpl implements Function
     switch (featureID)
     {
       case EmfscaffoldingdslPackage.FUNCTION__JAVA_CLASS:
-        return getJavaClass();
+        if (resolve) return getJavaClass();
+        return basicGetJavaClass();
+      case EmfscaffoldingdslPackage.FUNCTION__OPERATION:
+        if (resolve) return getOperation();
+        return basicGetOperation();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -120,7 +193,10 @@ public class FunctionImpl extends ScaffoldingElementImpl implements Function
     switch (featureID)
     {
       case EmfscaffoldingdslPackage.FUNCTION__JAVA_CLASS:
-        setJavaClass((String)newValue);
+        setJavaClass((JvmGenericType)newValue);
+        return;
+      case EmfscaffoldingdslPackage.FUNCTION__OPERATION:
+        setOperation((JvmOperation)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -137,7 +213,10 @@ public class FunctionImpl extends ScaffoldingElementImpl implements Function
     switch (featureID)
     {
       case EmfscaffoldingdslPackage.FUNCTION__JAVA_CLASS:
-        setJavaClass(JAVA_CLASS_EDEFAULT);
+        setJavaClass((JvmGenericType)null);
+        return;
+      case EmfscaffoldingdslPackage.FUNCTION__OPERATION:
+        setOperation((JvmOperation)null);
         return;
     }
     super.eUnset(featureID);
@@ -154,26 +233,11 @@ public class FunctionImpl extends ScaffoldingElementImpl implements Function
     switch (featureID)
     {
       case EmfscaffoldingdslPackage.FUNCTION__JAVA_CLASS:
-        return JAVA_CLASS_EDEFAULT == null ? javaClass != null : !JAVA_CLASS_EDEFAULT.equals(javaClass);
+        return javaClass != null;
+      case EmfscaffoldingdslPackage.FUNCTION__OPERATION:
+        return operation != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (javaClass: ");
-    result.append(javaClass);
-    result.append(')');
-    return result.toString();
   }
 
 } //FunctionImpl
