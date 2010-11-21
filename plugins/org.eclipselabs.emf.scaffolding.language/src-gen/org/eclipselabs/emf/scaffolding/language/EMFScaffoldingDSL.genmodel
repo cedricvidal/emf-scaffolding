@@ -87,6 +87,7 @@
     </genClasses>
     <genClasses ecoreClass="EMFScaffoldingDSL.ecore#//FunctionLiteral">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EMFScaffoldingDSL.ecore#//FunctionLiteral/function"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EMFScaffoldingDSL.ecore#//FunctionLiteral/exp"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EMFScaffoldingDSL.ecore#//FunctionLiteral/arguments"/>
     </genClasses>
     <genClasses ecoreClass="EMFScaffoldingDSL.ecore#//IntLiteral">

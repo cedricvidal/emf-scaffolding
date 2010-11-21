@@ -2675,9 +2675,9 @@ rule__BindingTerminalExpression__Group_3_2__1__Impl
     }
 :
 (
-{ before(grammarAccess.getBindingTerminalExpressionAccess().getGroup_3_2_1()); }
-(rule__BindingTerminalExpression__Group_3_2_1__0)?
-{ after(grammarAccess.getBindingTerminalExpressionAccess().getGroup_3_2_1()); }
+{ before(grammarAccess.getBindingTerminalExpressionAccess().getExpAssignment_3_2_1()); }
+(rule__BindingTerminalExpression__ExpAssignment_3_2_1)
+{ after(grammarAccess.getBindingTerminalExpressionAccess().getExpAssignment_3_2_1()); }
 )
 
 ;
@@ -2716,130 +2716,6 @@ finally {
 }
 
 
-
-
-
-
-
-
-rule__BindingTerminalExpression__Group_3_2_1__0
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__BindingTerminalExpression__Group_3_2_1__0__Impl
-	rule__BindingTerminalExpression__Group_3_2_1__1
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__BindingTerminalExpression__Group_3_2_1__0__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getBindingTerminalExpressionAccess().getArgumentsAssignment_3_2_1_0()); }
-(rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_0)
-{ after(grammarAccess.getBindingTerminalExpressionAccess().getArgumentsAssignment_3_2_1_0()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__BindingTerminalExpression__Group_3_2_1__1
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__BindingTerminalExpression__Group_3_2_1__1__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__BindingTerminalExpression__Group_3_2_1__1__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getBindingTerminalExpressionAccess().getGroup_3_2_1_1()); }
-(rule__BindingTerminalExpression__Group_3_2_1_1__0)*
-{ after(grammarAccess.getBindingTerminalExpressionAccess().getGroup_3_2_1_1()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-
-
-
-
-rule__BindingTerminalExpression__Group_3_2_1_1__0
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__BindingTerminalExpression__Group_3_2_1_1__0__Impl
-	rule__BindingTerminalExpression__Group_3_2_1_1__1
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__BindingTerminalExpression__Group_3_2_1_1__0__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getBindingTerminalExpressionAccess().getCommaKeyword_3_2_1_1_0()); }
-
-	',' 
-
-{ after(grammarAccess.getBindingTerminalExpressionAccess().getCommaKeyword_3_2_1_1_0()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
-rule__BindingTerminalExpression__Group_3_2_1_1__1
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-	rule__BindingTerminalExpression__Group_3_2_1_1__1__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__BindingTerminalExpression__Group_3_2_1_1__1__Impl
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getBindingTerminalExpressionAccess().getArgumentsAssignment_3_2_1_1_1()); }
-(rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_1_1)
-{ after(grammarAccess.getBindingTerminalExpressionAccess().getArgumentsAssignment_3_2_1_1_1()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
 
 
 
@@ -5775,29 +5651,14 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_0
+rule__BindingTerminalExpression__ExpAssignment_3_2_1
     @init {
 		int stackSize = keepStackSize();
     }
 :
 (
-{ before(grammarAccess.getBindingTerminalExpressionAccess().getArgumentsBindingExpressionParserRuleCall_3_2_1_0_0()); }
-	ruleBindingExpression{ after(grammarAccess.getBindingTerminalExpressionAccess().getArgumentsBindingExpressionParserRuleCall_3_2_1_0_0()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_1_1
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getBindingTerminalExpressionAccess().getArgumentsBindingExpressionParserRuleCall_3_2_1_1_1_0()); }
-	ruleBindingExpression{ after(grammarAccess.getBindingTerminalExpressionAccess().getArgumentsBindingExpressionParserRuleCall_3_2_1_1_1_0()); }
+{ before(grammarAccess.getBindingTerminalExpressionAccess().getExpBindingExpressionParserRuleCall_3_2_1_0()); }
+	ruleBindingExpression{ after(grammarAccess.getBindingTerminalExpressionAccess().getExpBindingExpressionParserRuleCall_3_2_1_0()); }
 )
 
 ;

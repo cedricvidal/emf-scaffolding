@@ -433,23 +433,18 @@ public class EMFScaffoldingDSLGrammarAccess extends AbstractGrammarElementFinder
 		private final RuleCall cFunctionFunctionIDTerminalRuleCall_3_1_0_1 = (RuleCall)cFunctionFunctionCrossReference_3_1_0.eContents().get(1);
 		private final Group cGroup_3_2 = (Group)cGroup_3.eContents().get(2);
 		private final Keyword cLeftParenthesisKeyword_3_2_0 = (Keyword)cGroup_3_2.eContents().get(0);
-		private final Group cGroup_3_2_1 = (Group)cGroup_3_2.eContents().get(1);
-		private final Assignment cArgumentsAssignment_3_2_1_0 = (Assignment)cGroup_3_2_1.eContents().get(0);
-		private final RuleCall cArgumentsBindingExpressionParserRuleCall_3_2_1_0_0 = (RuleCall)cArgumentsAssignment_3_2_1_0.eContents().get(0);
-		private final Group cGroup_3_2_1_1 = (Group)cGroup_3_2_1.eContents().get(1);
-		private final Keyword cCommaKeyword_3_2_1_1_0 = (Keyword)cGroup_3_2_1_1.eContents().get(0);
-		private final Assignment cArgumentsAssignment_3_2_1_1_1 = (Assignment)cGroup_3_2_1_1.eContents().get(1);
-		private final RuleCall cArgumentsBindingExpressionParserRuleCall_3_2_1_1_1_0 = (RuleCall)cArgumentsAssignment_3_2_1_1_1.eContents().get(0);
+		private final Assignment cExpAssignment_3_2_1 = (Assignment)cGroup_3_2.eContents().get(1);
+		private final RuleCall cExpBindingExpressionParserRuleCall_3_2_1_0 = (RuleCall)cExpAssignment_3_2_1.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_3_2_2 = (Keyword)cGroup_3_2.eContents().get(2);
 		private final RuleCall cPrimitiveLiteralParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		
 		//BindingTerminalExpression returns Expression:
 		//	"(" BindingExpression ")" | FeatureRefLiteral | {NotExpression} "!" exp=BindingTerminalExpression | {FunctionLiteral}
-		//	function=[Function] ("(" (arguments+=BindingExpression ("," arguments+=BindingExpression)*)? ")") | PrimitiveLiteral;
+		//	function=[Function] ("(" exp=BindingExpression ")") | PrimitiveLiteral;
 		public ParserRule getRule() { return rule; }
 
 		//"(" BindingExpression ")" | FeatureRefLiteral | {NotExpression} "!" exp=BindingTerminalExpression | {FunctionLiteral}
-		//function=[Function] ("(" (arguments+=BindingExpression ("," arguments+=BindingExpression)*)? ")") | PrimitiveLiteral
+		//function=[Function] ("(" exp=BindingExpression ")") | PrimitiveLiteral
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//"(" BindingExpression ")"
@@ -482,7 +477,7 @@ public class EMFScaffoldingDSLGrammarAccess extends AbstractGrammarElementFinder
 		//BindingTerminalExpression
 		public RuleCall getExpBindingTerminalExpressionParserRuleCall_2_2_0() { return cExpBindingTerminalExpressionParserRuleCall_2_2_0; }
 
-		//{FunctionLiteral} function=[Function] ("(" (arguments+=BindingExpression ("," arguments+=BindingExpression)*)? ")")
+		//{FunctionLiteral} function=[Function] ("(" exp=BindingExpression ")")
 		public Group getGroup_3() { return cGroup_3; }
 
 		//{FunctionLiteral}
@@ -497,32 +492,17 @@ public class EMFScaffoldingDSLGrammarAccess extends AbstractGrammarElementFinder
 		//ID
 		public RuleCall getFunctionFunctionIDTerminalRuleCall_3_1_0_1() { return cFunctionFunctionIDTerminalRuleCall_3_1_0_1; }
 
-		//"(" (arguments+=BindingExpression ("," arguments+=BindingExpression)*)? ")"
+		//"(" exp=BindingExpression ")"
 		public Group getGroup_3_2() { return cGroup_3_2; }
 
 		//"("
 		public Keyword getLeftParenthesisKeyword_3_2_0() { return cLeftParenthesisKeyword_3_2_0; }
 
-		//(arguments+=BindingExpression ("," arguments+=BindingExpression)*)?
-		public Group getGroup_3_2_1() { return cGroup_3_2_1; }
-
-		//arguments+=BindingExpression
-		public Assignment getArgumentsAssignment_3_2_1_0() { return cArgumentsAssignment_3_2_1_0; }
+		//exp=BindingExpression
+		public Assignment getExpAssignment_3_2_1() { return cExpAssignment_3_2_1; }
 
 		//BindingExpression
-		public RuleCall getArgumentsBindingExpressionParserRuleCall_3_2_1_0_0() { return cArgumentsBindingExpressionParserRuleCall_3_2_1_0_0; }
-
-		//("," arguments+=BindingExpression)*
-		public Group getGroup_3_2_1_1() { return cGroup_3_2_1_1; }
-
-		//","
-		public Keyword getCommaKeyword_3_2_1_1_0() { return cCommaKeyword_3_2_1_1_0; }
-
-		//arguments+=BindingExpression
-		public Assignment getArgumentsAssignment_3_2_1_1_1() { return cArgumentsAssignment_3_2_1_1_1; }
-
-		//BindingExpression
-		public RuleCall getArgumentsBindingExpressionParserRuleCall_3_2_1_1_1_0() { return cArgumentsBindingExpressionParserRuleCall_3_2_1_1_1_0; }
+		public RuleCall getExpBindingExpressionParserRuleCall_3_2_1_0() { return cExpBindingExpressionParserRuleCall_3_2_1_0; }
 
 		//")"
 		public Keyword getRightParenthesisKeyword_3_2_2() { return cRightParenthesisKeyword_3_2_2; }
@@ -1525,7 +1505,7 @@ public class EMFScaffoldingDSLGrammarAccess extends AbstractGrammarElementFinder
 
 	//BindingTerminalExpression returns Expression:
 	//	"(" BindingExpression ")" | FeatureRefLiteral | {NotExpression} "!" exp=BindingTerminalExpression | {FunctionLiteral}
-	//	function=[Function] ("(" (arguments+=BindingExpression ("," arguments+=BindingExpression)*)? ")") | PrimitiveLiteral;
+	//	function=[Function] ("(" exp=BindingExpression ")") | PrimitiveLiteral;
 	public BindingTerminalExpressionElements getBindingTerminalExpressionAccess() {
 		return (pBindingTerminalExpression != null) ? pBindingTerminalExpression : (pBindingTerminalExpression = new BindingTerminalExpressionElements());
 	}

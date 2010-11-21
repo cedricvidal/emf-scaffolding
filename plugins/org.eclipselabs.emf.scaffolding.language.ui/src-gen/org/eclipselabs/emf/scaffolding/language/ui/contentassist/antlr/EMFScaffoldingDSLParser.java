@@ -67,8 +67,6 @@ public class EMFScaffoldingDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getBindingTerminalExpressionAccess().getGroup_2(), "rule__BindingTerminalExpression__Group_2__0");
 					put(grammarAccess.getBindingTerminalExpressionAccess().getGroup_3(), "rule__BindingTerminalExpression__Group_3__0");
 					put(grammarAccess.getBindingTerminalExpressionAccess().getGroup_3_2(), "rule__BindingTerminalExpression__Group_3_2__0");
-					put(grammarAccess.getBindingTerminalExpressionAccess().getGroup_3_2_1(), "rule__BindingTerminalExpression__Group_3_2_1__0");
-					put(grammarAccess.getBindingTerminalExpressionAccess().getGroup_3_2_1_1(), "rule__BindingTerminalExpression__Group_3_2_1_1__0");
 					put(grammarAccess.getExpressionAccess().getGroup(), "rule__Expression__Group__0");
 					put(grammarAccess.getExpressionAccess().getGroup_1(), "rule__Expression__Group_1__0");
 					put(grammarAccess.getExpressionHighAccess().getGroup(), "rule__ExpressionHigh__Group__0");
@@ -126,8 +124,7 @@ public class EMFScaffoldingDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getBindingExpressionHighAccess().getRightAssignment_1_2(), "rule__BindingExpressionHigh__RightAssignment_1_2");
 					put(grammarAccess.getBindingTerminalExpressionAccess().getExpAssignment_2_2(), "rule__BindingTerminalExpression__ExpAssignment_2_2");
 					put(grammarAccess.getBindingTerminalExpressionAccess().getFunctionAssignment_3_1(), "rule__BindingTerminalExpression__FunctionAssignment_3_1");
-					put(grammarAccess.getBindingTerminalExpressionAccess().getArgumentsAssignment_3_2_1_0(), "rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_0");
-					put(grammarAccess.getBindingTerminalExpressionAccess().getArgumentsAssignment_3_2_1_1_1(), "rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_1_1");
+					put(grammarAccess.getBindingTerminalExpressionAccess().getExpAssignment_3_2_1(), "rule__BindingTerminalExpression__ExpAssignment_3_2_1");
 					put(grammarAccess.getExpressionAccess().getOpAssignment_1_1(), "rule__Expression__OpAssignment_1_1");
 					put(grammarAccess.getExpressionAccess().getRightAssignment_1_2(), "rule__Expression__RightAssignment_1_2");
 					put(grammarAccess.getExpressionHighAccess().getOpAssignment_1_1(), "rule__ExpressionHigh__OpAssignment_1_1");

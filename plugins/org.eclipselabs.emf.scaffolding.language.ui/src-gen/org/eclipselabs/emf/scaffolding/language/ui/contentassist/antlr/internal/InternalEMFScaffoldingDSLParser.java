@@ -2343,11 +2343,11 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
                 {
                 int LA3_2 = input.LA(2);
 
-                if ( (LA3_2==EOF||(LA3_2>=RULE_OPERATOR_LOW_PRIORITY && LA3_2<=RULE_OPERATOR_HIGH_PRIORITY)||LA3_2==18||(LA3_2>=26 && LA3_2<=27)) ) {
-                    alt3=2;
-                }
-                else if ( (LA3_2==25) ) {
+                if ( (LA3_2==25) ) {
                     alt3=4;
+                }
+                else if ( (LA3_2==EOF||(LA3_2>=RULE_OPERATOR_LOW_PRIORITY && LA3_2<=RULE_OPERATOR_HIGH_PRIORITY)||LA3_2==18||(LA3_2>=26 && LA3_2<=27)) ) {
+                    alt3=2;
                 }
                 else {
                     NoViableAltException nvae =
@@ -7123,41 +7123,30 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__BindingTerminalExpression__Group_3_2__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2672:1: rule__BindingTerminalExpression__Group_3_2__1__Impl : ( ( rule__BindingTerminalExpression__Group_3_2_1__0 )? ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2672:1: rule__BindingTerminalExpression__Group_3_2__1__Impl : ( ( rule__BindingTerminalExpression__ExpAssignment_3_2_1 ) ) ;
     public final void rule__BindingTerminalExpression__Group_3_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2676:1: ( ( ( rule__BindingTerminalExpression__Group_3_2_1__0 )? ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2677:1: ( ( rule__BindingTerminalExpression__Group_3_2_1__0 )? )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2676:1: ( ( ( rule__BindingTerminalExpression__ExpAssignment_3_2_1 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2677:1: ( ( rule__BindingTerminalExpression__ExpAssignment_3_2_1 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2677:1: ( ( rule__BindingTerminalExpression__Group_3_2_1__0 )? )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2678:1: ( rule__BindingTerminalExpression__Group_3_2_1__0 )?
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2677:1: ( ( rule__BindingTerminalExpression__ExpAssignment_3_2_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2678:1: ( rule__BindingTerminalExpression__ExpAssignment_3_2_1 )
             {
-             before(grammarAccess.getBindingTerminalExpressionAccess().getGroup_3_2_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2679:1: ( rule__BindingTerminalExpression__Group_3_2_1__0 )?
-            int alt19=2;
-            int LA19_0 = input.LA(1);
+             before(grammarAccess.getBindingTerminalExpressionAccess().getExpAssignment_3_2_1()); 
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2679:1: ( rule__BindingTerminalExpression__ExpAssignment_3_2_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2679:2: rule__BindingTerminalExpression__ExpAssignment_3_2_1
+            {
+            pushFollow(FOLLOW_rule__BindingTerminalExpression__ExpAssignment_3_2_1_in_rule__BindingTerminalExpression__Group_3_2__1__Impl5455);
+            rule__BindingTerminalExpression__ExpAssignment_3_2_1();
+            _fsp--;
 
-            if ( ((LA19_0>=RULE_ID && LA19_0<=RULE_STRING)||(LA19_0>=RULE_INT && LA19_0<=RULE_FLOAT)||LA19_0==15||LA19_0==25||LA19_0==28||LA19_0==30) ) {
-                alt19=1;
-            }
-            switch (alt19) {
-                case 1 :
-                    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2679:2: rule__BindingTerminalExpression__Group_3_2_1__0
-                    {
-                    pushFollow(FOLLOW_rule__BindingTerminalExpression__Group_3_2_1__0_in_rule__BindingTerminalExpression__Group_3_2__1__Impl5455);
-                    rule__BindingTerminalExpression__Group_3_2_1__0();
-                    _fsp--;
-
-
-                    }
-                    break;
 
             }
 
-             after(grammarAccess.getBindingTerminalExpressionAccess().getGroup_3_2_1()); 
+             after(grammarAccess.getBindingTerminalExpressionAccess().getExpAssignment_3_2_1()); 
 
             }
 
@@ -7189,7 +7178,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
             // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2693:1: ( rule__BindingTerminalExpression__Group_3_2__2__Impl )
             // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2694:2: rule__BindingTerminalExpression__Group_3_2__2__Impl
             {
-            pushFollow(FOLLOW_rule__BindingTerminalExpression__Group_3_2__2__Impl_in_rule__BindingTerminalExpression__Group_3_2__25486);
+            pushFollow(FOLLOW_rule__BindingTerminalExpression__Group_3_2__2__Impl_in_rule__BindingTerminalExpression__Group_3_2__25485);
             rule__BindingTerminalExpression__Group_3_2__2__Impl();
             _fsp--;
 
@@ -7225,7 +7214,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
             // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2706:1: ')'
             {
              before(grammarAccess.getBindingTerminalExpressionAccess().getRightParenthesisKeyword_3_2_2()); 
-            match(input,26,FOLLOW_26_in_rule__BindingTerminalExpression__Group_3_2__2__Impl5514); 
+            match(input,26,FOLLOW_26_in_rule__BindingTerminalExpression__Group_3_2__2__Impl5513); 
              after(grammarAccess.getBindingTerminalExpressionAccess().getRightParenthesisKeyword_3_2_2()); 
 
             }
@@ -7248,350 +7237,21 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
     // $ANTLR end rule__BindingTerminalExpression__Group_3_2__2__Impl
 
 
-    // $ANTLR start rule__BindingTerminalExpression__Group_3_2_1__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2725:1: rule__BindingTerminalExpression__Group_3_2_1__0 : rule__BindingTerminalExpression__Group_3_2_1__0__Impl rule__BindingTerminalExpression__Group_3_2_1__1 ;
-    public final void rule__BindingTerminalExpression__Group_3_2_1__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2729:1: ( rule__BindingTerminalExpression__Group_3_2_1__0__Impl rule__BindingTerminalExpression__Group_3_2_1__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2730:2: rule__BindingTerminalExpression__Group_3_2_1__0__Impl rule__BindingTerminalExpression__Group_3_2_1__1
-            {
-            pushFollow(FOLLOW_rule__BindingTerminalExpression__Group_3_2_1__0__Impl_in_rule__BindingTerminalExpression__Group_3_2_1__05551);
-            rule__BindingTerminalExpression__Group_3_2_1__0__Impl();
-            _fsp--;
-
-            pushFollow(FOLLOW_rule__BindingTerminalExpression__Group_3_2_1__1_in_rule__BindingTerminalExpression__Group_3_2_1__05554);
-            rule__BindingTerminalExpression__Group_3_2_1__1();
-            _fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__BindingTerminalExpression__Group_3_2_1__0
-
-
-    // $ANTLR start rule__BindingTerminalExpression__Group_3_2_1__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2737:1: rule__BindingTerminalExpression__Group_3_2_1__0__Impl : ( ( rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_0 ) ) ;
-    public final void rule__BindingTerminalExpression__Group_3_2_1__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2741:1: ( ( ( rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_0 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2742:1: ( ( rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_0 ) )
-            {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2742:1: ( ( rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_0 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2743:1: ( rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_0 )
-            {
-             before(grammarAccess.getBindingTerminalExpressionAccess().getArgumentsAssignment_3_2_1_0()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2744:1: ( rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_0 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2744:2: rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_0
-            {
-            pushFollow(FOLLOW_rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_0_in_rule__BindingTerminalExpression__Group_3_2_1__0__Impl5581);
-            rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_0();
-            _fsp--;
-
-
-            }
-
-             after(grammarAccess.getBindingTerminalExpressionAccess().getArgumentsAssignment_3_2_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__BindingTerminalExpression__Group_3_2_1__0__Impl
-
-
-    // $ANTLR start rule__BindingTerminalExpression__Group_3_2_1__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2754:1: rule__BindingTerminalExpression__Group_3_2_1__1 : rule__BindingTerminalExpression__Group_3_2_1__1__Impl ;
-    public final void rule__BindingTerminalExpression__Group_3_2_1__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2758:1: ( rule__BindingTerminalExpression__Group_3_2_1__1__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2759:2: rule__BindingTerminalExpression__Group_3_2_1__1__Impl
-            {
-            pushFollow(FOLLOW_rule__BindingTerminalExpression__Group_3_2_1__1__Impl_in_rule__BindingTerminalExpression__Group_3_2_1__15611);
-            rule__BindingTerminalExpression__Group_3_2_1__1__Impl();
-            _fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__BindingTerminalExpression__Group_3_2_1__1
-
-
-    // $ANTLR start rule__BindingTerminalExpression__Group_3_2_1__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2765:1: rule__BindingTerminalExpression__Group_3_2_1__1__Impl : ( ( rule__BindingTerminalExpression__Group_3_2_1_1__0 )* ) ;
-    public final void rule__BindingTerminalExpression__Group_3_2_1__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2769:1: ( ( ( rule__BindingTerminalExpression__Group_3_2_1_1__0 )* ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2770:1: ( ( rule__BindingTerminalExpression__Group_3_2_1_1__0 )* )
-            {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2770:1: ( ( rule__BindingTerminalExpression__Group_3_2_1_1__0 )* )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2771:1: ( rule__BindingTerminalExpression__Group_3_2_1_1__0 )*
-            {
-             before(grammarAccess.getBindingTerminalExpressionAccess().getGroup_3_2_1_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2772:1: ( rule__BindingTerminalExpression__Group_3_2_1_1__0 )*
-            loop20:
-            do {
-                int alt20=2;
-                int LA20_0 = input.LA(1);
-
-                if ( (LA20_0==27) ) {
-                    alt20=1;
-                }
-
-
-                switch (alt20) {
-            	case 1 :
-            	    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2772:2: rule__BindingTerminalExpression__Group_3_2_1_1__0
-            	    {
-            	    pushFollow(FOLLOW_rule__BindingTerminalExpression__Group_3_2_1_1__0_in_rule__BindingTerminalExpression__Group_3_2_1__1__Impl5638);
-            	    rule__BindingTerminalExpression__Group_3_2_1_1__0();
-            	    _fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop20;
-                }
-            } while (true);
-
-             after(grammarAccess.getBindingTerminalExpressionAccess().getGroup_3_2_1_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__BindingTerminalExpression__Group_3_2_1__1__Impl
-
-
-    // $ANTLR start rule__BindingTerminalExpression__Group_3_2_1_1__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2786:1: rule__BindingTerminalExpression__Group_3_2_1_1__0 : rule__BindingTerminalExpression__Group_3_2_1_1__0__Impl rule__BindingTerminalExpression__Group_3_2_1_1__1 ;
-    public final void rule__BindingTerminalExpression__Group_3_2_1_1__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2790:1: ( rule__BindingTerminalExpression__Group_3_2_1_1__0__Impl rule__BindingTerminalExpression__Group_3_2_1_1__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2791:2: rule__BindingTerminalExpression__Group_3_2_1_1__0__Impl rule__BindingTerminalExpression__Group_3_2_1_1__1
-            {
-            pushFollow(FOLLOW_rule__BindingTerminalExpression__Group_3_2_1_1__0__Impl_in_rule__BindingTerminalExpression__Group_3_2_1_1__05673);
-            rule__BindingTerminalExpression__Group_3_2_1_1__0__Impl();
-            _fsp--;
-
-            pushFollow(FOLLOW_rule__BindingTerminalExpression__Group_3_2_1_1__1_in_rule__BindingTerminalExpression__Group_3_2_1_1__05676);
-            rule__BindingTerminalExpression__Group_3_2_1_1__1();
-            _fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__BindingTerminalExpression__Group_3_2_1_1__0
-
-
-    // $ANTLR start rule__BindingTerminalExpression__Group_3_2_1_1__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2798:1: rule__BindingTerminalExpression__Group_3_2_1_1__0__Impl : ( ',' ) ;
-    public final void rule__BindingTerminalExpression__Group_3_2_1_1__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2802:1: ( ( ',' ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2803:1: ( ',' )
-            {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2803:1: ( ',' )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2804:1: ','
-            {
-             before(grammarAccess.getBindingTerminalExpressionAccess().getCommaKeyword_3_2_1_1_0()); 
-            match(input,27,FOLLOW_27_in_rule__BindingTerminalExpression__Group_3_2_1_1__0__Impl5704); 
-             after(grammarAccess.getBindingTerminalExpressionAccess().getCommaKeyword_3_2_1_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__BindingTerminalExpression__Group_3_2_1_1__0__Impl
-
-
-    // $ANTLR start rule__BindingTerminalExpression__Group_3_2_1_1__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2817:1: rule__BindingTerminalExpression__Group_3_2_1_1__1 : rule__BindingTerminalExpression__Group_3_2_1_1__1__Impl ;
-    public final void rule__BindingTerminalExpression__Group_3_2_1_1__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2821:1: ( rule__BindingTerminalExpression__Group_3_2_1_1__1__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2822:2: rule__BindingTerminalExpression__Group_3_2_1_1__1__Impl
-            {
-            pushFollow(FOLLOW_rule__BindingTerminalExpression__Group_3_2_1_1__1__Impl_in_rule__BindingTerminalExpression__Group_3_2_1_1__15735);
-            rule__BindingTerminalExpression__Group_3_2_1_1__1__Impl();
-            _fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__BindingTerminalExpression__Group_3_2_1_1__1
-
-
-    // $ANTLR start rule__BindingTerminalExpression__Group_3_2_1_1__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2828:1: rule__BindingTerminalExpression__Group_3_2_1_1__1__Impl : ( ( rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_1_1 ) ) ;
-    public final void rule__BindingTerminalExpression__Group_3_2_1_1__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2832:1: ( ( ( rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_1_1 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2833:1: ( ( rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_1_1 ) )
-            {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2833:1: ( ( rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_1_1 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2834:1: ( rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_1_1 )
-            {
-             before(grammarAccess.getBindingTerminalExpressionAccess().getArgumentsAssignment_3_2_1_1_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2835:1: ( rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_1_1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2835:2: rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_1_1
-            {
-            pushFollow(FOLLOW_rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_1_1_in_rule__BindingTerminalExpression__Group_3_2_1_1__1__Impl5762);
-            rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_1_1();
-            _fsp--;
-
-
-            }
-
-             after(grammarAccess.getBindingTerminalExpressionAccess().getArgumentsAssignment_3_2_1_1_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__BindingTerminalExpression__Group_3_2_1_1__1__Impl
-
-
     // $ANTLR start rule__Expression__Group__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2849:1: rule__Expression__Group__0 : rule__Expression__Group__0__Impl rule__Expression__Group__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2725:1: rule__Expression__Group__0 : rule__Expression__Group__0__Impl rule__Expression__Group__1 ;
     public final void rule__Expression__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2853:1: ( rule__Expression__Group__0__Impl rule__Expression__Group__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2854:2: rule__Expression__Group__0__Impl rule__Expression__Group__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2729:1: ( rule__Expression__Group__0__Impl rule__Expression__Group__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2730:2: rule__Expression__Group__0__Impl rule__Expression__Group__1
             {
-            pushFollow(FOLLOW_rule__Expression__Group__0__Impl_in_rule__Expression__Group__05796);
+            pushFollow(FOLLOW_rule__Expression__Group__0__Impl_in_rule__Expression__Group__05550);
             rule__Expression__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Expression__Group__1_in_rule__Expression__Group__05799);
+            pushFollow(FOLLOW_rule__Expression__Group__1_in_rule__Expression__Group__05553);
             rule__Expression__Group__1();
             _fsp--;
 
@@ -7614,20 +7274,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Expression__Group__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2861:1: rule__Expression__Group__0__Impl : ( ruleExpressionHigh ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2737:1: rule__Expression__Group__0__Impl : ( ruleExpressionHigh ) ;
     public final void rule__Expression__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2865:1: ( ( ruleExpressionHigh ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2866:1: ( ruleExpressionHigh )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2741:1: ( ( ruleExpressionHigh ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2742:1: ( ruleExpressionHigh )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2866:1: ( ruleExpressionHigh )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2867:1: ruleExpressionHigh
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2742:1: ( ruleExpressionHigh )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2743:1: ruleExpressionHigh
             {
              before(grammarAccess.getExpressionAccess().getExpressionHighParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleExpressionHigh_in_rule__Expression__Group__0__Impl5826);
+            pushFollow(FOLLOW_ruleExpressionHigh_in_rule__Expression__Group__0__Impl5580);
             ruleExpressionHigh();
             _fsp--;
 
@@ -7654,16 +7314,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Expression__Group__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2878:1: rule__Expression__Group__1 : rule__Expression__Group__1__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2754:1: rule__Expression__Group__1 : rule__Expression__Group__1__Impl ;
     public final void rule__Expression__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2882:1: ( rule__Expression__Group__1__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2883:2: rule__Expression__Group__1__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2758:1: ( rule__Expression__Group__1__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2759:2: rule__Expression__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Expression__Group__1__Impl_in_rule__Expression__Group__15855);
+            pushFollow(FOLLOW_rule__Expression__Group__1__Impl_in_rule__Expression__Group__15609);
             rule__Expression__Group__1__Impl();
             _fsp--;
 
@@ -7686,31 +7346,31 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Expression__Group__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2889:1: rule__Expression__Group__1__Impl : ( ( rule__Expression__Group_1__0 )? ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2765:1: rule__Expression__Group__1__Impl : ( ( rule__Expression__Group_1__0 )? ) ;
     public final void rule__Expression__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2893:1: ( ( ( rule__Expression__Group_1__0 )? ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2894:1: ( ( rule__Expression__Group_1__0 )? )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2769:1: ( ( ( rule__Expression__Group_1__0 )? ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2770:1: ( ( rule__Expression__Group_1__0 )? )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2894:1: ( ( rule__Expression__Group_1__0 )? )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2895:1: ( rule__Expression__Group_1__0 )?
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2770:1: ( ( rule__Expression__Group_1__0 )? )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2771:1: ( rule__Expression__Group_1__0 )?
             {
              before(grammarAccess.getExpressionAccess().getGroup_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2896:1: ( rule__Expression__Group_1__0 )?
-            int alt21=2;
-            int LA21_0 = input.LA(1);
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2772:1: ( rule__Expression__Group_1__0 )?
+            int alt19=2;
+            int LA19_0 = input.LA(1);
 
-            if ( (LA21_0==RULE_OPERATOR_LOW_PRIORITY) ) {
-                alt21=1;
+            if ( (LA19_0==RULE_OPERATOR_LOW_PRIORITY) ) {
+                alt19=1;
             }
-            switch (alt21) {
+            switch (alt19) {
                 case 1 :
-                    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2896:2: rule__Expression__Group_1__0
+                    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2772:2: rule__Expression__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__Expression__Group_1__0_in_rule__Expression__Group__1__Impl5882);
+                    pushFollow(FOLLOW_rule__Expression__Group_1__0_in_rule__Expression__Group__1__Impl5636);
                     rule__Expression__Group_1__0();
                     _fsp--;
 
@@ -7743,20 +7403,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Expression__Group_1__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2910:1: rule__Expression__Group_1__0 : rule__Expression__Group_1__0__Impl rule__Expression__Group_1__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2786:1: rule__Expression__Group_1__0 : rule__Expression__Group_1__0__Impl rule__Expression__Group_1__1 ;
     public final void rule__Expression__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2914:1: ( rule__Expression__Group_1__0__Impl rule__Expression__Group_1__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2915:2: rule__Expression__Group_1__0__Impl rule__Expression__Group_1__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2790:1: ( rule__Expression__Group_1__0__Impl rule__Expression__Group_1__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2791:2: rule__Expression__Group_1__0__Impl rule__Expression__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Expression__Group_1__0__Impl_in_rule__Expression__Group_1__05917);
+            pushFollow(FOLLOW_rule__Expression__Group_1__0__Impl_in_rule__Expression__Group_1__05671);
             rule__Expression__Group_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Expression__Group_1__1_in_rule__Expression__Group_1__05920);
+            pushFollow(FOLLOW_rule__Expression__Group_1__1_in_rule__Expression__Group_1__05674);
             rule__Expression__Group_1__1();
             _fsp--;
 
@@ -7779,21 +7439,21 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Expression__Group_1__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2922:1: rule__Expression__Group_1__0__Impl : ( () ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2798:1: rule__Expression__Group_1__0__Impl : ( () ) ;
     public final void rule__Expression__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2926:1: ( ( () ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2927:1: ( () )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2802:1: ( ( () ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2803:1: ( () )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2927:1: ( () )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2928:1: ()
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2803:1: ( () )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2804:1: ()
             {
              before(grammarAccess.getExpressionAccess().getOperationLeftAction_1_0()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2929:1: ()
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2931:1: 
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2805:1: ()
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2807:1: 
             {
             }
 
@@ -7816,20 +7476,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Expression__Group_1__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2941:1: rule__Expression__Group_1__1 : rule__Expression__Group_1__1__Impl rule__Expression__Group_1__2 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2817:1: rule__Expression__Group_1__1 : rule__Expression__Group_1__1__Impl rule__Expression__Group_1__2 ;
     public final void rule__Expression__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2945:1: ( rule__Expression__Group_1__1__Impl rule__Expression__Group_1__2 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2946:2: rule__Expression__Group_1__1__Impl rule__Expression__Group_1__2
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2821:1: ( rule__Expression__Group_1__1__Impl rule__Expression__Group_1__2 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2822:2: rule__Expression__Group_1__1__Impl rule__Expression__Group_1__2
             {
-            pushFollow(FOLLOW_rule__Expression__Group_1__1__Impl_in_rule__Expression__Group_1__15978);
+            pushFollow(FOLLOW_rule__Expression__Group_1__1__Impl_in_rule__Expression__Group_1__15732);
             rule__Expression__Group_1__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Expression__Group_1__2_in_rule__Expression__Group_1__15981);
+            pushFollow(FOLLOW_rule__Expression__Group_1__2_in_rule__Expression__Group_1__15735);
             rule__Expression__Group_1__2();
             _fsp--;
 
@@ -7852,23 +7512,23 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Expression__Group_1__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2953:1: rule__Expression__Group_1__1__Impl : ( ( rule__Expression__OpAssignment_1_1 ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2829:1: rule__Expression__Group_1__1__Impl : ( ( rule__Expression__OpAssignment_1_1 ) ) ;
     public final void rule__Expression__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2957:1: ( ( ( rule__Expression__OpAssignment_1_1 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2958:1: ( ( rule__Expression__OpAssignment_1_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2833:1: ( ( ( rule__Expression__OpAssignment_1_1 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2834:1: ( ( rule__Expression__OpAssignment_1_1 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2958:1: ( ( rule__Expression__OpAssignment_1_1 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2959:1: ( rule__Expression__OpAssignment_1_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2834:1: ( ( rule__Expression__OpAssignment_1_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2835:1: ( rule__Expression__OpAssignment_1_1 )
             {
              before(grammarAccess.getExpressionAccess().getOpAssignment_1_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2960:1: ( rule__Expression__OpAssignment_1_1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2960:2: rule__Expression__OpAssignment_1_1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2836:1: ( rule__Expression__OpAssignment_1_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2836:2: rule__Expression__OpAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__Expression__OpAssignment_1_1_in_rule__Expression__Group_1__1__Impl6008);
+            pushFollow(FOLLOW_rule__Expression__OpAssignment_1_1_in_rule__Expression__Group_1__1__Impl5762);
             rule__Expression__OpAssignment_1_1();
             _fsp--;
 
@@ -7898,16 +7558,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Expression__Group_1__2
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2970:1: rule__Expression__Group_1__2 : rule__Expression__Group_1__2__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2846:1: rule__Expression__Group_1__2 : rule__Expression__Group_1__2__Impl ;
     public final void rule__Expression__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2974:1: ( rule__Expression__Group_1__2__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2975:2: rule__Expression__Group_1__2__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2850:1: ( rule__Expression__Group_1__2__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2851:2: rule__Expression__Group_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__Expression__Group_1__2__Impl_in_rule__Expression__Group_1__26038);
+            pushFollow(FOLLOW_rule__Expression__Group_1__2__Impl_in_rule__Expression__Group_1__25792);
             rule__Expression__Group_1__2__Impl();
             _fsp--;
 
@@ -7930,23 +7590,23 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Expression__Group_1__2__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2981:1: rule__Expression__Group_1__2__Impl : ( ( rule__Expression__RightAssignment_1_2 ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2857:1: rule__Expression__Group_1__2__Impl : ( ( rule__Expression__RightAssignment_1_2 ) ) ;
     public final void rule__Expression__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2985:1: ( ( ( rule__Expression__RightAssignment_1_2 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2986:1: ( ( rule__Expression__RightAssignment_1_2 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2861:1: ( ( ( rule__Expression__RightAssignment_1_2 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2862:1: ( ( rule__Expression__RightAssignment_1_2 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2986:1: ( ( rule__Expression__RightAssignment_1_2 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2987:1: ( rule__Expression__RightAssignment_1_2 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2862:1: ( ( rule__Expression__RightAssignment_1_2 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2863:1: ( rule__Expression__RightAssignment_1_2 )
             {
              before(grammarAccess.getExpressionAccess().getRightAssignment_1_2()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2988:1: ( rule__Expression__RightAssignment_1_2 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2988:2: rule__Expression__RightAssignment_1_2
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2864:1: ( rule__Expression__RightAssignment_1_2 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2864:2: rule__Expression__RightAssignment_1_2
             {
-            pushFollow(FOLLOW_rule__Expression__RightAssignment_1_2_in_rule__Expression__Group_1__2__Impl6065);
+            pushFollow(FOLLOW_rule__Expression__RightAssignment_1_2_in_rule__Expression__Group_1__2__Impl5819);
             rule__Expression__RightAssignment_1_2();
             _fsp--;
 
@@ -7976,20 +7636,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ExpressionHigh__Group__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3004:1: rule__ExpressionHigh__Group__0 : rule__ExpressionHigh__Group__0__Impl rule__ExpressionHigh__Group__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2880:1: rule__ExpressionHigh__Group__0 : rule__ExpressionHigh__Group__0__Impl rule__ExpressionHigh__Group__1 ;
     public final void rule__ExpressionHigh__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3008:1: ( rule__ExpressionHigh__Group__0__Impl rule__ExpressionHigh__Group__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3009:2: rule__ExpressionHigh__Group__0__Impl rule__ExpressionHigh__Group__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2884:1: ( rule__ExpressionHigh__Group__0__Impl rule__ExpressionHigh__Group__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2885:2: rule__ExpressionHigh__Group__0__Impl rule__ExpressionHigh__Group__1
             {
-            pushFollow(FOLLOW_rule__ExpressionHigh__Group__0__Impl_in_rule__ExpressionHigh__Group__06101);
+            pushFollow(FOLLOW_rule__ExpressionHigh__Group__0__Impl_in_rule__ExpressionHigh__Group__05855);
             rule__ExpressionHigh__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__ExpressionHigh__Group__1_in_rule__ExpressionHigh__Group__06104);
+            pushFollow(FOLLOW_rule__ExpressionHigh__Group__1_in_rule__ExpressionHigh__Group__05858);
             rule__ExpressionHigh__Group__1();
             _fsp--;
 
@@ -8012,20 +7672,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ExpressionHigh__Group__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3016:1: rule__ExpressionHigh__Group__0__Impl : ( ruleTerminalExpression ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2892:1: rule__ExpressionHigh__Group__0__Impl : ( ruleTerminalExpression ) ;
     public final void rule__ExpressionHigh__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3020:1: ( ( ruleTerminalExpression ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3021:1: ( ruleTerminalExpression )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2896:1: ( ( ruleTerminalExpression ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2897:1: ( ruleTerminalExpression )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3021:1: ( ruleTerminalExpression )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3022:1: ruleTerminalExpression
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2897:1: ( ruleTerminalExpression )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2898:1: ruleTerminalExpression
             {
              before(grammarAccess.getExpressionHighAccess().getTerminalExpressionParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleTerminalExpression_in_rule__ExpressionHigh__Group__0__Impl6131);
+            pushFollow(FOLLOW_ruleTerminalExpression_in_rule__ExpressionHigh__Group__0__Impl5885);
             ruleTerminalExpression();
             _fsp--;
 
@@ -8052,16 +7712,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ExpressionHigh__Group__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3033:1: rule__ExpressionHigh__Group__1 : rule__ExpressionHigh__Group__1__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2909:1: rule__ExpressionHigh__Group__1 : rule__ExpressionHigh__Group__1__Impl ;
     public final void rule__ExpressionHigh__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3037:1: ( rule__ExpressionHigh__Group__1__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3038:2: rule__ExpressionHigh__Group__1__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2913:1: ( rule__ExpressionHigh__Group__1__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2914:2: rule__ExpressionHigh__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__ExpressionHigh__Group__1__Impl_in_rule__ExpressionHigh__Group__16160);
+            pushFollow(FOLLOW_rule__ExpressionHigh__Group__1__Impl_in_rule__ExpressionHigh__Group__15914);
             rule__ExpressionHigh__Group__1__Impl();
             _fsp--;
 
@@ -8084,31 +7744,31 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ExpressionHigh__Group__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3044:1: rule__ExpressionHigh__Group__1__Impl : ( ( rule__ExpressionHigh__Group_1__0 )? ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2920:1: rule__ExpressionHigh__Group__1__Impl : ( ( rule__ExpressionHigh__Group_1__0 )? ) ;
     public final void rule__ExpressionHigh__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3048:1: ( ( ( rule__ExpressionHigh__Group_1__0 )? ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3049:1: ( ( rule__ExpressionHigh__Group_1__0 )? )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2924:1: ( ( ( rule__ExpressionHigh__Group_1__0 )? ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2925:1: ( ( rule__ExpressionHigh__Group_1__0 )? )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3049:1: ( ( rule__ExpressionHigh__Group_1__0 )? )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3050:1: ( rule__ExpressionHigh__Group_1__0 )?
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2925:1: ( ( rule__ExpressionHigh__Group_1__0 )? )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2926:1: ( rule__ExpressionHigh__Group_1__0 )?
             {
              before(grammarAccess.getExpressionHighAccess().getGroup_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3051:1: ( rule__ExpressionHigh__Group_1__0 )?
-            int alt22=2;
-            int LA22_0 = input.LA(1);
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2927:1: ( rule__ExpressionHigh__Group_1__0 )?
+            int alt20=2;
+            int LA20_0 = input.LA(1);
 
-            if ( (LA22_0==RULE_OPERATOR_HIGH_PRIORITY) ) {
-                alt22=1;
+            if ( (LA20_0==RULE_OPERATOR_HIGH_PRIORITY) ) {
+                alt20=1;
             }
-            switch (alt22) {
+            switch (alt20) {
                 case 1 :
-                    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3051:2: rule__ExpressionHigh__Group_1__0
+                    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2927:2: rule__ExpressionHigh__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__ExpressionHigh__Group_1__0_in_rule__ExpressionHigh__Group__1__Impl6187);
+                    pushFollow(FOLLOW_rule__ExpressionHigh__Group_1__0_in_rule__ExpressionHigh__Group__1__Impl5941);
                     rule__ExpressionHigh__Group_1__0();
                     _fsp--;
 
@@ -8141,20 +7801,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ExpressionHigh__Group_1__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3065:1: rule__ExpressionHigh__Group_1__0 : rule__ExpressionHigh__Group_1__0__Impl rule__ExpressionHigh__Group_1__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2941:1: rule__ExpressionHigh__Group_1__0 : rule__ExpressionHigh__Group_1__0__Impl rule__ExpressionHigh__Group_1__1 ;
     public final void rule__ExpressionHigh__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3069:1: ( rule__ExpressionHigh__Group_1__0__Impl rule__ExpressionHigh__Group_1__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3070:2: rule__ExpressionHigh__Group_1__0__Impl rule__ExpressionHigh__Group_1__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2945:1: ( rule__ExpressionHigh__Group_1__0__Impl rule__ExpressionHigh__Group_1__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2946:2: rule__ExpressionHigh__Group_1__0__Impl rule__ExpressionHigh__Group_1__1
             {
-            pushFollow(FOLLOW_rule__ExpressionHigh__Group_1__0__Impl_in_rule__ExpressionHigh__Group_1__06222);
+            pushFollow(FOLLOW_rule__ExpressionHigh__Group_1__0__Impl_in_rule__ExpressionHigh__Group_1__05976);
             rule__ExpressionHigh__Group_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__ExpressionHigh__Group_1__1_in_rule__ExpressionHigh__Group_1__06225);
+            pushFollow(FOLLOW_rule__ExpressionHigh__Group_1__1_in_rule__ExpressionHigh__Group_1__05979);
             rule__ExpressionHigh__Group_1__1();
             _fsp--;
 
@@ -8177,21 +7837,21 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ExpressionHigh__Group_1__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3077:1: rule__ExpressionHigh__Group_1__0__Impl : ( () ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2953:1: rule__ExpressionHigh__Group_1__0__Impl : ( () ) ;
     public final void rule__ExpressionHigh__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3081:1: ( ( () ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3082:1: ( () )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2957:1: ( ( () ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2958:1: ( () )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3082:1: ( () )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3083:1: ()
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2958:1: ( () )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2959:1: ()
             {
              before(grammarAccess.getExpressionHighAccess().getOperationLeftAction_1_0()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3084:1: ()
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3086:1: 
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2960:1: ()
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2962:1: 
             {
             }
 
@@ -8214,20 +7874,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ExpressionHigh__Group_1__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3096:1: rule__ExpressionHigh__Group_1__1 : rule__ExpressionHigh__Group_1__1__Impl rule__ExpressionHigh__Group_1__2 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2972:1: rule__ExpressionHigh__Group_1__1 : rule__ExpressionHigh__Group_1__1__Impl rule__ExpressionHigh__Group_1__2 ;
     public final void rule__ExpressionHigh__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3100:1: ( rule__ExpressionHigh__Group_1__1__Impl rule__ExpressionHigh__Group_1__2 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3101:2: rule__ExpressionHigh__Group_1__1__Impl rule__ExpressionHigh__Group_1__2
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2976:1: ( rule__ExpressionHigh__Group_1__1__Impl rule__ExpressionHigh__Group_1__2 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2977:2: rule__ExpressionHigh__Group_1__1__Impl rule__ExpressionHigh__Group_1__2
             {
-            pushFollow(FOLLOW_rule__ExpressionHigh__Group_1__1__Impl_in_rule__ExpressionHigh__Group_1__16283);
+            pushFollow(FOLLOW_rule__ExpressionHigh__Group_1__1__Impl_in_rule__ExpressionHigh__Group_1__16037);
             rule__ExpressionHigh__Group_1__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__ExpressionHigh__Group_1__2_in_rule__ExpressionHigh__Group_1__16286);
+            pushFollow(FOLLOW_rule__ExpressionHigh__Group_1__2_in_rule__ExpressionHigh__Group_1__16040);
             rule__ExpressionHigh__Group_1__2();
             _fsp--;
 
@@ -8250,23 +7910,23 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ExpressionHigh__Group_1__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3108:1: rule__ExpressionHigh__Group_1__1__Impl : ( ( rule__ExpressionHigh__OpAssignment_1_1 ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2984:1: rule__ExpressionHigh__Group_1__1__Impl : ( ( rule__ExpressionHigh__OpAssignment_1_1 ) ) ;
     public final void rule__ExpressionHigh__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3112:1: ( ( ( rule__ExpressionHigh__OpAssignment_1_1 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3113:1: ( ( rule__ExpressionHigh__OpAssignment_1_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2988:1: ( ( ( rule__ExpressionHigh__OpAssignment_1_1 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2989:1: ( ( rule__ExpressionHigh__OpAssignment_1_1 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3113:1: ( ( rule__ExpressionHigh__OpAssignment_1_1 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3114:1: ( rule__ExpressionHigh__OpAssignment_1_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2989:1: ( ( rule__ExpressionHigh__OpAssignment_1_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2990:1: ( rule__ExpressionHigh__OpAssignment_1_1 )
             {
              before(grammarAccess.getExpressionHighAccess().getOpAssignment_1_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3115:1: ( rule__ExpressionHigh__OpAssignment_1_1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3115:2: rule__ExpressionHigh__OpAssignment_1_1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2991:1: ( rule__ExpressionHigh__OpAssignment_1_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:2991:2: rule__ExpressionHigh__OpAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__ExpressionHigh__OpAssignment_1_1_in_rule__ExpressionHigh__Group_1__1__Impl6313);
+            pushFollow(FOLLOW_rule__ExpressionHigh__OpAssignment_1_1_in_rule__ExpressionHigh__Group_1__1__Impl6067);
             rule__ExpressionHigh__OpAssignment_1_1();
             _fsp--;
 
@@ -8296,16 +7956,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ExpressionHigh__Group_1__2
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3125:1: rule__ExpressionHigh__Group_1__2 : rule__ExpressionHigh__Group_1__2__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3001:1: rule__ExpressionHigh__Group_1__2 : rule__ExpressionHigh__Group_1__2__Impl ;
     public final void rule__ExpressionHigh__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3129:1: ( rule__ExpressionHigh__Group_1__2__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3130:2: rule__ExpressionHigh__Group_1__2__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3005:1: ( rule__ExpressionHigh__Group_1__2__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3006:2: rule__ExpressionHigh__Group_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__ExpressionHigh__Group_1__2__Impl_in_rule__ExpressionHigh__Group_1__26343);
+            pushFollow(FOLLOW_rule__ExpressionHigh__Group_1__2__Impl_in_rule__ExpressionHigh__Group_1__26097);
             rule__ExpressionHigh__Group_1__2__Impl();
             _fsp--;
 
@@ -8328,23 +7988,23 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ExpressionHigh__Group_1__2__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3136:1: rule__ExpressionHigh__Group_1__2__Impl : ( ( rule__ExpressionHigh__RightAssignment_1_2 ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3012:1: rule__ExpressionHigh__Group_1__2__Impl : ( ( rule__ExpressionHigh__RightAssignment_1_2 ) ) ;
     public final void rule__ExpressionHigh__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3140:1: ( ( ( rule__ExpressionHigh__RightAssignment_1_2 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3141:1: ( ( rule__ExpressionHigh__RightAssignment_1_2 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3016:1: ( ( ( rule__ExpressionHigh__RightAssignment_1_2 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3017:1: ( ( rule__ExpressionHigh__RightAssignment_1_2 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3141:1: ( ( rule__ExpressionHigh__RightAssignment_1_2 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3142:1: ( rule__ExpressionHigh__RightAssignment_1_2 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3017:1: ( ( rule__ExpressionHigh__RightAssignment_1_2 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3018:1: ( rule__ExpressionHigh__RightAssignment_1_2 )
             {
              before(grammarAccess.getExpressionHighAccess().getRightAssignment_1_2()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3143:1: ( rule__ExpressionHigh__RightAssignment_1_2 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3143:2: rule__ExpressionHigh__RightAssignment_1_2
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3019:1: ( rule__ExpressionHigh__RightAssignment_1_2 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3019:2: rule__ExpressionHigh__RightAssignment_1_2
             {
-            pushFollow(FOLLOW_rule__ExpressionHigh__RightAssignment_1_2_in_rule__ExpressionHigh__Group_1__2__Impl6370);
+            pushFollow(FOLLOW_rule__ExpressionHigh__RightAssignment_1_2_in_rule__ExpressionHigh__Group_1__2__Impl6124);
             rule__ExpressionHigh__RightAssignment_1_2();
             _fsp--;
 
@@ -8374,20 +8034,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_0__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3159:1: rule__TerminalExpression__Group_0__0 : rule__TerminalExpression__Group_0__0__Impl rule__TerminalExpression__Group_0__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3035:1: rule__TerminalExpression__Group_0__0 : rule__TerminalExpression__Group_0__0__Impl rule__TerminalExpression__Group_0__1 ;
     public final void rule__TerminalExpression__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3163:1: ( rule__TerminalExpression__Group_0__0__Impl rule__TerminalExpression__Group_0__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3164:2: rule__TerminalExpression__Group_0__0__Impl rule__TerminalExpression__Group_0__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3039:1: ( rule__TerminalExpression__Group_0__0__Impl rule__TerminalExpression__Group_0__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3040:2: rule__TerminalExpression__Group_0__0__Impl rule__TerminalExpression__Group_0__1
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_0__0__Impl_in_rule__TerminalExpression__Group_0__06406);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_0__0__Impl_in_rule__TerminalExpression__Group_0__06160);
             rule__TerminalExpression__Group_0__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_0__1_in_rule__TerminalExpression__Group_0__06409);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_0__1_in_rule__TerminalExpression__Group_0__06163);
             rule__TerminalExpression__Group_0__1();
             _fsp--;
 
@@ -8410,20 +8070,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_0__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3171:1: rule__TerminalExpression__Group_0__0__Impl : ( '(' ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3047:1: rule__TerminalExpression__Group_0__0__Impl : ( '(' ) ;
     public final void rule__TerminalExpression__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3175:1: ( ( '(' ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3176:1: ( '(' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3051:1: ( ( '(' ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3052:1: ( '(' )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3176:1: ( '(' )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3177:1: '('
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3052:1: ( '(' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3053:1: '('
             {
              before(grammarAccess.getTerminalExpressionAccess().getLeftParenthesisKeyword_0_0()); 
-            match(input,25,FOLLOW_25_in_rule__TerminalExpression__Group_0__0__Impl6437); 
+            match(input,25,FOLLOW_25_in_rule__TerminalExpression__Group_0__0__Impl6191); 
              after(grammarAccess.getTerminalExpressionAccess().getLeftParenthesisKeyword_0_0()); 
 
             }
@@ -8447,20 +8107,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_0__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3190:1: rule__TerminalExpression__Group_0__1 : rule__TerminalExpression__Group_0__1__Impl rule__TerminalExpression__Group_0__2 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3066:1: rule__TerminalExpression__Group_0__1 : rule__TerminalExpression__Group_0__1__Impl rule__TerminalExpression__Group_0__2 ;
     public final void rule__TerminalExpression__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3194:1: ( rule__TerminalExpression__Group_0__1__Impl rule__TerminalExpression__Group_0__2 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3195:2: rule__TerminalExpression__Group_0__1__Impl rule__TerminalExpression__Group_0__2
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3070:1: ( rule__TerminalExpression__Group_0__1__Impl rule__TerminalExpression__Group_0__2 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3071:2: rule__TerminalExpression__Group_0__1__Impl rule__TerminalExpression__Group_0__2
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_0__1__Impl_in_rule__TerminalExpression__Group_0__16468);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_0__1__Impl_in_rule__TerminalExpression__Group_0__16222);
             rule__TerminalExpression__Group_0__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_0__2_in_rule__TerminalExpression__Group_0__16471);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_0__2_in_rule__TerminalExpression__Group_0__16225);
             rule__TerminalExpression__Group_0__2();
             _fsp--;
 
@@ -8483,20 +8143,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_0__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3202:1: rule__TerminalExpression__Group_0__1__Impl : ( ruleExpression ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3078:1: rule__TerminalExpression__Group_0__1__Impl : ( ruleExpression ) ;
     public final void rule__TerminalExpression__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3206:1: ( ( ruleExpression ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3207:1: ( ruleExpression )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3082:1: ( ( ruleExpression ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3083:1: ( ruleExpression )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3207:1: ( ruleExpression )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3208:1: ruleExpression
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3083:1: ( ruleExpression )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3084:1: ruleExpression
             {
              before(grammarAccess.getTerminalExpressionAccess().getExpressionParserRuleCall_0_1()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__TerminalExpression__Group_0__1__Impl6498);
+            pushFollow(FOLLOW_ruleExpression_in_rule__TerminalExpression__Group_0__1__Impl6252);
             ruleExpression();
             _fsp--;
 
@@ -8523,16 +8183,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_0__2
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3219:1: rule__TerminalExpression__Group_0__2 : rule__TerminalExpression__Group_0__2__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3095:1: rule__TerminalExpression__Group_0__2 : rule__TerminalExpression__Group_0__2__Impl ;
     public final void rule__TerminalExpression__Group_0__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3223:1: ( rule__TerminalExpression__Group_0__2__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3224:2: rule__TerminalExpression__Group_0__2__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3099:1: ( rule__TerminalExpression__Group_0__2__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3100:2: rule__TerminalExpression__Group_0__2__Impl
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_0__2__Impl_in_rule__TerminalExpression__Group_0__26527);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_0__2__Impl_in_rule__TerminalExpression__Group_0__26281);
             rule__TerminalExpression__Group_0__2__Impl();
             _fsp--;
 
@@ -8555,20 +8215,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_0__2__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3230:1: rule__TerminalExpression__Group_0__2__Impl : ( ')' ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3106:1: rule__TerminalExpression__Group_0__2__Impl : ( ')' ) ;
     public final void rule__TerminalExpression__Group_0__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3234:1: ( ( ')' ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3235:1: ( ')' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3110:1: ( ( ')' ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3111:1: ( ')' )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3235:1: ( ')' )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3236:1: ')'
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3111:1: ( ')' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3112:1: ')'
             {
              before(grammarAccess.getTerminalExpressionAccess().getRightParenthesisKeyword_0_2()); 
-            match(input,26,FOLLOW_26_in_rule__TerminalExpression__Group_0__2__Impl6555); 
+            match(input,26,FOLLOW_26_in_rule__TerminalExpression__Group_0__2__Impl6309); 
              after(grammarAccess.getTerminalExpressionAccess().getRightParenthesisKeyword_0_2()); 
 
             }
@@ -8592,20 +8252,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_3__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3255:1: rule__TerminalExpression__Group_3__0 : rule__TerminalExpression__Group_3__0__Impl rule__TerminalExpression__Group_3__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3131:1: rule__TerminalExpression__Group_3__0 : rule__TerminalExpression__Group_3__0__Impl rule__TerminalExpression__Group_3__1 ;
     public final void rule__TerminalExpression__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3259:1: ( rule__TerminalExpression__Group_3__0__Impl rule__TerminalExpression__Group_3__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3260:2: rule__TerminalExpression__Group_3__0__Impl rule__TerminalExpression__Group_3__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3135:1: ( rule__TerminalExpression__Group_3__0__Impl rule__TerminalExpression__Group_3__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3136:2: rule__TerminalExpression__Group_3__0__Impl rule__TerminalExpression__Group_3__1
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_3__0__Impl_in_rule__TerminalExpression__Group_3__06592);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_3__0__Impl_in_rule__TerminalExpression__Group_3__06346);
             rule__TerminalExpression__Group_3__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_3__1_in_rule__TerminalExpression__Group_3__06595);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_3__1_in_rule__TerminalExpression__Group_3__06349);
             rule__TerminalExpression__Group_3__1();
             _fsp--;
 
@@ -8628,21 +8288,21 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_3__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3267:1: rule__TerminalExpression__Group_3__0__Impl : ( () ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3143:1: rule__TerminalExpression__Group_3__0__Impl : ( () ) ;
     public final void rule__TerminalExpression__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3271:1: ( ( () ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3272:1: ( () )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3147:1: ( ( () ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3148:1: ( () )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3272:1: ( () )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3273:1: ()
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3148:1: ( () )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3149:1: ()
             {
              before(grammarAccess.getTerminalExpressionAccess().getNotExpressionAction_3_0()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3274:1: ()
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3276:1: 
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3150:1: ()
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3152:1: 
             {
             }
 
@@ -8665,20 +8325,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_3__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3286:1: rule__TerminalExpression__Group_3__1 : rule__TerminalExpression__Group_3__1__Impl rule__TerminalExpression__Group_3__2 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3162:1: rule__TerminalExpression__Group_3__1 : rule__TerminalExpression__Group_3__1__Impl rule__TerminalExpression__Group_3__2 ;
     public final void rule__TerminalExpression__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3290:1: ( rule__TerminalExpression__Group_3__1__Impl rule__TerminalExpression__Group_3__2 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3291:2: rule__TerminalExpression__Group_3__1__Impl rule__TerminalExpression__Group_3__2
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3166:1: ( rule__TerminalExpression__Group_3__1__Impl rule__TerminalExpression__Group_3__2 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3167:2: rule__TerminalExpression__Group_3__1__Impl rule__TerminalExpression__Group_3__2
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_3__1__Impl_in_rule__TerminalExpression__Group_3__16653);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_3__1__Impl_in_rule__TerminalExpression__Group_3__16407);
             rule__TerminalExpression__Group_3__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_3__2_in_rule__TerminalExpression__Group_3__16656);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_3__2_in_rule__TerminalExpression__Group_3__16410);
             rule__TerminalExpression__Group_3__2();
             _fsp--;
 
@@ -8701,20 +8361,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_3__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3298:1: rule__TerminalExpression__Group_3__1__Impl : ( '!' ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3174:1: rule__TerminalExpression__Group_3__1__Impl : ( '!' ) ;
     public final void rule__TerminalExpression__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3302:1: ( ( '!' ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3303:1: ( '!' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3178:1: ( ( '!' ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3179:1: ( '!' )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3303:1: ( '!' )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3304:1: '!'
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3179:1: ( '!' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3180:1: '!'
             {
              before(grammarAccess.getTerminalExpressionAccess().getExclamationMarkKeyword_3_1()); 
-            match(input,28,FOLLOW_28_in_rule__TerminalExpression__Group_3__1__Impl6684); 
+            match(input,28,FOLLOW_28_in_rule__TerminalExpression__Group_3__1__Impl6438); 
              after(grammarAccess.getTerminalExpressionAccess().getExclamationMarkKeyword_3_1()); 
 
             }
@@ -8738,16 +8398,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_3__2
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3317:1: rule__TerminalExpression__Group_3__2 : rule__TerminalExpression__Group_3__2__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3193:1: rule__TerminalExpression__Group_3__2 : rule__TerminalExpression__Group_3__2__Impl ;
     public final void rule__TerminalExpression__Group_3__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3321:1: ( rule__TerminalExpression__Group_3__2__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3322:2: rule__TerminalExpression__Group_3__2__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3197:1: ( rule__TerminalExpression__Group_3__2__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3198:2: rule__TerminalExpression__Group_3__2__Impl
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_3__2__Impl_in_rule__TerminalExpression__Group_3__26715);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_3__2__Impl_in_rule__TerminalExpression__Group_3__26469);
             rule__TerminalExpression__Group_3__2__Impl();
             _fsp--;
 
@@ -8770,23 +8430,23 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_3__2__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3328:1: rule__TerminalExpression__Group_3__2__Impl : ( ( rule__TerminalExpression__ExpAssignment_3_2 ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3204:1: rule__TerminalExpression__Group_3__2__Impl : ( ( rule__TerminalExpression__ExpAssignment_3_2 ) ) ;
     public final void rule__TerminalExpression__Group_3__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3332:1: ( ( ( rule__TerminalExpression__ExpAssignment_3_2 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3333:1: ( ( rule__TerminalExpression__ExpAssignment_3_2 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3208:1: ( ( ( rule__TerminalExpression__ExpAssignment_3_2 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3209:1: ( ( rule__TerminalExpression__ExpAssignment_3_2 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3333:1: ( ( rule__TerminalExpression__ExpAssignment_3_2 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3334:1: ( rule__TerminalExpression__ExpAssignment_3_2 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3209:1: ( ( rule__TerminalExpression__ExpAssignment_3_2 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3210:1: ( rule__TerminalExpression__ExpAssignment_3_2 )
             {
              before(grammarAccess.getTerminalExpressionAccess().getExpAssignment_3_2()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3335:1: ( rule__TerminalExpression__ExpAssignment_3_2 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3335:2: rule__TerminalExpression__ExpAssignment_3_2
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3211:1: ( rule__TerminalExpression__ExpAssignment_3_2 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3211:2: rule__TerminalExpression__ExpAssignment_3_2
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__ExpAssignment_3_2_in_rule__TerminalExpression__Group_3__2__Impl6742);
+            pushFollow(FOLLOW_rule__TerminalExpression__ExpAssignment_3_2_in_rule__TerminalExpression__Group_3__2__Impl6496);
             rule__TerminalExpression__ExpAssignment_3_2();
             _fsp--;
 
@@ -8816,20 +8476,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_4__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3351:1: rule__TerminalExpression__Group_4__0 : rule__TerminalExpression__Group_4__0__Impl rule__TerminalExpression__Group_4__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3227:1: rule__TerminalExpression__Group_4__0 : rule__TerminalExpression__Group_4__0__Impl rule__TerminalExpression__Group_4__1 ;
     public final void rule__TerminalExpression__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3355:1: ( rule__TerminalExpression__Group_4__0__Impl rule__TerminalExpression__Group_4__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3356:2: rule__TerminalExpression__Group_4__0__Impl rule__TerminalExpression__Group_4__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3231:1: ( rule__TerminalExpression__Group_4__0__Impl rule__TerminalExpression__Group_4__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3232:2: rule__TerminalExpression__Group_4__0__Impl rule__TerminalExpression__Group_4__1
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_4__0__Impl_in_rule__TerminalExpression__Group_4__06778);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_4__0__Impl_in_rule__TerminalExpression__Group_4__06532);
             rule__TerminalExpression__Group_4__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_4__1_in_rule__TerminalExpression__Group_4__06781);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_4__1_in_rule__TerminalExpression__Group_4__06535);
             rule__TerminalExpression__Group_4__1();
             _fsp--;
 
@@ -8852,21 +8512,21 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_4__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3363:1: rule__TerminalExpression__Group_4__0__Impl : ( () ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3239:1: rule__TerminalExpression__Group_4__0__Impl : ( () ) ;
     public final void rule__TerminalExpression__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3367:1: ( ( () ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3368:1: ( () )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3243:1: ( ( () ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3244:1: ( () )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3368:1: ( () )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3369:1: ()
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3244:1: ( () )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3245:1: ()
             {
              before(grammarAccess.getTerminalExpressionAccess().getFunctionLiteralAction_4_0()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3370:1: ()
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3372:1: 
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3246:1: ()
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3248:1: 
             {
             }
 
@@ -8889,20 +8549,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_4__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3382:1: rule__TerminalExpression__Group_4__1 : rule__TerminalExpression__Group_4__1__Impl rule__TerminalExpression__Group_4__2 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3258:1: rule__TerminalExpression__Group_4__1 : rule__TerminalExpression__Group_4__1__Impl rule__TerminalExpression__Group_4__2 ;
     public final void rule__TerminalExpression__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3386:1: ( rule__TerminalExpression__Group_4__1__Impl rule__TerminalExpression__Group_4__2 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3387:2: rule__TerminalExpression__Group_4__1__Impl rule__TerminalExpression__Group_4__2
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3262:1: ( rule__TerminalExpression__Group_4__1__Impl rule__TerminalExpression__Group_4__2 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3263:2: rule__TerminalExpression__Group_4__1__Impl rule__TerminalExpression__Group_4__2
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_4__1__Impl_in_rule__TerminalExpression__Group_4__16839);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_4__1__Impl_in_rule__TerminalExpression__Group_4__16593);
             rule__TerminalExpression__Group_4__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_4__2_in_rule__TerminalExpression__Group_4__16842);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_4__2_in_rule__TerminalExpression__Group_4__16596);
             rule__TerminalExpression__Group_4__2();
             _fsp--;
 
@@ -8925,23 +8585,23 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_4__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3394:1: rule__TerminalExpression__Group_4__1__Impl : ( ( rule__TerminalExpression__FunctionAssignment_4_1 ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3270:1: rule__TerminalExpression__Group_4__1__Impl : ( ( rule__TerminalExpression__FunctionAssignment_4_1 ) ) ;
     public final void rule__TerminalExpression__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3398:1: ( ( ( rule__TerminalExpression__FunctionAssignment_4_1 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3399:1: ( ( rule__TerminalExpression__FunctionAssignment_4_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3274:1: ( ( ( rule__TerminalExpression__FunctionAssignment_4_1 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3275:1: ( ( rule__TerminalExpression__FunctionAssignment_4_1 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3399:1: ( ( rule__TerminalExpression__FunctionAssignment_4_1 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3400:1: ( rule__TerminalExpression__FunctionAssignment_4_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3275:1: ( ( rule__TerminalExpression__FunctionAssignment_4_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3276:1: ( rule__TerminalExpression__FunctionAssignment_4_1 )
             {
              before(grammarAccess.getTerminalExpressionAccess().getFunctionAssignment_4_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3401:1: ( rule__TerminalExpression__FunctionAssignment_4_1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3401:2: rule__TerminalExpression__FunctionAssignment_4_1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3277:1: ( rule__TerminalExpression__FunctionAssignment_4_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3277:2: rule__TerminalExpression__FunctionAssignment_4_1
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__FunctionAssignment_4_1_in_rule__TerminalExpression__Group_4__1__Impl6869);
+            pushFollow(FOLLOW_rule__TerminalExpression__FunctionAssignment_4_1_in_rule__TerminalExpression__Group_4__1__Impl6623);
             rule__TerminalExpression__FunctionAssignment_4_1();
             _fsp--;
 
@@ -8971,16 +8631,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_4__2
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3411:1: rule__TerminalExpression__Group_4__2 : rule__TerminalExpression__Group_4__2__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3287:1: rule__TerminalExpression__Group_4__2 : rule__TerminalExpression__Group_4__2__Impl ;
     public final void rule__TerminalExpression__Group_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3415:1: ( rule__TerminalExpression__Group_4__2__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3416:2: rule__TerminalExpression__Group_4__2__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3291:1: ( rule__TerminalExpression__Group_4__2__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3292:2: rule__TerminalExpression__Group_4__2__Impl
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_4__2__Impl_in_rule__TerminalExpression__Group_4__26899);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_4__2__Impl_in_rule__TerminalExpression__Group_4__26653);
             rule__TerminalExpression__Group_4__2__Impl();
             _fsp--;
 
@@ -9003,23 +8663,23 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_4__2__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3422:1: rule__TerminalExpression__Group_4__2__Impl : ( ( rule__TerminalExpression__Group_4_2__0 ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3298:1: rule__TerminalExpression__Group_4__2__Impl : ( ( rule__TerminalExpression__Group_4_2__0 ) ) ;
     public final void rule__TerminalExpression__Group_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3426:1: ( ( ( rule__TerminalExpression__Group_4_2__0 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3427:1: ( ( rule__TerminalExpression__Group_4_2__0 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3302:1: ( ( ( rule__TerminalExpression__Group_4_2__0 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3303:1: ( ( rule__TerminalExpression__Group_4_2__0 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3427:1: ( ( rule__TerminalExpression__Group_4_2__0 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3428:1: ( rule__TerminalExpression__Group_4_2__0 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3303:1: ( ( rule__TerminalExpression__Group_4_2__0 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3304:1: ( rule__TerminalExpression__Group_4_2__0 )
             {
              before(grammarAccess.getTerminalExpressionAccess().getGroup_4_2()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3429:1: ( rule__TerminalExpression__Group_4_2__0 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3429:2: rule__TerminalExpression__Group_4_2__0
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3305:1: ( rule__TerminalExpression__Group_4_2__0 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3305:2: rule__TerminalExpression__Group_4_2__0
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_4_2__0_in_rule__TerminalExpression__Group_4__2__Impl6926);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_4_2__0_in_rule__TerminalExpression__Group_4__2__Impl6680);
             rule__TerminalExpression__Group_4_2__0();
             _fsp--;
 
@@ -9049,20 +8709,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_4_2__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3445:1: rule__TerminalExpression__Group_4_2__0 : rule__TerminalExpression__Group_4_2__0__Impl rule__TerminalExpression__Group_4_2__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3321:1: rule__TerminalExpression__Group_4_2__0 : rule__TerminalExpression__Group_4_2__0__Impl rule__TerminalExpression__Group_4_2__1 ;
     public final void rule__TerminalExpression__Group_4_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3449:1: ( rule__TerminalExpression__Group_4_2__0__Impl rule__TerminalExpression__Group_4_2__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3450:2: rule__TerminalExpression__Group_4_2__0__Impl rule__TerminalExpression__Group_4_2__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3325:1: ( rule__TerminalExpression__Group_4_2__0__Impl rule__TerminalExpression__Group_4_2__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3326:2: rule__TerminalExpression__Group_4_2__0__Impl rule__TerminalExpression__Group_4_2__1
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_4_2__0__Impl_in_rule__TerminalExpression__Group_4_2__06962);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_4_2__0__Impl_in_rule__TerminalExpression__Group_4_2__06716);
             rule__TerminalExpression__Group_4_2__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_4_2__1_in_rule__TerminalExpression__Group_4_2__06965);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_4_2__1_in_rule__TerminalExpression__Group_4_2__06719);
             rule__TerminalExpression__Group_4_2__1();
             _fsp--;
 
@@ -9085,20 +8745,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_4_2__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3457:1: rule__TerminalExpression__Group_4_2__0__Impl : ( '(' ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3333:1: rule__TerminalExpression__Group_4_2__0__Impl : ( '(' ) ;
     public final void rule__TerminalExpression__Group_4_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3461:1: ( ( '(' ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3462:1: ( '(' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3337:1: ( ( '(' ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3338:1: ( '(' )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3462:1: ( '(' )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3463:1: '('
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3338:1: ( '(' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3339:1: '('
             {
              before(grammarAccess.getTerminalExpressionAccess().getLeftParenthesisKeyword_4_2_0()); 
-            match(input,25,FOLLOW_25_in_rule__TerminalExpression__Group_4_2__0__Impl6993); 
+            match(input,25,FOLLOW_25_in_rule__TerminalExpression__Group_4_2__0__Impl6747); 
              after(grammarAccess.getTerminalExpressionAccess().getLeftParenthesisKeyword_4_2_0()); 
 
             }
@@ -9122,20 +8782,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_4_2__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3476:1: rule__TerminalExpression__Group_4_2__1 : rule__TerminalExpression__Group_4_2__1__Impl rule__TerminalExpression__Group_4_2__2 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3352:1: rule__TerminalExpression__Group_4_2__1 : rule__TerminalExpression__Group_4_2__1__Impl rule__TerminalExpression__Group_4_2__2 ;
     public final void rule__TerminalExpression__Group_4_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3480:1: ( rule__TerminalExpression__Group_4_2__1__Impl rule__TerminalExpression__Group_4_2__2 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3481:2: rule__TerminalExpression__Group_4_2__1__Impl rule__TerminalExpression__Group_4_2__2
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3356:1: ( rule__TerminalExpression__Group_4_2__1__Impl rule__TerminalExpression__Group_4_2__2 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3357:2: rule__TerminalExpression__Group_4_2__1__Impl rule__TerminalExpression__Group_4_2__2
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_4_2__1__Impl_in_rule__TerminalExpression__Group_4_2__17024);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_4_2__1__Impl_in_rule__TerminalExpression__Group_4_2__16778);
             rule__TerminalExpression__Group_4_2__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_4_2__2_in_rule__TerminalExpression__Group_4_2__17027);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_4_2__2_in_rule__TerminalExpression__Group_4_2__16781);
             rule__TerminalExpression__Group_4_2__2();
             _fsp--;
 
@@ -9158,31 +8818,31 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_4_2__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3488:1: rule__TerminalExpression__Group_4_2__1__Impl : ( ( rule__TerminalExpression__Group_4_2_1__0 )? ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3364:1: rule__TerminalExpression__Group_4_2__1__Impl : ( ( rule__TerminalExpression__Group_4_2_1__0 )? ) ;
     public final void rule__TerminalExpression__Group_4_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3492:1: ( ( ( rule__TerminalExpression__Group_4_2_1__0 )? ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3493:1: ( ( rule__TerminalExpression__Group_4_2_1__0 )? )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3368:1: ( ( ( rule__TerminalExpression__Group_4_2_1__0 )? ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3369:1: ( ( rule__TerminalExpression__Group_4_2_1__0 )? )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3493:1: ( ( rule__TerminalExpression__Group_4_2_1__0 )? )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3494:1: ( rule__TerminalExpression__Group_4_2_1__0 )?
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3369:1: ( ( rule__TerminalExpression__Group_4_2_1__0 )? )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3370:1: ( rule__TerminalExpression__Group_4_2_1__0 )?
             {
              before(grammarAccess.getTerminalExpressionAccess().getGroup_4_2_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3495:1: ( rule__TerminalExpression__Group_4_2_1__0 )?
-            int alt23=2;
-            int LA23_0 = input.LA(1);
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3371:1: ( rule__TerminalExpression__Group_4_2_1__0 )?
+            int alt21=2;
+            int LA21_0 = input.LA(1);
 
-            if ( ((LA23_0>=RULE_ID && LA23_0<=RULE_STRING)||(LA23_0>=RULE_INT && LA23_0<=RULE_FLOAT)||LA23_0==15||LA23_0==25||(LA23_0>=28 && LA23_0<=30)||LA23_0==32) ) {
-                alt23=1;
+            if ( ((LA21_0>=RULE_ID && LA21_0<=RULE_STRING)||(LA21_0>=RULE_INT && LA21_0<=RULE_FLOAT)||LA21_0==15||LA21_0==25||(LA21_0>=28 && LA21_0<=30)||LA21_0==32) ) {
+                alt21=1;
             }
-            switch (alt23) {
+            switch (alt21) {
                 case 1 :
-                    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3495:2: rule__TerminalExpression__Group_4_2_1__0
+                    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3371:2: rule__TerminalExpression__Group_4_2_1__0
                     {
-                    pushFollow(FOLLOW_rule__TerminalExpression__Group_4_2_1__0_in_rule__TerminalExpression__Group_4_2__1__Impl7054);
+                    pushFollow(FOLLOW_rule__TerminalExpression__Group_4_2_1__0_in_rule__TerminalExpression__Group_4_2__1__Impl6808);
                     rule__TerminalExpression__Group_4_2_1__0();
                     _fsp--;
 
@@ -9215,16 +8875,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_4_2__2
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3505:1: rule__TerminalExpression__Group_4_2__2 : rule__TerminalExpression__Group_4_2__2__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3381:1: rule__TerminalExpression__Group_4_2__2 : rule__TerminalExpression__Group_4_2__2__Impl ;
     public final void rule__TerminalExpression__Group_4_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3509:1: ( rule__TerminalExpression__Group_4_2__2__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3510:2: rule__TerminalExpression__Group_4_2__2__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3385:1: ( rule__TerminalExpression__Group_4_2__2__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3386:2: rule__TerminalExpression__Group_4_2__2__Impl
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_4_2__2__Impl_in_rule__TerminalExpression__Group_4_2__27085);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_4_2__2__Impl_in_rule__TerminalExpression__Group_4_2__26839);
             rule__TerminalExpression__Group_4_2__2__Impl();
             _fsp--;
 
@@ -9247,20 +8907,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_4_2__2__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3516:1: rule__TerminalExpression__Group_4_2__2__Impl : ( ')' ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3392:1: rule__TerminalExpression__Group_4_2__2__Impl : ( ')' ) ;
     public final void rule__TerminalExpression__Group_4_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3520:1: ( ( ')' ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3521:1: ( ')' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3396:1: ( ( ')' ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3397:1: ( ')' )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3521:1: ( ')' )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3522:1: ')'
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3397:1: ( ')' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3398:1: ')'
             {
              before(grammarAccess.getTerminalExpressionAccess().getRightParenthesisKeyword_4_2_2()); 
-            match(input,26,FOLLOW_26_in_rule__TerminalExpression__Group_4_2__2__Impl7113); 
+            match(input,26,FOLLOW_26_in_rule__TerminalExpression__Group_4_2__2__Impl6867); 
              after(grammarAccess.getTerminalExpressionAccess().getRightParenthesisKeyword_4_2_2()); 
 
             }
@@ -9284,20 +8944,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_4_2_1__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3541:1: rule__TerminalExpression__Group_4_2_1__0 : rule__TerminalExpression__Group_4_2_1__0__Impl rule__TerminalExpression__Group_4_2_1__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3417:1: rule__TerminalExpression__Group_4_2_1__0 : rule__TerminalExpression__Group_4_2_1__0__Impl rule__TerminalExpression__Group_4_2_1__1 ;
     public final void rule__TerminalExpression__Group_4_2_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3545:1: ( rule__TerminalExpression__Group_4_2_1__0__Impl rule__TerminalExpression__Group_4_2_1__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3546:2: rule__TerminalExpression__Group_4_2_1__0__Impl rule__TerminalExpression__Group_4_2_1__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3421:1: ( rule__TerminalExpression__Group_4_2_1__0__Impl rule__TerminalExpression__Group_4_2_1__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3422:2: rule__TerminalExpression__Group_4_2_1__0__Impl rule__TerminalExpression__Group_4_2_1__1
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_4_2_1__0__Impl_in_rule__TerminalExpression__Group_4_2_1__07150);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_4_2_1__0__Impl_in_rule__TerminalExpression__Group_4_2_1__06904);
             rule__TerminalExpression__Group_4_2_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_4_2_1__1_in_rule__TerminalExpression__Group_4_2_1__07153);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_4_2_1__1_in_rule__TerminalExpression__Group_4_2_1__06907);
             rule__TerminalExpression__Group_4_2_1__1();
             _fsp--;
 
@@ -9320,23 +8980,23 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_4_2_1__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3553:1: rule__TerminalExpression__Group_4_2_1__0__Impl : ( ( rule__TerminalExpression__ArgumentsAssignment_4_2_1_0 ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3429:1: rule__TerminalExpression__Group_4_2_1__0__Impl : ( ( rule__TerminalExpression__ArgumentsAssignment_4_2_1_0 ) ) ;
     public final void rule__TerminalExpression__Group_4_2_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3557:1: ( ( ( rule__TerminalExpression__ArgumentsAssignment_4_2_1_0 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3558:1: ( ( rule__TerminalExpression__ArgumentsAssignment_4_2_1_0 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3433:1: ( ( ( rule__TerminalExpression__ArgumentsAssignment_4_2_1_0 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3434:1: ( ( rule__TerminalExpression__ArgumentsAssignment_4_2_1_0 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3558:1: ( ( rule__TerminalExpression__ArgumentsAssignment_4_2_1_0 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3559:1: ( rule__TerminalExpression__ArgumentsAssignment_4_2_1_0 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3434:1: ( ( rule__TerminalExpression__ArgumentsAssignment_4_2_1_0 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3435:1: ( rule__TerminalExpression__ArgumentsAssignment_4_2_1_0 )
             {
              before(grammarAccess.getTerminalExpressionAccess().getArgumentsAssignment_4_2_1_0()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3560:1: ( rule__TerminalExpression__ArgumentsAssignment_4_2_1_0 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3560:2: rule__TerminalExpression__ArgumentsAssignment_4_2_1_0
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3436:1: ( rule__TerminalExpression__ArgumentsAssignment_4_2_1_0 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3436:2: rule__TerminalExpression__ArgumentsAssignment_4_2_1_0
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__ArgumentsAssignment_4_2_1_0_in_rule__TerminalExpression__Group_4_2_1__0__Impl7180);
+            pushFollow(FOLLOW_rule__TerminalExpression__ArgumentsAssignment_4_2_1_0_in_rule__TerminalExpression__Group_4_2_1__0__Impl6934);
             rule__TerminalExpression__ArgumentsAssignment_4_2_1_0();
             _fsp--;
 
@@ -9366,16 +9026,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_4_2_1__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3570:1: rule__TerminalExpression__Group_4_2_1__1 : rule__TerminalExpression__Group_4_2_1__1__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3446:1: rule__TerminalExpression__Group_4_2_1__1 : rule__TerminalExpression__Group_4_2_1__1__Impl ;
     public final void rule__TerminalExpression__Group_4_2_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3574:1: ( rule__TerminalExpression__Group_4_2_1__1__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3575:2: rule__TerminalExpression__Group_4_2_1__1__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3450:1: ( rule__TerminalExpression__Group_4_2_1__1__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3451:2: rule__TerminalExpression__Group_4_2_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_4_2_1__1__Impl_in_rule__TerminalExpression__Group_4_2_1__17210);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_4_2_1__1__Impl_in_rule__TerminalExpression__Group_4_2_1__16964);
             rule__TerminalExpression__Group_4_2_1__1__Impl();
             _fsp--;
 
@@ -9398,35 +9058,35 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_4_2_1__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3581:1: rule__TerminalExpression__Group_4_2_1__1__Impl : ( ( rule__TerminalExpression__Group_4_2_1_1__0 )* ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3457:1: rule__TerminalExpression__Group_4_2_1__1__Impl : ( ( rule__TerminalExpression__Group_4_2_1_1__0 )* ) ;
     public final void rule__TerminalExpression__Group_4_2_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3585:1: ( ( ( rule__TerminalExpression__Group_4_2_1_1__0 )* ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3586:1: ( ( rule__TerminalExpression__Group_4_2_1_1__0 )* )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3461:1: ( ( ( rule__TerminalExpression__Group_4_2_1_1__0 )* ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3462:1: ( ( rule__TerminalExpression__Group_4_2_1_1__0 )* )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3586:1: ( ( rule__TerminalExpression__Group_4_2_1_1__0 )* )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3587:1: ( rule__TerminalExpression__Group_4_2_1_1__0 )*
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3462:1: ( ( rule__TerminalExpression__Group_4_2_1_1__0 )* )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3463:1: ( rule__TerminalExpression__Group_4_2_1_1__0 )*
             {
              before(grammarAccess.getTerminalExpressionAccess().getGroup_4_2_1_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3588:1: ( rule__TerminalExpression__Group_4_2_1_1__0 )*
-            loop24:
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3464:1: ( rule__TerminalExpression__Group_4_2_1_1__0 )*
+            loop22:
             do {
-                int alt24=2;
-                int LA24_0 = input.LA(1);
+                int alt22=2;
+                int LA22_0 = input.LA(1);
 
-                if ( (LA24_0==27) ) {
-                    alt24=1;
+                if ( (LA22_0==27) ) {
+                    alt22=1;
                 }
 
 
-                switch (alt24) {
+                switch (alt22) {
             	case 1 :
-            	    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3588:2: rule__TerminalExpression__Group_4_2_1_1__0
+            	    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3464:2: rule__TerminalExpression__Group_4_2_1_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__TerminalExpression__Group_4_2_1_1__0_in_rule__TerminalExpression__Group_4_2_1__1__Impl7237);
+            	    pushFollow(FOLLOW_rule__TerminalExpression__Group_4_2_1_1__0_in_rule__TerminalExpression__Group_4_2_1__1__Impl6991);
             	    rule__TerminalExpression__Group_4_2_1_1__0();
             	    _fsp--;
 
@@ -9435,7 +9095,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
             	    break;
 
             	default :
-            	    break loop24;
+            	    break loop22;
                 }
             } while (true);
 
@@ -9462,20 +9122,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_4_2_1_1__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3602:1: rule__TerminalExpression__Group_4_2_1_1__0 : rule__TerminalExpression__Group_4_2_1_1__0__Impl rule__TerminalExpression__Group_4_2_1_1__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3478:1: rule__TerminalExpression__Group_4_2_1_1__0 : rule__TerminalExpression__Group_4_2_1_1__0__Impl rule__TerminalExpression__Group_4_2_1_1__1 ;
     public final void rule__TerminalExpression__Group_4_2_1_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3606:1: ( rule__TerminalExpression__Group_4_2_1_1__0__Impl rule__TerminalExpression__Group_4_2_1_1__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3607:2: rule__TerminalExpression__Group_4_2_1_1__0__Impl rule__TerminalExpression__Group_4_2_1_1__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3482:1: ( rule__TerminalExpression__Group_4_2_1_1__0__Impl rule__TerminalExpression__Group_4_2_1_1__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3483:2: rule__TerminalExpression__Group_4_2_1_1__0__Impl rule__TerminalExpression__Group_4_2_1_1__1
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_4_2_1_1__0__Impl_in_rule__TerminalExpression__Group_4_2_1_1__07272);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_4_2_1_1__0__Impl_in_rule__TerminalExpression__Group_4_2_1_1__07026);
             rule__TerminalExpression__Group_4_2_1_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_4_2_1_1__1_in_rule__TerminalExpression__Group_4_2_1_1__07275);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_4_2_1_1__1_in_rule__TerminalExpression__Group_4_2_1_1__07029);
             rule__TerminalExpression__Group_4_2_1_1__1();
             _fsp--;
 
@@ -9498,20 +9158,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_4_2_1_1__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3614:1: rule__TerminalExpression__Group_4_2_1_1__0__Impl : ( ',' ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3490:1: rule__TerminalExpression__Group_4_2_1_1__0__Impl : ( ',' ) ;
     public final void rule__TerminalExpression__Group_4_2_1_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3618:1: ( ( ',' ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3619:1: ( ',' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3494:1: ( ( ',' ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3495:1: ( ',' )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3619:1: ( ',' )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3620:1: ','
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3495:1: ( ',' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3496:1: ','
             {
              before(grammarAccess.getTerminalExpressionAccess().getCommaKeyword_4_2_1_1_0()); 
-            match(input,27,FOLLOW_27_in_rule__TerminalExpression__Group_4_2_1_1__0__Impl7303); 
+            match(input,27,FOLLOW_27_in_rule__TerminalExpression__Group_4_2_1_1__0__Impl7057); 
              after(grammarAccess.getTerminalExpressionAccess().getCommaKeyword_4_2_1_1_0()); 
 
             }
@@ -9535,16 +9195,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_4_2_1_1__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3633:1: rule__TerminalExpression__Group_4_2_1_1__1 : rule__TerminalExpression__Group_4_2_1_1__1__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3509:1: rule__TerminalExpression__Group_4_2_1_1__1 : rule__TerminalExpression__Group_4_2_1_1__1__Impl ;
     public final void rule__TerminalExpression__Group_4_2_1_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3637:1: ( rule__TerminalExpression__Group_4_2_1_1__1__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3638:2: rule__TerminalExpression__Group_4_2_1_1__1__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3513:1: ( rule__TerminalExpression__Group_4_2_1_1__1__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3514:2: rule__TerminalExpression__Group_4_2_1_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__Group_4_2_1_1__1__Impl_in_rule__TerminalExpression__Group_4_2_1_1__17334);
+            pushFollow(FOLLOW_rule__TerminalExpression__Group_4_2_1_1__1__Impl_in_rule__TerminalExpression__Group_4_2_1_1__17088);
             rule__TerminalExpression__Group_4_2_1_1__1__Impl();
             _fsp--;
 
@@ -9567,23 +9227,23 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__Group_4_2_1_1__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3644:1: rule__TerminalExpression__Group_4_2_1_1__1__Impl : ( ( rule__TerminalExpression__ArgumentsAssignment_4_2_1_1_1 ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3520:1: rule__TerminalExpression__Group_4_2_1_1__1__Impl : ( ( rule__TerminalExpression__ArgumentsAssignment_4_2_1_1_1 ) ) ;
     public final void rule__TerminalExpression__Group_4_2_1_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3648:1: ( ( ( rule__TerminalExpression__ArgumentsAssignment_4_2_1_1_1 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3649:1: ( ( rule__TerminalExpression__ArgumentsAssignment_4_2_1_1_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3524:1: ( ( ( rule__TerminalExpression__ArgumentsAssignment_4_2_1_1_1 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3525:1: ( ( rule__TerminalExpression__ArgumentsAssignment_4_2_1_1_1 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3649:1: ( ( rule__TerminalExpression__ArgumentsAssignment_4_2_1_1_1 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3650:1: ( rule__TerminalExpression__ArgumentsAssignment_4_2_1_1_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3525:1: ( ( rule__TerminalExpression__ArgumentsAssignment_4_2_1_1_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3526:1: ( rule__TerminalExpression__ArgumentsAssignment_4_2_1_1_1 )
             {
              before(grammarAccess.getTerminalExpressionAccess().getArgumentsAssignment_4_2_1_1_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3651:1: ( rule__TerminalExpression__ArgumentsAssignment_4_2_1_1_1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3651:2: rule__TerminalExpression__ArgumentsAssignment_4_2_1_1_1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3527:1: ( rule__TerminalExpression__ArgumentsAssignment_4_2_1_1_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3527:2: rule__TerminalExpression__ArgumentsAssignment_4_2_1_1_1
             {
-            pushFollow(FOLLOW_rule__TerminalExpression__ArgumentsAssignment_4_2_1_1_1_in_rule__TerminalExpression__Group_4_2_1_1__1__Impl7361);
+            pushFollow(FOLLOW_rule__TerminalExpression__ArgumentsAssignment_4_2_1_1_1_in_rule__TerminalExpression__Group_4_2_1_1__1__Impl7115);
             rule__TerminalExpression__ArgumentsAssignment_4_2_1_1_1();
             _fsp--;
 
@@ -9613,20 +9273,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__PrimitiveLiteral__Group_3__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3665:1: rule__PrimitiveLiteral__Group_3__0 : rule__PrimitiveLiteral__Group_3__0__Impl rule__PrimitiveLiteral__Group_3__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3541:1: rule__PrimitiveLiteral__Group_3__0 : rule__PrimitiveLiteral__Group_3__0__Impl rule__PrimitiveLiteral__Group_3__1 ;
     public final void rule__PrimitiveLiteral__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3669:1: ( rule__PrimitiveLiteral__Group_3__0__Impl rule__PrimitiveLiteral__Group_3__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3670:2: rule__PrimitiveLiteral__Group_3__0__Impl rule__PrimitiveLiteral__Group_3__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3545:1: ( rule__PrimitiveLiteral__Group_3__0__Impl rule__PrimitiveLiteral__Group_3__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3546:2: rule__PrimitiveLiteral__Group_3__0__Impl rule__PrimitiveLiteral__Group_3__1
             {
-            pushFollow(FOLLOW_rule__PrimitiveLiteral__Group_3__0__Impl_in_rule__PrimitiveLiteral__Group_3__07395);
+            pushFollow(FOLLOW_rule__PrimitiveLiteral__Group_3__0__Impl_in_rule__PrimitiveLiteral__Group_3__07149);
             rule__PrimitiveLiteral__Group_3__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__PrimitiveLiteral__Group_3__1_in_rule__PrimitiveLiteral__Group_3__07398);
+            pushFollow(FOLLOW_rule__PrimitiveLiteral__Group_3__1_in_rule__PrimitiveLiteral__Group_3__07152);
             rule__PrimitiveLiteral__Group_3__1();
             _fsp--;
 
@@ -9649,21 +9309,21 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__PrimitiveLiteral__Group_3__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3677:1: rule__PrimitiveLiteral__Group_3__0__Impl : ( () ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3553:1: rule__PrimitiveLiteral__Group_3__0__Impl : ( () ) ;
     public final void rule__PrimitiveLiteral__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3681:1: ( ( () ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3682:1: ( () )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3557:1: ( ( () ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3558:1: ( () )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3682:1: ( () )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3683:1: ()
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3558:1: ( () )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3559:1: ()
             {
              before(grammarAccess.getPrimitiveLiteralAccess().getIntLiteralAction_3_0()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3684:1: ()
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3686:1: 
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3560:1: ()
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3562:1: 
             {
             }
 
@@ -9686,16 +9346,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__PrimitiveLiteral__Group_3__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3696:1: rule__PrimitiveLiteral__Group_3__1 : rule__PrimitiveLiteral__Group_3__1__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3572:1: rule__PrimitiveLiteral__Group_3__1 : rule__PrimitiveLiteral__Group_3__1__Impl ;
     public final void rule__PrimitiveLiteral__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3700:1: ( rule__PrimitiveLiteral__Group_3__1__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3701:2: rule__PrimitiveLiteral__Group_3__1__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3576:1: ( rule__PrimitiveLiteral__Group_3__1__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3577:2: rule__PrimitiveLiteral__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__PrimitiveLiteral__Group_3__1__Impl_in_rule__PrimitiveLiteral__Group_3__17456);
+            pushFollow(FOLLOW_rule__PrimitiveLiteral__Group_3__1__Impl_in_rule__PrimitiveLiteral__Group_3__17210);
             rule__PrimitiveLiteral__Group_3__1__Impl();
             _fsp--;
 
@@ -9718,23 +9378,23 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__PrimitiveLiteral__Group_3__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3707:1: rule__PrimitiveLiteral__Group_3__1__Impl : ( ( rule__PrimitiveLiteral__ValueAssignment_3_1 ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3583:1: rule__PrimitiveLiteral__Group_3__1__Impl : ( ( rule__PrimitiveLiteral__ValueAssignment_3_1 ) ) ;
     public final void rule__PrimitiveLiteral__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3711:1: ( ( ( rule__PrimitiveLiteral__ValueAssignment_3_1 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3712:1: ( ( rule__PrimitiveLiteral__ValueAssignment_3_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3587:1: ( ( ( rule__PrimitiveLiteral__ValueAssignment_3_1 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3588:1: ( ( rule__PrimitiveLiteral__ValueAssignment_3_1 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3712:1: ( ( rule__PrimitiveLiteral__ValueAssignment_3_1 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3713:1: ( rule__PrimitiveLiteral__ValueAssignment_3_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3588:1: ( ( rule__PrimitiveLiteral__ValueAssignment_3_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3589:1: ( rule__PrimitiveLiteral__ValueAssignment_3_1 )
             {
              before(grammarAccess.getPrimitiveLiteralAccess().getValueAssignment_3_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3714:1: ( rule__PrimitiveLiteral__ValueAssignment_3_1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3714:2: rule__PrimitiveLiteral__ValueAssignment_3_1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3590:1: ( rule__PrimitiveLiteral__ValueAssignment_3_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3590:2: rule__PrimitiveLiteral__ValueAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__PrimitiveLiteral__ValueAssignment_3_1_in_rule__PrimitiveLiteral__Group_3__1__Impl7483);
+            pushFollow(FOLLOW_rule__PrimitiveLiteral__ValueAssignment_3_1_in_rule__PrimitiveLiteral__Group_3__1__Impl7237);
             rule__PrimitiveLiteral__ValueAssignment_3_1();
             _fsp--;
 
@@ -9764,20 +9424,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__PrimitiveLiteral__Group_4__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3728:1: rule__PrimitiveLiteral__Group_4__0 : rule__PrimitiveLiteral__Group_4__0__Impl rule__PrimitiveLiteral__Group_4__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3604:1: rule__PrimitiveLiteral__Group_4__0 : rule__PrimitiveLiteral__Group_4__0__Impl rule__PrimitiveLiteral__Group_4__1 ;
     public final void rule__PrimitiveLiteral__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3732:1: ( rule__PrimitiveLiteral__Group_4__0__Impl rule__PrimitiveLiteral__Group_4__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3733:2: rule__PrimitiveLiteral__Group_4__0__Impl rule__PrimitiveLiteral__Group_4__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3608:1: ( rule__PrimitiveLiteral__Group_4__0__Impl rule__PrimitiveLiteral__Group_4__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3609:2: rule__PrimitiveLiteral__Group_4__0__Impl rule__PrimitiveLiteral__Group_4__1
             {
-            pushFollow(FOLLOW_rule__PrimitiveLiteral__Group_4__0__Impl_in_rule__PrimitiveLiteral__Group_4__07517);
+            pushFollow(FOLLOW_rule__PrimitiveLiteral__Group_4__0__Impl_in_rule__PrimitiveLiteral__Group_4__07271);
             rule__PrimitiveLiteral__Group_4__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__PrimitiveLiteral__Group_4__1_in_rule__PrimitiveLiteral__Group_4__07520);
+            pushFollow(FOLLOW_rule__PrimitiveLiteral__Group_4__1_in_rule__PrimitiveLiteral__Group_4__07274);
             rule__PrimitiveLiteral__Group_4__1();
             _fsp--;
 
@@ -9800,21 +9460,21 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__PrimitiveLiteral__Group_4__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3740:1: rule__PrimitiveLiteral__Group_4__0__Impl : ( () ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3616:1: rule__PrimitiveLiteral__Group_4__0__Impl : ( () ) ;
     public final void rule__PrimitiveLiteral__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3744:1: ( ( () ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3745:1: ( () )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3620:1: ( ( () ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3621:1: ( () )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3745:1: ( () )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3746:1: ()
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3621:1: ( () )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3622:1: ()
             {
              before(grammarAccess.getPrimitiveLiteralAccess().getBooleanLiteralAction_4_0()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3747:1: ()
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3749:1: 
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3623:1: ()
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3625:1: 
             {
             }
 
@@ -9837,16 +9497,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__PrimitiveLiteral__Group_4__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3759:1: rule__PrimitiveLiteral__Group_4__1 : rule__PrimitiveLiteral__Group_4__1__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3635:1: rule__PrimitiveLiteral__Group_4__1 : rule__PrimitiveLiteral__Group_4__1__Impl ;
     public final void rule__PrimitiveLiteral__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3763:1: ( rule__PrimitiveLiteral__Group_4__1__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3764:2: rule__PrimitiveLiteral__Group_4__1__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3639:1: ( rule__PrimitiveLiteral__Group_4__1__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3640:2: rule__PrimitiveLiteral__Group_4__1__Impl
             {
-            pushFollow(FOLLOW_rule__PrimitiveLiteral__Group_4__1__Impl_in_rule__PrimitiveLiteral__Group_4__17578);
+            pushFollow(FOLLOW_rule__PrimitiveLiteral__Group_4__1__Impl_in_rule__PrimitiveLiteral__Group_4__17332);
             rule__PrimitiveLiteral__Group_4__1__Impl();
             _fsp--;
 
@@ -9869,23 +9529,23 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__PrimitiveLiteral__Group_4__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3770:1: rule__PrimitiveLiteral__Group_4__1__Impl : ( ( rule__PrimitiveLiteral__ValueAssignment_4_1 ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3646:1: rule__PrimitiveLiteral__Group_4__1__Impl : ( ( rule__PrimitiveLiteral__ValueAssignment_4_1 ) ) ;
     public final void rule__PrimitiveLiteral__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3774:1: ( ( ( rule__PrimitiveLiteral__ValueAssignment_4_1 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3775:1: ( ( rule__PrimitiveLiteral__ValueAssignment_4_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3650:1: ( ( ( rule__PrimitiveLiteral__ValueAssignment_4_1 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3651:1: ( ( rule__PrimitiveLiteral__ValueAssignment_4_1 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3775:1: ( ( rule__PrimitiveLiteral__ValueAssignment_4_1 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3776:1: ( rule__PrimitiveLiteral__ValueAssignment_4_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3651:1: ( ( rule__PrimitiveLiteral__ValueAssignment_4_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3652:1: ( rule__PrimitiveLiteral__ValueAssignment_4_1 )
             {
              before(grammarAccess.getPrimitiveLiteralAccess().getValueAssignment_4_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3777:1: ( rule__PrimitiveLiteral__ValueAssignment_4_1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3777:2: rule__PrimitiveLiteral__ValueAssignment_4_1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3653:1: ( rule__PrimitiveLiteral__ValueAssignment_4_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3653:2: rule__PrimitiveLiteral__ValueAssignment_4_1
             {
-            pushFollow(FOLLOW_rule__PrimitiveLiteral__ValueAssignment_4_1_in_rule__PrimitiveLiteral__Group_4__1__Impl7605);
+            pushFollow(FOLLOW_rule__PrimitiveLiteral__ValueAssignment_4_1_in_rule__PrimitiveLiteral__Group_4__1__Impl7359);
             rule__PrimitiveLiteral__ValueAssignment_4_1();
             _fsp--;
 
@@ -9915,20 +9575,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__PrimitiveLiteral__Group_5__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3791:1: rule__PrimitiveLiteral__Group_5__0 : rule__PrimitiveLiteral__Group_5__0__Impl rule__PrimitiveLiteral__Group_5__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3667:1: rule__PrimitiveLiteral__Group_5__0 : rule__PrimitiveLiteral__Group_5__0__Impl rule__PrimitiveLiteral__Group_5__1 ;
     public final void rule__PrimitiveLiteral__Group_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3795:1: ( rule__PrimitiveLiteral__Group_5__0__Impl rule__PrimitiveLiteral__Group_5__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3796:2: rule__PrimitiveLiteral__Group_5__0__Impl rule__PrimitiveLiteral__Group_5__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3671:1: ( rule__PrimitiveLiteral__Group_5__0__Impl rule__PrimitiveLiteral__Group_5__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3672:2: rule__PrimitiveLiteral__Group_5__0__Impl rule__PrimitiveLiteral__Group_5__1
             {
-            pushFollow(FOLLOW_rule__PrimitiveLiteral__Group_5__0__Impl_in_rule__PrimitiveLiteral__Group_5__07639);
+            pushFollow(FOLLOW_rule__PrimitiveLiteral__Group_5__0__Impl_in_rule__PrimitiveLiteral__Group_5__07393);
             rule__PrimitiveLiteral__Group_5__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__PrimitiveLiteral__Group_5__1_in_rule__PrimitiveLiteral__Group_5__07642);
+            pushFollow(FOLLOW_rule__PrimitiveLiteral__Group_5__1_in_rule__PrimitiveLiteral__Group_5__07396);
             rule__PrimitiveLiteral__Group_5__1();
             _fsp--;
 
@@ -9951,21 +9611,21 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__PrimitiveLiteral__Group_5__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3803:1: rule__PrimitiveLiteral__Group_5__0__Impl : ( () ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3679:1: rule__PrimitiveLiteral__Group_5__0__Impl : ( () ) ;
     public final void rule__PrimitiveLiteral__Group_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3807:1: ( ( () ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3808:1: ( () )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3683:1: ( ( () ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3684:1: ( () )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3808:1: ( () )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3809:1: ()
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3684:1: ( () )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3685:1: ()
             {
              before(grammarAccess.getPrimitiveLiteralAccess().getFloatLiteralAction_5_0()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3810:1: ()
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3812:1: 
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3686:1: ()
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3688:1: 
             {
             }
 
@@ -9988,16 +9648,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__PrimitiveLiteral__Group_5__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3822:1: rule__PrimitiveLiteral__Group_5__1 : rule__PrimitiveLiteral__Group_5__1__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3698:1: rule__PrimitiveLiteral__Group_5__1 : rule__PrimitiveLiteral__Group_5__1__Impl ;
     public final void rule__PrimitiveLiteral__Group_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3826:1: ( rule__PrimitiveLiteral__Group_5__1__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3827:2: rule__PrimitiveLiteral__Group_5__1__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3702:1: ( rule__PrimitiveLiteral__Group_5__1__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3703:2: rule__PrimitiveLiteral__Group_5__1__Impl
             {
-            pushFollow(FOLLOW_rule__PrimitiveLiteral__Group_5__1__Impl_in_rule__PrimitiveLiteral__Group_5__17700);
+            pushFollow(FOLLOW_rule__PrimitiveLiteral__Group_5__1__Impl_in_rule__PrimitiveLiteral__Group_5__17454);
             rule__PrimitiveLiteral__Group_5__1__Impl();
             _fsp--;
 
@@ -10020,23 +9680,23 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__PrimitiveLiteral__Group_5__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3833:1: rule__PrimitiveLiteral__Group_5__1__Impl : ( ( rule__PrimitiveLiteral__ValueAssignment_5_1 ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3709:1: rule__PrimitiveLiteral__Group_5__1__Impl : ( ( rule__PrimitiveLiteral__ValueAssignment_5_1 ) ) ;
     public final void rule__PrimitiveLiteral__Group_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3837:1: ( ( ( rule__PrimitiveLiteral__ValueAssignment_5_1 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3838:1: ( ( rule__PrimitiveLiteral__ValueAssignment_5_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3713:1: ( ( ( rule__PrimitiveLiteral__ValueAssignment_5_1 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3714:1: ( ( rule__PrimitiveLiteral__ValueAssignment_5_1 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3838:1: ( ( rule__PrimitiveLiteral__ValueAssignment_5_1 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3839:1: ( rule__PrimitiveLiteral__ValueAssignment_5_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3714:1: ( ( rule__PrimitiveLiteral__ValueAssignment_5_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3715:1: ( rule__PrimitiveLiteral__ValueAssignment_5_1 )
             {
              before(grammarAccess.getPrimitiveLiteralAccess().getValueAssignment_5_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3840:1: ( rule__PrimitiveLiteral__ValueAssignment_5_1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3840:2: rule__PrimitiveLiteral__ValueAssignment_5_1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3716:1: ( rule__PrimitiveLiteral__ValueAssignment_5_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3716:2: rule__PrimitiveLiteral__ValueAssignment_5_1
             {
-            pushFollow(FOLLOW_rule__PrimitiveLiteral__ValueAssignment_5_1_in_rule__PrimitiveLiteral__Group_5__1__Impl7727);
+            pushFollow(FOLLOW_rule__PrimitiveLiteral__ValueAssignment_5_1_in_rule__PrimitiveLiteral__Group_5__1__Impl7481);
             rule__PrimitiveLiteral__ValueAssignment_5_1();
             _fsp--;
 
@@ -10066,20 +9726,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ThenBlock__Group__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3854:1: rule__ThenBlock__Group__0 : rule__ThenBlock__Group__0__Impl rule__ThenBlock__Group__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3730:1: rule__ThenBlock__Group__0 : rule__ThenBlock__Group__0__Impl rule__ThenBlock__Group__1 ;
     public final void rule__ThenBlock__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3858:1: ( rule__ThenBlock__Group__0__Impl rule__ThenBlock__Group__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3859:2: rule__ThenBlock__Group__0__Impl rule__ThenBlock__Group__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3734:1: ( rule__ThenBlock__Group__0__Impl rule__ThenBlock__Group__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3735:2: rule__ThenBlock__Group__0__Impl rule__ThenBlock__Group__1
             {
-            pushFollow(FOLLOW_rule__ThenBlock__Group__0__Impl_in_rule__ThenBlock__Group__07761);
+            pushFollow(FOLLOW_rule__ThenBlock__Group__0__Impl_in_rule__ThenBlock__Group__07515);
             rule__ThenBlock__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__ThenBlock__Group__1_in_rule__ThenBlock__Group__07764);
+            pushFollow(FOLLOW_rule__ThenBlock__Group__1_in_rule__ThenBlock__Group__07518);
             rule__ThenBlock__Group__1();
             _fsp--;
 
@@ -10102,23 +9762,23 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ThenBlock__Group__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3866:1: rule__ThenBlock__Group__0__Impl : ( ( rule__ThenBlock__Alternatives_0 ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3742:1: rule__ThenBlock__Group__0__Impl : ( ( rule__ThenBlock__Alternatives_0 ) ) ;
     public final void rule__ThenBlock__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3870:1: ( ( ( rule__ThenBlock__Alternatives_0 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3871:1: ( ( rule__ThenBlock__Alternatives_0 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3746:1: ( ( ( rule__ThenBlock__Alternatives_0 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3747:1: ( ( rule__ThenBlock__Alternatives_0 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3871:1: ( ( rule__ThenBlock__Alternatives_0 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3872:1: ( rule__ThenBlock__Alternatives_0 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3747:1: ( ( rule__ThenBlock__Alternatives_0 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3748:1: ( rule__ThenBlock__Alternatives_0 )
             {
              before(grammarAccess.getThenBlockAccess().getAlternatives_0()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3873:1: ( rule__ThenBlock__Alternatives_0 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3873:2: rule__ThenBlock__Alternatives_0
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3749:1: ( rule__ThenBlock__Alternatives_0 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3749:2: rule__ThenBlock__Alternatives_0
             {
-            pushFollow(FOLLOW_rule__ThenBlock__Alternatives_0_in_rule__ThenBlock__Group__0__Impl7791);
+            pushFollow(FOLLOW_rule__ThenBlock__Alternatives_0_in_rule__ThenBlock__Group__0__Impl7545);
             rule__ThenBlock__Alternatives_0();
             _fsp--;
 
@@ -10148,16 +9808,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ThenBlock__Group__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3883:1: rule__ThenBlock__Group__1 : rule__ThenBlock__Group__1__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3759:1: rule__ThenBlock__Group__1 : rule__ThenBlock__Group__1__Impl ;
     public final void rule__ThenBlock__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3887:1: ( rule__ThenBlock__Group__1__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3888:2: rule__ThenBlock__Group__1__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3763:1: ( rule__ThenBlock__Group__1__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3764:2: rule__ThenBlock__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__ThenBlock__Group__1__Impl_in_rule__ThenBlock__Group__17821);
+            pushFollow(FOLLOW_rule__ThenBlock__Group__1__Impl_in_rule__ThenBlock__Group__17575);
             rule__ThenBlock__Group__1__Impl();
             _fsp--;
 
@@ -10180,23 +9840,23 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ThenBlock__Group__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3894:1: rule__ThenBlock__Group__1__Impl : ( ( rule__ThenBlock__Alternatives_1 ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3770:1: rule__ThenBlock__Group__1__Impl : ( ( rule__ThenBlock__Alternatives_1 ) ) ;
     public final void rule__ThenBlock__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3898:1: ( ( ( rule__ThenBlock__Alternatives_1 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3899:1: ( ( rule__ThenBlock__Alternatives_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3774:1: ( ( ( rule__ThenBlock__Alternatives_1 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3775:1: ( ( rule__ThenBlock__Alternatives_1 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3899:1: ( ( rule__ThenBlock__Alternatives_1 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3900:1: ( rule__ThenBlock__Alternatives_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3775:1: ( ( rule__ThenBlock__Alternatives_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3776:1: ( rule__ThenBlock__Alternatives_1 )
             {
              before(grammarAccess.getThenBlockAccess().getAlternatives_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3901:1: ( rule__ThenBlock__Alternatives_1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3901:2: rule__ThenBlock__Alternatives_1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3777:1: ( rule__ThenBlock__Alternatives_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3777:2: rule__ThenBlock__Alternatives_1
             {
-            pushFollow(FOLLOW_rule__ThenBlock__Alternatives_1_in_rule__ThenBlock__Group__1__Impl7848);
+            pushFollow(FOLLOW_rule__ThenBlock__Alternatives_1_in_rule__ThenBlock__Group__1__Impl7602);
             rule__ThenBlock__Alternatives_1();
             _fsp--;
 
@@ -10226,20 +9886,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ThenBlock__Group_1_0__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3915:1: rule__ThenBlock__Group_1_0__0 : rule__ThenBlock__Group_1_0__0__Impl rule__ThenBlock__Group_1_0__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3791:1: rule__ThenBlock__Group_1_0__0 : rule__ThenBlock__Group_1_0__0__Impl rule__ThenBlock__Group_1_0__1 ;
     public final void rule__ThenBlock__Group_1_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3919:1: ( rule__ThenBlock__Group_1_0__0__Impl rule__ThenBlock__Group_1_0__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3920:2: rule__ThenBlock__Group_1_0__0__Impl rule__ThenBlock__Group_1_0__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3795:1: ( rule__ThenBlock__Group_1_0__0__Impl rule__ThenBlock__Group_1_0__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3796:2: rule__ThenBlock__Group_1_0__0__Impl rule__ThenBlock__Group_1_0__1
             {
-            pushFollow(FOLLOW_rule__ThenBlock__Group_1_0__0__Impl_in_rule__ThenBlock__Group_1_0__07882);
+            pushFollow(FOLLOW_rule__ThenBlock__Group_1_0__0__Impl_in_rule__ThenBlock__Group_1_0__07636);
             rule__ThenBlock__Group_1_0__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__ThenBlock__Group_1_0__1_in_rule__ThenBlock__Group_1_0__07885);
+            pushFollow(FOLLOW_rule__ThenBlock__Group_1_0__1_in_rule__ThenBlock__Group_1_0__07639);
             rule__ThenBlock__Group_1_0__1();
             _fsp--;
 
@@ -10262,20 +9922,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ThenBlock__Group_1_0__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3927:1: rule__ThenBlock__Group_1_0__0__Impl : ( '{' ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3803:1: rule__ThenBlock__Group_1_0__0__Impl : ( '{' ) ;
     public final void rule__ThenBlock__Group_1_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3931:1: ( ( '{' ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3932:1: ( '{' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3807:1: ( ( '{' ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3808:1: ( '{' )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3932:1: ( '{' )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3933:1: '{'
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3808:1: ( '{' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3809:1: '{'
             {
              before(grammarAccess.getThenBlockAccess().getLeftCurlyBracketKeyword_1_0_0()); 
-            match(input,23,FOLLOW_23_in_rule__ThenBlock__Group_1_0__0__Impl7913); 
+            match(input,23,FOLLOW_23_in_rule__ThenBlock__Group_1_0__0__Impl7667); 
              after(grammarAccess.getThenBlockAccess().getLeftCurlyBracketKeyword_1_0_0()); 
 
             }
@@ -10299,20 +9959,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ThenBlock__Group_1_0__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3946:1: rule__ThenBlock__Group_1_0__1 : rule__ThenBlock__Group_1_0__1__Impl rule__ThenBlock__Group_1_0__2 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3822:1: rule__ThenBlock__Group_1_0__1 : rule__ThenBlock__Group_1_0__1__Impl rule__ThenBlock__Group_1_0__2 ;
     public final void rule__ThenBlock__Group_1_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3950:1: ( rule__ThenBlock__Group_1_0__1__Impl rule__ThenBlock__Group_1_0__2 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3951:2: rule__ThenBlock__Group_1_0__1__Impl rule__ThenBlock__Group_1_0__2
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3826:1: ( rule__ThenBlock__Group_1_0__1__Impl rule__ThenBlock__Group_1_0__2 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3827:2: rule__ThenBlock__Group_1_0__1__Impl rule__ThenBlock__Group_1_0__2
             {
-            pushFollow(FOLLOW_rule__ThenBlock__Group_1_0__1__Impl_in_rule__ThenBlock__Group_1_0__17944);
+            pushFollow(FOLLOW_rule__ThenBlock__Group_1_0__1__Impl_in_rule__ThenBlock__Group_1_0__17698);
             rule__ThenBlock__Group_1_0__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__ThenBlock__Group_1_0__2_in_rule__ThenBlock__Group_1_0__17947);
+            pushFollow(FOLLOW_rule__ThenBlock__Group_1_0__2_in_rule__ThenBlock__Group_1_0__17701);
             rule__ThenBlock__Group_1_0__2();
             _fsp--;
 
@@ -10335,35 +9995,35 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ThenBlock__Group_1_0__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3958:1: rule__ThenBlock__Group_1_0__1__Impl : ( ( rule__ThenBlock__StatementsAssignment_1_0_1 )* ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3834:1: rule__ThenBlock__Group_1_0__1__Impl : ( ( rule__ThenBlock__StatementsAssignment_1_0_1 )* ) ;
     public final void rule__ThenBlock__Group_1_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3962:1: ( ( ( rule__ThenBlock__StatementsAssignment_1_0_1 )* ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3963:1: ( ( rule__ThenBlock__StatementsAssignment_1_0_1 )* )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3838:1: ( ( ( rule__ThenBlock__StatementsAssignment_1_0_1 )* ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3839:1: ( ( rule__ThenBlock__StatementsAssignment_1_0_1 )* )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3963:1: ( ( rule__ThenBlock__StatementsAssignment_1_0_1 )* )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3964:1: ( rule__ThenBlock__StatementsAssignment_1_0_1 )*
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3839:1: ( ( rule__ThenBlock__StatementsAssignment_1_0_1 )* )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3840:1: ( rule__ThenBlock__StatementsAssignment_1_0_1 )*
             {
              before(grammarAccess.getThenBlockAccess().getStatementsAssignment_1_0_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3965:1: ( rule__ThenBlock__StatementsAssignment_1_0_1 )*
-            loop25:
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3841:1: ( rule__ThenBlock__StatementsAssignment_1_0_1 )*
+            loop23:
             do {
-                int alt25=2;
-                int LA25_0 = input.LA(1);
+                int alt23=2;
+                int LA23_0 = input.LA(1);
 
-                if ( ((LA25_0>=RULE_ID && LA25_0<=RULE_STRING)||(LA25_0>=RULE_INT && LA25_0<=RULE_FLOAT)||LA25_0==15||LA25_0==25||(LA25_0>=28 && LA25_0<=30)||LA25_0==32||LA25_0==35) ) {
-                    alt25=1;
+                if ( ((LA23_0>=RULE_ID && LA23_0<=RULE_STRING)||(LA23_0>=RULE_INT && LA23_0<=RULE_FLOAT)||LA23_0==15||LA23_0==25||(LA23_0>=28 && LA23_0<=30)||LA23_0==32||LA23_0==35) ) {
+                    alt23=1;
                 }
 
 
-                switch (alt25) {
+                switch (alt23) {
             	case 1 :
-            	    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3965:2: rule__ThenBlock__StatementsAssignment_1_0_1
+            	    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3841:2: rule__ThenBlock__StatementsAssignment_1_0_1
             	    {
-            	    pushFollow(FOLLOW_rule__ThenBlock__StatementsAssignment_1_0_1_in_rule__ThenBlock__Group_1_0__1__Impl7974);
+            	    pushFollow(FOLLOW_rule__ThenBlock__StatementsAssignment_1_0_1_in_rule__ThenBlock__Group_1_0__1__Impl7728);
             	    rule__ThenBlock__StatementsAssignment_1_0_1();
             	    _fsp--;
 
@@ -10372,7 +10032,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
             	    break;
 
             	default :
-            	    break loop25;
+            	    break loop23;
                 }
             } while (true);
 
@@ -10399,16 +10059,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ThenBlock__Group_1_0__2
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3975:1: rule__ThenBlock__Group_1_0__2 : rule__ThenBlock__Group_1_0__2__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3851:1: rule__ThenBlock__Group_1_0__2 : rule__ThenBlock__Group_1_0__2__Impl ;
     public final void rule__ThenBlock__Group_1_0__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3979:1: ( rule__ThenBlock__Group_1_0__2__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3980:2: rule__ThenBlock__Group_1_0__2__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3855:1: ( rule__ThenBlock__Group_1_0__2__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3856:2: rule__ThenBlock__Group_1_0__2__Impl
             {
-            pushFollow(FOLLOW_rule__ThenBlock__Group_1_0__2__Impl_in_rule__ThenBlock__Group_1_0__28005);
+            pushFollow(FOLLOW_rule__ThenBlock__Group_1_0__2__Impl_in_rule__ThenBlock__Group_1_0__27759);
             rule__ThenBlock__Group_1_0__2__Impl();
             _fsp--;
 
@@ -10431,20 +10091,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ThenBlock__Group_1_0__2__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3986:1: rule__ThenBlock__Group_1_0__2__Impl : ( '}' ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3862:1: rule__ThenBlock__Group_1_0__2__Impl : ( '}' ) ;
     public final void rule__ThenBlock__Group_1_0__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3990:1: ( ( '}' ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3991:1: ( '}' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3866:1: ( ( '}' ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3867:1: ( '}' )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3991:1: ( '}' )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3992:1: '}'
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3867:1: ( '}' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3868:1: '}'
             {
              before(grammarAccess.getThenBlockAccess().getRightCurlyBracketKeyword_1_0_2()); 
-            match(input,24,FOLLOW_24_in_rule__ThenBlock__Group_1_0__2__Impl8033); 
+            match(input,24,FOLLOW_24_in_rule__ThenBlock__Group_1_0__2__Impl7787); 
              after(grammarAccess.getThenBlockAccess().getRightCurlyBracketKeyword_1_0_2()); 
 
             }
@@ -10468,20 +10128,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateStatement__Group__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4011:1: rule__CreateStatement__Group__0 : rule__CreateStatement__Group__0__Impl rule__CreateStatement__Group__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3887:1: rule__CreateStatement__Group__0 : rule__CreateStatement__Group__0__Impl rule__CreateStatement__Group__1 ;
     public final void rule__CreateStatement__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4015:1: ( rule__CreateStatement__Group__0__Impl rule__CreateStatement__Group__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4016:2: rule__CreateStatement__Group__0__Impl rule__CreateStatement__Group__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3891:1: ( rule__CreateStatement__Group__0__Impl rule__CreateStatement__Group__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3892:2: rule__CreateStatement__Group__0__Impl rule__CreateStatement__Group__1
             {
-            pushFollow(FOLLOW_rule__CreateStatement__Group__0__Impl_in_rule__CreateStatement__Group__08070);
+            pushFollow(FOLLOW_rule__CreateStatement__Group__0__Impl_in_rule__CreateStatement__Group__07824);
             rule__CreateStatement__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__CreateStatement__Group__1_in_rule__CreateStatement__Group__08073);
+            pushFollow(FOLLOW_rule__CreateStatement__Group__1_in_rule__CreateStatement__Group__07827);
             rule__CreateStatement__Group__1();
             _fsp--;
 
@@ -10504,35 +10164,35 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateStatement__Group__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4023:1: rule__CreateStatement__Group__0__Impl : ( ( rule__CreateStatement__Group_0__0 )? ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3899:1: rule__CreateStatement__Group__0__Impl : ( ( rule__CreateStatement__Group_0__0 )? ) ;
     public final void rule__CreateStatement__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4027:1: ( ( ( rule__CreateStatement__Group_0__0 )? ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4028:1: ( ( rule__CreateStatement__Group_0__0 )? )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3903:1: ( ( ( rule__CreateStatement__Group_0__0 )? ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3904:1: ( ( rule__CreateStatement__Group_0__0 )? )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4028:1: ( ( rule__CreateStatement__Group_0__0 )? )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4029:1: ( rule__CreateStatement__Group_0__0 )?
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3904:1: ( ( rule__CreateStatement__Group_0__0 )? )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3905:1: ( rule__CreateStatement__Group_0__0 )?
             {
              before(grammarAccess.getCreateStatementAccess().getGroup_0()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4030:1: ( rule__CreateStatement__Group_0__0 )?
-            int alt26=2;
-            int LA26_0 = input.LA(1);
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3906:1: ( rule__CreateStatement__Group_0__0 )?
+            int alt24=2;
+            int LA24_0 = input.LA(1);
 
-            if ( (LA26_0==RULE_ID) ) {
-                int LA26_1 = input.LA(2);
+            if ( (LA24_0==RULE_ID) ) {
+                int LA24_1 = input.LA(2);
 
-                if ( (LA26_1==18) ) {
-                    alt26=1;
+                if ( (LA24_1==18) ) {
+                    alt24=1;
                 }
             }
-            switch (alt26) {
+            switch (alt24) {
                 case 1 :
-                    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4030:2: rule__CreateStatement__Group_0__0
+                    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3906:2: rule__CreateStatement__Group_0__0
                     {
-                    pushFollow(FOLLOW_rule__CreateStatement__Group_0__0_in_rule__CreateStatement__Group__0__Impl8100);
+                    pushFollow(FOLLOW_rule__CreateStatement__Group_0__0_in_rule__CreateStatement__Group__0__Impl7854);
                     rule__CreateStatement__Group_0__0();
                     _fsp--;
 
@@ -10565,16 +10225,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateStatement__Group__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4040:1: rule__CreateStatement__Group__1 : rule__CreateStatement__Group__1__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3916:1: rule__CreateStatement__Group__1 : rule__CreateStatement__Group__1__Impl ;
     public final void rule__CreateStatement__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4044:1: ( rule__CreateStatement__Group__1__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4045:2: rule__CreateStatement__Group__1__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3920:1: ( rule__CreateStatement__Group__1__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3921:2: rule__CreateStatement__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__CreateStatement__Group__1__Impl_in_rule__CreateStatement__Group__18131);
+            pushFollow(FOLLOW_rule__CreateStatement__Group__1__Impl_in_rule__CreateStatement__Group__17885);
             rule__CreateStatement__Group__1__Impl();
             _fsp--;
 
@@ -10597,23 +10257,23 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateStatement__Group__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4051:1: rule__CreateStatement__Group__1__Impl : ( ( rule__CreateStatement__ExpressionAssignment_1 ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3927:1: rule__CreateStatement__Group__1__Impl : ( ( rule__CreateStatement__ExpressionAssignment_1 ) ) ;
     public final void rule__CreateStatement__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4055:1: ( ( ( rule__CreateStatement__ExpressionAssignment_1 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4056:1: ( ( rule__CreateStatement__ExpressionAssignment_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3931:1: ( ( ( rule__CreateStatement__ExpressionAssignment_1 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3932:1: ( ( rule__CreateStatement__ExpressionAssignment_1 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4056:1: ( ( rule__CreateStatement__ExpressionAssignment_1 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4057:1: ( rule__CreateStatement__ExpressionAssignment_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3932:1: ( ( rule__CreateStatement__ExpressionAssignment_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3933:1: ( rule__CreateStatement__ExpressionAssignment_1 )
             {
              before(grammarAccess.getCreateStatementAccess().getExpressionAssignment_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4058:1: ( rule__CreateStatement__ExpressionAssignment_1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4058:2: rule__CreateStatement__ExpressionAssignment_1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3934:1: ( rule__CreateStatement__ExpressionAssignment_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3934:2: rule__CreateStatement__ExpressionAssignment_1
             {
-            pushFollow(FOLLOW_rule__CreateStatement__ExpressionAssignment_1_in_rule__CreateStatement__Group__1__Impl8158);
+            pushFollow(FOLLOW_rule__CreateStatement__ExpressionAssignment_1_in_rule__CreateStatement__Group__1__Impl7912);
             rule__CreateStatement__ExpressionAssignment_1();
             _fsp--;
 
@@ -10643,20 +10303,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateStatement__Group_0__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4072:1: rule__CreateStatement__Group_0__0 : rule__CreateStatement__Group_0__0__Impl rule__CreateStatement__Group_0__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3948:1: rule__CreateStatement__Group_0__0 : rule__CreateStatement__Group_0__0__Impl rule__CreateStatement__Group_0__1 ;
     public final void rule__CreateStatement__Group_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4076:1: ( rule__CreateStatement__Group_0__0__Impl rule__CreateStatement__Group_0__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4077:2: rule__CreateStatement__Group_0__0__Impl rule__CreateStatement__Group_0__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3952:1: ( rule__CreateStatement__Group_0__0__Impl rule__CreateStatement__Group_0__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3953:2: rule__CreateStatement__Group_0__0__Impl rule__CreateStatement__Group_0__1
             {
-            pushFollow(FOLLOW_rule__CreateStatement__Group_0__0__Impl_in_rule__CreateStatement__Group_0__08192);
+            pushFollow(FOLLOW_rule__CreateStatement__Group_0__0__Impl_in_rule__CreateStatement__Group_0__07946);
             rule__CreateStatement__Group_0__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__CreateStatement__Group_0__1_in_rule__CreateStatement__Group_0__08195);
+            pushFollow(FOLLOW_rule__CreateStatement__Group_0__1_in_rule__CreateStatement__Group_0__07949);
             rule__CreateStatement__Group_0__1();
             _fsp--;
 
@@ -10679,23 +10339,23 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateStatement__Group_0__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4084:1: rule__CreateStatement__Group_0__0__Impl : ( ( rule__CreateStatement__VarAssignment_0_0 ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3960:1: rule__CreateStatement__Group_0__0__Impl : ( ( rule__CreateStatement__VarAssignment_0_0 ) ) ;
     public final void rule__CreateStatement__Group_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4088:1: ( ( ( rule__CreateStatement__VarAssignment_0_0 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4089:1: ( ( rule__CreateStatement__VarAssignment_0_0 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3964:1: ( ( ( rule__CreateStatement__VarAssignment_0_0 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3965:1: ( ( rule__CreateStatement__VarAssignment_0_0 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4089:1: ( ( rule__CreateStatement__VarAssignment_0_0 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4090:1: ( rule__CreateStatement__VarAssignment_0_0 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3965:1: ( ( rule__CreateStatement__VarAssignment_0_0 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3966:1: ( rule__CreateStatement__VarAssignment_0_0 )
             {
              before(grammarAccess.getCreateStatementAccess().getVarAssignment_0_0()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4091:1: ( rule__CreateStatement__VarAssignment_0_0 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4091:2: rule__CreateStatement__VarAssignment_0_0
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3967:1: ( rule__CreateStatement__VarAssignment_0_0 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3967:2: rule__CreateStatement__VarAssignment_0_0
             {
-            pushFollow(FOLLOW_rule__CreateStatement__VarAssignment_0_0_in_rule__CreateStatement__Group_0__0__Impl8222);
+            pushFollow(FOLLOW_rule__CreateStatement__VarAssignment_0_0_in_rule__CreateStatement__Group_0__0__Impl7976);
             rule__CreateStatement__VarAssignment_0_0();
             _fsp--;
 
@@ -10725,16 +10385,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateStatement__Group_0__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4101:1: rule__CreateStatement__Group_0__1 : rule__CreateStatement__Group_0__1__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3977:1: rule__CreateStatement__Group_0__1 : rule__CreateStatement__Group_0__1__Impl ;
     public final void rule__CreateStatement__Group_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4105:1: ( rule__CreateStatement__Group_0__1__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4106:2: rule__CreateStatement__Group_0__1__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3981:1: ( rule__CreateStatement__Group_0__1__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3982:2: rule__CreateStatement__Group_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__CreateStatement__Group_0__1__Impl_in_rule__CreateStatement__Group_0__18252);
+            pushFollow(FOLLOW_rule__CreateStatement__Group_0__1__Impl_in_rule__CreateStatement__Group_0__18006);
             rule__CreateStatement__Group_0__1__Impl();
             _fsp--;
 
@@ -10757,20 +10417,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateStatement__Group_0__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4112:1: rule__CreateStatement__Group_0__1__Impl : ( ':' ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3988:1: rule__CreateStatement__Group_0__1__Impl : ( ':' ) ;
     public final void rule__CreateStatement__Group_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4116:1: ( ( ':' ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4117:1: ( ':' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3992:1: ( ( ':' ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3993:1: ( ':' )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4117:1: ( ':' )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4118:1: ':'
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3993:1: ( ':' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:3994:1: ':'
             {
              before(grammarAccess.getCreateStatementAccess().getColonKeyword_0_1()); 
-            match(input,18,FOLLOW_18_in_rule__CreateStatement__Group_0__1__Impl8280); 
+            match(input,18,FOLLOW_18_in_rule__CreateStatement__Group_0__1__Impl8034); 
              after(grammarAccess.getCreateStatementAccess().getColonKeyword_0_1()); 
 
             }
@@ -10794,20 +10454,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateClass__Group__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4135:1: rule__CreateClass__Group__0 : rule__CreateClass__Group__0__Impl rule__CreateClass__Group__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4011:1: rule__CreateClass__Group__0 : rule__CreateClass__Group__0__Impl rule__CreateClass__Group__1 ;
     public final void rule__CreateClass__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4139:1: ( rule__CreateClass__Group__0__Impl rule__CreateClass__Group__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4140:2: rule__CreateClass__Group__0__Impl rule__CreateClass__Group__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4015:1: ( rule__CreateClass__Group__0__Impl rule__CreateClass__Group__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4016:2: rule__CreateClass__Group__0__Impl rule__CreateClass__Group__1
             {
-            pushFollow(FOLLOW_rule__CreateClass__Group__0__Impl_in_rule__CreateClass__Group__08315);
+            pushFollow(FOLLOW_rule__CreateClass__Group__0__Impl_in_rule__CreateClass__Group__08069);
             rule__CreateClass__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__CreateClass__Group__1_in_rule__CreateClass__Group__08318);
+            pushFollow(FOLLOW_rule__CreateClass__Group__1_in_rule__CreateClass__Group__08072);
             rule__CreateClass__Group__1();
             _fsp--;
 
@@ -10830,20 +10490,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateClass__Group__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4147:1: rule__CreateClass__Group__0__Impl : ( 'new' ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4023:1: rule__CreateClass__Group__0__Impl : ( 'new' ) ;
     public final void rule__CreateClass__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4151:1: ( ( 'new' ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4152:1: ( 'new' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4027:1: ( ( 'new' ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4028:1: ( 'new' )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4152:1: ( 'new' )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4153:1: 'new'
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4028:1: ( 'new' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4029:1: 'new'
             {
              before(grammarAccess.getCreateClassAccess().getNewKeyword_0()); 
-            match(input,29,FOLLOW_29_in_rule__CreateClass__Group__0__Impl8346); 
+            match(input,29,FOLLOW_29_in_rule__CreateClass__Group__0__Impl8100); 
              after(grammarAccess.getCreateClassAccess().getNewKeyword_0()); 
 
             }
@@ -10867,20 +10527,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateClass__Group__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4166:1: rule__CreateClass__Group__1 : rule__CreateClass__Group__1__Impl rule__CreateClass__Group__2 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4042:1: rule__CreateClass__Group__1 : rule__CreateClass__Group__1__Impl rule__CreateClass__Group__2 ;
     public final void rule__CreateClass__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4170:1: ( rule__CreateClass__Group__1__Impl rule__CreateClass__Group__2 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4171:2: rule__CreateClass__Group__1__Impl rule__CreateClass__Group__2
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4046:1: ( rule__CreateClass__Group__1__Impl rule__CreateClass__Group__2 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4047:2: rule__CreateClass__Group__1__Impl rule__CreateClass__Group__2
             {
-            pushFollow(FOLLOW_rule__CreateClass__Group__1__Impl_in_rule__CreateClass__Group__18377);
+            pushFollow(FOLLOW_rule__CreateClass__Group__1__Impl_in_rule__CreateClass__Group__18131);
             rule__CreateClass__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__CreateClass__Group__2_in_rule__CreateClass__Group__18380);
+            pushFollow(FOLLOW_rule__CreateClass__Group__2_in_rule__CreateClass__Group__18134);
             rule__CreateClass__Group__2();
             _fsp--;
 
@@ -10903,23 +10563,23 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateClass__Group__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4178:1: rule__CreateClass__Group__1__Impl : ( ( rule__CreateClass__TypeAssignment_1 ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4054:1: rule__CreateClass__Group__1__Impl : ( ( rule__CreateClass__TypeAssignment_1 ) ) ;
     public final void rule__CreateClass__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4182:1: ( ( ( rule__CreateClass__TypeAssignment_1 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4183:1: ( ( rule__CreateClass__TypeAssignment_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4058:1: ( ( ( rule__CreateClass__TypeAssignment_1 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4059:1: ( ( rule__CreateClass__TypeAssignment_1 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4183:1: ( ( rule__CreateClass__TypeAssignment_1 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4184:1: ( rule__CreateClass__TypeAssignment_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4059:1: ( ( rule__CreateClass__TypeAssignment_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4060:1: ( rule__CreateClass__TypeAssignment_1 )
             {
              before(grammarAccess.getCreateClassAccess().getTypeAssignment_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4185:1: ( rule__CreateClass__TypeAssignment_1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4185:2: rule__CreateClass__TypeAssignment_1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4061:1: ( rule__CreateClass__TypeAssignment_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4061:2: rule__CreateClass__TypeAssignment_1
             {
-            pushFollow(FOLLOW_rule__CreateClass__TypeAssignment_1_in_rule__CreateClass__Group__1__Impl8407);
+            pushFollow(FOLLOW_rule__CreateClass__TypeAssignment_1_in_rule__CreateClass__Group__1__Impl8161);
             rule__CreateClass__TypeAssignment_1();
             _fsp--;
 
@@ -10949,16 +10609,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateClass__Group__2
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4195:1: rule__CreateClass__Group__2 : rule__CreateClass__Group__2__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4071:1: rule__CreateClass__Group__2 : rule__CreateClass__Group__2__Impl ;
     public final void rule__CreateClass__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4199:1: ( rule__CreateClass__Group__2__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4200:2: rule__CreateClass__Group__2__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4075:1: ( rule__CreateClass__Group__2__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4076:2: rule__CreateClass__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__CreateClass__Group__2__Impl_in_rule__CreateClass__Group__28437);
+            pushFollow(FOLLOW_rule__CreateClass__Group__2__Impl_in_rule__CreateClass__Group__28191);
             rule__CreateClass__Group__2__Impl();
             _fsp--;
 
@@ -10981,31 +10641,31 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateClass__Group__2__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4206:1: rule__CreateClass__Group__2__Impl : ( ( rule__CreateClass__Group_2__0 )? ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4082:1: rule__CreateClass__Group__2__Impl : ( ( rule__CreateClass__Group_2__0 )? ) ;
     public final void rule__CreateClass__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4210:1: ( ( ( rule__CreateClass__Group_2__0 )? ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4211:1: ( ( rule__CreateClass__Group_2__0 )? )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4086:1: ( ( ( rule__CreateClass__Group_2__0 )? ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4087:1: ( ( rule__CreateClass__Group_2__0 )? )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4211:1: ( ( rule__CreateClass__Group_2__0 )? )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4212:1: ( rule__CreateClass__Group_2__0 )?
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4087:1: ( ( rule__CreateClass__Group_2__0 )? )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4088:1: ( rule__CreateClass__Group_2__0 )?
             {
              before(grammarAccess.getCreateClassAccess().getGroup_2()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4213:1: ( rule__CreateClass__Group_2__0 )?
-            int alt27=2;
-            int LA27_0 = input.LA(1);
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4089:1: ( rule__CreateClass__Group_2__0 )?
+            int alt25=2;
+            int LA25_0 = input.LA(1);
 
-            if ( (LA27_0==23) ) {
-                alt27=1;
+            if ( (LA25_0==23) ) {
+                alt25=1;
             }
-            switch (alt27) {
+            switch (alt25) {
                 case 1 :
-                    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4213:2: rule__CreateClass__Group_2__0
+                    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4089:2: rule__CreateClass__Group_2__0
                     {
-                    pushFollow(FOLLOW_rule__CreateClass__Group_2__0_in_rule__CreateClass__Group__2__Impl8464);
+                    pushFollow(FOLLOW_rule__CreateClass__Group_2__0_in_rule__CreateClass__Group__2__Impl8218);
                     rule__CreateClass__Group_2__0();
                     _fsp--;
 
@@ -11038,20 +10698,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateClass__Group_2__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4229:1: rule__CreateClass__Group_2__0 : rule__CreateClass__Group_2__0__Impl rule__CreateClass__Group_2__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4105:1: rule__CreateClass__Group_2__0 : rule__CreateClass__Group_2__0__Impl rule__CreateClass__Group_2__1 ;
     public final void rule__CreateClass__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4233:1: ( rule__CreateClass__Group_2__0__Impl rule__CreateClass__Group_2__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4234:2: rule__CreateClass__Group_2__0__Impl rule__CreateClass__Group_2__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4109:1: ( rule__CreateClass__Group_2__0__Impl rule__CreateClass__Group_2__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4110:2: rule__CreateClass__Group_2__0__Impl rule__CreateClass__Group_2__1
             {
-            pushFollow(FOLLOW_rule__CreateClass__Group_2__0__Impl_in_rule__CreateClass__Group_2__08501);
+            pushFollow(FOLLOW_rule__CreateClass__Group_2__0__Impl_in_rule__CreateClass__Group_2__08255);
             rule__CreateClass__Group_2__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__CreateClass__Group_2__1_in_rule__CreateClass__Group_2__08504);
+            pushFollow(FOLLOW_rule__CreateClass__Group_2__1_in_rule__CreateClass__Group_2__08258);
             rule__CreateClass__Group_2__1();
             _fsp--;
 
@@ -11074,20 +10734,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateClass__Group_2__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4241:1: rule__CreateClass__Group_2__0__Impl : ( '{' ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4117:1: rule__CreateClass__Group_2__0__Impl : ( '{' ) ;
     public final void rule__CreateClass__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4245:1: ( ( '{' ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4246:1: ( '{' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4121:1: ( ( '{' ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4122:1: ( '{' )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4246:1: ( '{' )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4247:1: '{'
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4122:1: ( '{' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4123:1: '{'
             {
              before(grammarAccess.getCreateClassAccess().getLeftCurlyBracketKeyword_2_0()); 
-            match(input,23,FOLLOW_23_in_rule__CreateClass__Group_2__0__Impl8532); 
+            match(input,23,FOLLOW_23_in_rule__CreateClass__Group_2__0__Impl8286); 
              after(grammarAccess.getCreateClassAccess().getLeftCurlyBracketKeyword_2_0()); 
 
             }
@@ -11111,20 +10771,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateClass__Group_2__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4260:1: rule__CreateClass__Group_2__1 : rule__CreateClass__Group_2__1__Impl rule__CreateClass__Group_2__2 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4136:1: rule__CreateClass__Group_2__1 : rule__CreateClass__Group_2__1__Impl rule__CreateClass__Group_2__2 ;
     public final void rule__CreateClass__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4264:1: ( rule__CreateClass__Group_2__1__Impl rule__CreateClass__Group_2__2 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4265:2: rule__CreateClass__Group_2__1__Impl rule__CreateClass__Group_2__2
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4140:1: ( rule__CreateClass__Group_2__1__Impl rule__CreateClass__Group_2__2 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4141:2: rule__CreateClass__Group_2__1__Impl rule__CreateClass__Group_2__2
             {
-            pushFollow(FOLLOW_rule__CreateClass__Group_2__1__Impl_in_rule__CreateClass__Group_2__18563);
+            pushFollow(FOLLOW_rule__CreateClass__Group_2__1__Impl_in_rule__CreateClass__Group_2__18317);
             rule__CreateClass__Group_2__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__CreateClass__Group_2__2_in_rule__CreateClass__Group_2__18566);
+            pushFollow(FOLLOW_rule__CreateClass__Group_2__2_in_rule__CreateClass__Group_2__18320);
             rule__CreateClass__Group_2__2();
             _fsp--;
 
@@ -11147,31 +10807,31 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateClass__Group_2__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4272:1: rule__CreateClass__Group_2__1__Impl : ( ( rule__CreateClass__Group_2_1__0 )? ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4148:1: rule__CreateClass__Group_2__1__Impl : ( ( rule__CreateClass__Group_2_1__0 )? ) ;
     public final void rule__CreateClass__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4276:1: ( ( ( rule__CreateClass__Group_2_1__0 )? ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4277:1: ( ( rule__CreateClass__Group_2_1__0 )? )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4152:1: ( ( ( rule__CreateClass__Group_2_1__0 )? ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4153:1: ( ( rule__CreateClass__Group_2_1__0 )? )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4277:1: ( ( rule__CreateClass__Group_2_1__0 )? )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4278:1: ( rule__CreateClass__Group_2_1__0 )?
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4153:1: ( ( rule__CreateClass__Group_2_1__0 )? )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4154:1: ( rule__CreateClass__Group_2_1__0 )?
             {
              before(grammarAccess.getCreateClassAccess().getGroup_2_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4279:1: ( rule__CreateClass__Group_2_1__0 )?
-            int alt28=2;
-            int LA28_0 = input.LA(1);
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4155:1: ( rule__CreateClass__Group_2_1__0 )?
+            int alt26=2;
+            int LA26_0 = input.LA(1);
 
-            if ( (LA28_0==RULE_ID) ) {
-                alt28=1;
+            if ( (LA26_0==RULE_ID) ) {
+                alt26=1;
             }
-            switch (alt28) {
+            switch (alt26) {
                 case 1 :
-                    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4279:2: rule__CreateClass__Group_2_1__0
+                    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4155:2: rule__CreateClass__Group_2_1__0
                     {
-                    pushFollow(FOLLOW_rule__CreateClass__Group_2_1__0_in_rule__CreateClass__Group_2__1__Impl8593);
+                    pushFollow(FOLLOW_rule__CreateClass__Group_2_1__0_in_rule__CreateClass__Group_2__1__Impl8347);
                     rule__CreateClass__Group_2_1__0();
                     _fsp--;
 
@@ -11204,16 +10864,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateClass__Group_2__2
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4289:1: rule__CreateClass__Group_2__2 : rule__CreateClass__Group_2__2__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4165:1: rule__CreateClass__Group_2__2 : rule__CreateClass__Group_2__2__Impl ;
     public final void rule__CreateClass__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4293:1: ( rule__CreateClass__Group_2__2__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4294:2: rule__CreateClass__Group_2__2__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4169:1: ( rule__CreateClass__Group_2__2__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4170:2: rule__CreateClass__Group_2__2__Impl
             {
-            pushFollow(FOLLOW_rule__CreateClass__Group_2__2__Impl_in_rule__CreateClass__Group_2__28624);
+            pushFollow(FOLLOW_rule__CreateClass__Group_2__2__Impl_in_rule__CreateClass__Group_2__28378);
             rule__CreateClass__Group_2__2__Impl();
             _fsp--;
 
@@ -11236,20 +10896,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateClass__Group_2__2__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4300:1: rule__CreateClass__Group_2__2__Impl : ( '}' ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4176:1: rule__CreateClass__Group_2__2__Impl : ( '}' ) ;
     public final void rule__CreateClass__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4304:1: ( ( '}' ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4305:1: ( '}' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4180:1: ( ( '}' ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4181:1: ( '}' )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4305:1: ( '}' )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4306:1: '}'
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4181:1: ( '}' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4182:1: '}'
             {
              before(grammarAccess.getCreateClassAccess().getRightCurlyBracketKeyword_2_2()); 
-            match(input,24,FOLLOW_24_in_rule__CreateClass__Group_2__2__Impl8652); 
+            match(input,24,FOLLOW_24_in_rule__CreateClass__Group_2__2__Impl8406); 
              after(grammarAccess.getCreateClassAccess().getRightCurlyBracketKeyword_2_2()); 
 
             }
@@ -11273,20 +10933,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateClass__Group_2_1__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4325:1: rule__CreateClass__Group_2_1__0 : rule__CreateClass__Group_2_1__0__Impl rule__CreateClass__Group_2_1__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4201:1: rule__CreateClass__Group_2_1__0 : rule__CreateClass__Group_2_1__0__Impl rule__CreateClass__Group_2_1__1 ;
     public final void rule__CreateClass__Group_2_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4329:1: ( rule__CreateClass__Group_2_1__0__Impl rule__CreateClass__Group_2_1__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4330:2: rule__CreateClass__Group_2_1__0__Impl rule__CreateClass__Group_2_1__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4205:1: ( rule__CreateClass__Group_2_1__0__Impl rule__CreateClass__Group_2_1__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4206:2: rule__CreateClass__Group_2_1__0__Impl rule__CreateClass__Group_2_1__1
             {
-            pushFollow(FOLLOW_rule__CreateClass__Group_2_1__0__Impl_in_rule__CreateClass__Group_2_1__08689);
+            pushFollow(FOLLOW_rule__CreateClass__Group_2_1__0__Impl_in_rule__CreateClass__Group_2_1__08443);
             rule__CreateClass__Group_2_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__CreateClass__Group_2_1__1_in_rule__CreateClass__Group_2_1__08692);
+            pushFollow(FOLLOW_rule__CreateClass__Group_2_1__1_in_rule__CreateClass__Group_2_1__08446);
             rule__CreateClass__Group_2_1__1();
             _fsp--;
 
@@ -11309,23 +10969,23 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateClass__Group_2_1__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4337:1: rule__CreateClass__Group_2_1__0__Impl : ( ( rule__CreateClass__SettersAssignment_2_1_0 ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4213:1: rule__CreateClass__Group_2_1__0__Impl : ( ( rule__CreateClass__SettersAssignment_2_1_0 ) ) ;
     public final void rule__CreateClass__Group_2_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4341:1: ( ( ( rule__CreateClass__SettersAssignment_2_1_0 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4342:1: ( ( rule__CreateClass__SettersAssignment_2_1_0 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4217:1: ( ( ( rule__CreateClass__SettersAssignment_2_1_0 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4218:1: ( ( rule__CreateClass__SettersAssignment_2_1_0 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4342:1: ( ( rule__CreateClass__SettersAssignment_2_1_0 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4343:1: ( rule__CreateClass__SettersAssignment_2_1_0 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4218:1: ( ( rule__CreateClass__SettersAssignment_2_1_0 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4219:1: ( rule__CreateClass__SettersAssignment_2_1_0 )
             {
              before(grammarAccess.getCreateClassAccess().getSettersAssignment_2_1_0()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4344:1: ( rule__CreateClass__SettersAssignment_2_1_0 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4344:2: rule__CreateClass__SettersAssignment_2_1_0
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4220:1: ( rule__CreateClass__SettersAssignment_2_1_0 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4220:2: rule__CreateClass__SettersAssignment_2_1_0
             {
-            pushFollow(FOLLOW_rule__CreateClass__SettersAssignment_2_1_0_in_rule__CreateClass__Group_2_1__0__Impl8719);
+            pushFollow(FOLLOW_rule__CreateClass__SettersAssignment_2_1_0_in_rule__CreateClass__Group_2_1__0__Impl8473);
             rule__CreateClass__SettersAssignment_2_1_0();
             _fsp--;
 
@@ -11355,16 +11015,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateClass__Group_2_1__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4354:1: rule__CreateClass__Group_2_1__1 : rule__CreateClass__Group_2_1__1__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4230:1: rule__CreateClass__Group_2_1__1 : rule__CreateClass__Group_2_1__1__Impl ;
     public final void rule__CreateClass__Group_2_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4358:1: ( rule__CreateClass__Group_2_1__1__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4359:2: rule__CreateClass__Group_2_1__1__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4234:1: ( rule__CreateClass__Group_2_1__1__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4235:2: rule__CreateClass__Group_2_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__CreateClass__Group_2_1__1__Impl_in_rule__CreateClass__Group_2_1__18749);
+            pushFollow(FOLLOW_rule__CreateClass__Group_2_1__1__Impl_in_rule__CreateClass__Group_2_1__18503);
             rule__CreateClass__Group_2_1__1__Impl();
             _fsp--;
 
@@ -11387,35 +11047,35 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateClass__Group_2_1__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4365:1: rule__CreateClass__Group_2_1__1__Impl : ( ( rule__CreateClass__Group_2_1_1__0 )* ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4241:1: rule__CreateClass__Group_2_1__1__Impl : ( ( rule__CreateClass__Group_2_1_1__0 )* ) ;
     public final void rule__CreateClass__Group_2_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4369:1: ( ( ( rule__CreateClass__Group_2_1_1__0 )* ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4370:1: ( ( rule__CreateClass__Group_2_1_1__0 )* )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4245:1: ( ( ( rule__CreateClass__Group_2_1_1__0 )* ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4246:1: ( ( rule__CreateClass__Group_2_1_1__0 )* )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4370:1: ( ( rule__CreateClass__Group_2_1_1__0 )* )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4371:1: ( rule__CreateClass__Group_2_1_1__0 )*
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4246:1: ( ( rule__CreateClass__Group_2_1_1__0 )* )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4247:1: ( rule__CreateClass__Group_2_1_1__0 )*
             {
              before(grammarAccess.getCreateClassAccess().getGroup_2_1_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4372:1: ( rule__CreateClass__Group_2_1_1__0 )*
-            loop29:
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4248:1: ( rule__CreateClass__Group_2_1_1__0 )*
+            loop27:
             do {
-                int alt29=2;
-                int LA29_0 = input.LA(1);
+                int alt27=2;
+                int LA27_0 = input.LA(1);
 
-                if ( (LA29_0==27) ) {
-                    alt29=1;
+                if ( (LA27_0==27) ) {
+                    alt27=1;
                 }
 
 
-                switch (alt29) {
+                switch (alt27) {
             	case 1 :
-            	    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4372:2: rule__CreateClass__Group_2_1_1__0
+            	    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4248:2: rule__CreateClass__Group_2_1_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__CreateClass__Group_2_1_1__0_in_rule__CreateClass__Group_2_1__1__Impl8776);
+            	    pushFollow(FOLLOW_rule__CreateClass__Group_2_1_1__0_in_rule__CreateClass__Group_2_1__1__Impl8530);
             	    rule__CreateClass__Group_2_1_1__0();
             	    _fsp--;
 
@@ -11424,7 +11084,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
             	    break;
 
             	default :
-            	    break loop29;
+            	    break loop27;
                 }
             } while (true);
 
@@ -11451,20 +11111,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateClass__Group_2_1_1__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4386:1: rule__CreateClass__Group_2_1_1__0 : rule__CreateClass__Group_2_1_1__0__Impl rule__CreateClass__Group_2_1_1__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4262:1: rule__CreateClass__Group_2_1_1__0 : rule__CreateClass__Group_2_1_1__0__Impl rule__CreateClass__Group_2_1_1__1 ;
     public final void rule__CreateClass__Group_2_1_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4390:1: ( rule__CreateClass__Group_2_1_1__0__Impl rule__CreateClass__Group_2_1_1__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4391:2: rule__CreateClass__Group_2_1_1__0__Impl rule__CreateClass__Group_2_1_1__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4266:1: ( rule__CreateClass__Group_2_1_1__0__Impl rule__CreateClass__Group_2_1_1__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4267:2: rule__CreateClass__Group_2_1_1__0__Impl rule__CreateClass__Group_2_1_1__1
             {
-            pushFollow(FOLLOW_rule__CreateClass__Group_2_1_1__0__Impl_in_rule__CreateClass__Group_2_1_1__08811);
+            pushFollow(FOLLOW_rule__CreateClass__Group_2_1_1__0__Impl_in_rule__CreateClass__Group_2_1_1__08565);
             rule__CreateClass__Group_2_1_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__CreateClass__Group_2_1_1__1_in_rule__CreateClass__Group_2_1_1__08814);
+            pushFollow(FOLLOW_rule__CreateClass__Group_2_1_1__1_in_rule__CreateClass__Group_2_1_1__08568);
             rule__CreateClass__Group_2_1_1__1();
             _fsp--;
 
@@ -11487,20 +11147,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateClass__Group_2_1_1__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4398:1: rule__CreateClass__Group_2_1_1__0__Impl : ( ',' ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4274:1: rule__CreateClass__Group_2_1_1__0__Impl : ( ',' ) ;
     public final void rule__CreateClass__Group_2_1_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4402:1: ( ( ',' ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4403:1: ( ',' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4278:1: ( ( ',' ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4279:1: ( ',' )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4403:1: ( ',' )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4404:1: ','
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4279:1: ( ',' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4280:1: ','
             {
              before(grammarAccess.getCreateClassAccess().getCommaKeyword_2_1_1_0()); 
-            match(input,27,FOLLOW_27_in_rule__CreateClass__Group_2_1_1__0__Impl8842); 
+            match(input,27,FOLLOW_27_in_rule__CreateClass__Group_2_1_1__0__Impl8596); 
              after(grammarAccess.getCreateClassAccess().getCommaKeyword_2_1_1_0()); 
 
             }
@@ -11524,16 +11184,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateClass__Group_2_1_1__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4417:1: rule__CreateClass__Group_2_1_1__1 : rule__CreateClass__Group_2_1_1__1__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4293:1: rule__CreateClass__Group_2_1_1__1 : rule__CreateClass__Group_2_1_1__1__Impl ;
     public final void rule__CreateClass__Group_2_1_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4421:1: ( rule__CreateClass__Group_2_1_1__1__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4422:2: rule__CreateClass__Group_2_1_1__1__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4297:1: ( rule__CreateClass__Group_2_1_1__1__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4298:2: rule__CreateClass__Group_2_1_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__CreateClass__Group_2_1_1__1__Impl_in_rule__CreateClass__Group_2_1_1__18873);
+            pushFollow(FOLLOW_rule__CreateClass__Group_2_1_1__1__Impl_in_rule__CreateClass__Group_2_1_1__18627);
             rule__CreateClass__Group_2_1_1__1__Impl();
             _fsp--;
 
@@ -11556,23 +11216,23 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateClass__Group_2_1_1__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4428:1: rule__CreateClass__Group_2_1_1__1__Impl : ( ( rule__CreateClass__SettersAssignment_2_1_1_1 ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4304:1: rule__CreateClass__Group_2_1_1__1__Impl : ( ( rule__CreateClass__SettersAssignment_2_1_1_1 ) ) ;
     public final void rule__CreateClass__Group_2_1_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4432:1: ( ( ( rule__CreateClass__SettersAssignment_2_1_1_1 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4433:1: ( ( rule__CreateClass__SettersAssignment_2_1_1_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4308:1: ( ( ( rule__CreateClass__SettersAssignment_2_1_1_1 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4309:1: ( ( rule__CreateClass__SettersAssignment_2_1_1_1 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4433:1: ( ( rule__CreateClass__SettersAssignment_2_1_1_1 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4434:1: ( rule__CreateClass__SettersAssignment_2_1_1_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4309:1: ( ( rule__CreateClass__SettersAssignment_2_1_1_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4310:1: ( rule__CreateClass__SettersAssignment_2_1_1_1 )
             {
              before(grammarAccess.getCreateClassAccess().getSettersAssignment_2_1_1_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4435:1: ( rule__CreateClass__SettersAssignment_2_1_1_1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4435:2: rule__CreateClass__SettersAssignment_2_1_1_1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4311:1: ( rule__CreateClass__SettersAssignment_2_1_1_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4311:2: rule__CreateClass__SettersAssignment_2_1_1_1
             {
-            pushFollow(FOLLOW_rule__CreateClass__SettersAssignment_2_1_1_1_in_rule__CreateClass__Group_2_1_1__1__Impl8900);
+            pushFollow(FOLLOW_rule__CreateClass__SettersAssignment_2_1_1_1_in_rule__CreateClass__Group_2_1_1__1__Impl8654);
             rule__CreateClass__SettersAssignment_2_1_1_1();
             _fsp--;
 
@@ -11602,20 +11262,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ListLiteral__Group__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4449:1: rule__ListLiteral__Group__0 : rule__ListLiteral__Group__0__Impl rule__ListLiteral__Group__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4325:1: rule__ListLiteral__Group__0 : rule__ListLiteral__Group__0__Impl rule__ListLiteral__Group__1 ;
     public final void rule__ListLiteral__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4453:1: ( rule__ListLiteral__Group__0__Impl rule__ListLiteral__Group__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4454:2: rule__ListLiteral__Group__0__Impl rule__ListLiteral__Group__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4329:1: ( rule__ListLiteral__Group__0__Impl rule__ListLiteral__Group__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4330:2: rule__ListLiteral__Group__0__Impl rule__ListLiteral__Group__1
             {
-            pushFollow(FOLLOW_rule__ListLiteral__Group__0__Impl_in_rule__ListLiteral__Group__08934);
+            pushFollow(FOLLOW_rule__ListLiteral__Group__0__Impl_in_rule__ListLiteral__Group__08688);
             rule__ListLiteral__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__ListLiteral__Group__1_in_rule__ListLiteral__Group__08937);
+            pushFollow(FOLLOW_rule__ListLiteral__Group__1_in_rule__ListLiteral__Group__08691);
             rule__ListLiteral__Group__1();
             _fsp--;
 
@@ -11638,20 +11298,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ListLiteral__Group__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4461:1: rule__ListLiteral__Group__0__Impl : ( '[' ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4337:1: rule__ListLiteral__Group__0__Impl : ( '[' ) ;
     public final void rule__ListLiteral__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4465:1: ( ( '[' ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4466:1: ( '[' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4341:1: ( ( '[' ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4342:1: ( '[' )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4466:1: ( '[' )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4467:1: '['
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4342:1: ( '[' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4343:1: '['
             {
              before(grammarAccess.getListLiteralAccess().getLeftSquareBracketKeyword_0()); 
-            match(input,30,FOLLOW_30_in_rule__ListLiteral__Group__0__Impl8965); 
+            match(input,30,FOLLOW_30_in_rule__ListLiteral__Group__0__Impl8719); 
              after(grammarAccess.getListLiteralAccess().getLeftSquareBracketKeyword_0()); 
 
             }
@@ -11675,20 +11335,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ListLiteral__Group__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4480:1: rule__ListLiteral__Group__1 : rule__ListLiteral__Group__1__Impl rule__ListLiteral__Group__2 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4356:1: rule__ListLiteral__Group__1 : rule__ListLiteral__Group__1__Impl rule__ListLiteral__Group__2 ;
     public final void rule__ListLiteral__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4484:1: ( rule__ListLiteral__Group__1__Impl rule__ListLiteral__Group__2 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4485:2: rule__ListLiteral__Group__1__Impl rule__ListLiteral__Group__2
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4360:1: ( rule__ListLiteral__Group__1__Impl rule__ListLiteral__Group__2 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4361:2: rule__ListLiteral__Group__1__Impl rule__ListLiteral__Group__2
             {
-            pushFollow(FOLLOW_rule__ListLiteral__Group__1__Impl_in_rule__ListLiteral__Group__18996);
+            pushFollow(FOLLOW_rule__ListLiteral__Group__1__Impl_in_rule__ListLiteral__Group__18750);
             rule__ListLiteral__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__ListLiteral__Group__2_in_rule__ListLiteral__Group__18999);
+            pushFollow(FOLLOW_rule__ListLiteral__Group__2_in_rule__ListLiteral__Group__18753);
             rule__ListLiteral__Group__2();
             _fsp--;
 
@@ -11711,31 +11371,31 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ListLiteral__Group__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4492:1: rule__ListLiteral__Group__1__Impl : ( ( rule__ListLiteral__Group_1__0 )? ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4368:1: rule__ListLiteral__Group__1__Impl : ( ( rule__ListLiteral__Group_1__0 )? ) ;
     public final void rule__ListLiteral__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4496:1: ( ( ( rule__ListLiteral__Group_1__0 )? ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4497:1: ( ( rule__ListLiteral__Group_1__0 )? )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4372:1: ( ( ( rule__ListLiteral__Group_1__0 )? ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4373:1: ( ( rule__ListLiteral__Group_1__0 )? )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4497:1: ( ( rule__ListLiteral__Group_1__0 )? )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4498:1: ( rule__ListLiteral__Group_1__0 )?
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4373:1: ( ( rule__ListLiteral__Group_1__0 )? )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4374:1: ( rule__ListLiteral__Group_1__0 )?
             {
              before(grammarAccess.getListLiteralAccess().getGroup_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4499:1: ( rule__ListLiteral__Group_1__0 )?
-            int alt30=2;
-            int LA30_0 = input.LA(1);
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4375:1: ( rule__ListLiteral__Group_1__0 )?
+            int alt28=2;
+            int LA28_0 = input.LA(1);
 
-            if ( ((LA30_0>=RULE_ID && LA30_0<=RULE_STRING)||(LA30_0>=RULE_INT && LA30_0<=RULE_FLOAT)||LA30_0==15||LA30_0==25||(LA30_0>=28 && LA30_0<=30)||LA30_0==32) ) {
-                alt30=1;
+            if ( ((LA28_0>=RULE_ID && LA28_0<=RULE_STRING)||(LA28_0>=RULE_INT && LA28_0<=RULE_FLOAT)||LA28_0==15||LA28_0==25||(LA28_0>=28 && LA28_0<=30)||LA28_0==32) ) {
+                alt28=1;
             }
-            switch (alt30) {
+            switch (alt28) {
                 case 1 :
-                    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4499:2: rule__ListLiteral__Group_1__0
+                    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4375:2: rule__ListLiteral__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__ListLiteral__Group_1__0_in_rule__ListLiteral__Group__1__Impl9026);
+                    pushFollow(FOLLOW_rule__ListLiteral__Group_1__0_in_rule__ListLiteral__Group__1__Impl8780);
                     rule__ListLiteral__Group_1__0();
                     _fsp--;
 
@@ -11768,16 +11428,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ListLiteral__Group__2
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4509:1: rule__ListLiteral__Group__2 : rule__ListLiteral__Group__2__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4385:1: rule__ListLiteral__Group__2 : rule__ListLiteral__Group__2__Impl ;
     public final void rule__ListLiteral__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4513:1: ( rule__ListLiteral__Group__2__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4514:2: rule__ListLiteral__Group__2__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4389:1: ( rule__ListLiteral__Group__2__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4390:2: rule__ListLiteral__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__ListLiteral__Group__2__Impl_in_rule__ListLiteral__Group__29057);
+            pushFollow(FOLLOW_rule__ListLiteral__Group__2__Impl_in_rule__ListLiteral__Group__28811);
             rule__ListLiteral__Group__2__Impl();
             _fsp--;
 
@@ -11800,20 +11460,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ListLiteral__Group__2__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4520:1: rule__ListLiteral__Group__2__Impl : ( ']' ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4396:1: rule__ListLiteral__Group__2__Impl : ( ']' ) ;
     public final void rule__ListLiteral__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4524:1: ( ( ']' ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4525:1: ( ']' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4400:1: ( ( ']' ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4401:1: ( ']' )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4525:1: ( ']' )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4526:1: ']'
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4401:1: ( ']' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4402:1: ']'
             {
              before(grammarAccess.getListLiteralAccess().getRightSquareBracketKeyword_2()); 
-            match(input,31,FOLLOW_31_in_rule__ListLiteral__Group__2__Impl9085); 
+            match(input,31,FOLLOW_31_in_rule__ListLiteral__Group__2__Impl8839); 
              after(grammarAccess.getListLiteralAccess().getRightSquareBracketKeyword_2()); 
 
             }
@@ -11837,20 +11497,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ListLiteral__Group_1__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4545:1: rule__ListLiteral__Group_1__0 : rule__ListLiteral__Group_1__0__Impl rule__ListLiteral__Group_1__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4421:1: rule__ListLiteral__Group_1__0 : rule__ListLiteral__Group_1__0__Impl rule__ListLiteral__Group_1__1 ;
     public final void rule__ListLiteral__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4549:1: ( rule__ListLiteral__Group_1__0__Impl rule__ListLiteral__Group_1__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4550:2: rule__ListLiteral__Group_1__0__Impl rule__ListLiteral__Group_1__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4425:1: ( rule__ListLiteral__Group_1__0__Impl rule__ListLiteral__Group_1__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4426:2: rule__ListLiteral__Group_1__0__Impl rule__ListLiteral__Group_1__1
             {
-            pushFollow(FOLLOW_rule__ListLiteral__Group_1__0__Impl_in_rule__ListLiteral__Group_1__09122);
+            pushFollow(FOLLOW_rule__ListLiteral__Group_1__0__Impl_in_rule__ListLiteral__Group_1__08876);
             rule__ListLiteral__Group_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__ListLiteral__Group_1__1_in_rule__ListLiteral__Group_1__09125);
+            pushFollow(FOLLOW_rule__ListLiteral__Group_1__1_in_rule__ListLiteral__Group_1__08879);
             rule__ListLiteral__Group_1__1();
             _fsp--;
 
@@ -11873,23 +11533,23 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ListLiteral__Group_1__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4557:1: rule__ListLiteral__Group_1__0__Impl : ( ( rule__ListLiteral__ItemsAssignment_1_0 ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4433:1: rule__ListLiteral__Group_1__0__Impl : ( ( rule__ListLiteral__ItemsAssignment_1_0 ) ) ;
     public final void rule__ListLiteral__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4561:1: ( ( ( rule__ListLiteral__ItemsAssignment_1_0 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4562:1: ( ( rule__ListLiteral__ItemsAssignment_1_0 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4437:1: ( ( ( rule__ListLiteral__ItemsAssignment_1_0 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4438:1: ( ( rule__ListLiteral__ItemsAssignment_1_0 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4562:1: ( ( rule__ListLiteral__ItemsAssignment_1_0 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4563:1: ( rule__ListLiteral__ItemsAssignment_1_0 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4438:1: ( ( rule__ListLiteral__ItemsAssignment_1_0 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4439:1: ( rule__ListLiteral__ItemsAssignment_1_0 )
             {
              before(grammarAccess.getListLiteralAccess().getItemsAssignment_1_0()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4564:1: ( rule__ListLiteral__ItemsAssignment_1_0 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4564:2: rule__ListLiteral__ItemsAssignment_1_0
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4440:1: ( rule__ListLiteral__ItemsAssignment_1_0 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4440:2: rule__ListLiteral__ItemsAssignment_1_0
             {
-            pushFollow(FOLLOW_rule__ListLiteral__ItemsAssignment_1_0_in_rule__ListLiteral__Group_1__0__Impl9152);
+            pushFollow(FOLLOW_rule__ListLiteral__ItemsAssignment_1_0_in_rule__ListLiteral__Group_1__0__Impl8906);
             rule__ListLiteral__ItemsAssignment_1_0();
             _fsp--;
 
@@ -11919,16 +11579,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ListLiteral__Group_1__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4574:1: rule__ListLiteral__Group_1__1 : rule__ListLiteral__Group_1__1__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4450:1: rule__ListLiteral__Group_1__1 : rule__ListLiteral__Group_1__1__Impl ;
     public final void rule__ListLiteral__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4578:1: ( rule__ListLiteral__Group_1__1__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4579:2: rule__ListLiteral__Group_1__1__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4454:1: ( rule__ListLiteral__Group_1__1__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4455:2: rule__ListLiteral__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__ListLiteral__Group_1__1__Impl_in_rule__ListLiteral__Group_1__19182);
+            pushFollow(FOLLOW_rule__ListLiteral__Group_1__1__Impl_in_rule__ListLiteral__Group_1__18936);
             rule__ListLiteral__Group_1__1__Impl();
             _fsp--;
 
@@ -11951,35 +11611,35 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ListLiteral__Group_1__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4585:1: rule__ListLiteral__Group_1__1__Impl : ( ( rule__ListLiteral__Group_1_1__0 )* ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4461:1: rule__ListLiteral__Group_1__1__Impl : ( ( rule__ListLiteral__Group_1_1__0 )* ) ;
     public final void rule__ListLiteral__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4589:1: ( ( ( rule__ListLiteral__Group_1_1__0 )* ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4590:1: ( ( rule__ListLiteral__Group_1_1__0 )* )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4465:1: ( ( ( rule__ListLiteral__Group_1_1__0 )* ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4466:1: ( ( rule__ListLiteral__Group_1_1__0 )* )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4590:1: ( ( rule__ListLiteral__Group_1_1__0 )* )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4591:1: ( rule__ListLiteral__Group_1_1__0 )*
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4466:1: ( ( rule__ListLiteral__Group_1_1__0 )* )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4467:1: ( rule__ListLiteral__Group_1_1__0 )*
             {
              before(grammarAccess.getListLiteralAccess().getGroup_1_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4592:1: ( rule__ListLiteral__Group_1_1__0 )*
-            loop31:
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4468:1: ( rule__ListLiteral__Group_1_1__0 )*
+            loop29:
             do {
-                int alt31=2;
-                int LA31_0 = input.LA(1);
+                int alt29=2;
+                int LA29_0 = input.LA(1);
 
-                if ( (LA31_0==27) ) {
-                    alt31=1;
+                if ( (LA29_0==27) ) {
+                    alt29=1;
                 }
 
 
-                switch (alt31) {
+                switch (alt29) {
             	case 1 :
-            	    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4592:2: rule__ListLiteral__Group_1_1__0
+            	    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4468:2: rule__ListLiteral__Group_1_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__ListLiteral__Group_1_1__0_in_rule__ListLiteral__Group_1__1__Impl9209);
+            	    pushFollow(FOLLOW_rule__ListLiteral__Group_1_1__0_in_rule__ListLiteral__Group_1__1__Impl8963);
             	    rule__ListLiteral__Group_1_1__0();
             	    _fsp--;
 
@@ -11988,7 +11648,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
             	    break;
 
             	default :
-            	    break loop31;
+            	    break loop29;
                 }
             } while (true);
 
@@ -12015,20 +11675,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ListLiteral__Group_1_1__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4606:1: rule__ListLiteral__Group_1_1__0 : rule__ListLiteral__Group_1_1__0__Impl rule__ListLiteral__Group_1_1__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4482:1: rule__ListLiteral__Group_1_1__0 : rule__ListLiteral__Group_1_1__0__Impl rule__ListLiteral__Group_1_1__1 ;
     public final void rule__ListLiteral__Group_1_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4610:1: ( rule__ListLiteral__Group_1_1__0__Impl rule__ListLiteral__Group_1_1__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4611:2: rule__ListLiteral__Group_1_1__0__Impl rule__ListLiteral__Group_1_1__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4486:1: ( rule__ListLiteral__Group_1_1__0__Impl rule__ListLiteral__Group_1_1__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4487:2: rule__ListLiteral__Group_1_1__0__Impl rule__ListLiteral__Group_1_1__1
             {
-            pushFollow(FOLLOW_rule__ListLiteral__Group_1_1__0__Impl_in_rule__ListLiteral__Group_1_1__09244);
+            pushFollow(FOLLOW_rule__ListLiteral__Group_1_1__0__Impl_in_rule__ListLiteral__Group_1_1__08998);
             rule__ListLiteral__Group_1_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__ListLiteral__Group_1_1__1_in_rule__ListLiteral__Group_1_1__09247);
+            pushFollow(FOLLOW_rule__ListLiteral__Group_1_1__1_in_rule__ListLiteral__Group_1_1__09001);
             rule__ListLiteral__Group_1_1__1();
             _fsp--;
 
@@ -12051,20 +11711,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ListLiteral__Group_1_1__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4618:1: rule__ListLiteral__Group_1_1__0__Impl : ( ',' ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4494:1: rule__ListLiteral__Group_1_1__0__Impl : ( ',' ) ;
     public final void rule__ListLiteral__Group_1_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4622:1: ( ( ',' ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4623:1: ( ',' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4498:1: ( ( ',' ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4499:1: ( ',' )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4623:1: ( ',' )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4624:1: ','
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4499:1: ( ',' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4500:1: ','
             {
              before(grammarAccess.getListLiteralAccess().getCommaKeyword_1_1_0()); 
-            match(input,27,FOLLOW_27_in_rule__ListLiteral__Group_1_1__0__Impl9275); 
+            match(input,27,FOLLOW_27_in_rule__ListLiteral__Group_1_1__0__Impl9029); 
              after(grammarAccess.getListLiteralAccess().getCommaKeyword_1_1_0()); 
 
             }
@@ -12088,16 +11748,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ListLiteral__Group_1_1__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4637:1: rule__ListLiteral__Group_1_1__1 : rule__ListLiteral__Group_1_1__1__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4513:1: rule__ListLiteral__Group_1_1__1 : rule__ListLiteral__Group_1_1__1__Impl ;
     public final void rule__ListLiteral__Group_1_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4641:1: ( rule__ListLiteral__Group_1_1__1__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4642:2: rule__ListLiteral__Group_1_1__1__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4517:1: ( rule__ListLiteral__Group_1_1__1__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4518:2: rule__ListLiteral__Group_1_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__ListLiteral__Group_1_1__1__Impl_in_rule__ListLiteral__Group_1_1__19306);
+            pushFollow(FOLLOW_rule__ListLiteral__Group_1_1__1__Impl_in_rule__ListLiteral__Group_1_1__19060);
             rule__ListLiteral__Group_1_1__1__Impl();
             _fsp--;
 
@@ -12120,23 +11780,23 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ListLiteral__Group_1_1__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4648:1: rule__ListLiteral__Group_1_1__1__Impl : ( ( rule__ListLiteral__ItemsAssignment_1_1_1 ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4524:1: rule__ListLiteral__Group_1_1__1__Impl : ( ( rule__ListLiteral__ItemsAssignment_1_1_1 ) ) ;
     public final void rule__ListLiteral__Group_1_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4652:1: ( ( ( rule__ListLiteral__ItemsAssignment_1_1_1 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4653:1: ( ( rule__ListLiteral__ItemsAssignment_1_1_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4528:1: ( ( ( rule__ListLiteral__ItemsAssignment_1_1_1 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4529:1: ( ( rule__ListLiteral__ItemsAssignment_1_1_1 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4653:1: ( ( rule__ListLiteral__ItemsAssignment_1_1_1 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4654:1: ( rule__ListLiteral__ItemsAssignment_1_1_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4529:1: ( ( rule__ListLiteral__ItemsAssignment_1_1_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4530:1: ( rule__ListLiteral__ItemsAssignment_1_1_1 )
             {
              before(grammarAccess.getListLiteralAccess().getItemsAssignment_1_1_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4655:1: ( rule__ListLiteral__ItemsAssignment_1_1_1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4655:2: rule__ListLiteral__ItemsAssignment_1_1_1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4531:1: ( rule__ListLiteral__ItemsAssignment_1_1_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4531:2: rule__ListLiteral__ItemsAssignment_1_1_1
             {
-            pushFollow(FOLLOW_rule__ListLiteral__ItemsAssignment_1_1_1_in_rule__ListLiteral__Group_1_1__1__Impl9333);
+            pushFollow(FOLLOW_rule__ListLiteral__ItemsAssignment_1_1_1_in_rule__ListLiteral__Group_1_1__1__Impl9087);
             rule__ListLiteral__ItemsAssignment_1_1_1();
             _fsp--;
 
@@ -12166,20 +11826,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__VarRefLiteral__Group__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4669:1: rule__VarRefLiteral__Group__0 : rule__VarRefLiteral__Group__0__Impl rule__VarRefLiteral__Group__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4545:1: rule__VarRefLiteral__Group__0 : rule__VarRefLiteral__Group__0__Impl rule__VarRefLiteral__Group__1 ;
     public final void rule__VarRefLiteral__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4673:1: ( rule__VarRefLiteral__Group__0__Impl rule__VarRefLiteral__Group__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4674:2: rule__VarRefLiteral__Group__0__Impl rule__VarRefLiteral__Group__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4549:1: ( rule__VarRefLiteral__Group__0__Impl rule__VarRefLiteral__Group__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4550:2: rule__VarRefLiteral__Group__0__Impl rule__VarRefLiteral__Group__1
             {
-            pushFollow(FOLLOW_rule__VarRefLiteral__Group__0__Impl_in_rule__VarRefLiteral__Group__09367);
+            pushFollow(FOLLOW_rule__VarRefLiteral__Group__0__Impl_in_rule__VarRefLiteral__Group__09121);
             rule__VarRefLiteral__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__VarRefLiteral__Group__1_in_rule__VarRefLiteral__Group__09370);
+            pushFollow(FOLLOW_rule__VarRefLiteral__Group__1_in_rule__VarRefLiteral__Group__09124);
             rule__VarRefLiteral__Group__1();
             _fsp--;
 
@@ -12202,20 +11862,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__VarRefLiteral__Group__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4681:1: rule__VarRefLiteral__Group__0__Impl : ( '$' ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4557:1: rule__VarRefLiteral__Group__0__Impl : ( '$' ) ;
     public final void rule__VarRefLiteral__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4685:1: ( ( '$' ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4686:1: ( '$' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4561:1: ( ( '$' ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4562:1: ( '$' )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4686:1: ( '$' )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4687:1: '$'
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4562:1: ( '$' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4563:1: '$'
             {
              before(grammarAccess.getVarRefLiteralAccess().getDollarSignKeyword_0()); 
-            match(input,32,FOLLOW_32_in_rule__VarRefLiteral__Group__0__Impl9398); 
+            match(input,32,FOLLOW_32_in_rule__VarRefLiteral__Group__0__Impl9152); 
              after(grammarAccess.getVarRefLiteralAccess().getDollarSignKeyword_0()); 
 
             }
@@ -12239,16 +11899,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__VarRefLiteral__Group__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4700:1: rule__VarRefLiteral__Group__1 : rule__VarRefLiteral__Group__1__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4576:1: rule__VarRefLiteral__Group__1 : rule__VarRefLiteral__Group__1__Impl ;
     public final void rule__VarRefLiteral__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4704:1: ( rule__VarRefLiteral__Group__1__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4705:2: rule__VarRefLiteral__Group__1__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4580:1: ( rule__VarRefLiteral__Group__1__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4581:2: rule__VarRefLiteral__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__VarRefLiteral__Group__1__Impl_in_rule__VarRefLiteral__Group__19429);
+            pushFollow(FOLLOW_rule__VarRefLiteral__Group__1__Impl_in_rule__VarRefLiteral__Group__19183);
             rule__VarRefLiteral__Group__1__Impl();
             _fsp--;
 
@@ -12271,23 +11931,23 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__VarRefLiteral__Group__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4711:1: rule__VarRefLiteral__Group__1__Impl : ( ( rule__VarRefLiteral__VarRefAssignment_1 ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4587:1: rule__VarRefLiteral__Group__1__Impl : ( ( rule__VarRefLiteral__VarRefAssignment_1 ) ) ;
     public final void rule__VarRefLiteral__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4715:1: ( ( ( rule__VarRefLiteral__VarRefAssignment_1 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4716:1: ( ( rule__VarRefLiteral__VarRefAssignment_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4591:1: ( ( ( rule__VarRefLiteral__VarRefAssignment_1 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4592:1: ( ( rule__VarRefLiteral__VarRefAssignment_1 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4716:1: ( ( rule__VarRefLiteral__VarRefAssignment_1 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4717:1: ( rule__VarRefLiteral__VarRefAssignment_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4592:1: ( ( rule__VarRefLiteral__VarRefAssignment_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4593:1: ( rule__VarRefLiteral__VarRefAssignment_1 )
             {
              before(grammarAccess.getVarRefLiteralAccess().getVarRefAssignment_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4718:1: ( rule__VarRefLiteral__VarRefAssignment_1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4718:2: rule__VarRefLiteral__VarRefAssignment_1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4594:1: ( rule__VarRefLiteral__VarRefAssignment_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4594:2: rule__VarRefLiteral__VarRefAssignment_1
             {
-            pushFollow(FOLLOW_rule__VarRefLiteral__VarRefAssignment_1_in_rule__VarRefLiteral__Group__1__Impl9456);
+            pushFollow(FOLLOW_rule__VarRefLiteral__VarRefAssignment_1_in_rule__VarRefLiteral__Group__1__Impl9210);
             rule__VarRefLiteral__VarRefAssignment_1();
             _fsp--;
 
@@ -12317,20 +11977,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Setter__Group__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4732:1: rule__Setter__Group__0 : rule__Setter__Group__0__Impl rule__Setter__Group__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4608:1: rule__Setter__Group__0 : rule__Setter__Group__0__Impl rule__Setter__Group__1 ;
     public final void rule__Setter__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4736:1: ( rule__Setter__Group__0__Impl rule__Setter__Group__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4737:2: rule__Setter__Group__0__Impl rule__Setter__Group__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4612:1: ( rule__Setter__Group__0__Impl rule__Setter__Group__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4613:2: rule__Setter__Group__0__Impl rule__Setter__Group__1
             {
-            pushFollow(FOLLOW_rule__Setter__Group__0__Impl_in_rule__Setter__Group__09490);
+            pushFollow(FOLLOW_rule__Setter__Group__0__Impl_in_rule__Setter__Group__09244);
             rule__Setter__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Setter__Group__1_in_rule__Setter__Group__09493);
+            pushFollow(FOLLOW_rule__Setter__Group__1_in_rule__Setter__Group__09247);
             rule__Setter__Group__1();
             _fsp--;
 
@@ -12353,23 +12013,23 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Setter__Group__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4744:1: rule__Setter__Group__0__Impl : ( ( rule__Setter__PropertyAssignment_0 ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4620:1: rule__Setter__Group__0__Impl : ( ( rule__Setter__PropertyAssignment_0 ) ) ;
     public final void rule__Setter__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4748:1: ( ( ( rule__Setter__PropertyAssignment_0 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4749:1: ( ( rule__Setter__PropertyAssignment_0 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4624:1: ( ( ( rule__Setter__PropertyAssignment_0 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4625:1: ( ( rule__Setter__PropertyAssignment_0 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4749:1: ( ( rule__Setter__PropertyAssignment_0 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4750:1: ( rule__Setter__PropertyAssignment_0 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4625:1: ( ( rule__Setter__PropertyAssignment_0 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4626:1: ( rule__Setter__PropertyAssignment_0 )
             {
              before(grammarAccess.getSetterAccess().getPropertyAssignment_0()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4751:1: ( rule__Setter__PropertyAssignment_0 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4751:2: rule__Setter__PropertyAssignment_0
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4627:1: ( rule__Setter__PropertyAssignment_0 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4627:2: rule__Setter__PropertyAssignment_0
             {
-            pushFollow(FOLLOW_rule__Setter__PropertyAssignment_0_in_rule__Setter__Group__0__Impl9520);
+            pushFollow(FOLLOW_rule__Setter__PropertyAssignment_0_in_rule__Setter__Group__0__Impl9274);
             rule__Setter__PropertyAssignment_0();
             _fsp--;
 
@@ -12399,20 +12059,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Setter__Group__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4761:1: rule__Setter__Group__1 : rule__Setter__Group__1__Impl rule__Setter__Group__2 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4637:1: rule__Setter__Group__1 : rule__Setter__Group__1__Impl rule__Setter__Group__2 ;
     public final void rule__Setter__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4765:1: ( rule__Setter__Group__1__Impl rule__Setter__Group__2 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4766:2: rule__Setter__Group__1__Impl rule__Setter__Group__2
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4641:1: ( rule__Setter__Group__1__Impl rule__Setter__Group__2 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4642:2: rule__Setter__Group__1__Impl rule__Setter__Group__2
             {
-            pushFollow(FOLLOW_rule__Setter__Group__1__Impl_in_rule__Setter__Group__19550);
+            pushFollow(FOLLOW_rule__Setter__Group__1__Impl_in_rule__Setter__Group__19304);
             rule__Setter__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Setter__Group__2_in_rule__Setter__Group__19553);
+            pushFollow(FOLLOW_rule__Setter__Group__2_in_rule__Setter__Group__19307);
             rule__Setter__Group__2();
             _fsp--;
 
@@ -12435,23 +12095,23 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Setter__Group__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4773:1: rule__Setter__Group__1__Impl : ( ( rule__Setter__Alternatives_1 ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4649:1: rule__Setter__Group__1__Impl : ( ( rule__Setter__Alternatives_1 ) ) ;
     public final void rule__Setter__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4777:1: ( ( ( rule__Setter__Alternatives_1 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4778:1: ( ( rule__Setter__Alternatives_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4653:1: ( ( ( rule__Setter__Alternatives_1 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4654:1: ( ( rule__Setter__Alternatives_1 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4778:1: ( ( rule__Setter__Alternatives_1 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4779:1: ( rule__Setter__Alternatives_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4654:1: ( ( rule__Setter__Alternatives_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4655:1: ( rule__Setter__Alternatives_1 )
             {
              before(grammarAccess.getSetterAccess().getAlternatives_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4780:1: ( rule__Setter__Alternatives_1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4780:2: rule__Setter__Alternatives_1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4656:1: ( rule__Setter__Alternatives_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4656:2: rule__Setter__Alternatives_1
             {
-            pushFollow(FOLLOW_rule__Setter__Alternatives_1_in_rule__Setter__Group__1__Impl9580);
+            pushFollow(FOLLOW_rule__Setter__Alternatives_1_in_rule__Setter__Group__1__Impl9334);
             rule__Setter__Alternatives_1();
             _fsp--;
 
@@ -12481,20 +12141,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Setter__Group__2
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4790:1: rule__Setter__Group__2 : rule__Setter__Group__2__Impl rule__Setter__Group__3 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4666:1: rule__Setter__Group__2 : rule__Setter__Group__2__Impl rule__Setter__Group__3 ;
     public final void rule__Setter__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4794:1: ( rule__Setter__Group__2__Impl rule__Setter__Group__3 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4795:2: rule__Setter__Group__2__Impl rule__Setter__Group__3
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4670:1: ( rule__Setter__Group__2__Impl rule__Setter__Group__3 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4671:2: rule__Setter__Group__2__Impl rule__Setter__Group__3
             {
-            pushFollow(FOLLOW_rule__Setter__Group__2__Impl_in_rule__Setter__Group__29610);
+            pushFollow(FOLLOW_rule__Setter__Group__2__Impl_in_rule__Setter__Group__29364);
             rule__Setter__Group__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Setter__Group__3_in_rule__Setter__Group__29613);
+            pushFollow(FOLLOW_rule__Setter__Group__3_in_rule__Setter__Group__29367);
             rule__Setter__Group__3();
             _fsp--;
 
@@ -12517,23 +12177,23 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Setter__Group__2__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4802:1: rule__Setter__Group__2__Impl : ( ( rule__Setter__ExpressionAssignment_2 ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4678:1: rule__Setter__Group__2__Impl : ( ( rule__Setter__ExpressionAssignment_2 ) ) ;
     public final void rule__Setter__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4806:1: ( ( ( rule__Setter__ExpressionAssignment_2 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4807:1: ( ( rule__Setter__ExpressionAssignment_2 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4682:1: ( ( ( rule__Setter__ExpressionAssignment_2 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4683:1: ( ( rule__Setter__ExpressionAssignment_2 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4807:1: ( ( rule__Setter__ExpressionAssignment_2 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4808:1: ( rule__Setter__ExpressionAssignment_2 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4683:1: ( ( rule__Setter__ExpressionAssignment_2 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4684:1: ( rule__Setter__ExpressionAssignment_2 )
             {
              before(grammarAccess.getSetterAccess().getExpressionAssignment_2()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4809:1: ( rule__Setter__ExpressionAssignment_2 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4809:2: rule__Setter__ExpressionAssignment_2
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4685:1: ( rule__Setter__ExpressionAssignment_2 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4685:2: rule__Setter__ExpressionAssignment_2
             {
-            pushFollow(FOLLOW_rule__Setter__ExpressionAssignment_2_in_rule__Setter__Group__2__Impl9640);
+            pushFollow(FOLLOW_rule__Setter__ExpressionAssignment_2_in_rule__Setter__Group__2__Impl9394);
             rule__Setter__ExpressionAssignment_2();
             _fsp--;
 
@@ -12563,16 +12223,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Setter__Group__3
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4819:1: rule__Setter__Group__3 : rule__Setter__Group__3__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4695:1: rule__Setter__Group__3 : rule__Setter__Group__3__Impl ;
     public final void rule__Setter__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4823:1: ( rule__Setter__Group__3__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4824:2: rule__Setter__Group__3__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4699:1: ( rule__Setter__Group__3__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4700:2: rule__Setter__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__Setter__Group__3__Impl_in_rule__Setter__Group__39670);
+            pushFollow(FOLLOW_rule__Setter__Group__3__Impl_in_rule__Setter__Group__39424);
             rule__Setter__Group__3__Impl();
             _fsp--;
 
@@ -12595,31 +12255,31 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Setter__Group__3__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4830:1: rule__Setter__Group__3__Impl : ( ( rule__Setter__GuardAssignment_3 )? ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4706:1: rule__Setter__Group__3__Impl : ( ( rule__Setter__GuardAssignment_3 )? ) ;
     public final void rule__Setter__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4834:1: ( ( ( rule__Setter__GuardAssignment_3 )? ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4835:1: ( ( rule__Setter__GuardAssignment_3 )? )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4710:1: ( ( ( rule__Setter__GuardAssignment_3 )? ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4711:1: ( ( rule__Setter__GuardAssignment_3 )? )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4835:1: ( ( rule__Setter__GuardAssignment_3 )? )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4836:1: ( rule__Setter__GuardAssignment_3 )?
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4711:1: ( ( rule__Setter__GuardAssignment_3 )? )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4712:1: ( rule__Setter__GuardAssignment_3 )?
             {
              before(grammarAccess.getSetterAccess().getGuardAssignment_3()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4837:1: ( rule__Setter__GuardAssignment_3 )?
-            int alt32=2;
-            int LA32_0 = input.LA(1);
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4713:1: ( rule__Setter__GuardAssignment_3 )?
+            int alt30=2;
+            int LA30_0 = input.LA(1);
 
-            if ( (LA32_0==37) ) {
-                alt32=1;
+            if ( (LA30_0==37) ) {
+                alt30=1;
             }
-            switch (alt32) {
+            switch (alt30) {
                 case 1 :
-                    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4837:2: rule__Setter__GuardAssignment_3
+                    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4713:2: rule__Setter__GuardAssignment_3
                     {
-                    pushFollow(FOLLOW_rule__Setter__GuardAssignment_3_in_rule__Setter__Group__3__Impl9697);
+                    pushFollow(FOLLOW_rule__Setter__GuardAssignment_3_in_rule__Setter__Group__3__Impl9451);
                     rule__Setter__GuardAssignment_3();
                     _fsp--;
 
@@ -12652,20 +12312,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Function__Group__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4855:1: rule__Function__Group__0 : rule__Function__Group__0__Impl rule__Function__Group__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4731:1: rule__Function__Group__0 : rule__Function__Group__0__Impl rule__Function__Group__1 ;
     public final void rule__Function__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4859:1: ( rule__Function__Group__0__Impl rule__Function__Group__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4860:2: rule__Function__Group__0__Impl rule__Function__Group__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4735:1: ( rule__Function__Group__0__Impl rule__Function__Group__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4736:2: rule__Function__Group__0__Impl rule__Function__Group__1
             {
-            pushFollow(FOLLOW_rule__Function__Group__0__Impl_in_rule__Function__Group__09736);
+            pushFollow(FOLLOW_rule__Function__Group__0__Impl_in_rule__Function__Group__09490);
             rule__Function__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Function__Group__1_in_rule__Function__Group__09739);
+            pushFollow(FOLLOW_rule__Function__Group__1_in_rule__Function__Group__09493);
             rule__Function__Group__1();
             _fsp--;
 
@@ -12688,20 +12348,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Function__Group__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4867:1: rule__Function__Group__0__Impl : ( 'function' ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4743:1: rule__Function__Group__0__Impl : ( 'function' ) ;
     public final void rule__Function__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4871:1: ( ( 'function' ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4872:1: ( 'function' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4747:1: ( ( 'function' ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4748:1: ( 'function' )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4872:1: ( 'function' )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4873:1: 'function'
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4748:1: ( 'function' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4749:1: 'function'
             {
              before(grammarAccess.getFunctionAccess().getFunctionKeyword_0()); 
-            match(input,33,FOLLOW_33_in_rule__Function__Group__0__Impl9767); 
+            match(input,33,FOLLOW_33_in_rule__Function__Group__0__Impl9521); 
              after(grammarAccess.getFunctionAccess().getFunctionKeyword_0()); 
 
             }
@@ -12725,20 +12385,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Function__Group__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4886:1: rule__Function__Group__1 : rule__Function__Group__1__Impl rule__Function__Group__2 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4762:1: rule__Function__Group__1 : rule__Function__Group__1__Impl rule__Function__Group__2 ;
     public final void rule__Function__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4890:1: ( rule__Function__Group__1__Impl rule__Function__Group__2 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4891:2: rule__Function__Group__1__Impl rule__Function__Group__2
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4766:1: ( rule__Function__Group__1__Impl rule__Function__Group__2 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4767:2: rule__Function__Group__1__Impl rule__Function__Group__2
             {
-            pushFollow(FOLLOW_rule__Function__Group__1__Impl_in_rule__Function__Group__19798);
+            pushFollow(FOLLOW_rule__Function__Group__1__Impl_in_rule__Function__Group__19552);
             rule__Function__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Function__Group__2_in_rule__Function__Group__19801);
+            pushFollow(FOLLOW_rule__Function__Group__2_in_rule__Function__Group__19555);
             rule__Function__Group__2();
             _fsp--;
 
@@ -12761,23 +12421,23 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Function__Group__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4898:1: rule__Function__Group__1__Impl : ( ( rule__Function__NameAssignment_1 ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4774:1: rule__Function__Group__1__Impl : ( ( rule__Function__NameAssignment_1 ) ) ;
     public final void rule__Function__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4902:1: ( ( ( rule__Function__NameAssignment_1 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4903:1: ( ( rule__Function__NameAssignment_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4778:1: ( ( ( rule__Function__NameAssignment_1 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4779:1: ( ( rule__Function__NameAssignment_1 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4903:1: ( ( rule__Function__NameAssignment_1 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4904:1: ( rule__Function__NameAssignment_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4779:1: ( ( rule__Function__NameAssignment_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4780:1: ( rule__Function__NameAssignment_1 )
             {
              before(grammarAccess.getFunctionAccess().getNameAssignment_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4905:1: ( rule__Function__NameAssignment_1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4905:2: rule__Function__NameAssignment_1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4781:1: ( rule__Function__NameAssignment_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4781:2: rule__Function__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Function__NameAssignment_1_in_rule__Function__Group__1__Impl9828);
+            pushFollow(FOLLOW_rule__Function__NameAssignment_1_in_rule__Function__Group__1__Impl9582);
             rule__Function__NameAssignment_1();
             _fsp--;
 
@@ -12807,20 +12467,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Function__Group__2
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4915:1: rule__Function__Group__2 : rule__Function__Group__2__Impl rule__Function__Group__3 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4791:1: rule__Function__Group__2 : rule__Function__Group__2__Impl rule__Function__Group__3 ;
     public final void rule__Function__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4919:1: ( rule__Function__Group__2__Impl rule__Function__Group__3 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4920:2: rule__Function__Group__2__Impl rule__Function__Group__3
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4795:1: ( rule__Function__Group__2__Impl rule__Function__Group__3 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4796:2: rule__Function__Group__2__Impl rule__Function__Group__3
             {
-            pushFollow(FOLLOW_rule__Function__Group__2__Impl_in_rule__Function__Group__29858);
+            pushFollow(FOLLOW_rule__Function__Group__2__Impl_in_rule__Function__Group__29612);
             rule__Function__Group__2__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Function__Group__3_in_rule__Function__Group__29861);
+            pushFollow(FOLLOW_rule__Function__Group__3_in_rule__Function__Group__29615);
             rule__Function__Group__3();
             _fsp--;
 
@@ -12843,23 +12503,23 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Function__Group__2__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4927:1: rule__Function__Group__2__Impl : ( ( rule__Function__JavaClassAssignment_2 ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4803:1: rule__Function__Group__2__Impl : ( ( rule__Function__JavaClassAssignment_2 ) ) ;
     public final void rule__Function__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4931:1: ( ( ( rule__Function__JavaClassAssignment_2 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4932:1: ( ( rule__Function__JavaClassAssignment_2 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4807:1: ( ( ( rule__Function__JavaClassAssignment_2 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4808:1: ( ( rule__Function__JavaClassAssignment_2 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4932:1: ( ( rule__Function__JavaClassAssignment_2 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4933:1: ( rule__Function__JavaClassAssignment_2 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4808:1: ( ( rule__Function__JavaClassAssignment_2 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4809:1: ( rule__Function__JavaClassAssignment_2 )
             {
              before(grammarAccess.getFunctionAccess().getJavaClassAssignment_2()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4934:1: ( rule__Function__JavaClassAssignment_2 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4934:2: rule__Function__JavaClassAssignment_2
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4810:1: ( rule__Function__JavaClassAssignment_2 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4810:2: rule__Function__JavaClassAssignment_2
             {
-            pushFollow(FOLLOW_rule__Function__JavaClassAssignment_2_in_rule__Function__Group__2__Impl9888);
+            pushFollow(FOLLOW_rule__Function__JavaClassAssignment_2_in_rule__Function__Group__2__Impl9642);
             rule__Function__JavaClassAssignment_2();
             _fsp--;
 
@@ -12889,20 +12549,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Function__Group__3
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4944:1: rule__Function__Group__3 : rule__Function__Group__3__Impl rule__Function__Group__4 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4820:1: rule__Function__Group__3 : rule__Function__Group__3__Impl rule__Function__Group__4 ;
     public final void rule__Function__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4948:1: ( rule__Function__Group__3__Impl rule__Function__Group__4 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4949:2: rule__Function__Group__3__Impl rule__Function__Group__4
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4824:1: ( rule__Function__Group__3__Impl rule__Function__Group__4 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4825:2: rule__Function__Group__3__Impl rule__Function__Group__4
             {
-            pushFollow(FOLLOW_rule__Function__Group__3__Impl_in_rule__Function__Group__39918);
+            pushFollow(FOLLOW_rule__Function__Group__3__Impl_in_rule__Function__Group__39672);
             rule__Function__Group__3__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__Function__Group__4_in_rule__Function__Group__39921);
+            pushFollow(FOLLOW_rule__Function__Group__4_in_rule__Function__Group__39675);
             rule__Function__Group__4();
             _fsp--;
 
@@ -12925,20 +12585,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Function__Group__3__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4956:1: rule__Function__Group__3__Impl : ( '#' ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4832:1: rule__Function__Group__3__Impl : ( '#' ) ;
     public final void rule__Function__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4960:1: ( ( '#' ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4961:1: ( '#' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4836:1: ( ( '#' ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4837:1: ( '#' )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4961:1: ( '#' )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4962:1: '#'
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4837:1: ( '#' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4838:1: '#'
             {
              before(grammarAccess.getFunctionAccess().getNumberSignKeyword_3()); 
-            match(input,34,FOLLOW_34_in_rule__Function__Group__3__Impl9949); 
+            match(input,34,FOLLOW_34_in_rule__Function__Group__3__Impl9703); 
              after(grammarAccess.getFunctionAccess().getNumberSignKeyword_3()); 
 
             }
@@ -12962,16 +12622,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Function__Group__4
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4975:1: rule__Function__Group__4 : rule__Function__Group__4__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4851:1: rule__Function__Group__4 : rule__Function__Group__4__Impl ;
     public final void rule__Function__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4979:1: ( rule__Function__Group__4__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4980:2: rule__Function__Group__4__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4855:1: ( rule__Function__Group__4__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4856:2: rule__Function__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__Function__Group__4__Impl_in_rule__Function__Group__49980);
+            pushFollow(FOLLOW_rule__Function__Group__4__Impl_in_rule__Function__Group__49734);
             rule__Function__Group__4__Impl();
             _fsp--;
 
@@ -12994,23 +12654,23 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Function__Group__4__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4986:1: rule__Function__Group__4__Impl : ( ( rule__Function__OperationAssignment_4 ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4862:1: rule__Function__Group__4__Impl : ( ( rule__Function__OperationAssignment_4 ) ) ;
     public final void rule__Function__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4990:1: ( ( ( rule__Function__OperationAssignment_4 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4991:1: ( ( rule__Function__OperationAssignment_4 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4866:1: ( ( ( rule__Function__OperationAssignment_4 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4867:1: ( ( rule__Function__OperationAssignment_4 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4991:1: ( ( rule__Function__OperationAssignment_4 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4992:1: ( rule__Function__OperationAssignment_4 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4867:1: ( ( rule__Function__OperationAssignment_4 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4868:1: ( rule__Function__OperationAssignment_4 )
             {
              before(grammarAccess.getFunctionAccess().getOperationAssignment_4()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4993:1: ( rule__Function__OperationAssignment_4 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4993:2: rule__Function__OperationAssignment_4
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4869:1: ( rule__Function__OperationAssignment_4 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4869:2: rule__Function__OperationAssignment_4
             {
-            pushFollow(FOLLOW_rule__Function__OperationAssignment_4_in_rule__Function__Group__4__Impl10007);
+            pushFollow(FOLLOW_rule__Function__OperationAssignment_4_in_rule__Function__Group__4__Impl9761);
             rule__Function__OperationAssignment_4();
             _fsp--;
 
@@ -13040,20 +12700,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__UpdateStatement__Group__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5013:1: rule__UpdateStatement__Group__0 : rule__UpdateStatement__Group__0__Impl rule__UpdateStatement__Group__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4889:1: rule__UpdateStatement__Group__0 : rule__UpdateStatement__Group__0__Impl rule__UpdateStatement__Group__1 ;
     public final void rule__UpdateStatement__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5017:1: ( rule__UpdateStatement__Group__0__Impl rule__UpdateStatement__Group__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5018:2: rule__UpdateStatement__Group__0__Impl rule__UpdateStatement__Group__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4893:1: ( rule__UpdateStatement__Group__0__Impl rule__UpdateStatement__Group__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4894:2: rule__UpdateStatement__Group__0__Impl rule__UpdateStatement__Group__1
             {
-            pushFollow(FOLLOW_rule__UpdateStatement__Group__0__Impl_in_rule__UpdateStatement__Group__010047);
+            pushFollow(FOLLOW_rule__UpdateStatement__Group__0__Impl_in_rule__UpdateStatement__Group__09801);
             rule__UpdateStatement__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__UpdateStatement__Group__1_in_rule__UpdateStatement__Group__010050);
+            pushFollow(FOLLOW_rule__UpdateStatement__Group__1_in_rule__UpdateStatement__Group__09804);
             rule__UpdateStatement__Group__1();
             _fsp--;
 
@@ -13076,20 +12736,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__UpdateStatement__Group__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5025:1: rule__UpdateStatement__Group__0__Impl : ( 'update' ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4901:1: rule__UpdateStatement__Group__0__Impl : ( 'update' ) ;
     public final void rule__UpdateStatement__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5029:1: ( ( 'update' ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5030:1: ( 'update' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4905:1: ( ( 'update' ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4906:1: ( 'update' )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5030:1: ( 'update' )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5031:1: 'update'
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4906:1: ( 'update' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4907:1: 'update'
             {
              before(grammarAccess.getUpdateStatementAccess().getUpdateKeyword_0()); 
-            match(input,35,FOLLOW_35_in_rule__UpdateStatement__Group__0__Impl10078); 
+            match(input,35,FOLLOW_35_in_rule__UpdateStatement__Group__0__Impl9832); 
              after(grammarAccess.getUpdateStatementAccess().getUpdateKeyword_0()); 
 
             }
@@ -13113,20 +12773,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__UpdateStatement__Group__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5044:1: rule__UpdateStatement__Group__1 : rule__UpdateStatement__Group__1__Impl rule__UpdateStatement__Group__2 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4920:1: rule__UpdateStatement__Group__1 : rule__UpdateStatement__Group__1__Impl rule__UpdateStatement__Group__2 ;
     public final void rule__UpdateStatement__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5048:1: ( rule__UpdateStatement__Group__1__Impl rule__UpdateStatement__Group__2 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5049:2: rule__UpdateStatement__Group__1__Impl rule__UpdateStatement__Group__2
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4924:1: ( rule__UpdateStatement__Group__1__Impl rule__UpdateStatement__Group__2 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4925:2: rule__UpdateStatement__Group__1__Impl rule__UpdateStatement__Group__2
             {
-            pushFollow(FOLLOW_rule__UpdateStatement__Group__1__Impl_in_rule__UpdateStatement__Group__110109);
+            pushFollow(FOLLOW_rule__UpdateStatement__Group__1__Impl_in_rule__UpdateStatement__Group__19863);
             rule__UpdateStatement__Group__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__UpdateStatement__Group__2_in_rule__UpdateStatement__Group__110112);
+            pushFollow(FOLLOW_rule__UpdateStatement__Group__2_in_rule__UpdateStatement__Group__19866);
             rule__UpdateStatement__Group__2();
             _fsp--;
 
@@ -13149,23 +12809,23 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__UpdateStatement__Group__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5056:1: rule__UpdateStatement__Group__1__Impl : ( ( rule__UpdateStatement__VarRefAssignment_1 ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4932:1: rule__UpdateStatement__Group__1__Impl : ( ( rule__UpdateStatement__VarRefAssignment_1 ) ) ;
     public final void rule__UpdateStatement__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5060:1: ( ( ( rule__UpdateStatement__VarRefAssignment_1 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5061:1: ( ( rule__UpdateStatement__VarRefAssignment_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4936:1: ( ( ( rule__UpdateStatement__VarRefAssignment_1 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4937:1: ( ( rule__UpdateStatement__VarRefAssignment_1 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5061:1: ( ( rule__UpdateStatement__VarRefAssignment_1 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5062:1: ( rule__UpdateStatement__VarRefAssignment_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4937:1: ( ( rule__UpdateStatement__VarRefAssignment_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4938:1: ( rule__UpdateStatement__VarRefAssignment_1 )
             {
              before(grammarAccess.getUpdateStatementAccess().getVarRefAssignment_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5063:1: ( rule__UpdateStatement__VarRefAssignment_1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5063:2: rule__UpdateStatement__VarRefAssignment_1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4939:1: ( rule__UpdateStatement__VarRefAssignment_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4939:2: rule__UpdateStatement__VarRefAssignment_1
             {
-            pushFollow(FOLLOW_rule__UpdateStatement__VarRefAssignment_1_in_rule__UpdateStatement__Group__1__Impl10139);
+            pushFollow(FOLLOW_rule__UpdateStatement__VarRefAssignment_1_in_rule__UpdateStatement__Group__1__Impl9893);
             rule__UpdateStatement__VarRefAssignment_1();
             _fsp--;
 
@@ -13195,16 +12855,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__UpdateStatement__Group__2
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5073:1: rule__UpdateStatement__Group__2 : rule__UpdateStatement__Group__2__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4949:1: rule__UpdateStatement__Group__2 : rule__UpdateStatement__Group__2__Impl ;
     public final void rule__UpdateStatement__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5077:1: ( rule__UpdateStatement__Group__2__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5078:2: rule__UpdateStatement__Group__2__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4953:1: ( rule__UpdateStatement__Group__2__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4954:2: rule__UpdateStatement__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__UpdateStatement__Group__2__Impl_in_rule__UpdateStatement__Group__210169);
+            pushFollow(FOLLOW_rule__UpdateStatement__Group__2__Impl_in_rule__UpdateStatement__Group__29923);
             rule__UpdateStatement__Group__2__Impl();
             _fsp--;
 
@@ -13227,31 +12887,31 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__UpdateStatement__Group__2__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5084:1: rule__UpdateStatement__Group__2__Impl : ( ( rule__UpdateStatement__Group_2__0 )? ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4960:1: rule__UpdateStatement__Group__2__Impl : ( ( rule__UpdateStatement__Group_2__0 )? ) ;
     public final void rule__UpdateStatement__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5088:1: ( ( ( rule__UpdateStatement__Group_2__0 )? ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5089:1: ( ( rule__UpdateStatement__Group_2__0 )? )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4964:1: ( ( ( rule__UpdateStatement__Group_2__0 )? ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4965:1: ( ( rule__UpdateStatement__Group_2__0 )? )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5089:1: ( ( rule__UpdateStatement__Group_2__0 )? )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5090:1: ( rule__UpdateStatement__Group_2__0 )?
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4965:1: ( ( rule__UpdateStatement__Group_2__0 )? )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4966:1: ( rule__UpdateStatement__Group_2__0 )?
             {
              before(grammarAccess.getUpdateStatementAccess().getGroup_2()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5091:1: ( rule__UpdateStatement__Group_2__0 )?
-            int alt33=2;
-            int LA33_0 = input.LA(1);
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4967:1: ( rule__UpdateStatement__Group_2__0 )?
+            int alt31=2;
+            int LA31_0 = input.LA(1);
 
-            if ( (LA33_0==23) ) {
-                alt33=1;
+            if ( (LA31_0==23) ) {
+                alt31=1;
             }
-            switch (alt33) {
+            switch (alt31) {
                 case 1 :
-                    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5091:2: rule__UpdateStatement__Group_2__0
+                    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4967:2: rule__UpdateStatement__Group_2__0
                     {
-                    pushFollow(FOLLOW_rule__UpdateStatement__Group_2__0_in_rule__UpdateStatement__Group__2__Impl10196);
+                    pushFollow(FOLLOW_rule__UpdateStatement__Group_2__0_in_rule__UpdateStatement__Group__2__Impl9950);
                     rule__UpdateStatement__Group_2__0();
                     _fsp--;
 
@@ -13284,20 +12944,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__UpdateStatement__Group_2__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5107:1: rule__UpdateStatement__Group_2__0 : rule__UpdateStatement__Group_2__0__Impl rule__UpdateStatement__Group_2__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4983:1: rule__UpdateStatement__Group_2__0 : rule__UpdateStatement__Group_2__0__Impl rule__UpdateStatement__Group_2__1 ;
     public final void rule__UpdateStatement__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5111:1: ( rule__UpdateStatement__Group_2__0__Impl rule__UpdateStatement__Group_2__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5112:2: rule__UpdateStatement__Group_2__0__Impl rule__UpdateStatement__Group_2__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4987:1: ( rule__UpdateStatement__Group_2__0__Impl rule__UpdateStatement__Group_2__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4988:2: rule__UpdateStatement__Group_2__0__Impl rule__UpdateStatement__Group_2__1
             {
-            pushFollow(FOLLOW_rule__UpdateStatement__Group_2__0__Impl_in_rule__UpdateStatement__Group_2__010233);
+            pushFollow(FOLLOW_rule__UpdateStatement__Group_2__0__Impl_in_rule__UpdateStatement__Group_2__09987);
             rule__UpdateStatement__Group_2__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__UpdateStatement__Group_2__1_in_rule__UpdateStatement__Group_2__010236);
+            pushFollow(FOLLOW_rule__UpdateStatement__Group_2__1_in_rule__UpdateStatement__Group_2__09990);
             rule__UpdateStatement__Group_2__1();
             _fsp--;
 
@@ -13320,20 +12980,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__UpdateStatement__Group_2__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5119:1: rule__UpdateStatement__Group_2__0__Impl : ( '{' ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4995:1: rule__UpdateStatement__Group_2__0__Impl : ( '{' ) ;
     public final void rule__UpdateStatement__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5123:1: ( ( '{' ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5124:1: ( '{' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:4999:1: ( ( '{' ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5000:1: ( '{' )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5124:1: ( '{' )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5125:1: '{'
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5000:1: ( '{' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5001:1: '{'
             {
              before(grammarAccess.getUpdateStatementAccess().getLeftCurlyBracketKeyword_2_0()); 
-            match(input,23,FOLLOW_23_in_rule__UpdateStatement__Group_2__0__Impl10264); 
+            match(input,23,FOLLOW_23_in_rule__UpdateStatement__Group_2__0__Impl10018); 
              after(grammarAccess.getUpdateStatementAccess().getLeftCurlyBracketKeyword_2_0()); 
 
             }
@@ -13357,20 +13017,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__UpdateStatement__Group_2__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5138:1: rule__UpdateStatement__Group_2__1 : rule__UpdateStatement__Group_2__1__Impl rule__UpdateStatement__Group_2__2 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5014:1: rule__UpdateStatement__Group_2__1 : rule__UpdateStatement__Group_2__1__Impl rule__UpdateStatement__Group_2__2 ;
     public final void rule__UpdateStatement__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5142:1: ( rule__UpdateStatement__Group_2__1__Impl rule__UpdateStatement__Group_2__2 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5143:2: rule__UpdateStatement__Group_2__1__Impl rule__UpdateStatement__Group_2__2
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5018:1: ( rule__UpdateStatement__Group_2__1__Impl rule__UpdateStatement__Group_2__2 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5019:2: rule__UpdateStatement__Group_2__1__Impl rule__UpdateStatement__Group_2__2
             {
-            pushFollow(FOLLOW_rule__UpdateStatement__Group_2__1__Impl_in_rule__UpdateStatement__Group_2__110295);
+            pushFollow(FOLLOW_rule__UpdateStatement__Group_2__1__Impl_in_rule__UpdateStatement__Group_2__110049);
             rule__UpdateStatement__Group_2__1__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__UpdateStatement__Group_2__2_in_rule__UpdateStatement__Group_2__110298);
+            pushFollow(FOLLOW_rule__UpdateStatement__Group_2__2_in_rule__UpdateStatement__Group_2__110052);
             rule__UpdateStatement__Group_2__2();
             _fsp--;
 
@@ -13393,31 +13053,31 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__UpdateStatement__Group_2__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5150:1: rule__UpdateStatement__Group_2__1__Impl : ( ( rule__UpdateStatement__Group_2_1__0 )? ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5026:1: rule__UpdateStatement__Group_2__1__Impl : ( ( rule__UpdateStatement__Group_2_1__0 )? ) ;
     public final void rule__UpdateStatement__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5154:1: ( ( ( rule__UpdateStatement__Group_2_1__0 )? ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5155:1: ( ( rule__UpdateStatement__Group_2_1__0 )? )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5030:1: ( ( ( rule__UpdateStatement__Group_2_1__0 )? ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5031:1: ( ( rule__UpdateStatement__Group_2_1__0 )? )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5155:1: ( ( rule__UpdateStatement__Group_2_1__0 )? )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5156:1: ( rule__UpdateStatement__Group_2_1__0 )?
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5031:1: ( ( rule__UpdateStatement__Group_2_1__0 )? )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5032:1: ( rule__UpdateStatement__Group_2_1__0 )?
             {
              before(grammarAccess.getUpdateStatementAccess().getGroup_2_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5157:1: ( rule__UpdateStatement__Group_2_1__0 )?
-            int alt34=2;
-            int LA34_0 = input.LA(1);
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5033:1: ( rule__UpdateStatement__Group_2_1__0 )?
+            int alt32=2;
+            int LA32_0 = input.LA(1);
 
-            if ( (LA34_0==RULE_ID) ) {
-                alt34=1;
+            if ( (LA32_0==RULE_ID) ) {
+                alt32=1;
             }
-            switch (alt34) {
+            switch (alt32) {
                 case 1 :
-                    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5157:2: rule__UpdateStatement__Group_2_1__0
+                    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5033:2: rule__UpdateStatement__Group_2_1__0
                     {
-                    pushFollow(FOLLOW_rule__UpdateStatement__Group_2_1__0_in_rule__UpdateStatement__Group_2__1__Impl10325);
+                    pushFollow(FOLLOW_rule__UpdateStatement__Group_2_1__0_in_rule__UpdateStatement__Group_2__1__Impl10079);
                     rule__UpdateStatement__Group_2_1__0();
                     _fsp--;
 
@@ -13450,16 +13110,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__UpdateStatement__Group_2__2
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5167:1: rule__UpdateStatement__Group_2__2 : rule__UpdateStatement__Group_2__2__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5043:1: rule__UpdateStatement__Group_2__2 : rule__UpdateStatement__Group_2__2__Impl ;
     public final void rule__UpdateStatement__Group_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5171:1: ( rule__UpdateStatement__Group_2__2__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5172:2: rule__UpdateStatement__Group_2__2__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5047:1: ( rule__UpdateStatement__Group_2__2__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5048:2: rule__UpdateStatement__Group_2__2__Impl
             {
-            pushFollow(FOLLOW_rule__UpdateStatement__Group_2__2__Impl_in_rule__UpdateStatement__Group_2__210356);
+            pushFollow(FOLLOW_rule__UpdateStatement__Group_2__2__Impl_in_rule__UpdateStatement__Group_2__210110);
             rule__UpdateStatement__Group_2__2__Impl();
             _fsp--;
 
@@ -13482,20 +13142,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__UpdateStatement__Group_2__2__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5178:1: rule__UpdateStatement__Group_2__2__Impl : ( '}' ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5054:1: rule__UpdateStatement__Group_2__2__Impl : ( '}' ) ;
     public final void rule__UpdateStatement__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5182:1: ( ( '}' ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5183:1: ( '}' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5058:1: ( ( '}' ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5059:1: ( '}' )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5183:1: ( '}' )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5184:1: '}'
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5059:1: ( '}' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5060:1: '}'
             {
              before(grammarAccess.getUpdateStatementAccess().getRightCurlyBracketKeyword_2_2()); 
-            match(input,24,FOLLOW_24_in_rule__UpdateStatement__Group_2__2__Impl10384); 
+            match(input,24,FOLLOW_24_in_rule__UpdateStatement__Group_2__2__Impl10138); 
              after(grammarAccess.getUpdateStatementAccess().getRightCurlyBracketKeyword_2_2()); 
 
             }
@@ -13519,20 +13179,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__UpdateStatement__Group_2_1__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5203:1: rule__UpdateStatement__Group_2_1__0 : rule__UpdateStatement__Group_2_1__0__Impl rule__UpdateStatement__Group_2_1__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5079:1: rule__UpdateStatement__Group_2_1__0 : rule__UpdateStatement__Group_2_1__0__Impl rule__UpdateStatement__Group_2_1__1 ;
     public final void rule__UpdateStatement__Group_2_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5207:1: ( rule__UpdateStatement__Group_2_1__0__Impl rule__UpdateStatement__Group_2_1__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5208:2: rule__UpdateStatement__Group_2_1__0__Impl rule__UpdateStatement__Group_2_1__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5083:1: ( rule__UpdateStatement__Group_2_1__0__Impl rule__UpdateStatement__Group_2_1__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5084:2: rule__UpdateStatement__Group_2_1__0__Impl rule__UpdateStatement__Group_2_1__1
             {
-            pushFollow(FOLLOW_rule__UpdateStatement__Group_2_1__0__Impl_in_rule__UpdateStatement__Group_2_1__010421);
+            pushFollow(FOLLOW_rule__UpdateStatement__Group_2_1__0__Impl_in_rule__UpdateStatement__Group_2_1__010175);
             rule__UpdateStatement__Group_2_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__UpdateStatement__Group_2_1__1_in_rule__UpdateStatement__Group_2_1__010424);
+            pushFollow(FOLLOW_rule__UpdateStatement__Group_2_1__1_in_rule__UpdateStatement__Group_2_1__010178);
             rule__UpdateStatement__Group_2_1__1();
             _fsp--;
 
@@ -13555,23 +13215,23 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__UpdateStatement__Group_2_1__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5215:1: rule__UpdateStatement__Group_2_1__0__Impl : ( ( rule__UpdateStatement__SettersAssignment_2_1_0 ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5091:1: rule__UpdateStatement__Group_2_1__0__Impl : ( ( rule__UpdateStatement__SettersAssignment_2_1_0 ) ) ;
     public final void rule__UpdateStatement__Group_2_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5219:1: ( ( ( rule__UpdateStatement__SettersAssignment_2_1_0 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5220:1: ( ( rule__UpdateStatement__SettersAssignment_2_1_0 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5095:1: ( ( ( rule__UpdateStatement__SettersAssignment_2_1_0 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5096:1: ( ( rule__UpdateStatement__SettersAssignment_2_1_0 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5220:1: ( ( rule__UpdateStatement__SettersAssignment_2_1_0 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5221:1: ( rule__UpdateStatement__SettersAssignment_2_1_0 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5096:1: ( ( rule__UpdateStatement__SettersAssignment_2_1_0 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5097:1: ( rule__UpdateStatement__SettersAssignment_2_1_0 )
             {
              before(grammarAccess.getUpdateStatementAccess().getSettersAssignment_2_1_0()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5222:1: ( rule__UpdateStatement__SettersAssignment_2_1_0 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5222:2: rule__UpdateStatement__SettersAssignment_2_1_0
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5098:1: ( rule__UpdateStatement__SettersAssignment_2_1_0 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5098:2: rule__UpdateStatement__SettersAssignment_2_1_0
             {
-            pushFollow(FOLLOW_rule__UpdateStatement__SettersAssignment_2_1_0_in_rule__UpdateStatement__Group_2_1__0__Impl10451);
+            pushFollow(FOLLOW_rule__UpdateStatement__SettersAssignment_2_1_0_in_rule__UpdateStatement__Group_2_1__0__Impl10205);
             rule__UpdateStatement__SettersAssignment_2_1_0();
             _fsp--;
 
@@ -13601,16 +13261,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__UpdateStatement__Group_2_1__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5232:1: rule__UpdateStatement__Group_2_1__1 : rule__UpdateStatement__Group_2_1__1__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5108:1: rule__UpdateStatement__Group_2_1__1 : rule__UpdateStatement__Group_2_1__1__Impl ;
     public final void rule__UpdateStatement__Group_2_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5236:1: ( rule__UpdateStatement__Group_2_1__1__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5237:2: rule__UpdateStatement__Group_2_1__1__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5112:1: ( rule__UpdateStatement__Group_2_1__1__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5113:2: rule__UpdateStatement__Group_2_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__UpdateStatement__Group_2_1__1__Impl_in_rule__UpdateStatement__Group_2_1__110481);
+            pushFollow(FOLLOW_rule__UpdateStatement__Group_2_1__1__Impl_in_rule__UpdateStatement__Group_2_1__110235);
             rule__UpdateStatement__Group_2_1__1__Impl();
             _fsp--;
 
@@ -13633,35 +13293,35 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__UpdateStatement__Group_2_1__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5243:1: rule__UpdateStatement__Group_2_1__1__Impl : ( ( rule__UpdateStatement__Group_2_1_1__0 )* ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5119:1: rule__UpdateStatement__Group_2_1__1__Impl : ( ( rule__UpdateStatement__Group_2_1_1__0 )* ) ;
     public final void rule__UpdateStatement__Group_2_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5247:1: ( ( ( rule__UpdateStatement__Group_2_1_1__0 )* ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5248:1: ( ( rule__UpdateStatement__Group_2_1_1__0 )* )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5123:1: ( ( ( rule__UpdateStatement__Group_2_1_1__0 )* ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5124:1: ( ( rule__UpdateStatement__Group_2_1_1__0 )* )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5248:1: ( ( rule__UpdateStatement__Group_2_1_1__0 )* )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5249:1: ( rule__UpdateStatement__Group_2_1_1__0 )*
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5124:1: ( ( rule__UpdateStatement__Group_2_1_1__0 )* )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5125:1: ( rule__UpdateStatement__Group_2_1_1__0 )*
             {
              before(grammarAccess.getUpdateStatementAccess().getGroup_2_1_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5250:1: ( rule__UpdateStatement__Group_2_1_1__0 )*
-            loop35:
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5126:1: ( rule__UpdateStatement__Group_2_1_1__0 )*
+            loop33:
             do {
-                int alt35=2;
-                int LA35_0 = input.LA(1);
+                int alt33=2;
+                int LA33_0 = input.LA(1);
 
-                if ( (LA35_0==27) ) {
-                    alt35=1;
+                if ( (LA33_0==27) ) {
+                    alt33=1;
                 }
 
 
-                switch (alt35) {
+                switch (alt33) {
             	case 1 :
-            	    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5250:2: rule__UpdateStatement__Group_2_1_1__0
+            	    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5126:2: rule__UpdateStatement__Group_2_1_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__UpdateStatement__Group_2_1_1__0_in_rule__UpdateStatement__Group_2_1__1__Impl10508);
+            	    pushFollow(FOLLOW_rule__UpdateStatement__Group_2_1_1__0_in_rule__UpdateStatement__Group_2_1__1__Impl10262);
             	    rule__UpdateStatement__Group_2_1_1__0();
             	    _fsp--;
 
@@ -13670,7 +13330,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
             	    break;
 
             	default :
-            	    break loop35;
+            	    break loop33;
                 }
             } while (true);
 
@@ -13697,20 +13357,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__UpdateStatement__Group_2_1_1__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5264:1: rule__UpdateStatement__Group_2_1_1__0 : rule__UpdateStatement__Group_2_1_1__0__Impl rule__UpdateStatement__Group_2_1_1__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5140:1: rule__UpdateStatement__Group_2_1_1__0 : rule__UpdateStatement__Group_2_1_1__0__Impl rule__UpdateStatement__Group_2_1_1__1 ;
     public final void rule__UpdateStatement__Group_2_1_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5268:1: ( rule__UpdateStatement__Group_2_1_1__0__Impl rule__UpdateStatement__Group_2_1_1__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5269:2: rule__UpdateStatement__Group_2_1_1__0__Impl rule__UpdateStatement__Group_2_1_1__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5144:1: ( rule__UpdateStatement__Group_2_1_1__0__Impl rule__UpdateStatement__Group_2_1_1__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5145:2: rule__UpdateStatement__Group_2_1_1__0__Impl rule__UpdateStatement__Group_2_1_1__1
             {
-            pushFollow(FOLLOW_rule__UpdateStatement__Group_2_1_1__0__Impl_in_rule__UpdateStatement__Group_2_1_1__010543);
+            pushFollow(FOLLOW_rule__UpdateStatement__Group_2_1_1__0__Impl_in_rule__UpdateStatement__Group_2_1_1__010297);
             rule__UpdateStatement__Group_2_1_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__UpdateStatement__Group_2_1_1__1_in_rule__UpdateStatement__Group_2_1_1__010546);
+            pushFollow(FOLLOW_rule__UpdateStatement__Group_2_1_1__1_in_rule__UpdateStatement__Group_2_1_1__010300);
             rule__UpdateStatement__Group_2_1_1__1();
             _fsp--;
 
@@ -13733,20 +13393,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__UpdateStatement__Group_2_1_1__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5276:1: rule__UpdateStatement__Group_2_1_1__0__Impl : ( ',' ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5152:1: rule__UpdateStatement__Group_2_1_1__0__Impl : ( ',' ) ;
     public final void rule__UpdateStatement__Group_2_1_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5280:1: ( ( ',' ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5281:1: ( ',' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5156:1: ( ( ',' ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5157:1: ( ',' )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5281:1: ( ',' )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5282:1: ','
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5157:1: ( ',' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5158:1: ','
             {
              before(grammarAccess.getUpdateStatementAccess().getCommaKeyword_2_1_1_0()); 
-            match(input,27,FOLLOW_27_in_rule__UpdateStatement__Group_2_1_1__0__Impl10574); 
+            match(input,27,FOLLOW_27_in_rule__UpdateStatement__Group_2_1_1__0__Impl10328); 
              after(grammarAccess.getUpdateStatementAccess().getCommaKeyword_2_1_1_0()); 
 
             }
@@ -13770,16 +13430,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__UpdateStatement__Group_2_1_1__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5295:1: rule__UpdateStatement__Group_2_1_1__1 : rule__UpdateStatement__Group_2_1_1__1__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5171:1: rule__UpdateStatement__Group_2_1_1__1 : rule__UpdateStatement__Group_2_1_1__1__Impl ;
     public final void rule__UpdateStatement__Group_2_1_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5299:1: ( rule__UpdateStatement__Group_2_1_1__1__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5300:2: rule__UpdateStatement__Group_2_1_1__1__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5175:1: ( rule__UpdateStatement__Group_2_1_1__1__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5176:2: rule__UpdateStatement__Group_2_1_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__UpdateStatement__Group_2_1_1__1__Impl_in_rule__UpdateStatement__Group_2_1_1__110605);
+            pushFollow(FOLLOW_rule__UpdateStatement__Group_2_1_1__1__Impl_in_rule__UpdateStatement__Group_2_1_1__110359);
             rule__UpdateStatement__Group_2_1_1__1__Impl();
             _fsp--;
 
@@ -13802,23 +13462,23 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__UpdateStatement__Group_2_1_1__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5306:1: rule__UpdateStatement__Group_2_1_1__1__Impl : ( ( rule__UpdateStatement__SettersAssignment_2_1_1_1 ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5182:1: rule__UpdateStatement__Group_2_1_1__1__Impl : ( ( rule__UpdateStatement__SettersAssignment_2_1_1_1 ) ) ;
     public final void rule__UpdateStatement__Group_2_1_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5310:1: ( ( ( rule__UpdateStatement__SettersAssignment_2_1_1_1 ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5311:1: ( ( rule__UpdateStatement__SettersAssignment_2_1_1_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5186:1: ( ( ( rule__UpdateStatement__SettersAssignment_2_1_1_1 ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5187:1: ( ( rule__UpdateStatement__SettersAssignment_2_1_1_1 ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5311:1: ( ( rule__UpdateStatement__SettersAssignment_2_1_1_1 ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5312:1: ( rule__UpdateStatement__SettersAssignment_2_1_1_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5187:1: ( ( rule__UpdateStatement__SettersAssignment_2_1_1_1 ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5188:1: ( rule__UpdateStatement__SettersAssignment_2_1_1_1 )
             {
              before(grammarAccess.getUpdateStatementAccess().getSettersAssignment_2_1_1_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5313:1: ( rule__UpdateStatement__SettersAssignment_2_1_1_1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5313:2: rule__UpdateStatement__SettersAssignment_2_1_1_1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5189:1: ( rule__UpdateStatement__SettersAssignment_2_1_1_1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5189:2: rule__UpdateStatement__SettersAssignment_2_1_1_1
             {
-            pushFollow(FOLLOW_rule__UpdateStatement__SettersAssignment_2_1_1_1_in_rule__UpdateStatement__Group_2_1_1__1__Impl10632);
+            pushFollow(FOLLOW_rule__UpdateStatement__SettersAssignment_2_1_1_1_in_rule__UpdateStatement__Group_2_1_1__1__Impl10386);
             rule__UpdateStatement__SettersAssignment_2_1_1_1();
             _fsp--;
 
@@ -13848,20 +13508,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__FQN__Group__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5327:1: rule__FQN__Group__0 : rule__FQN__Group__0__Impl rule__FQN__Group__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5203:1: rule__FQN__Group__0 : rule__FQN__Group__0__Impl rule__FQN__Group__1 ;
     public final void rule__FQN__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5331:1: ( rule__FQN__Group__0__Impl rule__FQN__Group__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5332:2: rule__FQN__Group__0__Impl rule__FQN__Group__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5207:1: ( rule__FQN__Group__0__Impl rule__FQN__Group__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5208:2: rule__FQN__Group__0__Impl rule__FQN__Group__1
             {
-            pushFollow(FOLLOW_rule__FQN__Group__0__Impl_in_rule__FQN__Group__010666);
+            pushFollow(FOLLOW_rule__FQN__Group__0__Impl_in_rule__FQN__Group__010420);
             rule__FQN__Group__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__FQN__Group__1_in_rule__FQN__Group__010669);
+            pushFollow(FOLLOW_rule__FQN__Group__1_in_rule__FQN__Group__010423);
             rule__FQN__Group__1();
             _fsp--;
 
@@ -13884,20 +13544,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__FQN__Group__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5339:1: rule__FQN__Group__0__Impl : ( RULE_ID ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5215:1: rule__FQN__Group__0__Impl : ( RULE_ID ) ;
     public final void rule__FQN__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5343:1: ( ( RULE_ID ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5344:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5219:1: ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5220:1: ( RULE_ID )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5344:1: ( RULE_ID )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5345:1: RULE_ID
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5220:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5221:1: RULE_ID
             {
              before(grammarAccess.getFQNAccess().getIDTerminalRuleCall_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__FQN__Group__0__Impl10696); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__FQN__Group__0__Impl10450); 
              after(grammarAccess.getFQNAccess().getIDTerminalRuleCall_0()); 
 
             }
@@ -13921,16 +13581,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__FQN__Group__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5356:1: rule__FQN__Group__1 : rule__FQN__Group__1__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5232:1: rule__FQN__Group__1 : rule__FQN__Group__1__Impl ;
     public final void rule__FQN__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5360:1: ( rule__FQN__Group__1__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5361:2: rule__FQN__Group__1__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5236:1: ( rule__FQN__Group__1__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5237:2: rule__FQN__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__FQN__Group__1__Impl_in_rule__FQN__Group__110725);
+            pushFollow(FOLLOW_rule__FQN__Group__1__Impl_in_rule__FQN__Group__110479);
             rule__FQN__Group__1__Impl();
             _fsp--;
 
@@ -13953,35 +13613,35 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__FQN__Group__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5367:1: rule__FQN__Group__1__Impl : ( ( rule__FQN__Group_1__0 )* ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5243:1: rule__FQN__Group__1__Impl : ( ( rule__FQN__Group_1__0 )* ) ;
     public final void rule__FQN__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5371:1: ( ( ( rule__FQN__Group_1__0 )* ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5372:1: ( ( rule__FQN__Group_1__0 )* )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5247:1: ( ( ( rule__FQN__Group_1__0 )* ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5248:1: ( ( rule__FQN__Group_1__0 )* )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5372:1: ( ( rule__FQN__Group_1__0 )* )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5373:1: ( rule__FQN__Group_1__0 )*
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5248:1: ( ( rule__FQN__Group_1__0 )* )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5249:1: ( rule__FQN__Group_1__0 )*
             {
              before(grammarAccess.getFQNAccess().getGroup_1()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5374:1: ( rule__FQN__Group_1__0 )*
-            loop36:
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5250:1: ( rule__FQN__Group_1__0 )*
+            loop34:
             do {
-                int alt36=2;
-                int LA36_0 = input.LA(1);
+                int alt34=2;
+                int LA34_0 = input.LA(1);
 
-                if ( (LA36_0==36) ) {
-                    alt36=1;
+                if ( (LA34_0==36) ) {
+                    alt34=1;
                 }
 
 
-                switch (alt36) {
+                switch (alt34) {
             	case 1 :
-            	    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5374:2: rule__FQN__Group_1__0
+            	    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5250:2: rule__FQN__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__FQN__Group_1__0_in_rule__FQN__Group__1__Impl10752);
+            	    pushFollow(FOLLOW_rule__FQN__Group_1__0_in_rule__FQN__Group__1__Impl10506);
             	    rule__FQN__Group_1__0();
             	    _fsp--;
 
@@ -13990,7 +13650,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
             	    break;
 
             	default :
-            	    break loop36;
+            	    break loop34;
                 }
             } while (true);
 
@@ -14017,20 +13677,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__FQN__Group_1__0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5388:1: rule__FQN__Group_1__0 : rule__FQN__Group_1__0__Impl rule__FQN__Group_1__1 ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5264:1: rule__FQN__Group_1__0 : rule__FQN__Group_1__0__Impl rule__FQN__Group_1__1 ;
     public final void rule__FQN__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5392:1: ( rule__FQN__Group_1__0__Impl rule__FQN__Group_1__1 )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5393:2: rule__FQN__Group_1__0__Impl rule__FQN__Group_1__1
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5268:1: ( rule__FQN__Group_1__0__Impl rule__FQN__Group_1__1 )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5269:2: rule__FQN__Group_1__0__Impl rule__FQN__Group_1__1
             {
-            pushFollow(FOLLOW_rule__FQN__Group_1__0__Impl_in_rule__FQN__Group_1__010787);
+            pushFollow(FOLLOW_rule__FQN__Group_1__0__Impl_in_rule__FQN__Group_1__010541);
             rule__FQN__Group_1__0__Impl();
             _fsp--;
 
-            pushFollow(FOLLOW_rule__FQN__Group_1__1_in_rule__FQN__Group_1__010790);
+            pushFollow(FOLLOW_rule__FQN__Group_1__1_in_rule__FQN__Group_1__010544);
             rule__FQN__Group_1__1();
             _fsp--;
 
@@ -14053,20 +13713,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__FQN__Group_1__0__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5400:1: rule__FQN__Group_1__0__Impl : ( '.' ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5276:1: rule__FQN__Group_1__0__Impl : ( '.' ) ;
     public final void rule__FQN__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5404:1: ( ( '.' ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5405:1: ( '.' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5280:1: ( ( '.' ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5281:1: ( '.' )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5405:1: ( '.' )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5406:1: '.'
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5281:1: ( '.' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5282:1: '.'
             {
              before(grammarAccess.getFQNAccess().getFullStopKeyword_1_0()); 
-            match(input,36,FOLLOW_36_in_rule__FQN__Group_1__0__Impl10818); 
+            match(input,36,FOLLOW_36_in_rule__FQN__Group_1__0__Impl10572); 
              after(grammarAccess.getFQNAccess().getFullStopKeyword_1_0()); 
 
             }
@@ -14090,16 +13750,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__FQN__Group_1__1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5419:1: rule__FQN__Group_1__1 : rule__FQN__Group_1__1__Impl ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5295:1: rule__FQN__Group_1__1 : rule__FQN__Group_1__1__Impl ;
     public final void rule__FQN__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5423:1: ( rule__FQN__Group_1__1__Impl )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5424:2: rule__FQN__Group_1__1__Impl
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5299:1: ( rule__FQN__Group_1__1__Impl )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5300:2: rule__FQN__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__FQN__Group_1__1__Impl_in_rule__FQN__Group_1__110849);
+            pushFollow(FOLLOW_rule__FQN__Group_1__1__Impl_in_rule__FQN__Group_1__110603);
             rule__FQN__Group_1__1__Impl();
             _fsp--;
 
@@ -14122,20 +13782,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__FQN__Group_1__1__Impl
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5430:1: rule__FQN__Group_1__1__Impl : ( RULE_ID ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5306:1: rule__FQN__Group_1__1__Impl : ( RULE_ID ) ;
     public final void rule__FQN__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5434:1: ( ( RULE_ID ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5435:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5310:1: ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5311:1: ( RULE_ID )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5435:1: ( RULE_ID )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5436:1: RULE_ID
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5311:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5312:1: RULE_ID
             {
              before(grammarAccess.getFQNAccess().getIDTerminalRuleCall_1_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__FQN__Group_1__1__Impl10876); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__FQN__Group_1__1__Impl10630); 
              after(grammarAccess.getFQNAccess().getIDTerminalRuleCall_1_1()); 
 
             }
@@ -14159,20 +13819,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Scaffolding__ScaffoldAssignment_0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5455:1: rule__Scaffolding__ScaffoldAssignment_0 : ( ruleScaffold ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5331:1: rule__Scaffolding__ScaffoldAssignment_0 : ( ruleScaffold ) ;
     public final void rule__Scaffolding__ScaffoldAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5459:1: ( ( ruleScaffold ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5460:1: ( ruleScaffold )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5335:1: ( ( ruleScaffold ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5336:1: ( ruleScaffold )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5460:1: ( ruleScaffold )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5461:1: ruleScaffold
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5336:1: ( ruleScaffold )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5337:1: ruleScaffold
             {
              before(grammarAccess.getScaffoldingAccess().getScaffoldScaffoldParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleScaffold_in_rule__Scaffolding__ScaffoldAssignment_010917);
+            pushFollow(FOLLOW_ruleScaffold_in_rule__Scaffolding__ScaffoldAssignment_010671);
             ruleScaffold();
             _fsp--;
 
@@ -14199,20 +13859,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Scaffolding__ElementsAssignment_1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5470:1: rule__Scaffolding__ElementsAssignment_1 : ( ruleScaffoldingElement ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5346:1: rule__Scaffolding__ElementsAssignment_1 : ( ruleScaffoldingElement ) ;
     public final void rule__Scaffolding__ElementsAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5474:1: ( ( ruleScaffoldingElement ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5475:1: ( ruleScaffoldingElement )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5350:1: ( ( ruleScaffoldingElement ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5351:1: ( ruleScaffoldingElement )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5475:1: ( ruleScaffoldingElement )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5476:1: ruleScaffoldingElement
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5351:1: ( ruleScaffoldingElement )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5352:1: ruleScaffoldingElement
             {
              before(grammarAccess.getScaffoldingAccess().getElementsScaffoldingElementParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleScaffoldingElement_in_rule__Scaffolding__ElementsAssignment_110948);
+            pushFollow(FOLLOW_ruleScaffoldingElement_in_rule__Scaffolding__ElementsAssignment_110702);
             ruleScaffoldingElement();
             _fsp--;
 
@@ -14239,20 +13899,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Scaffold__RefPackageAssignment_1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5485:1: rule__Scaffold__RefPackageAssignment_1 : ( RULE_STRING ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5361:1: rule__Scaffold__RefPackageAssignment_1 : ( RULE_STRING ) ;
     public final void rule__Scaffold__RefPackageAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5489:1: ( ( RULE_STRING ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5490:1: ( RULE_STRING )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5365:1: ( ( RULE_STRING ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5366:1: ( RULE_STRING )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5490:1: ( RULE_STRING )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5491:1: RULE_STRING
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5366:1: ( RULE_STRING )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5367:1: RULE_STRING
             {
              before(grammarAccess.getScaffoldAccess().getRefPackageSTRINGTerminalRuleCall_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Scaffold__RefPackageAssignment_110979); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Scaffold__RefPackageAssignment_110733); 
              after(grammarAccess.getScaffoldAccess().getRefPackageSTRINGTerminalRuleCall_1_0()); 
 
             }
@@ -14276,20 +13936,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Rule__NameAssignment_1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5500:1: rule__Rule__NameAssignment_1 : ( RULE_ID ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5376:1: rule__Rule__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Rule__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5504:1: ( ( RULE_ID ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5505:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5380:1: ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5381:1: ( RULE_ID )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5505:1: ( RULE_ID )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5506:1: RULE_ID
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5381:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5382:1: RULE_ID
             {
              before(grammarAccess.getRuleAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Rule__NameAssignment_111010); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Rule__NameAssignment_110764); 
              after(grammarAccess.getRuleAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -14313,20 +13973,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Rule__WhenAssignment_2
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5515:1: rule__Rule__WhenAssignment_2 : ( ruleWhenBlock ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5391:1: rule__Rule__WhenAssignment_2 : ( ruleWhenBlock ) ;
     public final void rule__Rule__WhenAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5519:1: ( ( ruleWhenBlock ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5520:1: ( ruleWhenBlock )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5395:1: ( ( ruleWhenBlock ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5396:1: ( ruleWhenBlock )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5520:1: ( ruleWhenBlock )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5521:1: ruleWhenBlock
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5396:1: ( ruleWhenBlock )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5397:1: ruleWhenBlock
             {
              before(grammarAccess.getRuleAccess().getWhenWhenBlockParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleWhenBlock_in_rule__Rule__WhenAssignment_211041);
+            pushFollow(FOLLOW_ruleWhenBlock_in_rule__Rule__WhenAssignment_210795);
             ruleWhenBlock();
             _fsp--;
 
@@ -14353,20 +14013,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Rule__ThenAssignment_3
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5530:1: rule__Rule__ThenAssignment_3 : ( ruleThenBlock ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5406:1: rule__Rule__ThenAssignment_3 : ( ruleThenBlock ) ;
     public final void rule__Rule__ThenAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5534:1: ( ( ruleThenBlock ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5535:1: ( ruleThenBlock )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5410:1: ( ( ruleThenBlock ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5411:1: ( ruleThenBlock )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5535:1: ( ruleThenBlock )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5536:1: ruleThenBlock
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5411:1: ( ruleThenBlock )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5412:1: ruleThenBlock
             {
              before(grammarAccess.getRuleAccess().getThenThenBlockParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleThenBlock_in_rule__Rule__ThenAssignment_311072);
+            pushFollow(FOLLOW_ruleThenBlock_in_rule__Rule__ThenAssignment_310826);
             ruleThenBlock();
             _fsp--;
 
@@ -14393,20 +14053,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__WhenBlock__MatchesAssignment_1_0_1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5545:1: rule__WhenBlock__MatchesAssignment_1_0_1 : ( ruleMatch ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5421:1: rule__WhenBlock__MatchesAssignment_1_0_1 : ( ruleMatch ) ;
     public final void rule__WhenBlock__MatchesAssignment_1_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5549:1: ( ( ruleMatch ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5550:1: ( ruleMatch )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5425:1: ( ( ruleMatch ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5426:1: ( ruleMatch )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5550:1: ( ruleMatch )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5551:1: ruleMatch
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5426:1: ( ruleMatch )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5427:1: ruleMatch
             {
              before(grammarAccess.getWhenBlockAccess().getMatchesMatchParserRuleCall_1_0_1_0()); 
-            pushFollow(FOLLOW_ruleMatch_in_rule__WhenBlock__MatchesAssignment_1_0_111103);
+            pushFollow(FOLLOW_ruleMatch_in_rule__WhenBlock__MatchesAssignment_1_0_110857);
             ruleMatch();
             _fsp--;
 
@@ -14433,20 +14093,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__WhenBlock__MatchesAssignment_1_1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5560:1: rule__WhenBlock__MatchesAssignment_1_1 : ( ruleMatch ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5436:1: rule__WhenBlock__MatchesAssignment_1_1 : ( ruleMatch ) ;
     public final void rule__WhenBlock__MatchesAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5564:1: ( ( ruleMatch ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5565:1: ( ruleMatch )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5440:1: ( ( ruleMatch ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5441:1: ( ruleMatch )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5565:1: ( ruleMatch )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5566:1: ruleMatch
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5441:1: ( ruleMatch )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5442:1: ruleMatch
             {
              before(grammarAccess.getWhenBlockAccess().getMatchesMatchParserRuleCall_1_1_0()); 
-            pushFollow(FOLLOW_ruleMatch_in_rule__WhenBlock__MatchesAssignment_1_111134);
+            pushFollow(FOLLOW_ruleMatch_in_rule__WhenBlock__MatchesAssignment_1_110888);
             ruleMatch();
             _fsp--;
 
@@ -14473,20 +14133,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Match__VarAssignment_0_0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5575:1: rule__Match__VarAssignment_0_0 : ( ruleVariable ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5451:1: rule__Match__VarAssignment_0_0 : ( ruleVariable ) ;
     public final void rule__Match__VarAssignment_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5579:1: ( ( ruleVariable ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5580:1: ( ruleVariable )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5455:1: ( ( ruleVariable ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5456:1: ( ruleVariable )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5580:1: ( ruleVariable )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5581:1: ruleVariable
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5456:1: ( ruleVariable )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5457:1: ruleVariable
             {
              before(grammarAccess.getMatchAccess().getVarVariableParserRuleCall_0_0_0()); 
-            pushFollow(FOLLOW_ruleVariable_in_rule__Match__VarAssignment_0_011165);
+            pushFollow(FOLLOW_ruleVariable_in_rule__Match__VarAssignment_0_010919);
             ruleVariable();
             _fsp--;
 
@@ -14513,24 +14173,24 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Match__TypeAssignment_1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5590:1: rule__Match__TypeAssignment_1 : ( ( RULE_ID ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5466:1: rule__Match__TypeAssignment_1 : ( ( RULE_ID ) ) ;
     public final void rule__Match__TypeAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5594:1: ( ( ( RULE_ID ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5595:1: ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5470:1: ( ( ( RULE_ID ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5471:1: ( ( RULE_ID ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5595:1: ( ( RULE_ID ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5596:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5471:1: ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5472:1: ( RULE_ID )
             {
              before(grammarAccess.getMatchAccess().getTypeEClassCrossReference_1_0()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5597:1: ( RULE_ID )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5598:1: RULE_ID
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5473:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5474:1: RULE_ID
             {
              before(grammarAccess.getMatchAccess().getTypeEClassIDTerminalRuleCall_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Match__TypeAssignment_111200); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Match__TypeAssignment_110954); 
              after(grammarAccess.getMatchAccess().getTypeEClassIDTerminalRuleCall_1_0_1()); 
 
             }
@@ -14558,20 +14218,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Match__ParamsAssignment_2_1_0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5609:1: rule__Match__ParamsAssignment_2_1_0 : ( ruleParam ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5485:1: rule__Match__ParamsAssignment_2_1_0 : ( ruleParam ) ;
     public final void rule__Match__ParamsAssignment_2_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5613:1: ( ( ruleParam ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5614:1: ( ruleParam )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5489:1: ( ( ruleParam ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5490:1: ( ruleParam )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5614:1: ( ruleParam )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5615:1: ruleParam
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5490:1: ( ruleParam )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5491:1: ruleParam
             {
              before(grammarAccess.getMatchAccess().getParamsParamParserRuleCall_2_1_0_0()); 
-            pushFollow(FOLLOW_ruleParam_in_rule__Match__ParamsAssignment_2_1_011235);
+            pushFollow(FOLLOW_ruleParam_in_rule__Match__ParamsAssignment_2_1_010989);
             ruleParam();
             _fsp--;
 
@@ -14598,20 +14258,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Match__ParamsAssignment_2_1_1_1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5624:1: rule__Match__ParamsAssignment_2_1_1_1 : ( ruleParam ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5500:1: rule__Match__ParamsAssignment_2_1_1_1 : ( ruleParam ) ;
     public final void rule__Match__ParamsAssignment_2_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5628:1: ( ( ruleParam ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5629:1: ( ruleParam )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5504:1: ( ( ruleParam ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5505:1: ( ruleParam )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5629:1: ( ruleParam )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5630:1: ruleParam
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5505:1: ( ruleParam )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5506:1: ruleParam
             {
              before(grammarAccess.getMatchAccess().getParamsParamParserRuleCall_2_1_1_1_0()); 
-            pushFollow(FOLLOW_ruleParam_in_rule__Match__ParamsAssignment_2_1_1_111266);
+            pushFollow(FOLLOW_ruleParam_in_rule__Match__ParamsAssignment_2_1_1_111020);
             ruleParam();
             _fsp--;
 
@@ -14638,20 +14298,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Variable__NameAssignment
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5639:1: rule__Variable__NameAssignment : ( RULE_ID ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5515:1: rule__Variable__NameAssignment : ( RULE_ID ) ;
     public final void rule__Variable__NameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5643:1: ( ( RULE_ID ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5644:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5519:1: ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5520:1: ( RULE_ID )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5644:1: ( RULE_ID )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5645:1: RULE_ID
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5520:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5521:1: RULE_ID
             {
              before(grammarAccess.getVariableAccess().getNameIDTerminalRuleCall_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Variable__NameAssignment11297); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Variable__NameAssignment11051); 
              after(grammarAccess.getVariableAccess().getNameIDTerminalRuleCall_0()); 
 
             }
@@ -14675,20 +14335,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Param__PropertyAssignment_0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5654:1: rule__Param__PropertyAssignment_0 : ( ruleBindingExpression ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5530:1: rule__Param__PropertyAssignment_0 : ( ruleBindingExpression ) ;
     public final void rule__Param__PropertyAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5658:1: ( ( ruleBindingExpression ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5659:1: ( ruleBindingExpression )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5534:1: ( ( ruleBindingExpression ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5535:1: ( ruleBindingExpression )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5659:1: ( ruleBindingExpression )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5660:1: ruleBindingExpression
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5535:1: ( ruleBindingExpression )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5536:1: ruleBindingExpression
             {
              before(grammarAccess.getParamAccess().getPropertyBindingExpressionParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleBindingExpression_in_rule__Param__PropertyAssignment_011328);
+            pushFollow(FOLLOW_ruleBindingExpression_in_rule__Param__PropertyAssignment_011082);
             ruleBindingExpression();
             _fsp--;
 
@@ -14715,20 +14375,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Param__VarAssignment_1_1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5669:1: rule__Param__VarAssignment_1_1 : ( ruleVariable ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5545:1: rule__Param__VarAssignment_1_1 : ( ruleVariable ) ;
     public final void rule__Param__VarAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5673:1: ( ( ruleVariable ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5674:1: ( ruleVariable )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5549:1: ( ( ruleVariable ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5550:1: ( ruleVariable )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5674:1: ( ruleVariable )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5675:1: ruleVariable
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5550:1: ( ruleVariable )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5551:1: ruleVariable
             {
              before(grammarAccess.getParamAccess().getVarVariableParserRuleCall_1_1_0()); 
-            pushFollow(FOLLOW_ruleVariable_in_rule__Param__VarAssignment_1_111359);
+            pushFollow(FOLLOW_ruleVariable_in_rule__Param__VarAssignment_1_111113);
             ruleVariable();
             _fsp--;
 
@@ -14755,20 +14415,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__BindingExpression__OpAssignment_1_1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5684:1: rule__BindingExpression__OpAssignment_1_1 : ( RULE_OPERATOR_LOW_PRIORITY ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5560:1: rule__BindingExpression__OpAssignment_1_1 : ( RULE_OPERATOR_LOW_PRIORITY ) ;
     public final void rule__BindingExpression__OpAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5688:1: ( ( RULE_OPERATOR_LOW_PRIORITY ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5689:1: ( RULE_OPERATOR_LOW_PRIORITY )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5564:1: ( ( RULE_OPERATOR_LOW_PRIORITY ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5565:1: ( RULE_OPERATOR_LOW_PRIORITY )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5689:1: ( RULE_OPERATOR_LOW_PRIORITY )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5690:1: RULE_OPERATOR_LOW_PRIORITY
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5565:1: ( RULE_OPERATOR_LOW_PRIORITY )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5566:1: RULE_OPERATOR_LOW_PRIORITY
             {
              before(grammarAccess.getBindingExpressionAccess().getOpOPERATOR_LOW_PRIORITYTerminalRuleCall_1_1_0()); 
-            match(input,RULE_OPERATOR_LOW_PRIORITY,FOLLOW_RULE_OPERATOR_LOW_PRIORITY_in_rule__BindingExpression__OpAssignment_1_111390); 
+            match(input,RULE_OPERATOR_LOW_PRIORITY,FOLLOW_RULE_OPERATOR_LOW_PRIORITY_in_rule__BindingExpression__OpAssignment_1_111144); 
              after(grammarAccess.getBindingExpressionAccess().getOpOPERATOR_LOW_PRIORITYTerminalRuleCall_1_1_0()); 
 
             }
@@ -14792,20 +14452,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__BindingExpression__RightAssignment_1_2
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5699:1: rule__BindingExpression__RightAssignment_1_2 : ( ruleBindingExpression ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5575:1: rule__BindingExpression__RightAssignment_1_2 : ( ruleBindingExpression ) ;
     public final void rule__BindingExpression__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5703:1: ( ( ruleBindingExpression ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5704:1: ( ruleBindingExpression )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5579:1: ( ( ruleBindingExpression ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5580:1: ( ruleBindingExpression )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5704:1: ( ruleBindingExpression )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5705:1: ruleBindingExpression
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5580:1: ( ruleBindingExpression )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5581:1: ruleBindingExpression
             {
              before(grammarAccess.getBindingExpressionAccess().getRightBindingExpressionParserRuleCall_1_2_0()); 
-            pushFollow(FOLLOW_ruleBindingExpression_in_rule__BindingExpression__RightAssignment_1_211421);
+            pushFollow(FOLLOW_ruleBindingExpression_in_rule__BindingExpression__RightAssignment_1_211175);
             ruleBindingExpression();
             _fsp--;
 
@@ -14832,20 +14492,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__BindingExpressionHigh__OpAssignment_1_1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5714:1: rule__BindingExpressionHigh__OpAssignment_1_1 : ( RULE_OPERATOR_HIGH_PRIORITY ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5590:1: rule__BindingExpressionHigh__OpAssignment_1_1 : ( RULE_OPERATOR_HIGH_PRIORITY ) ;
     public final void rule__BindingExpressionHigh__OpAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5718:1: ( ( RULE_OPERATOR_HIGH_PRIORITY ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5719:1: ( RULE_OPERATOR_HIGH_PRIORITY )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5594:1: ( ( RULE_OPERATOR_HIGH_PRIORITY ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5595:1: ( RULE_OPERATOR_HIGH_PRIORITY )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5719:1: ( RULE_OPERATOR_HIGH_PRIORITY )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5720:1: RULE_OPERATOR_HIGH_PRIORITY
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5595:1: ( RULE_OPERATOR_HIGH_PRIORITY )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5596:1: RULE_OPERATOR_HIGH_PRIORITY
             {
              before(grammarAccess.getBindingExpressionHighAccess().getOpOPERATOR_HIGH_PRIORITYTerminalRuleCall_1_1_0()); 
-            match(input,RULE_OPERATOR_HIGH_PRIORITY,FOLLOW_RULE_OPERATOR_HIGH_PRIORITY_in_rule__BindingExpressionHigh__OpAssignment_1_111452); 
+            match(input,RULE_OPERATOR_HIGH_PRIORITY,FOLLOW_RULE_OPERATOR_HIGH_PRIORITY_in_rule__BindingExpressionHigh__OpAssignment_1_111206); 
              after(grammarAccess.getBindingExpressionHighAccess().getOpOPERATOR_HIGH_PRIORITYTerminalRuleCall_1_1_0()); 
 
             }
@@ -14869,20 +14529,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__BindingExpressionHigh__RightAssignment_1_2
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5729:1: rule__BindingExpressionHigh__RightAssignment_1_2 : ( ruleBindingExpressionHigh ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5605:1: rule__BindingExpressionHigh__RightAssignment_1_2 : ( ruleBindingExpressionHigh ) ;
     public final void rule__BindingExpressionHigh__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5733:1: ( ( ruleBindingExpressionHigh ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5734:1: ( ruleBindingExpressionHigh )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5609:1: ( ( ruleBindingExpressionHigh ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5610:1: ( ruleBindingExpressionHigh )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5734:1: ( ruleBindingExpressionHigh )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5735:1: ruleBindingExpressionHigh
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5610:1: ( ruleBindingExpressionHigh )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5611:1: ruleBindingExpressionHigh
             {
              before(grammarAccess.getBindingExpressionHighAccess().getRightBindingExpressionHighParserRuleCall_1_2_0()); 
-            pushFollow(FOLLOW_ruleBindingExpressionHigh_in_rule__BindingExpressionHigh__RightAssignment_1_211483);
+            pushFollow(FOLLOW_ruleBindingExpressionHigh_in_rule__BindingExpressionHigh__RightAssignment_1_211237);
             ruleBindingExpressionHigh();
             _fsp--;
 
@@ -14909,20 +14569,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__BindingTerminalExpression__ExpAssignment_2_2
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5744:1: rule__BindingTerminalExpression__ExpAssignment_2_2 : ( ruleBindingTerminalExpression ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5620:1: rule__BindingTerminalExpression__ExpAssignment_2_2 : ( ruleBindingTerminalExpression ) ;
     public final void rule__BindingTerminalExpression__ExpAssignment_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5748:1: ( ( ruleBindingTerminalExpression ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5749:1: ( ruleBindingTerminalExpression )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5624:1: ( ( ruleBindingTerminalExpression ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5625:1: ( ruleBindingTerminalExpression )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5749:1: ( ruleBindingTerminalExpression )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5750:1: ruleBindingTerminalExpression
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5625:1: ( ruleBindingTerminalExpression )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5626:1: ruleBindingTerminalExpression
             {
              before(grammarAccess.getBindingTerminalExpressionAccess().getExpBindingTerminalExpressionParserRuleCall_2_2_0()); 
-            pushFollow(FOLLOW_ruleBindingTerminalExpression_in_rule__BindingTerminalExpression__ExpAssignment_2_211514);
+            pushFollow(FOLLOW_ruleBindingTerminalExpression_in_rule__BindingTerminalExpression__ExpAssignment_2_211268);
             ruleBindingTerminalExpression();
             _fsp--;
 
@@ -14949,24 +14609,24 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__BindingTerminalExpression__FunctionAssignment_3_1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5759:1: rule__BindingTerminalExpression__FunctionAssignment_3_1 : ( ( RULE_ID ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5635:1: rule__BindingTerminalExpression__FunctionAssignment_3_1 : ( ( RULE_ID ) ) ;
     public final void rule__BindingTerminalExpression__FunctionAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5763:1: ( ( ( RULE_ID ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5764:1: ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5639:1: ( ( ( RULE_ID ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5640:1: ( ( RULE_ID ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5764:1: ( ( RULE_ID ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5765:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5640:1: ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5641:1: ( RULE_ID )
             {
              before(grammarAccess.getBindingTerminalExpressionAccess().getFunctionFunctionCrossReference_3_1_0()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5766:1: ( RULE_ID )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5767:1: RULE_ID
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5642:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5643:1: RULE_ID
             {
              before(grammarAccess.getBindingTerminalExpressionAccess().getFunctionFunctionIDTerminalRuleCall_3_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__BindingTerminalExpression__FunctionAssignment_3_111549); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__BindingTerminalExpression__FunctionAssignment_3_111303); 
              after(grammarAccess.getBindingTerminalExpressionAccess().getFunctionFunctionIDTerminalRuleCall_3_1_0_1()); 
 
             }
@@ -14993,25 +14653,25 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
     // $ANTLR end rule__BindingTerminalExpression__FunctionAssignment_3_1
 
 
-    // $ANTLR start rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5778:1: rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_0 : ( ruleBindingExpression ) ;
-    public final void rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_0() throws RecognitionException {
+    // $ANTLR start rule__BindingTerminalExpression__ExpAssignment_3_2_1
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5654:1: rule__BindingTerminalExpression__ExpAssignment_3_2_1 : ( ruleBindingExpression ) ;
+    public final void rule__BindingTerminalExpression__ExpAssignment_3_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5782:1: ( ( ruleBindingExpression ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5783:1: ( ruleBindingExpression )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5658:1: ( ( ruleBindingExpression ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5659:1: ( ruleBindingExpression )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5783:1: ( ruleBindingExpression )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5784:1: ruleBindingExpression
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5659:1: ( ruleBindingExpression )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5660:1: ruleBindingExpression
             {
-             before(grammarAccess.getBindingTerminalExpressionAccess().getArgumentsBindingExpressionParserRuleCall_3_2_1_0_0()); 
-            pushFollow(FOLLOW_ruleBindingExpression_in_rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_011584);
+             before(grammarAccess.getBindingTerminalExpressionAccess().getExpBindingExpressionParserRuleCall_3_2_1_0()); 
+            pushFollow(FOLLOW_ruleBindingExpression_in_rule__BindingTerminalExpression__ExpAssignment_3_2_111338);
             ruleBindingExpression();
             _fsp--;
 
-             after(grammarAccess.getBindingTerminalExpressionAccess().getArgumentsBindingExpressionParserRuleCall_3_2_1_0_0()); 
+             after(grammarAccess.getBindingTerminalExpressionAccess().getExpBindingExpressionParserRuleCall_3_2_1_0()); 
 
             }
 
@@ -15030,64 +14690,24 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
         }
         return ;
     }
-    // $ANTLR end rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_0
-
-
-    // $ANTLR start rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_1_1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5793:1: rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_1_1 : ( ruleBindingExpression ) ;
-    public final void rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_1_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5797:1: ( ( ruleBindingExpression ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5798:1: ( ruleBindingExpression )
-            {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5798:1: ( ruleBindingExpression )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5799:1: ruleBindingExpression
-            {
-             before(grammarAccess.getBindingTerminalExpressionAccess().getArgumentsBindingExpressionParserRuleCall_3_2_1_1_1_0()); 
-            pushFollow(FOLLOW_ruleBindingExpression_in_rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_1_111615);
-            ruleBindingExpression();
-            _fsp--;
-
-             after(grammarAccess.getBindingTerminalExpressionAccess().getArgumentsBindingExpressionParserRuleCall_3_2_1_1_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_1_1
+    // $ANTLR end rule__BindingTerminalExpression__ExpAssignment_3_2_1
 
 
     // $ANTLR start rule__Expression__OpAssignment_1_1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5808:1: rule__Expression__OpAssignment_1_1 : ( RULE_OPERATOR_LOW_PRIORITY ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5669:1: rule__Expression__OpAssignment_1_1 : ( RULE_OPERATOR_LOW_PRIORITY ) ;
     public final void rule__Expression__OpAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5812:1: ( ( RULE_OPERATOR_LOW_PRIORITY ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5813:1: ( RULE_OPERATOR_LOW_PRIORITY )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5673:1: ( ( RULE_OPERATOR_LOW_PRIORITY ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5674:1: ( RULE_OPERATOR_LOW_PRIORITY )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5813:1: ( RULE_OPERATOR_LOW_PRIORITY )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5814:1: RULE_OPERATOR_LOW_PRIORITY
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5674:1: ( RULE_OPERATOR_LOW_PRIORITY )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5675:1: RULE_OPERATOR_LOW_PRIORITY
             {
              before(grammarAccess.getExpressionAccess().getOpOPERATOR_LOW_PRIORITYTerminalRuleCall_1_1_0()); 
-            match(input,RULE_OPERATOR_LOW_PRIORITY,FOLLOW_RULE_OPERATOR_LOW_PRIORITY_in_rule__Expression__OpAssignment_1_111646); 
+            match(input,RULE_OPERATOR_LOW_PRIORITY,FOLLOW_RULE_OPERATOR_LOW_PRIORITY_in_rule__Expression__OpAssignment_1_111369); 
              after(grammarAccess.getExpressionAccess().getOpOPERATOR_LOW_PRIORITYTerminalRuleCall_1_1_0()); 
 
             }
@@ -15111,20 +14731,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Expression__RightAssignment_1_2
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5823:1: rule__Expression__RightAssignment_1_2 : ( ruleExpression ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5684:1: rule__Expression__RightAssignment_1_2 : ( ruleExpression ) ;
     public final void rule__Expression__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5827:1: ( ( ruleExpression ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5828:1: ( ruleExpression )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5688:1: ( ( ruleExpression ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5689:1: ( ruleExpression )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5828:1: ( ruleExpression )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5829:1: ruleExpression
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5689:1: ( ruleExpression )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5690:1: ruleExpression
             {
              before(grammarAccess.getExpressionAccess().getRightExpressionParserRuleCall_1_2_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__Expression__RightAssignment_1_211677);
+            pushFollow(FOLLOW_ruleExpression_in_rule__Expression__RightAssignment_1_211400);
             ruleExpression();
             _fsp--;
 
@@ -15151,20 +14771,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ExpressionHigh__OpAssignment_1_1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5838:1: rule__ExpressionHigh__OpAssignment_1_1 : ( RULE_OPERATOR_HIGH_PRIORITY ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5699:1: rule__ExpressionHigh__OpAssignment_1_1 : ( RULE_OPERATOR_HIGH_PRIORITY ) ;
     public final void rule__ExpressionHigh__OpAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5842:1: ( ( RULE_OPERATOR_HIGH_PRIORITY ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5843:1: ( RULE_OPERATOR_HIGH_PRIORITY )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5703:1: ( ( RULE_OPERATOR_HIGH_PRIORITY ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5704:1: ( RULE_OPERATOR_HIGH_PRIORITY )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5843:1: ( RULE_OPERATOR_HIGH_PRIORITY )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5844:1: RULE_OPERATOR_HIGH_PRIORITY
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5704:1: ( RULE_OPERATOR_HIGH_PRIORITY )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5705:1: RULE_OPERATOR_HIGH_PRIORITY
             {
              before(grammarAccess.getExpressionHighAccess().getOpOPERATOR_HIGH_PRIORITYTerminalRuleCall_1_1_0()); 
-            match(input,RULE_OPERATOR_HIGH_PRIORITY,FOLLOW_RULE_OPERATOR_HIGH_PRIORITY_in_rule__ExpressionHigh__OpAssignment_1_111708); 
+            match(input,RULE_OPERATOR_HIGH_PRIORITY,FOLLOW_RULE_OPERATOR_HIGH_PRIORITY_in_rule__ExpressionHigh__OpAssignment_1_111431); 
              after(grammarAccess.getExpressionHighAccess().getOpOPERATOR_HIGH_PRIORITYTerminalRuleCall_1_1_0()); 
 
             }
@@ -15188,20 +14808,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ExpressionHigh__RightAssignment_1_2
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5853:1: rule__ExpressionHigh__RightAssignment_1_2 : ( ruleExpressionHigh ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5714:1: rule__ExpressionHigh__RightAssignment_1_2 : ( ruleExpressionHigh ) ;
     public final void rule__ExpressionHigh__RightAssignment_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5857:1: ( ( ruleExpressionHigh ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5858:1: ( ruleExpressionHigh )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5718:1: ( ( ruleExpressionHigh ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5719:1: ( ruleExpressionHigh )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5858:1: ( ruleExpressionHigh )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5859:1: ruleExpressionHigh
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5719:1: ( ruleExpressionHigh )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5720:1: ruleExpressionHigh
             {
              before(grammarAccess.getExpressionHighAccess().getRightExpressionHighParserRuleCall_1_2_0()); 
-            pushFollow(FOLLOW_ruleExpressionHigh_in_rule__ExpressionHigh__RightAssignment_1_211739);
+            pushFollow(FOLLOW_ruleExpressionHigh_in_rule__ExpressionHigh__RightAssignment_1_211462);
             ruleExpressionHigh();
             _fsp--;
 
@@ -15228,20 +14848,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__ExpAssignment_3_2
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5868:1: rule__TerminalExpression__ExpAssignment_3_2 : ( ruleTerminalExpression ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5729:1: rule__TerminalExpression__ExpAssignment_3_2 : ( ruleTerminalExpression ) ;
     public final void rule__TerminalExpression__ExpAssignment_3_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5872:1: ( ( ruleTerminalExpression ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5873:1: ( ruleTerminalExpression )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5733:1: ( ( ruleTerminalExpression ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5734:1: ( ruleTerminalExpression )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5873:1: ( ruleTerminalExpression )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5874:1: ruleTerminalExpression
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5734:1: ( ruleTerminalExpression )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5735:1: ruleTerminalExpression
             {
              before(grammarAccess.getTerminalExpressionAccess().getExpTerminalExpressionParserRuleCall_3_2_0()); 
-            pushFollow(FOLLOW_ruleTerminalExpression_in_rule__TerminalExpression__ExpAssignment_3_211770);
+            pushFollow(FOLLOW_ruleTerminalExpression_in_rule__TerminalExpression__ExpAssignment_3_211493);
             ruleTerminalExpression();
             _fsp--;
 
@@ -15268,24 +14888,24 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__FunctionAssignment_4_1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5883:1: rule__TerminalExpression__FunctionAssignment_4_1 : ( ( RULE_ID ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5744:1: rule__TerminalExpression__FunctionAssignment_4_1 : ( ( RULE_ID ) ) ;
     public final void rule__TerminalExpression__FunctionAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5887:1: ( ( ( RULE_ID ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5888:1: ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5748:1: ( ( ( RULE_ID ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5749:1: ( ( RULE_ID ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5888:1: ( ( RULE_ID ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5889:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5749:1: ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5750:1: ( RULE_ID )
             {
              before(grammarAccess.getTerminalExpressionAccess().getFunctionFunctionCrossReference_4_1_0()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5890:1: ( RULE_ID )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5891:1: RULE_ID
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5751:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5752:1: RULE_ID
             {
              before(grammarAccess.getTerminalExpressionAccess().getFunctionFunctionIDTerminalRuleCall_4_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__TerminalExpression__FunctionAssignment_4_111805); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__TerminalExpression__FunctionAssignment_4_111528); 
              after(grammarAccess.getTerminalExpressionAccess().getFunctionFunctionIDTerminalRuleCall_4_1_0_1()); 
 
             }
@@ -15313,20 +14933,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__ArgumentsAssignment_4_2_1_0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5902:1: rule__TerminalExpression__ArgumentsAssignment_4_2_1_0 : ( ruleExpression ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5763:1: rule__TerminalExpression__ArgumentsAssignment_4_2_1_0 : ( ruleExpression ) ;
     public final void rule__TerminalExpression__ArgumentsAssignment_4_2_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5906:1: ( ( ruleExpression ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5907:1: ( ruleExpression )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5767:1: ( ( ruleExpression ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5768:1: ( ruleExpression )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5907:1: ( ruleExpression )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5908:1: ruleExpression
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5768:1: ( ruleExpression )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5769:1: ruleExpression
             {
              before(grammarAccess.getTerminalExpressionAccess().getArgumentsExpressionParserRuleCall_4_2_1_0_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__TerminalExpression__ArgumentsAssignment_4_2_1_011840);
+            pushFollow(FOLLOW_ruleExpression_in_rule__TerminalExpression__ArgumentsAssignment_4_2_1_011563);
             ruleExpression();
             _fsp--;
 
@@ -15353,20 +14973,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__TerminalExpression__ArgumentsAssignment_4_2_1_1_1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5917:1: rule__TerminalExpression__ArgumentsAssignment_4_2_1_1_1 : ( ruleExpression ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5778:1: rule__TerminalExpression__ArgumentsAssignment_4_2_1_1_1 : ( ruleExpression ) ;
     public final void rule__TerminalExpression__ArgumentsAssignment_4_2_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5921:1: ( ( ruleExpression ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5922:1: ( ruleExpression )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5782:1: ( ( ruleExpression ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5783:1: ( ruleExpression )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5922:1: ( ruleExpression )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5923:1: ruleExpression
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5783:1: ( ruleExpression )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5784:1: ruleExpression
             {
              before(grammarAccess.getTerminalExpressionAccess().getArgumentsExpressionParserRuleCall_4_2_1_1_1_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__TerminalExpression__ArgumentsAssignment_4_2_1_1_111871);
+            pushFollow(FOLLOW_ruleExpression_in_rule__TerminalExpression__ArgumentsAssignment_4_2_1_1_111594);
             ruleExpression();
             _fsp--;
 
@@ -15393,20 +15013,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__PrimitiveLiteral__ValueAssignment_3_1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5932:1: rule__PrimitiveLiteral__ValueAssignment_3_1 : ( RULE_INT ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5793:1: rule__PrimitiveLiteral__ValueAssignment_3_1 : ( RULE_INT ) ;
     public final void rule__PrimitiveLiteral__ValueAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5936:1: ( ( RULE_INT ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5937:1: ( RULE_INT )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5797:1: ( ( RULE_INT ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5798:1: ( RULE_INT )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5937:1: ( RULE_INT )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5938:1: RULE_INT
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5798:1: ( RULE_INT )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5799:1: RULE_INT
             {
              before(grammarAccess.getPrimitiveLiteralAccess().getValueINTTerminalRuleCall_3_1_0()); 
-            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__PrimitiveLiteral__ValueAssignment_3_111902); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__PrimitiveLiteral__ValueAssignment_3_111625); 
              after(grammarAccess.getPrimitiveLiteralAccess().getValueINTTerminalRuleCall_3_1_0()); 
 
             }
@@ -15430,20 +15050,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__PrimitiveLiteral__ValueAssignment_4_1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5947:1: rule__PrimitiveLiteral__ValueAssignment_4_1 : ( RULE_BOOLEAN ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5808:1: rule__PrimitiveLiteral__ValueAssignment_4_1 : ( RULE_BOOLEAN ) ;
     public final void rule__PrimitiveLiteral__ValueAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5951:1: ( ( RULE_BOOLEAN ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5952:1: ( RULE_BOOLEAN )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5812:1: ( ( RULE_BOOLEAN ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5813:1: ( RULE_BOOLEAN )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5952:1: ( RULE_BOOLEAN )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5953:1: RULE_BOOLEAN
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5813:1: ( RULE_BOOLEAN )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5814:1: RULE_BOOLEAN
             {
              before(grammarAccess.getPrimitiveLiteralAccess().getValueBOOLEANTerminalRuleCall_4_1_0()); 
-            match(input,RULE_BOOLEAN,FOLLOW_RULE_BOOLEAN_in_rule__PrimitiveLiteral__ValueAssignment_4_111933); 
+            match(input,RULE_BOOLEAN,FOLLOW_RULE_BOOLEAN_in_rule__PrimitiveLiteral__ValueAssignment_4_111656); 
              after(grammarAccess.getPrimitiveLiteralAccess().getValueBOOLEANTerminalRuleCall_4_1_0()); 
 
             }
@@ -15467,20 +15087,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__PrimitiveLiteral__ValueAssignment_5_1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5962:1: rule__PrimitiveLiteral__ValueAssignment_5_1 : ( RULE_FLOAT ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5823:1: rule__PrimitiveLiteral__ValueAssignment_5_1 : ( RULE_FLOAT ) ;
     public final void rule__PrimitiveLiteral__ValueAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5966:1: ( ( RULE_FLOAT ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5967:1: ( RULE_FLOAT )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5827:1: ( ( RULE_FLOAT ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5828:1: ( RULE_FLOAT )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5967:1: ( RULE_FLOAT )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5968:1: RULE_FLOAT
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5828:1: ( RULE_FLOAT )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5829:1: RULE_FLOAT
             {
              before(grammarAccess.getPrimitiveLiteralAccess().getValueFLOATTerminalRuleCall_5_1_0()); 
-            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__PrimitiveLiteral__ValueAssignment_5_111964); 
+            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__PrimitiveLiteral__ValueAssignment_5_111687); 
              after(grammarAccess.getPrimitiveLiteralAccess().getValueFLOATTerminalRuleCall_5_1_0()); 
 
             }
@@ -15504,24 +15124,24 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__FeatureRefLiteral__RefAssignment
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5977:1: rule__FeatureRefLiteral__RefAssignment : ( ( RULE_ID ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5838:1: rule__FeatureRefLiteral__RefAssignment : ( ( RULE_ID ) ) ;
     public final void rule__FeatureRefLiteral__RefAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5981:1: ( ( ( RULE_ID ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5982:1: ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5842:1: ( ( ( RULE_ID ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5843:1: ( ( RULE_ID ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5982:1: ( ( RULE_ID ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5983:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5843:1: ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5844:1: ( RULE_ID )
             {
              before(grammarAccess.getFeatureRefLiteralAccess().getRefEStructuralFeatureCrossReference_0()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5984:1: ( RULE_ID )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5985:1: RULE_ID
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5845:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5846:1: RULE_ID
             {
              before(grammarAccess.getFeatureRefLiteralAccess().getRefEStructuralFeatureIDTerminalRuleCall_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__FeatureRefLiteral__RefAssignment11999); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__FeatureRefLiteral__RefAssignment11722); 
              after(grammarAccess.getFeatureRefLiteralAccess().getRefEStructuralFeatureIDTerminalRuleCall_0_1()); 
 
             }
@@ -15549,20 +15169,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ThenBlock__StatementsAssignment_1_0_1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5996:1: rule__ThenBlock__StatementsAssignment_1_0_1 : ( ruleStatement ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5857:1: rule__ThenBlock__StatementsAssignment_1_0_1 : ( ruleStatement ) ;
     public final void rule__ThenBlock__StatementsAssignment_1_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6000:1: ( ( ruleStatement ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6001:1: ( ruleStatement )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5861:1: ( ( ruleStatement ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5862:1: ( ruleStatement )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6001:1: ( ruleStatement )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6002:1: ruleStatement
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5862:1: ( ruleStatement )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5863:1: ruleStatement
             {
              before(grammarAccess.getThenBlockAccess().getStatementsStatementParserRuleCall_1_0_1_0()); 
-            pushFollow(FOLLOW_ruleStatement_in_rule__ThenBlock__StatementsAssignment_1_0_112034);
+            pushFollow(FOLLOW_ruleStatement_in_rule__ThenBlock__StatementsAssignment_1_0_111757);
             ruleStatement();
             _fsp--;
 
@@ -15589,20 +15209,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ThenBlock__StatementsAssignment_1_1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6011:1: rule__ThenBlock__StatementsAssignment_1_1 : ( ruleStatement ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5872:1: rule__ThenBlock__StatementsAssignment_1_1 : ( ruleStatement ) ;
     public final void rule__ThenBlock__StatementsAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6015:1: ( ( ruleStatement ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6016:1: ( ruleStatement )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5876:1: ( ( ruleStatement ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5877:1: ( ruleStatement )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6016:1: ( ruleStatement )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6017:1: ruleStatement
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5877:1: ( ruleStatement )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5878:1: ruleStatement
             {
              before(grammarAccess.getThenBlockAccess().getStatementsStatementParserRuleCall_1_1_0()); 
-            pushFollow(FOLLOW_ruleStatement_in_rule__ThenBlock__StatementsAssignment_1_112065);
+            pushFollow(FOLLOW_ruleStatement_in_rule__ThenBlock__StatementsAssignment_1_111788);
             ruleStatement();
             _fsp--;
 
@@ -15629,20 +15249,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateStatement__VarAssignment_0_0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6026:1: rule__CreateStatement__VarAssignment_0_0 : ( ruleVariable ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5887:1: rule__CreateStatement__VarAssignment_0_0 : ( ruleVariable ) ;
     public final void rule__CreateStatement__VarAssignment_0_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6030:1: ( ( ruleVariable ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6031:1: ( ruleVariable )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5891:1: ( ( ruleVariable ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5892:1: ( ruleVariable )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6031:1: ( ruleVariable )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6032:1: ruleVariable
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5892:1: ( ruleVariable )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5893:1: ruleVariable
             {
              before(grammarAccess.getCreateStatementAccess().getVarVariableParserRuleCall_0_0_0()); 
-            pushFollow(FOLLOW_ruleVariable_in_rule__CreateStatement__VarAssignment_0_012096);
+            pushFollow(FOLLOW_ruleVariable_in_rule__CreateStatement__VarAssignment_0_011819);
             ruleVariable();
             _fsp--;
 
@@ -15669,20 +15289,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateStatement__ExpressionAssignment_1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6041:1: rule__CreateStatement__ExpressionAssignment_1 : ( ruleExpression ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5902:1: rule__CreateStatement__ExpressionAssignment_1 : ( ruleExpression ) ;
     public final void rule__CreateStatement__ExpressionAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6045:1: ( ( ruleExpression ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6046:1: ( ruleExpression )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5906:1: ( ( ruleExpression ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5907:1: ( ruleExpression )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6046:1: ( ruleExpression )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6047:1: ruleExpression
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5907:1: ( ruleExpression )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5908:1: ruleExpression
             {
              before(grammarAccess.getCreateStatementAccess().getExpressionExpressionParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__CreateStatement__ExpressionAssignment_112127);
+            pushFollow(FOLLOW_ruleExpression_in_rule__CreateStatement__ExpressionAssignment_111850);
             ruleExpression();
             _fsp--;
 
@@ -15709,24 +15329,24 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateClass__TypeAssignment_1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6056:1: rule__CreateClass__TypeAssignment_1 : ( ( RULE_ID ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5917:1: rule__CreateClass__TypeAssignment_1 : ( ( RULE_ID ) ) ;
     public final void rule__CreateClass__TypeAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6060:1: ( ( ( RULE_ID ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6061:1: ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5921:1: ( ( ( RULE_ID ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5922:1: ( ( RULE_ID ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6061:1: ( ( RULE_ID ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6062:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5922:1: ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5923:1: ( RULE_ID )
             {
              before(grammarAccess.getCreateClassAccess().getTypeEClassCrossReference_1_0()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6063:1: ( RULE_ID )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6064:1: RULE_ID
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5924:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5925:1: RULE_ID
             {
              before(grammarAccess.getCreateClassAccess().getTypeEClassIDTerminalRuleCall_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CreateClass__TypeAssignment_112162); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__CreateClass__TypeAssignment_111885); 
              after(grammarAccess.getCreateClassAccess().getTypeEClassIDTerminalRuleCall_1_0_1()); 
 
             }
@@ -15754,20 +15374,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateClass__SettersAssignment_2_1_0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6075:1: rule__CreateClass__SettersAssignment_2_1_0 : ( ruleSetter ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5936:1: rule__CreateClass__SettersAssignment_2_1_0 : ( ruleSetter ) ;
     public final void rule__CreateClass__SettersAssignment_2_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6079:1: ( ( ruleSetter ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6080:1: ( ruleSetter )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5940:1: ( ( ruleSetter ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5941:1: ( ruleSetter )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6080:1: ( ruleSetter )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6081:1: ruleSetter
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5941:1: ( ruleSetter )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5942:1: ruleSetter
             {
              before(grammarAccess.getCreateClassAccess().getSettersSetterParserRuleCall_2_1_0_0()); 
-            pushFollow(FOLLOW_ruleSetter_in_rule__CreateClass__SettersAssignment_2_1_012197);
+            pushFollow(FOLLOW_ruleSetter_in_rule__CreateClass__SettersAssignment_2_1_011920);
             ruleSetter();
             _fsp--;
 
@@ -15794,20 +15414,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__CreateClass__SettersAssignment_2_1_1_1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6090:1: rule__CreateClass__SettersAssignment_2_1_1_1 : ( ruleSetter ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5951:1: rule__CreateClass__SettersAssignment_2_1_1_1 : ( ruleSetter ) ;
     public final void rule__CreateClass__SettersAssignment_2_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6094:1: ( ( ruleSetter ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6095:1: ( ruleSetter )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5955:1: ( ( ruleSetter ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5956:1: ( ruleSetter )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6095:1: ( ruleSetter )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6096:1: ruleSetter
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5956:1: ( ruleSetter )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5957:1: ruleSetter
             {
              before(grammarAccess.getCreateClassAccess().getSettersSetterParserRuleCall_2_1_1_1_0()); 
-            pushFollow(FOLLOW_ruleSetter_in_rule__CreateClass__SettersAssignment_2_1_1_112228);
+            pushFollow(FOLLOW_ruleSetter_in_rule__CreateClass__SettersAssignment_2_1_1_111951);
             ruleSetter();
             _fsp--;
 
@@ -15834,20 +15454,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__StringLiteral__ValueAssignment
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6105:1: rule__StringLiteral__ValueAssignment : ( RULE_STRING ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5966:1: rule__StringLiteral__ValueAssignment : ( RULE_STRING ) ;
     public final void rule__StringLiteral__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6109:1: ( ( RULE_STRING ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6110:1: ( RULE_STRING )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5970:1: ( ( RULE_STRING ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5971:1: ( RULE_STRING )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6110:1: ( RULE_STRING )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6111:1: RULE_STRING
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5971:1: ( RULE_STRING )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5972:1: RULE_STRING
             {
              before(grammarAccess.getStringLiteralAccess().getValueSTRINGTerminalRuleCall_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__StringLiteral__ValueAssignment12259); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__StringLiteral__ValueAssignment11982); 
              after(grammarAccess.getStringLiteralAccess().getValueSTRINGTerminalRuleCall_0()); 
 
             }
@@ -15871,20 +15491,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ListLiteral__ItemsAssignment_1_0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6120:1: rule__ListLiteral__ItemsAssignment_1_0 : ( ruleExpression ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5981:1: rule__ListLiteral__ItemsAssignment_1_0 : ( ruleExpression ) ;
     public final void rule__ListLiteral__ItemsAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6124:1: ( ( ruleExpression ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6125:1: ( ruleExpression )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5985:1: ( ( ruleExpression ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5986:1: ( ruleExpression )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6125:1: ( ruleExpression )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6126:1: ruleExpression
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5986:1: ( ruleExpression )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5987:1: ruleExpression
             {
              before(grammarAccess.getListLiteralAccess().getItemsExpressionParserRuleCall_1_0_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__ListLiteral__ItemsAssignment_1_012290);
+            pushFollow(FOLLOW_ruleExpression_in_rule__ListLiteral__ItemsAssignment_1_012013);
             ruleExpression();
             _fsp--;
 
@@ -15911,20 +15531,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__ListLiteral__ItemsAssignment_1_1_1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6135:1: rule__ListLiteral__ItemsAssignment_1_1_1 : ( ruleExpression ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:5996:1: rule__ListLiteral__ItemsAssignment_1_1_1 : ( ruleExpression ) ;
     public final void rule__ListLiteral__ItemsAssignment_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6139:1: ( ( ruleExpression ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6140:1: ( ruleExpression )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6000:1: ( ( ruleExpression ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6001:1: ( ruleExpression )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6140:1: ( ruleExpression )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6141:1: ruleExpression
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6001:1: ( ruleExpression )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6002:1: ruleExpression
             {
              before(grammarAccess.getListLiteralAccess().getItemsExpressionParserRuleCall_1_1_1_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__ListLiteral__ItemsAssignment_1_1_112321);
+            pushFollow(FOLLOW_ruleExpression_in_rule__ListLiteral__ItemsAssignment_1_1_112044);
             ruleExpression();
             _fsp--;
 
@@ -15951,24 +15571,24 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__VarRefLiteral__VarRefAssignment_1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6150:1: rule__VarRefLiteral__VarRefAssignment_1 : ( ( RULE_ID ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6011:1: rule__VarRefLiteral__VarRefAssignment_1 : ( ( RULE_ID ) ) ;
     public final void rule__VarRefLiteral__VarRefAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6154:1: ( ( ( RULE_ID ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6155:1: ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6015:1: ( ( ( RULE_ID ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6016:1: ( ( RULE_ID ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6155:1: ( ( RULE_ID ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6156:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6016:1: ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6017:1: ( RULE_ID )
             {
              before(grammarAccess.getVarRefLiteralAccess().getVarRefVariableCrossReference_1_0()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6157:1: ( RULE_ID )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6158:1: RULE_ID
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6018:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6019:1: RULE_ID
             {
              before(grammarAccess.getVarRefLiteralAccess().getVarRefVariableIDTerminalRuleCall_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__VarRefLiteral__VarRefAssignment_112356); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__VarRefLiteral__VarRefAssignment_112079); 
              after(grammarAccess.getVarRefLiteralAccess().getVarRefVariableIDTerminalRuleCall_1_0_1()); 
 
             }
@@ -15996,24 +15616,24 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Setter__PropertyAssignment_0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6169:1: rule__Setter__PropertyAssignment_0 : ( ( RULE_ID ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6030:1: rule__Setter__PropertyAssignment_0 : ( ( RULE_ID ) ) ;
     public final void rule__Setter__PropertyAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6173:1: ( ( ( RULE_ID ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6174:1: ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6034:1: ( ( ( RULE_ID ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6035:1: ( ( RULE_ID ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6174:1: ( ( RULE_ID ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6175:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6035:1: ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6036:1: ( RULE_ID )
             {
              before(grammarAccess.getSetterAccess().getPropertyEStructuralFeatureCrossReference_0_0()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6176:1: ( RULE_ID )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6177:1: RULE_ID
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6037:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6038:1: RULE_ID
             {
              before(grammarAccess.getSetterAccess().getPropertyEStructuralFeatureIDTerminalRuleCall_0_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Setter__PropertyAssignment_012395); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Setter__PropertyAssignment_012118); 
              after(grammarAccess.getSetterAccess().getPropertyEStructuralFeatureIDTerminalRuleCall_0_0_1()); 
 
             }
@@ -16041,20 +15661,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Setter__ExpressionAssignment_2
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6188:1: rule__Setter__ExpressionAssignment_2 : ( ruleExpression ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6049:1: rule__Setter__ExpressionAssignment_2 : ( ruleExpression ) ;
     public final void rule__Setter__ExpressionAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6192:1: ( ( ruleExpression ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6193:1: ( ruleExpression )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6053:1: ( ( ruleExpression ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6054:1: ( ruleExpression )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6193:1: ( ruleExpression )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6194:1: ruleExpression
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6054:1: ( ruleExpression )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6055:1: ruleExpression
             {
              before(grammarAccess.getSetterAccess().getExpressionExpressionParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleExpression_in_rule__Setter__ExpressionAssignment_212430);
+            pushFollow(FOLLOW_ruleExpression_in_rule__Setter__ExpressionAssignment_212153);
             ruleExpression();
             _fsp--;
 
@@ -16081,24 +15701,24 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Setter__GuardAssignment_3
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6203:1: rule__Setter__GuardAssignment_3 : ( ( 'guard' ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6064:1: rule__Setter__GuardAssignment_3 : ( ( 'guard' ) ) ;
     public final void rule__Setter__GuardAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6207:1: ( ( ( 'guard' ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6208:1: ( ( 'guard' ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6068:1: ( ( ( 'guard' ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6069:1: ( ( 'guard' ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6208:1: ( ( 'guard' ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6209:1: ( 'guard' )
-            {
-             before(grammarAccess.getSetterAccess().getGuardGuardKeyword_3_0()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6210:1: ( 'guard' )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6211:1: 'guard'
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6069:1: ( ( 'guard' ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6070:1: ( 'guard' )
             {
              before(grammarAccess.getSetterAccess().getGuardGuardKeyword_3_0()); 
-            match(input,37,FOLLOW_37_in_rule__Setter__GuardAssignment_312466); 
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6071:1: ( 'guard' )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6072:1: 'guard'
+            {
+             before(grammarAccess.getSetterAccess().getGuardGuardKeyword_3_0()); 
+            match(input,37,FOLLOW_37_in_rule__Setter__GuardAssignment_312189); 
              after(grammarAccess.getSetterAccess().getGuardGuardKeyword_3_0()); 
 
             }
@@ -16126,20 +15746,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Function__NameAssignment_1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6226:1: rule__Function__NameAssignment_1 : ( RULE_ID ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6087:1: rule__Function__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Function__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6230:1: ( ( RULE_ID ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6231:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6091:1: ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6092:1: ( RULE_ID )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6231:1: ( RULE_ID )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6232:1: RULE_ID
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6092:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6093:1: RULE_ID
             {
              before(grammarAccess.getFunctionAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Function__NameAssignment_112505); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Function__NameAssignment_112228); 
              after(grammarAccess.getFunctionAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -16163,24 +15783,24 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Function__JavaClassAssignment_2
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6241:1: rule__Function__JavaClassAssignment_2 : ( ( ruleFQN ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6102:1: rule__Function__JavaClassAssignment_2 : ( ( ruleFQN ) ) ;
     public final void rule__Function__JavaClassAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6245:1: ( ( ( ruleFQN ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6246:1: ( ( ruleFQN ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6106:1: ( ( ( ruleFQN ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6107:1: ( ( ruleFQN ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6246:1: ( ( ruleFQN ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6247:1: ( ruleFQN )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6107:1: ( ( ruleFQN ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6108:1: ( ruleFQN )
             {
              before(grammarAccess.getFunctionAccess().getJavaClassJvmGenericTypeCrossReference_2_0()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6248:1: ( ruleFQN )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6249:1: ruleFQN
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6109:1: ( ruleFQN )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6110:1: ruleFQN
             {
              before(grammarAccess.getFunctionAccess().getJavaClassJvmGenericTypeFQNParserRuleCall_2_0_1()); 
-            pushFollow(FOLLOW_ruleFQN_in_rule__Function__JavaClassAssignment_212540);
+            pushFollow(FOLLOW_ruleFQN_in_rule__Function__JavaClassAssignment_212263);
             ruleFQN();
             _fsp--;
 
@@ -16211,24 +15831,24 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__Function__OperationAssignment_4
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6260:1: rule__Function__OperationAssignment_4 : ( ( RULE_ID ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6121:1: rule__Function__OperationAssignment_4 : ( ( RULE_ID ) ) ;
     public final void rule__Function__OperationAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6264:1: ( ( ( RULE_ID ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6265:1: ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6125:1: ( ( ( RULE_ID ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6126:1: ( ( RULE_ID ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6265:1: ( ( RULE_ID ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6266:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6126:1: ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6127:1: ( RULE_ID )
             {
              before(grammarAccess.getFunctionAccess().getOperationJvmOperationCrossReference_4_0()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6267:1: ( RULE_ID )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6268:1: RULE_ID
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6128:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6129:1: RULE_ID
             {
              before(grammarAccess.getFunctionAccess().getOperationJvmOperationIDTerminalRuleCall_4_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Function__OperationAssignment_412579); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Function__OperationAssignment_412302); 
              after(grammarAccess.getFunctionAccess().getOperationJvmOperationIDTerminalRuleCall_4_0_1()); 
 
             }
@@ -16256,24 +15876,24 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__UpdateStatement__VarRefAssignment_1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6279:1: rule__UpdateStatement__VarRefAssignment_1 : ( ( RULE_ID ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6140:1: rule__UpdateStatement__VarRefAssignment_1 : ( ( RULE_ID ) ) ;
     public final void rule__UpdateStatement__VarRefAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6283:1: ( ( ( RULE_ID ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6284:1: ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6144:1: ( ( ( RULE_ID ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6145:1: ( ( RULE_ID ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6284:1: ( ( RULE_ID ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6285:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6145:1: ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6146:1: ( RULE_ID )
             {
              before(grammarAccess.getUpdateStatementAccess().getVarRefVariableCrossReference_1_0()); 
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6286:1: ( RULE_ID )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6287:1: RULE_ID
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6147:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6148:1: RULE_ID
             {
              before(grammarAccess.getUpdateStatementAccess().getVarRefVariableIDTerminalRuleCall_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__UpdateStatement__VarRefAssignment_112618); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__UpdateStatement__VarRefAssignment_112341); 
              after(grammarAccess.getUpdateStatementAccess().getVarRefVariableIDTerminalRuleCall_1_0_1()); 
 
             }
@@ -16301,20 +15921,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__UpdateStatement__SettersAssignment_2_1_0
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6298:1: rule__UpdateStatement__SettersAssignment_2_1_0 : ( ruleSetter ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6159:1: rule__UpdateStatement__SettersAssignment_2_1_0 : ( ruleSetter ) ;
     public final void rule__UpdateStatement__SettersAssignment_2_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6302:1: ( ( ruleSetter ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6303:1: ( ruleSetter )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6163:1: ( ( ruleSetter ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6164:1: ( ruleSetter )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6303:1: ( ruleSetter )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6304:1: ruleSetter
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6164:1: ( ruleSetter )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6165:1: ruleSetter
             {
              before(grammarAccess.getUpdateStatementAccess().getSettersSetterParserRuleCall_2_1_0_0()); 
-            pushFollow(FOLLOW_ruleSetter_in_rule__UpdateStatement__SettersAssignment_2_1_012653);
+            pushFollow(FOLLOW_ruleSetter_in_rule__UpdateStatement__SettersAssignment_2_1_012376);
             ruleSetter();
             _fsp--;
 
@@ -16341,20 +15961,20 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
 
 
     // $ANTLR start rule__UpdateStatement__SettersAssignment_2_1_1_1
-    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6313:1: rule__UpdateStatement__SettersAssignment_2_1_1_1 : ( ruleSetter ) ;
+    // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6174:1: rule__UpdateStatement__SettersAssignment_2_1_1_1 : ( ruleSetter ) ;
     public final void rule__UpdateStatement__SettersAssignment_2_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6317:1: ( ( ruleSetter ) )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6318:1: ( ruleSetter )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6178:1: ( ( ruleSetter ) )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6179:1: ( ruleSetter )
             {
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6318:1: ( ruleSetter )
-            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6319:1: ruleSetter
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6179:1: ( ruleSetter )
+            // ../org.eclipselabs.emf.scaffolding.language.ui/src-gen/org/eclipselabs/emf/scaffolding/language/ui/contentassist/antlr/internal/InternalEMFScaffoldingDSL.g:6180:1: ruleSetter
             {
              before(grammarAccess.getUpdateStatementAccess().getSettersSetterParserRuleCall_2_1_1_1_0()); 
-            pushFollow(FOLLOW_ruleSetter_in_rule__UpdateStatement__SettersAssignment_2_1_1_112684);
+            pushFollow(FOLLOW_ruleSetter_in_rule__UpdateStatement__SettersAssignment_2_1_1_112407);
             ruleSetter();
             _fsp--;
 
@@ -16616,287 +16236,276 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalContentAssi
     public static final BitSet FOLLOW_rule__BindingTerminalExpression__FunctionAssignment_3_1_in_rule__BindingTerminalExpression__Group_3__1__Impl5270 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__BindingTerminalExpression__Group_3__2__Impl_in_rule__BindingTerminalExpression__Group_3__25300 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__BindingTerminalExpression__Group_3_2__0_in_rule__BindingTerminalExpression__Group_3__2__Impl5327 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BindingTerminalExpression__Group_3_2__0__Impl_in_rule__BindingTerminalExpression__Group_3_2__05363 = new BitSet(new long[]{0x0000000056008730L});
+    public static final BitSet FOLLOW_rule__BindingTerminalExpression__Group_3_2__0__Impl_in_rule__BindingTerminalExpression__Group_3_2__05363 = new BitSet(new long[]{0x0000000052008730L});
     public static final BitSet FOLLOW_rule__BindingTerminalExpression__Group_3_2__1_in_rule__BindingTerminalExpression__Group_3_2__05366 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_25_in_rule__BindingTerminalExpression__Group_3_2__0__Impl5394 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__BindingTerminalExpression__Group_3_2__1__Impl_in_rule__BindingTerminalExpression__Group_3_2__15425 = new BitSet(new long[]{0x0000000004000000L});
     public static final BitSet FOLLOW_rule__BindingTerminalExpression__Group_3_2__2_in_rule__BindingTerminalExpression__Group_3_2__15428 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BindingTerminalExpression__Group_3_2_1__0_in_rule__BindingTerminalExpression__Group_3_2__1__Impl5455 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BindingTerminalExpression__Group_3_2__2__Impl_in_rule__BindingTerminalExpression__Group_3_2__25486 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__BindingTerminalExpression__Group_3_2__2__Impl5514 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BindingTerminalExpression__Group_3_2_1__0__Impl_in_rule__BindingTerminalExpression__Group_3_2_1__05551 = new BitSet(new long[]{0x0000000008000002L});
-    public static final BitSet FOLLOW_rule__BindingTerminalExpression__Group_3_2_1__1_in_rule__BindingTerminalExpression__Group_3_2_1__05554 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_0_in_rule__BindingTerminalExpression__Group_3_2_1__0__Impl5581 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BindingTerminalExpression__Group_3_2_1__1__Impl_in_rule__BindingTerminalExpression__Group_3_2_1__15611 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BindingTerminalExpression__Group_3_2_1_1__0_in_rule__BindingTerminalExpression__Group_3_2_1__1__Impl5638 = new BitSet(new long[]{0x0000000008000002L});
-    public static final BitSet FOLLOW_rule__BindingTerminalExpression__Group_3_2_1_1__0__Impl_in_rule__BindingTerminalExpression__Group_3_2_1_1__05673 = new BitSet(new long[]{0x0000000052008730L});
-    public static final BitSet FOLLOW_rule__BindingTerminalExpression__Group_3_2_1_1__1_in_rule__BindingTerminalExpression__Group_3_2_1_1__05676 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__BindingTerminalExpression__Group_3_2_1_1__0__Impl5704 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BindingTerminalExpression__Group_3_2_1_1__1__Impl_in_rule__BindingTerminalExpression__Group_3_2_1_1__15735 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_1_1_in_rule__BindingTerminalExpression__Group_3_2_1_1__1__Impl5762 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__Group__0__Impl_in_rule__Expression__Group__05796 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_rule__Expression__Group__1_in_rule__Expression__Group__05799 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpressionHigh_in_rule__Expression__Group__0__Impl5826 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__Group__1__Impl_in_rule__Expression__Group__15855 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__Group_1__0_in_rule__Expression__Group__1__Impl5882 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__Group_1__0__Impl_in_rule__Expression__Group_1__05917 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__Expression__Group_1__1_in_rule__Expression__Group_1__05920 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__Group_1__1__Impl_in_rule__Expression__Group_1__15978 = new BitSet(new long[]{0x0000000172008730L});
-    public static final BitSet FOLLOW_rule__Expression__Group_1__2_in_rule__Expression__Group_1__15981 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__OpAssignment_1_1_in_rule__Expression__Group_1__1__Impl6008 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__Group_1__2__Impl_in_rule__Expression__Group_1__26038 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Expression__RightAssignment_1_2_in_rule__Expression__Group_1__2__Impl6065 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ExpressionHigh__Group__0__Impl_in_rule__ExpressionHigh__Group__06101 = new BitSet(new long[]{0x0000000000000082L});
-    public static final BitSet FOLLOW_rule__ExpressionHigh__Group__1_in_rule__ExpressionHigh__Group__06104 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTerminalExpression_in_rule__ExpressionHigh__Group__0__Impl6131 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ExpressionHigh__Group__1__Impl_in_rule__ExpressionHigh__Group__16160 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ExpressionHigh__Group_1__0_in_rule__ExpressionHigh__Group__1__Impl6187 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ExpressionHigh__Group_1__0__Impl_in_rule__ExpressionHigh__Group_1__06222 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_rule__ExpressionHigh__Group_1__1_in_rule__ExpressionHigh__Group_1__06225 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ExpressionHigh__Group_1__1__Impl_in_rule__ExpressionHigh__Group_1__16283 = new BitSet(new long[]{0x0000000172008730L});
-    public static final BitSet FOLLOW_rule__ExpressionHigh__Group_1__2_in_rule__ExpressionHigh__Group_1__16286 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ExpressionHigh__OpAssignment_1_1_in_rule__ExpressionHigh__Group_1__1__Impl6313 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ExpressionHigh__Group_1__2__Impl_in_rule__ExpressionHigh__Group_1__26343 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ExpressionHigh__RightAssignment_1_2_in_rule__ExpressionHigh__Group_1__2__Impl6370 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_0__0__Impl_in_rule__TerminalExpression__Group_0__06406 = new BitSet(new long[]{0x0000000172008730L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_0__1_in_rule__TerminalExpression__Group_0__06409 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__TerminalExpression__Group_0__0__Impl6437 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_0__1__Impl_in_rule__TerminalExpression__Group_0__16468 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_0__2_in_rule__TerminalExpression__Group_0__16471 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__TerminalExpression__Group_0__1__Impl6498 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_0__2__Impl_in_rule__TerminalExpression__Group_0__26527 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__TerminalExpression__Group_0__2__Impl6555 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_3__0__Impl_in_rule__TerminalExpression__Group_3__06592 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_3__1_in_rule__TerminalExpression__Group_3__06595 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_3__1__Impl_in_rule__TerminalExpression__Group_3__16653 = new BitSet(new long[]{0x0000000172008730L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_3__2_in_rule__TerminalExpression__Group_3__16656 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__TerminalExpression__Group_3__1__Impl6684 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_3__2__Impl_in_rule__TerminalExpression__Group_3__26715 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__ExpAssignment_3_2_in_rule__TerminalExpression__Group_3__2__Impl6742 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4__0__Impl_in_rule__TerminalExpression__Group_4__06778 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4__1_in_rule__TerminalExpression__Group_4__06781 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4__1__Impl_in_rule__TerminalExpression__Group_4__16839 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4__2_in_rule__TerminalExpression__Group_4__16842 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__FunctionAssignment_4_1_in_rule__TerminalExpression__Group_4__1__Impl6869 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4__2__Impl_in_rule__TerminalExpression__Group_4__26899 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4_2__0_in_rule__TerminalExpression__Group_4__2__Impl6926 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4_2__0__Impl_in_rule__TerminalExpression__Group_4_2__06962 = new BitSet(new long[]{0x0000000176008730L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4_2__1_in_rule__TerminalExpression__Group_4_2__06965 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__TerminalExpression__Group_4_2__0__Impl6993 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4_2__1__Impl_in_rule__TerminalExpression__Group_4_2__17024 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4_2__2_in_rule__TerminalExpression__Group_4_2__17027 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4_2_1__0_in_rule__TerminalExpression__Group_4_2__1__Impl7054 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4_2__2__Impl_in_rule__TerminalExpression__Group_4_2__27085 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__TerminalExpression__Group_4_2__2__Impl7113 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4_2_1__0__Impl_in_rule__TerminalExpression__Group_4_2_1__07150 = new BitSet(new long[]{0x0000000008000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4_2_1__1_in_rule__TerminalExpression__Group_4_2_1__07153 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__ArgumentsAssignment_4_2_1_0_in_rule__TerminalExpression__Group_4_2_1__0__Impl7180 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4_2_1__1__Impl_in_rule__TerminalExpression__Group_4_2_1__17210 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4_2_1_1__0_in_rule__TerminalExpression__Group_4_2_1__1__Impl7237 = new BitSet(new long[]{0x0000000008000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4_2_1_1__0__Impl_in_rule__TerminalExpression__Group_4_2_1_1__07272 = new BitSet(new long[]{0x0000000172008730L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4_2_1_1__1_in_rule__TerminalExpression__Group_4_2_1_1__07275 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__TerminalExpression__Group_4_2_1_1__0__Impl7303 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4_2_1_1__1__Impl_in_rule__TerminalExpression__Group_4_2_1_1__17334 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__TerminalExpression__ArgumentsAssignment_4_2_1_1_1_in_rule__TerminalExpression__Group_4_2_1_1__1__Impl7361 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrimitiveLiteral__Group_3__0__Impl_in_rule__PrimitiveLiteral__Group_3__07395 = new BitSet(new long[]{0x0000000000000100L});
-    public static final BitSet FOLLOW_rule__PrimitiveLiteral__Group_3__1_in_rule__PrimitiveLiteral__Group_3__07398 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrimitiveLiteral__Group_3__1__Impl_in_rule__PrimitiveLiteral__Group_3__17456 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrimitiveLiteral__ValueAssignment_3_1_in_rule__PrimitiveLiteral__Group_3__1__Impl7483 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrimitiveLiteral__Group_4__0__Impl_in_rule__PrimitiveLiteral__Group_4__07517 = new BitSet(new long[]{0x0000000000000200L});
-    public static final BitSet FOLLOW_rule__PrimitiveLiteral__Group_4__1_in_rule__PrimitiveLiteral__Group_4__07520 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrimitiveLiteral__Group_4__1__Impl_in_rule__PrimitiveLiteral__Group_4__17578 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrimitiveLiteral__ValueAssignment_4_1_in_rule__PrimitiveLiteral__Group_4__1__Impl7605 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrimitiveLiteral__Group_5__0__Impl_in_rule__PrimitiveLiteral__Group_5__07639 = new BitSet(new long[]{0x0000000000000400L});
-    public static final BitSet FOLLOW_rule__PrimitiveLiteral__Group_5__1_in_rule__PrimitiveLiteral__Group_5__07642 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrimitiveLiteral__Group_5__1__Impl_in_rule__PrimitiveLiteral__Group_5__17700 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrimitiveLiteral__ValueAssignment_5_1_in_rule__PrimitiveLiteral__Group_5__1__Impl7727 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ThenBlock__Group__0__Impl_in_rule__ThenBlock__Group__07761 = new BitSet(new long[]{0x0000000972808730L});
-    public static final BitSet FOLLOW_rule__ThenBlock__Group__1_in_rule__ThenBlock__Group__07764 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ThenBlock__Alternatives_0_in_rule__ThenBlock__Group__0__Impl7791 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ThenBlock__Group__1__Impl_in_rule__ThenBlock__Group__17821 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ThenBlock__Alternatives_1_in_rule__ThenBlock__Group__1__Impl7848 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ThenBlock__Group_1_0__0__Impl_in_rule__ThenBlock__Group_1_0__07882 = new BitSet(new long[]{0x0000000973008730L});
-    public static final BitSet FOLLOW_rule__ThenBlock__Group_1_0__1_in_rule__ThenBlock__Group_1_0__07885 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__ThenBlock__Group_1_0__0__Impl7913 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ThenBlock__Group_1_0__1__Impl_in_rule__ThenBlock__Group_1_0__17944 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_rule__ThenBlock__Group_1_0__2_in_rule__ThenBlock__Group_1_0__17947 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ThenBlock__StatementsAssignment_1_0_1_in_rule__ThenBlock__Group_1_0__1__Impl7974 = new BitSet(new long[]{0x0000000972008732L});
-    public static final BitSet FOLLOW_rule__ThenBlock__Group_1_0__2__Impl_in_rule__ThenBlock__Group_1_0__28005 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__ThenBlock__Group_1_0__2__Impl8033 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CreateStatement__Group__0__Impl_in_rule__CreateStatement__Group__08070 = new BitSet(new long[]{0x0000000172008730L});
-    public static final BitSet FOLLOW_rule__CreateStatement__Group__1_in_rule__CreateStatement__Group__08073 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CreateStatement__Group_0__0_in_rule__CreateStatement__Group__0__Impl8100 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CreateStatement__Group__1__Impl_in_rule__CreateStatement__Group__18131 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CreateStatement__ExpressionAssignment_1_in_rule__CreateStatement__Group__1__Impl8158 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CreateStatement__Group_0__0__Impl_in_rule__CreateStatement__Group_0__08192 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_rule__CreateStatement__Group_0__1_in_rule__CreateStatement__Group_0__08195 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CreateStatement__VarAssignment_0_0_in_rule__CreateStatement__Group_0__0__Impl8222 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CreateStatement__Group_0__1__Impl_in_rule__CreateStatement__Group_0__18252 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__CreateStatement__Group_0__1__Impl8280 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CreateClass__Group__0__Impl_in_rule__CreateClass__Group__08315 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__CreateClass__Group__1_in_rule__CreateClass__Group__08318 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rule__CreateClass__Group__0__Impl8346 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CreateClass__Group__1__Impl_in_rule__CreateClass__Group__18377 = new BitSet(new long[]{0x0000000000800002L});
-    public static final BitSet FOLLOW_rule__CreateClass__Group__2_in_rule__CreateClass__Group__18380 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CreateClass__TypeAssignment_1_in_rule__CreateClass__Group__1__Impl8407 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CreateClass__Group__2__Impl_in_rule__CreateClass__Group__28437 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CreateClass__Group_2__0_in_rule__CreateClass__Group__2__Impl8464 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CreateClass__Group_2__0__Impl_in_rule__CreateClass__Group_2__08501 = new BitSet(new long[]{0x0000000001000010L});
-    public static final BitSet FOLLOW_rule__CreateClass__Group_2__1_in_rule__CreateClass__Group_2__08504 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__CreateClass__Group_2__0__Impl8532 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CreateClass__Group_2__1__Impl_in_rule__CreateClass__Group_2__18563 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_rule__CreateClass__Group_2__2_in_rule__CreateClass__Group_2__18566 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CreateClass__Group_2_1__0_in_rule__CreateClass__Group_2__1__Impl8593 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CreateClass__Group_2__2__Impl_in_rule__CreateClass__Group_2__28624 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__CreateClass__Group_2__2__Impl8652 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CreateClass__Group_2_1__0__Impl_in_rule__CreateClass__Group_2_1__08689 = new BitSet(new long[]{0x0000000008000002L});
-    public static final BitSet FOLLOW_rule__CreateClass__Group_2_1__1_in_rule__CreateClass__Group_2_1__08692 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CreateClass__SettersAssignment_2_1_0_in_rule__CreateClass__Group_2_1__0__Impl8719 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CreateClass__Group_2_1__1__Impl_in_rule__CreateClass__Group_2_1__18749 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CreateClass__Group_2_1_1__0_in_rule__CreateClass__Group_2_1__1__Impl8776 = new BitSet(new long[]{0x0000000008000002L});
-    public static final BitSet FOLLOW_rule__CreateClass__Group_2_1_1__0__Impl_in_rule__CreateClass__Group_2_1_1__08811 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__CreateClass__Group_2_1_1__1_in_rule__CreateClass__Group_2_1_1__08814 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__CreateClass__Group_2_1_1__0__Impl8842 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CreateClass__Group_2_1_1__1__Impl_in_rule__CreateClass__Group_2_1_1__18873 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__CreateClass__SettersAssignment_2_1_1_1_in_rule__CreateClass__Group_2_1_1__1__Impl8900 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ListLiteral__Group__0__Impl_in_rule__ListLiteral__Group__08934 = new BitSet(new long[]{0x00000001F2008730L});
-    public static final BitSet FOLLOW_rule__ListLiteral__Group__1_in_rule__ListLiteral__Group__08937 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__ListLiteral__Group__0__Impl8965 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ListLiteral__Group__1__Impl_in_rule__ListLiteral__Group__18996 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_rule__ListLiteral__Group__2_in_rule__ListLiteral__Group__18999 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ListLiteral__Group_1__0_in_rule__ListLiteral__Group__1__Impl9026 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ListLiteral__Group__2__Impl_in_rule__ListLiteral__Group__29057 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rule__ListLiteral__Group__2__Impl9085 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ListLiteral__Group_1__0__Impl_in_rule__ListLiteral__Group_1__09122 = new BitSet(new long[]{0x0000000008000002L});
-    public static final BitSet FOLLOW_rule__ListLiteral__Group_1__1_in_rule__ListLiteral__Group_1__09125 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ListLiteral__ItemsAssignment_1_0_in_rule__ListLiteral__Group_1__0__Impl9152 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ListLiteral__Group_1__1__Impl_in_rule__ListLiteral__Group_1__19182 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ListLiteral__Group_1_1__0_in_rule__ListLiteral__Group_1__1__Impl9209 = new BitSet(new long[]{0x0000000008000002L});
-    public static final BitSet FOLLOW_rule__ListLiteral__Group_1_1__0__Impl_in_rule__ListLiteral__Group_1_1__09244 = new BitSet(new long[]{0x0000000172008730L});
-    public static final BitSet FOLLOW_rule__ListLiteral__Group_1_1__1_in_rule__ListLiteral__Group_1_1__09247 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__ListLiteral__Group_1_1__0__Impl9275 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ListLiteral__Group_1_1__1__Impl_in_rule__ListLiteral__Group_1_1__19306 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ListLiteral__ItemsAssignment_1_1_1_in_rule__ListLiteral__Group_1_1__1__Impl9333 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__VarRefLiteral__Group__0__Impl_in_rule__VarRefLiteral__Group__09367 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__VarRefLiteral__Group__1_in_rule__VarRefLiteral__Group__09370 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__VarRefLiteral__Group__0__Impl9398 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__VarRefLiteral__Group__1__Impl_in_rule__VarRefLiteral__Group__19429 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__VarRefLiteral__VarRefAssignment_1_in_rule__VarRefLiteral__Group__1__Impl9456 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Setter__Group__0__Impl_in_rule__Setter__Group__09490 = new BitSet(new long[]{0x00000000000C0000L});
-    public static final BitSet FOLLOW_rule__Setter__Group__1_in_rule__Setter__Group__09493 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Setter__PropertyAssignment_0_in_rule__Setter__Group__0__Impl9520 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Setter__Group__1__Impl_in_rule__Setter__Group__19550 = new BitSet(new long[]{0x0000000172008730L});
-    public static final BitSet FOLLOW_rule__Setter__Group__2_in_rule__Setter__Group__19553 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Setter__Alternatives_1_in_rule__Setter__Group__1__Impl9580 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Setter__Group__2__Impl_in_rule__Setter__Group__29610 = new BitSet(new long[]{0x0000002000000002L});
-    public static final BitSet FOLLOW_rule__Setter__Group__3_in_rule__Setter__Group__29613 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Setter__ExpressionAssignment_2_in_rule__Setter__Group__2__Impl9640 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Setter__Group__3__Impl_in_rule__Setter__Group__39670 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Setter__GuardAssignment_3_in_rule__Setter__Group__3__Impl9697 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Function__Group__0__Impl_in_rule__Function__Group__09736 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Function__Group__1_in_rule__Function__Group__09739 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__Function__Group__0__Impl9767 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Function__Group__1__Impl_in_rule__Function__Group__19798 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Function__Group__2_in_rule__Function__Group__19801 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Function__NameAssignment_1_in_rule__Function__Group__1__Impl9828 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Function__Group__2__Impl_in_rule__Function__Group__29858 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_rule__Function__Group__3_in_rule__Function__Group__29861 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Function__JavaClassAssignment_2_in_rule__Function__Group__2__Impl9888 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Function__Group__3__Impl_in_rule__Function__Group__39918 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Function__Group__4_in_rule__Function__Group__39921 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__Function__Group__3__Impl9949 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Function__Group__4__Impl_in_rule__Function__Group__49980 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Function__OperationAssignment_4_in_rule__Function__Group__4__Impl10007 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UpdateStatement__Group__0__Impl_in_rule__UpdateStatement__Group__010047 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__UpdateStatement__Group__1_in_rule__UpdateStatement__Group__010050 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__UpdateStatement__Group__0__Impl10078 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UpdateStatement__Group__1__Impl_in_rule__UpdateStatement__Group__110109 = new BitSet(new long[]{0x0000000000800002L});
-    public static final BitSet FOLLOW_rule__UpdateStatement__Group__2_in_rule__UpdateStatement__Group__110112 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UpdateStatement__VarRefAssignment_1_in_rule__UpdateStatement__Group__1__Impl10139 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UpdateStatement__Group__2__Impl_in_rule__UpdateStatement__Group__210169 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UpdateStatement__Group_2__0_in_rule__UpdateStatement__Group__2__Impl10196 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UpdateStatement__Group_2__0__Impl_in_rule__UpdateStatement__Group_2__010233 = new BitSet(new long[]{0x0000000001000010L});
-    public static final BitSet FOLLOW_rule__UpdateStatement__Group_2__1_in_rule__UpdateStatement__Group_2__010236 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__UpdateStatement__Group_2__0__Impl10264 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UpdateStatement__Group_2__1__Impl_in_rule__UpdateStatement__Group_2__110295 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_rule__UpdateStatement__Group_2__2_in_rule__UpdateStatement__Group_2__110298 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UpdateStatement__Group_2_1__0_in_rule__UpdateStatement__Group_2__1__Impl10325 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UpdateStatement__Group_2__2__Impl_in_rule__UpdateStatement__Group_2__210356 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__UpdateStatement__Group_2__2__Impl10384 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UpdateStatement__Group_2_1__0__Impl_in_rule__UpdateStatement__Group_2_1__010421 = new BitSet(new long[]{0x0000000008000002L});
-    public static final BitSet FOLLOW_rule__UpdateStatement__Group_2_1__1_in_rule__UpdateStatement__Group_2_1__010424 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UpdateStatement__SettersAssignment_2_1_0_in_rule__UpdateStatement__Group_2_1__0__Impl10451 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UpdateStatement__Group_2_1__1__Impl_in_rule__UpdateStatement__Group_2_1__110481 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UpdateStatement__Group_2_1_1__0_in_rule__UpdateStatement__Group_2_1__1__Impl10508 = new BitSet(new long[]{0x0000000008000002L});
-    public static final BitSet FOLLOW_rule__UpdateStatement__Group_2_1_1__0__Impl_in_rule__UpdateStatement__Group_2_1_1__010543 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__UpdateStatement__Group_2_1_1__1_in_rule__UpdateStatement__Group_2_1_1__010546 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__UpdateStatement__Group_2_1_1__0__Impl10574 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UpdateStatement__Group_2_1_1__1__Impl_in_rule__UpdateStatement__Group_2_1_1__110605 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UpdateStatement__SettersAssignment_2_1_1_1_in_rule__UpdateStatement__Group_2_1_1__1__Impl10632 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FQN__Group__0__Impl_in_rule__FQN__Group__010666 = new BitSet(new long[]{0x0000001000000002L});
-    public static final BitSet FOLLOW_rule__FQN__Group__1_in_rule__FQN__Group__010669 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__FQN__Group__0__Impl10696 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FQN__Group__1__Impl_in_rule__FQN__Group__110725 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FQN__Group_1__0_in_rule__FQN__Group__1__Impl10752 = new BitSet(new long[]{0x0000001000000002L});
-    public static final BitSet FOLLOW_rule__FQN__Group_1__0__Impl_in_rule__FQN__Group_1__010787 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__FQN__Group_1__1_in_rule__FQN__Group_1__010790 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__FQN__Group_1__0__Impl10818 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__FQN__Group_1__1__Impl_in_rule__FQN__Group_1__110849 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__FQN__Group_1__1__Impl10876 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleScaffold_in_rule__Scaffolding__ScaffoldAssignment_010917 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleScaffoldingElement_in_rule__Scaffolding__ElementsAssignment_110948 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Scaffold__RefPackageAssignment_110979 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Rule__NameAssignment_111010 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWhenBlock_in_rule__Rule__WhenAssignment_211041 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleThenBlock_in_rule__Rule__ThenAssignment_311072 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMatch_in_rule__WhenBlock__MatchesAssignment_1_0_111103 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMatch_in_rule__WhenBlock__MatchesAssignment_1_111134 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariable_in_rule__Match__VarAssignment_0_011165 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Match__TypeAssignment_111200 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParam_in_rule__Match__ParamsAssignment_2_1_011235 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleParam_in_rule__Match__ParamsAssignment_2_1_1_111266 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Variable__NameAssignment11297 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBindingExpression_in_rule__Param__PropertyAssignment_011328 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariable_in_rule__Param__VarAssignment_1_111359 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_OPERATOR_LOW_PRIORITY_in_rule__BindingExpression__OpAssignment_1_111390 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBindingExpression_in_rule__BindingExpression__RightAssignment_1_211421 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_OPERATOR_HIGH_PRIORITY_in_rule__BindingExpressionHigh__OpAssignment_1_111452 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBindingExpressionHigh_in_rule__BindingExpressionHigh__RightAssignment_1_211483 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBindingTerminalExpression_in_rule__BindingTerminalExpression__ExpAssignment_2_211514 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__BindingTerminalExpression__FunctionAssignment_3_111549 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBindingExpression_in_rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_011584 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBindingExpression_in_rule__BindingTerminalExpression__ArgumentsAssignment_3_2_1_1_111615 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_OPERATOR_LOW_PRIORITY_in_rule__Expression__OpAssignment_1_111646 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__Expression__RightAssignment_1_211677 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_OPERATOR_HIGH_PRIORITY_in_rule__ExpressionHigh__OpAssignment_1_111708 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpressionHigh_in_rule__ExpressionHigh__RightAssignment_1_211739 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTerminalExpression_in_rule__TerminalExpression__ExpAssignment_3_211770 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__TerminalExpression__FunctionAssignment_4_111805 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__TerminalExpression__ArgumentsAssignment_4_2_1_011840 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__TerminalExpression__ArgumentsAssignment_4_2_1_1_111871 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__PrimitiveLiteral__ValueAssignment_3_111902 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_BOOLEAN_in_rule__PrimitiveLiteral__ValueAssignment_4_111933 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__PrimitiveLiteral__ValueAssignment_5_111964 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__FeatureRefLiteral__RefAssignment11999 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStatement_in_rule__ThenBlock__StatementsAssignment_1_0_112034 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStatement_in_rule__ThenBlock__StatementsAssignment_1_112065 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariable_in_rule__CreateStatement__VarAssignment_0_012096 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__CreateStatement__ExpressionAssignment_112127 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__CreateClass__TypeAssignment_112162 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSetter_in_rule__CreateClass__SettersAssignment_2_1_012197 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSetter_in_rule__CreateClass__SettersAssignment_2_1_1_112228 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__StringLiteral__ValueAssignment12259 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__ListLiteral__ItemsAssignment_1_012290 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__ListLiteral__ItemsAssignment_1_1_112321 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__VarRefLiteral__VarRefAssignment_112356 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Setter__PropertyAssignment_012395 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExpression_in_rule__Setter__ExpressionAssignment_212430 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_rule__Setter__GuardAssignment_312466 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Function__NameAssignment_112505 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFQN_in_rule__Function__JavaClassAssignment_212540 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Function__OperationAssignment_412579 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__UpdateStatement__VarRefAssignment_112618 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSetter_in_rule__UpdateStatement__SettersAssignment_2_1_012653 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSetter_in_rule__UpdateStatement__SettersAssignment_2_1_1_112684 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BindingTerminalExpression__ExpAssignment_3_2_1_in_rule__BindingTerminalExpression__Group_3_2__1__Impl5455 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BindingTerminalExpression__Group_3_2__2__Impl_in_rule__BindingTerminalExpression__Group_3_2__25485 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__BindingTerminalExpression__Group_3_2__2__Impl5513 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__Group__0__Impl_in_rule__Expression__Group__05550 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_rule__Expression__Group__1_in_rule__Expression__Group__05553 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpressionHigh_in_rule__Expression__Group__0__Impl5580 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__Group__1__Impl_in_rule__Expression__Group__15609 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__Group_1__0_in_rule__Expression__Group__1__Impl5636 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__Group_1__0__Impl_in_rule__Expression__Group_1__05671 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__Expression__Group_1__1_in_rule__Expression__Group_1__05674 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__Group_1__1__Impl_in_rule__Expression__Group_1__15732 = new BitSet(new long[]{0x0000000172008730L});
+    public static final BitSet FOLLOW_rule__Expression__Group_1__2_in_rule__Expression__Group_1__15735 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__OpAssignment_1_1_in_rule__Expression__Group_1__1__Impl5762 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__Group_1__2__Impl_in_rule__Expression__Group_1__25792 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Expression__RightAssignment_1_2_in_rule__Expression__Group_1__2__Impl5819 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExpressionHigh__Group__0__Impl_in_rule__ExpressionHigh__Group__05855 = new BitSet(new long[]{0x0000000000000082L});
+    public static final BitSet FOLLOW_rule__ExpressionHigh__Group__1_in_rule__ExpressionHigh__Group__05858 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTerminalExpression_in_rule__ExpressionHigh__Group__0__Impl5885 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExpressionHigh__Group__1__Impl_in_rule__ExpressionHigh__Group__15914 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExpressionHigh__Group_1__0_in_rule__ExpressionHigh__Group__1__Impl5941 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExpressionHigh__Group_1__0__Impl_in_rule__ExpressionHigh__Group_1__05976 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_rule__ExpressionHigh__Group_1__1_in_rule__ExpressionHigh__Group_1__05979 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExpressionHigh__Group_1__1__Impl_in_rule__ExpressionHigh__Group_1__16037 = new BitSet(new long[]{0x0000000172008730L});
+    public static final BitSet FOLLOW_rule__ExpressionHigh__Group_1__2_in_rule__ExpressionHigh__Group_1__16040 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExpressionHigh__OpAssignment_1_1_in_rule__ExpressionHigh__Group_1__1__Impl6067 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExpressionHigh__Group_1__2__Impl_in_rule__ExpressionHigh__Group_1__26097 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExpressionHigh__RightAssignment_1_2_in_rule__ExpressionHigh__Group_1__2__Impl6124 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_0__0__Impl_in_rule__TerminalExpression__Group_0__06160 = new BitSet(new long[]{0x0000000172008730L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_0__1_in_rule__TerminalExpression__Group_0__06163 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__TerminalExpression__Group_0__0__Impl6191 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_0__1__Impl_in_rule__TerminalExpression__Group_0__16222 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_0__2_in_rule__TerminalExpression__Group_0__16225 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__TerminalExpression__Group_0__1__Impl6252 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_0__2__Impl_in_rule__TerminalExpression__Group_0__26281 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__TerminalExpression__Group_0__2__Impl6309 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_3__0__Impl_in_rule__TerminalExpression__Group_3__06346 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_3__1_in_rule__TerminalExpression__Group_3__06349 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_3__1__Impl_in_rule__TerminalExpression__Group_3__16407 = new BitSet(new long[]{0x0000000172008730L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_3__2_in_rule__TerminalExpression__Group_3__16410 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__TerminalExpression__Group_3__1__Impl6438 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_3__2__Impl_in_rule__TerminalExpression__Group_3__26469 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__ExpAssignment_3_2_in_rule__TerminalExpression__Group_3__2__Impl6496 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4__0__Impl_in_rule__TerminalExpression__Group_4__06532 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4__1_in_rule__TerminalExpression__Group_4__06535 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4__1__Impl_in_rule__TerminalExpression__Group_4__16593 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4__2_in_rule__TerminalExpression__Group_4__16596 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__FunctionAssignment_4_1_in_rule__TerminalExpression__Group_4__1__Impl6623 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4__2__Impl_in_rule__TerminalExpression__Group_4__26653 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4_2__0_in_rule__TerminalExpression__Group_4__2__Impl6680 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4_2__0__Impl_in_rule__TerminalExpression__Group_4_2__06716 = new BitSet(new long[]{0x0000000176008730L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4_2__1_in_rule__TerminalExpression__Group_4_2__06719 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__TerminalExpression__Group_4_2__0__Impl6747 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4_2__1__Impl_in_rule__TerminalExpression__Group_4_2__16778 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4_2__2_in_rule__TerminalExpression__Group_4_2__16781 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4_2_1__0_in_rule__TerminalExpression__Group_4_2__1__Impl6808 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4_2__2__Impl_in_rule__TerminalExpression__Group_4_2__26839 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__TerminalExpression__Group_4_2__2__Impl6867 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4_2_1__0__Impl_in_rule__TerminalExpression__Group_4_2_1__06904 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4_2_1__1_in_rule__TerminalExpression__Group_4_2_1__06907 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__ArgumentsAssignment_4_2_1_0_in_rule__TerminalExpression__Group_4_2_1__0__Impl6934 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4_2_1__1__Impl_in_rule__TerminalExpression__Group_4_2_1__16964 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4_2_1_1__0_in_rule__TerminalExpression__Group_4_2_1__1__Impl6991 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4_2_1_1__0__Impl_in_rule__TerminalExpression__Group_4_2_1_1__07026 = new BitSet(new long[]{0x0000000172008730L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4_2_1_1__1_in_rule__TerminalExpression__Group_4_2_1_1__07029 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__TerminalExpression__Group_4_2_1_1__0__Impl7057 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__Group_4_2_1_1__1__Impl_in_rule__TerminalExpression__Group_4_2_1_1__17088 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__TerminalExpression__ArgumentsAssignment_4_2_1_1_1_in_rule__TerminalExpression__Group_4_2_1_1__1__Impl7115 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrimitiveLiteral__Group_3__0__Impl_in_rule__PrimitiveLiteral__Group_3__07149 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_rule__PrimitiveLiteral__Group_3__1_in_rule__PrimitiveLiteral__Group_3__07152 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrimitiveLiteral__Group_3__1__Impl_in_rule__PrimitiveLiteral__Group_3__17210 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrimitiveLiteral__ValueAssignment_3_1_in_rule__PrimitiveLiteral__Group_3__1__Impl7237 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrimitiveLiteral__Group_4__0__Impl_in_rule__PrimitiveLiteral__Group_4__07271 = new BitSet(new long[]{0x0000000000000200L});
+    public static final BitSet FOLLOW_rule__PrimitiveLiteral__Group_4__1_in_rule__PrimitiveLiteral__Group_4__07274 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrimitiveLiteral__Group_4__1__Impl_in_rule__PrimitiveLiteral__Group_4__17332 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrimitiveLiteral__ValueAssignment_4_1_in_rule__PrimitiveLiteral__Group_4__1__Impl7359 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrimitiveLiteral__Group_5__0__Impl_in_rule__PrimitiveLiteral__Group_5__07393 = new BitSet(new long[]{0x0000000000000400L});
+    public static final BitSet FOLLOW_rule__PrimitiveLiteral__Group_5__1_in_rule__PrimitiveLiteral__Group_5__07396 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrimitiveLiteral__Group_5__1__Impl_in_rule__PrimitiveLiteral__Group_5__17454 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrimitiveLiteral__ValueAssignment_5_1_in_rule__PrimitiveLiteral__Group_5__1__Impl7481 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ThenBlock__Group__0__Impl_in_rule__ThenBlock__Group__07515 = new BitSet(new long[]{0x0000000972808730L});
+    public static final BitSet FOLLOW_rule__ThenBlock__Group__1_in_rule__ThenBlock__Group__07518 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ThenBlock__Alternatives_0_in_rule__ThenBlock__Group__0__Impl7545 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ThenBlock__Group__1__Impl_in_rule__ThenBlock__Group__17575 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ThenBlock__Alternatives_1_in_rule__ThenBlock__Group__1__Impl7602 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ThenBlock__Group_1_0__0__Impl_in_rule__ThenBlock__Group_1_0__07636 = new BitSet(new long[]{0x0000000973008730L});
+    public static final BitSet FOLLOW_rule__ThenBlock__Group_1_0__1_in_rule__ThenBlock__Group_1_0__07639 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__ThenBlock__Group_1_0__0__Impl7667 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ThenBlock__Group_1_0__1__Impl_in_rule__ThenBlock__Group_1_0__17698 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__ThenBlock__Group_1_0__2_in_rule__ThenBlock__Group_1_0__17701 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ThenBlock__StatementsAssignment_1_0_1_in_rule__ThenBlock__Group_1_0__1__Impl7728 = new BitSet(new long[]{0x0000000972008732L});
+    public static final BitSet FOLLOW_rule__ThenBlock__Group_1_0__2__Impl_in_rule__ThenBlock__Group_1_0__27759 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__ThenBlock__Group_1_0__2__Impl7787 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CreateStatement__Group__0__Impl_in_rule__CreateStatement__Group__07824 = new BitSet(new long[]{0x0000000172008730L});
+    public static final BitSet FOLLOW_rule__CreateStatement__Group__1_in_rule__CreateStatement__Group__07827 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CreateStatement__Group_0__0_in_rule__CreateStatement__Group__0__Impl7854 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CreateStatement__Group__1__Impl_in_rule__CreateStatement__Group__17885 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CreateStatement__ExpressionAssignment_1_in_rule__CreateStatement__Group__1__Impl7912 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CreateStatement__Group_0__0__Impl_in_rule__CreateStatement__Group_0__07946 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_rule__CreateStatement__Group_0__1_in_rule__CreateStatement__Group_0__07949 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CreateStatement__VarAssignment_0_0_in_rule__CreateStatement__Group_0__0__Impl7976 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CreateStatement__Group_0__1__Impl_in_rule__CreateStatement__Group_0__18006 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__CreateStatement__Group_0__1__Impl8034 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CreateClass__Group__0__Impl_in_rule__CreateClass__Group__08069 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__CreateClass__Group__1_in_rule__CreateClass__Group__08072 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rule__CreateClass__Group__0__Impl8100 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CreateClass__Group__1__Impl_in_rule__CreateClass__Group__18131 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_rule__CreateClass__Group__2_in_rule__CreateClass__Group__18134 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CreateClass__TypeAssignment_1_in_rule__CreateClass__Group__1__Impl8161 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CreateClass__Group__2__Impl_in_rule__CreateClass__Group__28191 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CreateClass__Group_2__0_in_rule__CreateClass__Group__2__Impl8218 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CreateClass__Group_2__0__Impl_in_rule__CreateClass__Group_2__08255 = new BitSet(new long[]{0x0000000001000010L});
+    public static final BitSet FOLLOW_rule__CreateClass__Group_2__1_in_rule__CreateClass__Group_2__08258 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__CreateClass__Group_2__0__Impl8286 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CreateClass__Group_2__1__Impl_in_rule__CreateClass__Group_2__18317 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__CreateClass__Group_2__2_in_rule__CreateClass__Group_2__18320 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CreateClass__Group_2_1__0_in_rule__CreateClass__Group_2__1__Impl8347 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CreateClass__Group_2__2__Impl_in_rule__CreateClass__Group_2__28378 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__CreateClass__Group_2__2__Impl8406 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CreateClass__Group_2_1__0__Impl_in_rule__CreateClass__Group_2_1__08443 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_rule__CreateClass__Group_2_1__1_in_rule__CreateClass__Group_2_1__08446 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CreateClass__SettersAssignment_2_1_0_in_rule__CreateClass__Group_2_1__0__Impl8473 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CreateClass__Group_2_1__1__Impl_in_rule__CreateClass__Group_2_1__18503 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CreateClass__Group_2_1_1__0_in_rule__CreateClass__Group_2_1__1__Impl8530 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_rule__CreateClass__Group_2_1_1__0__Impl_in_rule__CreateClass__Group_2_1_1__08565 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__CreateClass__Group_2_1_1__1_in_rule__CreateClass__Group_2_1_1__08568 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__CreateClass__Group_2_1_1__0__Impl8596 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CreateClass__Group_2_1_1__1__Impl_in_rule__CreateClass__Group_2_1_1__18627 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__CreateClass__SettersAssignment_2_1_1_1_in_rule__CreateClass__Group_2_1_1__1__Impl8654 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListLiteral__Group__0__Impl_in_rule__ListLiteral__Group__08688 = new BitSet(new long[]{0x00000001F2008730L});
+    public static final BitSet FOLLOW_rule__ListLiteral__Group__1_in_rule__ListLiteral__Group__08691 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__ListLiteral__Group__0__Impl8719 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListLiteral__Group__1__Impl_in_rule__ListLiteral__Group__18750 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_rule__ListLiteral__Group__2_in_rule__ListLiteral__Group__18753 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListLiteral__Group_1__0_in_rule__ListLiteral__Group__1__Impl8780 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListLiteral__Group__2__Impl_in_rule__ListLiteral__Group__28811 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__ListLiteral__Group__2__Impl8839 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListLiteral__Group_1__0__Impl_in_rule__ListLiteral__Group_1__08876 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_rule__ListLiteral__Group_1__1_in_rule__ListLiteral__Group_1__08879 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListLiteral__ItemsAssignment_1_0_in_rule__ListLiteral__Group_1__0__Impl8906 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListLiteral__Group_1__1__Impl_in_rule__ListLiteral__Group_1__18936 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListLiteral__Group_1_1__0_in_rule__ListLiteral__Group_1__1__Impl8963 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_rule__ListLiteral__Group_1_1__0__Impl_in_rule__ListLiteral__Group_1_1__08998 = new BitSet(new long[]{0x0000000172008730L});
+    public static final BitSet FOLLOW_rule__ListLiteral__Group_1_1__1_in_rule__ListLiteral__Group_1_1__09001 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__ListLiteral__Group_1_1__0__Impl9029 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListLiteral__Group_1_1__1__Impl_in_rule__ListLiteral__Group_1_1__19060 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ListLiteral__ItemsAssignment_1_1_1_in_rule__ListLiteral__Group_1_1__1__Impl9087 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__VarRefLiteral__Group__0__Impl_in_rule__VarRefLiteral__Group__09121 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__VarRefLiteral__Group__1_in_rule__VarRefLiteral__Group__09124 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__VarRefLiteral__Group__0__Impl9152 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__VarRefLiteral__Group__1__Impl_in_rule__VarRefLiteral__Group__19183 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__VarRefLiteral__VarRefAssignment_1_in_rule__VarRefLiteral__Group__1__Impl9210 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Setter__Group__0__Impl_in_rule__Setter__Group__09244 = new BitSet(new long[]{0x00000000000C0000L});
+    public static final BitSet FOLLOW_rule__Setter__Group__1_in_rule__Setter__Group__09247 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Setter__PropertyAssignment_0_in_rule__Setter__Group__0__Impl9274 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Setter__Group__1__Impl_in_rule__Setter__Group__19304 = new BitSet(new long[]{0x0000000172008730L});
+    public static final BitSet FOLLOW_rule__Setter__Group__2_in_rule__Setter__Group__19307 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Setter__Alternatives_1_in_rule__Setter__Group__1__Impl9334 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Setter__Group__2__Impl_in_rule__Setter__Group__29364 = new BitSet(new long[]{0x0000002000000002L});
+    public static final BitSet FOLLOW_rule__Setter__Group__3_in_rule__Setter__Group__29367 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Setter__ExpressionAssignment_2_in_rule__Setter__Group__2__Impl9394 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Setter__Group__3__Impl_in_rule__Setter__Group__39424 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Setter__GuardAssignment_3_in_rule__Setter__Group__3__Impl9451 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Function__Group__0__Impl_in_rule__Function__Group__09490 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Function__Group__1_in_rule__Function__Group__09493 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__Function__Group__0__Impl9521 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Function__Group__1__Impl_in_rule__Function__Group__19552 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Function__Group__2_in_rule__Function__Group__19555 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Function__NameAssignment_1_in_rule__Function__Group__1__Impl9582 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Function__Group__2__Impl_in_rule__Function__Group__29612 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_rule__Function__Group__3_in_rule__Function__Group__29615 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Function__JavaClassAssignment_2_in_rule__Function__Group__2__Impl9642 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Function__Group__3__Impl_in_rule__Function__Group__39672 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Function__Group__4_in_rule__Function__Group__39675 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rule__Function__Group__3__Impl9703 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Function__Group__4__Impl_in_rule__Function__Group__49734 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Function__OperationAssignment_4_in_rule__Function__Group__4__Impl9761 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UpdateStatement__Group__0__Impl_in_rule__UpdateStatement__Group__09801 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__UpdateStatement__Group__1_in_rule__UpdateStatement__Group__09804 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__UpdateStatement__Group__0__Impl9832 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UpdateStatement__Group__1__Impl_in_rule__UpdateStatement__Group__19863 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_rule__UpdateStatement__Group__2_in_rule__UpdateStatement__Group__19866 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UpdateStatement__VarRefAssignment_1_in_rule__UpdateStatement__Group__1__Impl9893 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UpdateStatement__Group__2__Impl_in_rule__UpdateStatement__Group__29923 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UpdateStatement__Group_2__0_in_rule__UpdateStatement__Group__2__Impl9950 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UpdateStatement__Group_2__0__Impl_in_rule__UpdateStatement__Group_2__09987 = new BitSet(new long[]{0x0000000001000010L});
+    public static final BitSet FOLLOW_rule__UpdateStatement__Group_2__1_in_rule__UpdateStatement__Group_2__09990 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__UpdateStatement__Group_2__0__Impl10018 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UpdateStatement__Group_2__1__Impl_in_rule__UpdateStatement__Group_2__110049 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__UpdateStatement__Group_2__2_in_rule__UpdateStatement__Group_2__110052 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UpdateStatement__Group_2_1__0_in_rule__UpdateStatement__Group_2__1__Impl10079 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UpdateStatement__Group_2__2__Impl_in_rule__UpdateStatement__Group_2__210110 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__UpdateStatement__Group_2__2__Impl10138 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UpdateStatement__Group_2_1__0__Impl_in_rule__UpdateStatement__Group_2_1__010175 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_rule__UpdateStatement__Group_2_1__1_in_rule__UpdateStatement__Group_2_1__010178 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UpdateStatement__SettersAssignment_2_1_0_in_rule__UpdateStatement__Group_2_1__0__Impl10205 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UpdateStatement__Group_2_1__1__Impl_in_rule__UpdateStatement__Group_2_1__110235 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UpdateStatement__Group_2_1_1__0_in_rule__UpdateStatement__Group_2_1__1__Impl10262 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_rule__UpdateStatement__Group_2_1_1__0__Impl_in_rule__UpdateStatement__Group_2_1_1__010297 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__UpdateStatement__Group_2_1_1__1_in_rule__UpdateStatement__Group_2_1_1__010300 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__UpdateStatement__Group_2_1_1__0__Impl10328 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UpdateStatement__Group_2_1_1__1__Impl_in_rule__UpdateStatement__Group_2_1_1__110359 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UpdateStatement__SettersAssignment_2_1_1_1_in_rule__UpdateStatement__Group_2_1_1__1__Impl10386 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FQN__Group__0__Impl_in_rule__FQN__Group__010420 = new BitSet(new long[]{0x0000001000000002L});
+    public static final BitSet FOLLOW_rule__FQN__Group__1_in_rule__FQN__Group__010423 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__FQN__Group__0__Impl10450 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FQN__Group__1__Impl_in_rule__FQN__Group__110479 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FQN__Group_1__0_in_rule__FQN__Group__1__Impl10506 = new BitSet(new long[]{0x0000001000000002L});
+    public static final BitSet FOLLOW_rule__FQN__Group_1__0__Impl_in_rule__FQN__Group_1__010541 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__FQN__Group_1__1_in_rule__FQN__Group_1__010544 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__FQN__Group_1__0__Impl10572 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__FQN__Group_1__1__Impl_in_rule__FQN__Group_1__110603 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__FQN__Group_1__1__Impl10630 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleScaffold_in_rule__Scaffolding__ScaffoldAssignment_010671 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleScaffoldingElement_in_rule__Scaffolding__ElementsAssignment_110702 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Scaffold__RefPackageAssignment_110733 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Rule__NameAssignment_110764 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWhenBlock_in_rule__Rule__WhenAssignment_210795 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleThenBlock_in_rule__Rule__ThenAssignment_310826 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMatch_in_rule__WhenBlock__MatchesAssignment_1_0_110857 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMatch_in_rule__WhenBlock__MatchesAssignment_1_110888 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariable_in_rule__Match__VarAssignment_0_010919 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Match__TypeAssignment_110954 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleParam_in_rule__Match__ParamsAssignment_2_1_010989 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleParam_in_rule__Match__ParamsAssignment_2_1_1_111020 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Variable__NameAssignment11051 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBindingExpression_in_rule__Param__PropertyAssignment_011082 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariable_in_rule__Param__VarAssignment_1_111113 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_OPERATOR_LOW_PRIORITY_in_rule__BindingExpression__OpAssignment_1_111144 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBindingExpression_in_rule__BindingExpression__RightAssignment_1_211175 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_OPERATOR_HIGH_PRIORITY_in_rule__BindingExpressionHigh__OpAssignment_1_111206 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBindingExpressionHigh_in_rule__BindingExpressionHigh__RightAssignment_1_211237 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBindingTerminalExpression_in_rule__BindingTerminalExpression__ExpAssignment_2_211268 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__BindingTerminalExpression__FunctionAssignment_3_111303 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBindingExpression_in_rule__BindingTerminalExpression__ExpAssignment_3_2_111338 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_OPERATOR_LOW_PRIORITY_in_rule__Expression__OpAssignment_1_111369 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__Expression__RightAssignment_1_211400 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_OPERATOR_HIGH_PRIORITY_in_rule__ExpressionHigh__OpAssignment_1_111431 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpressionHigh_in_rule__ExpressionHigh__RightAssignment_1_211462 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTerminalExpression_in_rule__TerminalExpression__ExpAssignment_3_211493 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__TerminalExpression__FunctionAssignment_4_111528 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__TerminalExpression__ArgumentsAssignment_4_2_1_011563 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__TerminalExpression__ArgumentsAssignment_4_2_1_1_111594 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__PrimitiveLiteral__ValueAssignment_3_111625 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_BOOLEAN_in_rule__PrimitiveLiteral__ValueAssignment_4_111656 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__PrimitiveLiteral__ValueAssignment_5_111687 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__FeatureRefLiteral__RefAssignment11722 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStatement_in_rule__ThenBlock__StatementsAssignment_1_0_111757 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStatement_in_rule__ThenBlock__StatementsAssignment_1_111788 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariable_in_rule__CreateStatement__VarAssignment_0_011819 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__CreateStatement__ExpressionAssignment_111850 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__CreateClass__TypeAssignment_111885 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSetter_in_rule__CreateClass__SettersAssignment_2_1_011920 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSetter_in_rule__CreateClass__SettersAssignment_2_1_1_111951 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__StringLiteral__ValueAssignment11982 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__ListLiteral__ItemsAssignment_1_012013 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__ListLiteral__ItemsAssignment_1_1_112044 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__VarRefLiteral__VarRefAssignment_112079 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Setter__PropertyAssignment_012118 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExpression_in_rule__Setter__ExpressionAssignment_212153 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_rule__Setter__GuardAssignment_312189 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Function__NameAssignment_112228 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFQN_in_rule__Function__JavaClassAssignment_212263 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Function__OperationAssignment_412302 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__UpdateStatement__VarRefAssignment_112341 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSetter_in_rule__UpdateStatement__SettersAssignment_2_1_012376 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSetter_in_rule__UpdateStatement__SettersAssignment_2_1_1_112407 = new BitSet(new long[]{0x0000000000000002L});
 
 }

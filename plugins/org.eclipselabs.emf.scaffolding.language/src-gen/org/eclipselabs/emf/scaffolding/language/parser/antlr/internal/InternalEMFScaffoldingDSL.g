@@ -974,21 +974,21 @@ ruleBindingTerminalExpression returns [EObject current=null]
     {
         createLeafNode(grammarAccess.getBindingTerminalExpressionAccess().getLeftParenthesisKeyword_3_2_0(), null); 
     }
-((
+(
 (
 		{ 
-	        currentNode=createCompositeNode(grammarAccess.getBindingTerminalExpressionAccess().getArgumentsBindingExpressionParserRuleCall_3_2_1_0_0(), currentNode); 
+	        currentNode=createCompositeNode(grammarAccess.getBindingTerminalExpressionAccess().getExpBindingExpressionParserRuleCall_3_2_1_0(), currentNode); 
 	    }
-		lv_arguments_10_0=ruleBindingExpression		{
+		lv_exp_10_0=ruleBindingExpression		{
 	        if ($current==null) {
 	            $current = factory.create(grammarAccess.getBindingTerminalExpressionRule().getType().getClassifier());
 	            associateNodeWithAstElement(currentNode.getParent(), $current);
 	        }
 	        try {
-	       		add(
+	       		set(
 	       			$current, 
-	       			"arguments",
-	        		lv_arguments_10_0, 
+	       			"exp",
+	        		lv_exp_10_0, 
 	        		"BindingExpression", 
 	        		currentNode);
 	        } catch (ValueConverterException vce) {
@@ -998,35 +998,7 @@ ruleBindingTerminalExpression returns [EObject current=null]
 	    }
 
 )
-)(	',' 
-    {
-        createLeafNode(grammarAccess.getBindingTerminalExpressionAccess().getCommaKeyword_3_2_1_1_0(), null); 
-    }
-(
-(
-		{ 
-	        currentNode=createCompositeNode(grammarAccess.getBindingTerminalExpressionAccess().getArgumentsBindingExpressionParserRuleCall_3_2_1_1_1_0(), currentNode); 
-	    }
-		lv_arguments_12_0=ruleBindingExpression		{
-	        if ($current==null) {
-	            $current = factory.create(grammarAccess.getBindingTerminalExpressionRule().getType().getClassifier());
-	            associateNodeWithAstElement(currentNode.getParent(), $current);
-	        }
-	        try {
-	       		add(
-	       			$current, 
-	       			"arguments",
-	        		lv_arguments_12_0, 
-	        		"BindingExpression", 
-	        		currentNode);
-	        } catch (ValueConverterException vce) {
-				handleValueConverterException(vce);
-	        }
-	        currentNode = currentNode.getParent();
-	    }
-
-)
-))*)?	')' 
+)	')' 
     {
         createLeafNode(grammarAccess.getBindingTerminalExpressionAccess().getRightParenthesisKeyword_3_2_2(), null); 
     }
@@ -1035,9 +1007,9 @@ ruleBindingTerminalExpression returns [EObject current=null]
     { 
         currentNode=createCompositeNode(grammarAccess.getBindingTerminalExpressionAccess().getPrimitiveLiteralParserRuleCall_4(), currentNode); 
     }
-    this_PrimitiveLiteral_14=rulePrimitiveLiteral
+    this_PrimitiveLiteral_12=rulePrimitiveLiteral
     { 
-        $current = $this_PrimitiveLiteral_14.current; 
+        $current = $this_PrimitiveLiteral_12.current; 
         currentNode = currentNode.getParent();
     }
 )

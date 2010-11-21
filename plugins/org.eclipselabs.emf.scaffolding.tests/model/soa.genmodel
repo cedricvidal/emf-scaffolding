@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipselabs.emf.scaffolding.tests/src-gen"
+    modelPluginID="org.eclipselabs.emf.scaffolding.tests" modelName="Soa" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>soa.ecore</foreignModel>
+  <genPackages prefix="Soa" basePackage="org.eclipselabs.emf.scaffolding.tests" disposableProviderFactory="true"
+      ecorePackage="soa.ecore#/">
+    <genClasses ecoreClass="soa.ecore#//Entity"/>
+    <genClasses ecoreClass="soa.ecore#//DAO">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference soa.ecore#//DAO/entity"/>
+    </genClasses>
+    <genClasses ecoreClass="soa.ecore#//Method"/>
+    <genClasses ecoreClass="soa.ecore#//Package"/>
+    <genClasses image="false" ecoreClass="soa.ecore#//Element">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference soa.ecore#//Element/namespace"/>
+    </genClasses>
+    <genClasses ecoreClass="soa.ecore#//Service">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soa.ecore#//Service/methods"/>
+    </genClasses>
+    <genClasses ecoreClass="soa.ecore#//Component">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference soa.ecore#//Component/inputs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference soa.ecore#//Component/outputs"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="soa.ecore#//HasName">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute soa.ecore#//HasName/name"/>
+    </genClasses>
+    <genClasses ecoreClass="soa.ecore#//Slot">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference soa.ecore#//Slot/implements"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="soa.ecore#//Namespace">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference soa.ecore#//Namespace/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="soa.ecore#//Link">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference soa.ecore#//Link/input"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference soa.ecore#//Link/output"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

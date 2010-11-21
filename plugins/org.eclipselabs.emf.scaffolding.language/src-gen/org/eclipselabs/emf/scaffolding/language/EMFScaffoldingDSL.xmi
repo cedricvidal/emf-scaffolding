@@ -230,16 +230,8 @@
           </elements>
           <elements xsi:type="xtext:Group">
             <elements xsi:type="xtext:Keyword" value="("/>
-            <elements xsi:type="xtext:Group" cardinality="?">
-              <elements xsi:type="xtext:Assignment" feature="arguments" operator="+=">
-                <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.9"/>
-              </elements>
-              <elements xsi:type="xtext:Group" cardinality="*">
-                <elements xsi:type="xtext:Keyword" value=","/>
-                <elements xsi:type="xtext:Assignment" feature="arguments" operator="+=">
-                  <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.9"/>
-                </elements>
-              </elements>
+            <elements xsi:type="xtext:Assignment" feature="exp" operator="=">
+              <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.9"/>
             </elements>
             <elements xsi:type="xtext:Keyword" value=")"/>
           </elements>

@@ -2060,12 +2060,12 @@ protected class BindingExpressionHigh_RightAssignment_1_2 extends AssignmentToke
  *
  * BindingTerminalExpression returns Expression:
  * 	"(" BindingExpression ")" | FeatureRefLiteral | {NotExpression} "!" exp=BindingTerminalExpression | {FunctionLiteral}
- * 	function=[Function] ("(" (arguments+=BindingExpression ("," arguments+=BindingExpression)*)? ")") | PrimitiveLiteral;
+ * 	function=[Function] ("(" exp=BindingExpression ")") | PrimitiveLiteral;
  *
  **/
 
 // "(" BindingExpression ")" | FeatureRefLiteral | {NotExpression} "!" exp=BindingTerminalExpression | {FunctionLiteral}
-// function=[Function] ("(" (arguments+=BindingExpression ("," arguments+=BindingExpression)*)? ")") | PrimitiveLiteral
+// function=[Function] ("(" exp=BindingExpression ")") | PrimitiveLiteral
 protected class BindingTerminalExpression_Alternatives extends AlternativesToken {
 
 	public BindingTerminalExpression_Alternatives(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -2367,7 +2367,7 @@ protected class BindingTerminalExpression_ExpAssignment_2_2 extends AssignmentTo
 }
 
 
-// {FunctionLiteral} function=[Function] ("(" (arguments+=BindingExpression ("," arguments+=BindingExpression)*)? ")")
+// {FunctionLiteral} function=[Function] ("(" exp=BindingExpression ")")
 protected class BindingTerminalExpression_Group_3 extends GroupToken {
 	
 	public BindingTerminalExpression_Group_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -2459,7 +2459,7 @@ protected class BindingTerminalExpression_FunctionAssignment_3_1 extends Assignm
 
 }
 
-// "(" (arguments+=BindingExpression ("," arguments+=BindingExpression)*)? ")"
+// "(" exp=BindingExpression ")"
 protected class BindingTerminalExpression_Group_3_2 extends GroupToken {
 	
 	public BindingTerminalExpression_Group_3_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -2503,39 +2503,16 @@ protected class BindingTerminalExpression_LeftParenthesisKeyword_3_2_0 extends K
 
 }
 
-// (arguments+=BindingExpression ("," arguments+=BindingExpression)*)?
-protected class BindingTerminalExpression_Group_3_2_1 extends GroupToken {
+// exp=BindingExpression
+protected class BindingTerminalExpression_ExpAssignment_3_2_1 extends AssignmentToken  {
 	
-	public BindingTerminalExpression_Group_3_2_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Group getGrammarElement() {
-		return grammarAccess.getBindingTerminalExpressionAccess().getGroup_3_2_1();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new BindingTerminalExpression_Group_3_2_1_1(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new BindingTerminalExpression_ArgumentsAssignment_3_2_1_0(lastRuleCallOrigin, this, 1, inst);
-			default: return null;
-		}	
-	}
-
-}
-
-// arguments+=BindingExpression
-protected class BindingTerminalExpression_ArgumentsAssignment_3_2_1_0 extends AssignmentToken  {
-	
-	public BindingTerminalExpression_ArgumentsAssignment_3_2_1_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public BindingTerminalExpression_ExpAssignment_3_2_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Assignment getGrammarElement() {
-		return grammarAccess.getBindingTerminalExpressionAccess().getArgumentsAssignment_3_2_1_0();
+		return grammarAccess.getBindingTerminalExpressionAccess().getExpAssignment_3_2_1();
 	}
 
     @Override
@@ -2548,13 +2525,13 @@ protected class BindingTerminalExpression_ArgumentsAssignment_3_2_1_0 extends As
 
     @Override	
 	public IEObjectConsumer tryConsume() {
-		if((value = eObjectConsumer.getConsumable("arguments",true)) == null) return null;
-		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("arguments");
+		if((value = eObjectConsumer.getConsumable("exp",true)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("exp");
 		if(value instanceof EObject) { // org::eclipse::xtext::impl::RuleCallImpl
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
 			if(param.isInstanceOf(grammarAccess.getBindingExpressionRule().getType().getClassifier())) {
 				type = AssignmentType.PARSER_RULE_CALL;
-				element = grammarAccess.getBindingTerminalExpressionAccess().getArgumentsBindingExpressionParserRuleCall_3_2_1_0_0(); 
+				element = grammarAccess.getBindingTerminalExpressionAccess().getExpBindingExpressionParserRuleCall_3_2_1_0(); 
 				consumed = obj;
 				return param;
 			}
@@ -2572,99 +2549,6 @@ protected class BindingTerminalExpression_ArgumentsAssignment_3_2_1_0 extends As
 	}	
 }
 
-// ("," arguments+=BindingExpression)*
-protected class BindingTerminalExpression_Group_3_2_1_1 extends GroupToken {
-	
-	public BindingTerminalExpression_Group_3_2_1_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Group getGrammarElement() {
-		return grammarAccess.getBindingTerminalExpressionAccess().getGroup_3_2_1_1();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new BindingTerminalExpression_ArgumentsAssignment_3_2_1_1_1(lastRuleCallOrigin, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-}
-
-// ","
-protected class BindingTerminalExpression_CommaKeyword_3_2_1_1_0 extends KeywordToken  {
-	
-	public BindingTerminalExpression_CommaKeyword_3_2_1_1_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Keyword getGrammarElement() {
-		return grammarAccess.getBindingTerminalExpressionAccess().getCommaKeyword_3_2_1_1_0();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new BindingTerminalExpression_Group_3_2_1_1(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new BindingTerminalExpression_ArgumentsAssignment_3_2_1_0(lastRuleCallOrigin, this, 1, inst);
-			default: return null;
-		}	
-	}
-
-}
-
-// arguments+=BindingExpression
-protected class BindingTerminalExpression_ArgumentsAssignment_3_2_1_1_1 extends AssignmentToken  {
-	
-	public BindingTerminalExpression_ArgumentsAssignment_3_2_1_1_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
-		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
-	}
-	
-	@Override
-	public Assignment getGrammarElement() {
-		return grammarAccess.getBindingTerminalExpressionAccess().getArgumentsAssignment_3_2_1_1_1();
-	}
-
-    @Override
-	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
-		switch(index) {
-			case 0: return new BindingExpression_Group(this, this, 0, inst);
-			default: return null;
-		}	
-	}
-
-    @Override	
-	public IEObjectConsumer tryConsume() {
-		if((value = eObjectConsumer.getConsumable("arguments",false)) == null) return null;
-		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("arguments");
-		if(value instanceof EObject) { // org::eclipse::xtext::impl::RuleCallImpl
-			IEObjectConsumer param = createEObjectConsumer((EObject)value);
-			if(param.isInstanceOf(grammarAccess.getBindingExpressionRule().getType().getClassifier())) {
-				type = AssignmentType.PARSER_RULE_CALL;
-				element = grammarAccess.getBindingTerminalExpressionAccess().getArgumentsBindingExpressionParserRuleCall_3_2_1_1_1_0(); 
-				consumed = obj;
-				return param;
-			}
-		}
-		return null;
-	}
-
-    @Override
-	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
-		if(value == inst.getEObject() && !inst.isConsumed()) return null;
-		switch(index) {
-			case 0: return new BindingTerminalExpression_CommaKeyword_3_2_1_1_0(lastRuleCallOrigin, next, actIndex, consumed);
-			default: return null;
-		}	
-	}	
-}
-
-
-
 // ")"
 protected class BindingTerminalExpression_RightParenthesisKeyword_3_2_2 extends KeywordToken  {
 	
@@ -2680,8 +2564,7 @@ protected class BindingTerminalExpression_RightParenthesisKeyword_3_2_2 extends 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new BindingTerminalExpression_Group_3_2_1(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new BindingTerminalExpression_LeftParenthesisKeyword_3_2_0(lastRuleCallOrigin, this, 1, inst);
+			case 0: return new BindingTerminalExpression_ExpAssignment_3_2_1(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}

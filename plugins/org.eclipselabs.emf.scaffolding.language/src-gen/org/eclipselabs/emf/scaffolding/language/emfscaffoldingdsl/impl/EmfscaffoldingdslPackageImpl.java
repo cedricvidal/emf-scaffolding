@@ -893,9 +893,19 @@ public class EmfscaffoldingdslPackageImpl extends EPackageImpl implements Emfsca
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getFunctionLiteral_Arguments()
+  public EReference getFunctionLiteral_Exp()
   {
     return (EReference)functionLiteralEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFunctionLiteral_Arguments()
+  {
+    return (EReference)functionLiteralEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1069,6 +1079,7 @@ public class EmfscaffoldingdslPackageImpl extends EPackageImpl implements Emfsca
 
     functionLiteralEClass = createEClass(FUNCTION_LITERAL);
     createEReference(functionLiteralEClass, FUNCTION_LITERAL__FUNCTION);
+    createEReference(functionLiteralEClass, FUNCTION_LITERAL__EXP);
     createEReference(functionLiteralEClass, FUNCTION_LITERAL__ARGUMENTS);
 
     intLiteralEClass = createEClass(INT_LITERAL);
@@ -1214,6 +1225,7 @@ public class EmfscaffoldingdslPackageImpl extends EPackageImpl implements Emfsca
 
     initEClass(functionLiteralEClass, FunctionLiteral.class, "FunctionLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getFunctionLiteral_Function(), this.getFunction(), null, "function", null, 0, 1, FunctionLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFunctionLiteral_Exp(), this.getExpression(), null, "exp", null, 0, 1, FunctionLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFunctionLiteral_Arguments(), this.getExpression(), null, "arguments", null, 0, -1, FunctionLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(intLiteralEClass, IntLiteral.class, "IntLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

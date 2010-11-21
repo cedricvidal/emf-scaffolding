@@ -34,6 +34,7 @@ import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FunctionLitera
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.FunctionLiteralImpl#getFunction <em>Function</em>}</li>
+ *   <li>{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.FunctionLiteralImpl#getExp <em>Exp</em>}</li>
  *   <li>{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.FunctionLiteralImpl#getArguments <em>Arguments</em>}</li>
  * </ul>
  * </p>
@@ -51,6 +52,16 @@ public class FunctionLiteralImpl extends ExpressionImpl implements FunctionLiter
    * @ordered
    */
   protected Function function;
+
+  /**
+   * The cached value of the '{@link #getExp() <em>Exp</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getExp()
+   * @generated
+   * @ordered
+   */
+  protected Expression exp;
 
   /**
    * The cached value of the '{@link #getArguments() <em>Arguments</em>}' containment reference list.
@@ -131,6 +142,54 @@ public class FunctionLiteralImpl extends ExpressionImpl implements FunctionLiter
    * <!-- end-user-doc -->
    * @generated
    */
+  public Expression getExp()
+  {
+    return exp;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetExp(Expression newExp, NotificationChain msgs)
+  {
+    Expression oldExp = exp;
+    exp = newExp;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EmfscaffoldingdslPackage.FUNCTION_LITERAL__EXP, oldExp, newExp);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setExp(Expression newExp)
+  {
+    if (newExp != exp)
+    {
+      NotificationChain msgs = null;
+      if (exp != null)
+        msgs = ((InternalEObject)exp).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EmfscaffoldingdslPackage.FUNCTION_LITERAL__EXP, null, msgs);
+      if (newExp != null)
+        msgs = ((InternalEObject)newExp).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EmfscaffoldingdslPackage.FUNCTION_LITERAL__EXP, null, msgs);
+      msgs = basicSetExp(newExp, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EmfscaffoldingdslPackage.FUNCTION_LITERAL__EXP, newExp, newExp));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<Expression> getArguments()
   {
     if (arguments == null)
@@ -150,6 +209,8 @@ public class FunctionLiteralImpl extends ExpressionImpl implements FunctionLiter
   {
     switch (featureID)
     {
+      case EmfscaffoldingdslPackage.FUNCTION_LITERAL__EXP:
+        return basicSetExp(null, msgs);
       case EmfscaffoldingdslPackage.FUNCTION_LITERAL__ARGUMENTS:
         return ((InternalEList<?>)getArguments()).basicRemove(otherEnd, msgs);
     }
@@ -169,6 +230,8 @@ public class FunctionLiteralImpl extends ExpressionImpl implements FunctionLiter
       case EmfscaffoldingdslPackage.FUNCTION_LITERAL__FUNCTION:
         if (resolve) return getFunction();
         return basicGetFunction();
+      case EmfscaffoldingdslPackage.FUNCTION_LITERAL__EXP:
+        return getExp();
       case EmfscaffoldingdslPackage.FUNCTION_LITERAL__ARGUMENTS:
         return getArguments();
     }
@@ -188,6 +251,9 @@ public class FunctionLiteralImpl extends ExpressionImpl implements FunctionLiter
     {
       case EmfscaffoldingdslPackage.FUNCTION_LITERAL__FUNCTION:
         setFunction((Function)newValue);
+        return;
+      case EmfscaffoldingdslPackage.FUNCTION_LITERAL__EXP:
+        setExp((Expression)newValue);
         return;
       case EmfscaffoldingdslPackage.FUNCTION_LITERAL__ARGUMENTS:
         getArguments().clear();
@@ -210,6 +276,9 @@ public class FunctionLiteralImpl extends ExpressionImpl implements FunctionLiter
       case EmfscaffoldingdslPackage.FUNCTION_LITERAL__FUNCTION:
         setFunction((Function)null);
         return;
+      case EmfscaffoldingdslPackage.FUNCTION_LITERAL__EXP:
+        setExp((Expression)null);
+        return;
       case EmfscaffoldingdslPackage.FUNCTION_LITERAL__ARGUMENTS:
         getArguments().clear();
         return;
@@ -229,6 +298,8 @@ public class FunctionLiteralImpl extends ExpressionImpl implements FunctionLiter
     {
       case EmfscaffoldingdslPackage.FUNCTION_LITERAL__FUNCTION:
         return function != null;
+      case EmfscaffoldingdslPackage.FUNCTION_LITERAL__EXP:
+        return exp != null;
       case EmfscaffoldingdslPackage.FUNCTION_LITERAL__ARGUMENTS:
         return arguments != null && !arguments.isEmpty();
     }

@@ -17,4 +17,11 @@
             genModel="model/model1.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.eclipselabs.org/emf/scaffolding/tests/soa"
+            class="org.eclipselabs.emf.scaffolding.tests.soa.SoaPackage"
+            genModel="model/soa.genmodel"/>
+   </extension>
+
 </plugin>

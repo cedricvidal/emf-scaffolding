@@ -832,13 +832,22 @@ public interface EmfscaffoldingdslPackage extends EPackage
   int FUNCTION_LITERAL__FUNCTION = EXPRESSION_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>Exp</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNCTION_LITERAL__EXP = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
    * The feature id for the '<em><b>Arguments</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FUNCTION_LITERAL__ARGUMENTS = EXPRESSION_FEATURE_COUNT + 1;
+  int FUNCTION_LITERAL__ARGUMENTS = EXPRESSION_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Function Literal</em>' class.
@@ -847,7 +856,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FUNCTION_LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+  int FUNCTION_LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.IntLiteralImpl <em>Int Literal</em>}' class.
@@ -1549,6 +1558,17 @@ public interface EmfscaffoldingdslPackage extends EPackage
   EReference getFunctionLiteral_Function();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FunctionLiteral#getExp <em>Exp</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exp</em>'.
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FunctionLiteral#getExp()
+   * @see #getFunctionLiteral()
+   * @generated
+   */
+  EReference getFunctionLiteral_Exp();
+
+  /**
    * Returns the meta object for the containment reference list '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FunctionLiteral#getArguments <em>Arguments</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2156,6 +2176,14 @@ public interface EmfscaffoldingdslPackage extends EPackage
      * @generated
      */
     EReference FUNCTION_LITERAL__FUNCTION = eINSTANCE.getFunctionLiteral_Function();
+
+    /**
+     * The meta object literal for the '<em><b>Exp</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FUNCTION_LITERAL__EXP = eINSTANCE.getFunctionLiteral_Exp();
 
     /**
      * The meta object literal for the '<em><b>Arguments</b></em>' containment reference list feature.
