@@ -1,3 +1,3 @@
 scaffold "http://www.eclipselabs.org/emf/scaffolding/tests/soa"
 
-rule Entity2Dao when e : Entity(name != null : n) -> new DAO { name : n + "DAO", entity : e guard }
+rule Entity2Dao when e : Entity(name != null : n) -> new DAO { name : $n + "DAO", entity : $e guard }
