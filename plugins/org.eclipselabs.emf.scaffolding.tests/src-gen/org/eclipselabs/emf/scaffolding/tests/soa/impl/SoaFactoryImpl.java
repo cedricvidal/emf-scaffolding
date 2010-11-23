@@ -9,11 +9,8 @@ package org.eclipselabs.emf.scaffolding.tests.soa.impl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
-
 import org.eclipselabs.emf.scaffolding.tests.soa.Component;
 import org.eclipselabs.emf.scaffolding.tests.soa.DAO;
 import org.eclipselabs.emf.scaffolding.tests.soa.Entity;

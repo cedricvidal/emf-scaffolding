@@ -30,13 +30,13 @@ import org.drools.lang.descr.PackageDescr;
 import org.drools.lang.descr.PatternDescr;
 import org.drools.lang.descr.RuleDescr;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Expression;
-import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FeatureRefLiteral;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Match;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Operation;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Param;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Rule;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Scaffolding;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.ScaffoldingElement;
+import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.SymbolRef;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.ThenBlock;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Variable;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.WhenBlock;
@@ -57,8 +57,7 @@ public class ESLBuilder implements ResourceTypeBuilder {
 			Scaffolding scaffolding = parser.parse(resource.getInputStream());
 			build(packageBuilder, scaffolding);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}
 	}
 
@@ -114,7 +113,7 @@ public class ESLBuilder implements ResourceTypeBuilder {
 		patternDescr.setIdentifier(var.getName());
 		if (expr instanceof Operation) {
 			Operation op = (Operation) expr;
-			String fieldName = ((FeatureRefLiteral) op.getLeft()).getRef().getName();
+			String fieldName = ((SymbolRef) op.getLeft()).getRef().getName();
 			// (name
 			FieldConstraintDescr fieldConstraintDescr = new FieldConstraintDescr(fieldName);
 			// != null)

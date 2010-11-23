@@ -9,28 +9,28 @@ package org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.EmfscaffoldingdslPackage;
-import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FeatureRefLiteral;
+import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Symbol;
+import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.SymbolRef;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Feature Ref Literal</b></em>'.
+ * An implementation of the model object '<em><b>Symbol Ref</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.FeatureRefLiteralImpl#getRef <em>Ref</em>}</li>
+ *   <li>{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.SymbolRefImpl#getRef <em>Ref</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class FeatureRefLiteralImpl extends ExpressionImpl implements FeatureRefLiteral
+public class SymbolRefImpl extends ExpressionImpl implements SymbolRef
 {
   /**
    * The cached value of the '{@link #getRef() <em>Ref</em>}' reference.
@@ -40,14 +40,14 @@ public class FeatureRefLiteralImpl extends ExpressionImpl implements FeatureRefL
    * @generated
    * @ordered
    */
-  protected EStructuralFeature ref;
+  protected Symbol ref;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected FeatureRefLiteralImpl()
+  protected SymbolRefImpl()
   {
     super();
   }
@@ -60,7 +60,7 @@ public class FeatureRefLiteralImpl extends ExpressionImpl implements FeatureRefL
   @Override
   protected EClass eStaticClass()
   {
-    return EmfscaffoldingdslPackage.Literals.FEATURE_REF_LITERAL;
+    return EmfscaffoldingdslPackage.Literals.SYMBOL_REF;
   }
 
   /**
@@ -68,16 +68,16 @@ public class FeatureRefLiteralImpl extends ExpressionImpl implements FeatureRefL
    * <!-- end-user-doc -->
    * @generated
    */
-  public EStructuralFeature getRef()
+  public Symbol getRef()
   {
     if (ref != null && ref.eIsProxy())
     {
       InternalEObject oldRef = (InternalEObject)ref;
-      ref = (EStructuralFeature)eResolveProxy(oldRef);
+      ref = (Symbol)eResolveProxy(oldRef);
       if (ref != oldRef)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, EmfscaffoldingdslPackage.FEATURE_REF_LITERAL__REF, oldRef, ref));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, EmfscaffoldingdslPackage.SYMBOL_REF__REF, oldRef, ref));
       }
     }
     return ref;
@@ -88,7 +88,7 @@ public class FeatureRefLiteralImpl extends ExpressionImpl implements FeatureRefL
    * <!-- end-user-doc -->
    * @generated
    */
-  public EStructuralFeature basicGetRef()
+  public Symbol basicGetRef()
   {
     return ref;
   }
@@ -98,12 +98,12 @@ public class FeatureRefLiteralImpl extends ExpressionImpl implements FeatureRefL
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setRef(EStructuralFeature newRef)
+  public void setRef(Symbol newRef)
   {
-    EStructuralFeature oldRef = ref;
+    Symbol oldRef = ref;
     ref = newRef;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EmfscaffoldingdslPackage.FEATURE_REF_LITERAL__REF, oldRef, ref));
+      eNotify(new ENotificationImpl(this, Notification.SET, EmfscaffoldingdslPackage.SYMBOL_REF__REF, oldRef, ref));
   }
 
   /**
@@ -116,7 +116,7 @@ public class FeatureRefLiteralImpl extends ExpressionImpl implements FeatureRefL
   {
     switch (featureID)
     {
-      case EmfscaffoldingdslPackage.FEATURE_REF_LITERAL__REF:
+      case EmfscaffoldingdslPackage.SYMBOL_REF__REF:
         if (resolve) return getRef();
         return basicGetRef();
     }
@@ -133,8 +133,8 @@ public class FeatureRefLiteralImpl extends ExpressionImpl implements FeatureRefL
   {
     switch (featureID)
     {
-      case EmfscaffoldingdslPackage.FEATURE_REF_LITERAL__REF:
-        setRef((EStructuralFeature)newValue);
+      case EmfscaffoldingdslPackage.SYMBOL_REF__REF:
+        setRef((Symbol)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -150,8 +150,8 @@ public class FeatureRefLiteralImpl extends ExpressionImpl implements FeatureRefL
   {
     switch (featureID)
     {
-      case EmfscaffoldingdslPackage.FEATURE_REF_LITERAL__REF:
-        setRef((EStructuralFeature)null);
+      case EmfscaffoldingdslPackage.SYMBOL_REF__REF:
+        setRef((Symbol)null);
         return;
     }
     super.eUnset(featureID);
@@ -167,10 +167,10 @@ public class FeatureRefLiteralImpl extends ExpressionImpl implements FeatureRefL
   {
     switch (featureID)
     {
-      case EmfscaffoldingdslPackage.FEATURE_REF_LITERAL__REF:
+      case EmfscaffoldingdslPackage.SYMBOL_REF__REF:
         return ref != null;
     }
     return super.eIsSet(featureID);
   }
 
-} //FeatureRefLiteralImpl
+} //SymbolRefImpl

@@ -129,9 +129,9 @@ public class EmfscaffoldingdslAdapterFactory extends AdapterFactoryImpl
         return createExpressionAdapter();
       }
       @Override
-      public Adapter caseFeatureRefLiteral(FeatureRefLiteral object)
+      public Adapter caseFeatureRef(FeatureRef object)
       {
-        return createFeatureRefLiteralAdapter();
+        return createFeatureRefAdapter();
       }
       @Override
       public Adapter caseThenBlock(ThenBlock object)
@@ -164,11 +164,6 @@ public class EmfscaffoldingdslAdapterFactory extends AdapterFactoryImpl
         return createListLiteralAdapter();
       }
       @Override
-      public Adapter caseVarRefLiteral(VarRefLiteral object)
-      {
-        return createVarRefLiteralAdapter();
-      }
-      @Override
       public Adapter caseSetter(Setter object)
       {
         return createSetterAdapter();
@@ -184,6 +179,11 @@ public class EmfscaffoldingdslAdapterFactory extends AdapterFactoryImpl
         return createUpdateStatementAdapter();
       }
       @Override
+      public Adapter caseSymbol(Symbol object)
+      {
+        return createSymbolAdapter();
+      }
+      @Override
       public Adapter caseOperation(Operation object)
       {
         return createOperationAdapter();
@@ -197,6 +197,11 @@ public class EmfscaffoldingdslAdapterFactory extends AdapterFactoryImpl
       public Adapter caseFunctionLiteral(FunctionLiteral object)
       {
         return createFunctionLiteralAdapter();
+      }
+      @Override
+      public Adapter caseSymbolRef(SymbolRef object)
+      {
+        return createSymbolRefAdapter();
       }
       @Override
       public Adapter caseIntLiteral(IntLiteral object)
@@ -386,16 +391,16 @@ public class EmfscaffoldingdslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FeatureRefLiteral <em>Feature Ref Literal</em>}'.
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FeatureRef <em>Feature Ref</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FeatureRefLiteral
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FeatureRef
    * @generated
    */
-  public Adapter createFeatureRefLiteralAdapter()
+  public Adapter createFeatureRefAdapter()
   {
     return null;
   }
@@ -491,21 +496,6 @@ public class EmfscaffoldingdslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.VarRefLiteral <em>Var Ref Literal</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.VarRefLiteral
-   * @generated
-   */
-  public Adapter createVarRefLiteralAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Setter <em>Setter</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -551,6 +541,21 @@ public class EmfscaffoldingdslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Symbol <em>Symbol</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Symbol
+   * @generated
+   */
+  public Adapter createSymbolAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Operation <em>Operation</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -591,6 +596,21 @@ public class EmfscaffoldingdslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createFunctionLiteralAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.SymbolRef <em>Symbol Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.SymbolRef
+   * @generated
+   */
+  public Adapter createSymbolRefAdapter()
   {
     return null;
   }

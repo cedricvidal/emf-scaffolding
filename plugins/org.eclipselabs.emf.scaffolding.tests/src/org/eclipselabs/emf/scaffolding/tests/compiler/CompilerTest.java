@@ -13,7 +13,9 @@ package org.eclipselabs.emf.scaffolding.tests.compiler;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.fail;
 
+import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 
 import org.drools.KnowledgeBase;
@@ -30,6 +32,17 @@ public class CompilerTest extends BaseTest {
 		KnowledgeBase kbase = compiler.compile(inputStream, CompilerTest.class.getClassLoader());
 		assertNotNull(kbase);
 		assertEquals(1, kbase.getKnowledgePackages().size());
+	}
+
+	@Test
+	public void syntaxErrorThrowsRuntimeException() {
+		ESLCompiler compiler = new ESLCompiler();
+		try {
+			KnowledgeBase kbase = compiler.compile(new ByteArrayInputStream("syntax error".getBytes()), CompilerTest.class.getClassLoader());
+			fail("Compiling an ESL with syntax errors should throw a RuntimeException");
+		} catch (RuntimeException e) {
+			; // ok
+		}
 	}
 
 }

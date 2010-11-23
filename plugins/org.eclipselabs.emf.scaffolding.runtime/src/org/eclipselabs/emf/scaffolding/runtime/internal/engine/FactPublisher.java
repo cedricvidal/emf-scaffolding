@@ -16,7 +16,6 @@ import org.drools.runtime.rule.FactHandle;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.EContentAdapter;
-import org.eclipse.emf.ecore.util.EcoreUtil;
 
 public class FactPublisher extends EContentAdapter {
 

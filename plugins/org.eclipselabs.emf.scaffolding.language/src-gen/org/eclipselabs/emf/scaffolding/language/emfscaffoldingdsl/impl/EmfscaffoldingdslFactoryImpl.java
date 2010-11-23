@@ -78,20 +78,21 @@ public class EmfscaffoldingdslFactoryImpl extends EFactoryImpl implements Emfsca
       case EmfscaffoldingdslPackage.VARIABLE: return createVariable();
       case EmfscaffoldingdslPackage.PARAM: return createParam();
       case EmfscaffoldingdslPackage.EXPRESSION: return createExpression();
-      case EmfscaffoldingdslPackage.FEATURE_REF_LITERAL: return createFeatureRefLiteral();
+      case EmfscaffoldingdslPackage.FEATURE_REF: return createFeatureRef();
       case EmfscaffoldingdslPackage.THEN_BLOCK: return createThenBlock();
       case EmfscaffoldingdslPackage.STATEMENT: return createStatement();
       case EmfscaffoldingdslPackage.CREATE_STATEMENT: return createCreateStatement();
       case EmfscaffoldingdslPackage.CREATE_CLASS: return createCreateClass();
       case EmfscaffoldingdslPackage.STRING_LITERAL: return createStringLiteral();
       case EmfscaffoldingdslPackage.LIST_LITERAL: return createListLiteral();
-      case EmfscaffoldingdslPackage.VAR_REF_LITERAL: return createVarRefLiteral();
       case EmfscaffoldingdslPackage.SETTER: return createSetter();
       case EmfscaffoldingdslPackage.FUNCTION: return createFunction();
       case EmfscaffoldingdslPackage.UPDATE_STATEMENT: return createUpdateStatement();
+      case EmfscaffoldingdslPackage.SYMBOL: return createSymbol();
       case EmfscaffoldingdslPackage.OPERATION: return createOperation();
       case EmfscaffoldingdslPackage.NOT_EXPRESSION: return createNotExpression();
       case EmfscaffoldingdslPackage.FUNCTION_LITERAL: return createFunctionLiteral();
+      case EmfscaffoldingdslPackage.SYMBOL_REF: return createSymbolRef();
       case EmfscaffoldingdslPackage.INT_LITERAL: return createIntLiteral();
       case EmfscaffoldingdslPackage.BOOLEAN_LITERAL: return createBooleanLiteral();
       case EmfscaffoldingdslPackage.FLOAT_LITERAL: return createFloatLiteral();
@@ -215,10 +216,10 @@ public class EmfscaffoldingdslFactoryImpl extends EFactoryImpl implements Emfsca
    * <!-- end-user-doc -->
    * @generated
    */
-  public FeatureRefLiteral createFeatureRefLiteral()
+  public FeatureRef createFeatureRef()
   {
-    FeatureRefLiteralImpl featureRefLiteral = new FeatureRefLiteralImpl();
-    return featureRefLiteral;
+    FeatureRefImpl featureRef = new FeatureRefImpl();
+    return featureRef;
   }
 
   /**
@@ -292,17 +293,6 @@ public class EmfscaffoldingdslFactoryImpl extends EFactoryImpl implements Emfsca
    * <!-- end-user-doc -->
    * @generated
    */
-  public VarRefLiteral createVarRefLiteral()
-  {
-    VarRefLiteralImpl varRefLiteral = new VarRefLiteralImpl();
-    return varRefLiteral;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public Setter createSetter()
   {
     SetterImpl setter = new SetterImpl();
@@ -336,6 +326,17 @@ public class EmfscaffoldingdslFactoryImpl extends EFactoryImpl implements Emfsca
    * <!-- end-user-doc -->
    * @generated
    */
+  public Symbol createSymbol()
+  {
+    SymbolImpl symbol = new SymbolImpl();
+    return symbol;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Operation createOperation()
   {
     OperationImpl operation = new OperationImpl();
@@ -362,6 +363,17 @@ public class EmfscaffoldingdslFactoryImpl extends EFactoryImpl implements Emfsca
   {
     FunctionLiteralImpl functionLiteral = new FunctionLiteralImpl();
     return functionLiteral;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SymbolRef createSymbolRef()
+  {
+    SymbolRefImpl symbolRef = new SymbolRefImpl();
+    return symbolRef;
   }
 
   /**

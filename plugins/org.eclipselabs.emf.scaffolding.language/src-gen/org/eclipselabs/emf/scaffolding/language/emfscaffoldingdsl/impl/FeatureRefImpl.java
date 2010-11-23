@@ -9,45 +9,45 @@ package org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.EmfscaffoldingdslPackage;
-import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.VarRefLiteral;
-import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Variable;
+import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FeatureRef;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Var Ref Literal</b></em>'.
+ * An implementation of the model object '<em><b>Feature Ref</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.VarRefLiteralImpl#getVarRef <em>Var Ref</em>}</li>
+ *   <li>{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.FeatureRefImpl#getFeature <em>Feature</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class VarRefLiteralImpl extends ExpressionImpl implements VarRefLiteral
+public class FeatureRefImpl extends SymbolImpl implements FeatureRef
 {
   /**
-   * The cached value of the '{@link #getVarRef() <em>Var Ref</em>}' reference.
+   * The cached value of the '{@link #getFeature() <em>Feature</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVarRef()
+   * @see #getFeature()
    * @generated
    * @ordered
    */
-  protected Variable varRef;
+  protected EStructuralFeature feature;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected VarRefLiteralImpl()
+  protected FeatureRefImpl()
   {
     super();
   }
@@ -60,7 +60,7 @@ public class VarRefLiteralImpl extends ExpressionImpl implements VarRefLiteral
   @Override
   protected EClass eStaticClass()
   {
-    return EmfscaffoldingdslPackage.Literals.VAR_REF_LITERAL;
+    return EmfscaffoldingdslPackage.Literals.FEATURE_REF;
   }
 
   /**
@@ -68,19 +68,19 @@ public class VarRefLiteralImpl extends ExpressionImpl implements VarRefLiteral
    * <!-- end-user-doc -->
    * @generated
    */
-  public Variable getVarRef()
+  public EStructuralFeature getFeature()
   {
-    if (varRef != null && varRef.eIsProxy())
+    if (feature != null && feature.eIsProxy())
     {
-      InternalEObject oldVarRef = (InternalEObject)varRef;
-      varRef = (Variable)eResolveProxy(oldVarRef);
-      if (varRef != oldVarRef)
+      InternalEObject oldFeature = (InternalEObject)feature;
+      feature = (EStructuralFeature)eResolveProxy(oldFeature);
+      if (feature != oldFeature)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, EmfscaffoldingdslPackage.VAR_REF_LITERAL__VAR_REF, oldVarRef, varRef));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, EmfscaffoldingdslPackage.FEATURE_REF__FEATURE, oldFeature, feature));
       }
     }
-    return varRef;
+    return feature;
   }
 
   /**
@@ -88,9 +88,9 @@ public class VarRefLiteralImpl extends ExpressionImpl implements VarRefLiteral
    * <!-- end-user-doc -->
    * @generated
    */
-  public Variable basicGetVarRef()
+  public EStructuralFeature basicGetFeature()
   {
-    return varRef;
+    return feature;
   }
 
   /**
@@ -98,12 +98,12 @@ public class VarRefLiteralImpl extends ExpressionImpl implements VarRefLiteral
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setVarRef(Variable newVarRef)
+  public void setFeature(EStructuralFeature newFeature)
   {
-    Variable oldVarRef = varRef;
-    varRef = newVarRef;
+    EStructuralFeature oldFeature = feature;
+    feature = newFeature;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EmfscaffoldingdslPackage.VAR_REF_LITERAL__VAR_REF, oldVarRef, varRef));
+      eNotify(new ENotificationImpl(this, Notification.SET, EmfscaffoldingdslPackage.FEATURE_REF__FEATURE, oldFeature, feature));
   }
 
   /**
@@ -116,9 +116,9 @@ public class VarRefLiteralImpl extends ExpressionImpl implements VarRefLiteral
   {
     switch (featureID)
     {
-      case EmfscaffoldingdslPackage.VAR_REF_LITERAL__VAR_REF:
-        if (resolve) return getVarRef();
-        return basicGetVarRef();
+      case EmfscaffoldingdslPackage.FEATURE_REF__FEATURE:
+        if (resolve) return getFeature();
+        return basicGetFeature();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -133,8 +133,8 @@ public class VarRefLiteralImpl extends ExpressionImpl implements VarRefLiteral
   {
     switch (featureID)
     {
-      case EmfscaffoldingdslPackage.VAR_REF_LITERAL__VAR_REF:
-        setVarRef((Variable)newValue);
+      case EmfscaffoldingdslPackage.FEATURE_REF__FEATURE:
+        setFeature((EStructuralFeature)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -150,8 +150,8 @@ public class VarRefLiteralImpl extends ExpressionImpl implements VarRefLiteral
   {
     switch (featureID)
     {
-      case EmfscaffoldingdslPackage.VAR_REF_LITERAL__VAR_REF:
-        setVarRef((Variable)null);
+      case EmfscaffoldingdslPackage.FEATURE_REF__FEATURE:
+        setFeature((EStructuralFeature)null);
         return;
     }
     super.eUnset(featureID);
@@ -167,10 +167,10 @@ public class VarRefLiteralImpl extends ExpressionImpl implements VarRefLiteral
   {
     switch (featureID)
     {
-      case EmfscaffoldingdslPackage.VAR_REF_LITERAL__VAR_REF:
-        return varRef != null;
+      case EmfscaffoldingdslPackage.FEATURE_REF__FEATURE:
+        return feature != null;
     }
     return super.eIsSet(featureID);
   }
 
-} //VarRefLiteralImpl
+} //FeatureRefImpl

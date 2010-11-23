@@ -122,6 +122,7 @@ public class EmfscaffoldingdslSwitch<T>
         Rule rule = (Rule)theEObject;
         T result = caseRule(rule);
         if (result == null) result = caseScaffoldingElement(rule);
+        if (result == null) result = caseSymbol(rule);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -151,6 +152,7 @@ public class EmfscaffoldingdslSwitch<T>
       {
         Variable variable = (Variable)theEObject;
         T result = caseVariable(variable);
+        if (result == null) result = caseSymbol(variable);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -169,11 +171,11 @@ public class EmfscaffoldingdslSwitch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EmfscaffoldingdslPackage.FEATURE_REF_LITERAL:
+      case EmfscaffoldingdslPackage.FEATURE_REF:
       {
-        FeatureRefLiteral featureRefLiteral = (FeatureRefLiteral)theEObject;
-        T result = caseFeatureRefLiteral(featureRefLiteral);
-        if (result == null) result = caseExpression(featureRefLiteral);
+        FeatureRef featureRef = (FeatureRef)theEObject;
+        T result = caseFeatureRef(featureRef);
+        if (result == null) result = caseSymbol(featureRef);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -225,14 +227,6 @@ public class EmfscaffoldingdslSwitch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EmfscaffoldingdslPackage.VAR_REF_LITERAL:
-      {
-        VarRefLiteral varRefLiteral = (VarRefLiteral)theEObject;
-        T result = caseVarRefLiteral(varRefLiteral);
-        if (result == null) result = caseExpression(varRefLiteral);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case EmfscaffoldingdslPackage.SETTER:
       {
         Setter setter = (Setter)theEObject;
@@ -245,6 +239,7 @@ public class EmfscaffoldingdslSwitch<T>
         Function function = (Function)theEObject;
         T result = caseFunction(function);
         if (result == null) result = caseScaffoldingElement(function);
+        if (result == null) result = caseSymbol(function);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -254,6 +249,13 @@ public class EmfscaffoldingdslSwitch<T>
         T result = caseUpdateStatement(updateStatement);
         if (result == null) result = caseStatement(updateStatement);
         if (result == null) result = caseBinding(updateStatement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EmfscaffoldingdslPackage.SYMBOL:
+      {
+        Symbol symbol = (Symbol)theEObject;
+        T result = caseSymbol(symbol);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -278,6 +280,14 @@ public class EmfscaffoldingdslSwitch<T>
         FunctionLiteral functionLiteral = (FunctionLiteral)theEObject;
         T result = caseFunctionLiteral(functionLiteral);
         if (result == null) result = caseExpression(functionLiteral);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EmfscaffoldingdslPackage.SYMBOL_REF:
+      {
+        SymbolRef symbolRef = (SymbolRef)theEObject;
+        T result = caseSymbolRef(symbolRef);
+        if (result == null) result = caseExpression(symbolRef);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -470,17 +480,17 @@ public class EmfscaffoldingdslSwitch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Feature Ref Literal</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Feature Ref</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Feature Ref Literal</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Feature Ref</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseFeatureRefLiteral(FeatureRefLiteral object)
+  public T caseFeatureRef(FeatureRef object)
   {
     return null;
   }
@@ -582,22 +592,6 @@ public class EmfscaffoldingdslSwitch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Var Ref Literal</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Var Ref Literal</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseVarRefLiteral(VarRefLiteral object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Setter</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -646,6 +640,22 @@ public class EmfscaffoldingdslSwitch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Symbol</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Symbol</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSymbol(Symbol object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Operation</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -689,6 +699,22 @@ public class EmfscaffoldingdslSwitch<T>
    * @generated
    */
   public T caseFunctionLiteral(FunctionLiteral object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Symbol Ref</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Symbol Ref</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSymbolRef(SymbolRef object)
   {
     return null;
   }

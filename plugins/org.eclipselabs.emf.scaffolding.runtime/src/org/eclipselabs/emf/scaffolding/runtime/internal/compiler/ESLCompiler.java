@@ -11,7 +11,6 @@
  *******************************************************************************/
 package org.eclipselabs.emf.scaffolding.runtime.internal.compiler;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.util.Collection;
 import java.util.Properties;
@@ -22,7 +21,6 @@ import org.drools.KnowledgeBaseFactory;
 import org.drools.builder.KnowledgeBuilder;
 import org.drools.builder.KnowledgeBuilderConfiguration;
 import org.drools.builder.KnowledgeBuilderFactory;
-import org.drools.compiler.DroolsParserException;
 import org.drools.compiler.ResourceTypeBuilderRegistry;
 import org.drools.definition.KnowledgePackage;
 import org.drools.io.ResourceFactory;
@@ -34,7 +32,7 @@ public class ESLCompiler {
 		ResourceTypeBuilderRegistry.getInstance().register(ScaffoldingExecutionEnvironment.ESL, new ESLBuilder());
 	}
 
-	public KnowledgeBase compile(InputStream eslStream, ClassLoader cl) throws DroolsParserException, IOException {
+	public KnowledgeBase compile(InputStream eslStream, ClassLoader cl) {
 		//ClassLoader cl = ESLCompiler.class.getClassLoader();
 		Properties properties = new Properties();
 		KnowledgeBaseConfiguration kBaseConfig = KnowledgeBaseFactory.newKnowledgeBaseConfiguration(properties, cl);

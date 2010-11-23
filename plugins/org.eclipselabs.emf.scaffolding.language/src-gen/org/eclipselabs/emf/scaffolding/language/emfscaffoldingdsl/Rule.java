@@ -24,7 +24,7 @@ package org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl;
  * @model
  * @generated
  */
-public interface Rule extends ScaffoldingElement
+public interface Rule extends ScaffoldingElement, Symbol
 {
   /**
    * Returns the value of the '<em><b>When</b></em>' containment reference.

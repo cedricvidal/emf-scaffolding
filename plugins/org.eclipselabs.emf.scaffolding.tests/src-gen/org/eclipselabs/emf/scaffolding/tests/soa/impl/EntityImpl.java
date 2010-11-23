@@ -7,7 +7,6 @@
 package org.eclipselabs.emf.scaffolding.tests.soa.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipselabs.emf.scaffolding.tests.soa.Entity;
 import org.eclipselabs.emf.scaffolding.tests.soa.SoaPackage;
 

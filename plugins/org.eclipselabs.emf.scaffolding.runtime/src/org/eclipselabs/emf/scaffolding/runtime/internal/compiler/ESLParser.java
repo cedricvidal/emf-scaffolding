@@ -17,6 +17,7 @@ import java.util.Collections;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.Resource.Diagnostic;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Scaffolding;
@@ -31,6 +32,12 @@ public class ESLParser {
 		ResourceSet rs = new ResourceSetImpl();
 		Resource resource = rs.createResource(URI.createURI("InMemoryKnowledgeBase.esl"));
 		resource.load(inputStream, Collections.emptyMap());
+		if(!resource.getErrors().isEmpty()) {
+			Diagnostic d = resource.getErrors().get(0);
+			String message = d.getMessage() + " on line " + d.getLine();
+			throw new IOException(message);
+		}
 		return (Scaffolding) resource.getContents().get(0);
 	}
+
 }

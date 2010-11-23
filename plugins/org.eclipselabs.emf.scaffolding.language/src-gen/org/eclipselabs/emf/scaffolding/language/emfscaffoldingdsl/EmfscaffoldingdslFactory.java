@@ -117,13 +117,13 @@ public interface EmfscaffoldingdslFactory extends EFactory
   Expression createExpression();
 
   /**
-   * Returns a new object of class '<em>Feature Ref Literal</em>'.
+   * Returns a new object of class '<em>Feature Ref</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Feature Ref Literal</em>'.
+   * @return a new object of class '<em>Feature Ref</em>'.
    * @generated
    */
-  FeatureRefLiteral createFeatureRefLiteral();
+  FeatureRef createFeatureRef();
 
   /**
    * Returns a new object of class '<em>Then Block</em>'.
@@ -180,15 +180,6 @@ public interface EmfscaffoldingdslFactory extends EFactory
   ListLiteral createListLiteral();
 
   /**
-   * Returns a new object of class '<em>Var Ref Literal</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Var Ref Literal</em>'.
-   * @generated
-   */
-  VarRefLiteral createVarRefLiteral();
-
-  /**
    * Returns a new object of class '<em>Setter</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -216,6 +207,15 @@ public interface EmfscaffoldingdslFactory extends EFactory
   UpdateStatement createUpdateStatement();
 
   /**
+   * Returns a new object of class '<em>Symbol</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Symbol</em>'.
+   * @generated
+   */
+  Symbol createSymbol();
+
+  /**
    * Returns a new object of class '<em>Operation</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -241,6 +241,15 @@ public interface EmfscaffoldingdslFactory extends EFactory
    * @generated
    */
   FunctionLiteral createFunctionLiteral();
+
+  /**
+   * Returns a new object of class '<em>Symbol Ref</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Symbol Ref</em>'.
+   * @generated
+   */
+  SymbolRef createSymbolRef();
 
   /**
    * Returns a new object of class '<em>Int Literal</em>'.

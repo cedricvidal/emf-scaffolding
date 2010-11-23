@@ -11,7 +11,6 @@
  *******************************************************************************/
 package org.eclipselabs.emf.scaffolding.language.ui.contentassist;
 
-import org.eclipselabs.emf.scaffolding.language.ui.contentassist.AbstractEMFScaffoldingDSLProposalProvider;
 /**
  * see http://www.eclipse.org/Xtext/documentation/latest/xtext.html#contentAssist on how to customize content assistant
  */

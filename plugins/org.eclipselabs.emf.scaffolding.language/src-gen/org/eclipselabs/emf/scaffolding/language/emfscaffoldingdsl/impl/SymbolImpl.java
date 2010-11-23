@@ -9,46 +9,54 @@ package org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.EmfscaffoldingdslPackage;
-import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Scaffold;
+import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Symbol;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Scaffold</b></em>'.
+ * An implementation of the model object '<em><b>Symbol</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.ScaffoldImpl#getRefPackage <em>Ref Package</em>}</li>
+ *   <li>{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.SymbolImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ScaffoldImpl extends MinimalEObjectImpl.Container implements Scaffold
+public class SymbolImpl extends MinimalEObjectImpl.Container implements Symbol
 {
   /**
-   * The cached value of the '{@link #getRefPackage() <em>Ref Package</em>}' reference.
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRefPackage()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected EPackage refPackage;
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ScaffoldImpl()
+  protected SymbolImpl()
   {
     super();
   }
@@ -61,7 +69,7 @@ public class ScaffoldImpl extends MinimalEObjectImpl.Container implements Scaffo
   @Override
   protected EClass eStaticClass()
   {
-    return EmfscaffoldingdslPackage.Literals.SCAFFOLD;
+    return EmfscaffoldingdslPackage.Literals.SYMBOL;
   }
 
   /**
@@ -69,19 +77,9 @@ public class ScaffoldImpl extends MinimalEObjectImpl.Container implements Scaffo
    * <!-- end-user-doc -->
    * @generated
    */
-  public EPackage getRefPackage()
+  public String getName()
   {
-    if (refPackage != null && refPackage.eIsProxy())
-    {
-      InternalEObject oldRefPackage = (InternalEObject)refPackage;
-      refPackage = (EPackage)eResolveProxy(oldRefPackage);
-      if (refPackage != oldRefPackage)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, EmfscaffoldingdslPackage.SCAFFOLD__REF_PACKAGE, oldRefPackage, refPackage));
-      }
-    }
-    return refPackage;
+    return name;
   }
 
   /**
@@ -89,22 +87,12 @@ public class ScaffoldImpl extends MinimalEObjectImpl.Container implements Scaffo
    * <!-- end-user-doc -->
    * @generated
    */
-  public EPackage basicGetRefPackage()
+  public void setName(String newName)
   {
-    return refPackage;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setRefPackage(EPackage newRefPackage)
-  {
-    EPackage oldRefPackage = refPackage;
-    refPackage = newRefPackage;
+    String oldName = name;
+    name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EmfscaffoldingdslPackage.SCAFFOLD__REF_PACKAGE, oldRefPackage, refPackage));
+      eNotify(new ENotificationImpl(this, Notification.SET, EmfscaffoldingdslPackage.SYMBOL__NAME, oldName, name));
   }
 
   /**
@@ -117,9 +105,8 @@ public class ScaffoldImpl extends MinimalEObjectImpl.Container implements Scaffo
   {
     switch (featureID)
     {
-      case EmfscaffoldingdslPackage.SCAFFOLD__REF_PACKAGE:
-        if (resolve) return getRefPackage();
-        return basicGetRefPackage();
+      case EmfscaffoldingdslPackage.SYMBOL__NAME:
+        return getName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -134,8 +121,8 @@ public class ScaffoldImpl extends MinimalEObjectImpl.Container implements Scaffo
   {
     switch (featureID)
     {
-      case EmfscaffoldingdslPackage.SCAFFOLD__REF_PACKAGE:
-        setRefPackage((EPackage)newValue);
+      case EmfscaffoldingdslPackage.SYMBOL__NAME:
+        setName((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -151,8 +138,8 @@ public class ScaffoldImpl extends MinimalEObjectImpl.Container implements Scaffo
   {
     switch (featureID)
     {
-      case EmfscaffoldingdslPackage.SCAFFOLD__REF_PACKAGE:
-        setRefPackage((EPackage)null);
+      case EmfscaffoldingdslPackage.SYMBOL__NAME:
+        setName(NAME_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -168,10 +155,27 @@ public class ScaffoldImpl extends MinimalEObjectImpl.Container implements Scaffo
   {
     switch (featureID)
     {
-      case EmfscaffoldingdslPackage.SCAFFOLD__REF_PACKAGE:
-        return refPackage != null;
+      case EmfscaffoldingdslPackage.SYMBOL__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
     }
     return super.eIsSet(featureID);
   }
 
-} //ScaffoldImpl
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (name: ");
+    result.append(name);
+    result.append(')');
+    return result.toString();
+  }
+
+} //SymbolImpl

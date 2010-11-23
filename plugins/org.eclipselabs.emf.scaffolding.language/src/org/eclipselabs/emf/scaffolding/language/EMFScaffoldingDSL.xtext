@@ -13,7 +13,7 @@ Scaffolding :
 ScaffoldingElement : Rule | Function;
 
 Scaffold:
-	'scaffold' refPackage=STRING;
+	'scaffold' refPackage=[ecore::EPackage|STRING];
 
 Rule :
 	'rule' name=ID
@@ -50,9 +50,9 @@ BindingExpressionHigh returns Expression :
 
 BindingTerminalExpression returns Expression:
 	'(' BindingExpression ')'
-	| FeatureRefLiteral
 	| {NotExpression} '!' exp=BindingTerminalExpression
-	| {FunctionLiteral} function=[Function] ('(' exp=BindingExpression ')')
+	| SymbolRef
+	| {FunctionLiteral} function=[Function] '(' (arguments+=BindingExpression ( ',' arguments+=BindingExpression)* )? ')'
 	| PrimitiveLiteral
 	;
 
@@ -68,11 +68,15 @@ ExpressionHigh returns Expression :
 
 TerminalExpression returns Expression:
 	'(' Expression ')'
-	| VarRefLiteral
 	| CreateClass
 	| {NotExpression} '!' exp=TerminalExpression
-	| {FunctionLiteral} function=[Function] ('(' (arguments+=Expression ( ',' arguments+=Expression)* )? ')')
+	| SymbolRef
+	| {FunctionLiteral} function=[Function] '(' (arguments+=Expression ( ',' arguments+=Expression)* )? ')'
 	| PrimitiveLiteral
+	;
+
+SymbolRef returns Expression:
+	{SymbolRef} ref=[Symbol]
 	;
 
 PrimitiveLiteral returns Expression:
@@ -87,12 +91,13 @@ PrimitiveLiteral returns Expression:
 terminal OPERATOR_HIGH_PRIORITY: '<'|'>'|'='|'!='|'>='|'<='|'/'|'*';
 terminal OPERATOR_LOW_PRIORITY: '+'|'-';
 
-FeatureRefLiteral :
-	 ref=[ecore::EStructuralFeature];
+FeatureRef:
+	feature=[ecore::EStructuralFeature]
+	;
 
 ThenBlock :
 	('then' | '->') ('{'
-		statements += Statement*
+		(statements += Statement ';')*
 	'}'
 	| statements += Statement);
 
@@ -112,9 +117,6 @@ NullLiteral : 'null';
 ListLiteral :
 	'[' (items+=Expression (',' items+=Expression)*)? ']';
 
-VarRefLiteral :
-	'$' varRef=[Variable];
-
 Setter :
 	property=[ecore::EStructuralFeature] (':'|'+=') expression=Expression (guard?='guard')?;
 
@@ -131,3 +133,12 @@ OperationFQN: FQN '(' ( FQN (',' FQN)* )? ')';
 terminal BOOLEAN returns ecore::EBoolean: 'true' | 'false';
 terminal FLOAT returns ecore::EFloat: ('-')?('0'..'9')+'.'('0'..'9');
 terminal INT returns ecore::EInt: ('-')?('0'..'9')+;
+
+// Synthetic rules
+// They are meant to bend the Xtext metamodel inference engine
+
+Symbol : Variable | Function | Rule | FeatureRef;
+
+SymbolStructure returns Symbol:
+	name=ID
+	;

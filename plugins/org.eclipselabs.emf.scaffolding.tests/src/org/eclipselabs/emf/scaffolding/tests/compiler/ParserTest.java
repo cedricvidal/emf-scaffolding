@@ -15,7 +15,10 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.io.InputStream;
 
 import org.eclipse.emf.common.util.EList;
@@ -45,7 +48,7 @@ public class ParserTest extends BaseTest {
 		Scaffold scaffold = scaffolding.getScaffold();
 		assertNotNull(scaffold);
 		assertEquals("http://www.eclipselabs.org/emf/scaffolding/tests/model1",
-				scaffold.getRefPackage());
+				scaffold.getRefPackage().getNsURI());
 		EList<ScaffoldingElement> scaffoldingElements = scaffolding
 				.getElements();
 		assertNotNull(scaffoldingElements);
@@ -63,8 +66,7 @@ public class ParserTest extends BaseTest {
 		assertEquals(1, match.getParams().size());
 		Param param = match.getParams().get(0);
 		assertTrue(param.getProperty() instanceof Operation);
-		Operation bindingOperation = (Operation) param
-				.getProperty();
+		Operation bindingOperation = (Operation) param.getProperty();
 		assertEquals("!=", bindingOperation.getOp());
 		assertNotNull(bindingOperation.getLeft());
 		assertNull(bindingOperation.getRight());
@@ -73,6 +75,18 @@ public class ParserTest extends BaseTest {
 		// TODO assert consequence statements -> new DAO { name : $n + "DAO",
 		// entity : $e guard }
 
+	}
+
+	@Test
+	public void syntaxErrorThrowsIOException() {
+		ESLParser parser = new ESLParser();
+		try {
+			parser.parse(new ByteArrayInputStream("i should not be there"
+					.getBytes()));
+			fail("Parsing an ESL with syntax errors should throw an IOException");
+		} catch (IOException e) {
+			; // ok
+		}
 	}
 
 }

@@ -18,6 +18,7 @@ import org.eclipse.xtext.common.types.JvmOperation;
 
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.EmfscaffoldingdslPackage;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Function;
+import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Symbol;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,6 +27,7 @@ import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Function;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.FunctionImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.FunctionImpl#getJavaClass <em>Java Class</em>}</li>
  *   <li>{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.FunctionImpl#getOperation <em>Operation</em>}</li>
  * </ul>
@@ -35,6 +37,26 @@ import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Function;
  */
 public class FunctionImpl extends ScaffoldingElementImpl implements Function
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getJavaClass() <em>Java Class</em>}' reference.
    * <!-- begin-user-doc -->
@@ -74,6 +96,29 @@ public class FunctionImpl extends ScaffoldingElementImpl implements Function
   protected EClass eStaticClass()
   {
     return EmfscaffoldingdslPackage.Literals.FUNCTION;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EmfscaffoldingdslPackage.FUNCTION__NAME, oldName, name));
   }
 
   /**
@@ -172,6 +217,8 @@ public class FunctionImpl extends ScaffoldingElementImpl implements Function
   {
     switch (featureID)
     {
+      case EmfscaffoldingdslPackage.FUNCTION__NAME:
+        return getName();
       case EmfscaffoldingdslPackage.FUNCTION__JAVA_CLASS:
         if (resolve) return getJavaClass();
         return basicGetJavaClass();
@@ -192,6 +239,9 @@ public class FunctionImpl extends ScaffoldingElementImpl implements Function
   {
     switch (featureID)
     {
+      case EmfscaffoldingdslPackage.FUNCTION__NAME:
+        setName((String)newValue);
+        return;
       case EmfscaffoldingdslPackage.FUNCTION__JAVA_CLASS:
         setJavaClass((JvmGenericType)newValue);
         return;
@@ -212,6 +262,9 @@ public class FunctionImpl extends ScaffoldingElementImpl implements Function
   {
     switch (featureID)
     {
+      case EmfscaffoldingdslPackage.FUNCTION__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case EmfscaffoldingdslPackage.FUNCTION__JAVA_CLASS:
         setJavaClass((JvmGenericType)null);
         return;
@@ -232,12 +285,69 @@ public class FunctionImpl extends ScaffoldingElementImpl implements Function
   {
     switch (featureID)
     {
+      case EmfscaffoldingdslPackage.FUNCTION__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case EmfscaffoldingdslPackage.FUNCTION__JAVA_CLASS:
         return javaClass != null;
       case EmfscaffoldingdslPackage.FUNCTION__OPERATION:
         return operation != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass)
+  {
+    if (baseClass == Symbol.class)
+    {
+      switch (derivedFeatureID)
+      {
+        case EmfscaffoldingdslPackage.FUNCTION__NAME: return EmfscaffoldingdslPackage.SYMBOL__NAME;
+        default: return -1;
+      }
+    }
+    return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass)
+  {
+    if (baseClass == Symbol.class)
+    {
+      switch (baseFeatureID)
+      {
+        case EmfscaffoldingdslPackage.SYMBOL__NAME: return EmfscaffoldingdslPackage.FUNCTION__NAME;
+        default: return -1;
+      }
+    }
+    return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (name: ");
+    result.append(name);
+    result.append(')');
+    return result.toString();
   }
 
 } //FunctionImpl

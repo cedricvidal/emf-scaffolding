@@ -8,11 +8,8 @@ package org.eclipselabs.emf.scaffolding.tests.soa.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
-
 import org.eclipselabs.emf.scaffolding.tests.soa.Component;
 import org.eclipselabs.emf.scaffolding.tests.soa.DAO;
 import org.eclipselabs.emf.scaffolding.tests.soa.Element;

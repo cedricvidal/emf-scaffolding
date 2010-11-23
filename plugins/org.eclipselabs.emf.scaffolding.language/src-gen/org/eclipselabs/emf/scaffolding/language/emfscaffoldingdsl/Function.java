@@ -26,7 +26,7 @@ import org.eclipse.xtext.common.types.JvmOperation;
  * @model
  * @generated
  */
-public interface Function extends ScaffoldingElement
+public interface Function extends ScaffoldingElement, Symbol
 {
   /**
    * Returns the value of the '<em><b>Java Class</b></em>' reference.

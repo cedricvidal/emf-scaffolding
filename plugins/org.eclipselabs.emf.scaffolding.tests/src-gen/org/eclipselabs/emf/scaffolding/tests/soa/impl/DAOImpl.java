@@ -7,12 +7,9 @@
 package org.eclipselabs.emf.scaffolding.tests.soa.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipselabs.emf.scaffolding.tests.soa.DAO;
 import org.eclipselabs.emf.scaffolding.tests.soa.Entity;
 import org.eclipselabs.emf.scaffolding.tests.soa.SoaPackage;

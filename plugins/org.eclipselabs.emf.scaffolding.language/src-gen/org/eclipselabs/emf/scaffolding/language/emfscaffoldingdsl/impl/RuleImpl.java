@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.EmfscaffoldingdslPackage;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Rule;
+import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Symbol;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.ThenBlock;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.WhenBlock;
 
@@ -26,6 +27,7 @@ import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.WhenBlock;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.RuleImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.RuleImpl#getWhen <em>When</em>}</li>
  *   <li>{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.RuleImpl#getThen <em>Then</em>}</li>
  * </ul>
@@ -35,6 +37,26 @@ import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.WhenBlock;
  */
 public class RuleImpl extends ScaffoldingElementImpl implements Rule
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getWhen() <em>When</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -74,6 +96,29 @@ public class RuleImpl extends ScaffoldingElementImpl implements Rule
   protected EClass eStaticClass()
   {
     return EmfscaffoldingdslPackage.Literals.RULE;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EmfscaffoldingdslPackage.RULE__NAME, oldName, name));
   }
 
   /**
@@ -200,6 +245,8 @@ public class RuleImpl extends ScaffoldingElementImpl implements Rule
   {
     switch (featureID)
     {
+      case EmfscaffoldingdslPackage.RULE__NAME:
+        return getName();
       case EmfscaffoldingdslPackage.RULE__WHEN:
         return getWhen();
       case EmfscaffoldingdslPackage.RULE__THEN:
@@ -218,6 +265,9 @@ public class RuleImpl extends ScaffoldingElementImpl implements Rule
   {
     switch (featureID)
     {
+      case EmfscaffoldingdslPackage.RULE__NAME:
+        setName((String)newValue);
+        return;
       case EmfscaffoldingdslPackage.RULE__WHEN:
         setWhen((WhenBlock)newValue);
         return;
@@ -238,6 +288,9 @@ public class RuleImpl extends ScaffoldingElementImpl implements Rule
   {
     switch (featureID)
     {
+      case EmfscaffoldingdslPackage.RULE__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case EmfscaffoldingdslPackage.RULE__WHEN:
         setWhen((WhenBlock)null);
         return;
@@ -258,12 +311,69 @@ public class RuleImpl extends ScaffoldingElementImpl implements Rule
   {
     switch (featureID)
     {
+      case EmfscaffoldingdslPackage.RULE__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case EmfscaffoldingdslPackage.RULE__WHEN:
         return when != null;
       case EmfscaffoldingdslPackage.RULE__THEN:
         return then != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass)
+  {
+    if (baseClass == Symbol.class)
+    {
+      switch (derivedFeatureID)
+      {
+        case EmfscaffoldingdslPackage.RULE__NAME: return EmfscaffoldingdslPackage.SYMBOL__NAME;
+        default: return -1;
+      }
+    }
+    return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass)
+  {
+    if (baseClass == Symbol.class)
+    {
+      switch (baseFeatureID)
+      {
+        case EmfscaffoldingdslPackage.SYMBOL__NAME: return EmfscaffoldingdslPackage.RULE__NAME;
+        default: return -1;
+      }
+    }
+    return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (name: ");
+    result.append(name);
+    result.append(')');
+    return result.toString();
   }
 
 } //RuleImpl
