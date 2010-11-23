@@ -21,7 +21,7 @@ Rule :
 		then=ThenBlock
 	;
 
-WhenBlock :
+WhenBlock : {WhenBlock}
 	'when' ('{'
 		matches += Match*
 	'}'
@@ -95,7 +95,7 @@ FeatureRef:
 	feature=[ecore::EStructuralFeature]
 	;
 
-ThenBlock :
+ThenBlock : {ThenBlock}
 	('then' | '->') ('{'
 		(statements += Statement ';')*
 	'}'
@@ -114,7 +114,7 @@ StringLiteral :
 
 NullLiteral : 'null';
 
-ListLiteral :
+ListLiteral : {ListLiteral}
 	'[' (items+=Expression (',' items+=Expression)*)? ']';
 
 Setter :

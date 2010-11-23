@@ -70,6 +70,11 @@
         <classifier xsi:type="ecore:EClass" href="http://www.eclipselabs.org/emf/scaffolding/1.0.0#//WhenBlock"/>
       </type>
       <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Action">
+          <type metamodel="/0/@metamodelDeclarations.0">
+            <classifier xsi:type="ecore:EClass" href="http://www.eclipselabs.org/emf/scaffolding/1.0.0#//WhenBlock"/>
+          </type>
+        </elements>
         <elements xsi:type="xtext:Keyword" value="when"/>
         <elements xsi:type="xtext:Alternatives">
           <elements xsi:type="xtext:Group">
@@ -448,6 +453,11 @@
         <classifier xsi:type="ecore:EClass" href="http://www.eclipselabs.org/emf/scaffolding/1.0.0#//ThenBlock"/>
       </type>
       <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Action">
+          <type metamodel="/0/@metamodelDeclarations.0">
+            <classifier xsi:type="ecore:EClass" href="http://www.eclipselabs.org/emf/scaffolding/1.0.0#//ThenBlock"/>
+          </type>
+        </elements>
         <elements xsi:type="xtext:Alternatives">
           <elements xsi:type="xtext:Keyword" value="then"/>
           <elements xsi:type="xtext:Keyword" value="->"/>
@@ -544,6 +554,11 @@
         <classifier xsi:type="ecore:EClass" href="http://www.eclipselabs.org/emf/scaffolding/1.0.0#//ListLiteral"/>
       </type>
       <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Action">
+          <type metamodel="/0/@metamodelDeclarations.0">
+            <classifier xsi:type="ecore:EClass" href="http://www.eclipselabs.org/emf/scaffolding/1.0.0#//ListLiteral"/>
+          </type>
+        </elements>
         <elements xsi:type="xtext:Keyword" value="["/>
         <elements xsi:type="xtext:Group" cardinality="?">
           <elements xsi:type="xtext:Assignment" feature="items" operator="+=">
