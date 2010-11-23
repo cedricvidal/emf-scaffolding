@@ -20,12 +20,13 @@ Require-Bundle: org.eclipse.xtext,
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: org.eclipselabs.emf.scaffolding.language,
- org.eclipselabs.emf.scaffolding.language.services,
  org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl,
  org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl,
  org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.util,
  org.eclipselabs.emf.scaffolding.language.parseTreeConstruction;x-friends:="org.eclipselabs.emf.scaffolding.language.ui",
  org.eclipselabs.emf.scaffolding.language.parser.antlr;x-friends:="org.eclipselabs.emf.scaffolding.language.ui",
  org.eclipselabs.emf.scaffolding.language.parser.antlr.internal;x-friends:="org.eclipselabs.emf.scaffolding.language.ui",
+ org.eclipselabs.emf.scaffolding.language.services,
+ org.eclipselabs.emf.scaffolding.language.util,
  org.eclipselabs.emf.scaffolding.language.validation
 

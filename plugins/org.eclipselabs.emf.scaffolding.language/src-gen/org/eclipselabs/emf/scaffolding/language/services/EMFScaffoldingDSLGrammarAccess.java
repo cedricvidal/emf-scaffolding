@@ -309,24 +309,24 @@ public class EMFScaffoldingDSLGrammarAccess extends AbstractGrammarElementFinder
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Param");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cPropertyAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cPropertyBindingExpressionParserRuleCall_0_0 = (RuleCall)cPropertyAssignment_0.eContents().get(0);
+		private final RuleCall cPropertyExpressionParserRuleCall_0_0 = (RuleCall)cPropertyAssignment_0.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Keyword cColonKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
 		private final Assignment cVarAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cVarVariableParserRuleCall_1_1_0 = (RuleCall)cVarAssignment_1_1.eContents().get(0);
 		
 		//Param:
-		//	property=BindingExpression (":" var=Variable)?;
+		//	property=Expression (":" var=Variable)?;
 		public ParserRule getRule() { return rule; }
 
-		//property=BindingExpression (":" var=Variable)?
+		//property=Expression (":" var=Variable)?
 		public Group getGroup() { return cGroup; }
 
-		//property=BindingExpression
+		//property=Expression
 		public Assignment getPropertyAssignment_0() { return cPropertyAssignment_0; }
 
-		//BindingExpression
-		public RuleCall getPropertyBindingExpressionParserRuleCall_0_0() { return cPropertyBindingExpressionParserRuleCall_0_0; }
+		//Expression
+		public RuleCall getPropertyExpressionParserRuleCall_0_0() { return cPropertyExpressionParserRuleCall_0_0; }
 
 		//(":" var=Variable)?
 		public Group getGroup_1() { return cGroup_1; }
@@ -339,200 +339,6 @@ public class EMFScaffoldingDSLGrammarAccess extends AbstractGrammarElementFinder
 
 		//Variable
 		public RuleCall getVarVariableParserRuleCall_1_1_0() { return cVarVariableParserRuleCall_1_1_0; }
-	}
-
-	public class BindingExpressionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BindingExpression");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cBindingExpressionHighParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Action cOperationLeftAction_1_0 = (Action)cGroup_1.eContents().get(0);
-		private final Assignment cOpAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cOpOPERATOR_LOW_PRIORITYTerminalRuleCall_1_1_0 = (RuleCall)cOpAssignment_1_1.eContents().get(0);
-		private final Assignment cRightAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
-		private final RuleCall cRightBindingExpressionParserRuleCall_1_2_0 = (RuleCall)cRightAssignment_1_2.eContents().get(0);
-		
-		//BindingExpression returns Expression:
-		//	BindingExpressionHigh ({Operation.left=current} op=OPERATOR_LOW_PRIORITY right=BindingExpression)?;
-		public ParserRule getRule() { return rule; }
-
-		//BindingExpressionHigh ({Operation.left=current} op=OPERATOR_LOW_PRIORITY right=BindingExpression)?
-		public Group getGroup() { return cGroup; }
-
-		//BindingExpressionHigh
-		public RuleCall getBindingExpressionHighParserRuleCall_0() { return cBindingExpressionHighParserRuleCall_0; }
-
-		//({Operation.left=current} op=OPERATOR_LOW_PRIORITY right=BindingExpression)?
-		public Group getGroup_1() { return cGroup_1; }
-
-		//{Operation.left=current}
-		public Action getOperationLeftAction_1_0() { return cOperationLeftAction_1_0; }
-
-		//op=OPERATOR_LOW_PRIORITY
-		public Assignment getOpAssignment_1_1() { return cOpAssignment_1_1; }
-
-		//OPERATOR_LOW_PRIORITY
-		public RuleCall getOpOPERATOR_LOW_PRIORITYTerminalRuleCall_1_1_0() { return cOpOPERATOR_LOW_PRIORITYTerminalRuleCall_1_1_0; }
-
-		//right=BindingExpression
-		public Assignment getRightAssignment_1_2() { return cRightAssignment_1_2; }
-
-		//BindingExpression
-		public RuleCall getRightBindingExpressionParserRuleCall_1_2_0() { return cRightBindingExpressionParserRuleCall_1_2_0; }
-	}
-
-	public class BindingExpressionHighElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BindingExpressionHigh");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cBindingTerminalExpressionParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Action cOperationLeftAction_1_0 = (Action)cGroup_1.eContents().get(0);
-		private final Assignment cOpAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cOpOPERATOR_HIGH_PRIORITYTerminalRuleCall_1_1_0 = (RuleCall)cOpAssignment_1_1.eContents().get(0);
-		private final Assignment cRightAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
-		private final RuleCall cRightBindingExpressionHighParserRuleCall_1_2_0 = (RuleCall)cRightAssignment_1_2.eContents().get(0);
-		
-		//BindingExpressionHigh returns Expression:
-		//	BindingTerminalExpression ({Operation.left=current} op=OPERATOR_HIGH_PRIORITY right=BindingExpressionHigh)?;
-		public ParserRule getRule() { return rule; }
-
-		//BindingTerminalExpression ({Operation.left=current} op=OPERATOR_HIGH_PRIORITY right=BindingExpressionHigh)?
-		public Group getGroup() { return cGroup; }
-
-		//BindingTerminalExpression
-		public RuleCall getBindingTerminalExpressionParserRuleCall_0() { return cBindingTerminalExpressionParserRuleCall_0; }
-
-		//({Operation.left=current} op=OPERATOR_HIGH_PRIORITY right=BindingExpressionHigh)?
-		public Group getGroup_1() { return cGroup_1; }
-
-		//{Operation.left=current}
-		public Action getOperationLeftAction_1_0() { return cOperationLeftAction_1_0; }
-
-		//op=OPERATOR_HIGH_PRIORITY
-		public Assignment getOpAssignment_1_1() { return cOpAssignment_1_1; }
-
-		//OPERATOR_HIGH_PRIORITY
-		public RuleCall getOpOPERATOR_HIGH_PRIORITYTerminalRuleCall_1_1_0() { return cOpOPERATOR_HIGH_PRIORITYTerminalRuleCall_1_1_0; }
-
-		//right=BindingExpressionHigh
-		public Assignment getRightAssignment_1_2() { return cRightAssignment_1_2; }
-
-		//BindingExpressionHigh
-		public RuleCall getRightBindingExpressionHighParserRuleCall_1_2_0() { return cRightBindingExpressionHighParserRuleCall_1_2_0; }
-	}
-
-	public class BindingTerminalExpressionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BindingTerminalExpression");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
-		private final RuleCall cBindingExpressionParserRuleCall_0_1 = (RuleCall)cGroup_0.eContents().get(1);
-		private final Keyword cRightParenthesisKeyword_0_2 = (Keyword)cGroup_0.eContents().get(2);
-		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
-		private final Action cNotExpressionAction_1_0 = (Action)cGroup_1.eContents().get(0);
-		private final Keyword cExclamationMarkKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
-		private final Assignment cExpAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
-		private final RuleCall cExpBindingTerminalExpressionParserRuleCall_1_2_0 = (RuleCall)cExpAssignment_1_2.eContents().get(0);
-		private final RuleCall cSymbolRefParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final Group cGroup_3 = (Group)cAlternatives.eContents().get(3);
-		private final Action cFunctionLiteralAction_3_0 = (Action)cGroup_3.eContents().get(0);
-		private final Assignment cFunctionAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final CrossReference cFunctionFunctionCrossReference_3_1_0 = (CrossReference)cFunctionAssignment_3_1.eContents().get(0);
-		private final RuleCall cFunctionFunctionIDTerminalRuleCall_3_1_0_1 = (RuleCall)cFunctionFunctionCrossReference_3_1_0.eContents().get(1);
-		private final Keyword cLeftParenthesisKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
-		private final Group cGroup_3_3 = (Group)cGroup_3.eContents().get(3);
-		private final Assignment cArgumentsAssignment_3_3_0 = (Assignment)cGroup_3_3.eContents().get(0);
-		private final RuleCall cArgumentsBindingExpressionParserRuleCall_3_3_0_0 = (RuleCall)cArgumentsAssignment_3_3_0.eContents().get(0);
-		private final Group cGroup_3_3_1 = (Group)cGroup_3_3.eContents().get(1);
-		private final Keyword cCommaKeyword_3_3_1_0 = (Keyword)cGroup_3_3_1.eContents().get(0);
-		private final Assignment cArgumentsAssignment_3_3_1_1 = (Assignment)cGroup_3_3_1.eContents().get(1);
-		private final RuleCall cArgumentsBindingExpressionParserRuleCall_3_3_1_1_0 = (RuleCall)cArgumentsAssignment_3_3_1_1.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_3_4 = (Keyword)cGroup_3.eContents().get(4);
-		private final RuleCall cPrimitiveLiteralParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
-		
-		//BindingTerminalExpression returns Expression:
-		//	"(" BindingExpression ")" | {NotExpression} "!" exp=BindingTerminalExpression | SymbolRef | {FunctionLiteral}
-		//	function=[Function] "(" (arguments+=BindingExpression ("," arguments+=BindingExpression)*)? ")" | PrimitiveLiteral;
-		public ParserRule getRule() { return rule; }
-
-		//"(" BindingExpression ")" | {NotExpression} "!" exp=BindingTerminalExpression | SymbolRef | {FunctionLiteral}
-		//function=[Function] "(" (arguments+=BindingExpression ("," arguments+=BindingExpression)*)? ")" | PrimitiveLiteral
-		public Alternatives getAlternatives() { return cAlternatives; }
-
-		//"(" BindingExpression ")"
-		public Group getGroup_0() { return cGroup_0; }
-
-		//"("
-		public Keyword getLeftParenthesisKeyword_0_0() { return cLeftParenthesisKeyword_0_0; }
-
-		//BindingExpression
-		public RuleCall getBindingExpressionParserRuleCall_0_1() { return cBindingExpressionParserRuleCall_0_1; }
-
-		//")"
-		public Keyword getRightParenthesisKeyword_0_2() { return cRightParenthesisKeyword_0_2; }
-
-		//{NotExpression} "!" exp=BindingTerminalExpression
-		public Group getGroup_1() { return cGroup_1; }
-
-		//{NotExpression}
-		public Action getNotExpressionAction_1_0() { return cNotExpressionAction_1_0; }
-
-		//"!"
-		public Keyword getExclamationMarkKeyword_1_1() { return cExclamationMarkKeyword_1_1; }
-
-		//exp=BindingTerminalExpression
-		public Assignment getExpAssignment_1_2() { return cExpAssignment_1_2; }
-
-		//BindingTerminalExpression
-		public RuleCall getExpBindingTerminalExpressionParserRuleCall_1_2_0() { return cExpBindingTerminalExpressionParserRuleCall_1_2_0; }
-
-		//SymbolRef
-		public RuleCall getSymbolRefParserRuleCall_2() { return cSymbolRefParserRuleCall_2; }
-
-		//{FunctionLiteral} function=[Function] "(" (arguments+=BindingExpression ("," arguments+=BindingExpression)*)? ")"
-		public Group getGroup_3() { return cGroup_3; }
-
-		//{FunctionLiteral}
-		public Action getFunctionLiteralAction_3_0() { return cFunctionLiteralAction_3_0; }
-
-		//function=[Function]
-		public Assignment getFunctionAssignment_3_1() { return cFunctionAssignment_3_1; }
-
-		//[Function]
-		public CrossReference getFunctionFunctionCrossReference_3_1_0() { return cFunctionFunctionCrossReference_3_1_0; }
-
-		//ID
-		public RuleCall getFunctionFunctionIDTerminalRuleCall_3_1_0_1() { return cFunctionFunctionIDTerminalRuleCall_3_1_0_1; }
-
-		//"("
-		public Keyword getLeftParenthesisKeyword_3_2() { return cLeftParenthesisKeyword_3_2; }
-
-		//(arguments+=BindingExpression ("," arguments+=BindingExpression)*)?
-		public Group getGroup_3_3() { return cGroup_3_3; }
-
-		//arguments+=BindingExpression
-		public Assignment getArgumentsAssignment_3_3_0() { return cArgumentsAssignment_3_3_0; }
-
-		//BindingExpression
-		public RuleCall getArgumentsBindingExpressionParserRuleCall_3_3_0_0() { return cArgumentsBindingExpressionParserRuleCall_3_3_0_0; }
-
-		//("," arguments+=BindingExpression)*
-		public Group getGroup_3_3_1() { return cGroup_3_3_1; }
-
-		//","
-		public Keyword getCommaKeyword_3_3_1_0() { return cCommaKeyword_3_3_1_0; }
-
-		//arguments+=BindingExpression
-		public Assignment getArgumentsAssignment_3_3_1_1() { return cArgumentsAssignment_3_3_1_1; }
-
-		//BindingExpression
-		public RuleCall getArgumentsBindingExpressionParserRuleCall_3_3_1_1_0() { return cArgumentsBindingExpressionParserRuleCall_3_3_1_1_0; }
-
-		//")"
-		public Keyword getRightParenthesisKeyword_3_4() { return cRightParenthesisKeyword_3_4; }
-
-		//PrimitiveLiteral
-		public RuleCall getPrimitiveLiteralParserRuleCall_4() { return cPrimitiveLiteralParserRuleCall_4; }
 	}
 
 	public class ExpressionElements extends AbstractParserRuleElementFinder {
@@ -1435,9 +1241,6 @@ public class EMFScaffoldingDSLGrammarAccess extends AbstractGrammarElementFinder
 	private MatchElements pMatch;
 	private VariableElements pVariable;
 	private ParamElements pParam;
-	private BindingExpressionElements pBindingExpression;
-	private BindingExpressionHighElements pBindingExpressionHigh;
-	private BindingTerminalExpressionElements pBindingTerminalExpression;
 	private ExpressionElements pExpression;
 	private ExpressionHighElements pExpressionHigh;
 	private TerminalExpressionElements pTerminalExpression;
@@ -1566,44 +1369,13 @@ public class EMFScaffoldingDSLGrammarAccess extends AbstractGrammarElementFinder
 	}
 
 	//Param:
-	//	property=BindingExpression (":" var=Variable)?;
+	//	property=Expression (":" var=Variable)?;
 	public ParamElements getParamAccess() {
 		return (pParam != null) ? pParam : (pParam = new ParamElements());
 	}
 	
 	public ParserRule getParamRule() {
 		return getParamAccess().getRule();
-	}
-
-	//BindingExpression returns Expression:
-	//	BindingExpressionHigh ({Operation.left=current} op=OPERATOR_LOW_PRIORITY right=BindingExpression)?;
-	public BindingExpressionElements getBindingExpressionAccess() {
-		return (pBindingExpression != null) ? pBindingExpression : (pBindingExpression = new BindingExpressionElements());
-	}
-	
-	public ParserRule getBindingExpressionRule() {
-		return getBindingExpressionAccess().getRule();
-	}
-
-	//BindingExpressionHigh returns Expression:
-	//	BindingTerminalExpression ({Operation.left=current} op=OPERATOR_HIGH_PRIORITY right=BindingExpressionHigh)?;
-	public BindingExpressionHighElements getBindingExpressionHighAccess() {
-		return (pBindingExpressionHigh != null) ? pBindingExpressionHigh : (pBindingExpressionHigh = new BindingExpressionHighElements());
-	}
-	
-	public ParserRule getBindingExpressionHighRule() {
-		return getBindingExpressionHighAccess().getRule();
-	}
-
-	//BindingTerminalExpression returns Expression:
-	//	"(" BindingExpression ")" | {NotExpression} "!" exp=BindingTerminalExpression | SymbolRef | {FunctionLiteral}
-	//	function=[Function] "(" (arguments+=BindingExpression ("," arguments+=BindingExpression)*)? ")" | PrimitiveLiteral;
-	public BindingTerminalExpressionElements getBindingTerminalExpressionAccess() {
-		return (pBindingTerminalExpression != null) ? pBindingTerminalExpression : (pBindingTerminalExpression = new BindingTerminalExpressionElements());
-	}
-	
-	public ParserRule getBindingTerminalExpressionRule() {
-		return getBindingTerminalExpressionAccess().getRule();
 	}
 
 	//Expression:

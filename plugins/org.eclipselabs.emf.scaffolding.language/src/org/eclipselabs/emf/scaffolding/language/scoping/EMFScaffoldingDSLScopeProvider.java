@@ -49,7 +49,7 @@ import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.UpdateStatemen
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Variable;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.WhenBlock;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.FeatureRefImpl;
-import org.eclipselabs.emf.scaffolding.language.util.Queries;
+import org.eclipselabs.emf.scaffolding.language.util.ESLIterators;
 
 import com.google.common.collect.Iterators;
 
@@ -156,8 +156,7 @@ public class EMFScaffoldingDSLScopeProvider extends
 
 	IScope scope_UpdateStatement_varRef(UpdateStatement context,
 			EReference reference) {
-		Rule rule = filter(Queries.ancestors(context), Rule.class).iterator()
-				.next();
+		Rule rule = Iterators.filter(ESLIterators.ancestors(context), Rule.class).next();
 		WhenBlock when = rule.getWhen();
 		return scopeFor(asIterable(Iterators.filter(when.eAllContents(),
 				Variable.class)));

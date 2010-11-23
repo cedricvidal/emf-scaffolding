@@ -11,11 +11,29 @@
  *******************************************************************************/
 package org.eclipselabs.emf.scaffolding.language.validation;
 
+import static org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.EmfscaffoldingdslPackage.Literals.WHEN_BLOCK;
+import static org.eclipselabs.emf.scaffolding.language.util.ESLIterators.ancestors;
+import static org.eclipselabs.emf.scaffolding.language.util.ESLPredicates.isInstanceOf;
+
+import org.eclipse.xtext.validation.Check;
+import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.CreateClass;
+import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.EmfscaffoldingdslPackage;
+
+import com.google.common.collect.Iterators;
+
 
 public class EMFScaffoldingDSLJavaValidator extends
 		AbstractEMFScaffoldingDSLJavaValidator {
 
-//	@Check
+	@Check
+	public void createClassCannotBeUsedInWhenBlock(CreateClass e) {
+		boolean isInWhenBlock = Iterators.filter(ancestors(e), isInstanceOf(WHEN_BLOCK)).hasNext();
+		if (isInWhenBlock) {
+			error("Keyword 'new' cannot be used in when block", e, EmfscaffoldingdslPackage.CREATE_CLASS);
+		}
+	}
+
+	//	@Check
 //	public void checkParamBindingExpressionHasExactlyOneFeatureRefLiteral(
 //			Param param) {
 //		Expression exp = param.getProperty();

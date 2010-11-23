@@ -36,25 +36,7 @@ Variable :
 	name = ID;
 
 Param :
-	 property=BindingExpression (':' var=Variable)?;
-
-BindingExpression returns Expression :
-	BindingExpressionHigh ({Operation.left=current} 
-		op=OPERATOR_LOW_PRIORITY right=BindingExpression)?
-	;
-
-BindingExpressionHigh returns Expression :
-	BindingTerminalExpression ({Operation.left=current} 
-		op=OPERATOR_HIGH_PRIORITY right=BindingExpressionHigh)?
-	;
-
-BindingTerminalExpression returns Expression:
-	'(' BindingExpression ')'
-	| {NotExpression} '!' exp=BindingTerminalExpression
-	| SymbolRef
-	| {FunctionLiteral} function=[Function] '(' (arguments+=BindingExpression ( ',' arguments+=BindingExpression)* )? ')'
-	| PrimitiveLiteral
-	;
+	 property=Expression (':' var=Variable)?;
 
 Expression returns Expression:
 	ExpressionHigh ({Operation.left=current} 

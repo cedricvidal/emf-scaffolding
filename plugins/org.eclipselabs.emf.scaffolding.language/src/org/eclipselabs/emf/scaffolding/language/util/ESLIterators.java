@@ -15,42 +15,27 @@ import java.util.Iterator;
 
 import org.eclipse.emf.ecore.EObject;
 
-public class Queries {
+import com.google.common.collect.AbstractIterator;
 
-	public static Iterable<EObject> ancestors(final EObject object) {
-		return new Iterable<EObject>() {
+public class ESLIterators {
+
+	public static Iterator<EObject> ancestors(final EObject object) {
+		return new AbstractIterator<EObject>() {
+			private EObject current = null;
 
 			@Override
-			public Iterator<EObject> iterator() {
-				return new ContainerIterator(object);
+			protected EObject computeNext() {
+				if (current == null) {
+					current = object;
+				} else {
+					current = current.eContainer();
+				}
+				if (current != null) {
+					return current;
+				}
+				return endOfData();
 			}
 		};
 	}
 
-	public static class ContainerIterator implements Iterator<EObject> {
-
-		private EObject object;
-
-		public ContainerIterator(EObject object) {
-			super();
-			this.object = object;
-		}
-
-		@Override
-		public boolean hasNext() {
-			return object.eContainer() != null;
-		}
-
-		@Override
-		public EObject next() {
-			object = object.eContainer();
-			return object;
-		}
-
-		@Override
-		public void remove() {
-			throw new UnsupportedOperationException();
-		}
-
-	}
 }
