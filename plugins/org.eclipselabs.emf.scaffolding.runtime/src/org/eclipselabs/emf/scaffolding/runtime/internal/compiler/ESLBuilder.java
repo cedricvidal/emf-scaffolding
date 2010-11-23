@@ -31,6 +31,7 @@ import org.drools.lang.descr.PatternDescr;
 import org.drools.lang.descr.RuleDescr;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Expression;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Match;
+import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.NullLiteral;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Operation;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Param;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Rule;
@@ -117,7 +118,7 @@ public class ESLBuilder implements ResourceTypeBuilder {
 			// (name
 			FieldConstraintDescr fieldConstraintDescr = new FieldConstraintDescr(fieldName);
 			// != null)
-			if (op.getRight() == null) {
+			if (op.getRight() instanceof NullLiteral) {
 				LiteralRestrictionDescr literalRestrictionDescr = new LiteralRestrictionDescr(op.getOp(), null);
 				fieldConstraintDescr.addRestriction(literalRestrictionDescr);
 			} else {

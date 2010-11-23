@@ -91,6 +91,7 @@ public class EMFScaffoldingDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getCreateClassAccess().getGroup_2(), "rule__CreateClass__Group_2__0");
 					put(grammarAccess.getCreateClassAccess().getGroup_2_1(), "rule__CreateClass__Group_2_1__0");
 					put(grammarAccess.getCreateClassAccess().getGroup_2_1_1(), "rule__CreateClass__Group_2_1_1__0");
+					put(grammarAccess.getNullLiteralAccess().getGroup(), "rule__NullLiteral__Group__0");
 					put(grammarAccess.getListLiteralAccess().getGroup(), "rule__ListLiteral__Group__0");
 					put(grammarAccess.getListLiteralAccess().getGroup_2(), "rule__ListLiteral__Group_2__0");
 					put(grammarAccess.getListLiteralAccess().getGroup_2_1(), "rule__ListLiteral__Group_2_1__0");

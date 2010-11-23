@@ -1520,7 +1520,16 @@ rulePrimitiveLiteral returns [EObject current=null]
         currentNode = currentNode.getParent();
     }
 
-    |ruleNullLiteral
+    |
+    { 
+        currentNode=createCompositeNode(grammarAccess.getPrimitiveLiteralAccess().getNullLiteralParserRuleCall_2(), currentNode); 
+    }
+    this_NullLiteral_2=ruleNullLiteral
+    { 
+        $current = $this_NullLiteral_2.current; 
+        currentNode = currentNode.getParent();
+    }
+
     |((
     { 
         temp=factory.create(grammarAccess.getPrimitiveLiteralAccess().getIntLiteralAction_3_0().getType().getClassifier());
@@ -2042,29 +2051,38 @@ ruleStringLiteral returns [EObject current=null]
 
 
 // Entry rule entryRuleNullLiteral
-entryRuleNullLiteral returns [String current=null] 
+entryRuleNullLiteral returns [EObject current=null] 
 	:
-	{ currentNode = createCompositeNode(grammarAccess.getNullLiteralRule(), currentNode); } 
+	{ currentNode = createCompositeNode(grammarAccess.getNullLiteralRule(), currentNode); }
 	 iv_ruleNullLiteral=ruleNullLiteral 
-	 { $current=$iv_ruleNullLiteral.current.getText(); }  
+	 { $current=$iv_ruleNullLiteral.current; } 
 	 EOF 
 ;
 
 // Rule NullLiteral
-ruleNullLiteral returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
-    @init { setCurrentLookahead(); resetLookahead(); 
+ruleNullLiteral returns [EObject current=null] 
+    @init { EObject temp=null; setCurrentLookahead(); resetLookahead(); 
     }
     @after { resetLookahead(); 
-	    lastConsumedNode = currentNode;
+    	lastConsumedNode = currentNode;
     }:
-
-	kw='null' 
-    {
-        $current.merge(kw);
-        createLeafNode(grammarAccess.getNullLiteralAccess().getNullKeyword(), null); 
+((
+    { 
+        temp=factory.create(grammarAccess.getNullLiteralAccess().getNullLiteralAction_0().getType().getClassifier());
+        $current = temp; 
+        temp = null;
+        CompositeNode newNode = createCompositeNode(grammarAccess.getNullLiteralAccess().getNullLiteralAction_0(), currentNode.getParent());
+    newNode.getChildren().add(currentNode);
+    moveLookaheadInfo(currentNode, newNode);
+    currentNode = newNode; 
+        associateNodeWithAstElement(currentNode, $current); 
     }
-
-    ;
+)	'null' 
+    {
+        createLeafNode(grammarAccess.getNullLiteralAccess().getNullKeyword_1(), null); 
+    }
+)
+;
 
 
 

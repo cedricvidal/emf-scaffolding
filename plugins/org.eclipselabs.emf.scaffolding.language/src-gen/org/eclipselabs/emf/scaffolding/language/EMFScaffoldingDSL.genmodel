@@ -54,6 +54,7 @@
     <genClasses ecoreClass="EMFScaffoldingDSL.ecore#//StringLiteral">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EMFScaffoldingDSL.ecore#//StringLiteral/value"/>
     </genClasses>
+    <genClasses ecoreClass="EMFScaffoldingDSL.ecore#//NullLiteral"/>
     <genClasses ecoreClass="EMFScaffoldingDSL.ecore#//ListLiteral">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EMFScaffoldingDSL.ecore#//ListLiteral/items"/>
     </genClasses>

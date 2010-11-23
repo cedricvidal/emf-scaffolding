@@ -291,7 +291,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getSymbol()
    * @generated
    */
-  int SYMBOL = 20;
+  int SYMBOL = 21;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -582,6 +582,25 @@ public interface EmfscaffoldingdslPackage extends EPackage
   int STRING_LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
+   * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.NullLiteralImpl <em>Null Literal</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.NullLiteralImpl
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getNullLiteral()
+   * @generated
+   */
+  int NULL_LITERAL = 16;
+
+  /**
+   * The number of structural features of the '<em>Null Literal</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NULL_LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
    * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.ListLiteralImpl <em>List Literal</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -589,7 +608,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getListLiteral()
    * @generated
    */
-  int LIST_LITERAL = 16;
+  int LIST_LITERAL = 17;
 
   /**
    * The feature id for the '<em><b>Items</b></em>' containment reference list.
@@ -617,7 +636,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getSetter()
    * @generated
    */
-  int SETTER = 17;
+  int SETTER = 18;
 
   /**
    * The feature id for the '<em><b>Property</b></em>' reference.
@@ -663,7 +682,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getFunction()
    * @generated
    */
-  int FUNCTION = 18;
+  int FUNCTION = 19;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -709,7 +728,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getUpdateStatement()
    * @generated
    */
-  int UPDATE_STATEMENT = 19;
+  int UPDATE_STATEMENT = 20;
 
   /**
    * The feature id for the '<em><b>Var Ref</b></em>' reference.
@@ -746,7 +765,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getOperation()
    * @generated
    */
-  int OPERATION = 21;
+  int OPERATION = 22;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -792,7 +811,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getNotExpression()
    * @generated
    */
-  int NOT_EXPRESSION = 22;
+  int NOT_EXPRESSION = 23;
 
   /**
    * The feature id for the '<em><b>Exp</b></em>' containment reference.
@@ -820,7 +839,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getFunctionLiteral()
    * @generated
    */
-  int FUNCTION_LITERAL = 23;
+  int FUNCTION_LITERAL = 24;
 
   /**
    * The feature id for the '<em><b>Function</b></em>' reference.
@@ -857,7 +876,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getSymbolRef()
    * @generated
    */
-  int SYMBOL_REF = 24;
+  int SYMBOL_REF = 25;
 
   /**
    * The feature id for the '<em><b>Ref</b></em>' reference.
@@ -885,7 +904,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getIntLiteral()
    * @generated
    */
-  int INT_LITERAL = 25;
+  int INT_LITERAL = 26;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -913,7 +932,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getBooleanLiteral()
    * @generated
    */
-  int BOOLEAN_LITERAL = 26;
+  int BOOLEAN_LITERAL = 27;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -941,7 +960,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getFloatLiteral()
    * @generated
    */
-  int FLOAT_LITERAL = 27;
+  int FLOAT_LITERAL = 28;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1319,6 +1338,16 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @generated
    */
   EAttribute getStringLiteral_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.NullLiteral <em>Null Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Null Literal</em>'.
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.NullLiteral
+   * @generated
+   */
+  EClass getNullLiteral();
 
   /**
    * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.ListLiteral <em>List Literal</em>}'.
@@ -1975,6 +2004,16 @@ public interface EmfscaffoldingdslPackage extends EPackage
      * @generated
      */
     EAttribute STRING_LITERAL__VALUE = eINSTANCE.getStringLiteral_Value();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.NullLiteralImpl <em>Null Literal</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.NullLiteralImpl
+     * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getNullLiteral()
+     * @generated
+     */
+    EClass NULL_LITERAL = eINSTANCE.getNullLiteral();
 
     /**
      * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.ListLiteralImpl <em>List Literal</em>}' class.

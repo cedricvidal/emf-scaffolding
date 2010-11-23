@@ -171,6 +171,15 @@ public interface EmfscaffoldingdslFactory extends EFactory
   StringLiteral createStringLiteral();
 
   /**
+   * Returns a new object of class '<em>Null Literal</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Null Literal</em>'.
+   * @generated
+   */
+  NullLiteral createNullLiteral();
+
+  /**
    * Returns a new object of class '<em>List Literal</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

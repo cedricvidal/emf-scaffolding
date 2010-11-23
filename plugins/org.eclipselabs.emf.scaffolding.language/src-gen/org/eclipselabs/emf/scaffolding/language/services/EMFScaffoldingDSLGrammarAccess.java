@@ -1065,14 +1065,22 @@ public class EMFScaffoldingDSLGrammarAccess extends AbstractGrammarElementFinder
 
 	public class NullLiteralElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "NullLiteral");
-		private final Keyword cNullKeyword = (Keyword)rule.eContents().get(1);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cNullLiteralAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cNullKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		
-		//NullLiteral returns ecore::EString:
-		//	"null";
+		//NullLiteral:
+		//	{NullLiteral} "null";
 		public ParserRule getRule() { return rule; }
 
+		//{NullLiteral} "null"
+		public Group getGroup() { return cGroup; }
+
+		//{NullLiteral}
+		public Action getNullLiteralAction_0() { return cNullLiteralAction_0; }
+
 		//"null"
-		public Keyword getNullKeyword() { return cNullKeyword; }
+		public Keyword getNullKeyword_1() { return cNullKeyword_1; }
 	}
 
 	public class ListLiteralElements extends AbstractParserRuleElementFinder {
@@ -1722,8 +1730,8 @@ public class EMFScaffoldingDSLGrammarAccess extends AbstractGrammarElementFinder
 		return getStringLiteralAccess().getRule();
 	}
 
-	//NullLiteral returns ecore::EString:
-	//	"null";
+	//NullLiteral:
+	//	{NullLiteral} "null";
 	public NullLiteralElements getNullLiteralAccess() {
 		return (pNullLiteral != null) ? pNullLiteral : (pNullLiteral = new NullLiteralElements());
 	}

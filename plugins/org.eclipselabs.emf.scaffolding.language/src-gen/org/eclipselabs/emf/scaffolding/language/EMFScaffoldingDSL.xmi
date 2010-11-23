@@ -544,10 +544,17 @@
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="NullLiteral">
-      <type metamodel="/0/@metamodelDeclarations.1">
-        <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <type metamodel="/0/@metamodelDeclarations.0">
+        <classifier xsi:type="ecore:EClass" href="http://www.eclipselabs.org/emf/scaffolding/1.0.0#//NullLiteral"/>
       </type>
-      <alternatives xsi:type="xtext:Keyword" value="null"/>
+      <alternatives xsi:type="xtext:Group">
+        <elements xsi:type="xtext:Action">
+          <type metamodel="/0/@metamodelDeclarations.0">
+            <classifier xsi:type="ecore:EClass" href="http://www.eclipselabs.org/emf/scaffolding/1.0.0#//NullLiteral"/>
+          </type>
+        </elements>
+        <elements xsi:type="xtext:Keyword" value="null"/>
+      </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="ListLiteral">
       <type metamodel="/0/@metamodelDeclarations.0">

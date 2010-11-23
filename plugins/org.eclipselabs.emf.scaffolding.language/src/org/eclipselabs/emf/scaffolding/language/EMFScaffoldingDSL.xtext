@@ -112,7 +112,7 @@ CreateClass :
 StringLiteral :
 	value=STRING;
 
-NullLiteral : 'null';
+NullLiteral : {NullLiteral} 'null';
 
 ListLiteral : {ListLiteral}
 	'[' (items+=Expression (',' items+=Expression)*)? ']';

@@ -23,6 +23,7 @@ import java.io.InputStream;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Match;
+import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.NullLiteral;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Operation;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Param;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Rule;
@@ -69,7 +70,7 @@ public class ParserTest extends BaseTest {
 		Operation bindingOperation = (Operation) param.getProperty();
 		assertEquals("!=", bindingOperation.getOp());
 		assertNotNull(bindingOperation.getLeft());
-		assertNull(bindingOperation.getRight());
+		assertTrue(bindingOperation.getRight() instanceof NullLiteral);
 		ThenBlock consequence = rule.getThen();
 		assertNotNull(consequence);
 		// TODO assert consequence statements -> new DAO { name : $n + "DAO",

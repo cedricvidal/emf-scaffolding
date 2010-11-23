@@ -30,6 +30,7 @@ import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.IntLiteral;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.ListLiteral;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Match;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.NotExpression;
+import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.NullLiteral;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Operation;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Param;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Rule;
@@ -165,6 +166,13 @@ public class EmfscaffoldingdslPackageImpl extends EPackageImpl implements Emfsca
    * @generated
    */
   private EClass stringLiteralEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass nullLiteralEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -661,6 +669,16 @@ public class EmfscaffoldingdslPackageImpl extends EPackageImpl implements Emfsca
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getNullLiteral()
+  {
+    return nullLiteralEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getListLiteral()
   {
     return listLiteralEClass;
@@ -1046,6 +1064,8 @@ public class EmfscaffoldingdslPackageImpl extends EPackageImpl implements Emfsca
     stringLiteralEClass = createEClass(STRING_LITERAL);
     createEAttribute(stringLiteralEClass, STRING_LITERAL__VALUE);
 
+    nullLiteralEClass = createEClass(NULL_LITERAL);
+
     listLiteralEClass = createEClass(LIST_LITERAL);
     createEReference(listLiteralEClass, LIST_LITERAL__ITEMS);
 
@@ -1132,6 +1152,7 @@ public class EmfscaffoldingdslPackageImpl extends EPackageImpl implements Emfsca
     createStatementEClass.getESuperTypes().add(this.getStatement());
     createClassEClass.getESuperTypes().add(this.getExpression());
     stringLiteralEClass.getESuperTypes().add(this.getExpression());
+    nullLiteralEClass.getESuperTypes().add(this.getExpression());
     listLiteralEClass.getESuperTypes().add(this.getExpression());
     functionEClass.getESuperTypes().add(this.getScaffoldingElement());
     functionEClass.getESuperTypes().add(this.getSymbol());
@@ -1194,6 +1215,8 @@ public class EmfscaffoldingdslPackageImpl extends EPackageImpl implements Emfsca
 
     initEClass(stringLiteralEClass, StringLiteral.class, "StringLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getStringLiteral_Value(), ecorePackage.getEString(), "value", null, 0, 1, StringLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(nullLiteralEClass, NullLiteral.class, "NullLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(listLiteralEClass, ListLiteral.class, "ListLiteral", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getListLiteral_Items(), this.getExpression(), null, "items", null, 0, -1, ListLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

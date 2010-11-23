@@ -84,6 +84,7 @@ public class EmfscaffoldingdslFactoryImpl extends EFactoryImpl implements Emfsca
       case EmfscaffoldingdslPackage.CREATE_STATEMENT: return createCreateStatement();
       case EmfscaffoldingdslPackage.CREATE_CLASS: return createCreateClass();
       case EmfscaffoldingdslPackage.STRING_LITERAL: return createStringLiteral();
+      case EmfscaffoldingdslPackage.NULL_LITERAL: return createNullLiteral();
       case EmfscaffoldingdslPackage.LIST_LITERAL: return createListLiteral();
       case EmfscaffoldingdslPackage.SETTER: return createSetter();
       case EmfscaffoldingdslPackage.FUNCTION: return createFunction();
@@ -275,6 +276,17 @@ public class EmfscaffoldingdslFactoryImpl extends EFactoryImpl implements Emfsca
   {
     StringLiteralImpl stringLiteral = new StringLiteralImpl();
     return stringLiteral;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NullLiteral createNullLiteral()
+  {
+    NullLiteralImpl nullLiteral = new NullLiteralImpl();
+    return nullLiteral;
   }
 
   /**
