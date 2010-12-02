@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.eclipselabs.emf.scaffolding.demos.businessapp.business.presentation.BusinessModelWizardID"
+            name="%_UI_BusinessModelWizard_label"
+            class="org.eclipselabs.emf.scaffolding.demos.businessapp.business.presentation.BusinessModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/BusinessModelFile.gif">
+         <description>%_UI_BusinessModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.eclipselabs.emf.scaffolding.demos.businessapp.business.presentation.BusinessEditorID"
+            name="%_UI_BusinessEditor_label"
+            icon="icons/full/obj16/BusinessModelFile.gif"
+            extensions="business"
+            class="org.eclipselabs.emf.scaffolding.demos.businessapp.business.presentation.BusinessEditor"
+            contributorClass="org.eclipselabs.emf.scaffolding.demos.businessapp.business.presentation.BusinessActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
