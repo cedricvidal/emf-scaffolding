@@ -14,5 +14,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipselabs.emf.scaffolding.demos.businessapp.edit;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.eclipse.emf.edit.ui;visibility:=reexport,
- org.eclipse.ui.ide;visibility:=reexport
+ org.eclipse.ui.ide;visibility:=reexport,
+ org.eclipselabs.emf.scaffolding.runtime;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy

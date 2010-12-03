@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<biz:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:biz="http://www.eclipselabs.org/emf/scaffolding/demos/BusinessApp/1.0.0"/>
+<biz:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:biz="http://www.eclipselabs.org/emf/scaffolding/demos/BusinessApp/1.0.0" defaultIdentifierType="//@element.0">
+  <element xsi:type="biz:PrimitiveType" name="Integer"/>
+  <element xsi:type="biz:Entity" name="Banque">
+    <attribute name="nom" type="//@element.0"/>
+  </element>
+</biz:Application>

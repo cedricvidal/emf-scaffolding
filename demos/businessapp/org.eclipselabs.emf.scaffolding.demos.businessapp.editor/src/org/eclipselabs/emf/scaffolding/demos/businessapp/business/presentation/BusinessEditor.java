@@ -1,4 +1,5 @@
 /**
+
  * <copyright>
  * </copyright>
  *
@@ -9,7 +10,6 @@ package org.eclipselabs.emf.scaffolding.demos.businessapp.business.presentation;
 
 import java.io.IOException;
 import java.io.InputStream;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -19,7 +19,21 @@ import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 
+import org.drools.KnowledgeBase;
+import org.drools.KnowledgeBaseConfiguration;
+import org.drools.KnowledgeBaseFactory;
+import org.drools.builder.KnowledgeBuilder;
+import org.drools.builder.KnowledgeBuilderConfiguration;
+import org.drools.builder.KnowledgeBuilderError;
+import org.drools.builder.KnowledgeBuilderErrors;
+import org.drools.builder.KnowledgeBuilderFactory;
+import org.drools.builder.ResourceType;
+import org.drools.definition.KnowledgePackage;
+import org.drools.event.rule.DebugWorkingMemoryEventListener;
+import org.drools.io.impl.ClassPathResource;
+import org.drools.runtime.StatefulKnowledgeSession;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IMarker;
 import org.eclipse.core.resources.IResource;
@@ -28,22 +42,57 @@ import org.eclipse.core.resources.IResourceChangeListener;
 import org.eclipse.core.resources.IResourceDelta;
 import org.eclipse.core.resources.IResourceDeltaVisitor;
 import org.eclipse.core.resources.ResourcesPlugin;
-
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.NullProgressMonitor;
-
+import org.eclipse.emf.common.command.BasicCommandStack;
+import org.eclipse.emf.common.command.Command;
+import org.eclipse.emf.common.command.CommandStack;
+import org.eclipse.emf.common.command.CommandStackListener;
+import org.eclipse.emf.common.notify.AdapterFactory;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.ui.MarkerHelper;
+import org.eclipse.emf.common.ui.ViewerPane;
+import org.eclipse.emf.common.ui.editor.ProblemEditorPart;
+import org.eclipse.emf.common.ui.viewer.IViewerProvider;
+import org.eclipse.emf.common.util.BasicDiagnostic;
+import org.eclipse.emf.common.util.Diagnostic;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EValidator;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.util.EContentAdapter;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.EcoreUtil.Copier;
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
+import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipse.emf.edit.domain.IEditingDomainProvider;
+import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
+import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
+import org.eclipse.emf.edit.provider.ReflectiveItemProviderAdapterFactory;
+import org.eclipse.emf.edit.provider.resource.ResourceItemProviderAdapterFactory;
+import org.eclipse.emf.edit.ui.action.EditingDomainActionBarContributor;
+import org.eclipse.emf.edit.ui.celleditor.AdapterFactoryTreeEditor;
+import org.eclipse.emf.edit.ui.dnd.EditingDomainViewerDropAdapter;
+import org.eclipse.emf.edit.ui.dnd.LocalTransfer;
+import org.eclipse.emf.edit.ui.dnd.ViewerDragAdapter;
+import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
+import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
+import org.eclipse.emf.edit.ui.provider.UnwrappingSelectionProvider;
+import org.eclipse.emf.edit.ui.util.EditUIMarkerHelper;
+import org.eclipse.emf.edit.ui.util.EditUIUtil;
+import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 import org.eclipse.jface.action.IMenuListener;
 import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.jface.action.IStatusLineManager;
 import org.eclipse.jface.action.IToolBarManager;
 import org.eclipse.jface.action.MenuManager;
 import org.eclipse.jface.action.Separator;
-
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.dialogs.ProgressMonitorDialog;
-
 import org.eclipse.jface.viewers.ColumnWeightData;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
@@ -57,28 +106,21 @@ import org.eclipse.jface.viewers.TableLayout;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.Viewer;
-
 import org.eclipse.swt.SWT;
-
 import org.eclipse.swt.custom.CTabFolder;
-
 import org.eclipse.swt.dnd.DND;
 import org.eclipse.swt.dnd.Transfer;
-
 import org.eclipse.swt.events.ControlAdapter;
 import org.eclipse.swt.events.ControlEvent;
-
 import org.eclipse.swt.graphics.Point;
-
 import org.eclipse.swt.layout.FillLayout;
-
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeColumn;
-
 import org.eclipse.ui.IActionBars;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
@@ -86,80 +128,24 @@ import org.eclipse.ui.IEditorSite;
 import org.eclipse.ui.IPartListener;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.PartInitException;
-
+import org.eclipse.ui.actions.WorkspaceModifyOperation;
 import org.eclipse.ui.dialogs.SaveAsDialog;
-
 import org.eclipse.ui.ide.IGotoMarker;
-
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.MultiPageEditorPart;
-
 import org.eclipse.ui.views.contentoutline.ContentOutline;
 import org.eclipse.ui.views.contentoutline.ContentOutlinePage;
 import org.eclipse.ui.views.contentoutline.IContentOutlinePage;
-
 import org.eclipse.ui.views.properties.IPropertySheetPage;
 import org.eclipse.ui.views.properties.PropertySheet;
 import org.eclipse.ui.views.properties.PropertySheetPage;
-
-import org.eclipse.emf.common.command.BasicCommandStack;
-import org.eclipse.emf.common.command.Command;
-import org.eclipse.emf.common.command.CommandStack;
-import org.eclipse.emf.common.command.CommandStackListener;
-
-import org.eclipse.emf.common.notify.AdapterFactory;
-import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.ui.MarkerHelper;
-import org.eclipse.emf.common.ui.ViewerPane;
-
-import org.eclipse.emf.common.ui.editor.ProblemEditorPart;
-
-import org.eclipse.emf.common.ui.viewer.IViewerProvider;
-
-import org.eclipse.emf.common.util.BasicDiagnostic;
-import org.eclipse.emf.common.util.Diagnostic;
-import org.eclipse.emf.common.util.URI;
-
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EValidator;
-
-import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.resource.ResourceSet;
-
-import org.eclipse.emf.ecore.util.EContentAdapter;
-import org.eclipse.emf.ecore.util.EcoreUtil;
-
-import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
-import org.eclipse.emf.edit.domain.EditingDomain;
-import org.eclipse.emf.edit.domain.IEditingDomainProvider;
-
-import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
-import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
-import org.eclipse.emf.edit.provider.ReflectiveItemProviderAdapterFactory;
-
-import org.eclipse.emf.edit.provider.resource.ResourceItemProviderAdapterFactory;
-
-import org.eclipse.emf.edit.ui.action.EditingDomainActionBarContributor;
-
-import org.eclipse.emf.edit.ui.celleditor.AdapterFactoryTreeEditor;
-
-import org.eclipse.emf.edit.ui.dnd.EditingDomainViewerDropAdapter;
-import org.eclipse.emf.edit.ui.dnd.LocalTransfer;
-import org.eclipse.emf.edit.ui.dnd.ViewerDragAdapter;
-
-import org.eclipse.emf.edit.ui.provider.AdapterFactoryContentProvider;
-import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
-import org.eclipse.emf.edit.ui.provider.UnwrappingSelectionProvider;
-
-import org.eclipse.emf.edit.ui.util.EditUIMarkerHelper;
-import org.eclipse.emf.edit.ui.util.EditUIUtil;
-
-import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
-
+import org.eclipselabs.emf.scaffolding.demos.businessapp.business.presentation.scaffolding.ScaffoldingStatusDecoratorAdapterFactory;
+import org.eclipselabs.emf.scaffolding.demos.businessapp.business.presentation.scaffolding.ScaffoldingStatusPruneCopier;
 import org.eclipselabs.emf.scaffolding.demos.businessapp.business.provider.BusinessItemProviderAdapterFactory;
-
-import org.eclipse.ui.actions.WorkspaceModifyOperation;
+import org.eclipselabs.emf.scaffolding.demos.businessapp.scaffolding.BusinessScaffolding;
+import org.eclipselabs.emf.scaffolding.runtime.ScaffoldingExecutionEnvironment;
+import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingContext;
+import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatusAdapterFactory;
 
 
 /**
@@ -528,6 +514,8 @@ public class BusinessEditor
 			}
 		};
 
+	private ScaffoldingStatusAdapterFactory scaffoldingStatusAdapterFactory;
+
 	/**
 	 * Handles activation of the editor or it's associated views.
 	 * <!-- begin-user-doc -->
@@ -694,7 +682,24 @@ public class BusinessEditor
 		adapterFactory = new ComposedAdapterFactory(ComposedAdapterFactory.Descriptor.Registry.INSTANCE);
 
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new BusinessItemProviderAdapterFactory());
+
+		// XXX EMF Scaffolding Integration : Editor EditingDomain
+
+		// BusinessItemProviderAdapterFactory is used both directly and decorated
+		BusinessItemProviderAdapterFactory businessItemProviderAdapterFactory = new BusinessItemProviderAdapterFactory();
+
+		// Decorate BusinessItemProviderAdapterFactory
+		adapterFactory.addAdapterFactory(new ScaffoldingStatusDecoratorAdapterFactory(businessItemProviderAdapterFactory) {
+			@Override
+			public Display getDisplay() {
+				return getSite().getShell().getDisplay();
+			}
+		});
+
+		adapterFactory.addAdapterFactory(businessItemProviderAdapterFactory);
+
+		// End of EMF Scaffolding integration
+
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.
@@ -948,6 +953,52 @@ public class BusinessEditor
 			exception = e;
 			resource = editingDomain.getResourceSet().getResource(resourceURI, false);
 		}
+
+		EObject rootContent = resource.getContents().get(0);
+
+		// XXX EMF Scaffolding Integration : Model
+
+		// Configure ScaffoldAdapterFactory for rootContent
+		scaffoldingStatusAdapterFactory = new ScaffoldingStatusAdapterFactory();
+		scaffoldingStatusAdapterFactory.adaptAllNew(rootContent);
+
+		// Configure Scaffolding for rootContent
+
+		//Init Knowledge Base from drl files
+		ClassLoader classLoader = BusinessScaffolding.class.getClassLoader();
+
+		KnowledgeBaseConfiguration knowledgeBaseConfiguration = KnowledgeBaseFactory.newKnowledgeBaseConfiguration(new Properties(), classLoader);
+		KnowledgeBase kbase = KnowledgeBaseFactory.newKnowledgeBase(knowledgeBaseConfiguration);
+		
+		KnowledgeBuilderConfiguration knowledgeBuilderConfig = KnowledgeBuilderFactory.newKnowledgeBuilderConfiguration(new Properties(), classLoader);
+		KnowledgeBuilder kbuilder = KnowledgeBuilderFactory
+				.newKnowledgeBuilder(knowledgeBuilderConfig);
+
+		kbuilder.add(new ClassPathResource("crud.drl", BusinessScaffolding.class, classLoader), ResourceType.DRL);
+
+		Collection<KnowledgePackage> pkgs = kbuilder.getKnowledgePackages();
+		KnowledgeBuilderErrors errors = kbuilder.getErrors();
+		for (KnowledgeBuilderError error : errors) {
+			System.err.println(error.getMessage());
+		}
+
+		kbase.addKnowledgePackages(pkgs);
+
+		final StatefulKnowledgeSession statefulKnowledgeSession = kbase.newStatefulKnowledgeSession();
+		statefulKnowledgeSession.addEventListener(new DebugWorkingMemoryEventListener());
+
+		//Init Exec environment
+		ScaffoldingExecutionEnvironment execEnv = new ScaffoldingExecutionEnvironment(statefulKnowledgeSession);
+		execEnv.register(rootContent);
+
+		ScaffoldingContext.inScaffoldingSession(new Runnable() {
+			@Override
+			public void run() {
+				statefulKnowledgeSession.fireAllRules();
+			}
+		});
+
+		// End of EMF Scaffolding integration
 
 		Diagnostic diagnostic = analyzeResourceProblems(resource, exception);
 		if (diagnostic.getSeverity() != Diagnostic.OK) {
@@ -1481,10 +1532,36 @@ public class BusinessEditor
 						if ((first || !resource.getContents().isEmpty() || isPersisted(resource)) && !editingDomain.isReadOnly(resource)) {
 							try {
 								long timeStamp = resource.getTimeStamp();
+
+								// XXX EMF Scaffolding Integration : Editor onSave pruning
+
+								// Replace resource content with pruned content
+								EList<EObject> resourceContents = resource.getContents();
+
+								List<EObject> contentsBackup = new ArrayList<EObject>();
+								contentsBackup.addAll(resourceContents);
+
+								Copier copier = new ScaffoldingStatusPruneCopier();
+								EObject pruned = copier.copy(resourceContents.get(0));
+								copier.copyReferences();
+
+								resourceContents.clear();
+								resourceContents.add(pruned);
+
+								// End of EMF Scaffolding integration
+
 								resource.save(saveOptions);
 								if (resource.getTimeStamp() != timeStamp) {
 									savedResources.add(resource);
 								}
+
+								// XXX EMF Scaffolding Integration : Editor onSave restoring
+
+								// Resource content restore must be done after timestamp check
+								resourceContents.clear();
+								resourceContents.addAll(contentsBackup);
+
+								// End of EMF Scaffolding integration
 							}
 							catch (Exception exception) {
 								resourceToDiagnosticMap.put(resource, analyzeResourceProblems(resource, exception));
