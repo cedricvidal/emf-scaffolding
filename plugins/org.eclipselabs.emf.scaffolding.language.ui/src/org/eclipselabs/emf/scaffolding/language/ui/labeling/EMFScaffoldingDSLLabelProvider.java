@@ -13,6 +13,7 @@ package org.eclipselabs.emf.scaffolding.language.ui.labeling;
 
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.xtext.ui.label.DefaultEObjectLabelProvider;
+import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FeatureRef;
 
 import com.google.inject.Inject;
 
@@ -39,4 +40,9 @@ public class EMFScaffoldingDSLLabelProvider extends DefaultEObjectLabelProvider 
       return "MyModel.gif";
     }
 */
+
+	Object image(FeatureRef e) {
+		return getImage(e.getFeature());
+	}
+
 }
