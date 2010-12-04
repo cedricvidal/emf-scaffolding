@@ -546,12 +546,16 @@ public class EMFScaffoldingDSLGrammarAccess extends AbstractGrammarElementFinder
 		private final Assignment cRefAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final CrossReference cRefSymbolCrossReference_1_0 = (CrossReference)cRefAssignment_1.eContents().get(0);
 		private final RuleCall cRefSymbolIDTerminalRuleCall_1_0_1 = (RuleCall)cRefSymbolCrossReference_1_0.eContents().get(1);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Action cSelectorSymbolAction_2_0 = (Action)cGroup_2.eContents().get(0);
+		private final Assignment cSegmentAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cSegmentSelectorSegmentParserRuleCall_2_1_0 = (RuleCall)cSegmentAssignment_2_1.eContents().get(0);
 		
 		//SymbolRef returns Expression:
-		//	{SymbolRef} ref=[Symbol];
+		//	{SymbolRef} ref=[Symbol] ({Selector.symbol=current} segment=SelectorSegment)?;
 		public ParserRule getRule() { return rule; }
 
-		//{SymbolRef} ref=[Symbol]
+		//{SymbolRef} ref=[Symbol] ({Selector.symbol=current} segment=SelectorSegment)?
 		public Group getGroup() { return cGroup; }
 
 		//{SymbolRef}
@@ -565,6 +569,18 @@ public class EMFScaffoldingDSLGrammarAccess extends AbstractGrammarElementFinder
 
 		//ID
 		public RuleCall getRefSymbolIDTerminalRuleCall_1_0_1() { return cRefSymbolIDTerminalRuleCall_1_0_1; }
+
+		//({Selector.symbol=current} segment=SelectorSegment)?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//{Selector.symbol=current}
+		public Action getSelectorSymbolAction_2_0() { return cSelectorSymbolAction_2_0; }
+
+		//segment=SelectorSegment
+		public Assignment getSegmentAssignment_2_1() { return cSegmentAssignment_2_1; }
+
+		//SelectorSegment
+		public RuleCall getSegmentSelectorSegmentParserRuleCall_2_1_0() { return cSegmentSelectorSegmentParserRuleCall_2_1_0; }
 	}
 
 	public class PrimitiveLiteralElements extends AbstractParserRuleElementFinder {
@@ -639,6 +655,42 @@ public class EMFScaffoldingDSLGrammarAccess extends AbstractGrammarElementFinder
 
 		//FLOAT
 		public RuleCall getValueFLOATTerminalRuleCall_5_1_0() { return cValueFLOATTerminalRuleCall_5_1_0; }
+	}
+
+	public class SelectorSegmentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SelectorSegment");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cFullStopKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cAttributeRefAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final CrossReference cAttributeRefEStructuralFeatureCrossReference_1_0 = (CrossReference)cAttributeRefAssignment_1.eContents().get(0);
+		private final RuleCall cAttributeRefEStructuralFeatureIDTerminalRuleCall_1_0_1 = (RuleCall)cAttributeRefEStructuralFeatureCrossReference_1_0.eContents().get(1);
+		private final Assignment cNextAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNextSelectorSegmentParserRuleCall_2_0 = (RuleCall)cNextAssignment_2.eContents().get(0);
+		
+		//SelectorSegment:
+		//	"." attributeRef=[ecore::EStructuralFeature] next=SelectorSegment?;
+		public ParserRule getRule() { return rule; }
+
+		//"." attributeRef=[ecore::EStructuralFeature] next=SelectorSegment?
+		public Group getGroup() { return cGroup; }
+
+		//"."
+		public Keyword getFullStopKeyword_0() { return cFullStopKeyword_0; }
+
+		//attributeRef=[ecore::EStructuralFeature]
+		public Assignment getAttributeRefAssignment_1() { return cAttributeRefAssignment_1; }
+
+		//[ecore::EStructuralFeature]
+		public CrossReference getAttributeRefEStructuralFeatureCrossReference_1_0() { return cAttributeRefEStructuralFeatureCrossReference_1_0; }
+
+		//ID
+		public RuleCall getAttributeRefEStructuralFeatureIDTerminalRuleCall_1_0_1() { return cAttributeRefEStructuralFeatureIDTerminalRuleCall_1_0_1; }
+
+		//next=SelectorSegment?
+		public Assignment getNextAssignment_2() { return cNextAssignment_2; }
+
+		//SelectorSegment
+		public RuleCall getNextSelectorSegmentParserRuleCall_2_0() { return cNextSelectorSegmentParserRuleCall_2_0; }
 	}
 
 	public class FeatureRefElements extends AbstractParserRuleElementFinder {
@@ -1246,6 +1298,7 @@ public class EMFScaffoldingDSLGrammarAccess extends AbstractGrammarElementFinder
 	private TerminalExpressionElements pTerminalExpression;
 	private SymbolRefElements pSymbolRef;
 	private PrimitiveLiteralElements pPrimitiveLiteral;
+	private SelectorSegmentElements pSelectorSegment;
 	private TerminalRule tOPERATOR_HIGH_PRIORITY;
 	private TerminalRule tOPERATOR_LOW_PRIORITY;
 	private FeatureRefElements pFeatureRef;
@@ -1410,7 +1463,7 @@ public class EMFScaffoldingDSLGrammarAccess extends AbstractGrammarElementFinder
 	}
 
 	//SymbolRef returns Expression:
-	//	{SymbolRef} ref=[Symbol];
+	//	{SymbolRef} ref=[Symbol] ({Selector.symbol=current} segment=SelectorSegment)?;
 	public SymbolRefElements getSymbolRefAccess() {
 		return (pSymbolRef != null) ? pSymbolRef : (pSymbolRef = new SymbolRefElements());
 	}
@@ -1428,6 +1481,16 @@ public class EMFScaffoldingDSLGrammarAccess extends AbstractGrammarElementFinder
 	
 	public ParserRule getPrimitiveLiteralRule() {
 		return getPrimitiveLiteralAccess().getRule();
+	}
+
+	//SelectorSegment:
+	//	"." attributeRef=[ecore::EStructuralFeature] next=SelectorSegment?;
+	public SelectorSegmentElements getSelectorSegmentAccess() {
+		return (pSelectorSegment != null) ? pSelectorSegment : (pSelectorSegment = new SelectorSegmentElements());
+	}
+	
+	public ParserRule getSelectorSegmentRule() {
+		return getSelectorSegmentAccess().getRule();
 	}
 
 	//terminal OPERATOR_HIGH_PRIORITY:

@@ -1099,7 +1099,47 @@ ruleSymbolRef returns [EObject current=null]
 	}
 
 )
-))
+)((
+    { 
+        temp=factory.create(grammarAccess.getSymbolRefAccess().getSelectorSymbolAction_2_0().getType().getClassifier());
+        try {
+        	factory.set(temp, "symbol", $current, null /*ParserRule*/, currentNode);
+        } catch(ValueConverterException vce) {
+        	handleValueConverterException(vce);
+        }
+        $current = temp; 
+        temp = null;
+        CompositeNode newNode = createCompositeNode(grammarAccess.getSymbolRefAccess().getSelectorSymbolAction_2_0(), currentNode.getParent());
+    newNode.getChildren().add(currentNode);
+    moveLookaheadInfo(currentNode, newNode);
+    currentNode = newNode; 
+        associateNodeWithAstElement(currentNode, $current); 
+    }
+)(
+(
+		{ 
+	        currentNode=createCompositeNode(grammarAccess.getSymbolRefAccess().getSegmentSelectorSegmentParserRuleCall_2_1_0(), currentNode); 
+	    }
+		lv_segment_3_0=ruleSelectorSegment		{
+	        if ($current==null) {
+	            $current = factory.create(grammarAccess.getSymbolRefRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode.getParent(), $current);
+	        }
+	        try {
+	       		set(
+	       			$current, 
+	       			"segment",
+	        		lv_segment_3_0, 
+	        		"SelectorSegment", 
+	        		currentNode);
+	        } catch (ValueConverterException vce) {
+				handleValueConverterException(vce);
+	        }
+	        currentNode = currentNode.getParent();
+	    }
+
+)
+))?)
 ;
 
 
@@ -1260,6 +1300,71 @@ rulePrimitiveLiteral returns [EObject current=null]
 
 )
 )))
+;
+
+
+
+
+
+// Entry rule entryRuleSelectorSegment
+entryRuleSelectorSegment returns [EObject current=null] 
+	:
+	{ currentNode = createCompositeNode(grammarAccess.getSelectorSegmentRule(), currentNode); }
+	 iv_ruleSelectorSegment=ruleSelectorSegment 
+	 { $current=$iv_ruleSelectorSegment.current; } 
+	 EOF 
+;
+
+// Rule SelectorSegment
+ruleSelectorSegment returns [EObject current=null] 
+    @init { EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+    }
+    @after { resetLookahead(); 
+    	lastConsumedNode = currentNode;
+    }:
+(	'.' 
+    {
+        createLeafNode(grammarAccess.getSelectorSegmentAccess().getFullStopKeyword_0(), null); 
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = factory.create(grammarAccess.getSelectorSegmentRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode, $current);
+	        }
+        }
+	RULE_ID
+	{
+		createLeafNode(grammarAccess.getSelectorSegmentAccess().getAttributeRefEStructuralFeatureCrossReference_1_0(), "attributeRef"); 
+	}
+
+)
+)(
+(
+		{ 
+	        currentNode=createCompositeNode(grammarAccess.getSelectorSegmentAccess().getNextSelectorSegmentParserRuleCall_2_0(), currentNode); 
+	    }
+		lv_next_2_0=ruleSelectorSegment		{
+	        if ($current==null) {
+	            $current = factory.create(grammarAccess.getSelectorSegmentRule().getType().getClassifier());
+	            associateNodeWithAstElement(currentNode.getParent(), $current);
+	        }
+	        try {
+	       		set(
+	       			$current, 
+	       			"next",
+	        		lv_next_2_0, 
+	        		"SelectorSegment", 
+	        		currentNode);
+	        } catch (ValueConverterException vce) {
+				handleValueConverterException(vce);
+	        }
+	        currentNode = currentNode.getParent();
+	    }
+
+)
+)?)
 ;
 
 

@@ -45,19 +45,20 @@ protected class ThisRootNode extends RootToken {
 			case 11: return new TerminalExpression_Alternatives(this, this, 11, inst);
 			case 12: return new SymbolRef_Group(this, this, 12, inst);
 			case 13: return new PrimitiveLiteral_Alternatives(this, this, 13, inst);
-			case 14: return new FeatureRef_FeatureAssignment(this, this, 14, inst);
-			case 15: return new ThenBlock_Group(this, this, 15, inst);
-			case 16: return new Statement_Alternatives(this, this, 16, inst);
-			case 17: return new CreateStatement_Group(this, this, 17, inst);
-			case 18: return new CreateClass_Group(this, this, 18, inst);
-			case 19: return new StringLiteral_ValueAssignment(this, this, 19, inst);
-			case 20: return new NullLiteral_Group(this, this, 20, inst);
-			case 21: return new ListLiteral_Group(this, this, 21, inst);
-			case 22: return new Setter_Group(this, this, 22, inst);
-			case 23: return new Function_Group(this, this, 23, inst);
-			case 24: return new UpdateStatement_Group(this, this, 24, inst);
-			case 25: return new Symbol_Alternatives(this, this, 25, inst);
-			case 26: return new SymbolStructure_NameAssignment(this, this, 26, inst);
+			case 14: return new SelectorSegment_Group(this, this, 14, inst);
+			case 15: return new FeatureRef_FeatureAssignment(this, this, 15, inst);
+			case 16: return new ThenBlock_Group(this, this, 16, inst);
+			case 17: return new Statement_Alternatives(this, this, 17, inst);
+			case 18: return new CreateStatement_Group(this, this, 18, inst);
+			case 19: return new CreateClass_Group(this, this, 19, inst);
+			case 20: return new StringLiteral_ValueAssignment(this, this, 20, inst);
+			case 21: return new NullLiteral_Group(this, this, 21, inst);
+			case 22: return new ListLiteral_Group(this, this, 22, inst);
+			case 23: return new Setter_Group(this, this, 23, inst);
+			case 24: return new Function_Group(this, this, 24, inst);
+			case 25: return new UpdateStatement_Group(this, this, 25, inst);
+			case 26: return new Symbol_Alternatives(this, this, 26, inst);
+			case 27: return new SymbolStructure_NameAssignment(this, this, 27, inst);
 			default: return null;
 		}	
 	}	
@@ -1681,6 +1682,7 @@ protected class Expression_Group extends GroupToken {
 		   getEObject().eClass() != grammarAccess.getTerminalExpressionAccess().getNotExpressionAction_2_0().getType().getClassifier() && 
 		   getEObject().eClass() != grammarAccess.getNullLiteralAccess().getNullLiteralAction_0().getType().getClassifier() && 
 		   getEObject().eClass() != grammarAccess.getExpressionAccess().getOperationLeftAction_1_0().getType().getClassifier() && 
+		   getEObject().eClass() != grammarAccess.getSymbolRefAccess().getSelectorSymbolAction_2_0().getType().getClassifier() && 
 		   getEObject().eClass() != grammarAccess.getStringLiteralRule().getType().getClassifier() && 
 		   getEObject().eClass() != grammarAccess.getSymbolRefAccess().getSymbolRefAction_0().getType().getClassifier())
 			return null;
@@ -1905,6 +1907,7 @@ protected class ExpressionHigh_Group extends GroupToken {
 		   getEObject().eClass() != grammarAccess.getTerminalExpressionAccess().getNotExpressionAction_2_0().getType().getClassifier() && 
 		   getEObject().eClass() != grammarAccess.getNullLiteralAccess().getNullLiteralAction_0().getType().getClassifier() && 
 		   getEObject().eClass() != grammarAccess.getExpressionAccess().getOperationLeftAction_1_0().getType().getClassifier() && 
+		   getEObject().eClass() != grammarAccess.getSymbolRefAccess().getSelectorSymbolAction_2_0().getType().getClassifier() && 
 		   getEObject().eClass() != grammarAccess.getStringLiteralRule().getType().getClassifier() && 
 		   getEObject().eClass() != grammarAccess.getSymbolRefAccess().getSymbolRefAction_0().getType().getClassifier())
 			return null;
@@ -2135,6 +2138,7 @@ protected class TerminalExpression_Alternatives extends AlternativesToken {
 		   getEObject().eClass() != grammarAccess.getTerminalExpressionAccess().getNotExpressionAction_2_0().getType().getClassifier() && 
 		   getEObject().eClass() != grammarAccess.getNullLiteralAccess().getNullLiteralAction_0().getType().getClassifier() && 
 		   getEObject().eClass() != grammarAccess.getExpressionAccess().getOperationLeftAction_1_0().getType().getClassifier() && 
+		   getEObject().eClass() != grammarAccess.getSymbolRefAccess().getSelectorSymbolAction_2_0().getType().getClassifier() && 
 		   getEObject().eClass() != grammarAccess.getStringLiteralRule().getType().getClassifier() && 
 		   getEObject().eClass() != grammarAccess.getSymbolRefAccess().getSymbolRefAction_0().getType().getClassifier())
 			return null;
@@ -2426,7 +2430,8 @@ protected class TerminalExpression_SymbolRefParserRuleCall_3 extends RuleCallTok
 
     @Override
 	public IEObjectConsumer tryConsume() {
-		if(getEObject().eClass() != grammarAccess.getSymbolRefAccess().getSymbolRefAction_0().getType().getClassifier())
+		if(getEObject().eClass() != grammarAccess.getSymbolRefAccess().getSelectorSymbolAction_2_0().getType().getClassifier() && 
+		   getEObject().eClass() != grammarAccess.getSymbolRefAccess().getSymbolRefAction_0().getType().getClassifier())
 			return null;
 		if(checkForRecursion(SymbolRef_Group.class, eObjectConsumer)) return null;
 		return eObjectConsumer;
@@ -2788,11 +2793,11 @@ protected class TerminalExpression_PrimitiveLiteralParserRuleCall_5 extends Rule
 /************ begin Rule SymbolRef ****************
  *
  * SymbolRef returns Expression:
- * 	{SymbolRef} ref=[Symbol];
+ * 	{SymbolRef} ref=[Symbol] ({Selector.symbol=current} segment=SelectorSegment)?;
  *
  **/
 
-// {SymbolRef} ref=[Symbol]
+// {SymbolRef} ref=[Symbol] ({Selector.symbol=current} segment=SelectorSegment)?
 protected class SymbolRef_Group extends GroupToken {
 	
 	public SymbolRef_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -2807,14 +2812,16 @@ protected class SymbolRef_Group extends GroupToken {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new SymbolRef_RefAssignment_1(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new SymbolRef_Group_2(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new SymbolRef_RefAssignment_1(lastRuleCallOrigin, this, 1, inst);
 			default: return null;
 		}	
 	}
 
     @Override
 	public IEObjectConsumer tryConsume() {
-		if(getEObject().eClass() != grammarAccess.getSymbolRefAccess().getSymbolRefAction_0().getType().getClassifier())
+		if(getEObject().eClass() != grammarAccess.getSymbolRefAccess().getSelectorSymbolAction_2_0().getType().getClassifier() && 
+		   getEObject().eClass() != grammarAccess.getSymbolRefAccess().getSymbolRefAction_0().getType().getClassifier())
 			return null;
 		return eObjectConsumer;
 	}
@@ -2869,6 +2876,8 @@ protected class SymbolRef_RefAssignment_1 extends AssignmentToken  {
 
     @Override	
 	public IEObjectConsumer tryConsume() {
+		if(getEObject().eClass() != grammarAccess.getSymbolRefAccess().getSymbolRefAction_0().getType().getClassifier())
+			return null;
 		if((value = eObjectConsumer.getConsumable("ref",true)) == null) return null;
 		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("ref");
 		if(value instanceof EObject) { // org::eclipse::xtext::impl::CrossReferenceImpl
@@ -2883,6 +2892,111 @@ protected class SymbolRef_RefAssignment_1 extends AssignmentToken  {
 	}
 
 }
+
+// ({Selector.symbol=current} segment=SelectorSegment)?
+protected class SymbolRef_Group_2 extends GroupToken {
+	
+	public SymbolRef_Group_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Group getGrammarElement() {
+		return grammarAccess.getSymbolRefAccess().getGroup_2();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new SymbolRef_SegmentAssignment_2_1(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+    @Override
+	public IEObjectConsumer tryConsume() {
+		if(getEObject().eClass() != grammarAccess.getSymbolRefAccess().getSelectorSymbolAction_2_0().getType().getClassifier())
+			return null;
+		return eObjectConsumer;
+	}
+
+}
+
+// {Selector.symbol=current}
+protected class SymbolRef_SelectorSymbolAction_2_0 extends ActionToken  {
+
+	public SymbolRef_SelectorSymbolAction_2_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Action getGrammarElement() {
+		return grammarAccess.getSymbolRefAccess().getSelectorSymbolAction_2_0();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new SymbolRef_RefAssignment_1(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+    @Override
+	public IEObjectConsumer tryConsume() {
+		Object val = eObjectConsumer.getConsumable("symbol", false);
+		if(val == null) return null;
+		if(!eObjectConsumer.isConsumedWithLastConsumtion("symbol")) return null;
+		return createEObjectConsumer((EObject) val);
+	}
+}
+
+// segment=SelectorSegment
+protected class SymbolRef_SegmentAssignment_2_1 extends AssignmentToken  {
+	
+	public SymbolRef_SegmentAssignment_2_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Assignment getGrammarElement() {
+		return grammarAccess.getSymbolRefAccess().getSegmentAssignment_2_1();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new SelectorSegment_Group(this, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+    @Override	
+	public IEObjectConsumer tryConsume() {
+		if((value = eObjectConsumer.getConsumable("segment",false)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("segment");
+		if(value instanceof EObject) { // org::eclipse::xtext::impl::RuleCallImpl
+			IEObjectConsumer param = createEObjectConsumer((EObject)value);
+			if(param.isInstanceOf(grammarAccess.getSelectorSegmentRule().getType().getClassifier())) {
+				type = AssignmentType.PARSER_RULE_CALL;
+				element = grammarAccess.getSymbolRefAccess().getSegmentSelectorSegmentParserRuleCall_2_1_0(); 
+				consumed = obj;
+				return param;
+			}
+		}
+		return null;
+	}
+
+    @Override
+	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
+		if(value == inst.getEObject() && !inst.isConsumed()) return null;
+		switch(index) {
+			case 0: return new SymbolRef_SelectorSymbolAction_2_0(lastRuleCallOrigin, next, actIndex, consumed);
+			default: return null;
+		}	
+	}	
+}
+
 
 
 /************ end Rule SymbolRef ****************/
@@ -3316,6 +3430,151 @@ protected class PrimitiveLiteral_ValueAssignment_5_1 extends AssignmentToken  {
 
 
 /************ end Rule PrimitiveLiteral ****************/
+
+
+/************ begin Rule SelectorSegment ****************
+ *
+ * SelectorSegment:
+ * 	"." attributeRef=[ecore::EStructuralFeature] next=SelectorSegment?;
+ *
+ **/
+
+// "." attributeRef=[ecore::EStructuralFeature] next=SelectorSegment?
+protected class SelectorSegment_Group extends GroupToken {
+	
+	public SelectorSegment_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Group getGrammarElement() {
+		return grammarAccess.getSelectorSegmentAccess().getGroup();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new SelectorSegment_NextAssignment_2(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new SelectorSegment_AttributeRefAssignment_1(lastRuleCallOrigin, this, 1, inst);
+			default: return null;
+		}	
+	}
+
+    @Override
+	public IEObjectConsumer tryConsume() {
+		if(getEObject().eClass() != grammarAccess.getSelectorSegmentRule().getType().getClassifier())
+			return null;
+		return eObjectConsumer;
+	}
+
+}
+
+// "."
+protected class SelectorSegment_FullStopKeyword_0 extends KeywordToken  {
+	
+	public SelectorSegment_FullStopKeyword_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Keyword getGrammarElement() {
+		return grammarAccess.getSelectorSegmentAccess().getFullStopKeyword_0();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			default: return lastRuleCallOrigin.createFollowerAfterReturn(this, index, index, inst);
+		}	
+	}
+
+}
+
+// attributeRef=[ecore::EStructuralFeature]
+protected class SelectorSegment_AttributeRefAssignment_1 extends AssignmentToken  {
+	
+	public SelectorSegment_AttributeRefAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Assignment getGrammarElement() {
+		return grammarAccess.getSelectorSegmentAccess().getAttributeRefAssignment_1();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new SelectorSegment_FullStopKeyword_0(lastRuleCallOrigin, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+    @Override	
+	public IEObjectConsumer tryConsume() {
+		if((value = eObjectConsumer.getConsumable("attributeRef",true)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("attributeRef");
+		if(value instanceof EObject) { // org::eclipse::xtext::impl::CrossReferenceImpl
+			IEObjectConsumer param = createEObjectConsumer((EObject)value);
+			if(param.isInstanceOf(grammarAccess.getSelectorSegmentAccess().getAttributeRefEStructuralFeatureCrossReference_1_0().getType().getClassifier())) {
+				type = AssignmentType.CROSS_REFERENCE;
+				element = grammarAccess.getSelectorSegmentAccess().getAttributeRefEStructuralFeatureCrossReference_1_0(); 
+				return obj;
+			}
+		}
+		return null;
+	}
+
+}
+
+// next=SelectorSegment?
+protected class SelectorSegment_NextAssignment_2 extends AssignmentToken  {
+	
+	public SelectorSegment_NextAssignment_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
+	
+	@Override
+	public Assignment getGrammarElement() {
+		return grammarAccess.getSelectorSegmentAccess().getNextAssignment_2();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new SelectorSegment_Group(this, this, 0, inst);
+			default: return null;
+		}	
+	}
+
+    @Override	
+	public IEObjectConsumer tryConsume() {
+		if((value = eObjectConsumer.getConsumable("next",false)) == null) return null;
+		IEObjectConsumer obj = eObjectConsumer.cloneAndConsume("next");
+		if(value instanceof EObject) { // org::eclipse::xtext::impl::RuleCallImpl
+			IEObjectConsumer param = createEObjectConsumer((EObject)value);
+			if(param.isInstanceOf(grammarAccess.getSelectorSegmentRule().getType().getClassifier())) {
+				type = AssignmentType.PARSER_RULE_CALL;
+				element = grammarAccess.getSelectorSegmentAccess().getNextSelectorSegmentParserRuleCall_2_0(); 
+				consumed = obj;
+				return param;
+			}
+		}
+		return null;
+	}
+
+    @Override
+	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
+		if(value == inst.getEObject() && !inst.isConsumed()) return null;
+		switch(index) {
+			case 0: return new SelectorSegment_AttributeRefAssignment_1(lastRuleCallOrigin, next, actIndex, consumed);
+			default: return null;
+		}	
+	}	
+}
+
+
+/************ end Rule SelectorSegment ****************/
 
 
 /************ begin Rule FeatureRef ****************

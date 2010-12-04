@@ -117,6 +117,15 @@ public interface EmfscaffoldingdslFactory extends EFactory
   Expression createExpression();
 
   /**
+   * Returns a new object of class '<em>Selector Segment</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Selector Segment</em>'.
+   * @generated
+   */
+  SelectorSegment createSelectorSegment();
+
+  /**
    * Returns a new object of class '<em>Feature Ref</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -259,6 +268,15 @@ public interface EmfscaffoldingdslFactory extends EFactory
    * @generated
    */
   SymbolRef createSymbolRef();
+
+  /**
+   * Returns a new object of class '<em>Selector</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Selector</em>'.
+   * @generated
+   */
+  Selector createSelector();
 
   /**
    * Returns a new object of class '<em>Int Literal</em>'.

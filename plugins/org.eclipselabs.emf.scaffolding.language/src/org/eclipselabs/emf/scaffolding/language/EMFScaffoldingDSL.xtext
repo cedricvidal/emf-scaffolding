@@ -58,7 +58,7 @@ TerminalExpression returns Expression:
 	;
 
 SymbolRef returns Expression:
-	{SymbolRef} ref=[Symbol]
+	{SymbolRef} ref=[Symbol] ( {Selector.symbol=current} segment=SelectorSegment )?
 	;
 
 PrimitiveLiteral returns Expression:
@@ -68,6 +68,10 @@ PrimitiveLiteral returns Expression:
 	| {IntLiteral} value=INT
 	| {BooleanLiteral} value=BOOLEAN
 	| {FloatLiteral} value=FLOAT
+	;
+
+SelectorSegment:
+	'.' attributeRef=[ecore::EStructuralFeature] (next=SelectorSegment)?
 	;
 
 terminal OPERATOR_HIGH_PRIORITY: '<'|'>'|'='|'!='|'>='|'<='|'/'|'*';

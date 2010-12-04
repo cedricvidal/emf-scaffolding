@@ -129,6 +129,11 @@ public class EmfscaffoldingdslAdapterFactory extends AdapterFactoryImpl
         return createExpressionAdapter();
       }
       @Override
+      public Adapter caseSelectorSegment(SelectorSegment object)
+      {
+        return createSelectorSegmentAdapter();
+      }
+      @Override
       public Adapter caseFeatureRef(FeatureRef object)
       {
         return createFeatureRefAdapter();
@@ -207,6 +212,11 @@ public class EmfscaffoldingdslAdapterFactory extends AdapterFactoryImpl
       public Adapter caseSymbolRef(SymbolRef object)
       {
         return createSymbolRefAdapter();
+      }
+      @Override
+      public Adapter caseSelector(Selector object)
+      {
+        return createSelectorAdapter();
       }
       @Override
       public Adapter caseIntLiteral(IntLiteral object)
@@ -391,6 +401,21 @@ public class EmfscaffoldingdslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.SelectorSegment <em>Selector Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.SelectorSegment
+   * @generated
+   */
+  public Adapter createSelectorSegmentAdapter()
   {
     return null;
   }
@@ -631,6 +656,21 @@ public class EmfscaffoldingdslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createSymbolRefAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Selector <em>Selector</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Selector
+   * @generated
+   */
+  public Adapter createSelectorAdapter()
   {
     return null;
   }

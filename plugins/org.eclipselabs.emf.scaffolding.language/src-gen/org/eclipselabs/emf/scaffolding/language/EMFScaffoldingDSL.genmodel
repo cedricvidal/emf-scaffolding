@@ -36,6 +36,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EMFScaffoldingDSL.ecore#//Param/var"/>
     </genClasses>
     <genClasses ecoreClass="EMFScaffoldingDSL.ecore#//Expression"/>
+    <genClasses ecoreClass="EMFScaffoldingDSL.ecore#//SelectorSegment">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EMFScaffoldingDSL.ecore#//SelectorSegment/attributeRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EMFScaffoldingDSL.ecore#//SelectorSegment/next"/>
+    </genClasses>
     <genClasses ecoreClass="EMFScaffoldingDSL.ecore#//FeatureRef">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EMFScaffoldingDSL.ecore#//FeatureRef/feature"/>
     </genClasses>
@@ -88,6 +92,10 @@
     </genClasses>
     <genClasses ecoreClass="EMFScaffoldingDSL.ecore#//SymbolRef">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference EMFScaffoldingDSL.ecore#//SymbolRef/ref"/>
+    </genClasses>
+    <genClasses ecoreClass="EMFScaffoldingDSL.ecore#//Selector">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EMFScaffoldingDSL.ecore#//Selector/symbol"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference EMFScaffoldingDSL.ecore#//Selector/segment"/>
     </genClasses>
     <genClasses ecoreClass="EMFScaffoldingDSL.ecore#//IntLiteral">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute EMFScaffoldingDSL.ecore#//IntLiteral/value"/>

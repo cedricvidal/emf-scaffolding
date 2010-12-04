@@ -24,7 +24,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_OPERATOR_LOW_PRIORITY", "RULE_OPERATOR_HIGH_PRIORITY", "RULE_INT", "RULE_BOOLEAN", "RULE_FLOAT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'scaffold'", "'rule'", "'when'", "'{'", "'}'", "':'", "'('", "','", "')'", "'!'", "'then'", "'->'", "';'", "'new'", "'null'", "'['", "']'", "'+='", "'guard'", "'function'", "'#'", "'update'", "'.'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_OPERATOR_LOW_PRIORITY", "RULE_OPERATOR_HIGH_PRIORITY", "RULE_INT", "RULE_BOOLEAN", "RULE_FLOAT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'scaffold'", "'rule'", "'when'", "'{'", "'}'", "':'", "'('", "','", "')'", "'!'", "'.'", "'then'", "'->'", "';'", "'new'", "'null'", "'['", "']'", "'+='", "'guard'", "'function'", "'#'", "'update'"
     };
     public static final int RULE_BOOLEAN=9;
     public static final int RULE_ID=5;
@@ -172,7 +172,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==16||LA1_0==34) ) {
+                if ( (LA1_0==16||LA1_0==35) ) {
                     alt1=1;
                 }
 
@@ -300,7 +300,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
             if ( (LA2_0==16) ) {
                 alt2=1;
             }
-            else if ( (LA2_0==34) ) {
+            else if ( (LA2_0==35) ) {
                 alt2=2;
             }
             else {
@@ -1039,7 +1039,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
                     int alt7=2;
                     int LA7_0 = input.LA(1);
 
-                    if ( ((LA7_0>=RULE_STRING && LA7_0<=RULE_ID)||(LA7_0>=RULE_INT && LA7_0<=RULE_FLOAT)||LA7_0==21||LA7_0==24||(LA7_0>=28 && LA7_0<=30)) ) {
+                    if ( ((LA7_0>=RULE_STRING && LA7_0<=RULE_ID)||(LA7_0>=RULE_INT && LA7_0<=RULE_FLOAT)||LA7_0==21||LA7_0==24||(LA7_0>=29 && LA7_0<=31)) ) {
                         alt7=1;
                     }
                     switch (alt7) {
@@ -1912,7 +1912,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
                 alt14=1;
                 }
                 break;
-            case 28:
+            case 29:
                 {
                 alt14=2;
                 }
@@ -1929,7 +1929,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
                 if ( (LA14_4==21) ) {
                     alt14=5;
                 }
-                else if ( (LA14_4==EOF||(LA14_4>=RULE_OPERATOR_LOW_PRIORITY && LA14_4<=RULE_OPERATOR_HIGH_PRIORITY)||LA14_4==16||(LA14_4>=19 && LA14_4<=20)||(LA14_4>=22 && LA14_4<=23)||LA14_4==27||LA14_4==31||(LA14_4>=33 && LA14_4<=34)) ) {
+                else if ( (LA14_4==EOF||(LA14_4>=RULE_OPERATOR_LOW_PRIORITY && LA14_4<=RULE_OPERATOR_HIGH_PRIORITY)||LA14_4==16||(LA14_4>=19 && LA14_4<=20)||(LA14_4>=22 && LA14_4<=23)||LA14_4==25||LA14_4==28||LA14_4==32||(LA14_4>=34 && LA14_4<=35)) ) {
                     alt14=4;
                 }
                 else {
@@ -1944,8 +1944,8 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
             case RULE_INT:
             case RULE_BOOLEAN:
             case RULE_FLOAT:
-            case 29:
             case 30:
+            case 31:
                 {
                 alt14=6;
                 }
@@ -2143,7 +2143,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
                     int alt13=2;
                     int LA13_0 = input.LA(1);
 
-                    if ( ((LA13_0>=RULE_STRING && LA13_0<=RULE_ID)||(LA13_0>=RULE_INT && LA13_0<=RULE_FLOAT)||LA13_0==21||LA13_0==24||(LA13_0>=28 && LA13_0<=30)) ) {
+                    if ( ((LA13_0>=RULE_STRING && LA13_0<=RULE_ID)||(LA13_0>=RULE_INT && LA13_0<=RULE_FLOAT)||LA13_0==21||LA13_0==24||(LA13_0>=29 && LA13_0<=31)) ) {
                         alt13=1;
                     }
                     switch (alt13) {
@@ -2341,18 +2341,21 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start ruleSymbolRef
-    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1071:1: ruleSymbolRef returns [EObject current=null] : ( () ( ( RULE_ID ) ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1071:1: ruleSymbolRef returns [EObject current=null] : ( () ( ( RULE_ID ) ) ( () ( (lv_segment_3_0= ruleSelectorSegment ) ) )? ) ;
     public final EObject ruleSymbolRef() throws RecognitionException {
         EObject current = null;
+
+        EObject lv_segment_3_0 = null;
+
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1076:6: ( ( () ( ( RULE_ID ) ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1077:1: ( () ( ( RULE_ID ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1076:6: ( ( () ( ( RULE_ID ) ) ( () ( (lv_segment_3_0= ruleSelectorSegment ) ) )? ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1077:1: ( () ( ( RULE_ID ) ) ( () ( (lv_segment_3_0= ruleSelectorSegment ) ) )? )
             {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1077:1: ( () ( ( RULE_ID ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1077:2: () ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1077:1: ( () ( ( RULE_ID ) ) ( () ( (lv_segment_3_0= ruleSelectorSegment ) ) )? )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1077:2: () ( ( RULE_ID ) ) ( () ( (lv_segment_3_0= ruleSelectorSegment ) ) )?
             {
             // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1077:2: ()
             // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1078:5: 
@@ -2392,6 +2395,80 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
             }
 
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1102:2: ( () ( (lv_segment_3_0= ruleSelectorSegment ) ) )?
+            int alt15=2;
+            int LA15_0 = input.LA(1);
+
+            if ( (LA15_0==25) ) {
+                alt15=1;
+            }
+            switch (alt15) {
+                case 1 :
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1102:3: () ( (lv_segment_3_0= ruleSelectorSegment ) )
+                    {
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1102:3: ()
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1103:5: 
+                    {
+                     
+                            temp=factory.create(grammarAccess.getSymbolRefAccess().getSelectorSymbolAction_2_0().getType().getClassifier());
+                            try {
+                            	factory.set(temp, "symbol", current, null /*ParserRule*/, currentNode);
+                            } catch(ValueConverterException vce) {
+                            	handleValueConverterException(vce);
+                            }
+                            current = temp; 
+                            temp = null;
+                            CompositeNode newNode = createCompositeNode(grammarAccess.getSymbolRefAccess().getSelectorSymbolAction_2_0(), currentNode.getParent());
+                        newNode.getChildren().add(currentNode);
+                        moveLookaheadInfo(currentNode, newNode);
+                        currentNode = newNode; 
+                            associateNodeWithAstElement(currentNode, current); 
+                        
+
+                    }
+
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1118:2: ( (lv_segment_3_0= ruleSelectorSegment ) )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1119:1: (lv_segment_3_0= ruleSelectorSegment )
+                    {
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1119:1: (lv_segment_3_0= ruleSelectorSegment )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1120:3: lv_segment_3_0= ruleSelectorSegment
+                    {
+                     
+                    	        currentNode=createCompositeNode(grammarAccess.getSymbolRefAccess().getSegmentSelectorSegmentParserRuleCall_2_1_0(), currentNode); 
+                    	    
+                    pushFollow(FOLLOW_ruleSelectorSegment_in_ruleSymbolRef1881);
+                    lv_segment_3_0=ruleSelectorSegment();
+                    _fsp--;
+
+
+                    	        if (current==null) {
+                    	            current = factory.create(grammarAccess.getSymbolRefRule().getType().getClassifier());
+                    	            associateNodeWithAstElement(currentNode.getParent(), current);
+                    	        }
+                    	        try {
+                    	       		set(
+                    	       			current, 
+                    	       			"segment",
+                    	        		lv_segment_3_0, 
+                    	        		"SelectorSegment", 
+                    	        		currentNode);
+                    	        } catch (ValueConverterException vce) {
+                    				handleValueConverterException(vce);
+                    	        }
+                    	        currentNode = currentNode.getParent();
+                    	    
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
 
             }
 
@@ -2415,7 +2492,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start entryRulePrimitiveLiteral
-    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1110:1: entryRulePrimitiveLiteral returns [EObject current=null] : iv_rulePrimitiveLiteral= rulePrimitiveLiteral EOF ;
+    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1150:1: entryRulePrimitiveLiteral returns [EObject current=null] : iv_rulePrimitiveLiteral= rulePrimitiveLiteral EOF ;
     public final EObject entryRulePrimitiveLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -2423,16 +2500,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
         try {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1111:2: (iv_rulePrimitiveLiteral= rulePrimitiveLiteral EOF )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1112:2: iv_rulePrimitiveLiteral= rulePrimitiveLiteral EOF
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1151:2: (iv_rulePrimitiveLiteral= rulePrimitiveLiteral EOF )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1152:2: iv_rulePrimitiveLiteral= rulePrimitiveLiteral EOF
             {
              currentNode = createCompositeNode(grammarAccess.getPrimitiveLiteralRule(), currentNode); 
-            pushFollow(FOLLOW_rulePrimitiveLiteral_in_entryRulePrimitiveLiteral1886);
+            pushFollow(FOLLOW_rulePrimitiveLiteral_in_entryRulePrimitiveLiteral1919);
             iv_rulePrimitiveLiteral=rulePrimitiveLiteral();
             _fsp--;
 
              current =iv_rulePrimitiveLiteral; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePrimitiveLiteral1896); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulePrimitiveLiteral1929); 
 
             }
 
@@ -2450,7 +2527,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start rulePrimitiveLiteral
-    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1119:1: rulePrimitiveLiteral returns [EObject current=null] : (this_ListLiteral_0= ruleListLiteral | this_StringLiteral_1= ruleStringLiteral | this_NullLiteral_2= ruleNullLiteral | ( () ( (lv_value_4_0= RULE_INT ) ) ) | ( () ( (lv_value_6_0= RULE_BOOLEAN ) ) ) | ( () ( (lv_value_8_0= RULE_FLOAT ) ) ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1159:1: rulePrimitiveLiteral returns [EObject current=null] : (this_ListLiteral_0= ruleListLiteral | this_StringLiteral_1= ruleStringLiteral | this_NullLiteral_2= ruleNullLiteral | ( () ( (lv_value_4_0= RULE_INT ) ) ) | ( () ( (lv_value_6_0= RULE_BOOLEAN ) ) ) | ( () ( (lv_value_8_0= RULE_FLOAT ) ) ) ) ;
     public final EObject rulePrimitiveLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -2467,57 +2544,57 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1124:6: ( (this_ListLiteral_0= ruleListLiteral | this_StringLiteral_1= ruleStringLiteral | this_NullLiteral_2= ruleNullLiteral | ( () ( (lv_value_4_0= RULE_INT ) ) ) | ( () ( (lv_value_6_0= RULE_BOOLEAN ) ) ) | ( () ( (lv_value_8_0= RULE_FLOAT ) ) ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1125:1: (this_ListLiteral_0= ruleListLiteral | this_StringLiteral_1= ruleStringLiteral | this_NullLiteral_2= ruleNullLiteral | ( () ( (lv_value_4_0= RULE_INT ) ) ) | ( () ( (lv_value_6_0= RULE_BOOLEAN ) ) ) | ( () ( (lv_value_8_0= RULE_FLOAT ) ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1164:6: ( (this_ListLiteral_0= ruleListLiteral | this_StringLiteral_1= ruleStringLiteral | this_NullLiteral_2= ruleNullLiteral | ( () ( (lv_value_4_0= RULE_INT ) ) ) | ( () ( (lv_value_6_0= RULE_BOOLEAN ) ) ) | ( () ( (lv_value_8_0= RULE_FLOAT ) ) ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1165:1: (this_ListLiteral_0= ruleListLiteral | this_StringLiteral_1= ruleStringLiteral | this_NullLiteral_2= ruleNullLiteral | ( () ( (lv_value_4_0= RULE_INT ) ) ) | ( () ( (lv_value_6_0= RULE_BOOLEAN ) ) ) | ( () ( (lv_value_8_0= RULE_FLOAT ) ) ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1125:1: (this_ListLiteral_0= ruleListLiteral | this_StringLiteral_1= ruleStringLiteral | this_NullLiteral_2= ruleNullLiteral | ( () ( (lv_value_4_0= RULE_INT ) ) ) | ( () ( (lv_value_6_0= RULE_BOOLEAN ) ) ) | ( () ( (lv_value_8_0= RULE_FLOAT ) ) ) )
-            int alt15=6;
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1165:1: (this_ListLiteral_0= ruleListLiteral | this_StringLiteral_1= ruleStringLiteral | this_NullLiteral_2= ruleNullLiteral | ( () ( (lv_value_4_0= RULE_INT ) ) ) | ( () ( (lv_value_6_0= RULE_BOOLEAN ) ) ) | ( () ( (lv_value_8_0= RULE_FLOAT ) ) ) )
+            int alt16=6;
             switch ( input.LA(1) ) {
-            case 30:
+            case 31:
                 {
-                alt15=1;
+                alt16=1;
                 }
                 break;
             case RULE_STRING:
                 {
-                alt15=2;
+                alt16=2;
                 }
                 break;
-            case 29:
+            case 30:
                 {
-                alt15=3;
+                alt16=3;
                 }
                 break;
             case RULE_INT:
                 {
-                alt15=4;
+                alt16=4;
                 }
                 break;
             case RULE_BOOLEAN:
                 {
-                alt15=5;
+                alt16=5;
                 }
                 break;
             case RULE_FLOAT:
                 {
-                alt15=6;
+                alt16=6;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("1125:1: (this_ListLiteral_0= ruleListLiteral | this_StringLiteral_1= ruleStringLiteral | this_NullLiteral_2= ruleNullLiteral | ( () ( (lv_value_4_0= RULE_INT ) ) ) | ( () ( (lv_value_6_0= RULE_BOOLEAN ) ) ) | ( () ( (lv_value_8_0= RULE_FLOAT ) ) ) )", 15, 0, input);
+                    new NoViableAltException("1165:1: (this_ListLiteral_0= ruleListLiteral | this_StringLiteral_1= ruleStringLiteral | this_NullLiteral_2= ruleNullLiteral | ( () ( (lv_value_4_0= RULE_INT ) ) ) | ( () ( (lv_value_6_0= RULE_BOOLEAN ) ) ) | ( () ( (lv_value_8_0= RULE_FLOAT ) ) ) )", 16, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt15) {
+            switch (alt16) {
                 case 1 :
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1126:5: this_ListLiteral_0= ruleListLiteral
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1166:5: this_ListLiteral_0= ruleListLiteral
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getPrimitiveLiteralAccess().getListLiteralParserRuleCall_0(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleListLiteral_in_rulePrimitiveLiteral1943);
+                    pushFollow(FOLLOW_ruleListLiteral_in_rulePrimitiveLiteral1976);
                     this_ListLiteral_0=ruleListLiteral();
                     _fsp--;
 
@@ -2529,12 +2606,12 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1136:5: this_StringLiteral_1= ruleStringLiteral
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1176:5: this_StringLiteral_1= ruleStringLiteral
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getPrimitiveLiteralAccess().getStringLiteralParserRuleCall_1(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleStringLiteral_in_rulePrimitiveLiteral1970);
+                    pushFollow(FOLLOW_ruleStringLiteral_in_rulePrimitiveLiteral2003);
                     this_StringLiteral_1=ruleStringLiteral();
                     _fsp--;
 
@@ -2546,12 +2623,12 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
                     }
                     break;
                 case 3 :
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1146:5: this_NullLiteral_2= ruleNullLiteral
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1186:5: this_NullLiteral_2= ruleNullLiteral
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getPrimitiveLiteralAccess().getNullLiteralParserRuleCall_2(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleNullLiteral_in_rulePrimitiveLiteral1997);
+                    pushFollow(FOLLOW_ruleNullLiteral_in_rulePrimitiveLiteral2030);
                     this_NullLiteral_2=ruleNullLiteral();
                     _fsp--;
 
@@ -2563,13 +2640,13 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
                     }
                     break;
                 case 4 :
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1155:6: ( () ( (lv_value_4_0= RULE_INT ) ) )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1195:6: ( () ( (lv_value_4_0= RULE_INT ) ) )
                     {
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1155:6: ( () ( (lv_value_4_0= RULE_INT ) ) )
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1155:7: () ( (lv_value_4_0= RULE_INT ) )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1195:6: ( () ( (lv_value_4_0= RULE_INT ) ) )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1195:7: () ( (lv_value_4_0= RULE_INT ) )
                     {
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1155:7: ()
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1156:5: 
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1195:7: ()
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1196:5: 
                     {
                      
                             temp=factory.create(grammarAccess.getPrimitiveLiteralAccess().getIntLiteralAction_3_0().getType().getClassifier());
@@ -2584,14 +2661,14 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
                     }
 
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1166:2: ( (lv_value_4_0= RULE_INT ) )
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1167:1: (lv_value_4_0= RULE_INT )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1206:2: ( (lv_value_4_0= RULE_INT ) )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1207:1: (lv_value_4_0= RULE_INT )
                     {
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1167:1: (lv_value_4_0= RULE_INT )
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1168:3: lv_value_4_0= RULE_INT
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1207:1: (lv_value_4_0= RULE_INT )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1208:3: lv_value_4_0= RULE_INT
                     {
                     lv_value_4_0=(Token)input.LT(1);
-                    match(input,RULE_INT,FOLLOW_RULE_INT_in_rulePrimitiveLiteral2029); 
+                    match(input,RULE_INT,FOLLOW_RULE_INT_in_rulePrimitiveLiteral2062); 
 
                     			createLeafNode(grammarAccess.getPrimitiveLiteralAccess().getValueINTTerminalRuleCall_3_1_0(), "value"); 
                     		
@@ -2624,13 +2701,13 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
                     }
                     break;
                 case 5 :
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1191:6: ( () ( (lv_value_6_0= RULE_BOOLEAN ) ) )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1231:6: ( () ( (lv_value_6_0= RULE_BOOLEAN ) ) )
                     {
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1191:6: ( () ( (lv_value_6_0= RULE_BOOLEAN ) ) )
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1191:7: () ( (lv_value_6_0= RULE_BOOLEAN ) )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1231:6: ( () ( (lv_value_6_0= RULE_BOOLEAN ) ) )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1231:7: () ( (lv_value_6_0= RULE_BOOLEAN ) )
                     {
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1191:7: ()
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1192:5: 
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1231:7: ()
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1232:5: 
                     {
                      
                             temp=factory.create(grammarAccess.getPrimitiveLiteralAccess().getBooleanLiteralAction_4_0().getType().getClassifier());
@@ -2645,14 +2722,14 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
                     }
 
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1202:2: ( (lv_value_6_0= RULE_BOOLEAN ) )
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1203:1: (lv_value_6_0= RULE_BOOLEAN )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1242:2: ( (lv_value_6_0= RULE_BOOLEAN ) )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1243:1: (lv_value_6_0= RULE_BOOLEAN )
                     {
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1203:1: (lv_value_6_0= RULE_BOOLEAN )
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1204:3: lv_value_6_0= RULE_BOOLEAN
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1243:1: (lv_value_6_0= RULE_BOOLEAN )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1244:3: lv_value_6_0= RULE_BOOLEAN
                     {
                     lv_value_6_0=(Token)input.LT(1);
-                    match(input,RULE_BOOLEAN,FOLLOW_RULE_BOOLEAN_in_rulePrimitiveLiteral2068); 
+                    match(input,RULE_BOOLEAN,FOLLOW_RULE_BOOLEAN_in_rulePrimitiveLiteral2101); 
 
                     			createLeafNode(grammarAccess.getPrimitiveLiteralAccess().getValueBOOLEANTerminalRuleCall_4_1_0(), "value"); 
                     		
@@ -2685,13 +2762,13 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
                     }
                     break;
                 case 6 :
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1227:6: ( () ( (lv_value_8_0= RULE_FLOAT ) ) )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1267:6: ( () ( (lv_value_8_0= RULE_FLOAT ) ) )
                     {
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1227:6: ( () ( (lv_value_8_0= RULE_FLOAT ) ) )
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1227:7: () ( (lv_value_8_0= RULE_FLOAT ) )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1267:6: ( () ( (lv_value_8_0= RULE_FLOAT ) ) )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1267:7: () ( (lv_value_8_0= RULE_FLOAT ) )
                     {
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1227:7: ()
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1228:5: 
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1267:7: ()
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1268:5: 
                     {
                      
                             temp=factory.create(grammarAccess.getPrimitiveLiteralAccess().getFloatLiteralAction_5_0().getType().getClassifier());
@@ -2706,14 +2783,14 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
                     }
 
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1238:2: ( (lv_value_8_0= RULE_FLOAT ) )
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1239:1: (lv_value_8_0= RULE_FLOAT )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1278:2: ( (lv_value_8_0= RULE_FLOAT ) )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1279:1: (lv_value_8_0= RULE_FLOAT )
                     {
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1239:1: (lv_value_8_0= RULE_FLOAT )
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1240:3: lv_value_8_0= RULE_FLOAT
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1279:1: (lv_value_8_0= RULE_FLOAT )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1280:3: lv_value_8_0= RULE_FLOAT
                     {
                     lv_value_8_0=(Token)input.LT(1);
-                    match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rulePrimitiveLiteral2107); 
+                    match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rulePrimitiveLiteral2140); 
 
                     			createLeafNode(grammarAccess.getPrimitiveLiteralAccess().getValueFLOATTerminalRuleCall_5_1_0(), "value"); 
                     		
@@ -2767,8 +2844,155 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
     // $ANTLR end rulePrimitiveLiteral
 
 
+    // $ANTLR start entryRuleSelectorSegment
+    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1310:1: entryRuleSelectorSegment returns [EObject current=null] : iv_ruleSelectorSegment= ruleSelectorSegment EOF ;
+    public final EObject entryRuleSelectorSegment() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleSelectorSegment = null;
+
+
+        try {
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1311:2: (iv_ruleSelectorSegment= ruleSelectorSegment EOF )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1312:2: iv_ruleSelectorSegment= ruleSelectorSegment EOF
+            {
+             currentNode = createCompositeNode(grammarAccess.getSelectorSegmentRule(), currentNode); 
+            pushFollow(FOLLOW_ruleSelectorSegment_in_entryRuleSelectorSegment2182);
+            iv_ruleSelectorSegment=ruleSelectorSegment();
+            _fsp--;
+
+             current =iv_ruleSelectorSegment; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSelectorSegment2192); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end entryRuleSelectorSegment
+
+
+    // $ANTLR start ruleSelectorSegment
+    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1319:1: ruleSelectorSegment returns [EObject current=null] : ( '.' ( ( RULE_ID ) ) ( (lv_next_2_0= ruleSelectorSegment ) )? ) ;
+    public final EObject ruleSelectorSegment() throws RecognitionException {
+        EObject current = null;
+
+        EObject lv_next_2_0 = null;
+
+
+         EObject temp=null; setCurrentLookahead(); resetLookahead(); 
+            
+        try {
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1324:6: ( ( '.' ( ( RULE_ID ) ) ( (lv_next_2_0= ruleSelectorSegment ) )? ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1325:1: ( '.' ( ( RULE_ID ) ) ( (lv_next_2_0= ruleSelectorSegment ) )? )
+            {
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1325:1: ( '.' ( ( RULE_ID ) ) ( (lv_next_2_0= ruleSelectorSegment ) )? )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1325:3: '.' ( ( RULE_ID ) ) ( (lv_next_2_0= ruleSelectorSegment ) )?
+            {
+            match(input,25,FOLLOW_25_in_ruleSelectorSegment2227); 
+
+                    createLeafNode(grammarAccess.getSelectorSegmentAccess().getFullStopKeyword_0(), null); 
+                
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1329:1: ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1330:1: ( RULE_ID )
+            {
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1330:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1331:3: RULE_ID
+            {
+
+            			if (current==null) {
+            	            current = factory.create(grammarAccess.getSelectorSegmentRule().getType().getClassifier());
+            	            associateNodeWithAstElement(currentNode, current);
+            	        }
+                    
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSelectorSegment2245); 
+
+            		createLeafNode(grammarAccess.getSelectorSegmentAccess().getAttributeRefEStructuralFeatureCrossReference_1_0(), "attributeRef"); 
+            	
+
+            }
+
+
+            }
+
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1343:2: ( (lv_next_2_0= ruleSelectorSegment ) )?
+            int alt17=2;
+            int LA17_0 = input.LA(1);
+
+            if ( (LA17_0==25) ) {
+                alt17=1;
+            }
+            switch (alt17) {
+                case 1 :
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1344:1: (lv_next_2_0= ruleSelectorSegment )
+                    {
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1344:1: (lv_next_2_0= ruleSelectorSegment )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1345:3: lv_next_2_0= ruleSelectorSegment
+                    {
+                     
+                    	        currentNode=createCompositeNode(grammarAccess.getSelectorSegmentAccess().getNextSelectorSegmentParserRuleCall_2_0(), currentNode); 
+                    	    
+                    pushFollow(FOLLOW_ruleSelectorSegment_in_ruleSelectorSegment2266);
+                    lv_next_2_0=ruleSelectorSegment();
+                    _fsp--;
+
+
+                    	        if (current==null) {
+                    	            current = factory.create(grammarAccess.getSelectorSegmentRule().getType().getClassifier());
+                    	            associateNodeWithAstElement(currentNode.getParent(), current);
+                    	        }
+                    	        try {
+                    	       		set(
+                    	       			current, 
+                    	       			"next",
+                    	        		lv_next_2_0, 
+                    	        		"SelectorSegment", 
+                    	        		currentNode);
+                    	        } catch (ValueConverterException vce) {
+                    				handleValueConverterException(vce);
+                    	        }
+                    	        currentNode = currentNode.getParent();
+                    	    
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+
+            }
+
+             resetLookahead(); 
+                	lastConsumedNode = currentNode;
+                
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end ruleSelectorSegment
+
+
     // $ANTLR start entryRuleFeatureRef
-    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1270:1: entryRuleFeatureRef returns [EObject current=null] : iv_ruleFeatureRef= ruleFeatureRef EOF ;
+    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1375:1: entryRuleFeatureRef returns [EObject current=null] : iv_ruleFeatureRef= ruleFeatureRef EOF ;
     public final EObject entryRuleFeatureRef() throws RecognitionException {
         EObject current = null;
 
@@ -2776,16 +3000,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
         try {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1271:2: (iv_ruleFeatureRef= ruleFeatureRef EOF )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1272:2: iv_ruleFeatureRef= ruleFeatureRef EOF
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1376:2: (iv_ruleFeatureRef= ruleFeatureRef EOF )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1377:2: iv_ruleFeatureRef= ruleFeatureRef EOF
             {
              currentNode = createCompositeNode(grammarAccess.getFeatureRefRule(), currentNode); 
-            pushFollow(FOLLOW_ruleFeatureRef_in_entryRuleFeatureRef2149);
+            pushFollow(FOLLOW_ruleFeatureRef_in_entryRuleFeatureRef2303);
             iv_ruleFeatureRef=ruleFeatureRef();
             _fsp--;
 
              current =iv_ruleFeatureRef; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFeatureRef2159); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFeatureRef2313); 
 
             }
 
@@ -2803,21 +3027,21 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start ruleFeatureRef
-    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1279:1: ruleFeatureRef returns [EObject current=null] : ( ( RULE_ID ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1384:1: ruleFeatureRef returns [EObject current=null] : ( ( RULE_ID ) ) ;
     public final EObject ruleFeatureRef() throws RecognitionException {
         EObject current = null;
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1284:6: ( ( ( RULE_ID ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1285:1: ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1389:6: ( ( ( RULE_ID ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1390:1: ( ( RULE_ID ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1285:1: ( ( RULE_ID ) )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1286:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1390:1: ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1391:1: ( RULE_ID )
             {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1286:1: ( RULE_ID )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1287:3: RULE_ID
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1391:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1392:3: RULE_ID
             {
 
             			if (current==null) {
@@ -2825,7 +3049,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFeatureRef2201); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFeatureRef2355); 
 
             		createLeafNode(grammarAccess.getFeatureRefAccess().getFeatureEStructuralFeatureCrossReference_0(), "feature"); 
             	
@@ -2855,7 +3079,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start entryRuleThenBlock
-    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1307:1: entryRuleThenBlock returns [EObject current=null] : iv_ruleThenBlock= ruleThenBlock EOF ;
+    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1412:1: entryRuleThenBlock returns [EObject current=null] : iv_ruleThenBlock= ruleThenBlock EOF ;
     public final EObject entryRuleThenBlock() throws RecognitionException {
         EObject current = null;
 
@@ -2863,16 +3087,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
         try {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1308:2: (iv_ruleThenBlock= ruleThenBlock EOF )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1309:2: iv_ruleThenBlock= ruleThenBlock EOF
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1413:2: (iv_ruleThenBlock= ruleThenBlock EOF )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1414:2: iv_ruleThenBlock= ruleThenBlock EOF
             {
              currentNode = createCompositeNode(grammarAccess.getThenBlockRule(), currentNode); 
-            pushFollow(FOLLOW_ruleThenBlock_in_entryRuleThenBlock2236);
+            pushFollow(FOLLOW_ruleThenBlock_in_entryRuleThenBlock2390);
             iv_ruleThenBlock=ruleThenBlock();
             _fsp--;
 
              current =iv_ruleThenBlock; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleThenBlock2246); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleThenBlock2400); 
 
             }
 
@@ -2890,7 +3114,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start ruleThenBlock
-    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1316:1: ruleThenBlock returns [EObject current=null] : ( () ( 'then' | '->' ) ( ( '{' ( ( (lv_statements_4_0= ruleStatement ) ) ';' )* '}' ) | ( (lv_statements_7_0= ruleStatement ) ) ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1421:1: ruleThenBlock returns [EObject current=null] : ( () ( 'then' | '->' ) ( ( '{' ( ( (lv_statements_4_0= ruleStatement ) ) ';' )* '}' ) | ( (lv_statements_7_0= ruleStatement ) ) ) ) ;
     public final EObject ruleThenBlock() throws RecognitionException {
         EObject current = null;
 
@@ -2902,14 +3126,14 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1321:6: ( ( () ( 'then' | '->' ) ( ( '{' ( ( (lv_statements_4_0= ruleStatement ) ) ';' )* '}' ) | ( (lv_statements_7_0= ruleStatement ) ) ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1322:1: ( () ( 'then' | '->' ) ( ( '{' ( ( (lv_statements_4_0= ruleStatement ) ) ';' )* '}' ) | ( (lv_statements_7_0= ruleStatement ) ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1426:6: ( ( () ( 'then' | '->' ) ( ( '{' ( ( (lv_statements_4_0= ruleStatement ) ) ';' )* '}' ) | ( (lv_statements_7_0= ruleStatement ) ) ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1427:1: ( () ( 'then' | '->' ) ( ( '{' ( ( (lv_statements_4_0= ruleStatement ) ) ';' )* '}' ) | ( (lv_statements_7_0= ruleStatement ) ) ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1322:1: ( () ( 'then' | '->' ) ( ( '{' ( ( (lv_statements_4_0= ruleStatement ) ) ';' )* '}' ) | ( (lv_statements_7_0= ruleStatement ) ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1322:2: () ( 'then' | '->' ) ( ( '{' ( ( (lv_statements_4_0= ruleStatement ) ) ';' )* '}' ) | ( (lv_statements_7_0= ruleStatement ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1427:1: ( () ( 'then' | '->' ) ( ( '{' ( ( (lv_statements_4_0= ruleStatement ) ) ';' )* '}' ) | ( (lv_statements_7_0= ruleStatement ) ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1427:2: () ( 'then' | '->' ) ( ( '{' ( ( (lv_statements_4_0= ruleStatement ) ) ';' )* '}' ) | ( (lv_statements_7_0= ruleStatement ) ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1322:2: ()
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1323:5: 
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1427:2: ()
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1428:5: 
             {
              
                     temp=factory.create(grammarAccess.getThenBlockAccess().getThenBlockAction_0().getType().getClassifier());
@@ -2924,27 +3148,27 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
             }
 
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1333:2: ( 'then' | '->' )
-            int alt16=2;
-            int LA16_0 = input.LA(1);
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1438:2: ( 'then' | '->' )
+            int alt18=2;
+            int LA18_0 = input.LA(1);
 
-            if ( (LA16_0==25) ) {
-                alt16=1;
+            if ( (LA18_0==26) ) {
+                alt18=1;
             }
-            else if ( (LA16_0==26) ) {
-                alt16=2;
+            else if ( (LA18_0==27) ) {
+                alt18=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("1333:2: ( 'then' | '->' )", 16, 0, input);
+                    new NoViableAltException("1438:2: ( 'then' | '->' )", 18, 0, input);
 
                 throw nvae;
             }
-            switch (alt16) {
+            switch (alt18) {
                 case 1 :
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1333:4: 'then'
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1438:4: 'then'
                     {
-                    match(input,25,FOLLOW_25_in_ruleThenBlock2291); 
+                    match(input,26,FOLLOW_26_in_ruleThenBlock2445); 
 
                             createLeafNode(grammarAccess.getThenBlockAccess().getThenKeyword_1_0(), null); 
                         
@@ -2952,9 +3176,9 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1338:7: '->'
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1443:7: '->'
                     {
-                    match(input,26,FOLLOW_26_in_ruleThenBlock2307); 
+                    match(input,27,FOLLOW_27_in_ruleThenBlock2461); 
 
                             createLeafNode(grammarAccess.getThenBlockAccess().getHyphenMinusGreaterThanSignKeyword_1_1(), null); 
                         
@@ -2964,58 +3188,58 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
             }
 
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1342:2: ( ( '{' ( ( (lv_statements_4_0= ruleStatement ) ) ';' )* '}' ) | ( (lv_statements_7_0= ruleStatement ) ) )
-            int alt18=2;
-            int LA18_0 = input.LA(1);
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1447:2: ( ( '{' ( ( (lv_statements_4_0= ruleStatement ) ) ';' )* '}' ) | ( (lv_statements_7_0= ruleStatement ) ) )
+            int alt20=2;
+            int LA20_0 = input.LA(1);
 
-            if ( (LA18_0==18) ) {
-                alt18=1;
+            if ( (LA20_0==18) ) {
+                alt20=1;
             }
-            else if ( ((LA18_0>=RULE_STRING && LA18_0<=RULE_ID)||(LA18_0>=RULE_INT && LA18_0<=RULE_FLOAT)||LA18_0==21||LA18_0==24||(LA18_0>=28 && LA18_0<=30)||LA18_0==36) ) {
-                alt18=2;
+            else if ( ((LA20_0>=RULE_STRING && LA20_0<=RULE_ID)||(LA20_0>=RULE_INT && LA20_0<=RULE_FLOAT)||LA20_0==21||LA20_0==24||(LA20_0>=29 && LA20_0<=31)||LA20_0==37) ) {
+                alt20=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("1342:2: ( ( '{' ( ( (lv_statements_4_0= ruleStatement ) ) ';' )* '}' ) | ( (lv_statements_7_0= ruleStatement ) ) )", 18, 0, input);
+                    new NoViableAltException("1447:2: ( ( '{' ( ( (lv_statements_4_0= ruleStatement ) ) ';' )* '}' ) | ( (lv_statements_7_0= ruleStatement ) ) )", 20, 0, input);
 
                 throw nvae;
             }
-            switch (alt18) {
+            switch (alt20) {
                 case 1 :
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1342:3: ( '{' ( ( (lv_statements_4_0= ruleStatement ) ) ';' )* '}' )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1447:3: ( '{' ( ( (lv_statements_4_0= ruleStatement ) ) ';' )* '}' )
                     {
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1342:3: ( '{' ( ( (lv_statements_4_0= ruleStatement ) ) ';' )* '}' )
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1342:5: '{' ( ( (lv_statements_4_0= ruleStatement ) ) ';' )* '}'
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1447:3: ( '{' ( ( (lv_statements_4_0= ruleStatement ) ) ';' )* '}' )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1447:5: '{' ( ( (lv_statements_4_0= ruleStatement ) ) ';' )* '}'
                     {
-                    match(input,18,FOLLOW_18_in_ruleThenBlock2320); 
+                    match(input,18,FOLLOW_18_in_ruleThenBlock2474); 
 
                             createLeafNode(grammarAccess.getThenBlockAccess().getLeftCurlyBracketKeyword_2_0_0(), null); 
                         
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1346:1: ( ( (lv_statements_4_0= ruleStatement ) ) ';' )*
-                    loop17:
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1451:1: ( ( (lv_statements_4_0= ruleStatement ) ) ';' )*
+                    loop19:
                     do {
-                        int alt17=2;
-                        int LA17_0 = input.LA(1);
+                        int alt19=2;
+                        int LA19_0 = input.LA(1);
 
-                        if ( ((LA17_0>=RULE_STRING && LA17_0<=RULE_ID)||(LA17_0>=RULE_INT && LA17_0<=RULE_FLOAT)||LA17_0==21||LA17_0==24||(LA17_0>=28 && LA17_0<=30)||LA17_0==36) ) {
-                            alt17=1;
+                        if ( ((LA19_0>=RULE_STRING && LA19_0<=RULE_ID)||(LA19_0>=RULE_INT && LA19_0<=RULE_FLOAT)||LA19_0==21||LA19_0==24||(LA19_0>=29 && LA19_0<=31)||LA19_0==37) ) {
+                            alt19=1;
                         }
 
 
-                        switch (alt17) {
+                        switch (alt19) {
                     	case 1 :
-                    	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1346:2: ( (lv_statements_4_0= ruleStatement ) ) ';'
+                    	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1451:2: ( (lv_statements_4_0= ruleStatement ) ) ';'
                     	    {
-                    	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1346:2: ( (lv_statements_4_0= ruleStatement ) )
-                    	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1347:1: (lv_statements_4_0= ruleStatement )
+                    	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1451:2: ( (lv_statements_4_0= ruleStatement ) )
+                    	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1452:1: (lv_statements_4_0= ruleStatement )
                     	    {
-                    	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1347:1: (lv_statements_4_0= ruleStatement )
-                    	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1348:3: lv_statements_4_0= ruleStatement
+                    	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1452:1: (lv_statements_4_0= ruleStatement )
+                    	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1453:3: lv_statements_4_0= ruleStatement
                     	    {
                     	     
                     	    	        currentNode=createCompositeNode(grammarAccess.getThenBlockAccess().getStatementsStatementParserRuleCall_2_0_1_0_0(), currentNode); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleStatement_in_ruleThenBlock2342);
+                    	    pushFollow(FOLLOW_ruleStatement_in_ruleThenBlock2496);
                     	    lv_statements_4_0=ruleStatement();
                     	    _fsp--;
 
@@ -3042,7 +3266,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
                     	    }
 
-                    	    match(input,27,FOLLOW_27_in_ruleThenBlock2352); 
+                    	    match(input,28,FOLLOW_28_in_ruleThenBlock2506); 
 
                     	            createLeafNode(grammarAccess.getThenBlockAccess().getSemicolonKeyword_2_0_1_1(), null); 
                     	        
@@ -3051,11 +3275,11 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
                     	    break;
 
                     	default :
-                    	    break loop17;
+                    	    break loop19;
                         }
                     } while (true);
 
-                    match(input,19,FOLLOW_19_in_ruleThenBlock2364); 
+                    match(input,19,FOLLOW_19_in_ruleThenBlock2518); 
 
                             createLeafNode(grammarAccess.getThenBlockAccess().getRightCurlyBracketKeyword_2_0_2(), null); 
                         
@@ -3066,18 +3290,18 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1379:6: ( (lv_statements_7_0= ruleStatement ) )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1484:6: ( (lv_statements_7_0= ruleStatement ) )
                     {
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1379:6: ( (lv_statements_7_0= ruleStatement ) )
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1380:1: (lv_statements_7_0= ruleStatement )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1484:6: ( (lv_statements_7_0= ruleStatement ) )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1485:1: (lv_statements_7_0= ruleStatement )
                     {
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1380:1: (lv_statements_7_0= ruleStatement )
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1381:3: lv_statements_7_0= ruleStatement
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1485:1: (lv_statements_7_0= ruleStatement )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1486:3: lv_statements_7_0= ruleStatement
                     {
                      
                     	        currentNode=createCompositeNode(grammarAccess.getThenBlockAccess().getStatementsStatementParserRuleCall_2_1_0(), currentNode); 
                     	    
-                    pushFollow(FOLLOW_ruleStatement_in_ruleThenBlock2392);
+                    pushFollow(FOLLOW_ruleStatement_in_ruleThenBlock2546);
                     lv_statements_7_0=ruleStatement();
                     _fsp--;
 
@@ -3133,7 +3357,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start entryRuleStatement
-    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1411:1: entryRuleStatement returns [EObject current=null] : iv_ruleStatement= ruleStatement EOF ;
+    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1516:1: entryRuleStatement returns [EObject current=null] : iv_ruleStatement= ruleStatement EOF ;
     public final EObject entryRuleStatement() throws RecognitionException {
         EObject current = null;
 
@@ -3141,16 +3365,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
         try {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1412:2: (iv_ruleStatement= ruleStatement EOF )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1413:2: iv_ruleStatement= ruleStatement EOF
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1517:2: (iv_ruleStatement= ruleStatement EOF )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1518:2: iv_ruleStatement= ruleStatement EOF
             {
              currentNode = createCompositeNode(grammarAccess.getStatementRule(), currentNode); 
-            pushFollow(FOLLOW_ruleStatement_in_entryRuleStatement2429);
+            pushFollow(FOLLOW_ruleStatement_in_entryRuleStatement2583);
             iv_ruleStatement=ruleStatement();
             _fsp--;
 
              current =iv_ruleStatement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleStatement2439); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleStatement2593); 
 
             }
 
@@ -3168,7 +3392,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start ruleStatement
-    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1420:1: ruleStatement returns [EObject current=null] : (this_CreateStatement_0= ruleCreateStatement | this_UpdateStatement_1= ruleUpdateStatement ) ;
+    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1525:1: ruleStatement returns [EObject current=null] : (this_CreateStatement_0= ruleCreateStatement | this_UpdateStatement_1= ruleUpdateStatement ) ;
     public final EObject ruleStatement() throws RecognitionException {
         EObject current = null;
 
@@ -3180,33 +3404,33 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1425:6: ( (this_CreateStatement_0= ruleCreateStatement | this_UpdateStatement_1= ruleUpdateStatement ) )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1426:1: (this_CreateStatement_0= ruleCreateStatement | this_UpdateStatement_1= ruleUpdateStatement )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1530:6: ( (this_CreateStatement_0= ruleCreateStatement | this_UpdateStatement_1= ruleUpdateStatement ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1531:1: (this_CreateStatement_0= ruleCreateStatement | this_UpdateStatement_1= ruleUpdateStatement )
             {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1426:1: (this_CreateStatement_0= ruleCreateStatement | this_UpdateStatement_1= ruleUpdateStatement )
-            int alt19=2;
-            int LA19_0 = input.LA(1);
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1531:1: (this_CreateStatement_0= ruleCreateStatement | this_UpdateStatement_1= ruleUpdateStatement )
+            int alt21=2;
+            int LA21_0 = input.LA(1);
 
-            if ( ((LA19_0>=RULE_STRING && LA19_0<=RULE_ID)||(LA19_0>=RULE_INT && LA19_0<=RULE_FLOAT)||LA19_0==21||LA19_0==24||(LA19_0>=28 && LA19_0<=30)) ) {
-                alt19=1;
+            if ( ((LA21_0>=RULE_STRING && LA21_0<=RULE_ID)||(LA21_0>=RULE_INT && LA21_0<=RULE_FLOAT)||LA21_0==21||LA21_0==24||(LA21_0>=29 && LA21_0<=31)) ) {
+                alt21=1;
             }
-            else if ( (LA19_0==36) ) {
-                alt19=2;
+            else if ( (LA21_0==37) ) {
+                alt21=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("1426:1: (this_CreateStatement_0= ruleCreateStatement | this_UpdateStatement_1= ruleUpdateStatement )", 19, 0, input);
+                    new NoViableAltException("1531:1: (this_CreateStatement_0= ruleCreateStatement | this_UpdateStatement_1= ruleUpdateStatement )", 21, 0, input);
 
                 throw nvae;
             }
-            switch (alt19) {
+            switch (alt21) {
                 case 1 :
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1427:5: this_CreateStatement_0= ruleCreateStatement
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1532:5: this_CreateStatement_0= ruleCreateStatement
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getStatementAccess().getCreateStatementParserRuleCall_0(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleCreateStatement_in_ruleStatement2486);
+                    pushFollow(FOLLOW_ruleCreateStatement_in_ruleStatement2640);
                     this_CreateStatement_0=ruleCreateStatement();
                     _fsp--;
 
@@ -3218,12 +3442,12 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1437:5: this_UpdateStatement_1= ruleUpdateStatement
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1542:5: this_UpdateStatement_1= ruleUpdateStatement
                     {
                      
                             currentNode=createCompositeNode(grammarAccess.getStatementAccess().getUpdateStatementParserRuleCall_1(), currentNode); 
                         
-                    pushFollow(FOLLOW_ruleUpdateStatement_in_ruleStatement2513);
+                    pushFollow(FOLLOW_ruleUpdateStatement_in_ruleStatement2667);
                     this_UpdateStatement_1=ruleUpdateStatement();
                     _fsp--;
 
@@ -3257,7 +3481,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start entryRuleCreateStatement
-    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1453:1: entryRuleCreateStatement returns [EObject current=null] : iv_ruleCreateStatement= ruleCreateStatement EOF ;
+    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1558:1: entryRuleCreateStatement returns [EObject current=null] : iv_ruleCreateStatement= ruleCreateStatement EOF ;
     public final EObject entryRuleCreateStatement() throws RecognitionException {
         EObject current = null;
 
@@ -3265,16 +3489,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
         try {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1454:2: (iv_ruleCreateStatement= ruleCreateStatement EOF )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1455:2: iv_ruleCreateStatement= ruleCreateStatement EOF
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1559:2: (iv_ruleCreateStatement= ruleCreateStatement EOF )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1560:2: iv_ruleCreateStatement= ruleCreateStatement EOF
             {
              currentNode = createCompositeNode(grammarAccess.getCreateStatementRule(), currentNode); 
-            pushFollow(FOLLOW_ruleCreateStatement_in_entryRuleCreateStatement2548);
+            pushFollow(FOLLOW_ruleCreateStatement_in_entryRuleCreateStatement2702);
             iv_ruleCreateStatement=ruleCreateStatement();
             _fsp--;
 
              current =iv_ruleCreateStatement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCreateStatement2558); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCreateStatement2712); 
 
             }
 
@@ -3292,7 +3516,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start ruleCreateStatement
-    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1462:1: ruleCreateStatement returns [EObject current=null] : ( ( ( (lv_var_0_0= ruleVariable ) ) ':' )? ( (lv_expression_2_0= ruleExpression ) ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1567:1: ruleCreateStatement returns [EObject current=null] : ( ( ( (lv_var_0_0= ruleVariable ) ) ':' )? ( (lv_expression_2_0= ruleExpression ) ) ) ;
     public final EObject ruleCreateStatement() throws RecognitionException {
         EObject current = null;
 
@@ -3304,37 +3528,37 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1467:6: ( ( ( ( (lv_var_0_0= ruleVariable ) ) ':' )? ( (lv_expression_2_0= ruleExpression ) ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1468:1: ( ( ( (lv_var_0_0= ruleVariable ) ) ':' )? ( (lv_expression_2_0= ruleExpression ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1572:6: ( ( ( ( (lv_var_0_0= ruleVariable ) ) ':' )? ( (lv_expression_2_0= ruleExpression ) ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1573:1: ( ( ( (lv_var_0_0= ruleVariable ) ) ':' )? ( (lv_expression_2_0= ruleExpression ) ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1468:1: ( ( ( (lv_var_0_0= ruleVariable ) ) ':' )? ( (lv_expression_2_0= ruleExpression ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1468:2: ( ( (lv_var_0_0= ruleVariable ) ) ':' )? ( (lv_expression_2_0= ruleExpression ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1573:1: ( ( ( (lv_var_0_0= ruleVariable ) ) ':' )? ( (lv_expression_2_0= ruleExpression ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1573:2: ( ( (lv_var_0_0= ruleVariable ) ) ':' )? ( (lv_expression_2_0= ruleExpression ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1468:2: ( ( (lv_var_0_0= ruleVariable ) ) ':' )?
-            int alt20=2;
-            int LA20_0 = input.LA(1);
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1573:2: ( ( (lv_var_0_0= ruleVariable ) ) ':' )?
+            int alt22=2;
+            int LA22_0 = input.LA(1);
 
-            if ( (LA20_0==RULE_ID) ) {
-                int LA20_1 = input.LA(2);
+            if ( (LA22_0==RULE_ID) ) {
+                int LA22_1 = input.LA(2);
 
-                if ( (LA20_1==20) ) {
-                    alt20=1;
+                if ( (LA22_1==20) ) {
+                    alt22=1;
                 }
             }
-            switch (alt20) {
+            switch (alt22) {
                 case 1 :
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1468:3: ( (lv_var_0_0= ruleVariable ) ) ':'
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1573:3: ( (lv_var_0_0= ruleVariable ) ) ':'
                     {
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1468:3: ( (lv_var_0_0= ruleVariable ) )
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1469:1: (lv_var_0_0= ruleVariable )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1573:3: ( (lv_var_0_0= ruleVariable ) )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1574:1: (lv_var_0_0= ruleVariable )
                     {
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1469:1: (lv_var_0_0= ruleVariable )
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1470:3: lv_var_0_0= ruleVariable
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1574:1: (lv_var_0_0= ruleVariable )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1575:3: lv_var_0_0= ruleVariable
                     {
                      
                     	        currentNode=createCompositeNode(grammarAccess.getCreateStatementAccess().getVarVariableParserRuleCall_0_0_0(), currentNode); 
                     	    
-                    pushFollow(FOLLOW_ruleVariable_in_ruleCreateStatement2605);
+                    pushFollow(FOLLOW_ruleVariable_in_ruleCreateStatement2759);
                     lv_var_0_0=ruleVariable();
                     _fsp--;
 
@@ -3361,7 +3585,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
                     }
 
-                    match(input,20,FOLLOW_20_in_ruleCreateStatement2615); 
+                    match(input,20,FOLLOW_20_in_ruleCreateStatement2769); 
 
                             createLeafNode(grammarAccess.getCreateStatementAccess().getColonKeyword_0_1(), null); 
                         
@@ -3371,16 +3595,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
             }
 
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1496:3: ( (lv_expression_2_0= ruleExpression ) )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1497:1: (lv_expression_2_0= ruleExpression )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1601:3: ( (lv_expression_2_0= ruleExpression ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1602:1: (lv_expression_2_0= ruleExpression )
             {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1497:1: (lv_expression_2_0= ruleExpression )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1498:3: lv_expression_2_0= ruleExpression
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1602:1: (lv_expression_2_0= ruleExpression )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1603:3: lv_expression_2_0= ruleExpression
             {
              
             	        currentNode=createCompositeNode(grammarAccess.getCreateStatementAccess().getExpressionExpressionParserRuleCall_1_0(), currentNode); 
             	    
-            pushFollow(FOLLOW_ruleExpression_in_ruleCreateStatement2638);
+            pushFollow(FOLLOW_ruleExpression_in_ruleCreateStatement2792);
             lv_expression_2_0=ruleExpression();
             _fsp--;
 
@@ -3430,7 +3654,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start entryRuleCreateClass
-    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1528:1: entryRuleCreateClass returns [EObject current=null] : iv_ruleCreateClass= ruleCreateClass EOF ;
+    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1633:1: entryRuleCreateClass returns [EObject current=null] : iv_ruleCreateClass= ruleCreateClass EOF ;
     public final EObject entryRuleCreateClass() throws RecognitionException {
         EObject current = null;
 
@@ -3438,16 +3662,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
         try {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1529:2: (iv_ruleCreateClass= ruleCreateClass EOF )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1530:2: iv_ruleCreateClass= ruleCreateClass EOF
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1634:2: (iv_ruleCreateClass= ruleCreateClass EOF )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1635:2: iv_ruleCreateClass= ruleCreateClass EOF
             {
              currentNode = createCompositeNode(grammarAccess.getCreateClassRule(), currentNode); 
-            pushFollow(FOLLOW_ruleCreateClass_in_entryRuleCreateClass2674);
+            pushFollow(FOLLOW_ruleCreateClass_in_entryRuleCreateClass2828);
             iv_ruleCreateClass=ruleCreateClass();
             _fsp--;
 
              current =iv_ruleCreateClass; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCreateClass2684); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCreateClass2838); 
 
             }
 
@@ -3465,7 +3689,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start ruleCreateClass
-    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1537:1: ruleCreateClass returns [EObject current=null] : ( 'new' ( ( RULE_ID ) ) ( '{' ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )? '}' )? ) ;
+    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1642:1: ruleCreateClass returns [EObject current=null] : ( 'new' ( ( RULE_ID ) ) ( '{' ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )? '}' )? ) ;
     public final EObject ruleCreateClass() throws RecognitionException {
         EObject current = null;
 
@@ -3477,21 +3701,21 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1542:6: ( ( 'new' ( ( RULE_ID ) ) ( '{' ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )? '}' )? ) )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1543:1: ( 'new' ( ( RULE_ID ) ) ( '{' ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )? '}' )? )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1647:6: ( ( 'new' ( ( RULE_ID ) ) ( '{' ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )? '}' )? ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1648:1: ( 'new' ( ( RULE_ID ) ) ( '{' ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )? '}' )? )
             {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1543:1: ( 'new' ( ( RULE_ID ) ) ( '{' ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )? '}' )? )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1543:3: 'new' ( ( RULE_ID ) ) ( '{' ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )? '}' )?
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1648:1: ( 'new' ( ( RULE_ID ) ) ( '{' ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )? '}' )? )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1648:3: 'new' ( ( RULE_ID ) ) ( '{' ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )? '}' )?
             {
-            match(input,28,FOLLOW_28_in_ruleCreateClass2719); 
+            match(input,29,FOLLOW_29_in_ruleCreateClass2873); 
 
                     createLeafNode(grammarAccess.getCreateClassAccess().getNewKeyword_0(), null); 
                 
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1547:1: ( ( RULE_ID ) )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1548:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1652:1: ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1653:1: ( RULE_ID )
             {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1548:1: ( RULE_ID )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1549:3: RULE_ID
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1653:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1654:3: RULE_ID
             {
 
             			if (current==null) {
@@ -3499,7 +3723,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleCreateClass2737); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleCreateClass2891); 
 
             		createLeafNode(grammarAccess.getCreateClassAccess().getTypeEClassCrossReference_1_0(), "type"); 
             	
@@ -3509,42 +3733,42 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
             }
 
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1561:2: ( '{' ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )? '}' )?
-            int alt23=2;
-            int LA23_0 = input.LA(1);
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1666:2: ( '{' ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )? '}' )?
+            int alt25=2;
+            int LA25_0 = input.LA(1);
 
-            if ( (LA23_0==18) ) {
-                alt23=1;
+            if ( (LA25_0==18) ) {
+                alt25=1;
             }
-            switch (alt23) {
+            switch (alt25) {
                 case 1 :
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1561:4: '{' ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )? '}'
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1666:4: '{' ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )? '}'
                     {
-                    match(input,18,FOLLOW_18_in_ruleCreateClass2748); 
+                    match(input,18,FOLLOW_18_in_ruleCreateClass2902); 
 
                             createLeafNode(grammarAccess.getCreateClassAccess().getLeftCurlyBracketKeyword_2_0(), null); 
                         
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1565:1: ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )?
-                    int alt22=2;
-                    int LA22_0 = input.LA(1);
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1670:1: ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )?
+                    int alt24=2;
+                    int LA24_0 = input.LA(1);
 
-                    if ( (LA22_0==RULE_ID) ) {
-                        alt22=1;
+                    if ( (LA24_0==RULE_ID) ) {
+                        alt24=1;
                     }
-                    switch (alt22) {
+                    switch (alt24) {
                         case 1 :
-                            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1565:2: ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )*
+                            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1670:2: ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )*
                             {
-                            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1565:2: ( (lv_setters_3_0= ruleSetter ) )
-                            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1566:1: (lv_setters_3_0= ruleSetter )
+                            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1670:2: ( (lv_setters_3_0= ruleSetter ) )
+                            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1671:1: (lv_setters_3_0= ruleSetter )
                             {
-                            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1566:1: (lv_setters_3_0= ruleSetter )
-                            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1567:3: lv_setters_3_0= ruleSetter
+                            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1671:1: (lv_setters_3_0= ruleSetter )
+                            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1672:3: lv_setters_3_0= ruleSetter
                             {
                              
                             	        currentNode=createCompositeNode(grammarAccess.getCreateClassAccess().getSettersSetterParserRuleCall_2_1_0_0(), currentNode); 
                             	    
-                            pushFollow(FOLLOW_ruleSetter_in_ruleCreateClass2770);
+                            pushFollow(FOLLOW_ruleSetter_in_ruleCreateClass2924);
                             lv_setters_3_0=ruleSetter();
                             _fsp--;
 
@@ -3571,35 +3795,35 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
                             }
 
-                            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1589:2: ( ',' ( (lv_setters_5_0= ruleSetter ) ) )*
-                            loop21:
+                            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1694:2: ( ',' ( (lv_setters_5_0= ruleSetter ) ) )*
+                            loop23:
                             do {
-                                int alt21=2;
-                                int LA21_0 = input.LA(1);
+                                int alt23=2;
+                                int LA23_0 = input.LA(1);
 
-                                if ( (LA21_0==22) ) {
-                                    alt21=1;
+                                if ( (LA23_0==22) ) {
+                                    alt23=1;
                                 }
 
 
-                                switch (alt21) {
+                                switch (alt23) {
                             	case 1 :
-                            	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1589:4: ',' ( (lv_setters_5_0= ruleSetter ) )
+                            	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1694:4: ',' ( (lv_setters_5_0= ruleSetter ) )
                             	    {
-                            	    match(input,22,FOLLOW_22_in_ruleCreateClass2781); 
+                            	    match(input,22,FOLLOW_22_in_ruleCreateClass2935); 
 
                             	            createLeafNode(grammarAccess.getCreateClassAccess().getCommaKeyword_2_1_1_0(), null); 
                             	        
-                            	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1593:1: ( (lv_setters_5_0= ruleSetter ) )
-                            	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1594:1: (lv_setters_5_0= ruleSetter )
+                            	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1698:1: ( (lv_setters_5_0= ruleSetter ) )
+                            	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1699:1: (lv_setters_5_0= ruleSetter )
                             	    {
-                            	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1594:1: (lv_setters_5_0= ruleSetter )
-                            	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1595:3: lv_setters_5_0= ruleSetter
+                            	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1699:1: (lv_setters_5_0= ruleSetter )
+                            	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1700:3: lv_setters_5_0= ruleSetter
                             	    {
                             	     
                             	    	        currentNode=createCompositeNode(grammarAccess.getCreateClassAccess().getSettersSetterParserRuleCall_2_1_1_1_0(), currentNode); 
                             	    	    
-                            	    pushFollow(FOLLOW_ruleSetter_in_ruleCreateClass2802);
+                            	    pushFollow(FOLLOW_ruleSetter_in_ruleCreateClass2956);
                             	    lv_setters_5_0=ruleSetter();
                             	    _fsp--;
 
@@ -3631,7 +3855,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
                             	    break;
 
                             	default :
-                            	    break loop21;
+                            	    break loop23;
                                 }
                             } while (true);
 
@@ -3641,7 +3865,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
                     }
 
-                    match(input,19,FOLLOW_19_in_ruleCreateClass2816); 
+                    match(input,19,FOLLOW_19_in_ruleCreateClass2970); 
 
                             createLeafNode(grammarAccess.getCreateClassAccess().getRightCurlyBracketKeyword_2_2(), null); 
                         
@@ -3674,7 +3898,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start entryRuleStringLiteral
-    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1629:1: entryRuleStringLiteral returns [EObject current=null] : iv_ruleStringLiteral= ruleStringLiteral EOF ;
+    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1734:1: entryRuleStringLiteral returns [EObject current=null] : iv_ruleStringLiteral= ruleStringLiteral EOF ;
     public final EObject entryRuleStringLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -3682,16 +3906,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
         try {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1630:2: (iv_ruleStringLiteral= ruleStringLiteral EOF )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1631:2: iv_ruleStringLiteral= ruleStringLiteral EOF
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1735:2: (iv_ruleStringLiteral= ruleStringLiteral EOF )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1736:2: iv_ruleStringLiteral= ruleStringLiteral EOF
             {
              currentNode = createCompositeNode(grammarAccess.getStringLiteralRule(), currentNode); 
-            pushFollow(FOLLOW_ruleStringLiteral_in_entryRuleStringLiteral2854);
+            pushFollow(FOLLOW_ruleStringLiteral_in_entryRuleStringLiteral3008);
             iv_ruleStringLiteral=ruleStringLiteral();
             _fsp--;
 
              current =iv_ruleStringLiteral; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleStringLiteral2864); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleStringLiteral3018); 
 
             }
 
@@ -3709,7 +3933,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start ruleStringLiteral
-    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1638:1: ruleStringLiteral returns [EObject current=null] : ( (lv_value_0_0= RULE_STRING ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1743:1: ruleStringLiteral returns [EObject current=null] : ( (lv_value_0_0= RULE_STRING ) ) ;
     public final EObject ruleStringLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -3718,17 +3942,17 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1643:6: ( ( (lv_value_0_0= RULE_STRING ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1644:1: ( (lv_value_0_0= RULE_STRING ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1748:6: ( ( (lv_value_0_0= RULE_STRING ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1749:1: ( (lv_value_0_0= RULE_STRING ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1644:1: ( (lv_value_0_0= RULE_STRING ) )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1645:1: (lv_value_0_0= RULE_STRING )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1749:1: ( (lv_value_0_0= RULE_STRING ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1750:1: (lv_value_0_0= RULE_STRING )
             {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1645:1: (lv_value_0_0= RULE_STRING )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1646:3: lv_value_0_0= RULE_STRING
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1750:1: (lv_value_0_0= RULE_STRING )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1751:3: lv_value_0_0= RULE_STRING
             {
             lv_value_0_0=(Token)input.LT(1);
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleStringLiteral2905); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleStringLiteral3059); 
 
             			createLeafNode(grammarAccess.getStringLiteralAccess().getValueSTRINGTerminalRuleCall_0(), "value"); 
             		
@@ -3774,7 +3998,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start entryRuleNullLiteral
-    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1676:1: entryRuleNullLiteral returns [EObject current=null] : iv_ruleNullLiteral= ruleNullLiteral EOF ;
+    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1781:1: entryRuleNullLiteral returns [EObject current=null] : iv_ruleNullLiteral= ruleNullLiteral EOF ;
     public final EObject entryRuleNullLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -3782,16 +4006,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
         try {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1677:2: (iv_ruleNullLiteral= ruleNullLiteral EOF )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1678:2: iv_ruleNullLiteral= ruleNullLiteral EOF
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1782:2: (iv_ruleNullLiteral= ruleNullLiteral EOF )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1783:2: iv_ruleNullLiteral= ruleNullLiteral EOF
             {
              currentNode = createCompositeNode(grammarAccess.getNullLiteralRule(), currentNode); 
-            pushFollow(FOLLOW_ruleNullLiteral_in_entryRuleNullLiteral2945);
+            pushFollow(FOLLOW_ruleNullLiteral_in_entryRuleNullLiteral3099);
             iv_ruleNullLiteral=ruleNullLiteral();
             _fsp--;
 
              current =iv_ruleNullLiteral; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNullLiteral2955); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNullLiteral3109); 
 
             }
 
@@ -3809,21 +4033,21 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start ruleNullLiteral
-    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1685:1: ruleNullLiteral returns [EObject current=null] : ( () 'null' ) ;
+    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1790:1: ruleNullLiteral returns [EObject current=null] : ( () 'null' ) ;
     public final EObject ruleNullLiteral() throws RecognitionException {
         EObject current = null;
 
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1690:6: ( ( () 'null' ) )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1691:1: ( () 'null' )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1795:6: ( ( () 'null' ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1796:1: ( () 'null' )
             {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1691:1: ( () 'null' )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1691:2: () 'null'
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1796:1: ( () 'null' )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1796:2: () 'null'
             {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1691:2: ()
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1692:5: 
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1796:2: ()
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1797:5: 
             {
              
                     temp=factory.create(grammarAccess.getNullLiteralAccess().getNullLiteralAction_0().getType().getClassifier());
@@ -3838,7 +4062,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
             }
 
-            match(input,29,FOLLOW_29_in_ruleNullLiteral2999); 
+            match(input,30,FOLLOW_30_in_ruleNullLiteral3153); 
 
                     createLeafNode(grammarAccess.getNullLiteralAccess().getNullKeyword_1(), null); 
                 
@@ -3865,7 +4089,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start entryRuleListLiteral
-    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1714:1: entryRuleListLiteral returns [EObject current=null] : iv_ruleListLiteral= ruleListLiteral EOF ;
+    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1819:1: entryRuleListLiteral returns [EObject current=null] : iv_ruleListLiteral= ruleListLiteral EOF ;
     public final EObject entryRuleListLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -3873,16 +4097,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
         try {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1715:2: (iv_ruleListLiteral= ruleListLiteral EOF )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1716:2: iv_ruleListLiteral= ruleListLiteral EOF
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1820:2: (iv_ruleListLiteral= ruleListLiteral EOF )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1821:2: iv_ruleListLiteral= ruleListLiteral EOF
             {
              currentNode = createCompositeNode(grammarAccess.getListLiteralRule(), currentNode); 
-            pushFollow(FOLLOW_ruleListLiteral_in_entryRuleListLiteral3035);
+            pushFollow(FOLLOW_ruleListLiteral_in_entryRuleListLiteral3189);
             iv_ruleListLiteral=ruleListLiteral();
             _fsp--;
 
              current =iv_ruleListLiteral; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleListLiteral3045); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleListLiteral3199); 
 
             }
 
@@ -3900,7 +4124,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start ruleListLiteral
-    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1723:1: ruleListLiteral returns [EObject current=null] : ( () '[' ( ( (lv_items_2_0= ruleExpression ) ) ( ',' ( (lv_items_4_0= ruleExpression ) ) )* )? ']' ) ;
+    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1828:1: ruleListLiteral returns [EObject current=null] : ( () '[' ( ( (lv_items_2_0= ruleExpression ) ) ( ',' ( (lv_items_4_0= ruleExpression ) ) )* )? ']' ) ;
     public final EObject ruleListLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -3912,14 +4136,14 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1728:6: ( ( () '[' ( ( (lv_items_2_0= ruleExpression ) ) ( ',' ( (lv_items_4_0= ruleExpression ) ) )* )? ']' ) )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1729:1: ( () '[' ( ( (lv_items_2_0= ruleExpression ) ) ( ',' ( (lv_items_4_0= ruleExpression ) ) )* )? ']' )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1833:6: ( ( () '[' ( ( (lv_items_2_0= ruleExpression ) ) ( ',' ( (lv_items_4_0= ruleExpression ) ) )* )? ']' ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1834:1: ( () '[' ( ( (lv_items_2_0= ruleExpression ) ) ( ',' ( (lv_items_4_0= ruleExpression ) ) )* )? ']' )
             {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1729:1: ( () '[' ( ( (lv_items_2_0= ruleExpression ) ) ( ',' ( (lv_items_4_0= ruleExpression ) ) )* )? ']' )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1729:2: () '[' ( ( (lv_items_2_0= ruleExpression ) ) ( ',' ( (lv_items_4_0= ruleExpression ) ) )* )? ']'
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1834:1: ( () '[' ( ( (lv_items_2_0= ruleExpression ) ) ( ',' ( (lv_items_4_0= ruleExpression ) ) )* )? ']' )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1834:2: () '[' ( ( (lv_items_2_0= ruleExpression ) ) ( ',' ( (lv_items_4_0= ruleExpression ) ) )* )? ']'
             {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1729:2: ()
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1730:5: 
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1834:2: ()
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1835:5: 
             {
              
                     temp=factory.create(grammarAccess.getListLiteralAccess().getListLiteralAction_0().getType().getClassifier());
@@ -3934,31 +4158,31 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
             }
 
-            match(input,30,FOLLOW_30_in_ruleListLiteral3089); 
+            match(input,31,FOLLOW_31_in_ruleListLiteral3243); 
 
                     createLeafNode(grammarAccess.getListLiteralAccess().getLeftSquareBracketKeyword_1(), null); 
                 
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1744:1: ( ( (lv_items_2_0= ruleExpression ) ) ( ',' ( (lv_items_4_0= ruleExpression ) ) )* )?
-            int alt25=2;
-            int LA25_0 = input.LA(1);
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1849:1: ( ( (lv_items_2_0= ruleExpression ) ) ( ',' ( (lv_items_4_0= ruleExpression ) ) )* )?
+            int alt27=2;
+            int LA27_0 = input.LA(1);
 
-            if ( ((LA25_0>=RULE_STRING && LA25_0<=RULE_ID)||(LA25_0>=RULE_INT && LA25_0<=RULE_FLOAT)||LA25_0==21||LA25_0==24||(LA25_0>=28 && LA25_0<=30)) ) {
-                alt25=1;
+            if ( ((LA27_0>=RULE_STRING && LA27_0<=RULE_ID)||(LA27_0>=RULE_INT && LA27_0<=RULE_FLOAT)||LA27_0==21||LA27_0==24||(LA27_0>=29 && LA27_0<=31)) ) {
+                alt27=1;
             }
-            switch (alt25) {
+            switch (alt27) {
                 case 1 :
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1744:2: ( (lv_items_2_0= ruleExpression ) ) ( ',' ( (lv_items_4_0= ruleExpression ) ) )*
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1849:2: ( (lv_items_2_0= ruleExpression ) ) ( ',' ( (lv_items_4_0= ruleExpression ) ) )*
                     {
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1744:2: ( (lv_items_2_0= ruleExpression ) )
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1745:1: (lv_items_2_0= ruleExpression )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1849:2: ( (lv_items_2_0= ruleExpression ) )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1850:1: (lv_items_2_0= ruleExpression )
                     {
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1745:1: (lv_items_2_0= ruleExpression )
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1746:3: lv_items_2_0= ruleExpression
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1850:1: (lv_items_2_0= ruleExpression )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1851:3: lv_items_2_0= ruleExpression
                     {
                      
                     	        currentNode=createCompositeNode(grammarAccess.getListLiteralAccess().getItemsExpressionParserRuleCall_2_0_0(), currentNode); 
                     	    
-                    pushFollow(FOLLOW_ruleExpression_in_ruleListLiteral3111);
+                    pushFollow(FOLLOW_ruleExpression_in_ruleListLiteral3265);
                     lv_items_2_0=ruleExpression();
                     _fsp--;
 
@@ -3985,35 +4209,35 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
                     }
 
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1768:2: ( ',' ( (lv_items_4_0= ruleExpression ) ) )*
-                    loop24:
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1873:2: ( ',' ( (lv_items_4_0= ruleExpression ) ) )*
+                    loop26:
                     do {
-                        int alt24=2;
-                        int LA24_0 = input.LA(1);
+                        int alt26=2;
+                        int LA26_0 = input.LA(1);
 
-                        if ( (LA24_0==22) ) {
-                            alt24=1;
+                        if ( (LA26_0==22) ) {
+                            alt26=1;
                         }
 
 
-                        switch (alt24) {
+                        switch (alt26) {
                     	case 1 :
-                    	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1768:4: ',' ( (lv_items_4_0= ruleExpression ) )
+                    	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1873:4: ',' ( (lv_items_4_0= ruleExpression ) )
                     	    {
-                    	    match(input,22,FOLLOW_22_in_ruleListLiteral3122); 
+                    	    match(input,22,FOLLOW_22_in_ruleListLiteral3276); 
 
                     	            createLeafNode(grammarAccess.getListLiteralAccess().getCommaKeyword_2_1_0(), null); 
                     	        
-                    	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1772:1: ( (lv_items_4_0= ruleExpression ) )
-                    	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1773:1: (lv_items_4_0= ruleExpression )
+                    	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1877:1: ( (lv_items_4_0= ruleExpression ) )
+                    	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1878:1: (lv_items_4_0= ruleExpression )
                     	    {
-                    	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1773:1: (lv_items_4_0= ruleExpression )
-                    	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1774:3: lv_items_4_0= ruleExpression
+                    	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1878:1: (lv_items_4_0= ruleExpression )
+                    	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1879:3: lv_items_4_0= ruleExpression
                     	    {
                     	     
                     	    	        currentNode=createCompositeNode(grammarAccess.getListLiteralAccess().getItemsExpressionParserRuleCall_2_1_1_0(), currentNode); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleExpression_in_ruleListLiteral3143);
+                    	    pushFollow(FOLLOW_ruleExpression_in_ruleListLiteral3297);
                     	    lv_items_4_0=ruleExpression();
                     	    _fsp--;
 
@@ -4045,7 +4269,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
                     	    break;
 
                     	default :
-                    	    break loop24;
+                    	    break loop26;
                         }
                     } while (true);
 
@@ -4055,7 +4279,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
             }
 
-            match(input,31,FOLLOW_31_in_ruleListLiteral3157); 
+            match(input,32,FOLLOW_32_in_ruleListLiteral3311); 
 
                     createLeafNode(grammarAccess.getListLiteralAccess().getRightSquareBracketKeyword_3(), null); 
                 
@@ -4082,7 +4306,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start entryRuleSetter
-    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1808:1: entryRuleSetter returns [EObject current=null] : iv_ruleSetter= ruleSetter EOF ;
+    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1913:1: entryRuleSetter returns [EObject current=null] : iv_ruleSetter= ruleSetter EOF ;
     public final EObject entryRuleSetter() throws RecognitionException {
         EObject current = null;
 
@@ -4090,16 +4314,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
         try {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1809:2: (iv_ruleSetter= ruleSetter EOF )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1810:2: iv_ruleSetter= ruleSetter EOF
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1914:2: (iv_ruleSetter= ruleSetter EOF )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1915:2: iv_ruleSetter= ruleSetter EOF
             {
              currentNode = createCompositeNode(grammarAccess.getSetterRule(), currentNode); 
-            pushFollow(FOLLOW_ruleSetter_in_entryRuleSetter3193);
+            pushFollow(FOLLOW_ruleSetter_in_entryRuleSetter3347);
             iv_ruleSetter=ruleSetter();
             _fsp--;
 
              current =iv_ruleSetter; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSetter3203); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSetter3357); 
 
             }
 
@@ -4117,7 +4341,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start ruleSetter
-    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1817:1: ruleSetter returns [EObject current=null] : ( ( ( RULE_ID ) ) ( ':' | '+=' ) ( (lv_expression_3_0= ruleExpression ) ) ( (lv_guard_4_0= 'guard' ) )? ) ;
+    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1922:1: ruleSetter returns [EObject current=null] : ( ( ( RULE_ID ) ) ( ':' | '+=' ) ( (lv_expression_3_0= ruleExpression ) ) ( (lv_guard_4_0= 'guard' ) )? ) ;
     public final EObject ruleSetter() throws RecognitionException {
         EObject current = null;
 
@@ -4128,17 +4352,17 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1822:6: ( ( ( ( RULE_ID ) ) ( ':' | '+=' ) ( (lv_expression_3_0= ruleExpression ) ) ( (lv_guard_4_0= 'guard' ) )? ) )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1823:1: ( ( ( RULE_ID ) ) ( ':' | '+=' ) ( (lv_expression_3_0= ruleExpression ) ) ( (lv_guard_4_0= 'guard' ) )? )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1927:6: ( ( ( ( RULE_ID ) ) ( ':' | '+=' ) ( (lv_expression_3_0= ruleExpression ) ) ( (lv_guard_4_0= 'guard' ) )? ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1928:1: ( ( ( RULE_ID ) ) ( ':' | '+=' ) ( (lv_expression_3_0= ruleExpression ) ) ( (lv_guard_4_0= 'guard' ) )? )
             {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1823:1: ( ( ( RULE_ID ) ) ( ':' | '+=' ) ( (lv_expression_3_0= ruleExpression ) ) ( (lv_guard_4_0= 'guard' ) )? )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1823:2: ( ( RULE_ID ) ) ( ':' | '+=' ) ( (lv_expression_3_0= ruleExpression ) ) ( (lv_guard_4_0= 'guard' ) )?
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1928:1: ( ( ( RULE_ID ) ) ( ':' | '+=' ) ( (lv_expression_3_0= ruleExpression ) ) ( (lv_guard_4_0= 'guard' ) )? )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1928:2: ( ( RULE_ID ) ) ( ':' | '+=' ) ( (lv_expression_3_0= ruleExpression ) ) ( (lv_guard_4_0= 'guard' ) )?
             {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1823:2: ( ( RULE_ID ) )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1824:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1928:2: ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1929:1: ( RULE_ID )
             {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1824:1: ( RULE_ID )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1825:3: RULE_ID
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1929:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1930:3: RULE_ID
             {
 
             			if (current==null) {
@@ -4146,7 +4370,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSetter3246); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSetter3400); 
 
             		createLeafNode(grammarAccess.getSetterAccess().getPropertyEStructuralFeatureCrossReference_0_0(), "property"); 
             	
@@ -4156,27 +4380,27 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
             }
 
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1837:2: ( ':' | '+=' )
-            int alt26=2;
-            int LA26_0 = input.LA(1);
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1942:2: ( ':' | '+=' )
+            int alt28=2;
+            int LA28_0 = input.LA(1);
 
-            if ( (LA26_0==20) ) {
-                alt26=1;
+            if ( (LA28_0==20) ) {
+                alt28=1;
             }
-            else if ( (LA26_0==32) ) {
-                alt26=2;
+            else if ( (LA28_0==33) ) {
+                alt28=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("1837:2: ( ':' | '+=' )", 26, 0, input);
+                    new NoViableAltException("1942:2: ( ':' | '+=' )", 28, 0, input);
 
                 throw nvae;
             }
-            switch (alt26) {
+            switch (alt28) {
                 case 1 :
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1837:4: ':'
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1942:4: ':'
                     {
-                    match(input,20,FOLLOW_20_in_ruleSetter3257); 
+                    match(input,20,FOLLOW_20_in_ruleSetter3411); 
 
                             createLeafNode(grammarAccess.getSetterAccess().getColonKeyword_1_0(), null); 
                         
@@ -4184,9 +4408,9 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
                     }
                     break;
                 case 2 :
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1842:7: '+='
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1947:7: '+='
                     {
-                    match(input,32,FOLLOW_32_in_ruleSetter3273); 
+                    match(input,33,FOLLOW_33_in_ruleSetter3427); 
 
                             createLeafNode(grammarAccess.getSetterAccess().getPlusSignEqualsSignKeyword_1_1(), null); 
                         
@@ -4196,16 +4420,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
             }
 
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1846:2: ( (lv_expression_3_0= ruleExpression ) )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1847:1: (lv_expression_3_0= ruleExpression )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1951:2: ( (lv_expression_3_0= ruleExpression ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1952:1: (lv_expression_3_0= ruleExpression )
             {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1847:1: (lv_expression_3_0= ruleExpression )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1848:3: lv_expression_3_0= ruleExpression
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1952:1: (lv_expression_3_0= ruleExpression )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1953:3: lv_expression_3_0= ruleExpression
             {
              
             	        currentNode=createCompositeNode(grammarAccess.getSetterAccess().getExpressionExpressionParserRuleCall_2_0(), currentNode); 
             	    
-            pushFollow(FOLLOW_ruleExpression_in_ruleSetter3295);
+            pushFollow(FOLLOW_ruleExpression_in_ruleSetter3449);
             lv_expression_3_0=ruleExpression();
             _fsp--;
 
@@ -4232,22 +4456,22 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
             }
 
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1870:2: ( (lv_guard_4_0= 'guard' ) )?
-            int alt27=2;
-            int LA27_0 = input.LA(1);
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1975:2: ( (lv_guard_4_0= 'guard' ) )?
+            int alt29=2;
+            int LA29_0 = input.LA(1);
 
-            if ( (LA27_0==33) ) {
-                alt27=1;
+            if ( (LA29_0==34) ) {
+                alt29=1;
             }
-            switch (alt27) {
+            switch (alt29) {
                 case 1 :
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1871:1: (lv_guard_4_0= 'guard' )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1976:1: (lv_guard_4_0= 'guard' )
                     {
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1871:1: (lv_guard_4_0= 'guard' )
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1872:3: lv_guard_4_0= 'guard'
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1976:1: (lv_guard_4_0= 'guard' )
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1977:3: lv_guard_4_0= 'guard'
                     {
                     lv_guard_4_0=(Token)input.LT(1);
-                    match(input,33,FOLLOW_33_in_ruleSetter3313); 
+                    match(input,34,FOLLOW_34_in_ruleSetter3467); 
 
                             createLeafNode(grammarAccess.getSetterAccess().getGuardGuardKeyword_3_0(), "guard"); 
                         
@@ -4295,7 +4519,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start entryRuleFunction
-    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1899:1: entryRuleFunction returns [EObject current=null] : iv_ruleFunction= ruleFunction EOF ;
+    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2004:1: entryRuleFunction returns [EObject current=null] : iv_ruleFunction= ruleFunction EOF ;
     public final EObject entryRuleFunction() throws RecognitionException {
         EObject current = null;
 
@@ -4303,16 +4527,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
         try {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1900:2: (iv_ruleFunction= ruleFunction EOF )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1901:2: iv_ruleFunction= ruleFunction EOF
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2005:2: (iv_ruleFunction= ruleFunction EOF )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2006:2: iv_ruleFunction= ruleFunction EOF
             {
              currentNode = createCompositeNode(grammarAccess.getFunctionRule(), currentNode); 
-            pushFollow(FOLLOW_ruleFunction_in_entryRuleFunction3363);
+            pushFollow(FOLLOW_ruleFunction_in_entryRuleFunction3517);
             iv_ruleFunction=ruleFunction();
             _fsp--;
 
              current =iv_ruleFunction; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFunction3373); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFunction3527); 
 
             }
 
@@ -4330,7 +4554,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start ruleFunction
-    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1908:1: ruleFunction returns [EObject current=null] : ( 'function' ( (lv_name_1_0= RULE_ID ) ) ( ( ruleFQN ) ) '#' ( ( RULE_ID ) ) ) ;
+    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2013:1: ruleFunction returns [EObject current=null] : ( 'function' ( (lv_name_1_0= RULE_ID ) ) ( ( ruleFQN ) ) '#' ( ( RULE_ID ) ) ) ;
     public final EObject ruleFunction() throws RecognitionException {
         EObject current = null;
 
@@ -4339,24 +4563,24 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1913:6: ( ( 'function' ( (lv_name_1_0= RULE_ID ) ) ( ( ruleFQN ) ) '#' ( ( RULE_ID ) ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1914:1: ( 'function' ( (lv_name_1_0= RULE_ID ) ) ( ( ruleFQN ) ) '#' ( ( RULE_ID ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2018:6: ( ( 'function' ( (lv_name_1_0= RULE_ID ) ) ( ( ruleFQN ) ) '#' ( ( RULE_ID ) ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2019:1: ( 'function' ( (lv_name_1_0= RULE_ID ) ) ( ( ruleFQN ) ) '#' ( ( RULE_ID ) ) )
             {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1914:1: ( 'function' ( (lv_name_1_0= RULE_ID ) ) ( ( ruleFQN ) ) '#' ( ( RULE_ID ) ) )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1914:3: 'function' ( (lv_name_1_0= RULE_ID ) ) ( ( ruleFQN ) ) '#' ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2019:1: ( 'function' ( (lv_name_1_0= RULE_ID ) ) ( ( ruleFQN ) ) '#' ( ( RULE_ID ) ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2019:3: 'function' ( (lv_name_1_0= RULE_ID ) ) ( ( ruleFQN ) ) '#' ( ( RULE_ID ) )
             {
-            match(input,34,FOLLOW_34_in_ruleFunction3408); 
+            match(input,35,FOLLOW_35_in_ruleFunction3562); 
 
                     createLeafNode(grammarAccess.getFunctionAccess().getFunctionKeyword_0(), null); 
                 
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1918:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1919:1: (lv_name_1_0= RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2023:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2024:1: (lv_name_1_0= RULE_ID )
             {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1919:1: (lv_name_1_0= RULE_ID )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1920:3: lv_name_1_0= RULE_ID
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2024:1: (lv_name_1_0= RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2025:3: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFunction3425); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFunction3579); 
 
             			createLeafNode(grammarAccess.getFunctionAccess().getNameIDTerminalRuleCall_1_0(), "name"); 
             		
@@ -4382,11 +4606,11 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
             }
 
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1942:2: ( ( ruleFQN ) )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1943:1: ( ruleFQN )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2047:2: ( ( ruleFQN ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2048:1: ( ruleFQN )
             {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1943:1: ( ruleFQN )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1944:3: ruleFQN
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2048:1: ( ruleFQN )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2049:3: ruleFQN
             {
 
             			if (current==null) {
@@ -4397,7 +4621,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
              
             	        currentNode=createCompositeNode(grammarAccess.getFunctionAccess().getJavaClassJvmGenericTypeCrossReference_2_0(), currentNode); 
             	    
-            pushFollow(FOLLOW_ruleFQN_in_ruleFunction3453);
+            pushFollow(FOLLOW_ruleFQN_in_ruleFunction3607);
             ruleFQN();
             _fsp--;
 
@@ -4410,15 +4634,15 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
             }
 
-            match(input,35,FOLLOW_35_in_ruleFunction3463); 
+            match(input,36,FOLLOW_36_in_ruleFunction3617); 
 
                     createLeafNode(grammarAccess.getFunctionAccess().getNumberSignKeyword_3(), null); 
                 
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1962:1: ( ( RULE_ID ) )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1963:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2067:1: ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2068:1: ( RULE_ID )
             {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1963:1: ( RULE_ID )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1964:3: RULE_ID
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2068:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2069:3: RULE_ID
             {
 
             			if (current==null) {
@@ -4426,7 +4650,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFunction3481); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFunction3635); 
 
             		createLeafNode(grammarAccess.getFunctionAccess().getOperationJvmOperationCrossReference_4_0(), "operation"); 
             	
@@ -4459,7 +4683,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start entryRuleUpdateStatement
-    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1984:1: entryRuleUpdateStatement returns [EObject current=null] : iv_ruleUpdateStatement= ruleUpdateStatement EOF ;
+    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2089:1: entryRuleUpdateStatement returns [EObject current=null] : iv_ruleUpdateStatement= ruleUpdateStatement EOF ;
     public final EObject entryRuleUpdateStatement() throws RecognitionException {
         EObject current = null;
 
@@ -4467,16 +4691,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
         try {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1985:2: (iv_ruleUpdateStatement= ruleUpdateStatement EOF )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1986:2: iv_ruleUpdateStatement= ruleUpdateStatement EOF
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2090:2: (iv_ruleUpdateStatement= ruleUpdateStatement EOF )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2091:2: iv_ruleUpdateStatement= ruleUpdateStatement EOF
             {
              currentNode = createCompositeNode(grammarAccess.getUpdateStatementRule(), currentNode); 
-            pushFollow(FOLLOW_ruleUpdateStatement_in_entryRuleUpdateStatement3517);
+            pushFollow(FOLLOW_ruleUpdateStatement_in_entryRuleUpdateStatement3671);
             iv_ruleUpdateStatement=ruleUpdateStatement();
             _fsp--;
 
              current =iv_ruleUpdateStatement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleUpdateStatement3527); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleUpdateStatement3681); 
 
             }
 
@@ -4494,7 +4718,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start ruleUpdateStatement
-    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1993:1: ruleUpdateStatement returns [EObject current=null] : ( 'update' ( ( RULE_ID ) ) ( '{' ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )? '}' )? ) ;
+    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2098:1: ruleUpdateStatement returns [EObject current=null] : ( 'update' ( ( RULE_ID ) ) ( '{' ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )? '}' )? ) ;
     public final EObject ruleUpdateStatement() throws RecognitionException {
         EObject current = null;
 
@@ -4506,21 +4730,21 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
          EObject temp=null; setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1998:6: ( ( 'update' ( ( RULE_ID ) ) ( '{' ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )? '}' )? ) )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1999:1: ( 'update' ( ( RULE_ID ) ) ( '{' ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )? '}' )? )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2103:6: ( ( 'update' ( ( RULE_ID ) ) ( '{' ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )? '}' )? ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2104:1: ( 'update' ( ( RULE_ID ) ) ( '{' ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )? '}' )? )
             {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1999:1: ( 'update' ( ( RULE_ID ) ) ( '{' ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )? '}' )? )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:1999:3: 'update' ( ( RULE_ID ) ) ( '{' ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )? '}' )?
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2104:1: ( 'update' ( ( RULE_ID ) ) ( '{' ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )? '}' )? )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2104:3: 'update' ( ( RULE_ID ) ) ( '{' ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )? '}' )?
             {
-            match(input,36,FOLLOW_36_in_ruleUpdateStatement3562); 
+            match(input,37,FOLLOW_37_in_ruleUpdateStatement3716); 
 
                     createLeafNode(grammarAccess.getUpdateStatementAccess().getUpdateKeyword_0(), null); 
                 
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2003:1: ( ( RULE_ID ) )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2004:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2108:1: ( ( RULE_ID ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2109:1: ( RULE_ID )
             {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2004:1: ( RULE_ID )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2005:3: RULE_ID
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2109:1: ( RULE_ID )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2110:3: RULE_ID
             {
 
             			if (current==null) {
@@ -4528,7 +4752,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
             	            associateNodeWithAstElement(currentNode, current);
             	        }
                     
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleUpdateStatement3580); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleUpdateStatement3734); 
 
             		createLeafNode(grammarAccess.getUpdateStatementAccess().getVarRefVariableCrossReference_1_0(), "varRef"); 
             	
@@ -4538,42 +4762,42 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
             }
 
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2017:2: ( '{' ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )? '}' )?
-            int alt30=2;
-            int LA30_0 = input.LA(1);
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2122:2: ( '{' ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )? '}' )?
+            int alt32=2;
+            int LA32_0 = input.LA(1);
 
-            if ( (LA30_0==18) ) {
-                alt30=1;
+            if ( (LA32_0==18) ) {
+                alt32=1;
             }
-            switch (alt30) {
+            switch (alt32) {
                 case 1 :
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2017:4: '{' ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )? '}'
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2122:4: '{' ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )? '}'
                     {
-                    match(input,18,FOLLOW_18_in_ruleUpdateStatement3591); 
+                    match(input,18,FOLLOW_18_in_ruleUpdateStatement3745); 
 
                             createLeafNode(grammarAccess.getUpdateStatementAccess().getLeftCurlyBracketKeyword_2_0(), null); 
                         
-                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2021:1: ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )?
-                    int alt29=2;
-                    int LA29_0 = input.LA(1);
+                    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2126:1: ( ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )* )?
+                    int alt31=2;
+                    int LA31_0 = input.LA(1);
 
-                    if ( (LA29_0==RULE_ID) ) {
-                        alt29=1;
+                    if ( (LA31_0==RULE_ID) ) {
+                        alt31=1;
                     }
-                    switch (alt29) {
+                    switch (alt31) {
                         case 1 :
-                            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2021:2: ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )*
+                            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2126:2: ( (lv_setters_3_0= ruleSetter ) ) ( ',' ( (lv_setters_5_0= ruleSetter ) ) )*
                             {
-                            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2021:2: ( (lv_setters_3_0= ruleSetter ) )
-                            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2022:1: (lv_setters_3_0= ruleSetter )
+                            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2126:2: ( (lv_setters_3_0= ruleSetter ) )
+                            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2127:1: (lv_setters_3_0= ruleSetter )
                             {
-                            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2022:1: (lv_setters_3_0= ruleSetter )
-                            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2023:3: lv_setters_3_0= ruleSetter
+                            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2127:1: (lv_setters_3_0= ruleSetter )
+                            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2128:3: lv_setters_3_0= ruleSetter
                             {
                              
                             	        currentNode=createCompositeNode(grammarAccess.getUpdateStatementAccess().getSettersSetterParserRuleCall_2_1_0_0(), currentNode); 
                             	    
-                            pushFollow(FOLLOW_ruleSetter_in_ruleUpdateStatement3613);
+                            pushFollow(FOLLOW_ruleSetter_in_ruleUpdateStatement3767);
                             lv_setters_3_0=ruleSetter();
                             _fsp--;
 
@@ -4600,35 +4824,35 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
                             }
 
-                            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2045:2: ( ',' ( (lv_setters_5_0= ruleSetter ) ) )*
-                            loop28:
+                            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2150:2: ( ',' ( (lv_setters_5_0= ruleSetter ) ) )*
+                            loop30:
                             do {
-                                int alt28=2;
-                                int LA28_0 = input.LA(1);
+                                int alt30=2;
+                                int LA30_0 = input.LA(1);
 
-                                if ( (LA28_0==22) ) {
-                                    alt28=1;
+                                if ( (LA30_0==22) ) {
+                                    alt30=1;
                                 }
 
 
-                                switch (alt28) {
+                                switch (alt30) {
                             	case 1 :
-                            	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2045:4: ',' ( (lv_setters_5_0= ruleSetter ) )
+                            	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2150:4: ',' ( (lv_setters_5_0= ruleSetter ) )
                             	    {
-                            	    match(input,22,FOLLOW_22_in_ruleUpdateStatement3624); 
+                            	    match(input,22,FOLLOW_22_in_ruleUpdateStatement3778); 
 
                             	            createLeafNode(grammarAccess.getUpdateStatementAccess().getCommaKeyword_2_1_1_0(), null); 
                             	        
-                            	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2049:1: ( (lv_setters_5_0= ruleSetter ) )
-                            	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2050:1: (lv_setters_5_0= ruleSetter )
+                            	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2154:1: ( (lv_setters_5_0= ruleSetter ) )
+                            	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2155:1: (lv_setters_5_0= ruleSetter )
                             	    {
-                            	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2050:1: (lv_setters_5_0= ruleSetter )
-                            	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2051:3: lv_setters_5_0= ruleSetter
+                            	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2155:1: (lv_setters_5_0= ruleSetter )
+                            	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2156:3: lv_setters_5_0= ruleSetter
                             	    {
                             	     
                             	    	        currentNode=createCompositeNode(grammarAccess.getUpdateStatementAccess().getSettersSetterParserRuleCall_2_1_1_1_0(), currentNode); 
                             	    	    
-                            	    pushFollow(FOLLOW_ruleSetter_in_ruleUpdateStatement3645);
+                            	    pushFollow(FOLLOW_ruleSetter_in_ruleUpdateStatement3799);
                             	    lv_setters_5_0=ruleSetter();
                             	    _fsp--;
 
@@ -4660,7 +4884,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
                             	    break;
 
                             	default :
-                            	    break loop28;
+                            	    break loop30;
                                 }
                             } while (true);
 
@@ -4670,7 +4894,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
                     }
 
-                    match(input,19,FOLLOW_19_in_ruleUpdateStatement3659); 
+                    match(input,19,FOLLOW_19_in_ruleUpdateStatement3813); 
 
                             createLeafNode(grammarAccess.getUpdateStatementAccess().getRightCurlyBracketKeyword_2_2(), null); 
                         
@@ -4703,7 +4927,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start entryRuleFQN
-    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2085:1: entryRuleFQN returns [String current=null] : iv_ruleFQN= ruleFQN EOF ;
+    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2190:1: entryRuleFQN returns [String current=null] : iv_ruleFQN= ruleFQN EOF ;
     public final String entryRuleFQN() throws RecognitionException {
         String current = null;
 
@@ -4711,16 +4935,16 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
         try {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2086:2: (iv_ruleFQN= ruleFQN EOF )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2087:2: iv_ruleFQN= ruleFQN EOF
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2191:2: (iv_ruleFQN= ruleFQN EOF )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2192:2: iv_ruleFQN= ruleFQN EOF
             {
              currentNode = createCompositeNode(grammarAccess.getFQNRule(), currentNode); 
-            pushFollow(FOLLOW_ruleFQN_in_entryRuleFQN3698);
+            pushFollow(FOLLOW_ruleFQN_in_entryRuleFQN3852);
             iv_ruleFQN=ruleFQN();
             _fsp--;
 
              current =iv_ruleFQN.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFQN3709); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFQN3863); 
 
             }
 
@@ -4738,7 +4962,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start ruleFQN
-    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2094:1: ruleFQN returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
+    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2199:1: ruleFQN returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
     public final AntlrDatatypeRuleToken ruleFQN() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -4749,43 +4973,43 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
          setCurrentLookahead(); resetLookahead(); 
             
         try {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2099:6: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2100:1: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2204:6: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2205:1: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
             {
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2100:1: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2100:6: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2205:1: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2205:6: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
             {
             this_ID_0=(Token)input.LT(1);
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFQN3749); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFQN3903); 
 
             		current.merge(this_ID_0);
                 
              
                 createLeafNode(grammarAccess.getFQNAccess().getIDTerminalRuleCall_0(), null); 
                 
-            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2107:1: (kw= '.' this_ID_2= RULE_ID )*
-            loop31:
+            // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2212:1: (kw= '.' this_ID_2= RULE_ID )*
+            loop33:
             do {
-                int alt31=2;
-                int LA31_0 = input.LA(1);
+                int alt33=2;
+                int LA33_0 = input.LA(1);
 
-                if ( (LA31_0==37) ) {
-                    alt31=1;
+                if ( (LA33_0==25) ) {
+                    alt33=1;
                 }
 
 
-                switch (alt31) {
+                switch (alt33) {
             	case 1 :
-            	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2108:2: kw= '.' this_ID_2= RULE_ID
+            	    // ../org.eclipselabs.emf.scaffolding.language/src-gen/org/eclipselabs/emf/scaffolding/language/parser/antlr/internal/InternalEMFScaffoldingDSL.g:2213:2: kw= '.' this_ID_2= RULE_ID
             	    {
             	    kw=(Token)input.LT(1);
-            	    match(input,37,FOLLOW_37_in_ruleFQN3768); 
+            	    match(input,25,FOLLOW_25_in_ruleFQN3922); 
 
             	            current.merge(kw);
             	            createLeafNode(grammarAccess.getFQNAccess().getFullStopKeyword_1_0(), null); 
             	        
             	    this_ID_2=(Token)input.LT(1);
-            	    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFQN3783); 
+            	    match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFQN3937); 
 
             	    		current.merge(this_ID_2);
             	        
@@ -4797,7 +5021,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
             	    break;
 
             	default :
-            	    break loop31;
+            	    break loop33;
                 }
             } while (true);
 
@@ -4827,8 +5051,8 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
 
     public static final BitSet FOLLOW_ruleScaffolding_in_entryRuleScaffolding75 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleScaffolding85 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleScaffold_in_ruleScaffolding131 = new BitSet(new long[]{0x0000000400010002L});
-    public static final BitSet FOLLOW_ruleScaffoldingElement_in_ruleScaffolding152 = new BitSet(new long[]{0x0000000400010002L});
+    public static final BitSet FOLLOW_ruleScaffold_in_ruleScaffolding131 = new BitSet(new long[]{0x0000000800010002L});
+    public static final BitSet FOLLOW_ruleScaffoldingElement_in_ruleScaffolding152 = new BitSet(new long[]{0x0000000800010002L});
     public static final BitSet FOLLOW_ruleScaffoldingElement_in_entryRuleScaffoldingElement189 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleScaffoldingElement199 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleRule_in_ruleScaffoldingElement246 = new BitSet(new long[]{0x0000000000000002L});
@@ -4841,7 +5065,7 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
     public static final BitSet FOLLOW_EOF_in_entryRuleRule417 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_16_in_ruleRule452 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleRule469 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_ruleWhenBlock_in_ruleRule495 = new BitSet(new long[]{0x0000000006000000L});
+    public static final BitSet FOLLOW_ruleWhenBlock_in_ruleRule495 = new BitSet(new long[]{0x000000000C000000L});
     public static final BitSet FOLLOW_ruleThenBlock_in_ruleRule516 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleWhenBlock_in_entryRuleWhenBlock552 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleWhenBlock562 = new BitSet(new long[]{0x0000000000000002L});
@@ -4855,9 +5079,9 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
     public static final BitSet FOLLOW_ruleVariable_in_ruleMatch774 = new BitSet(new long[]{0x0000000000100000L});
     public static final BitSet FOLLOW_20_in_ruleMatch784 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleMatch804 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_21_in_ruleMatch815 = new BitSet(new long[]{0x0000000071A00730L});
+    public static final BitSet FOLLOW_21_in_ruleMatch815 = new BitSet(new long[]{0x00000000E1A00730L});
     public static final BitSet FOLLOW_ruleParam_in_ruleMatch837 = new BitSet(new long[]{0x0000000000C00000L});
-    public static final BitSet FOLLOW_22_in_ruleMatch848 = new BitSet(new long[]{0x0000000071200730L});
+    public static final BitSet FOLLOW_22_in_ruleMatch848 = new BitSet(new long[]{0x00000000E1200730L});
     public static final BitSet FOLLOW_ruleParam_in_ruleMatch869 = new BitSet(new long[]{0x0000000000C00000L});
     public static final BitSet FOLLOW_23_in_ruleMatch883 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleVariable_in_entryRuleVariable921 = new BitSet(new long[]{0x0000000000000000L});
@@ -4871,110 +5095,116 @@ public class InternalEMFScaffoldingDSLParser extends AbstractInternalAntlrParser
     public static final BitSet FOLLOW_ruleExpression_in_entryRuleExpression1138 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleExpression1148 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleExpressionHigh_in_ruleExpression1195 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_RULE_OPERATOR_LOW_PRIORITY_in_ruleExpression1221 = new BitSet(new long[]{0x0000000071200730L});
+    public static final BitSet FOLLOW_RULE_OPERATOR_LOW_PRIORITY_in_ruleExpression1221 = new BitSet(new long[]{0x00000000E1200730L});
     public static final BitSet FOLLOW_ruleExpression_in_ruleExpression1247 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleExpressionHigh_in_entryRuleExpressionHigh1285 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleExpressionHigh1295 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleTerminalExpression_in_ruleExpressionHigh1342 = new BitSet(new long[]{0x0000000000000082L});
-    public static final BitSet FOLLOW_RULE_OPERATOR_HIGH_PRIORITY_in_ruleExpressionHigh1368 = new BitSet(new long[]{0x0000000071200730L});
+    public static final BitSet FOLLOW_RULE_OPERATOR_HIGH_PRIORITY_in_ruleExpressionHigh1368 = new BitSet(new long[]{0x00000000E1200730L});
     public static final BitSet FOLLOW_ruleExpressionHigh_in_ruleExpressionHigh1394 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleTerminalExpression_in_entryRuleTerminalExpression1432 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleTerminalExpression1442 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_ruleTerminalExpression1478 = new BitSet(new long[]{0x0000000071200730L});
+    public static final BitSet FOLLOW_21_in_ruleTerminalExpression1478 = new BitSet(new long[]{0x00000000E1200730L});
     public static final BitSet FOLLOW_ruleExpression_in_ruleTerminalExpression1500 = new BitSet(new long[]{0x0000000000800000L});
     public static final BitSet FOLLOW_23_in_ruleTerminalExpression1509 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleCreateClass_in_ruleTerminalExpression1538 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_ruleTerminalExpression1563 = new BitSet(new long[]{0x0000000071200730L});
+    public static final BitSet FOLLOW_24_in_ruleTerminalExpression1563 = new BitSet(new long[]{0x00000000E1200730L});
     public static final BitSet FOLLOW_ruleTerminalExpression_in_ruleTerminalExpression1584 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSymbolRef_in_ruleTerminalExpression1613 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleTerminalExpression1646 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleTerminalExpression1656 = new BitSet(new long[]{0x0000000071A00730L});
+    public static final BitSet FOLLOW_21_in_ruleTerminalExpression1656 = new BitSet(new long[]{0x00000000E1A00730L});
     public static final BitSet FOLLOW_ruleExpression_in_ruleTerminalExpression1678 = new BitSet(new long[]{0x0000000000C00000L});
-    public static final BitSet FOLLOW_22_in_ruleTerminalExpression1689 = new BitSet(new long[]{0x0000000071200730L});
+    public static final BitSet FOLLOW_22_in_ruleTerminalExpression1689 = new BitSet(new long[]{0x00000000E1200730L});
     public static final BitSet FOLLOW_ruleExpression_in_ruleTerminalExpression1710 = new BitSet(new long[]{0x0000000000C00000L});
     public static final BitSet FOLLOW_23_in_ruleTerminalExpression1724 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulePrimitiveLiteral_in_ruleTerminalExpression1753 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSymbolRef_in_entryRuleSymbolRef1788 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSymbolRef1798 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleSymbolRef1850 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePrimitiveLiteral_in_entryRulePrimitiveLiteral1886 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePrimitiveLiteral1896 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleListLiteral_in_rulePrimitiveLiteral1943 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStringLiteral_in_rulePrimitiveLiteral1970 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNullLiteral_in_rulePrimitiveLiteral1997 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rulePrimitiveLiteral2029 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_BOOLEAN_in_rulePrimitiveLiteral2068 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_rulePrimitiveLiteral2107 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFeatureRef_in_entryRuleFeatureRef2149 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFeatureRef2159 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleFeatureRef2201 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleThenBlock_in_entryRuleThenBlock2236 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleThenBlock2246 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_ruleThenBlock2291 = new BitSet(new long[]{0x0000001071240730L});
-    public static final BitSet FOLLOW_26_in_ruleThenBlock2307 = new BitSet(new long[]{0x0000001071240730L});
-    public static final BitSet FOLLOW_18_in_ruleThenBlock2320 = new BitSet(new long[]{0x0000001071280730L});
-    public static final BitSet FOLLOW_ruleStatement_in_ruleThenBlock2342 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_27_in_ruleThenBlock2352 = new BitSet(new long[]{0x0000001071280730L});
-    public static final BitSet FOLLOW_19_in_ruleThenBlock2364 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStatement_in_ruleThenBlock2392 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStatement_in_entryRuleStatement2429 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleStatement2439 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCreateStatement_in_ruleStatement2486 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUpdateStatement_in_ruleStatement2513 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCreateStatement_in_entryRuleCreateStatement2548 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCreateStatement2558 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVariable_in_ruleCreateStatement2605 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_ruleCreateStatement2615 = new BitSet(new long[]{0x0000000071200730L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleCreateStatement2638 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCreateClass_in_entryRuleCreateClass2674 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCreateClass2684 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_ruleCreateClass2719 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleCreateClass2737 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_18_in_ruleCreateClass2748 = new BitSet(new long[]{0x0000000000080020L});
-    public static final BitSet FOLLOW_ruleSetter_in_ruleCreateClass2770 = new BitSet(new long[]{0x0000000000480000L});
-    public static final BitSet FOLLOW_22_in_ruleCreateClass2781 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleSetter_in_ruleCreateClass2802 = new BitSet(new long[]{0x0000000000480000L});
-    public static final BitSet FOLLOW_19_in_ruleCreateClass2816 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStringLiteral_in_entryRuleStringLiteral2854 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleStringLiteral2864 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleStringLiteral2905 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNullLiteral_in_entryRuleNullLiteral2945 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNullLiteral2955 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_ruleNullLiteral2999 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleListLiteral_in_entryRuleListLiteral3035 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleListLiteral3045 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_ruleListLiteral3089 = new BitSet(new long[]{0x00000000F1200730L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleListLiteral3111 = new BitSet(new long[]{0x0000000080400000L});
-    public static final BitSet FOLLOW_22_in_ruleListLiteral3122 = new BitSet(new long[]{0x0000000071200730L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleListLiteral3143 = new BitSet(new long[]{0x0000000080400000L});
-    public static final BitSet FOLLOW_31_in_ruleListLiteral3157 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSetter_in_entryRuleSetter3193 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSetter3203 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleSetter3246 = new BitSet(new long[]{0x0000000100100000L});
-    public static final BitSet FOLLOW_20_in_ruleSetter3257 = new BitSet(new long[]{0x0000000071200730L});
-    public static final BitSet FOLLOW_32_in_ruleSetter3273 = new BitSet(new long[]{0x0000000071200730L});
-    public static final BitSet FOLLOW_ruleExpression_in_ruleSetter3295 = new BitSet(new long[]{0x0000000200000002L});
-    public static final BitSet FOLLOW_33_in_ruleSetter3313 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFunction_in_entryRuleFunction3363 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFunction3373 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_ruleFunction3408 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleFunction3425 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleFQN_in_ruleFunction3453 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_35_in_ruleFunction3463 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleFunction3481 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUpdateStatement_in_entryRuleUpdateStatement3517 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleUpdateStatement3527 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_ruleUpdateStatement3562 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleUpdateStatement3580 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_18_in_ruleUpdateStatement3591 = new BitSet(new long[]{0x0000000000080020L});
-    public static final BitSet FOLLOW_ruleSetter_in_ruleUpdateStatement3613 = new BitSet(new long[]{0x0000000000480000L});
-    public static final BitSet FOLLOW_22_in_ruleUpdateStatement3624 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleSetter_in_ruleUpdateStatement3645 = new BitSet(new long[]{0x0000000000480000L});
-    public static final BitSet FOLLOW_19_in_ruleUpdateStatement3659 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFQN_in_entryRuleFQN3698 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFQN3709 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleFQN3749 = new BitSet(new long[]{0x0000002000000002L});
-    public static final BitSet FOLLOW_37_in_ruleFQN3768 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleFQN3783 = new BitSet(new long[]{0x0000002000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleSymbolRef1850 = new BitSet(new long[]{0x0000000002000002L});
+    public static final BitSet FOLLOW_ruleSelectorSegment_in_ruleSymbolRef1881 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePrimitiveLiteral_in_entryRulePrimitiveLiteral1919 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePrimitiveLiteral1929 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleListLiteral_in_rulePrimitiveLiteral1976 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStringLiteral_in_rulePrimitiveLiteral2003 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNullLiteral_in_rulePrimitiveLiteral2030 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rulePrimitiveLiteral2062 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_BOOLEAN_in_rulePrimitiveLiteral2101 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_rulePrimitiveLiteral2140 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelectorSegment_in_entryRuleSelectorSegment2182 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSelectorSegment2192 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_ruleSelectorSegment2227 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleSelectorSegment2245 = new BitSet(new long[]{0x0000000002000002L});
+    public static final BitSet FOLLOW_ruleSelectorSegment_in_ruleSelectorSegment2266 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFeatureRef_in_entryRuleFeatureRef2303 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFeatureRef2313 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleFeatureRef2355 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleThenBlock_in_entryRuleThenBlock2390 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleThenBlock2400 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_ruleThenBlock2445 = new BitSet(new long[]{0x00000020E1240730L});
+    public static final BitSet FOLLOW_27_in_ruleThenBlock2461 = new BitSet(new long[]{0x00000020E1240730L});
+    public static final BitSet FOLLOW_18_in_ruleThenBlock2474 = new BitSet(new long[]{0x00000020E1280730L});
+    public static final BitSet FOLLOW_ruleStatement_in_ruleThenBlock2496 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleThenBlock2506 = new BitSet(new long[]{0x00000020E1280730L});
+    public static final BitSet FOLLOW_19_in_ruleThenBlock2518 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStatement_in_ruleThenBlock2546 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStatement_in_entryRuleStatement2583 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleStatement2593 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCreateStatement_in_ruleStatement2640 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUpdateStatement_in_ruleStatement2667 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCreateStatement_in_entryRuleCreateStatement2702 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCreateStatement2712 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVariable_in_ruleCreateStatement2759 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_20_in_ruleCreateStatement2769 = new BitSet(new long[]{0x00000000E1200730L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleCreateStatement2792 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCreateClass_in_entryRuleCreateClass2828 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCreateClass2838 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_ruleCreateClass2873 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleCreateClass2891 = new BitSet(new long[]{0x0000000000040002L});
+    public static final BitSet FOLLOW_18_in_ruleCreateClass2902 = new BitSet(new long[]{0x0000000000080020L});
+    public static final BitSet FOLLOW_ruleSetter_in_ruleCreateClass2924 = new BitSet(new long[]{0x0000000000480000L});
+    public static final BitSet FOLLOW_22_in_ruleCreateClass2935 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleSetter_in_ruleCreateClass2956 = new BitSet(new long[]{0x0000000000480000L});
+    public static final BitSet FOLLOW_19_in_ruleCreateClass2970 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStringLiteral_in_entryRuleStringLiteral3008 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleStringLiteral3018 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleStringLiteral3059 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNullLiteral_in_entryRuleNullLiteral3099 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNullLiteral3109 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_ruleNullLiteral3153 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleListLiteral_in_entryRuleListLiteral3189 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleListLiteral3199 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_ruleListLiteral3243 = new BitSet(new long[]{0x00000001E1200730L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleListLiteral3265 = new BitSet(new long[]{0x0000000100400000L});
+    public static final BitSet FOLLOW_22_in_ruleListLiteral3276 = new BitSet(new long[]{0x00000000E1200730L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleListLiteral3297 = new BitSet(new long[]{0x0000000100400000L});
+    public static final BitSet FOLLOW_32_in_ruleListLiteral3311 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSetter_in_entryRuleSetter3347 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSetter3357 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleSetter3400 = new BitSet(new long[]{0x0000000200100000L});
+    public static final BitSet FOLLOW_20_in_ruleSetter3411 = new BitSet(new long[]{0x00000000E1200730L});
+    public static final BitSet FOLLOW_33_in_ruleSetter3427 = new BitSet(new long[]{0x00000000E1200730L});
+    public static final BitSet FOLLOW_ruleExpression_in_ruleSetter3449 = new BitSet(new long[]{0x0000000400000002L});
+    public static final BitSet FOLLOW_34_in_ruleSetter3467 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFunction_in_entryRuleFunction3517 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFunction3527 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_ruleFunction3562 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleFunction3579 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleFQN_in_ruleFunction3607 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_ruleFunction3617 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleFunction3635 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUpdateStatement_in_entryRuleUpdateStatement3671 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleUpdateStatement3681 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_ruleUpdateStatement3716 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleUpdateStatement3734 = new BitSet(new long[]{0x0000000000040002L});
+    public static final BitSet FOLLOW_18_in_ruleUpdateStatement3745 = new BitSet(new long[]{0x0000000000080020L});
+    public static final BitSet FOLLOW_ruleSetter_in_ruleUpdateStatement3767 = new BitSet(new long[]{0x0000000000480000L});
+    public static final BitSet FOLLOW_22_in_ruleUpdateStatement3778 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleSetter_in_ruleUpdateStatement3799 = new BitSet(new long[]{0x0000000000480000L});
+    public static final BitSet FOLLOW_19_in_ruleUpdateStatement3813 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFQN_in_entryRuleFQN3852 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFQN3863 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleFQN3903 = new BitSet(new long[]{0x0000000002000002L});
+    public static final BitSet FOLLOW_25_in_ruleFQN3922 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleFQN3937 = new BitSet(new long[]{0x0000000002000002L});
 
 }

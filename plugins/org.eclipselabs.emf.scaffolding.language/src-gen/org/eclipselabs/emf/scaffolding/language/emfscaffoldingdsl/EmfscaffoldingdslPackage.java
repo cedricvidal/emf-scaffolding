@@ -291,7 +291,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getSymbol()
    * @generated
    */
-  int SYMBOL = 21;
+  int SYMBOL = 22;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -396,6 +396,43 @@ public interface EmfscaffoldingdslPackage extends EPackage
   int EXPRESSION_FEATURE_COUNT = 0;
 
   /**
+   * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.SelectorSegmentImpl <em>Selector Segment</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.SelectorSegmentImpl
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getSelectorSegment()
+   * @generated
+   */
+  int SELECTOR_SEGMENT = 10;
+
+  /**
+   * The feature id for the '<em><b>Attribute Ref</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SELECTOR_SEGMENT__ATTRIBUTE_REF = 0;
+
+  /**
+   * The feature id for the '<em><b>Next</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SELECTOR_SEGMENT__NEXT = 1;
+
+  /**
+   * The number of structural features of the '<em>Selector Segment</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SELECTOR_SEGMENT_FEATURE_COUNT = 2;
+
+  /**
    * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.FeatureRefImpl <em>Feature Ref</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -403,7 +440,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getFeatureRef()
    * @generated
    */
-  int FEATURE_REF = 10;
+  int FEATURE_REF = 11;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -440,7 +477,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getThenBlock()
    * @generated
    */
-  int THEN_BLOCK = 11;
+  int THEN_BLOCK = 12;
 
   /**
    * The feature id for the '<em><b>Statements</b></em>' containment reference list.
@@ -468,7 +505,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getStatement()
    * @generated
    */
-  int STATEMENT = 12;
+  int STATEMENT = 13;
 
   /**
    * The number of structural features of the '<em>Statement</em>' class.
@@ -487,7 +524,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getCreateStatement()
    * @generated
    */
-  int CREATE_STATEMENT = 13;
+  int CREATE_STATEMENT = 14;
 
   /**
    * The feature id for the '<em><b>Var</b></em>' containment reference.
@@ -524,7 +561,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getCreateClass()
    * @generated
    */
-  int CREATE_CLASS = 14;
+  int CREATE_CLASS = 15;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' reference.
@@ -561,7 +598,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getStringLiteral()
    * @generated
    */
-  int STRING_LITERAL = 15;
+  int STRING_LITERAL = 16;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -589,7 +626,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getNullLiteral()
    * @generated
    */
-  int NULL_LITERAL = 16;
+  int NULL_LITERAL = 17;
 
   /**
    * The number of structural features of the '<em>Null Literal</em>' class.
@@ -608,7 +645,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getListLiteral()
    * @generated
    */
-  int LIST_LITERAL = 17;
+  int LIST_LITERAL = 18;
 
   /**
    * The feature id for the '<em><b>Items</b></em>' containment reference list.
@@ -636,7 +673,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getSetter()
    * @generated
    */
-  int SETTER = 18;
+  int SETTER = 19;
 
   /**
    * The feature id for the '<em><b>Property</b></em>' reference.
@@ -682,7 +719,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getFunction()
    * @generated
    */
-  int FUNCTION = 19;
+  int FUNCTION = 20;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -728,7 +765,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getUpdateStatement()
    * @generated
    */
-  int UPDATE_STATEMENT = 20;
+  int UPDATE_STATEMENT = 21;
 
   /**
    * The feature id for the '<em><b>Var Ref</b></em>' reference.
@@ -765,7 +802,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getOperation()
    * @generated
    */
-  int OPERATION = 22;
+  int OPERATION = 23;
 
   /**
    * The feature id for the '<em><b>Left</b></em>' containment reference.
@@ -811,7 +848,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getNotExpression()
    * @generated
    */
-  int NOT_EXPRESSION = 23;
+  int NOT_EXPRESSION = 24;
 
   /**
    * The feature id for the '<em><b>Exp</b></em>' containment reference.
@@ -839,7 +876,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getFunctionLiteral()
    * @generated
    */
-  int FUNCTION_LITERAL = 24;
+  int FUNCTION_LITERAL = 25;
 
   /**
    * The feature id for the '<em><b>Function</b></em>' reference.
@@ -876,7 +913,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getSymbolRef()
    * @generated
    */
-  int SYMBOL_REF = 25;
+  int SYMBOL_REF = 26;
 
   /**
    * The feature id for the '<em><b>Ref</b></em>' reference.
@@ -897,6 +934,43 @@ public interface EmfscaffoldingdslPackage extends EPackage
   int SYMBOL_REF_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
+   * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.SelectorImpl <em>Selector</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.SelectorImpl
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getSelector()
+   * @generated
+   */
+  int SELECTOR = 27;
+
+  /**
+   * The feature id for the '<em><b>Symbol</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SELECTOR__SYMBOL = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Segment</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SELECTOR__SEGMENT = EXPRESSION_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Selector</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SELECTOR_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+
+  /**
    * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.IntLiteralImpl <em>Int Literal</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -904,7 +978,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getIntLiteral()
    * @generated
    */
-  int INT_LITERAL = 26;
+  int INT_LITERAL = 28;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -932,7 +1006,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getBooleanLiteral()
    * @generated
    */
-  int BOOLEAN_LITERAL = 27;
+  int BOOLEAN_LITERAL = 29;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -960,7 +1034,7 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getFloatLiteral()
    * @generated
    */
-  int FLOAT_LITERAL = 28;
+  int FLOAT_LITERAL = 30;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1201,6 +1275,38 @@ public interface EmfscaffoldingdslPackage extends EPackage
    * @generated
    */
   EClass getExpression();
+
+  /**
+   * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.SelectorSegment <em>Selector Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Selector Segment</em>'.
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.SelectorSegment
+   * @generated
+   */
+  EClass getSelectorSegment();
+
+  /**
+   * Returns the meta object for the reference '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.SelectorSegment#getAttributeRef <em>Attribute Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Attribute Ref</em>'.
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.SelectorSegment#getAttributeRef()
+   * @see #getSelectorSegment()
+   * @generated
+   */
+  EReference getSelectorSegment_AttributeRef();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.SelectorSegment#getNext <em>Next</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Next</em>'.
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.SelectorSegment#getNext()
+   * @see #getSelectorSegment()
+   * @generated
+   */
+  EReference getSelectorSegment_Next();
 
   /**
    * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FeatureRef <em>Feature Ref</em>}'.
@@ -1616,6 +1722,38 @@ public interface EmfscaffoldingdslPackage extends EPackage
   EReference getSymbolRef_Ref();
 
   /**
+   * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Selector <em>Selector</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Selector</em>'.
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Selector
+   * @generated
+   */
+  EClass getSelector();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Selector#getSymbol <em>Symbol</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Symbol</em>'.
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Selector#getSymbol()
+   * @see #getSelector()
+   * @generated
+   */
+  EReference getSelector_Symbol();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Selector#getSegment <em>Segment</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Segment</em>'.
+   * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Selector#getSegment()
+   * @see #getSelector()
+   * @generated
+   */
+  EReference getSelector_Segment();
+
+  /**
    * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.IntLiteral <em>Int Literal</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1888,6 +2026,32 @@ public interface EmfscaffoldingdslPackage extends EPackage
      * @generated
      */
     EClass EXPRESSION = eINSTANCE.getExpression();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.SelectorSegmentImpl <em>Selector Segment</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.SelectorSegmentImpl
+     * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getSelectorSegment()
+     * @generated
+     */
+    EClass SELECTOR_SEGMENT = eINSTANCE.getSelectorSegment();
+
+    /**
+     * The meta object literal for the '<em><b>Attribute Ref</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SELECTOR_SEGMENT__ATTRIBUTE_REF = eINSTANCE.getSelectorSegment_AttributeRef();
+
+    /**
+     * The meta object literal for the '<em><b>Next</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SELECTOR_SEGMENT__NEXT = eINSTANCE.getSelectorSegment_Next();
 
     /**
      * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.FeatureRefImpl <em>Feature Ref</em>}' class.
@@ -2232,6 +2396,32 @@ public interface EmfscaffoldingdslPackage extends EPackage
      * @generated
      */
     EReference SYMBOL_REF__REF = eINSTANCE.getSymbolRef_Ref();
+
+    /**
+     * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.SelectorImpl <em>Selector</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.SelectorImpl
+     * @see org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.EmfscaffoldingdslPackageImpl#getSelector()
+     * @generated
+     */
+    EClass SELECTOR = eINSTANCE.getSelector();
+
+    /**
+     * The meta object literal for the '<em><b>Symbol</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SELECTOR__SYMBOL = eINSTANCE.getSelector_Symbol();
+
+    /**
+     * The meta object literal for the '<em><b>Segment</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SELECTOR__SEGMENT = eINSTANCE.getSelector_Segment();
 
     /**
      * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.IntLiteralImpl <em>Int Literal</em>}' class.

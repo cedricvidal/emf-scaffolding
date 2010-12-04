@@ -15,6 +15,9 @@ import static com.google.common.collect.Iterables.filter;
 import static com.google.common.collect.Iterables.transform;
 import static org.eclipse.xtext.scoping.Scopes.scopeFor;
 
+import static org.eclipse.xtext.scoping.IScope.*;
+import static org.eclipselabs.emf.scaffolding.language.util.ESLIterators.*;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -23,6 +26,7 @@ import java.util.List;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -38,20 +42,25 @@ import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
 import org.eclipse.xtext.scoping.impl.SimpleScope;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.CreateClass;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.EmfscaffoldingdslPackage;
+import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FeatureRef;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Function;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Match;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Rule;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Scaffold;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Scaffolding;
+import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Selector;
+import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.SelectorSegment;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Symbol;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.SymbolRef;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.UpdateStatement;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Variable;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.WhenBlock;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.impl.FeatureRefImpl;
+import org.eclipselabs.emf.scaffolding.language.typesystem.TypeResolver;
 import org.eclipselabs.emf.scaffolding.language.util.ESLIterators;
 
 import com.google.common.collect.Iterators;
+import com.google.inject.Inject;
 
 /**
  * This class contains scoping description for the EMFScaffoldingDSL language.
@@ -59,6 +68,9 @@ import com.google.common.collect.Iterators;
  */
 public class EMFScaffoldingDSLScopeProvider extends
 		AbstractDeclarativeScopeProvider {
+
+	@Inject
+	private TypeResolver typeResolver;
 
 	IScope scope_EClass(Scaffolding context, EReference eReference) {
 		EPackage pkg = getPackage(context);
@@ -156,7 +168,7 @@ public class EMFScaffoldingDSLScopeProvider extends
 
 	IScope scope_UpdateStatement_varRef(UpdateStatement context,
 			EReference reference) {
-		Rule rule = Iterators.filter(ESLIterators.ancestors(context), Rule.class).next();
+		Rule rule = Iterators.filter(ancestors(context), Rule.class).next();
 		WhenBlock when = rule.getWhen();
 		return scopeFor(asIterable(Iterators.filter(when.eAllContents(),
 				Variable.class)));
@@ -252,6 +264,31 @@ public class EMFScaffoldingDSLScopeProvider extends
 			return new SimpleScope(Scopes.scopedElementsFor(operations, OperationNameResolver.INSTANCE));
 		}
 		return null;
+	}
+
+	IScope scope_EStructuralFeature(Selector context, EReference ref) {
+		EClass type = typeResolver.getType(context);
+
+		if(type != null) {
+			return scopeFor(type.getEAllStructuralFeatures());
+		}
+		return NULLSCOPE;
+	}
+
+	IScope scope_EStructuralFeature(SelectorSegment context, EReference ref) {
+		IScope scope = NULLSCOPE;
+		EObject container = context.eContainer();
+		EClass eclass = null;
+
+		if (container instanceof SelectorSegment) {
+			eclass = typeResolver.getType(container);
+		} else {
+			return null;
+		}
+		if (eclass != null) {
+			scope = scopeFor(eclass.getEStructuralFeatures());
+		}
+		return scope;
 	}
 
 }

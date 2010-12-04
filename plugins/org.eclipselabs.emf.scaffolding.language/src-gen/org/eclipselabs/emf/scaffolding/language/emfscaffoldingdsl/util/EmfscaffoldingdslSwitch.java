@@ -171,6 +171,13 @@ public class EmfscaffoldingdslSwitch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case EmfscaffoldingdslPackage.SELECTOR_SEGMENT:
+      {
+        SelectorSegment selectorSegment = (SelectorSegment)theEObject;
+        T result = caseSelectorSegment(selectorSegment);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case EmfscaffoldingdslPackage.FEATURE_REF:
       {
         FeatureRef featureRef = (FeatureRef)theEObject;
@@ -296,6 +303,14 @@ public class EmfscaffoldingdslSwitch<T>
         SymbolRef symbolRef = (SymbolRef)theEObject;
         T result = caseSymbolRef(symbolRef);
         if (result == null) result = caseExpression(symbolRef);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EmfscaffoldingdslPackage.SELECTOR:
+      {
+        Selector selector = (Selector)theEObject;
+        T result = caseSelector(selector);
+        if (result == null) result = caseExpression(selector);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -483,6 +498,22 @@ public class EmfscaffoldingdslSwitch<T>
    * @generated
    */
   public T caseExpression(Expression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Selector Segment</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Selector Segment</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSelectorSegment(SelectorSegment object)
   {
     return null;
   }
@@ -739,6 +770,22 @@ public class EmfscaffoldingdslSwitch<T>
    * @generated
    */
   public T caseSymbolRef(SymbolRef object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Selector</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Selector</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSelector(Selector object)
   {
     return null;
   }

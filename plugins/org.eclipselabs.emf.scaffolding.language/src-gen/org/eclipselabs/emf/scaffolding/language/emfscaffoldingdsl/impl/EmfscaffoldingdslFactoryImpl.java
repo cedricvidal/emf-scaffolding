@@ -78,6 +78,7 @@ public class EmfscaffoldingdslFactoryImpl extends EFactoryImpl implements Emfsca
       case EmfscaffoldingdslPackage.VARIABLE: return createVariable();
       case EmfscaffoldingdslPackage.PARAM: return createParam();
       case EmfscaffoldingdslPackage.EXPRESSION: return createExpression();
+      case EmfscaffoldingdslPackage.SELECTOR_SEGMENT: return createSelectorSegment();
       case EmfscaffoldingdslPackage.FEATURE_REF: return createFeatureRef();
       case EmfscaffoldingdslPackage.THEN_BLOCK: return createThenBlock();
       case EmfscaffoldingdslPackage.STATEMENT: return createStatement();
@@ -94,6 +95,7 @@ public class EmfscaffoldingdslFactoryImpl extends EFactoryImpl implements Emfsca
       case EmfscaffoldingdslPackage.NOT_EXPRESSION: return createNotExpression();
       case EmfscaffoldingdslPackage.FUNCTION_LITERAL: return createFunctionLiteral();
       case EmfscaffoldingdslPackage.SYMBOL_REF: return createSymbolRef();
+      case EmfscaffoldingdslPackage.SELECTOR: return createSelector();
       case EmfscaffoldingdslPackage.INT_LITERAL: return createIntLiteral();
       case EmfscaffoldingdslPackage.BOOLEAN_LITERAL: return createBooleanLiteral();
       case EmfscaffoldingdslPackage.FLOAT_LITERAL: return createFloatLiteral();
@@ -210,6 +212,17 @@ public class EmfscaffoldingdslFactoryImpl extends EFactoryImpl implements Emfsca
   {
     ExpressionImpl expression = new ExpressionImpl();
     return expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SelectorSegment createSelectorSegment()
+  {
+    SelectorSegmentImpl selectorSegment = new SelectorSegmentImpl();
+    return selectorSegment;
   }
 
   /**
@@ -386,6 +399,17 @@ public class EmfscaffoldingdslFactoryImpl extends EFactoryImpl implements Emfsca
   {
     SymbolRefImpl symbolRef = new SymbolRefImpl();
     return symbolRef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Selector createSelector()
+  {
+    SelectorImpl selector = new SelectorImpl();
+    return selector;
   }
 
   /**

@@ -69,9 +69,11 @@ public class EMFScaffoldingDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTerminalExpressionAccess().getGroup_4_3(), "rule__TerminalExpression__Group_4_3__0");
 					put(grammarAccess.getTerminalExpressionAccess().getGroup_4_3_1(), "rule__TerminalExpression__Group_4_3_1__0");
 					put(grammarAccess.getSymbolRefAccess().getGroup(), "rule__SymbolRef__Group__0");
+					put(grammarAccess.getSymbolRefAccess().getGroup_2(), "rule__SymbolRef__Group_2__0");
 					put(grammarAccess.getPrimitiveLiteralAccess().getGroup_3(), "rule__PrimitiveLiteral__Group_3__0");
 					put(grammarAccess.getPrimitiveLiteralAccess().getGroup_4(), "rule__PrimitiveLiteral__Group_4__0");
 					put(grammarAccess.getPrimitiveLiteralAccess().getGroup_5(), "rule__PrimitiveLiteral__Group_5__0");
+					put(grammarAccess.getSelectorSegmentAccess().getGroup(), "rule__SelectorSegment__Group__0");
 					put(grammarAccess.getThenBlockAccess().getGroup(), "rule__ThenBlock__Group__0");
 					put(grammarAccess.getThenBlockAccess().getGroup_2_0(), "rule__ThenBlock__Group_2_0__0");
 					put(grammarAccess.getThenBlockAccess().getGroup_2_0_1(), "rule__ThenBlock__Group_2_0_1__0");
@@ -120,9 +122,12 @@ public class EMFScaffoldingDSLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTerminalExpressionAccess().getArgumentsAssignment_4_3_0(), "rule__TerminalExpression__ArgumentsAssignment_4_3_0");
 					put(grammarAccess.getTerminalExpressionAccess().getArgumentsAssignment_4_3_1_1(), "rule__TerminalExpression__ArgumentsAssignment_4_3_1_1");
 					put(grammarAccess.getSymbolRefAccess().getRefAssignment_1(), "rule__SymbolRef__RefAssignment_1");
+					put(grammarAccess.getSymbolRefAccess().getSegmentAssignment_2_1(), "rule__SymbolRef__SegmentAssignment_2_1");
 					put(grammarAccess.getPrimitiveLiteralAccess().getValueAssignment_3_1(), "rule__PrimitiveLiteral__ValueAssignment_3_1");
 					put(grammarAccess.getPrimitiveLiteralAccess().getValueAssignment_4_1(), "rule__PrimitiveLiteral__ValueAssignment_4_1");
 					put(grammarAccess.getPrimitiveLiteralAccess().getValueAssignment_5_1(), "rule__PrimitiveLiteral__ValueAssignment_5_1");
+					put(grammarAccess.getSelectorSegmentAccess().getAttributeRefAssignment_1(), "rule__SelectorSegment__AttributeRefAssignment_1");
+					put(grammarAccess.getSelectorSegmentAccess().getNextAssignment_2(), "rule__SelectorSegment__NextAssignment_2");
 					put(grammarAccess.getFeatureRefAccess().getFeatureAssignment(), "rule__FeatureRef__FeatureAssignment");
 					put(grammarAccess.getThenBlockAccess().getStatementsAssignment_2_0_1_0(), "rule__ThenBlock__StatementsAssignment_2_0_1_0");
 					put(grammarAccess.getThenBlockAccess().getStatementsAssignment_2_1(), "rule__ThenBlock__StatementsAssignment_2_1");
