@@ -15,6 +15,8 @@ import static org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Emfscaf
 import static org.eclipselabs.emf.scaffolding.language.util.ESLIterators.ancestors;
 import static org.eclipselabs.emf.scaffolding.language.util.ESLPredicates.isInstanceOf;
 
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.xtext.Keyword;
 import org.eclipse.xtext.ui.editor.contentassist.ContentAssistContext;
 import org.eclipse.xtext.ui.editor.contentassist.ICompletionProposalAcceptor;
@@ -41,4 +43,13 @@ public class EMFScaffoldingDSLProposalProvider extends AbstractEMFScaffoldingDSL
 		super.completeKeyword(keyword, contentAssistContext, acceptor);
 	}
 
+	@Override
+	protected String getDisplayString(EObject element, String qualifiedName,
+			String shortName) {
+		if (element instanceof EPackage) {
+			EPackage pkg = (EPackage) element;
+			return pkg.getName() + " - " + pkg.getNsURI();
+		}
+		return super.getDisplayString(element, qualifiedName, shortName);
+	}
 }

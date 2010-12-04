@@ -199,7 +199,7 @@ public class EMFScaffoldingDSLScopeProvider extends
 	}
 
 	/**
-	 * Looks up {@link EPackage}s in the {@link EPackage.Registry} and wraps them into {@link Symbol}s.
+	 * Looks up {@link EPackage}s in the {@link EPackage.Registry}.
 	 * 
 	 * @param e
 	 * @param ref
