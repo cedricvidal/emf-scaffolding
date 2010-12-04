@@ -125,6 +125,43 @@ public interface SoaPackage extends EPackage {
 	int ELEMENT_FEATURE_COUNT = HAS_NAME_FEATURE_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.tests.soa.impl.TypeImpl <em>Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipselabs.emf.scaffolding.tests.soa.impl.TypeImpl
+	 * @see org.eclipselabs.emf.scaffolding.tests.soa.impl.SoaPackageImpl#getType()
+	 * @generated
+	 */
+	int TYPE = 12;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE__NAME = ELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Namespace</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE__NAMESPACE = ELEMENT__NAMESPACE;
+
+	/**
+	 * The number of structural features of the '<em>Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.tests.soa.impl.EntityImpl <em>Entity</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -141,7 +178,7 @@ public interface SoaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__NAME = ELEMENT__NAME;
+	int ENTITY__NAME = TYPE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Namespace</b></em>' container reference.
@@ -150,7 +187,16 @@ public interface SoaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__NAMESPACE = ELEMENT__NAMESPACE;
+	int ENTITY__NAMESPACE = TYPE__NAMESPACE;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__ATTRIBUTES = TYPE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Entity</em>' class.
@@ -159,7 +205,7 @@ public interface SoaPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 0;
+	int ENTITY_FEATURE_COUNT = TYPE_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.tests.soa.impl.NamespaceImpl <em>Namespace</em>}' class.
@@ -364,13 +410,31 @@ public interface SoaPackage extends EPackage {
 	int METHOD__NAME = HAS_NAME__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Parameters</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METHOD__PARAMETERS = HAS_NAME_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METHOD__TYPE = HAS_NAME_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Method</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int METHOD_FEATURE_COUNT = HAS_NAME_FEATURE_COUNT + 0;
+	int METHOD_FEATURE_COUNT = HAS_NAME_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.tests.soa.impl.PackageImpl <em>Package</em>}' class.
@@ -558,6 +622,175 @@ public interface SoaPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.tests.soa.impl.ParameterImpl <em>Parameter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipselabs.emf.scaffolding.tests.soa.impl.ParameterImpl
+	 * @see org.eclipselabs.emf.scaffolding.tests.soa.impl.SoaPackageImpl#getParameter()
+	 * @generated
+	 */
+	int PARAMETER = 11;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER__NAME = HAS_NAME__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER__TYPE = HAS_NAME_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Parameter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAMETER_FEATURE_COUNT = HAS_NAME_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.tests.soa.impl.PrimitiveImpl <em>Primitive</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipselabs.emf.scaffolding.tests.soa.impl.PrimitiveImpl
+	 * @see org.eclipselabs.emf.scaffolding.tests.soa.impl.SoaPackageImpl#getPrimitive()
+	 * @generated
+	 */
+	int PRIMITIVE = 13;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIMITIVE__NAME = TYPE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Namespace</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIMITIVE__NAMESPACE = TYPE__NAMESPACE;
+
+	/**
+	 * The number of structural features of the '<em>Primitive</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIMITIVE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 0;
+
+
+	/**
+	 * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.tests.soa.impl.AttributeImpl <em>Attribute</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipselabs.emf.scaffolding.tests.soa.impl.AttributeImpl
+	 * @see org.eclipselabs.emf.scaffolding.tests.soa.impl.SoaPackageImpl#getAttribute()
+	 * @generated
+	 */
+	int ATTRIBUTE = 14;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__NAME = HAS_NAME__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE__TYPE = HAS_NAME_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Attribute</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATTRIBUTE_FEATURE_COUNT = HAS_NAME_FEATURE_COUNT + 1;
+
+
+	/**
+	 * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.tests.soa.impl.SOAModelImpl <em>SOA Model</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipselabs.emf.scaffolding.tests.soa.impl.SOAModelImpl
+	 * @see org.eclipselabs.emf.scaffolding.tests.soa.impl.SoaPackageImpl#getSOAModel()
+	 * @generated
+	 */
+	int SOA_MODEL = 15;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOA_MODEL__NAME = NAMESPACE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Namespace</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOA_MODEL__NAMESPACE = NAMESPACE__NAMESPACE;
+
+	/**
+	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOA_MODEL__ELEMENTS = NAMESPACE__ELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Default Identifier Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOA_MODEL__DEFAULT_IDENTIFIER_TYPE = NAMESPACE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>SOA Model</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOA_MODEL_FEATURE_COUNT = NAMESPACE_FEATURE_COUNT + 1;
+
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.tests.soa.Entity <em>Entity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -566,6 +799,17 @@ public interface SoaPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getEntity();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipselabs.emf.scaffolding.tests.soa.Entity#getAttributes <em>Attributes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Attributes</em>'.
+	 * @see org.eclipselabs.emf.scaffolding.tests.soa.Entity#getAttributes()
+	 * @see #getEntity()
+	 * @generated
+	 */
+	EReference getEntity_Attributes();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.tests.soa.DAO <em>DAO</em>}'.
@@ -597,6 +841,28 @@ public interface SoaPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getMethod();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.eclipselabs.emf.scaffolding.tests.soa.Method#getParameters <em>Parameters</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Parameters</em>'.
+	 * @see org.eclipselabs.emf.scaffolding.tests.soa.Method#getParameters()
+	 * @see #getMethod()
+	 * @generated
+	 */
+	EReference getMethod_Parameters();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipselabs.emf.scaffolding.tests.soa.Method#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Type</em>'.
+	 * @see org.eclipselabs.emf.scaffolding.tests.soa.Method#getType()
+	 * @see #getMethod()
+	 * @generated
+	 */
+	EReference getMethod_Type();
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.tests.soa.Package <em>Package</em>}'.
@@ -778,6 +1044,89 @@ public interface SoaPackage extends EPackage {
 	EReference getLink_Output();
 
 	/**
+	 * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.tests.soa.Parameter <em>Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Parameter</em>'.
+	 * @see org.eclipselabs.emf.scaffolding.tests.soa.Parameter
+	 * @generated
+	 */
+	EClass getParameter();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipselabs.emf.scaffolding.tests.soa.Parameter#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Type</em>'.
+	 * @see org.eclipselabs.emf.scaffolding.tests.soa.Parameter#getType()
+	 * @see #getParameter()
+	 * @generated
+	 */
+	EReference getParameter_Type();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.tests.soa.Type <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Type</em>'.
+	 * @see org.eclipselabs.emf.scaffolding.tests.soa.Type
+	 * @generated
+	 */
+	EClass getType();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.tests.soa.Primitive <em>Primitive</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Primitive</em>'.
+	 * @see org.eclipselabs.emf.scaffolding.tests.soa.Primitive
+	 * @generated
+	 */
+	EClass getPrimitive();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.tests.soa.Attribute <em>Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Attribute</em>'.
+	 * @see org.eclipselabs.emf.scaffolding.tests.soa.Attribute
+	 * @generated
+	 */
+	EClass getAttribute();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipselabs.emf.scaffolding.tests.soa.Attribute#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Type</em>'.
+	 * @see org.eclipselabs.emf.scaffolding.tests.soa.Attribute#getType()
+	 * @see #getAttribute()
+	 * @generated
+	 */
+	EReference getAttribute_Type();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.tests.soa.SOAModel <em>SOA Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>SOA Model</em>'.
+	 * @see org.eclipselabs.emf.scaffolding.tests.soa.SOAModel
+	 * @generated
+	 */
+	EClass getSOAModel();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipselabs.emf.scaffolding.tests.soa.SOAModel#getDefaultIdentifierType <em>Default Identifier Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Default Identifier Type</em>'.
+	 * @see org.eclipselabs.emf.scaffolding.tests.soa.SOAModel#getDefaultIdentifierType()
+	 * @see #getSOAModel()
+	 * @generated
+	 */
+	EReference getSOAModel_DefaultIdentifierType();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -810,6 +1159,14 @@ public interface SoaPackage extends EPackage {
 		EClass ENTITY = eINSTANCE.getEntity();
 
 		/**
+		 * The meta object literal for the '<em><b>Attributes</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ENTITY__ATTRIBUTES = eINSTANCE.getEntity_Attributes();
+
+		/**
 		 * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.tests.soa.impl.DAOImpl <em>DAO</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -836,6 +1193,22 @@ public interface SoaPackage extends EPackage {
 		 * @generated
 		 */
 		EClass METHOD = eINSTANCE.getMethod();
+
+		/**
+		 * The meta object literal for the '<em><b>Parameters</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference METHOD__PARAMETERS = eINSTANCE.getMethod_Parameters();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference METHOD__TYPE = eINSTANCE.getMethod_Type();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.tests.soa.impl.PackageImpl <em>Package</em>}' class.
@@ -988,6 +1361,80 @@ public interface SoaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LINK__OUTPUT = eINSTANCE.getLink_Output();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.tests.soa.impl.ParameterImpl <em>Parameter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipselabs.emf.scaffolding.tests.soa.impl.ParameterImpl
+		 * @see org.eclipselabs.emf.scaffolding.tests.soa.impl.SoaPackageImpl#getParameter()
+		 * @generated
+		 */
+		EClass PARAMETER = eINSTANCE.getParameter();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PARAMETER__TYPE = eINSTANCE.getParameter_Type();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.tests.soa.impl.TypeImpl <em>Type</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipselabs.emf.scaffolding.tests.soa.impl.TypeImpl
+		 * @see org.eclipselabs.emf.scaffolding.tests.soa.impl.SoaPackageImpl#getType()
+		 * @generated
+		 */
+		EClass TYPE = eINSTANCE.getType();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.tests.soa.impl.PrimitiveImpl <em>Primitive</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipselabs.emf.scaffolding.tests.soa.impl.PrimitiveImpl
+		 * @see org.eclipselabs.emf.scaffolding.tests.soa.impl.SoaPackageImpl#getPrimitive()
+		 * @generated
+		 */
+		EClass PRIMITIVE = eINSTANCE.getPrimitive();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.tests.soa.impl.AttributeImpl <em>Attribute</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipselabs.emf.scaffolding.tests.soa.impl.AttributeImpl
+		 * @see org.eclipselabs.emf.scaffolding.tests.soa.impl.SoaPackageImpl#getAttribute()
+		 * @generated
+		 */
+		EClass ATTRIBUTE = eINSTANCE.getAttribute();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ATTRIBUTE__TYPE = eINSTANCE.getAttribute_Type();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.tests.soa.impl.SOAModelImpl <em>SOA Model</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipselabs.emf.scaffolding.tests.soa.impl.SOAModelImpl
+		 * @see org.eclipselabs.emf.scaffolding.tests.soa.impl.SoaPackageImpl#getSOAModel()
+		 * @generated
+		 */
+		EClass SOA_MODEL = eINSTANCE.getSOAModel();
+
+		/**
+		 * The meta object literal for the '<em><b>Default Identifier Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SOA_MODEL__DEFAULT_IDENTIFIER_TYPE = eINSTANCE.getSOAModel_DefaultIdentifierType();
 
 	}
 

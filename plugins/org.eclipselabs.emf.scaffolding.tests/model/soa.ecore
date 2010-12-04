@@ -3,11 +3,18 @@
     xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="soa"
     nsURI="http://www.eclipselabs.org/emf/scaffolding/tests/soa" nsPrefix="soa">
-  <eClassifiers xsi:type="ecore:EClass" name="Entity" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Entity" eSuperTypes="#//Type">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1"
+        eType="#//Attribute" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DAO" eSuperTypes="#//Component">
     <eStructuralFeatures xsi:type="ecore:EReference" name="entity" eType="#//Entity"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Method" eSuperTypes="#//HasName"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Method" eSuperTypes="#//HasName">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameters" upperBound="-1"
+        eType="#//Parameter" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//Type"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Package" eSuperTypes="#//Namespace"/>
   <eClassifiers xsi:type="ecore:EClass" name="Element" abstract="true" eSuperTypes="#//HasName">
     <eStructuralFeatures xsi:type="ecore:EReference" name="namespace" lowerBound="1"
@@ -36,5 +43,17 @@
   <eClassifiers xsi:type="ecore:EClass" name="Link" eSuperTypes="#//Element">
     <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//Slot"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="output" eType="#//Slot"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameter" eSuperTypes="#//HasName">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//Type"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Type" abstract="true" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Primitive" eSuperTypes="#//Type"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Attribute" eSuperTypes="#//HasName">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//Type"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SOAModel" eSuperTypes="#//Namespace">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="defaultIdentifierType"
+        eType="#//Type"/>
   </eClassifiers>
 </ecore:EPackage>

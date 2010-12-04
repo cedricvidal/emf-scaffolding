@@ -11,11 +11,15 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.eclipselabs.emf.scaffolding.tests.soa.Attribute;
 import org.eclipselabs.emf.scaffolding.tests.soa.Component;
 import org.eclipselabs.emf.scaffolding.tests.soa.DAO;
 import org.eclipselabs.emf.scaffolding.tests.soa.Entity;
 import org.eclipselabs.emf.scaffolding.tests.soa.Link;
 import org.eclipselabs.emf.scaffolding.tests.soa.Method;
+import org.eclipselabs.emf.scaffolding.tests.soa.Parameter;
+import org.eclipselabs.emf.scaffolding.tests.soa.Primitive;
+import org.eclipselabs.emf.scaffolding.tests.soa.SOAModel;
 import org.eclipselabs.emf.scaffolding.tests.soa.Service;
 import org.eclipselabs.emf.scaffolding.tests.soa.Slot;
 import org.eclipselabs.emf.scaffolding.tests.soa.SoaFactory;
@@ -73,6 +77,10 @@ public class SoaFactoryImpl extends EFactoryImpl implements SoaFactory {
 			case SoaPackage.COMPONENT: return createComponent();
 			case SoaPackage.SLOT: return createSlot();
 			case SoaPackage.LINK: return createLink();
+			case SoaPackage.PARAMETER: return createParameter();
+			case SoaPackage.PRIMITIVE: return createPrimitive();
+			case SoaPackage.ATTRIBUTE: return createAttribute();
+			case SoaPackage.SOA_MODEL: return createSOAModel();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -156,6 +164,46 @@ public class SoaFactoryImpl extends EFactoryImpl implements SoaFactory {
 	public Link createLink() {
 		LinkImpl link = new LinkImpl();
 		return link;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Parameter createParameter() {
+		ParameterImpl parameter = new ParameterImpl();
+		return parameter;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Primitive createPrimitive() {
+		PrimitiveImpl primitive = new PrimitiveImpl();
+		return primitive;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Attribute createAttribute() {
+		AttributeImpl attribute = new AttributeImpl();
+		return attribute;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SOAModel createSOAModel() {
+		SOAModelImpl soaModel = new SOAModelImpl();
+		return soaModel;
 	}
 
 	/**

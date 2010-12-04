@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipselabs.emf.scaffolding.tests.soa.Attribute;
 import org.eclipselabs.emf.scaffolding.tests.soa.Component;
 import org.eclipselabs.emf.scaffolding.tests.soa.DAO;
 import org.eclipselabs.emf.scaffolding.tests.soa.Element;
@@ -18,9 +19,13 @@ import org.eclipselabs.emf.scaffolding.tests.soa.HasName;
 import org.eclipselabs.emf.scaffolding.tests.soa.Link;
 import org.eclipselabs.emf.scaffolding.tests.soa.Method;
 import org.eclipselabs.emf.scaffolding.tests.soa.Namespace;
+import org.eclipselabs.emf.scaffolding.tests.soa.Parameter;
+import org.eclipselabs.emf.scaffolding.tests.soa.Primitive;
+import org.eclipselabs.emf.scaffolding.tests.soa.SOAModel;
 import org.eclipselabs.emf.scaffolding.tests.soa.Service;
 import org.eclipselabs.emf.scaffolding.tests.soa.Slot;
 import org.eclipselabs.emf.scaffolding.tests.soa.SoaPackage;
+import org.eclipselabs.emf.scaffolding.tests.soa.Type;
 
 /**
  * <!-- begin-user-doc -->
@@ -121,6 +126,26 @@ public class SoaAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseLink(Link object) {
 				return createLinkAdapter();
+			}
+			@Override
+			public Adapter caseParameter(Parameter object) {
+				return createParameterAdapter();
+			}
+			@Override
+			public Adapter caseType(Type object) {
+				return createTypeAdapter();
+			}
+			@Override
+			public Adapter casePrimitive(Primitive object) {
+				return createPrimitiveAdapter();
+			}
+			@Override
+			public Adapter caseAttribute(Attribute object) {
+				return createAttributeAdapter();
+			}
+			@Override
+			public Adapter caseSOAModel(SOAModel object) {
+				return createSOAModelAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -293,6 +318,76 @@ public class SoaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createLinkAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipselabs.emf.scaffolding.tests.soa.Parameter <em>Parameter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipselabs.emf.scaffolding.tests.soa.Parameter
+	 * @generated
+	 */
+	public Adapter createParameterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipselabs.emf.scaffolding.tests.soa.Type <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipselabs.emf.scaffolding.tests.soa.Type
+	 * @generated
+	 */
+	public Adapter createTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipselabs.emf.scaffolding.tests.soa.Primitive <em>Primitive</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipselabs.emf.scaffolding.tests.soa.Primitive
+	 * @generated
+	 */
+	public Adapter createPrimitiveAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipselabs.emf.scaffolding.tests.soa.Attribute <em>Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipselabs.emf.scaffolding.tests.soa.Attribute
+	 * @generated
+	 */
+	public Adapter createAttributeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipselabs.emf.scaffolding.tests.soa.SOAModel <em>SOA Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipselabs.emf.scaffolding.tests.soa.SOAModel
+	 * @generated
+	 */
+	public Adapter createSOAModelAdapter() {
 		return null;
 	}
 
