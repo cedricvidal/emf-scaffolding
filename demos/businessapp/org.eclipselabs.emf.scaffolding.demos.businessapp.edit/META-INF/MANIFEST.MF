@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipselabs.emf.scaffolding.demos.businessapp.edit;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-ClassPath: .
+Bundle-Activator: org.eclipselabs.emf.scaffolding.demos.businessapp.business.provider.BusinessAppEditPlugin$Implementation
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: org.eclipselabs.emf.scaffolding.demos.businessapp.business.provider
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipselabs.emf.scaffolding.demos.businessapp.model;visibility:=reexport,
+ org.eclipse.emf.edit;visibility:=reexport
+Bundle-ActivationPolicy: lazy

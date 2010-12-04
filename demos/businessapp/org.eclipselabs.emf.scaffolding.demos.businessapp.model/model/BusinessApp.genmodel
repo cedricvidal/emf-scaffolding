@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipselabs.emf.scaffolding.demos.businessapp.model/src"
+    editDirectory="/org.eclipselabs.emf.scaffolding.demos.businessapp.edit/src" editorDirectory="/org.eclipselabs.emf.scaffolding.demos.businessapp.editor/src"
+    modelPluginID="org.eclipselabs.emf.scaffolding.demos.businessapp.model" modelName="BusinessApp"
+    testsDirectory="/org.eclipselabs.emf.scaffolding.demos.businessapp.tests/src"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    editPluginID="org.eclipselabs.emf.scaffolding.demos.businessapp.edit" editorPluginID="org.eclipselabs.emf.scaffolding.demos.businessapp.editor"
+    testsPluginID="org.eclipselabs.emf.scaffolding.demos.businessapp.tests">
+  <foreignModel>BusinessApp.ecore</foreignModel>
+  <genPackages prefix="Business" basePackage="org.eclipselabs.emf.scaffolding.demos.businessapp"
+      disposableProviderFactory="true" ecorePackage="BusinessApp.ecore#/">
+    <genClasses ecoreClass="BusinessApp.ecore#//DAO">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BusinessApp.ecore#//DAO/entity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BusinessApp.ecore#//DAO/method"/>
+    </genClasses>
+    <genClasses ecoreClass="BusinessApp.ecore#//Entity">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BusinessApp.ecore#//Entity/attribute"/>
+    </genClasses>
+    <genClasses ecoreClass="BusinessApp.ecore#//Attribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BusinessApp.ecore#//Attribute/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BusinessApp.ecore#//Attribute/type"/>
+    </genClasses>
+    <genClasses ecoreClass="BusinessApp.ecore#//Application">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BusinessApp.ecore#//Application/element"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BusinessApp.ecore#//Application/defaultIdentifierType"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="BusinessApp.ecore#//Element">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference BusinessApp.ecore#//Element/application"/>
+    </genClasses>
+    <genClasses ecoreClass="BusinessApp.ecore#//PrimitiveType"/>
+    <genClasses ecoreClass="BusinessApp.ecore#//Method">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BusinessApp.ecore#//Method/returnType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BusinessApp.ecore#//Method/parameter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BusinessApp.ecore#//Method/name"/>
+    </genClasses>
+    <genClasses ecoreClass="BusinessApp.ecore#//Type">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BusinessApp.ecore#//Type/name"/>
+    </genClasses>
+    <genClasses ecoreClass="BusinessApp.ecore#//Service">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BusinessApp.ecore#//Service/dependency"/>
+    </genClasses>
+    <genClasses ecoreClass="BusinessApp.ecore#//Component">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BusinessApp.ecore#//Component/name"/>
+    </genClasses>
+    <genClasses ecoreClass="BusinessApp.ecore#//Parameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BusinessApp.ecore#//Parameter/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference BusinessApp.ecore#//Parameter/type"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

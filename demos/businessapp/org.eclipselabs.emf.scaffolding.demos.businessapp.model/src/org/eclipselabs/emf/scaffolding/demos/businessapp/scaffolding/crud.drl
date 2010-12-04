@@ -1,0 +1,135 @@
+package org.eclipselabs.emf.scaffolding.demos.businessapp.business
+
+import org.eclipselabs.emf.scaffolding.demos.businessapp.business.Application
+import org.eclipselabs.emf.scaffolding.demos.businessapp.business.Entity
+import org.eclipselabs.emf.scaffolding.demos.businessapp.business.DAO
+import org.eclipselabs.emf.scaffolding.demos.businessapp.business.Method
+import org.eclipselabs.emf.scaffolding.demos.businessapp.business.BusinessFactory
+import org.eclipselabs.emf.scaffolding.demos.businessapp.business.Attribute
+import org.eclipselabs.emf.scaffolding.demos.businessapp.business.Parameter
+
+import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatusAdapterFactory
+import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatus
+
+import function org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatusAdapterFactory.isScaffolded
+
+/*
+ * If there is an Entity which has no manually inserted DAO then scaffold a DAO.
+ * Remains true after the scaffolded DAO has been inserted <- this is a must for truth maintenance
+ */
+rule "Entity2Dao"
+	no-loop
+	when
+		$entity : Entity( name : name != null )
+		not dao : DAO ( entity == $entity )
+	then
+		System.out.println( "Scaffolding DAO for entity " + name ); 
+
+		// Transform Entity to DAO
+		DAO dao = BusinessFactory.eINSTANCE.createDAO();
+		dao.setName(name + "Dao");
+        dao.setEntity($entity);
+        dao.setApplication($entity.getApplication());
+        
+//        insertLogical(dao);
+end
+
+rule "EntityPk"
+	no-loop
+	when
+		$app : Application ( defaultIdentifierType : defaultIdentifierType != null )
+		$entity : Entity( name : name )
+		not (
+//			and
+			attr : Attribute(name=="id") from $entity.attribute
+//			eval ( !isScaffolded(attr) )
+			)
+	then
+		System.out.println( "Scaffolding PK for entity " + name );
+
+		Attribute pk = BusinessFactory.eINSTANCE.createAttribute();
+		pk.setName("id");
+		pk.setType(defaultIdentifierType);
+		$entity.getAttribute().add(pk);
+
+//		insertLogical(pk);
+end
+
+rule "DaoFindById"
+	when
+		$dao		: DAO( name : name, entity : entity != null )
+		not (
+			Method(name=="findById") from $dao.method
+			)
+		$key : Attribute ( name == "id" ) from entity.attribute
+	then
+		System.out.println( "Scaffolding findBydId for DAO " + name ); 
+
+		Method findById = BusinessFactory.eINSTANCE.createMethod();
+		findById.setReturnType($dao.getEntity());
+		findById.setName("findById");
+
+		Parameter id = BusinessFactory.eINSTANCE.createParameter();
+		id.setName("id");
+		id.setType($key.getType());
+		findById.getParameter().add(id);
+
+		$dao.getMethod().add(findById);
+end
+
+rule "DaoDelete"
+	when
+		$dao		: DAO( name : name )
+		not (
+			Method(name=="delete") from $dao.method
+			)
+	then
+		System.out.println( "Scaffolding delete for DAO " + name ); 
+
+		Method delete = BusinessFactory.eINSTANCE.createMethod();
+		delete.setName("delete");
+
+		Parameter entity = BusinessFactory.eINSTANCE.createParameter();
+		entity.setName("entity");
+		entity.setType($dao.getEntity());
+		delete.getParameter().add(entity);
+
+		$dao.getMethod().add(delete);
+end
+
+rule "DaoCreate"
+	when
+		$dao		: DAO( name : name )
+		not (
+			Method(name=="create") from $dao.method
+			)
+	then
+		System.out.println( "Scaffolding create for DAO " + name ); 
+
+		Method method = BusinessFactory.eINSTANCE.createMethod();
+		method.setName("create");
+		method.setReturnType($dao.getEntity());
+
+		$dao.getMethod().add(method);
+end
+
+rule "DaoUpdate"
+	when
+		$dao		: DAO( name : name )
+		not (
+			Method(name=="update") from $dao.method
+			)
+	then
+		System.out.println( "Scaffolding update for DAO " + name ); 
+
+		Method method = BusinessFactory.eINSTANCE.createMethod();
+		method.setName("update");
+		method.setReturnType($dao.getEntity());
+
+		Parameter entity = BusinessFactory.eINSTANCE.createParameter();
+		entity.setName("entity");
+		entity.setType($dao.getEntity());
+		method.getParameter().add(entity);
+
+		$dao.getMethod().add(method);
+end
