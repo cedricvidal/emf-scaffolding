@@ -11,6 +11,7 @@
  *******************************************************************************/
 package org.eclipselabs.emf.scaffolding.language.ui.labeling;
 
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.xtext.ui.label.DefaultEObjectLabelProvider;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FeatureRef;
@@ -43,6 +44,14 @@ public class EMFScaffoldingDSLLabelProvider extends DefaultEObjectLabelProvider 
 
 	Object image(FeatureRef e) {
 		return getImage(e.getFeature());
+	}
+
+	String text(FeatureRef e) {
+		return getText(e);
+	}
+
+	String text(EStructuralFeature e) {
+		return e.getName() + " : " + getText(e.getEType());
 	}
 
 }

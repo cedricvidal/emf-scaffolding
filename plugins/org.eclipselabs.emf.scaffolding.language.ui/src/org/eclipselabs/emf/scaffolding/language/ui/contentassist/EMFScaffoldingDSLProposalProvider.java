@@ -17,6 +17,7 @@ import static org.eclipselabs.emf.scaffolding.language.util.ESLPredicates.isInst
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.xtext.Keyword;
 import org.eclipse.xtext.ui.editor.contentassist.ContentAssistContext;
 import org.eclipse.xtext.ui.editor.contentassist.ICompletionProposalAcceptor;
@@ -50,6 +51,11 @@ public class EMFScaffoldingDSLProposalProvider extends AbstractEMFScaffoldingDSL
 			EPackage pkg = (EPackage) element;
 			return pkg.getName() + " - " + pkg.getNsURI();
 		}
+		if (element instanceof EStructuralFeature) {
+			EStructuralFeature feat = (EStructuralFeature) element;
+			return feat.getName() + " : " + getLabelProvider().getText(feat.getEType());
+		}
 		return super.getDisplayString(element, qualifiedName, shortName);
 	}
+
 }
