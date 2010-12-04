@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.FeatureRef;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Match;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Selector;
+import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.SelectorSegment;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.SymbolRef;
 import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.Variable;
 
@@ -28,6 +29,10 @@ public class ESLTypeResolver extends DeclarativeTypeResolver {
 
 	EClass type(Selector e) {
 		return getType(e.getSymbol());
+	}
+
+	EClass type(SelectorSegment e) {
+		return getType(e.getAttributeRef());
 	}
 
 	EClass type(SymbolRef e) {
