@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipselabs.emf.scaffolding.session/src"
+    modelPluginID="org.eclipselabs.emf.scaffolding.session" modelName="ScaffoldingSession"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>ScaffoldingSession.ecore</foreignModel>
+  <genPackages prefix="EMFScaffoldingSession" basePackage="org.eclipselabs.emf.scaffolding.session"
+      disposableProviderFactory="true" fileExtensions="ess" ecorePackage="ScaffoldingSession.ecore#/">
+    <genClasses ecoreClass="ScaffoldingSession.ecore#//ScaffoldingSession">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ScaffoldingSession.ecore#//ScaffoldingSession/files"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ScaffoldingSession.ecore#//ScaffoldingSession/inputs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ScaffoldingSession.ecore#//ScaffoldingSession/trash"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ScaffoldingSession.ecore#//ScaffoldingSession/outputs"/>
+    </genClasses>
+    <genClasses ecoreClass="ScaffoldingSession.ecore#//ScaffoldingFile">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ScaffoldingSession.ecore#//ScaffoldingFile/path"/>
+    </genClasses>
+    <genClasses ecoreClass="ScaffoldingSession.ecore#//Input">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ScaffoldingSession.ecore#//Input/model"/>
+    </genClasses>
+    <genClasses ecoreClass="ScaffoldingSession.ecore#//Trash">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ScaffoldingSession.ecore#//Trash/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="ScaffoldingSession.ecore#//Output">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ScaffoldingSession.ecore#//Output/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

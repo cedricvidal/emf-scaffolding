@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipselabs.emf.scaffolding.session.edit;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-ClassPath: .
+Bundle-Activator: org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.provider.ScaffoldingSessionEditPlugin$Implementation
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.provider
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipselabs.emf.scaffolding.session;visibility:=reexport,
+ org.eclipse.emf.edit;visibility:=reexport,
+ org.eclipse.core.resources;bundle-version="3.6.0",
+ org.eclipse.swt;bundle-version="3.6.1"
+Bundle-ActivationPolicy: lazy

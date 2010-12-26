@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipselabs.emf.scaffolding.session;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession,
+ org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.impl,
+ org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.util
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipselabs.emf.scaffolding.runtime;bundle-version="1.0.0"
+Bundle-ActivationPolicy: lazy
+Eclipse-RegisterBuddy: org.eclipselabs.emf.scaffolding.runtime
