@@ -7,6 +7,7 @@
  * 
  * Contributors:
  *     Cedric Vidal - initial API and implementation
+ *
  *******************************************************************************/
 package org.eclipselabs.emf.scaffolding.language.converter;
 

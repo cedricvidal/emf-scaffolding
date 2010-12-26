@@ -6,7 +6,7 @@
  * http://www.eclipse.org/legal/epl-v10.html
  * 
  * Contributors:
- *     Cedric Vidal  - initial API and implementation
+ *     Cedric Vidal - initial API and implementation
  *     Jerome Benois - Rewrite compiler and runtime based on new Drools Knowledge API
  *******************************************************************************/
 package org.eclipselabs.emf.scaffolding.runtime.internal.compiler;
