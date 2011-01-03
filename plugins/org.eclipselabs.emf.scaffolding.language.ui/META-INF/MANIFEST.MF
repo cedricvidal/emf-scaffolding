@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: EMF Scaffolding Language UI
-Bundle-Version: 1.0.0
+Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: org.eclipselabs.emf.scaffolding.language.ui; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipselabs.emf.scaffolding.language;visibility:=reexport,
