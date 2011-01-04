@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.eclipselabs.emf.scaffolding.feature_1.0.0.qualifier.jar" id="org.eclipselabs.emf.scaffolding.feature" version="1.0.0.qualifier">
+      <category name="EMF_Scaffolding"/>
+   </feature>
+   <category-def name="EMF_Scaffolding" label="EMF Scaffolding"/>
+</site>
