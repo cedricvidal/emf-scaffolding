@@ -42,6 +42,8 @@ import org.eclipse.emf.common.command.CommandStack;
 import org.eclipse.emf.common.command.CommandStackListener;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.common.ui.MarkerHelper;
 import org.eclipse.emf.common.ui.ViewerPane;
 import org.eclipse.emf.common.ui.editor.ProblemEditorPart;
@@ -61,8 +63,15 @@ import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.emf.edit.domain.IEditingDomainProvider;
 import org.eclipse.emf.edit.provider.AdapterFactoryItemDelegator;
+import org.eclipse.emf.edit.provider.ChangeNotifier;
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.ComposedAdapterFactory;
+import org.eclipse.emf.edit.provider.IChangeNotifier;
+import org.eclipse.emf.edit.provider.IDisposable;
+import org.eclipse.emf.edit.provider.INotifyChangedListener;
+import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ReflectiveItemProviderAdapterFactory;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.eclipse.emf.edit.provider.resource.ResourceItemProviderAdapterFactory;
 import org.eclipse.emf.edit.ui.action.EditingDomainActionBarContributor;
 import org.eclipse.emf.edit.ui.celleditor.AdapterFactoryTreeEditor;
@@ -130,7 +139,9 @@ import org.eclipse.ui.views.contentoutline.IContentOutlinePage;
 import org.eclipse.ui.views.properties.IPropertySheetPage;
 import org.eclipse.ui.views.properties.PropertySheet;
 import org.eclipse.ui.views.properties.PropertySheetPage;
+import org.eclipselabs.emf.scaffolding.runtime.status.NotifierAdapterFactory;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatusAdapterFactory;
+import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatusChangedNotification;
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.provider.EMFScaffoldingSessionItemProviderAdapterFactory;
 import org.eclipselabs.emf.scaffolding.session.util.ScaffoldingStatusDecoratorAdapterFactory;
 import org.eclipselabs.emf.scaffolding.session.util.ScaffoldingStatusPruneCopier;
@@ -503,6 +514,8 @@ public class EMFScaffoldingSessionEditor
 			}
 		};
 
+	private ScaffoldingStatusAdapterFactory scaffoldingStatusAdapterFactory;
+
 	/**
 	 * Handles activation of the editor or it's associated views.
 	 * <!-- begin-user-doc -->
@@ -683,6 +696,20 @@ public class EMFScaffoldingSessionEditor
 				return getSite().getShell().getDisplay();
 			}
 		};
+
+		scaffoldingStatusAdapterFactory = new ScaffoldingStatusAdapterFactory();
+
+		// Route ScaffoldingStatusChangedNotification from ScaffoldingStatusAdapterFactory to ScaffoldingStatusDecoratorAdapterFactory
+		scaffoldingStatusAdapterFactory.eAdapters().add(new ItemProviderAdapter(this.adapterFactory) {
+			@Override
+			public void notifyChanged(Notification notification) {
+				if (notification instanceof ScaffoldingStatusChangedNotification) {
+					ScaffoldingStatusChangedNotification not = (ScaffoldingStatusChangedNotification) notification;
+					fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				}
+				super.notifyChanged(notification);
+			}
+		});
 
 		// End of EMF Scaffolding integration
 
@@ -943,7 +970,6 @@ public class EMFScaffoldingSessionEditor
 		// XXX EMF Scaffolding Integration : Model
 		EObject rootContent = resource.getContents().get(0);
 
-		ScaffoldingStatusAdapterFactory scaffoldingStatusAdapterFactory = new ScaffoldingStatusAdapterFactory();
 		scaffoldingStatusAdapterFactory.adaptAllNew(rootContent);
 
 		EMFScaffoldingSessionListener scaffoldingSessionListener = new EMFScaffoldingSessionListener(scaffoldingStatusAdapterFactory);
