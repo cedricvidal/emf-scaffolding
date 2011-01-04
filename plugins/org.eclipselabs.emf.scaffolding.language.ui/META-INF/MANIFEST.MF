@@ -17,3 +17,4 @@ Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: org.eclipselabs.emf.scaffolding.language.ui.contentassist.antlr
 Bundle-Activator: org.eclipselabs.emf.scaffolding.language.ui.internal.EMFScaffoldingDSLActivator
+Bundle-Vendor: http://code.google.com/a/eclipselabs.org/p/emf-scaffolding/

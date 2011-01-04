@@ -29,4 +29,5 @@ Export-Package: org.eclipselabs.emf.scaffolding.language,
  org.eclipselabs.emf.scaffolding.language.services,
  org.eclipselabs.emf.scaffolding.language.util,
  org.eclipselabs.emf.scaffolding.language.validation
+Bundle-Vendor: http://code.google.com/a/eclipselabs.org/p/emf-scaffolding/
 

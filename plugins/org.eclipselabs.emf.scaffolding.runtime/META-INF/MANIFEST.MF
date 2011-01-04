@@ -174,3 +174,4 @@ Export-Package: org.drools,
  org.mvel2.templates.util,
  org.mvel2.templates.util.io,
  org.mvel2.util
+Bundle-Vendor: http://code.google.com/a/eclipselabs.org/p/emf-scaffolding/
