@@ -21,7 +21,7 @@ import org.eclipselabs.emf.scaffolding.runtime.internal.engine.FactPublisher;
 
 public class ScaffoldingExecutionEnvironment {
 
-	public static final ResourceType ESL = ResourceType.addResourceTypeToRegistry("ESL", "EMF Scaffolding DSL");
+	public static final ResourceType ESL = ResourceType.addResourceTypeToRegistry("ESL", "EMF Scaffolding DSL", "esl");
 	
 	FactPublisher factPublisher;
 
