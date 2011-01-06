@@ -18,7 +18,6 @@ import java.util.Properties;
 import org.drools.KnowledgeBase;
 import org.drools.KnowledgeBaseConfiguration;
 import org.drools.KnowledgeBaseFactory;
-import org.drools.RuleBase;
 import org.drools.builder.KnowledgeBuilder;
 import org.drools.builder.KnowledgeBuilderConfiguration;
 import org.drools.builder.KnowledgeBuilderError;
@@ -35,6 +34,7 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipselabs.emf.scaffolding.runtime.ScaffoldingExecutionEnvironment;
@@ -58,8 +58,7 @@ public class EMFScaffoldingSessionListener extends EContentAdapter {
 
 	private ScaffoldingExecutionEnvironment execEnv = null;
 	private StatefulKnowledgeSession knowledgeSession = null;
-	private ClassLoader classLoader = RuleBase.class.getClassLoader();
-//	private ClassLoader classLoader = new EmfRegistryClassLoader(RuleBase.class.getClassLoader(), EPackage.Registry.INSTANCE);
+	private ClassLoader classLoader = EcorePackage.class.getClassLoader();
 
 	@Override
 	public void notifyChanged(Notification notification) {
@@ -184,7 +183,7 @@ public class EMFScaffoldingSessionListener extends EContentAdapter {
 		Collection<KnowledgePackage> pkgs = kbuilder.getKnowledgePackages();
 		KnowledgeBuilderErrors errors = kbuilder.getErrors();
 		for (KnowledgeBuilderError error : errors) {
-			System.err.println(error.getMessage());
+			System.err.println("KnowledgeBuilder error : " + error.getMessage());
 		}
 
 		kbase.addKnowledgePackages(pkgs);
