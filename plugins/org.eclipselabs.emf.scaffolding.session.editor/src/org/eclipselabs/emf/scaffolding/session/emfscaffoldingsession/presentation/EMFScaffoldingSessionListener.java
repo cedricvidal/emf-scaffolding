@@ -37,6 +37,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.ui.console.MessageConsoleStream;
 import org.eclipselabs.emf.scaffolding.runtime.ScaffoldingExecutionEnvironment;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingContext;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatusAdapterFactory;
@@ -44,6 +45,7 @@ import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.EMFScaffold
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.Input;
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.ScaffoldingFile;
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.ScaffoldingSession;
+import org.eclipselabs.emf.scaffolding.session.util.ScaffoldingConsoleDroolsEventListenerManager;
 
 public class EMFScaffoldingSessionListener extends EContentAdapter {
 
@@ -160,8 +162,16 @@ public class EMFScaffoldingSessionListener extends EContentAdapter {
 		KnowledgeBase kbase = buildKnowledgeBase(classLoader);
 
 		final StatefulKnowledgeSession statefulKnowledgeSession = kbase.newStatefulKnowledgeSession();
-		statefulKnowledgeSession.addEventListener(new DebugWorkingMemoryEventListener());
+		configureLogging(statefulKnowledgeSession);
+
 		return statefulKnowledgeSession;
+	}
+
+	protected void configureLogging(
+			final StatefulKnowledgeSession statefulKnowledgeSession) {
+		MessageConsoleStream output = ScaffoldingSessionEditorPlugin.INSTANCE.getConsole().newMessageStream();
+		ScaffoldingConsoleDroolsEventListenerManager manager = new ScaffoldingConsoleDroolsEventListenerManager(output);
+		manager.configureListeners(statefulKnowledgeSession);
 	}
 
 	private KnowledgeBase buildKnowledgeBase(ClassLoader classLoader) throws CoreException {
@@ -176,7 +186,7 @@ public class EMFScaffoldingSessionListener extends EContentAdapter {
 		KnowledgeBuilderConfiguration knowledgeBuilderConfig = KnowledgeBuilderFactory.newKnowledgeBuilderConfiguration(new Properties(), classLoader);
 		KnowledgeBuilder kbuilder = KnowledgeBuilderFactory
 				.newKnowledgeBuilder(knowledgeBuilderConfig);
-
+		
 		InputStreamResource res = new InputStreamResource(contents);
 		kbuilder.add(res, ResourceType.DRL);
 

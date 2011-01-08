@@ -12,10 +12,13 @@
 package org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.presentation;
 
 import org.eclipse.emf.common.EMFPlugin;
-
 import org.eclipse.emf.common.ui.EclipseUIPlugin;
-
 import org.eclipse.emf.common.util.ResourceLocator;
+import org.eclipse.ui.console.ConsolePlugin;
+import org.eclipse.ui.console.IConsole;
+import org.eclipse.ui.console.IConsoleManager;
+import org.eclipse.ui.console.MessageConsole;
+import org.osgi.framework.BundleContext;
 
 /**
  * This is the central singleton for the ScaffoldingSession editor plugin.
@@ -24,6 +27,9 @@ import org.eclipse.emf.common.util.ResourceLocator;
  * @generated
  */
 public final class ScaffoldingSessionEditorPlugin extends EMFPlugin {
+
+	private static final String CONSOLE_NAME = "org.eclipselabs.emf.scaffolding";
+
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
@@ -39,6 +45,8 @@ public final class ScaffoldingSessionEditorPlugin extends EMFPlugin {
 	 * @generated
 	 */
 	private static Implementation plugin;
+
+	private MessageConsole console;
 
 	/**
 	 * Create the instance.
@@ -82,6 +90,7 @@ public final class ScaffoldingSessionEditorPlugin extends EMFPlugin {
 	 * @generated
 	 */
 	public static class Implementation extends EclipseUIPlugin {
+
 		/**
 		 * Creates an instance.
 		 * <!-- begin-user-doc -->
@@ -95,6 +104,35 @@ public final class ScaffoldingSessionEditorPlugin extends EMFPlugin {
 			//
 			plugin = this;
 		}
+		
+		@Override
+		public void start(BundleContext context) throws Exception {
+			super.start(context);
+
+			INSTANCE.doStart(context);
+		}
+
+	}
+
+	public MessageConsole getConsole() {
+		return console;
+	}
+
+	protected void doStart(BundleContext context) throws Exception {
+		console = findConsole(CONSOLE_NAME);
+	}
+
+	private static MessageConsole findConsole(String name) {
+		ConsolePlugin plugin = ConsolePlugin.getDefault();
+		IConsoleManager conMan = plugin.getConsoleManager();
+		IConsole[] existing = conMan.getConsoles();
+		for (int i = 0; i < existing.length; i++)
+			if (name.equals(existing[i].getName()))
+				return (MessageConsole) existing[i];
+		// no console found, so create a new one
+		MessageConsole myConsole = new MessageConsole(name, null);
+		conMan.addConsoles(new IConsole[] { myConsole });
+		return myConsole;
 	}
 
 }
