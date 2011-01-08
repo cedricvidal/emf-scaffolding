@@ -18,6 +18,8 @@ import org.eclipse.ui.console.ConsolePlugin;
 import org.eclipse.ui.console.IConsole;
 import org.eclipse.ui.console.IConsoleManager;
 import org.eclipse.ui.console.MessageConsole;
+import org.eclipselabs.emf.scaffolding.runtime.Logger;
+import org.eclipselabs.emf.scaffolding.session.util.ScaffoldingConsoleRuleLogger;
 import org.osgi.framework.BundleContext;
 
 /**
@@ -120,6 +122,8 @@ public final class ScaffoldingSessionEditorPlugin extends EMFPlugin {
 
 	protected void doStart(BundleContext context) throws Exception {
 		console = findConsole(CONSOLE_NAME);
+
+		Logger.configureLogger(new ScaffoldingConsoleRuleLogger(console.newMessageStream()));
 	}
 
 	private static MessageConsole findConsole(String name) {

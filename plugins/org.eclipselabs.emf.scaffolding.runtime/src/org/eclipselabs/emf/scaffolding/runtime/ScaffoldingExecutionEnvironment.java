@@ -21,9 +21,13 @@ import org.eclipselabs.emf.scaffolding.runtime.internal.engine.FactPublisher;
 
 public class ScaffoldingExecutionEnvironment {
 
+	private static final String LOGGER_NAME = "logger";
+
 	public static final ResourceType ESL = ResourceType.addResourceTypeToRegistry("ESL", "EMF Scaffolding DSL", "esl");
 	
-	FactPublisher factPublisher;
+	protected FactPublisher factPublisher;
+
+	private StatefulKnowledgeSession statefulKnowledgeSession;
 
 	public ScaffoldingExecutionEnvironment(KnowledgeBase kbase) {
 	    this(createSession(kbase));
@@ -31,7 +35,8 @@ public class ScaffoldingExecutionEnvironment {
 
 	public ScaffoldingExecutionEnvironment(StatefulKnowledgeSession statefulKnowledgeSession) {
 	    this.factPublisher = new FactPublisher();
-		factPublisher.setStatefulKnowledgeSession(statefulKnowledgeSession);
+	    factPublisher.setStatefulKnowledgeSession(statefulKnowledgeSession);
+	    this.statefulKnowledgeSession = statefulKnowledgeSession;
 	}
 
 	private static StatefulKnowledgeSession createSession(KnowledgeBase kbase) {

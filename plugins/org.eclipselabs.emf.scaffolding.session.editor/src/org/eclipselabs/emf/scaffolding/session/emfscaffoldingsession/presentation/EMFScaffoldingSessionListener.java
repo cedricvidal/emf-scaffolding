@@ -25,7 +25,6 @@ import org.drools.builder.KnowledgeBuilderErrors;
 import org.drools.builder.KnowledgeBuilderFactory;
 import org.drools.builder.ResourceType;
 import org.drools.definition.KnowledgePackage;
-import org.drools.event.rule.DebugWorkingMemoryEventListener;
 import org.drools.io.impl.InputStreamResource;
 import org.drools.runtime.StatefulKnowledgeSession;
 import org.eclipse.core.resources.IFile;
@@ -46,6 +45,7 @@ import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.Input;
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.ScaffoldingFile;
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.ScaffoldingSession;
 import org.eclipselabs.emf.scaffolding.session.util.ScaffoldingConsoleDroolsEventListenerManager;
+import org.eclipselabs.emf.scaffolding.session.util.ScaffoldingConsoleRuleLogger;
 
 public class EMFScaffoldingSessionListener extends EContentAdapter {
 
@@ -149,8 +149,9 @@ public class EMFScaffoldingSessionListener extends EContentAdapter {
 
 		if(knowledgeSession != null && execEnv == null) {
 			execEnv = new ScaffoldingExecutionEnvironment(knowledgeSession);
+			MessageConsoleStream output = ScaffoldingSessionEditorPlugin.INSTANCE.getConsole().newMessageStream();
 		}
-		
+
 		if (execEnv != null) {
 			execEnv.register(model);
 		}
