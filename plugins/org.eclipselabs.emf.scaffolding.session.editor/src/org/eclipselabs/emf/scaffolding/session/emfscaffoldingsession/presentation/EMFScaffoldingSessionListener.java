@@ -33,7 +33,7 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EcorePackage;
+import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.ui.console.MessageConsoleStream;
@@ -44,8 +44,8 @@ import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.EMFScaffold
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.Input;
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.ScaffoldingFile;
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.ScaffoldingSession;
+import org.eclipselabs.emf.scaffolding.session.util.EmfRegistryClassLoader;
 import org.eclipselabs.emf.scaffolding.session.util.ScaffoldingConsoleDroolsEventListenerManager;
-import org.eclipselabs.emf.scaffolding.session.util.ScaffoldingConsoleRuleLogger;
 
 public class EMFScaffoldingSessionListener extends EContentAdapter {
 
@@ -60,7 +60,8 @@ public class EMFScaffoldingSessionListener extends EContentAdapter {
 
 	private ScaffoldingExecutionEnvironment execEnv = null;
 	private StatefulKnowledgeSession knowledgeSession = null;
-	private ClassLoader classLoader = EcorePackage.class.getClassLoader();
+
+	private ClassLoader classLoader = new EmfRegistryClassLoader(this.getClass().getClassLoader(), EPackage.Registry.INSTANCE);
 
 	@Override
 	public void notifyChanged(Notification notification) {
