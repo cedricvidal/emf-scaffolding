@@ -21,8 +21,6 @@ import org.eclipselabs.emf.scaffolding.runtime.internal.engine.FactPublisher;
 
 public class ScaffoldingExecutionEnvironment {
 
-	private static final String LOGGER_NAME = "logger";
-
 	public static final ResourceType ESL = ResourceType.addResourceTypeToRegistry("ESL", "EMF Scaffolding DSL", "esl");
 	
 	protected FactPublisher factPublisher;

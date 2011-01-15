@@ -25,6 +25,7 @@ import org.drools.builder.KnowledgeBuilderErrors;
 import org.drools.builder.KnowledgeBuilderFactory;
 import org.drools.builder.ResourceType;
 import org.drools.definition.KnowledgePackage;
+import org.drools.definition.rule.Rule;
 import org.drools.io.impl.InputStreamResource;
 import org.drools.runtime.StatefulKnowledgeSession;
 import org.eclipse.core.resources.IFile;
@@ -49,7 +50,6 @@ import org.eclipselabs.emf.scaffolding.session.util.ScaffoldingConsoleDroolsEven
 
 public class EMFScaffoldingSessionListener extends EContentAdapter {
 
-	private String filePath = null;
 	private ScaffoldingStatusAdapterFactory scaffoldingStatusAdapterFactory;
 
 	public EMFScaffoldingSessionListener(
@@ -60,6 +60,10 @@ public class EMFScaffoldingSessionListener extends EContentAdapter {
 
 	private ScaffoldingExecutionEnvironment execEnv = null;
 	private StatefulKnowledgeSession knowledgeSession = null;
+	private KnowledgeBase kbase;
+
+	private Collection<KnowledgePackage> knowledgePackages = null;
+	private String filePath;
 
 	private ClassLoader classLoader = new EmfRegistryClassLoader(this.getClass().getClassLoader(), EPackage.Registry.INSTANCE);
 
@@ -67,15 +71,75 @@ public class EMFScaffoldingSessionListener extends EContentAdapter {
 	public void notifyChanged(Notification notification) {
 		super.notifyChanged(notification);
 
-		if (isScaffoldingFilePath(notification) || isInputModel(notification) || isScaffoldingInputs(notification)) {
-			EObject notifier = (EObject) notification.getNotifier();
-			filePath = getScaffoldingFilePath(notifier);
+		EObject notifier = (EObject) notification.getNotifier();
 
-			if(filePath != null) {
-				configureInputs(notifier);
+		/*
+		 * Inputs
+		 */
+		if (isInputModel(notification) || isScaffoldingInputs(notification)) {
+			configureInputs(notifier);
+
+			/*
+			 * Configure ScaffoldingSession
+			 */
+			ScaffoldingExecutionEnvironment scaffoldingExecutionEnvironment = getScaffoldingExecutionEnvironment();
+			ScaffoldingSession session = findScaffoldingSession(notifier);
+			if (scaffoldingExecutionEnvironment != null && session != null) {
+				scaffoldingExecutionEnvironment.register(session);
 			}
+
+			/*
+			 * Fire rules
+			 */
+			final StatefulKnowledgeSession knowledgeSession = getKnowledgeSession();
+			if (knowledgeSession != null) {
+				ScaffoldingContext.inScaffoldingSession(new Runnable() {
+					@Override
+					public void run() {
+						knowledgeSession.fireAllRules();
+					}
+				});
+			}
+
 		}
 
+		/*
+		 * Packages
+		 */
+		if (isScaffoldingFilePath(notification) || knowledgePackages == null) {
+
+			String newFilePath = getScaffoldingFilePath(notifier);
+
+			// Unload old packages if deactivated
+			if (filePath != null && !filePath.equals(newFilePath) && knowledgePackages != null) {
+				for (KnowledgePackage knowledgePackage : knowledgePackages) {
+					for (Rule rule : knowledgePackage.getRules()) {
+						kbase.removeRule(knowledgePackage.getName(), rule.getName());
+					}
+				}
+				knowledgePackages.clear();
+				knowledgePackages = null;
+				filePath = null;
+			}
+
+			// Load new packages if activated
+			if(newFilePath != null && filePath == null) {
+				
+				try {
+					knowledgePackages = buildKnowledgePackages(classLoader, newFilePath);
+					kbase.addKnowledgePackages(knowledgePackages);
+				} catch (CoreException e) {
+				}
+				this.filePath = newFilePath;
+
+				reapplyScaffoldingRules();
+			}
+		}
+	}
+
+	protected void reapplyScaffoldingRules() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	private boolean isScaffoldingInputs(Notification notification) {
@@ -92,12 +156,12 @@ public class EMFScaffoldingSessionListener extends EContentAdapter {
 	}
 
 	private String getScaffoldingFilePath(EObject eobject) {
-		ScaffoldingFile scaffoldingFile = getScaffoldingSession(eobject).getScaffoldingFile();
+		ScaffoldingFile scaffoldingFile = findScaffoldingSession(eobject).getScaffoldingFile();
 		return scaffoldingFile != null ? scaffoldingFile.getPath() : null;
 	}
 
 	private void configureInputs(EObject eobject) {
-		ScaffoldingSession session = getScaffoldingSession(eobject);
+		ScaffoldingSession session = findScaffoldingSession(eobject);
 		if (session != null) {
 			for (Input input : session.getInputs()) {
 				EObject model = input.getModel();
@@ -106,23 +170,9 @@ public class EMFScaffoldingSessionListener extends EContentAdapter {
 				}
 			}
 		}
-
-		if (execEnv != null && session != null) {
-			execEnv.register(session);
-		}
-		
-		if (knowledgeSession != null) {
-			ScaffoldingContext.inScaffoldingSession(new Runnable() {
-				@Override
-				public void run() {
-					knowledgeSession.fireAllRules();
-				}
-			});
-		}
-
 	}
 
-	private ScaffoldingSession getScaffoldingSession(EObject eobject) {
+	private ScaffoldingSession findScaffoldingSession(EObject eobject) {
 		ScaffoldingSession session = null;
 		EObject container = EcoreUtil.getRootContainer(eobject);
 		if (container instanceof ScaffoldingSession) {
@@ -138,35 +188,50 @@ public class EMFScaffoldingSessionListener extends EContentAdapter {
 			return;
 		}
 
-		if (knowledgeSession == null) {
-			try {
-				knowledgeSession = buildKnowledgeSession(classLoader);
-			} catch (CoreException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-				return;
-			}
+		ScaffoldingExecutionEnvironment scaffoldingExecutionEnvironment = getScaffoldingExecutionEnvironment();
+
+		if (scaffoldingExecutionEnvironment != null) {
+			scaffoldingExecutionEnvironment.register(model);
 		}
+		
+	}
+
+	protected ScaffoldingExecutionEnvironment getScaffoldingExecutionEnvironment() {
+		StatefulKnowledgeSession knowledgeSession = getKnowledgeSession();
 
 		if(knowledgeSession != null && execEnv == null) {
 			execEnv = new ScaffoldingExecutionEnvironment(knowledgeSession);
 			MessageConsoleStream output = ScaffoldingSessionEditorPlugin.INSTANCE.getConsole().newMessageStream();
 		}
-
-		if (execEnv != null) {
-			execEnv.register(model);
-		}
-		
+		return execEnv;
 	}
 
-	private StatefulKnowledgeSession buildKnowledgeSession(
-			ClassLoader classLoader) throws CoreException {
-		KnowledgeBase kbase = buildKnowledgeBase(classLoader);
+	protected StatefulKnowledgeSession getKnowledgeSession() {
+		if (knowledgeSession == null) {
+			try {
+				knowledgeSession = buildKnowledgeSession();
+			} catch (CoreException e) {
+				return null;
+			}
+		}
+		return knowledgeSession;
+	}
+
+	private StatefulKnowledgeSession buildKnowledgeSession() throws CoreException {
+		KnowledgeBase kbase = getKnowledgeBase();
 
 		final StatefulKnowledgeSession statefulKnowledgeSession = kbase.newStatefulKnowledgeSession();
 		configureLogging(statefulKnowledgeSession);
-
+		
 		return statefulKnowledgeSession;
+	}
+
+	private KnowledgeBase getKnowledgeBase()
+			throws CoreException {
+		if (kbase == null) {
+			kbase = createKnowledgeBase(classLoader);
+		}
+		return kbase;
 	}
 
 	protected void configureLogging(
@@ -176,14 +241,18 @@ public class EMFScaffoldingSessionListener extends EContentAdapter {
 		manager.configureListeners(statefulKnowledgeSession);
 	}
 
-	private KnowledgeBase buildKnowledgeBase(ClassLoader classLoader) throws CoreException {
+	private KnowledgeBase createKnowledgeBase(ClassLoader classLoader) throws CoreException {
+		KnowledgeBaseConfiguration knowledgeBaseConfiguration = KnowledgeBaseFactory.newKnowledgeBaseConfiguration(new Properties(), classLoader);
+		KnowledgeBase kbase = KnowledgeBaseFactory.newKnowledgeBase(knowledgeBaseConfiguration);
+		return kbase;
+	}
+
+	private Collection<KnowledgePackage> buildKnowledgePackages(
+			ClassLoader classLoader, String filePath) throws CoreException {
 		Path path = new Path(filePath);
 		IFile file = ResourcesPlugin.getWorkspace().getRoot().getFile(path);
 
 		InputStream contents = file.getContents();
-
-		KnowledgeBaseConfiguration knowledgeBaseConfiguration = KnowledgeBaseFactory.newKnowledgeBaseConfiguration(new Properties(), classLoader);
-		KnowledgeBase kbase = KnowledgeBaseFactory.newKnowledgeBase(knowledgeBaseConfiguration);
 		
 		KnowledgeBuilderConfiguration knowledgeBuilderConfig = KnowledgeBuilderFactory.newKnowledgeBuilderConfiguration(new Properties(), classLoader);
 		KnowledgeBuilder kbuilder = KnowledgeBuilderFactory
@@ -197,9 +266,7 @@ public class EMFScaffoldingSessionListener extends EContentAdapter {
 		for (KnowledgeBuilderError error : errors) {
 			System.err.println("KnowledgeBuilder error : " + error.getMessage());
 		}
-
-		kbase.addKnowledgePackages(pkgs);
-		return kbase;
+		return pkgs;
 	}
 
 	private boolean isScaffoldingFilePath(Notification notification) {
