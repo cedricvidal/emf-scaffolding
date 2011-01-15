@@ -15,10 +15,14 @@ import org.drools.runtime.StatefulKnowledgeSession;
 import org.drools.runtime.rule.FactHandle;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.util.EContentAdapter;
+import org.eclipselabs.emf.scaffolding.runtime.ScaffoldingExecutionEnvironment;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingContext;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatus;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatusAdapterFactory;
+import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatusChangedNotification;
+import org.eclipselabs.emf.scaffolding.runtime.takeover.TakeoverNotification;
 
 public class FactPublisher extends EContentAdapter {
 
@@ -29,7 +33,12 @@ public class FactPublisher extends EContentAdapter {
 		// use EMF transaction to fire rule
 	}
 
+	public FactPublisher() {
+		super();
+	}
+
 	private boolean immediateFire = true;
+	private ScaffoldingExecutionEnvironment scaffoldingExecutionEnvironment;
 
 	public boolean isImmediateFire() {
 		return immediateFire;
@@ -41,8 +50,6 @@ public class FactPublisher extends EContentAdapter {
 
 	@Override
 	public void notifyChanged(Notification notification) {
-		// System.out.println("FactPublisher.notifyChanged -> " +
-		// notification.getNewValue() + " - " + notification);
 
 		Object notifier = notification.getNotifier();
 
@@ -50,12 +57,10 @@ public class FactPublisher extends EContentAdapter {
 		if(!ScaffoldingContext.isScaffolding() && requiresTakeover(notification)) {
 			if (notification.getEventType() == Notification.ADD) {
 				Object added = notification.getNewValue();
-				takeover(added);
+				takeover((EObject) added);
 			}
 
-//			if (!isRemoveFromContainerNotification(notification)) {
-				takeover(notifier);
-//			}
+			takeover((EObject) notifier);
 		}
 
 		super.notifyChanged(notification);
@@ -84,16 +89,28 @@ public class FactPublisher extends EContentAdapter {
 		}
 	}
 
-	private void takeover(Object notifier) {
+	private void takeover(EObject notifier) {
 		ScaffoldingStatus status = ScaffoldingStatusAdapterFactory.getScaffoldingStatus(notifier);
 		if (status != null && status.isScaffolded()) {
 			System.out.println("Taking over " + notifier);
 			status.setScaffolded(false);
+
+			if(scaffoldingExecutionEnvironment != null) {
+				scaffoldingExecutionEnvironment.eNotify(new TakeoverNotification(
+						notifier));
+			}
+
 		}
 	}
 
 	private boolean requiresTakeover(Notification notification) {
 		int t = notification.getEventType();
+
+		boolean isContainer = notification.getFeature() instanceof EReference && ((EReference)notification.getFeature()).isContainer();
+		if(t == Notification.SET && isContainer && notification.getNewValue() == null) {
+			return false;
+		}
+
 		return t == Notification.ADD || t == Notification.ADD_MANY
 				|| t == Notification.MOVE || t == Notification.REMOVE
 				|| t == Notification.REMOVE_MANY || t == Notification.SET
@@ -134,6 +151,19 @@ public class FactPublisher extends EContentAdapter {
 	@Override
 	public boolean isAdapterForType(Object type) {
 		return FactPublisher.class == type;
+	}
+
+	@Override
+	protected void unsetTarget(EObject target) {
+		FactHandle factHandle = statefulKnowledgeSession.getFactHandle(target);
+		if (factHandle != null) {
+			statefulKnowledgeSession.retract(factHandle);
+		}
+	}
+
+	public void setScaffoldingExecutionEnvironment(
+			ScaffoldingExecutionEnvironment scaffoldingExecutionEnvironment) {
+		this.scaffoldingExecutionEnvironment = scaffoldingExecutionEnvironment;
 	}
 
 }

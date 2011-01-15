@@ -14,6 +14,7 @@ package org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.presentati
 import java.io.InputStream;
 import java.util.Collection;
 import java.util.Properties;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 import org.drools.KnowledgeBase;
 import org.drools.KnowledgeBaseConfiguration;
@@ -31,7 +32,11 @@ import org.drools.runtime.StatefulKnowledgeSession;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Path;
+import org.eclipse.core.runtime.Status;
+import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -66,6 +71,7 @@ public class EMFScaffoldingSessionListener extends EContentAdapter {
 	private String filePath;
 
 	private ClassLoader classLoader = new EmfRegistryClassLoader(this.getClass().getClassLoader(), EPackage.Registry.INSTANCE);
+	private AtomicBoolean building = new AtomicBoolean(false);
 
 	@Override
 	public void notifyChanged(Notification notification) {
@@ -91,15 +97,7 @@ public class EMFScaffoldingSessionListener extends EContentAdapter {
 			/*
 			 * Fire rules
 			 */
-			final StatefulKnowledgeSession knowledgeSession = getKnowledgeSession();
-			if (knowledgeSession != null) {
-				ScaffoldingContext.inScaffoldingSession(new Runnable() {
-					@Override
-					public void run() {
-						knowledgeSession.fireAllRules();
-					}
-				});
-			}
+			fireScaffoldingRules();
 
 		}
 
@@ -108,38 +106,65 @@ public class EMFScaffoldingSessionListener extends EContentAdapter {
 		 */
 		if (isScaffoldingFilePath(notification) || knowledgePackages == null) {
 
-			String newFilePath = getScaffoldingFilePath(notifier);
+			final String newFilePath = getScaffoldingFilePath(notifier);
 
 			// Unload old packages if deactivated
 			if (filePath != null && !filePath.equals(newFilePath) && knowledgePackages != null) {
 				for (KnowledgePackage knowledgePackage : knowledgePackages) {
-					for (Rule rule : knowledgePackage.getRules()) {
-						kbase.removeRule(knowledgePackage.getName(), rule.getName());
-					}
+					kbase.removeKnowledgePackage(knowledgePackage.getName());
 				}
 				knowledgePackages.clear();
 				knowledgePackages = null;
 				filePath = null;
 			}
 
-			// Load new packages if activated
-			if(newFilePath != null && filePath == null) {
-				
-				try {
-					knowledgePackages = buildKnowledgePackages(classLoader, newFilePath);
-					kbase.addKnowledgePackages(knowledgePackages);
-				} catch (CoreException e) {
-				}
-				this.filePath = newFilePath;
+			if(newFilePath != null && filePath == null && !building.getAndSet(true)) {
 
-				reapplyScaffoldingRules();
+				new Job("Building packages from " + newFilePath) {
+					
+					@Override
+					protected IStatus run(IProgressMonitor monitor) {
+						try {
+							knowledgePackages = buildKnowledgePackages(classLoader, newFilePath);
+							kbase.addKnowledgePackages(knowledgePackages);
+							fireScaffoldingRules();
+						} catch (CoreException e) {
+							return new Status(Status.ERROR, ScaffoldingSessionEditorPlugin.INSTANCE.getSymbolicName(), "Could not build knowledge packages for " + newFilePath, e);
+						} finally {
+							building.set(false);
+						}
+						EMFScaffoldingSessionListener.this.filePath = newFilePath;
+						return Status.OK_STATUS;
+					}
+				}.schedule();
+
 			}
 		}
 	}
 
-	protected void reapplyScaffoldingRules() {
-		// TODO Auto-generated method stub
-		
+	private AtomicBoolean firing = new AtomicBoolean(false);
+
+	protected void fireScaffoldingRules() {
+		final StatefulKnowledgeSession knowledgeSession = getKnowledgeSession();
+		if (knowledgeSession != null && !firing.getAndSet(true)) {
+			new Job("Firing rules") {
+
+				@Override
+				protected IStatus run(IProgressMonitor monitor) {
+					try {
+						ScaffoldingContext.inScaffoldingSession(new Runnable() {
+							@Override
+							public void run() {
+								knowledgeSession.fireAllRules();
+							}
+						});
+						return Status.OK_STATUS;
+					} finally {
+						firing.set(false);
+					}
+				}
+			}.schedule();
+		}
 	}
 
 	private boolean isScaffoldingInputs(Notification notification) {

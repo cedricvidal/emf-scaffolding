@@ -44,10 +44,15 @@ public class ScaffoldingStatusAdapterFactory extends NotifierAdapterFactory {
 		throw new IllegalArgumentException("Cannot adapt non eobject " + object + " to " + ScaffoldingStatus.class);
 	}
 
-	public static boolean isScaffolded(EObject object) {
-		ScaffoldingStatus scaffold = (ScaffoldingStatus) EcoreUtil.getExistingAdapter(object, ScaffoldingStatus.class);
-		boolean isScaffolded = scaffold != null && scaffold.isScaffolded();
-		return isScaffolded;
+	public static boolean isScaffolded(Object object) {
+		if (object instanceof EObject) {
+			EObject eobject = (EObject) object;
+			ScaffoldingStatus scaffold = (ScaffoldingStatus) EcoreUtil.getExistingAdapter(eobject, ScaffoldingStatus.class);
+			boolean isScaffolded = scaffold != null && scaffold.isScaffolded();
+			return isScaffolded;
+		} else {
+			return false;
+		}
 	}
 
 	public static ScaffoldingStatus adapt(EObject object) {

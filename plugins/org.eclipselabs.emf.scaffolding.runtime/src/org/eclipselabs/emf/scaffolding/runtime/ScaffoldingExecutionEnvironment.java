@@ -15,11 +15,12 @@ import org.drools.KnowledgeBase;
 import org.drools.builder.ResourceType;
 import org.drools.event.rule.DebugWorkingMemoryEventListener;
 import org.drools.runtime.StatefulKnowledgeSession;
+import org.eclipse.emf.common.notify.impl.NotifierImpl;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipselabs.emf.scaffolding.runtime.internal.engine.FactPublisher;
 
-public class ScaffoldingExecutionEnvironment {
+public class ScaffoldingExecutionEnvironment extends NotifierImpl {
 
 	public static final ResourceType ESL = ResourceType.addResourceTypeToRegistry("ESL", "EMF Scaffolding DSL", "esl");
 	
@@ -34,6 +35,7 @@ public class ScaffoldingExecutionEnvironment {
 	public ScaffoldingExecutionEnvironment(StatefulKnowledgeSession statefulKnowledgeSession) {
 	    this.factPublisher = new FactPublisher();
 	    factPublisher.setStatefulKnowledgeSession(statefulKnowledgeSession);
+	    factPublisher.setScaffoldingExecutionEnvironment(this);
 	    this.statefulKnowledgeSession = statefulKnowledgeSession;
 	}
 
@@ -50,7 +52,13 @@ public class ScaffoldingExecutionEnvironment {
 	}
 
 	public static boolean isConfigured(EObject object) {
-		return EcoreUtil.getExistingAdapter(object, FactPublisher.class) != null;
+		FactPublisher factPublisher = getFactPublisher(object);
+		return factPublisher != null;
+	}
+
+	public static FactPublisher getFactPublisher(EObject object) {
+		FactPublisher factPublisher = (FactPublisher) EcoreUtil.getExistingAdapter(object, FactPublisher.class);
+		return factPublisher;
 	}
 
 }
