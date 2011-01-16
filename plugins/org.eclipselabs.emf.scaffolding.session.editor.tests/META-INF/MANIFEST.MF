@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: EMF Scaffolding Session Editor Tests
+Bundle-SymbolicName: org.eclipselabs.emf.scaffolding.session.editor.tests
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: EMF Scaffolding
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.eclipselabs.emf.scaffolding.session;bundle-version="1.0.0",
+ org.eclipselabs.emf.scaffolding.session.edit;bundle-version="1.0.0",
+ org.eclipselabs.emf.scaffolding.session.editor;bundle-version="1.0.0",
+ org.eclipselabs.emf.scaffolding.tests;bundle-version="1.0.0",
+ org.junit,
+ org.eclipse.core.runtime;bundle-version="3.6.0",
+ org.eclipselabs.emf.scaffolding.runtime;bundle-version="1.0.0"
