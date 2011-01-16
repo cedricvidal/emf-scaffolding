@@ -15,7 +15,6 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
 
 import java.util.Collection;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -45,6 +44,7 @@ import org.eclipselabs.emf.scaffolding.tests.model1.DAO;
 import org.eclipselabs.emf.scaffolding.tests.model1.Entity;
 import org.eclipselabs.emf.scaffolding.tests.model1.Method;
 import org.eclipselabs.emf.scaffolding.tests.model1.Model1Factory;
+import org.eclipselabs.emf.scaffolding.tests.resources.Resources;
 import org.junit.Test;
 
 public class DRLRuleTest extends BaseTest{
@@ -63,8 +63,8 @@ public class DRLRuleTest extends BaseTest{
 		KnowledgeBuilderConfiguration knowledgeBuilderConfig = KnowledgeBuilderFactory.newKnowledgeBuilderConfiguration();
 		KnowledgeBuilder kbuilder = KnowledgeBuilderFactory
 				.newKnowledgeBuilder(knowledgeBuilderConfig);
-		kbuilder.add(ResourceFactory.newClassPathResource("/Entity2Dao.drl",
-				DRLRuleTest.class), ResourceType.DRL);
+		kbuilder.add(ResourceFactory.newClassPathResource("Entity2Dao.drl",
+				Resources.class), ResourceType.DRL);
 		Collection<KnowledgePackage> pkgs = kbuilder.getKnowledgePackages();
 		kbase.addKnowledgePackages(pkgs);
 
@@ -121,8 +121,8 @@ public class DRLRuleTest extends BaseTest{
 		KnowledgeBuilderConfiguration knowledgeBuilderConfig = KnowledgeBuilderFactory.newKnowledgeBuilderConfiguration();
 		KnowledgeBuilder kbuilder = KnowledgeBuilderFactory
 				.newKnowledgeBuilder(knowledgeBuilderConfig);
-		kbuilder.add(ResourceFactory.newClassPathResource("/Entity2Dao.drl",
-				DRLRuleTest.class), ResourceType.DRL);
+		kbuilder.add(ResourceFactory.newClassPathResource("Entity2Dao.drl",
+				Resources.class), ResourceType.DRL);
 		Collection<KnowledgePackage> pkgs = kbuilder.getKnowledgePackages();
 		kbase.addKnowledgePackages(pkgs);
 
@@ -171,8 +171,8 @@ public class DRLRuleTest extends BaseTest{
 		KnowledgeBuilderConfiguration knowledgeBuilderConfig = KnowledgeBuilderFactory.newKnowledgeBuilderConfiguration();
 		KnowledgeBuilder kbuilder = KnowledgeBuilderFactory
 				.newKnowledgeBuilder(knowledgeBuilderConfig);
-		kbuilder.add(ResourceFactory.newClassPathResource("/Entity2Dao.drl",
-				DRLRuleTest.class), ResourceType.DRL);
+		kbuilder.add(ResourceFactory.newClassPathResource("Entity2Dao.drl",
+				Resources.class), ResourceType.DRL);
 		Collection<KnowledgePackage> pkgs = kbuilder.getKnowledgePackages();
 		kbase.addKnowledgePackages(pkgs);
 
@@ -210,10 +210,10 @@ public class DRLRuleTest extends BaseTest{
 		KnowledgeBuilderConfiguration knowledgeBuilderConfig = KnowledgeBuilderFactory.newKnowledgeBuilderConfiguration();
 		KnowledgeBuilder kbuilder = KnowledgeBuilderFactory
 				.newKnowledgeBuilder(knowledgeBuilderConfig);
-		kbuilder.add(ResourceFactory.newClassPathResource("/Entity2Dao.drl",
-				DRLRuleTest.class), ResourceType.DRL);
-		kbuilder.add(ResourceFactory.newClassPathResource("/Dao2CrudMethods.drl",
-				DRLRuleTest.class), ResourceType.DRL);
+		kbuilder.add(ResourceFactory.newClassPathResource("Entity2Dao.drl",
+				Resources.class), ResourceType.DRL);
+		kbuilder.add(ResourceFactory.newClassPathResource("Dao2CrudMethods.drl",
+				Resources.class), ResourceType.DRL);
 		for (KnowledgeBuilderError error : kbuilder.getErrors()) {
 			System.err.println(error);
 		}
@@ -255,10 +255,10 @@ public class DRLRuleTest extends BaseTest{
 		KnowledgeBuilderConfiguration knowledgeBuilderConfig = KnowledgeBuilderFactory.newKnowledgeBuilderConfiguration();
 		KnowledgeBuilder kbuilder = KnowledgeBuilderFactory
 				.newKnowledgeBuilder(knowledgeBuilderConfig);
-		kbuilder.add(ResourceFactory.newClassPathResource("/Entity2Dao.drl",
-				DRLRuleTest.class), ResourceType.DRL);
-		kbuilder.add(ResourceFactory.newClassPathResource("/Dao2CrudMethods.drl",
-				DRLRuleTest.class), ResourceType.DRL);
+		kbuilder.add(ResourceFactory.newClassPathResource("Entity2Dao.drl",
+				Resources.class), ResourceType.DRL);
+		kbuilder.add(ResourceFactory.newClassPathResource("Dao2CrudMethods.drl",
+				Resources.class), ResourceType.DRL);
 		for (KnowledgeBuilderError error : kbuilder.getErrors()) {
 			System.err.println(error);
 		}
@@ -327,10 +327,10 @@ public class DRLRuleTest extends BaseTest{
 		KnowledgeBuilderConfiguration knowledgeBuilderConfig = KnowledgeBuilderFactory.newKnowledgeBuilderConfiguration();
 		KnowledgeBuilder kbuilder = KnowledgeBuilderFactory
 				.newKnowledgeBuilder(knowledgeBuilderConfig);
-		kbuilder.add(ResourceFactory.newClassPathResource("/Entity2Dao.drl",
-				DRLRuleTest.class), ResourceType.DRL);
-		kbuilder.add(ResourceFactory.newClassPathResource("/Dao2CrudMethods.drl",
-				DRLRuleTest.class), ResourceType.DRL);
+		kbuilder.add(ResourceFactory.newClassPathResource("Entity2Dao.drl",
+				Resources.class), ResourceType.DRL);
+		kbuilder.add(ResourceFactory.newClassPathResource("Dao2CrudMethods.drl",
+				Resources.class), ResourceType.DRL);
 		for (KnowledgeBuilderError error : kbuilder.getErrors()) {
 			System.err.println(error);
 		}

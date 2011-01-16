@@ -39,6 +39,7 @@ import org.eclipselabs.emf.scaffolding.tests.model1.DAO;
 import org.eclipselabs.emf.scaffolding.tests.model1.Entity;
 import org.eclipselabs.emf.scaffolding.tests.model1.Method;
 import org.eclipselabs.emf.scaffolding.tests.model1.Model1Factory;
+import org.eclipselabs.emf.scaffolding.tests.resources.Resources;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -58,10 +59,10 @@ public class TakeoverTest extends BaseTest{
 		KnowledgeBuilderConfiguration knowledgeBuilderConfig = KnowledgeBuilderFactory.newKnowledgeBuilderConfiguration();
 		KnowledgeBuilder kbuilder = KnowledgeBuilderFactory
 				.newKnowledgeBuilder(knowledgeBuilderConfig);
-		kbuilder.add(ResourceFactory.newClassPathResource("/Entity2Dao.drl",
-				TakeoverTest.class), ResourceType.DRL);
-		kbuilder.add(ResourceFactory.newClassPathResource("/Dao2CrudMethods.drl",
-				TakeoverTest.class), ResourceType.DRL);
+		kbuilder.add(ResourceFactory.newClassPathResource("Entity2Dao.drl",
+				Resources.class), ResourceType.DRL);
+		kbuilder.add(ResourceFactory.newClassPathResource("Dao2CrudMethods.drl",
+				Resources.class), ResourceType.DRL);
 		for (KnowledgeBuilderError error : kbuilder.getErrors()) {
 			System.err.println(error);
 		}

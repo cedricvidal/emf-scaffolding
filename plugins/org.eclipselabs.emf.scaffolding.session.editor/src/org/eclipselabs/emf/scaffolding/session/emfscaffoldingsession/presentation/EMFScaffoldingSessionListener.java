@@ -11,7 +11,10 @@
  *******************************************************************************/
 package org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.presentation;
 
+import java.io.IOException;
 import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Collection;
 import java.util.Properties;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -26,7 +29,6 @@ import org.drools.builder.KnowledgeBuilderErrors;
 import org.drools.builder.KnowledgeBuilderFactory;
 import org.drools.builder.ResourceType;
 import org.drools.definition.KnowledgePackage;
-import org.drools.definition.rule.Rule;
 import org.drools.io.impl.InputStreamResource;
 import org.drools.runtime.StatefulKnowledgeSession;
 import org.eclipse.core.resources.IFile;
@@ -36,7 +38,6 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.Status;
-import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -50,7 +51,11 @@ import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.EMFScaffold
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.Input;
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.ScaffoldingFile;
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.ScaffoldingSession;
+import org.eclipselabs.emf.scaffolding.session.jobs.AsynchronousJobScheduler;
+import org.eclipselabs.emf.scaffolding.session.jobs.IJobScheduler;
+import org.eclipselabs.emf.scaffolding.session.jobs.JobDelegate;
 import org.eclipselabs.emf.scaffolding.session.util.EmfRegistryClassLoader;
+import org.eclipselabs.emf.scaffolding.session.util.KnowledgeSessionListenerManager;
 import org.eclipselabs.emf.scaffolding.session.util.ScaffoldingConsoleDroolsEventListenerManager;
 
 public class EMFScaffoldingSessionListener extends EContentAdapter {
@@ -120,13 +125,13 @@ public class EMFScaffoldingSessionListener extends EContentAdapter {
 
 			if(newFilePath != null && filePath == null && !building.getAndSet(true)) {
 
-				new Job("Building packages from " + newFilePath) {
-					
+				schedule(new JobDelegate("Building packages from " + newFilePath) {
+
 					@Override
-					protected IStatus run(IProgressMonitor monitor) {
+					public IStatus run(IProgressMonitor monitor) {
 						try {
 							knowledgePackages = buildKnowledgePackages(classLoader, newFilePath);
-							kbase.addKnowledgePackages(knowledgePackages);
+							getKnowledgeBase().addKnowledgePackages(knowledgePackages);
 							fireScaffoldingRules();
 						} catch (CoreException e) {
 							return new Status(Status.ERROR, ScaffoldingSessionEditorPlugin.INSTANCE.getSymbolicName(), "Could not build knowledge packages for " + newFilePath, e);
@@ -136,21 +141,35 @@ public class EMFScaffoldingSessionListener extends EContentAdapter {
 						EMFScaffoldingSessionListener.this.filePath = newFilePath;
 						return Status.OK_STATUS;
 					}
-				}.schedule();
+				});
 
 			}
 		}
 	}
 
+	protected void schedule(JobDelegate job) {
+		jobScheduler.schedule(job);
+	}
+
 	private AtomicBoolean firing = new AtomicBoolean(false);
+
+	private IJobScheduler jobScheduler = new AsynchronousJobScheduler();
+
+	public IJobScheduler getJobScheduler() {
+		return jobScheduler;
+	}
+
+	public void setJobScheduler(IJobScheduler jobScheduler) {
+		this.jobScheduler = jobScheduler;
+	}
 
 	protected void fireScaffoldingRules() {
 		final StatefulKnowledgeSession knowledgeSession = getKnowledgeSession();
 		if (knowledgeSession != null && !firing.getAndSet(true)) {
-			new Job("Firing rules") {
+			schedule(new JobDelegate("Firing rules") {
 
 				@Override
-				protected IStatus run(IProgressMonitor monitor) {
+				public IStatus run(IProgressMonitor monitor) {
 					try {
 						ScaffoldingContext.inScaffoldingSession(new Runnable() {
 							@Override
@@ -163,7 +182,7 @@ public class EMFScaffoldingSessionListener extends EContentAdapter {
 						firing.set(false);
 					}
 				}
-			}.schedule();
+			});
 		}
 	}
 
@@ -261,9 +280,13 @@ public class EMFScaffoldingSessionListener extends EContentAdapter {
 
 	protected void configureLogging(
 			final StatefulKnowledgeSession statefulKnowledgeSession) {
-		MessageConsoleStream output = ScaffoldingSessionEditorPlugin.INSTANCE.getConsole().newMessageStream();
-		ScaffoldingConsoleDroolsEventListenerManager manager = new ScaffoldingConsoleDroolsEventListenerManager(output);
+		KnowledgeSessionListenerManager manager = createKnowledgeSessionListenerManager();
 		manager.configureListeners(statefulKnowledgeSession);
+	}
+
+	protected KnowledgeSessionListenerManager createKnowledgeSessionListenerManager() {
+		MessageConsoleStream output = ScaffoldingSessionEditorPlugin.INSTANCE.getConsole().newMessageStream();
+		return new ScaffoldingConsoleDroolsEventListenerManager(output);
 	}
 
 	private KnowledgeBase createKnowledgeBase(ClassLoader classLoader) throws CoreException {
@@ -275,9 +298,19 @@ public class EMFScaffoldingSessionListener extends EContentAdapter {
 	private Collection<KnowledgePackage> buildKnowledgePackages(
 			ClassLoader classLoader, String filePath) throws CoreException {
 		Path path = new Path(filePath);
-		IFile file = ResourcesPlugin.getWorkspace().getRoot().getFile(path);
+		URL url = null;
+		InputStream contents = null;
+		try {
+			url = new URL(filePath);
+			contents = url.openStream();
+		} catch (MalformedURLException e) {
+		} catch (IOException e) {
+		}
 
-		InputStream contents = file.getContents();
+		if(contents == null) {
+			IFile file = ResourcesPlugin.getWorkspace().getRoot().getFile(path);
+			contents = file.getContents();
+		}
 		
 		KnowledgeBuilderConfiguration knowledgeBuilderConfig = KnowledgeBuilderFactory.newKnowledgeBuilderConfiguration(new Properties(), classLoader);
 		KnowledgeBuilder kbuilder = KnowledgeBuilderFactory

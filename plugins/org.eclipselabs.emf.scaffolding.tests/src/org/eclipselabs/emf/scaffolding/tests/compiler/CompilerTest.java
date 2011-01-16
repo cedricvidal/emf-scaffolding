@@ -21,6 +21,7 @@ import java.io.InputStream;
 import org.drools.KnowledgeBase;
 import org.eclipselabs.emf.scaffolding.runtime.internal.compiler.ESLCompiler;
 import org.eclipselabs.emf.scaffolding.tests.BaseTest;
+import org.eclipselabs.emf.scaffolding.tests.resources.Resources;
 import org.junit.Test;
 
 public class CompilerTest extends BaseTest {
@@ -28,7 +29,7 @@ public class CompilerTest extends BaseTest {
 	@Test
 	public void compileRule() throws Exception {
 		ESLCompiler compiler = new ESLCompiler();
-		InputStream inputStream = ParserTest.class.getResourceAsStream("/Entity2Dao.esl");
+		InputStream inputStream = Resources.class.getResourceAsStream("Entity2Dao.esl");
 		KnowledgeBase kbase = compiler.compile(inputStream, CompilerTest.class.getClassLoader());
 		assertNotNull(kbase);
 		assertEquals(1, kbase.getKnowledgePackages().size());

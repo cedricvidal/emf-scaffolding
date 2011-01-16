@@ -35,6 +35,7 @@ import org.eclipselabs.emf.scaffolding.language.emfscaffoldingdsl.WhenBlock;
 import org.eclipselabs.emf.scaffolding.runtime.internal.compiler.ESLParser;
 import org.eclipselabs.emf.scaffolding.tests.BaseTest;
 import org.eclipselabs.emf.scaffolding.tests.model1.Model1Package;
+import org.eclipselabs.emf.scaffolding.tests.resources.Resources;
 import org.junit.Test;
 
 public class ParserTest extends BaseTest {
@@ -42,8 +43,8 @@ public class ParserTest extends BaseTest {
 	@Test
 	public void parsePackageAndRule() throws Exception {
 		ESLParser parser = new ESLParser();
-		InputStream inputStream = ParserTest.class
-				.getResourceAsStream("/Entity2Dao.esl");
+		InputStream inputStream = Resources.class
+				.getResourceAsStream("Entity2Dao.esl");
 		Scaffolding scaffolding = parser.parse(inputStream);
 		assertNotNull(scaffolding);
 		Scaffold scaffold = scaffolding.getScaffold();

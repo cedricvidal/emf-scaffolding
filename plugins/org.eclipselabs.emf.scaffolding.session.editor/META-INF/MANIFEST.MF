@@ -9,6 +9,7 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.presentation,
+ org.eclipselabs.emf.scaffolding.session.jobs,
  org.eclipselabs.emf.scaffolding.session.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,

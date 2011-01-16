@@ -7,12 +7,20 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: org.eclipselabs.emf.scaffolding.tests.model1,
+Export-Package: org.eclipselabs.emf.scaffolding.tests,
+ org.eclipselabs.emf.scaffolding.tests.acceptance.soa,
+ org.eclipselabs.emf.scaffolding.tests.compiler,
+ org.eclipselabs.emf.scaffolding.tests.model1,
+ org.eclipselabs.emf.scaffolding.tests.model1.builder,
  org.eclipselabs.emf.scaffolding.tests.model1.impl,
  org.eclipselabs.emf.scaffolding.tests.model1.util,
+ org.eclipselabs.emf.scaffolding.tests.resources,
+ org.eclipselabs.emf.scaffolding.tests.runtime,
  org.eclipselabs.emf.scaffolding.tests.soa,
+ org.eclipselabs.emf.scaffolding.tests.soa.builder,
  org.eclipselabs.emf.scaffolding.tests.soa.impl,
- org.eclipselabs.emf.scaffolding.tests.soa.util
+ org.eclipselabs.emf.scaffolding.tests.soa.util,
+ org.eclipselabs.emf.scaffolding.tests.util
 Require-Bundle: org.eclipselabs.emf.scaffolding.language,
  org.eclipselabs.emf.scaffolding.runtime,
  org.junit4,

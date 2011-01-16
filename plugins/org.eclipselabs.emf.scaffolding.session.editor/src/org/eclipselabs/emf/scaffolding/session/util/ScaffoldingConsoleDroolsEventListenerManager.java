@@ -25,7 +25,7 @@ import org.drools.event.rule.ObjectUpdatedEvent;
 import org.drools.runtime.StatefulKnowledgeSession;
 import org.eclipse.ui.console.MessageConsoleStream;
 
-public class ScaffoldingConsoleDroolsEventListenerManager {
+public class ScaffoldingConsoleDroolsEventListenerManager implements KnowledgeSessionListenerManager {
 	private MessageConsoleStream ouput = null;
 
 	public ScaffoldingConsoleDroolsEventListenerManager(
@@ -88,6 +88,7 @@ public class ScaffoldingConsoleDroolsEventListenerManager {
 
 	}
 
+	@Override
 	public void configureListeners(StatefulKnowledgeSession session) {
 		session.addEventListener(new ConsoleWorkingMemoryEventListener());
 		session.addEventListener(new ConsoleAgendaEventListener());

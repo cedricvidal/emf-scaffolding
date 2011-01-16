@@ -22,6 +22,7 @@ import org.eclipselabs.emf.scaffolding.tests.model1.Application;
 import org.eclipselabs.emf.scaffolding.tests.model1.DAO;
 import org.eclipselabs.emf.scaffolding.tests.model1.Entity;
 import org.eclipselabs.emf.scaffolding.tests.model1.Model1Factory;
+import org.eclipselabs.emf.scaffolding.tests.resources.Resources;
 import org.junit.Test;
 
 public class ESLRuleTest extends BaseTest{
@@ -32,7 +33,7 @@ public class ESLRuleTest extends BaseTest{
 
 		ESLCompiler compiler = new ESLCompiler();
 		// TODO maybe create a ScallfoldBase to encapsulate KnowledgeBase
-		KnowledgeBase kbase = compiler.compile(ESLRuleTest.class.getResourceAsStream("/Entity2Dao.esl"), ESLRuleTest.class.getClassLoader());
+		KnowledgeBase kbase = compiler.compile(Resources.class.getResourceAsStream("Entity2Dao.esl"), ESLRuleTest.class.getClassLoader());
 		
 		// Init Exec environment
 		ScaffoldingExecutionEnvironment execEnv = new ScaffoldingExecutionEnvironment(kbase);

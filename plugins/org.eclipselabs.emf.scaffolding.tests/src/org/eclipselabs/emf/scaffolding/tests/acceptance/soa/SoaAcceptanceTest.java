@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipselabs.emf.scaffolding.runtime.ScaffoldingExecutionEnvironment;
 import org.eclipselabs.emf.scaffolding.runtime.internal.compiler.ESLCompiler;
 import org.eclipselabs.emf.scaffolding.tests.BaseTest;
+import org.eclipselabs.emf.scaffolding.tests.resources.Resources;
 import org.eclipselabs.emf.scaffolding.tests.soa.Package;
 import org.eclipselabs.emf.scaffolding.tests.soa.builder.EntityBuilder;
 import org.eclipselabs.emf.scaffolding.tests.soa.builder.PackageBuilder;
@@ -48,8 +49,8 @@ public class SoaAcceptanceTest extends BaseTest {
 
 		ESLCompiler compiler = new ESLCompiler();
 		// TODO maybe create a ScallfoldBase to encapsulate KnowledgeBase
-		KnowledgeBase kbase = compiler.compile(SoaAcceptanceTest.class
-				.getResourceAsStream("/acceptance/soa/SOA.esl"),
+		KnowledgeBase kbase = compiler.compile(Resources.class
+				.getResourceAsStream("SOA.esl"),
 				SoaAcceptanceTest.class.getClassLoader());
 
 		// Init Exec environment
