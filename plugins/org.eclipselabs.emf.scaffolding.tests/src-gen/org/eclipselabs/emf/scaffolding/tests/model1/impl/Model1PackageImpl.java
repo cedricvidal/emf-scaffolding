@@ -13,10 +13,12 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipselabs.emf.scaffolding.tests.model1.Application;
 import org.eclipselabs.emf.scaffolding.tests.model1.ApplicationElement;
+import org.eclipselabs.emf.scaffolding.tests.model1.Component;
 import org.eclipselabs.emf.scaffolding.tests.model1.Entity;
 import org.eclipselabs.emf.scaffolding.tests.model1.Method;
 import org.eclipselabs.emf.scaffolding.tests.model1.Model1Factory;
 import org.eclipselabs.emf.scaffolding.tests.model1.Model1Package;
+import org.eclipselabs.emf.scaffolding.tests.model1.Service;
 
 /**
  * <!-- begin-user-doc -->
@@ -59,6 +61,20 @@ public class Model1PackageImpl extends EPackageImpl implements Model1Package {
 	 * @generated
 	 */
 	private EClass applicationElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass serviceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass componentEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -135,15 +151,6 @@ public class Model1PackageImpl extends EPackageImpl implements Model1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getEntity_Name() {
-		return (EAttribute)entityEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getDAO() {
 		return daoEClass;
 	}
@@ -153,17 +160,8 @@ public class Model1PackageImpl extends EPackageImpl implements Model1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDAO_Name() {
-		return (EAttribute)daoEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getDAO_Methods() {
-		return (EReference)daoEClass.getEStructuralFeatures().get(1);
+		return (EReference)daoEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -172,7 +170,7 @@ public class Model1PackageImpl extends EPackageImpl implements Model1Package {
 	 * @generated
 	 */
 	public EReference getDAO_Entity() {
-		return (EReference)daoEClass.getEStructuralFeatures().get(2);
+		return (EReference)daoEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -234,6 +232,42 @@ public class Model1PackageImpl extends EPackageImpl implements Model1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getApplicationElement_Name() {
+		return (EAttribute)applicationElementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getService() {
+		return serviceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getService_Dependencies() {
+		return (EReference)serviceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getComponent() {
+		return componentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Model1Factory getModel1Factory() {
 		return (Model1Factory)getEFactoryInstance();
 	}
@@ -258,10 +292,8 @@ public class Model1PackageImpl extends EPackageImpl implements Model1Package {
 
 		// Create classes and their features
 		entityEClass = createEClass(ENTITY);
-		createEAttribute(entityEClass, ENTITY__NAME);
 
 		daoEClass = createEClass(DAO);
-		createEAttribute(daoEClass, DAO__NAME);
 		createEReference(daoEClass, DAO__METHODS);
 		createEReference(daoEClass, DAO__ENTITY);
 
@@ -273,6 +305,12 @@ public class Model1PackageImpl extends EPackageImpl implements Model1Package {
 
 		applicationElementEClass = createEClass(APPLICATION_ELEMENT);
 		createEReference(applicationElementEClass, APPLICATION_ELEMENT__APPLICATION);
+		createEAttribute(applicationElementEClass, APPLICATION_ELEMENT__NAME);
+
+		serviceEClass = createEClass(SERVICE);
+		createEReference(serviceEClass, SERVICE__DEPENDENCIES);
+
+		componentEClass = createEClass(COMPONENT);
 	}
 
 	/**
@@ -304,14 +342,14 @@ public class Model1PackageImpl extends EPackageImpl implements Model1Package {
 
 		// Add supertypes to classes
 		entityEClass.getESuperTypes().add(this.getApplicationElement());
-		daoEClass.getESuperTypes().add(this.getApplicationElement());
+		daoEClass.getESuperTypes().add(this.getComponent());
+		serviceEClass.getESuperTypes().add(this.getComponent());
+		componentEClass.getESuperTypes().add(this.getApplicationElement());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(entityEClass, Entity.class, "Entity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEntity_Name(), ecorePackage.getEString(), "name", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(daoEClass, org.eclipselabs.emf.scaffolding.tests.model1.DAO.class, "DAO", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDAO_Name(), ecorePackage.getEString(), "name", null, 0, 1, org.eclipselabs.emf.scaffolding.tests.model1.DAO.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDAO_Methods(), this.getMethod(), null, "methods", null, 0, -1, org.eclipselabs.emf.scaffolding.tests.model1.DAO.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDAO_Entity(), this.getEntity(), null, "entity", null, 0, 1, org.eclipselabs.emf.scaffolding.tests.model1.DAO.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -323,6 +361,12 @@ public class Model1PackageImpl extends EPackageImpl implements Model1Package {
 
 		initEClass(applicationElementEClass, ApplicationElement.class, "ApplicationElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getApplicationElement_Application(), this.getApplication(), this.getApplication_Elements(), "application", null, 1, 1, ApplicationElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getApplicationElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, ApplicationElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(serviceEClass, Service.class, "Service", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getService_Dependencies(), this.getComponent(), null, "dependencies", null, 0, -1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(componentEClass, Component.class, "Component", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

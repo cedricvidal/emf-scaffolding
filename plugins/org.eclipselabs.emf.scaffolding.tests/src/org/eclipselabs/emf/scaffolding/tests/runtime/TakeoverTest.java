@@ -39,20 +39,22 @@ import org.eclipselabs.emf.scaffolding.tests.model1.DAO;
 import org.eclipselabs.emf.scaffolding.tests.model1.Entity;
 import org.eclipselabs.emf.scaffolding.tests.model1.Method;
 import org.eclipselabs.emf.scaffolding.tests.model1.Model1Factory;
+import org.eclipselabs.emf.scaffolding.tests.model1.Service;
 import org.eclipselabs.emf.scaffolding.tests.resources.Resources;
 import org.junit.Before;
 import org.junit.Test;
 
 public class TakeoverTest extends BaseTest{
 
+	private static final Model1Factory FACTORY = Model1Factory.eINSTANCE;
 	private DAO userDao;
 	private Entity user;
 	private AtomicBoolean takeover;
+	private Application application;
 
 	@Before
 	public void setup() {
-		Model1Factory factory = Model1Factory.eINSTANCE;
-		Application application = factory.createApplication();
+		application = FACTORY.createApplication();
 
 		//Init Knowledge Base from drl files
 		KnowledgeBase kbase = KnowledgeBaseFactory.newKnowledgeBase();
@@ -90,7 +92,7 @@ public class TakeoverTest extends BaseTest{
 		ScaffoldingStatusAdapterFactory scaffoldingStatusAdapterFactory = new ScaffoldingStatusAdapterFactory();
 		scaffoldingStatusAdapterFactory.adaptAllNew(application);
 
-		user = Model1Factory.eINSTANCE.createEntity();
+		user = FACTORY.createEntity();
 		user.setName("user");
 		assertEquals(0, application.getElements().size());
 		application.getElements().add(user);
@@ -111,12 +113,30 @@ public class TakeoverTest extends BaseTest{
 	}
 
 	@Test
+	public void changindDaoNameDaoTakesOverDao() throws Exception {
+		assertScaffolded(userDao);
+		userDao.setName("coolUserDao");
+		assertTrue(takeover.get());
+		assertNotScaffolded(userDao);
+	}
+
+	@Test
 	public void addingFinderToDaoTakesOverDao() throws Exception {
-		Method specialFinder = Model1Factory.eINSTANCE.createMethod();
+		Method specialFinder = FACTORY.createMethod();
 		specialFinder.setName("specialFinder");
 		assertScaffolded(userDao);
 		userDao.getMethods().add(specialFinder);
 		userDao.setName("coolUserDao");
+		assertTrue(takeover.get());
+		assertNotScaffolded(userDao);
+	}
+
+	@Test
+	public void addingDaoToServiceDependenciesTakesOverDao() throws Exception {
+		Service service = FACTORY.createService();
+		application.getElements().add(service);
+		assertScaffolded(userDao);
+		service.getDependencies().add(userDao);
 		assertTrue(takeover.get());
 		assertNotScaffolded(userDao);
 	}

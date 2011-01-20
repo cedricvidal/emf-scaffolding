@@ -54,23 +54,19 @@ public class FactPublisher extends EContentAdapter {
 		Object notifier = notification.getNotifier();
 
 		// If the user modifies a scaffolded element, he takes ownership
-		if(!ScaffoldingContext.isScaffolding() && requiresTakeover(notification)) {
-			if (notification.getEventType() == Notification.ADD) {
-				Object added = notification.getNewValue();
-				takeover((EObject) added);
+		if(!ScaffoldingContext.isScaffolding()) {
+			if(isValueChange(notification)) {
+				if (notification.getNewValue() != null && notification.getNewValue() instanceof EObject) {
+					Object referenced = notification.getNewValue();
+					takeover((EObject) referenced);
+				}
+				takeover((EObject) notifier);
 			}
-
-			takeover((EObject) notifier);
 		}
 
 		super.notifyChanged(notification);
 
-//		if (notification.getEventType() == Notification.ADD) {
-//			Object added = notification.getNewValue();
-//			insertOrUpdate(added);
-//		}
-
-		if(isStructuralChange(notification)) {
+		if(isValueChange(notification)) {
 			insertOrUpdate(notifier);
 
 			// Avoid nested firing
@@ -89,6 +85,18 @@ public class FactPublisher extends EContentAdapter {
 		}
 	}
 
+	protected boolean isValueChange(Notification notification) {
+		int t = notification.getEventType();
+		return t == Notification.ADD
+			|| t == Notification.ADD_MANY
+			|| t == Notification.SET
+			|| t == Notification.UNSET
+			|| t == Notification.REMOVE
+			|| t == Notification.REMOVE_MANY
+			|| t == Notification.MOVE
+			;
+	}
+
 	private void takeover(EObject notifier) {
 		ScaffoldingStatus status = ScaffoldingStatusAdapterFactory.getScaffoldingStatus(notifier);
 		if (status != null && status.isScaffolded()) {
@@ -101,24 +109,6 @@ public class FactPublisher extends EContentAdapter {
 			}
 
 		}
-	}
-
-	private boolean requiresTakeover(Notification notification) {
-		int t = notification.getEventType();
-
-		boolean isContainer = notification.getFeature() instanceof EReference && ((EReference)notification.getFeature()).isContainer();
-		if(t == Notification.SET && isContainer && notification.getNewValue() == null) {
-			return false;
-		}
-
-		return t == Notification.ADD || t == Notification.ADD_MANY
-				|| t == Notification.MOVE || t == Notification.REMOVE
-				|| t == Notification.REMOVE_MANY || t == Notification.SET
-				|| t == Notification.UNSET;
-	}
-
-	private boolean isStructuralChange(Notification notification) {
-		return notification.getEventType() != Notification.REMOVING_ADAPTER;
 	}
 
 	private void insertOrUpdate(Object object) {

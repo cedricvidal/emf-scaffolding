@@ -10,6 +10,7 @@ import java.util.List;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipselabs.emf.scaffolding.tests.model1.*;
 import org.eclipselabs.emf.scaffolding.tests.model1.Application;
 import org.eclipselabs.emf.scaffolding.tests.model1.ApplicationElement;
 import org.eclipselabs.emf.scaffolding.tests.model1.DAO;
@@ -101,6 +102,7 @@ public class Model1Switch<T> {
 			case Model1Package.DAO: {
 				DAO dao = (DAO)theEObject;
 				T result = caseDAO(dao);
+				if (result == null) result = caseComponent(dao);
 				if (result == null) result = caseApplicationElement(dao);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -120,6 +122,21 @@ public class Model1Switch<T> {
 			case Model1Package.APPLICATION_ELEMENT: {
 				ApplicationElement applicationElement = (ApplicationElement)theEObject;
 				T result = caseApplicationElement(applicationElement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Model1Package.SERVICE: {
+				Service service = (Service)theEObject;
+				T result = caseService(service);
+				if (result == null) result = caseComponent(service);
+				if (result == null) result = caseApplicationElement(service);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Model1Package.COMPONENT: {
+				Component component = (Component)theEObject;
+				T result = caseComponent(component);
+				if (result == null) result = caseApplicationElement(component);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -199,6 +216,36 @@ public class Model1Switch<T> {
 	 * @generated
 	 */
 	public T caseApplicationElement(ApplicationElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Service</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Service</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseService(Service object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Component</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Component</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseComponent(Component object) {
 		return null;
 	}
 

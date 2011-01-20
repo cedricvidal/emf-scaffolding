@@ -28,7 +28,6 @@ import org.eclipselabs.emf.scaffolding.tests.model1.Model1Package;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.eclipselabs.emf.scaffolding.tests.model1.impl.DAOImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.eclipselabs.emf.scaffolding.tests.model1.impl.DAOImpl#getMethods <em>Methods</em>}</li>
  *   <li>{@link org.eclipselabs.emf.scaffolding.tests.model1.impl.DAOImpl#getEntity <em>Entity</em>}</li>
  * </ul>
@@ -36,27 +35,7 @@ import org.eclipselabs.emf.scaffolding.tests.model1.Model1Package;
  *
  * @generated
  */
-public class DAOImpl extends ApplicationElementImpl implements DAO {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
+public class DAOImpl extends ComponentImpl implements DAO {
 	/**
 	 * The cached value of the '{@link #getMethods() <em>Methods</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -94,27 +73,6 @@ public class DAOImpl extends ApplicationElementImpl implements DAO {
 	@Override
 	protected EClass eStaticClass() {
 		return Model1Package.Literals.DAO;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Model1Package.DAO__NAME, oldName, name));
 	}
 
 	/**
@@ -189,8 +147,6 @@ public class DAOImpl extends ApplicationElementImpl implements DAO {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Model1Package.DAO__NAME:
-				return getName();
 			case Model1Package.DAO__METHODS:
 				return getMethods();
 			case Model1Package.DAO__ENTITY:
@@ -209,9 +165,6 @@ public class DAOImpl extends ApplicationElementImpl implements DAO {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Model1Package.DAO__NAME:
-				setName((String)newValue);
-				return;
 			case Model1Package.DAO__METHODS:
 				getMethods().clear();
 				getMethods().addAll((Collection<? extends Method>)newValue);
@@ -231,9 +184,6 @@ public class DAOImpl extends ApplicationElementImpl implements DAO {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Model1Package.DAO__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case Model1Package.DAO__METHODS:
 				getMethods().clear();
 				return;
@@ -252,30 +202,12 @@ public class DAOImpl extends ApplicationElementImpl implements DAO {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Model1Package.DAO__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case Model1Package.DAO__METHODS:
 				return methods != null && !methods.isEmpty();
 			case Model1Package.DAO__ENTITY:
 				return entity != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //DAOImpl

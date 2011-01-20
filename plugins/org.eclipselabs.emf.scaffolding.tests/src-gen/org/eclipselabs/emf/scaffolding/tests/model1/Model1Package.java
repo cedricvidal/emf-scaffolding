@@ -79,13 +79,22 @@ public interface Model1Package extends EPackage {
 	int APPLICATION_ELEMENT__APPLICATION = 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int APPLICATION_ELEMENT__NAME = 1;
+
+	/**
 	 * The number of structural features of the '<em>Application Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int APPLICATION_ELEMENT_FEATURE_COUNT = 1;
+	int APPLICATION_ELEMENT_FEATURE_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.tests.model1.impl.EntityImpl <em>Entity</em>}' class.
@@ -113,7 +122,7 @@ public interface Model1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__NAME = APPLICATION_ELEMENT_FEATURE_COUNT + 0;
+	int ENTITY__NAME = APPLICATION_ELEMENT__NAME;
 
 	/**
 	 * The number of structural features of the '<em>Entity</em>' class.
@@ -122,7 +131,44 @@ public interface Model1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE_COUNT = APPLICATION_ELEMENT_FEATURE_COUNT + 1;
+	int ENTITY_FEATURE_COUNT = APPLICATION_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.tests.model1.impl.ComponentImpl <em>Component</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipselabs.emf.scaffolding.tests.model1.impl.ComponentImpl
+	 * @see org.eclipselabs.emf.scaffolding.tests.model1.impl.Model1PackageImpl#getComponent()
+	 * @generated
+	 */
+	int COMPONENT = 6;
+
+	/**
+	 * The feature id for the '<em><b>Application</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__APPLICATION = APPLICATION_ELEMENT__APPLICATION;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__NAME = APPLICATION_ELEMENT__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Component</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_FEATURE_COUNT = APPLICATION_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.tests.model1.impl.DAOImpl <em>DAO</em>}' class.
@@ -141,7 +187,7 @@ public interface Model1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DAO__APPLICATION = APPLICATION_ELEMENT__APPLICATION;
+	int DAO__APPLICATION = COMPONENT__APPLICATION;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -150,7 +196,7 @@ public interface Model1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DAO__NAME = APPLICATION_ELEMENT_FEATURE_COUNT + 0;
+	int DAO__NAME = COMPONENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Methods</b></em>' containment reference list.
@@ -159,7 +205,7 @@ public interface Model1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DAO__METHODS = APPLICATION_ELEMENT_FEATURE_COUNT + 1;
+	int DAO__METHODS = COMPONENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Entity</b></em>' reference.
@@ -168,7 +214,7 @@ public interface Model1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DAO__ENTITY = APPLICATION_ELEMENT_FEATURE_COUNT + 2;
+	int DAO__ENTITY = COMPONENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>DAO</em>' class.
@@ -177,7 +223,7 @@ public interface Model1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DAO_FEATURE_COUNT = APPLICATION_ELEMENT_FEATURE_COUNT + 3;
+	int DAO_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.tests.model1.impl.MethodImpl <em>Method</em>}' class.
@@ -237,6 +283,53 @@ public interface Model1Package extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.tests.model1.impl.ServiceImpl <em>Service</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipselabs.emf.scaffolding.tests.model1.impl.ServiceImpl
+	 * @see org.eclipselabs.emf.scaffolding.tests.model1.impl.Model1PackageImpl#getService()
+	 * @generated
+	 */
+	int SERVICE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Application</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE__APPLICATION = COMPONENT__APPLICATION;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE__NAME = COMPONENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Dependencies</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE__DEPENDENCIES = COMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Service</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 1;
+
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.tests.model1.Entity <em>Entity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -247,17 +340,6 @@ public interface Model1Package extends EPackage {
 	EClass getEntity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.eclipselabs.emf.scaffolding.tests.model1.Entity#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.eclipselabs.emf.scaffolding.tests.model1.Entity#getName()
-	 * @see #getEntity()
-	 * @generated
-	 */
-	EAttribute getEntity_Name();
-
-	/**
 	 * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.tests.model1.DAO <em>DAO</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -266,17 +348,6 @@ public interface Model1Package extends EPackage {
 	 * @generated
 	 */
 	EClass getDAO();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.eclipselabs.emf.scaffolding.tests.model1.DAO#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.eclipselabs.emf.scaffolding.tests.model1.DAO#getName()
-	 * @see #getDAO()
-	 * @generated
-	 */
-	EAttribute getDAO_Name();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link org.eclipselabs.emf.scaffolding.tests.model1.DAO#getMethods <em>Methods</em>}'.
@@ -364,6 +435,48 @@ public interface Model1Package extends EPackage {
 	EReference getApplicationElement_Application();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.eclipselabs.emf.scaffolding.tests.model1.ApplicationElement#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.eclipselabs.emf.scaffolding.tests.model1.ApplicationElement#getName()
+	 * @see #getApplicationElement()
+	 * @generated
+	 */
+	EAttribute getApplicationElement_Name();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.tests.model1.Service <em>Service</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Service</em>'.
+	 * @see org.eclipselabs.emf.scaffolding.tests.model1.Service
+	 * @generated
+	 */
+	EClass getService();
+
+	/**
+	 * Returns the meta object for the reference list '{@link org.eclipselabs.emf.scaffolding.tests.model1.Service#getDependencies <em>Dependencies</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Dependencies</em>'.
+	 * @see org.eclipselabs.emf.scaffolding.tests.model1.Service#getDependencies()
+	 * @see #getService()
+	 * @generated
+	 */
+	EReference getService_Dependencies();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.tests.model1.Component <em>Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Component</em>'.
+	 * @see org.eclipselabs.emf.scaffolding.tests.model1.Component
+	 * @generated
+	 */
+	EClass getComponent();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -396,14 +509,6 @@ public interface Model1Package extends EPackage {
 		EClass ENTITY = eINSTANCE.getEntity();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENTITY__NAME = eINSTANCE.getEntity_Name();
-
-		/**
 		 * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.tests.model1.impl.DAOImpl <em>DAO</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -412,14 +517,6 @@ public interface Model1Package extends EPackage {
 		 * @generated
 		 */
 		EClass DAO = eINSTANCE.getDAO();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DAO__NAME = eINSTANCE.getDAO_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Methods</b></em>' containment reference list feature.
@@ -490,6 +587,42 @@ public interface Model1Package extends EPackage {
 		 * @generated
 		 */
 		EReference APPLICATION_ELEMENT__APPLICATION = eINSTANCE.getApplicationElement_Application();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute APPLICATION_ELEMENT__NAME = eINSTANCE.getApplicationElement_Name();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.tests.model1.impl.ServiceImpl <em>Service</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipselabs.emf.scaffolding.tests.model1.impl.ServiceImpl
+		 * @see org.eclipselabs.emf.scaffolding.tests.model1.impl.Model1PackageImpl#getService()
+		 * @generated
+		 */
+		EClass SERVICE = eINSTANCE.getService();
+
+		/**
+		 * The meta object literal for the '<em><b>Dependencies</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SERVICE__DEPENDENCIES = eINSTANCE.getService_Dependencies();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.tests.model1.impl.ComponentImpl <em>Component</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipselabs.emf.scaffolding.tests.model1.impl.ComponentImpl
+		 * @see org.eclipselabs.emf.scaffolding.tests.model1.impl.Model1PackageImpl#getComponent()
+		 * @generated
+		 */
+		EClass COMPONENT = eINSTANCE.getComponent();
 
 	}
 
