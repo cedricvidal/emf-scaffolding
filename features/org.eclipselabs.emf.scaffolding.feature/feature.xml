@@ -18,7 +18,8 @@
    </license>
 
    <requires>
-      <import feature="org.eclipse.xtext.runtime" version="1.0.1.v201008251220"/>
+      <import feature="org.eclipse.xtext.sdk" version="1.0.1.v201008251220" match="greaterOrEqual"/>
+      <import feature="org.eclipse.emf.sdk" version="2.6.1.v20100914-1218" match="greaterOrEqual"/>
    </requires>
 
    <plugin
