@@ -317,7 +317,8 @@ public class EMFScaffoldingSessionListener extends EContentAdapter {
 				.newKnowledgeBuilder(knowledgeBuilderConfig);
 		
 		InputStreamResource res = new InputStreamResource(contents);
-		kbuilder.add(res, ResourceType.DRL);
+		ResourceType resourceType = getResourceType(filePath);
+		kbuilder.add(res, resourceType);
 
 		Collection<KnowledgePackage> pkgs = kbuilder.getKnowledgePackages();
 		KnowledgeBuilderErrors errors = kbuilder.getErrors();
@@ -325,6 +326,14 @@ public class EMFScaffoldingSessionListener extends EContentAdapter {
 			System.err.println("KnowledgeBuilder error : " + error.getMessage());
 		}
 		return pkgs;
+	}
+
+	protected ResourceType getResourceType(String resourceName) {
+		ResourceType type = ResourceType.determineResourceType(resourceName);
+		if(type == null) {
+			type = ResourceType.DRL;
+		}
+		return type;
 	}
 
 	private boolean isScaffoldingFilePath(Notification notification) {
