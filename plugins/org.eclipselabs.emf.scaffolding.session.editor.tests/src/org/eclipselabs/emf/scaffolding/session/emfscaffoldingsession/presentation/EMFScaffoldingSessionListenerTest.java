@@ -31,6 +31,12 @@ public class EMFScaffoldingSessionListenerTest {
 	}
 
 	@Test
+	public void fileWithXcsExtensionMapsToChangesetResourceType() {
+		EMFScaffoldingSessionListener emfScaffoldingSessionListener = new EMFScaffoldingSessionListener(null);
+		assertEquals(ResourceType.CHANGE_SET, emfScaffoldingSessionListener.getResourceType("test.xcs"));
+	}
+
+	@Test
 	public void fileWithDummyExtensionMapsToDrlResourceType() {
 		EMFScaffoldingSessionListener emfScaffoldingSessionListener = new EMFScaffoldingSessionListener(null);
 		assertEquals(ResourceType.DRL, emfScaffoldingSessionListener.getResourceType("test.xxxx"));
