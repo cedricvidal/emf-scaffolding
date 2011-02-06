@@ -2,3 +2,4 @@ glob:bin
 glob:*_gen
 glob:.antlr-generator-*.jar
 glob:*.bak
+glob:*.orig

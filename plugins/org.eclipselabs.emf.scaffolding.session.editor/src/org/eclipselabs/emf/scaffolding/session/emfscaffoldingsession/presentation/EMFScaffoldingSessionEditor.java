@@ -674,7 +674,7 @@ public class EMFScaffoldingSessionEditor
 	 * This sets up the editing domain for the model editor.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	protected void initializeEditingDomain() {
 		// Create an adapter factory that yields item providers.
@@ -951,7 +951,7 @@ public class EMFScaffoldingSessionEditor
 	 * This is the method called to load a resource into the editing domain's resource set based on the editor's input.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void createModel() {
 		URI resourceURI = EditUIUtil.getURI(getEditorInput());
@@ -1352,7 +1352,7 @@ public class EMFScaffoldingSessionEditor
 	 * This is for implementing {@link IEditorPart} and simply saves the model file.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public void doSave(IProgressMonitor progressMonitor) {
