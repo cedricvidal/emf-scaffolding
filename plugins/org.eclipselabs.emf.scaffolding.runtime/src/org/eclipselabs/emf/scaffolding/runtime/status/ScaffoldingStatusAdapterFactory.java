@@ -15,15 +15,33 @@ import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipselabs.emf.scaffolding.runtime.status.scaffoldingStatusCache.ScaffoldingStatusCache;
 
 public class ScaffoldingStatusAdapterFactory extends NotifierAdapterFactory {
 
 //	public static final ScaffoldAdapterFactory INSTANCE = new ScaffoldAdapterFactory();
 
+	private ScaffoldingStatusCache scaffoldingStatusCache = null;
+
+	public ScaffoldingStatusCache getScaffoldingStatusCache() {
+		return scaffoldingStatusCache;
+	}
+
+	public void setScaffoldingStatusCache(
+			ScaffoldingStatusCache scaffoldingStatusCache) {
+		this.scaffoldingStatusCache = scaffoldingStatusCache;
+	}
+
 	@Override
 	protected ScaffoldingStatusAdapter createAdapter(Notifier target) {
-		boolean scaffolding = ScaffoldingContext.isScaffolding();
-		ScaffoldingStatusAdapter scaffoldAdapter = new ScaffoldingStatusAdapter(this, scaffolding);
+		ScaffoldingStatusAdapter scaffoldAdapter = null;
+		boolean inScaffoldingSession = ScaffoldingContext.isScaffolding();
+		if(scaffoldingStatusCache != null) {
+			scaffoldAdapter = new PersistentScaffoldingStatusAdapter(this, scaffoldingStatusCache);
+		} else {
+			scaffoldAdapter = new TransientScaffoldingStatusAdapter(this);
+			scaffoldAdapter.setScaffolded(inScaffoldingSession);
+		}
 		return scaffoldAdapter;
 	}
 

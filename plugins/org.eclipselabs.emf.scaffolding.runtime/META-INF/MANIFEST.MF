@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: EMF Scaffolding Runtime
-Bundle-SymbolicName: org.eclipselabs.emf.scaffolding.runtime
+Bundle-SymbolicName: org.eclipselabs.emf.scaffolding.runtime;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.eclipselabs.emf.scaffolding.runtime.Activator
 Require-Bundle: org.eclipse.core.runtime,
@@ -159,6 +159,7 @@ Export-Package: org.drools,
  org.eclipselabs.emf.scaffolding.runtime.internal.compiler;x-friends:="org.eclipselabs.emf.scaffolding.tests",
  org.eclipselabs.emf.scaffolding.runtime.internal.engine;x-friends:="org.eclipselabs.emf.scaffolding.tests",
  org.eclipselabs.emf.scaffolding.runtime.status,
+ org.eclipselabs.emf.scaffolding.runtime.status.scaffoldingStatusCache,
  org.eclipselabs.emf.scaffolding.runtime.takeover,
  org.mvel2,
  org.mvel2.asm,

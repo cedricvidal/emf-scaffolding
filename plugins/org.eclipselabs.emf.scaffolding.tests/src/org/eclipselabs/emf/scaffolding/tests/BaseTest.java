@@ -46,6 +46,10 @@ public class BaseTest {
 		assertTrue("Scaffolding adapter is not registered", ScaffoldingExecutionEnvironment.isConfigured(object));
 	}
 
+	public static void assertScaffoldingAdapterIsNotRegistered(EObject object) {
+		assertTrue("Scaffolding adapter is registered", !ScaffoldingExecutionEnvironment.isConfigured(object));
+	}
+
 	public static void assertScaffolded(EObject element) {
 		assertTrue("Not scaffolded", ScaffoldingStatusAdapterFactory.isScaffolded(element));
 	}

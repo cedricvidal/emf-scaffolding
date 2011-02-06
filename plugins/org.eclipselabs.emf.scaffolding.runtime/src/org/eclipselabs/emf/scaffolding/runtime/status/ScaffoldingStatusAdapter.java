@@ -11,18 +11,19 @@
  *******************************************************************************/
 package org.eclipselabs.emf.scaffolding.runtime.status;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.Notifier;
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipse.emf.ecore.util.EContentAdapter;
 
 
 /**
+ * Transient scaffolding status
+ * 
  * XXX IChangeNotifier: implement interface ?
  */
-public class ScaffoldingStatusAdapter extends EContentAdapter implements ScaffoldingStatus {
+public abstract class ScaffoldingStatusAdapter extends EContentAdapter implements ScaffoldingStatus {
 
-	private ScaffoldingStatusAdapterFactory scaffoldAdapterFactory;
+	protected ScaffoldingStatusAdapterFactory scaffoldAdapterFactory;
 
 	public ScaffoldingStatusAdapterFactory getScaffoldAdapterFactory() {
 		return scaffoldAdapterFactory;
@@ -38,28 +39,9 @@ public class ScaffoldingStatusAdapter extends EContentAdapter implements Scaffol
 		this.scaffoldAdapterFactory = scaffoldAdapterFactory;
 	}
 
-	public ScaffoldingStatusAdapter(ScaffoldingStatusAdapterFactory scaffoldAdapterFactory, boolean scaffolded) {
-		this(scaffoldAdapterFactory);
-		this.scaffolded = scaffolded;
-	}
+	public abstract boolean isScaffolded();
 
-	private boolean scaffolded;
-
-	public boolean isScaffolded() {
-		return scaffolded;
-	}
-
-	public void setScaffolded(boolean scaffolded) {
-		boolean oldValue = this.scaffolded;
-		this.scaffolded = scaffolded;
-		EObject targetObject = (EObject) getTarget();
-		if(oldValue != scaffolded) {
-			this.scaffoldAdapterFactory
-					.eNotify(new ScaffoldingStatusChangedNotification(
-							targetObject, Notification.SET, oldValue,
-							scaffolded));
-		}
-	}
+	public abstract void setScaffolded(boolean scaffolded);
 
 	@Override
 	public boolean isAdapterForType(Object type) {
@@ -67,7 +49,7 @@ public class ScaffoldingStatusAdapter extends EContentAdapter implements Scaffol
 	}
 
 	/**
-	 * Adds adapter to child content
+	 * Adds adapter to child content. This is a statefull adapter.
 	 * 
 	 * @see org.eclipse.emf.ecore.util.EContentAdapter#addAdapter(org.eclipse.emf.common.notify.Notifier)
 	 */
@@ -86,6 +68,20 @@ public class ScaffoldingStatusAdapter extends EContentAdapter implements Scaffol
 		// As this adapter has one instance per notifier, we can't rely on super
 		// implementation
 		scaffoldAdapterFactory.unadapt(notifier);
+	}
+
+	/**
+	 * We need to keep track of the target, this behavior from
+	 * {@link AdapterImpl} is dropped in {@link EContentAdapter}, we need it
+	 * back.
+	 * 
+	 * @see org.eclipse.emf.ecore.util.EContentAdapter#setTarget(org.eclipse.emf.common.notify.Notifier)
+	 */
+	@Override
+	public void setTarget(Notifier target) {
+		super.setTarget(target);
+
+		this.target = target;
 	}
 
 }
