@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.eclipselabs.emf.scaffolding.runtime.status.scaffoldingStatusCache.ScaffoldingStatusCachePackage;
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.EMFScaffoldingSessionFactory;
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.EMFScaffoldingSessionPackage;
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.Input;
@@ -114,6 +115,9 @@ public class EMFScaffoldingSessionPackageImpl extends EPackageImpl implements EM
 
 		isInited = true;
 
+		// Initialize simple dependencies
+		ScaffoldingStatusCachePackage.eINSTANCE.eClass();
+
 		// Create package meta-data objects
 		theEMFScaffoldingSessionPackage.createPackageContents();
 
@@ -172,6 +176,15 @@ public class EMFScaffoldingSessionPackageImpl extends EPackageImpl implements EM
 	 */
 	public EReference getScaffoldingSession_Outputs() {
 		return (EReference)scaffoldingSessionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getScaffoldingSession_Cache() {
+		return (EReference)scaffoldingSessionEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -288,6 +301,7 @@ public class EMFScaffoldingSessionPackageImpl extends EPackageImpl implements EM
 		createEReference(scaffoldingSessionEClass, SCAFFOLDING_SESSION__INPUTS);
 		createEReference(scaffoldingSessionEClass, SCAFFOLDING_SESSION__TRASH);
 		createEReference(scaffoldingSessionEClass, SCAFFOLDING_SESSION__OUTPUTS);
+		createEReference(scaffoldingSessionEClass, SCAFFOLDING_SESSION__CACHE);
 
 		scaffoldingFileEClass = createEClass(SCAFFOLDING_FILE);
 		createEAttribute(scaffoldingFileEClass, SCAFFOLDING_FILE__PATH);
@@ -326,6 +340,9 @@ public class EMFScaffoldingSessionPackageImpl extends EPackageImpl implements EM
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		ScaffoldingStatusCachePackage theScaffoldingStatusCachePackage = (ScaffoldingStatusCachePackage)EPackage.Registry.INSTANCE.getEPackage(ScaffoldingStatusCachePackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
@@ -338,6 +355,7 @@ public class EMFScaffoldingSessionPackageImpl extends EPackageImpl implements EM
 		initEReference(getScaffoldingSession_Inputs(), this.getInput(), null, "inputs", null, 0, -1, ScaffoldingSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getScaffoldingSession_Trash(), this.getTrash(), null, "trash", null, 0, 1, ScaffoldingSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getScaffoldingSession_Outputs(), this.getOutput(), null, "outputs", null, 0, -1, ScaffoldingSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getScaffoldingSession_Cache(), theScaffoldingStatusCachePackage.getScaffoldingStatusCache(), null, "cache", null, 0, 1, ScaffoldingSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(scaffoldingFileEClass, ScaffoldingFile.class, "ScaffoldingFile", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getScaffoldingFile_Path(), ecorePackage.getEString(), "path", null, 0, 1, ScaffoldingFile.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

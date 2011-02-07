@@ -47,6 +47,7 @@ import org.eclipse.ui.console.MessageConsoleStream;
 import org.eclipselabs.emf.scaffolding.runtime.ScaffoldingExecutionEnvironment;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingContext;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatusAdapterFactory;
+import org.eclipselabs.emf.scaffolding.runtime.status.scaffoldingStatusCache.ScaffoldingStatusCache;
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.EMFScaffoldingSessionPackage;
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.Input;
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.ScaffoldingFile;

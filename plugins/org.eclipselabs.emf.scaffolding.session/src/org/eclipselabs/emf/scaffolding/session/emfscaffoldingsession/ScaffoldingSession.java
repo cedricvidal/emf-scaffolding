@@ -14,6 +14,7 @@ package org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipselabs.emf.scaffolding.runtime.status.scaffoldingStatusCache.ScaffoldingStatusCache;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,6 +28,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.ScaffoldingSession#getInputs <em>Inputs</em>}</li>
  *   <li>{@link org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.ScaffoldingSession#getTrash <em>Trash</em>}</li>
  *   <li>{@link org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.ScaffoldingSession#getOutputs <em>Outputs</em>}</li>
+ *   <li>{@link org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.ScaffoldingSession#getCache <em>Cache</em>}</li>
  * </ul>
  * </p>
  *
@@ -118,5 +120,31 @@ public interface ScaffoldingSession extends EObject {
 	 * @generated
 	 */
 	EList<Output> getOutputs();
+
+	/**
+	 * Returns the value of the '<em><b>Cache</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Cache</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Cache</em>' containment reference.
+	 * @see #setCache(ScaffoldingStatusCache)
+	 * @see org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.EMFScaffoldingSessionPackage#getScaffoldingSession_Cache()
+	 * @model containment="true"
+	 * @generated
+	 */
+	ScaffoldingStatusCache getCache();
+
+	/**
+	 * Sets the value of the '{@link org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.ScaffoldingSession#getCache <em>Cache</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Cache</em>' containment reference.
+	 * @see #getCache()
+	 * @generated
+	 */
+	void setCache(ScaffoldingStatusCache value);
 
 } // ScaffoldingSession

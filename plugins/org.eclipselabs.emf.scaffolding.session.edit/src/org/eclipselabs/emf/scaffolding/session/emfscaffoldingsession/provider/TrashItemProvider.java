@@ -31,6 +31,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipselabs.emf.scaffolding.runtime.status.scaffoldingStatusCache.ScaffoldingStatusCacheFactory;
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.EMFScaffoldingSessionFactory;
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.EMFScaffoldingSessionPackage;
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.Trash;
@@ -180,6 +181,11 @@ public class TrashItemProvider
 			(createChildParameter
 				(EMFScaffoldingSessionPackage.Literals.TRASH__ELEMENTS,
 				 EMFScaffoldingSessionFactory.eINSTANCE.createOutput()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(EMFScaffoldingSessionPackage.Literals.TRASH__ELEMENTS,
+				 ScaffoldingStatusCacheFactory.eINSTANCE.createScaffoldingStatusCache()));
 	}
 
 	/**

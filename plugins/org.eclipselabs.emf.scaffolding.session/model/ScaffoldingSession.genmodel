@@ -3,15 +3,17 @@
     xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipselabs.emf.scaffolding.session/src"
     modelPluginID="org.eclipselabs.emf.scaffolding.session" modelName="ScaffoldingSession"
-    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false">
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    usedGenPackages="../../org.eclipselabs.emf.scaffolding.runtime/model/ScaffoldingStatusCache.genmodel#//scaffoldingStatusCache">
   <foreignModel>ScaffoldingSession.ecore</foreignModel>
   <genPackages prefix="EMFScaffoldingSession" basePackage="org.eclipselabs.emf.scaffolding.session"
       disposableProviderFactory="true" fileExtensions="ess" ecorePackage="ScaffoldingSession.ecore#/">
     <genClasses ecoreClass="ScaffoldingSession.ecore#//ScaffoldingSession">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ScaffoldingSession.ecore#//ScaffoldingSession/files"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ScaffoldingSession.ecore#//ScaffoldingSession/scaffoldingFile"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ScaffoldingSession.ecore#//ScaffoldingSession/inputs"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ScaffoldingSession.ecore#//ScaffoldingSession/trash"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ScaffoldingSession.ecore#//ScaffoldingSession/outputs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ScaffoldingSession.ecore#//ScaffoldingSession/cache"/>
     </genClasses>
     <genClasses ecoreClass="ScaffoldingSession.ecore#//ScaffoldingFile">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ScaffoldingSession.ecore#//ScaffoldingFile/path"/>
@@ -24,6 +26,7 @@
     </genClasses>
     <genClasses ecoreClass="ScaffoldingSession.ecore#//Output">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ScaffoldingSession.ecore#//Output/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ScaffoldingSession.ecore#//Output/elements"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

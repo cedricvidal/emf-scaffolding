@@ -111,13 +111,22 @@ public interface EMFScaffoldingSessionPackage extends EPackage {
 	int SCAFFOLDING_SESSION__OUTPUTS = 3;
 
 	/**
+	 * The feature id for the '<em><b>Cache</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCAFFOLDING_SESSION__CACHE = 4;
+
+	/**
 	 * The number of structural features of the '<em>Scaffolding Session</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCAFFOLDING_SESSION_FEATURE_COUNT = 4;
+	int SCAFFOLDING_SESSION_FEATURE_COUNT = 5;
 
 	/**
 	 * The meta object id for the '{@link org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.impl.ScaffoldingFileImpl <em>Scaffolding File</em>}' class.
@@ -296,6 +305,17 @@ public interface EMFScaffoldingSessionPackage extends EPackage {
 	EReference getScaffoldingSession_Outputs();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.ScaffoldingSession#getCache <em>Cache</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Cache</em>'.
+	 * @see org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.ScaffoldingSession#getCache()
+	 * @see #getScaffoldingSession()
+	 * @generated
+	 */
+	EReference getScaffoldingSession_Cache();
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.ScaffoldingFile <em>Scaffolding File</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -453,6 +473,14 @@ public interface EMFScaffoldingSessionPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SCAFFOLDING_SESSION__OUTPUTS = eINSTANCE.getScaffoldingSession_Outputs();
+
+		/**
+		 * The meta object literal for the '<em><b>Cache</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SCAFFOLDING_SESSION__CACHE = eINSTANCE.getScaffoldingSession_Cache();
 
 		/**
 		 * The meta object literal for the '{@link org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.impl.ScaffoldingFileImpl <em>Scaffolding File</em>}' class.

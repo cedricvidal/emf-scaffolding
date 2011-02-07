@@ -142,6 +142,10 @@ import org.eclipse.ui.views.properties.PropertySheetPage;
 import org.eclipselabs.emf.scaffolding.runtime.status.NotifierAdapterFactory;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatusAdapterFactory;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatusChangedNotification;
+import org.eclipselabs.emf.scaffolding.runtime.status.scaffoldingStatusCache.ScaffoldingStatusCache;
+import org.eclipselabs.emf.scaffolding.runtime.status.scaffoldingStatusCache.ScaffoldingStatusCacheFactory;
+import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.EMFScaffoldingSessionFactory;
+import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.ScaffoldingSession;
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.provider.EMFScaffoldingSessionItemProviderAdapterFactory;
 import org.eclipselabs.emf.scaffolding.session.util.ScaffoldingStatusDecoratorAdapterFactory;
 import org.eclipselabs.emf.scaffolding.session.util.ScaffoldingStatusPruneCopier;
@@ -968,7 +972,16 @@ public class EMFScaffoldingSessionEditor
 		}
 
 		// XXX EMF Scaffolding Integration : Model
-		EObject rootContent = resource.getContents().get(0);
+		ScaffoldingSession rootContent = (ScaffoldingSession) resource.getContents().get(0);
+
+		if(useScaffoldingStatusCache()) {
+			ScaffoldingStatusCache cache = rootContent.getCache();
+			if(cache == null) {
+				cache = ScaffoldingStatusCacheFactory.eINSTANCE.createScaffoldingStatusCache();
+				rootContent.setCache(cache);
+			}
+			scaffoldingStatusAdapterFactory.setScaffoldingStatusCache(cache);
+		}
 
 		scaffoldingStatusAdapterFactory.adaptAllNew(rootContent);
 
@@ -982,6 +995,10 @@ public class EMFScaffoldingSessionEditor
 			resourceToDiagnosticMap.put(resource,  analyzeResourceProblems(resource, exception));
 		}
 		editingDomain.getResourceSet().eAdapters().add(problemIndicationAdapter);
+	}
+
+	protected boolean useScaffoldingStatusCache() {
+		return true;
 	}
 
 	/**
@@ -1021,7 +1038,7 @@ public class EMFScaffoldingSessionEditor
 	 * This is the method used by the framework to install your own controls.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public void createPages() {
@@ -1379,18 +1396,23 @@ public class EMFScaffoldingSessionEditor
 
 								// XXX EMF Scaffolding Integration : Editor onSave pruning
 
-								// Replace resource content with pruned content
 								EList<EObject> resourceContents = resource.getContents();
 
-								List<EObject> contentsBackup = new ArrayList<EObject>();
-								contentsBackup.addAll(resourceContents);
+								List<EObject> contentsBackup = null;
 
-								Copier copier = new ScaffoldingStatusPruneCopier();
-								EObject pruned = copier.copy(resourceContents.get(0));
-								copier.copyReferences();
+								// If not using a scaffolding status cache then
+								// replace resource content with pruned content
+								if(!useScaffoldingStatusCache()) {
+									contentsBackup = new ArrayList<EObject>();
+									contentsBackup.addAll(resourceContents);
 
-								resourceContents.clear();
-								resourceContents.add(pruned);
+									Copier copier = new ScaffoldingStatusPruneCopier();
+									EObject pruned = copier.copy(resourceContents.get(0));
+									copier.copyReferences();
+
+									resourceContents.clear();
+									resourceContents.add(pruned);
+								}
 
 								// End of EMF Scaffolding integration
 
@@ -1401,9 +1423,11 @@ public class EMFScaffoldingSessionEditor
 
 								// XXX EMF Scaffolding Integration : Editor onSave restoring
 
-								// Resource content restore must be done after timestamp check
-								resourceContents.clear();
-								resourceContents.addAll(contentsBackup);
+								if(!useScaffoldingStatusCache()) {
+									// Resource content restore must be done after timestamp check
+									resourceContents.clear();
+									resourceContents.addAll(contentsBackup);
+								}
 
 								// End of EMF Scaffolding integration
 

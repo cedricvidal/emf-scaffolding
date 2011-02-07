@@ -33,6 +33,7 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+import org.eclipselabs.emf.scaffolding.runtime.status.scaffoldingStatusCache.ScaffoldingStatusCacheFactory;
 import org.eclipse.swt.dnd.DND;
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.EMFScaffoldingSessionFactory;
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.EMFScaffoldingSessionPackage;
@@ -96,6 +97,7 @@ public class ScaffoldingSessionItemProvider
 			childrenFeatures.add(EMFScaffoldingSessionPackage.Literals.SCAFFOLDING_SESSION__INPUTS);
 			childrenFeatures.add(EMFScaffoldingSessionPackage.Literals.SCAFFOLDING_SESSION__TRASH);
 			childrenFeatures.add(EMFScaffoldingSessionPackage.Literals.SCAFFOLDING_SESSION__OUTPUTS);
+			childrenFeatures.add(EMFScaffoldingSessionPackage.Literals.SCAFFOLDING_SESSION__CACHE);
 		}
 		return childrenFeatures;
 	}
@@ -151,6 +153,7 @@ public class ScaffoldingSessionItemProvider
 			case EMFScaffoldingSessionPackage.SCAFFOLDING_SESSION__INPUTS:
 			case EMFScaffoldingSessionPackage.SCAFFOLDING_SESSION__TRASH:
 			case EMFScaffoldingSessionPackage.SCAFFOLDING_SESSION__OUTPUTS:
+			case EMFScaffoldingSessionPackage.SCAFFOLDING_SESSION__CACHE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -187,6 +190,11 @@ public class ScaffoldingSessionItemProvider
 			(createChildParameter
 				(EMFScaffoldingSessionPackage.Literals.SCAFFOLDING_SESSION__OUTPUTS,
 				 EMFScaffoldingSessionFactory.eINSTANCE.createOutput()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(EMFScaffoldingSessionPackage.Literals.SCAFFOLDING_SESSION__CACHE,
+				 ScaffoldingStatusCacheFactory.eINSTANCE.createScaffoldingStatusCache()));
 	}
 
 	/**

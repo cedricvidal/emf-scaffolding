@@ -32,6 +32,7 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.eclipselabs.emf.scaffolding.runtime.status.scaffoldingStatusCache.ScaffoldingStatusCacheFactory;
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.EMFScaffoldingSessionFactory;
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.EMFScaffoldingSessionPackage;
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.Output;
@@ -210,6 +211,11 @@ public class OutputItemProvider
 			(createChildParameter
 				(EMFScaffoldingSessionPackage.Literals.OUTPUT__ELEMENTS,
 				 EMFScaffoldingSessionFactory.eINSTANCE.createOutput()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(EMFScaffoldingSessionPackage.Literals.OUTPUT__ELEMENTS,
+				 ScaffoldingStatusCacheFactory.eINSTANCE.createScaffoldingStatusCache()));
 	}
 
 	/**

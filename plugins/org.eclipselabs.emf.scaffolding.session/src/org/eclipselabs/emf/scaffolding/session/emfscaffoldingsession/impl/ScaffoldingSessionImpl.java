@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.eclipselabs.emf.scaffolding.runtime.status.scaffoldingStatusCache.ScaffoldingStatusCache;
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.EMFScaffoldingSessionPackage;
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.Input;
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.Output;
@@ -45,6 +46,7 @@ import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.Trash;
  *   <li>{@link org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.impl.ScaffoldingSessionImpl#getInputs <em>Inputs</em>}</li>
  *   <li>{@link org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.impl.ScaffoldingSessionImpl#getTrash <em>Trash</em>}</li>
  *   <li>{@link org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.impl.ScaffoldingSessionImpl#getOutputs <em>Outputs</em>}</li>
+ *   <li>{@link org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.impl.ScaffoldingSessionImpl#getCache <em>Cache</em>}</li>
  * </ul>
  * </p>
  *
@@ -90,6 +92,16 @@ public class ScaffoldingSessionImpl extends EObjectImpl implements ScaffoldingSe
 	 * @ordered
 	 */
 	protected EList<Output> outputs;
+
+	/**
+	 * The cached value of the '{@link #getCache() <em>Cache</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCache()
+	 * @generated
+	 * @ordered
+	 */
+	protected ScaffoldingStatusCache cache;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -225,6 +237,49 @@ public class ScaffoldingSessionImpl extends EObjectImpl implements ScaffoldingSe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ScaffoldingStatusCache getCache() {
+		return cache;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetCache(ScaffoldingStatusCache newCache, NotificationChain msgs) {
+		ScaffoldingStatusCache oldCache = cache;
+		cache = newCache;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EMFScaffoldingSessionPackage.SCAFFOLDING_SESSION__CACHE, oldCache, newCache);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCache(ScaffoldingStatusCache newCache) {
+		if (newCache != cache) {
+			NotificationChain msgs = null;
+			if (cache != null)
+				msgs = ((InternalEObject)cache).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EMFScaffoldingSessionPackage.SCAFFOLDING_SESSION__CACHE, null, msgs);
+			if (newCache != null)
+				msgs = ((InternalEObject)newCache).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EMFScaffoldingSessionPackage.SCAFFOLDING_SESSION__CACHE, null, msgs);
+			msgs = basicSetCache(newCache, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EMFScaffoldingSessionPackage.SCAFFOLDING_SESSION__CACHE, newCache, newCache));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -236,6 +291,8 @@ public class ScaffoldingSessionImpl extends EObjectImpl implements ScaffoldingSe
 				return basicSetTrash(null, msgs);
 			case EMFScaffoldingSessionPackage.SCAFFOLDING_SESSION__OUTPUTS:
 				return ((InternalEList<?>)getOutputs()).basicRemove(otherEnd, msgs);
+			case EMFScaffoldingSessionPackage.SCAFFOLDING_SESSION__CACHE:
+				return basicSetCache(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -256,6 +313,8 @@ public class ScaffoldingSessionImpl extends EObjectImpl implements ScaffoldingSe
 				return getTrash();
 			case EMFScaffoldingSessionPackage.SCAFFOLDING_SESSION__OUTPUTS:
 				return getOutputs();
+			case EMFScaffoldingSessionPackage.SCAFFOLDING_SESSION__CACHE:
+				return getCache();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -283,6 +342,9 @@ public class ScaffoldingSessionImpl extends EObjectImpl implements ScaffoldingSe
 				getOutputs().clear();
 				getOutputs().addAll((Collection<? extends Output>)newValue);
 				return;
+			case EMFScaffoldingSessionPackage.SCAFFOLDING_SESSION__CACHE:
+				setCache((ScaffoldingStatusCache)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -307,6 +369,9 @@ public class ScaffoldingSessionImpl extends EObjectImpl implements ScaffoldingSe
 			case EMFScaffoldingSessionPackage.SCAFFOLDING_SESSION__OUTPUTS:
 				getOutputs().clear();
 				return;
+			case EMFScaffoldingSessionPackage.SCAFFOLDING_SESSION__CACHE:
+				setCache((ScaffoldingStatusCache)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -327,6 +392,8 @@ public class ScaffoldingSessionImpl extends EObjectImpl implements ScaffoldingSe
 				return trash != null;
 			case EMFScaffoldingSessionPackage.SCAFFOLDING_SESSION__OUTPUTS:
 				return outputs != null && !outputs.isEmpty();
+			case EMFScaffoldingSessionPackage.SCAFFOLDING_SESSION__CACHE:
+				return cache != null;
 		}
 		return super.eIsSet(featureID);
 	}

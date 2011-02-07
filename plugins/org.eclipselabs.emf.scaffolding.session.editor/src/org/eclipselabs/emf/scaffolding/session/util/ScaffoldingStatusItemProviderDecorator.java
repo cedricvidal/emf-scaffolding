@@ -50,8 +50,7 @@ public class ScaffoldingStatusItemProviderDecorator extends ItemProviderDecorato
 		boolean scaffolded = false;
 		if (object instanceof EObject) {
 			EObject eobject = (EObject) object;
-			ScaffoldingStatus scaffold = ScaffoldingStatusAdapterFactory.adapt(eobject);
-			scaffolded = scaffold != null && scaffold.isScaffolded();
+			scaffolded = ScaffoldingStatusAdapterFactory.isScaffolded(eobject);
 		}
 		return scaffolded;
 	}
