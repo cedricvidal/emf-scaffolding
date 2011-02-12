@@ -145,6 +145,7 @@ public class FactPublisher extends EContentAdapter {
 
 	@Override
 	protected void unsetTarget(EObject target) {
+		super.unsetTarget(target);
 		FactHandle factHandle = statefulKnowledgeSession.getFactHandle(target);
 		if (factHandle != null) {
 			statefulKnowledgeSession.retract(factHandle);
