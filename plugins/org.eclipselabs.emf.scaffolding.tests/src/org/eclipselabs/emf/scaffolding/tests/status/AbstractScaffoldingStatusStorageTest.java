@@ -185,7 +185,7 @@ public abstract class AbstractScaffoldingStatusStorageTest {
 
 	protected abstract void beforeSave(ResourceSet rs);
 
-	abstract protected void afterLoad(EObject element);
+	protected abstract void afterLoad(EObject element);
 
 	protected abstract ScaffoldingStatusCache getCache();
 
