@@ -51,6 +51,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil.Copier;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipselabs.emf.scaffolding.runtime.ScaffoldingExecutionEnvironment;
+import org.eclipselabs.emf.scaffolding.runtime.internal.engine.FactPublisher;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatusAdapterFactory;
 import org.eclipselabs.emf.scaffolding.runtime.status.scaffoldingStatusCache.ScaffoldingStatusCache;
 import org.eclipselabs.emf.scaffolding.runtime.status.scaffoldingStatusCache.ScaffoldingStatusCacheFactory;
@@ -68,11 +69,9 @@ import org.junit.Test;
 
 public class PersistentScaffoldingStatusAdapterTest {
 
-	private static final Model1Factory FACTORY = Model1Factory.eINSTANCE;
+	private static final String FS_ROOT = "memory:";
 
-	@Before
-	public void setup() {
-	}
+	private static final Model1Factory FACTORY = Model1Factory.eINSTANCE;
 
 	@Test
 	public void serialize() throws IOException {
@@ -96,19 +95,10 @@ public class PersistentScaffoldingStatusAdapterTest {
 				.put(Resource.Factory.Registry.DEFAULT_EXTENSION,
 						new XMIResourceFactoryImpl());
 
-		// Create a resource for the cache.
-		Resource cacheResource = resourceSet.createResource(URI.createURI("memory:cache.xmi"));
-		ScaffoldingStatusCache cache = null;
-		if(firstRun) {
-			cache = ScaffoldingStatusCacheFactory.eINSTANCE.createScaffoldingStatusCache();
-			cacheResource.getContents().add(cache);
-		} else {
-			cacheResource.load(null);
-			cache = (ScaffoldingStatusCache) cacheResource.getContents().get(0);
-		}
-
 		// Create a resource for this file.
-		Resource originalResource = resourceSet.createResource(URI.createURI("memory:original.xmi"));
+		Resource originalResource = resourceSet.createResource(URI.createURI(FS_ROOT + "original.xmi"));
+
+		ScaffoldingStatusCache cache = prepare(firstRun, resourceSet);
 
 		Application application = null;
 		if(firstRun) {
@@ -117,8 +107,8 @@ public class PersistentScaffoldingStatusAdapterTest {
 		} else {
 			originalResource.load(null);
 			application = (Application) originalResource.getContents().get(0);
-			assertScaffoldingAdapterIsNotRegistered(application);
 		}
+		assertScaffoldingAdapterIsNotRegistered(application);
 
 		// Keep track of fired activations to make sure no activations are fired when loading scaffolding status from store
 		final List<Activation> activations = new ArrayList<Activation>();
@@ -129,7 +119,8 @@ public class PersistentScaffoldingStatusAdapterTest {
 			}
 		};
 
-		createAndRegisterScaffoldingContext(cache, application, agendaListener);
+		ScaffoldingExecutionEnvironment ctx = createAndRegisterScaffoldingContext(cache, application, agendaListener);
+		FactPublisher factPublisher = ScaffoldingExecutionEnvironment.getFactPublisher(application);
 
 		assertScaffoldingAdapterIsRegistered(application);
 
@@ -167,32 +158,29 @@ public class PersistentScaffoldingStatusAdapterTest {
 			System.out.println("Saving resources in resource set");
 			for (Resource resource : resourceSet.getResources()) {
 				resource.save(null);
+				System.out.println(" ==> Saving resource " + resource.getURI());
+				resource.save(System.out, null);
 			}
-		}
-
-		System.out.println("Model");
-		print(originalResource);
-
-		System.out.println("Scaffolding status cache");
-		print(cacheResource);
-
-		// Just to ease debugging, not relevant to the test
-		if(firstRun) {
-			// Pruned copy
-			Copier copier = new ScaffoldingStatusPruneCopier();
-			EObject pruned = copier.copy(application);
-			copier.copyReferences();
-			Resource prunedResource = resourceSet.createResource(URI.createURI("memory:pruned.xmi"));
-			prunedResource.getContents().add(pruned);
-
-			System.out.println("PRUNED");
-			print(prunedResource);
-			
 		}
 
 	}
 
-	protected void createAndRegisterScaffoldingContext(ScaffoldingStatusCache cache,
+	private ScaffoldingStatusCache prepare(boolean firstRun,
+			ResourceSet resourceSet) throws IOException {
+		// Create a resource for the cache.
+		Resource cacheResource = resourceSet.createResource(URI.createURI(FS_ROOT + "cache.xmi"));
+		ScaffoldingStatusCache cache = null;
+		if(firstRun) {
+			cache = ScaffoldingStatusCacheFactory.eINSTANCE.createScaffoldingStatusCache();
+			cacheResource.getContents().add(cache);
+		} else {
+			cacheResource.load(null);
+			cache = (ScaffoldingStatusCache) cacheResource.getContents().get(0);
+		}
+		return cache;
+	}
+
+	protected ScaffoldingExecutionEnvironment createAndRegisterScaffoldingContext(ScaffoldingStatusCache cache,
 			Application application, AgendaEventListener listener) {
 		//Init Knowledge Base from drl files
 		KnowledgeBase kbase = KnowledgeBaseFactory.newKnowledgeBase();
@@ -219,8 +207,12 @@ public class PersistentScaffoldingStatusAdapterTest {
 
 		// We need to track scaffolding status
 		ScaffoldingStatusAdapterFactory scaffoldingStatusAdapterFactory = new ScaffoldingStatusAdapterFactory();
-		scaffoldingStatusAdapterFactory.setScaffoldingStatusCache(cache);
+		if(cache != null) {
+			scaffoldingStatusAdapterFactory.setScaffoldingStatusCache(cache);
+		}
 		scaffoldingStatusAdapterFactory.adaptAllNew(application);
+		
+		return execEnv;
 	}
 
 	protected void print(Resource originalResource) {

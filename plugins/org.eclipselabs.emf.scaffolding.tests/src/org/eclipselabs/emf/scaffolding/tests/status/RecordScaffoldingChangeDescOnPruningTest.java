@@ -47,6 +47,7 @@ import org.eclipselabs.emf.scaffolding.runtime.ScaffoldingExecutionEnvironment;
 import org.eclipselabs.emf.scaffolding.runtime.internal.engine.FactPublisher;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingContext;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatusAdapterFactory;
+import org.eclipselabs.emf.scaffolding.runtime.status.scaffoldingStatusCache.ScaffoldingStatusCache;
 import org.eclipselabs.emf.scaffolding.session.util.ScaffoldingStatusPruner;
 import org.eclipselabs.emf.scaffolding.tests.ESAssert;
 import org.eclipselabs.emf.scaffolding.tests.model1.Application;
@@ -71,10 +72,6 @@ public class RecordScaffoldingChangeDescOnPruningTest {
 	private static final Model1Factory FACTORY = Model1Factory.eINSTANCE;
 
 	private ScaffoldingStatusPruner pruner = new ScaffoldingStatusPruner();
-
-	@Before
-	public void setup() {
-	}
 
 	@Test
 	public void serialize() throws IOException {
@@ -129,7 +126,7 @@ public class RecordScaffoldingChangeDescOnPruningTest {
 			}
 		};
 
-		ScaffoldingExecutionEnvironment ctx = createAndRegisterScaffoldingContext(application, agendaListener);
+		ScaffoldingExecutionEnvironment ctx = createAndRegisterScaffoldingContext(null, application, agendaListener);
 		FactPublisher factPublisher = ScaffoldingExecutionEnvironment.getFactPublisher(application);
 
 		assertScaffoldingAdapterIsRegistered(application);
@@ -141,7 +138,10 @@ public class RecordScaffoldingChangeDescOnPruningTest {
 			assertEquals(0, application.getElements().size());
 			application.getElements().add(user);
 		} else {
+			user = (Entity) application.getElements().get(0);
+		}
 
+		if(!firstRun) {
 			// We want the elements created from the changeDesc to have their
 			// scaffolding status set to true. We therefore need to apply the
 			// changeDesc in a ScaffoldingSession
@@ -158,8 +158,6 @@ public class RecordScaffoldingChangeDescOnPruningTest {
 			});
 
 			factPublisher.setImmediateFire(true);
-
-			user = (Entity) application.getElements().get(0);
 		}
 
 		if(firstRun) {
@@ -178,7 +176,6 @@ public class RecordScaffoldingChangeDescOnPruningTest {
 		DAO userDao = (DAO) application.getElements().get(1);
 		assertNotNull(userDao);
 		assertEquals(user, userDao.getEntity());
-
 		assertScaffoldingAdapterIsRegistered(userDao);
 		assertScaffolded(userDao);
 
@@ -200,7 +197,7 @@ public class RecordScaffoldingChangeDescOnPruningTest {
 
 	}
 
-	protected ScaffoldingExecutionEnvironment createAndRegisterScaffoldingContext(
+	protected ScaffoldingExecutionEnvironment createAndRegisterScaffoldingContext(ScaffoldingStatusCache cache,
 			Application application, AgendaEventListener listener) {
 		//Init Knowledge Base from drl files
 		KnowledgeBase kbase = KnowledgeBaseFactory.newKnowledgeBase();
@@ -227,6 +224,9 @@ public class RecordScaffoldingChangeDescOnPruningTest {
 
 		// We need to track scaffolding status
 		ScaffoldingStatusAdapterFactory scaffoldingStatusAdapterFactory = new ScaffoldingStatusAdapterFactory();
+		if(cache != null) {
+			scaffoldingStatusAdapterFactory.setScaffoldingStatusCache(cache);
+		}
 		scaffoldingStatusAdapterFactory.adaptAllNew(application);
 
 		return execEnv;
