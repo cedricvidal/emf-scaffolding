@@ -31,3 +31,4 @@ Require-Bundle: org.eclipselabs.emf.scaffolding.language,
  com.google.collect,
  org.eclipse.emf.ecore.change;bundle-version="2.5.1"
 Import-Package: org.eclipselabs.emf.scaffolding.session.util
+Eclipse-RegisterBuddy: org.eclipselabs.emf.scaffolding.runtime
