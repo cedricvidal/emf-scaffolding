@@ -80,13 +80,6 @@ public class TransientScaffoldingStatusAdapterTest extends
 	}
 
 	@Override
-	protected void afterSave(Resource resource) {
-		// Resource content restore must be done after timestamp check
-		resourceContents.clear();
-		resourceContents.addAll(contentsBackup);
-	}
-
-	@Override
 	protected void beforeSave(Resource resource) {
 		resourceContents = resource.getContents();
 
@@ -101,6 +94,14 @@ public class TransientScaffoldingStatusAdapterTest extends
 
 		resourceContents.clear();
 		resourceContents.add(pruned);
+	}
+
+	@Override
+	protected void afterSave(Resource resource) {
+		// Resource content restore must be done after timestamp check
+		resourceContents.clear();
+		resourceContents.addAll(contentsBackup);
+		resourceContents = null;
 	}
 
 	@Override
