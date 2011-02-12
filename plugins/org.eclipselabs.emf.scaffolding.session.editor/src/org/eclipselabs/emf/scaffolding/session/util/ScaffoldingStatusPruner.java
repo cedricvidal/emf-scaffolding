@@ -11,12 +11,14 @@
  *******************************************************************************/
 package org.eclipselabs.emf.scaffolding.session.util;
 
+import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.change.ChangeDescription;
 import org.eclipse.emf.ecore.change.util.ChangeRecorder;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipselabs.emf.scaffolding.runtime.ScaffoldingExecutionEnvironment;
 import org.eclipselabs.emf.scaffolding.runtime.internal.engine.FactPublisher;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatusAdapterFactory;
 
@@ -33,35 +35,48 @@ import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatusAdapterFa
  */
 public class ScaffoldingStatusPruner {
 
+	public ChangeDescription prune(ResourceSet input) {
+		TreeIterator<Notifier> contents = EcoreUtil.getAllContents(input, true);
+		ChangeRecorder changeRecorder = new ChangeRecorder(input);
+		return doPrune(contents, changeRecorder);
+	}
+
+	public ChangeDescription prune(Resource input) {
+		TreeIterator<Notifier> contents = EcoreUtil.getAllContents(input, true);
+		ChangeRecorder changeRecorder = new ChangeRecorder(input);
+		return doPrune(contents, changeRecorder);
+	}
+
 	/**
-	 * @param model
+	 * @param input
 	 *            the model to remove scaffolded elements from
 	 * @return the scaffolded elements as a {@link ChangeDescription} relative
 	 *         to the model
 	 */
-	public ChangeDescription prune(EObject model) {
+	public ChangeDescription prune(EObject input) {
+		TreeIterator<Notifier> contents = EcoreUtil.getAllContents(input, true);
+		ChangeRecorder changeRecorder = new ChangeRecorder(input);
+		return doPrune(contents, changeRecorder);
+	}
 
-		FactPublisher factPublisher = ScaffoldingExecutionEnvironment
-				.getFactPublisher(model);
-		if (factPublisher != null && factPublisher.isImmediateFire()) {
-			throw new IllegalStateException(
-					"FactPublisher immediateFire cannot be activated while pruning scaffolded elements");
-		}
-
-		ChangeRecorder changeRecorder = new ChangeRecorder(model);
-		for (TreeIterator<EObject> i = EcoreUtil.getAllContents(model, true); i
+	protected ChangeDescription doPrune(TreeIterator<Notifier> contents,
+			ChangeRecorder changeRecorder) {
+		for (TreeIterator<Notifier> i = contents; i
 				.hasNext();) {
-			EObject element = (EObject) i.next();
-			if (ScaffoldingStatusAdapterFactory.isScaffolded(element)) {
+			Notifier notifier = (Notifier) i.next();
+			if (notifier instanceof EObject) {
+				EObject element = (EObject) notifier;
+				if (ScaffoldingStatusAdapterFactory.isScaffolded(element)) {
 
-				// skip child elements
-				i.prune();
+					// skip child elements
+					i.prune();
 
-				// remove current element
-				EcoreUtil.remove(element);
+					// remove current element
+					EcoreUtil.remove(element);
+				}
 			}
 		}
-		;
+
 		ChangeDescription endRecording = changeRecorder.endRecording();
 		return endRecording;
 	}
