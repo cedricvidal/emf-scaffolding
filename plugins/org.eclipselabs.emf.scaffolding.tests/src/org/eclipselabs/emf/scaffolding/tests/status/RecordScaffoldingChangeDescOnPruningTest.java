@@ -11,8 +11,7 @@
  *******************************************************************************/
 package org.eclipselabs.emf.scaffolding.tests.status;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 
 import static org.eclipselabs.emf.scaffolding.tests.ESAssert.*;
 
@@ -31,31 +30,24 @@ import org.drools.builder.KnowledgeBuilderError;
 import org.drools.builder.KnowledgeBuilderFactory;
 import org.drools.builder.ResourceType;
 import org.drools.definition.KnowledgePackage;
-import org.drools.event.rule.ActivationCancelledEvent;
-import org.drools.event.rule.ActivationCreatedEvent;
 import org.drools.event.rule.AfterActivationFiredEvent;
 import org.drools.event.rule.AgendaEventListener;
-import org.drools.event.rule.AgendaGroupPoppedEvent;
-import org.drools.event.rule.AgendaGroupPushedEvent;
-import org.drools.event.rule.BeforeActivationFiredEvent;
 import org.drools.event.rule.DefaultAgendaEventListener;
-import org.drools.event.rule.WorkingMemoryEventListener;
 import org.drools.io.ResourceFactory;
 import org.drools.runtime.StatefulKnowledgeSession;
 import org.drools.runtime.rule.Activation;
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.change.ChangeDescription;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.emf.ecore.util.EcoreUtil.Copier;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipselabs.emf.scaffolding.runtime.ScaffoldingExecutionEnvironment;
+import org.eclipselabs.emf.scaffolding.runtime.internal.engine.FactPublisher;
+import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingContext;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatusAdapterFactory;
-import org.eclipselabs.emf.scaffolding.runtime.status.scaffoldingStatusCache.ScaffoldingStatusCache;
-import org.eclipselabs.emf.scaffolding.runtime.status.scaffoldingStatusCache.ScaffoldingStatusCacheFactory;
-import org.eclipselabs.emf.scaffolding.session.util.ScaffoldingStatusPruneCopier;
-import org.eclipselabs.emf.scaffolding.tests.BaseTest;
+import org.eclipselabs.emf.scaffolding.session.util.ScaffoldingStatusPruner;
 import org.eclipselabs.emf.scaffolding.tests.ESAssert;
 import org.eclipselabs.emf.scaffolding.tests.model1.Application;
 import org.eclipselabs.emf.scaffolding.tests.model1.DAO;
@@ -66,9 +58,19 @@ import org.eclipselabs.emf.scaffolding.tests.util.MemoryUriHandler;
 import org.junit.Before;
 import org.junit.Test;
 
-public class PersistentScaffoldingStatusAdapterTest {
+/**
+ * Requires EMF 3.7 because of https://bugs.eclipse.org/bugs/show_bug.cgi?id=336775
+ * 
+ * @author cvidal
+ *
+ */
+public class RecordScaffoldingChangeDescOnPruningTest {
+
+	private static final String FS_ROOT = "memory:";
 
 	private static final Model1Factory FACTORY = Model1Factory.eINSTANCE;
+
+	private ScaffoldingStatusPruner pruner = new ScaffoldingStatusPruner();
 
 	@Before
 	public void setup() {
@@ -96,19 +98,17 @@ public class PersistentScaffoldingStatusAdapterTest {
 				.put(Resource.Factory.Registry.DEFAULT_EXTENSION,
 						new XMIResourceFactoryImpl());
 
-		// Create a resource for the cache.
-		Resource cacheResource = resourceSet.createResource(URI.createURI("memory:cache.xmi"));
-		ScaffoldingStatusCache cache = null;
-		if(firstRun) {
-			cache = ScaffoldingStatusCacheFactory.eINSTANCE.createScaffoldingStatusCache();
-			cacheResource.getContents().add(cache);
-		} else {
-			cacheResource.load(null);
-			cache = (ScaffoldingStatusCache) cacheResource.getContents().get(0);
-		}
-
 		// Create a resource for this file.
-		Resource originalResource = resourceSet.createResource(URI.createURI("memory:original.xmi"));
+		Resource originalResource = resourceSet.createResource(URI.createURI(FS_ROOT + "original.xmi"));
+
+		// Create a resource for the cache.
+		Resource changedescriptionResource = resourceSet.createResource(URI.createURI(FS_ROOT + "changedesc.xmi"));
+		ChangeDescription changeDescription = null;
+		if(firstRun) {
+		} else {
+			changedescriptionResource.load(null);
+			changeDescription = (ChangeDescription) changedescriptionResource.getContents().get(0);
+		}
 
 		Application application = null;
 		if(firstRun) {
@@ -117,8 +117,8 @@ public class PersistentScaffoldingStatusAdapterTest {
 		} else {
 			originalResource.load(null);
 			application = (Application) originalResource.getContents().get(0);
-			assertScaffoldingAdapterIsNotRegistered(application);
 		}
+		assertScaffoldingAdapterIsNotRegistered(application);
 
 		// Keep track of fired activations to make sure no activations are fired when loading scaffolding status from store
 		final List<Activation> activations = new ArrayList<Activation>();
@@ -129,7 +129,8 @@ public class PersistentScaffoldingStatusAdapterTest {
 			}
 		};
 
-		createAndRegisterScaffoldingContext(cache, application, agendaListener);
+		ScaffoldingExecutionEnvironment ctx = createAndRegisterScaffoldingContext(application, agendaListener);
+		FactPublisher factPublisher = ScaffoldingExecutionEnvironment.getFactPublisher(application);
 
 		assertScaffoldingAdapterIsRegistered(application);
 
@@ -140,6 +141,24 @@ public class PersistentScaffoldingStatusAdapterTest {
 			assertEquals(0, application.getElements().size());
 			application.getElements().add(user);
 		} else {
+
+			// We want the elements created from the changeDesc to have their
+			// scaffolding status set to true. We therefore need to apply the
+			// changeDesc in a ScaffoldingSession
+			// but we don't want scaffolding to fire, so we need to deactivate
+			// immediate fire while applying the changeDesc
+			factPublisher.setImmediateFire(false);
+
+			final ChangeDescription desc = changeDescription;
+			ScaffoldingContext.inScaffoldingSession(new Runnable() {
+				@Override
+				public void run() {
+					desc.apply();
+				}
+			});
+
+			factPublisher.setImmediateFire(true);
+
 			user = (Entity) application.getElements().get(0);
 		}
 
@@ -159,40 +178,29 @@ public class PersistentScaffoldingStatusAdapterTest {
 		DAO userDao = (DAO) application.getElements().get(1);
 		assertNotNull(userDao);
 		assertEquals(user, userDao.getEntity());
+
 		assertScaffoldingAdapterIsRegistered(userDao);
 		assertScaffolded(userDao);
+
+		if(firstRun) {
+			application.eAdapters().remove(EcoreUtil.getExistingAdapter(application, FactPublisher.class));
+			changeDescription = pruner.prune(application);
+			changedescriptionResource.getContents().add(changeDescription);
+		}
 
 		// Save resources on first run, will load them from storage on second run
 		if(firstRun) {
 			System.out.println("Saving resources in resource set");
 			for (Resource resource : resourceSet.getResources()) {
 				resource.save(null);
+				System.out.println(" ==> Saving resource " + resource.getURI());
+				resource.save(System.out, null);
 			}
-		}
-
-		System.out.println("Model");
-		print(originalResource);
-
-		System.out.println("Scaffolding status cache");
-		print(cacheResource);
-
-		// Just to ease debugging, not relevant to the test
-		if(firstRun) {
-			// Pruned copy
-			Copier copier = new ScaffoldingStatusPruneCopier();
-			EObject pruned = copier.copy(application);
-			copier.copyReferences();
-			Resource prunedResource = resourceSet.createResource(URI.createURI("memory:pruned.xmi"));
-			prunedResource.getContents().add(pruned);
-
-			System.out.println("PRUNED");
-			print(prunedResource);
-			
 		}
 
 	}
 
-	protected void createAndRegisterScaffoldingContext(ScaffoldingStatusCache cache,
+	protected ScaffoldingExecutionEnvironment createAndRegisterScaffoldingContext(
 			Application application, AgendaEventListener listener) {
 		//Init Knowledge Base from drl files
 		KnowledgeBase kbase = KnowledgeBaseFactory.newKnowledgeBase();
@@ -219,8 +227,9 @@ public class PersistentScaffoldingStatusAdapterTest {
 
 		// We need to track scaffolding status
 		ScaffoldingStatusAdapterFactory scaffoldingStatusAdapterFactory = new ScaffoldingStatusAdapterFactory();
-		scaffoldingStatusAdapterFactory.setScaffoldingStatusCache(cache);
 		scaffoldingStatusAdapterFactory.adaptAllNew(application);
+
+		return execEnv;
 	}
 
 	protected void print(Resource originalResource) {

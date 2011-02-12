@@ -16,6 +16,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
+import static org.eclipselabs.emf.scaffolding.tests.ESAssert.*;
+
 import java.util.Collection;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -39,6 +41,7 @@ import org.eclipselabs.emf.scaffolding.runtime.ScaffoldingExecutionEnvironment;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatusAdapterFactory;
 import org.eclipselabs.emf.scaffolding.runtime.takeover.TakeoverNotification;
 import org.eclipselabs.emf.scaffolding.tests.BaseTest;
+import org.eclipselabs.emf.scaffolding.tests.ESAssert;
 import org.eclipselabs.emf.scaffolding.tests.model1.Application;
 import org.eclipselabs.emf.scaffolding.tests.model1.DAO;
 import org.eclipselabs.emf.scaffolding.tests.model1.Entity;
@@ -47,7 +50,7 @@ import org.eclipselabs.emf.scaffolding.tests.model1.Model1Factory;
 import org.eclipselabs.emf.scaffolding.tests.resources.Resources;
 import org.junit.Test;
 
-public class DRLRuleTest extends BaseTest{
+public class DRLRuleTest {
 
 	/**
 	 * Proves that scaffolding is fired on collection add

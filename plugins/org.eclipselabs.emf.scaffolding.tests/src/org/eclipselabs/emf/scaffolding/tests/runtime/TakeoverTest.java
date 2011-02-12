@@ -11,6 +11,9 @@
  *******************************************************************************/
 package org.eclipselabs.emf.scaffolding.tests.runtime;
 
+import static org.eclipselabs.emf.scaffolding.tests.ESAssert.assertNotScaffolded;
+import static org.eclipselabs.emf.scaffolding.tests.ESAssert.assertScaffolded;
+import static org.eclipselabs.emf.scaffolding.tests.ESAssert.assertScaffoldingAdapterIsRegistered;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
@@ -33,7 +36,6 @@ import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.eclipselabs.emf.scaffolding.runtime.ScaffoldingExecutionEnvironment;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatusAdapterFactory;
 import org.eclipselabs.emf.scaffolding.runtime.takeover.TakeoverNotification;
-import org.eclipselabs.emf.scaffolding.tests.BaseTest;
 import org.eclipselabs.emf.scaffolding.tests.model1.Application;
 import org.eclipselabs.emf.scaffolding.tests.model1.DAO;
 import org.eclipselabs.emf.scaffolding.tests.model1.Entity;
@@ -44,7 +46,7 @@ import org.eclipselabs.emf.scaffolding.tests.resources.Resources;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TakeoverTest extends BaseTest{
+public class TakeoverTest {
 
 	private static final Model1Factory FACTORY = Model1Factory.eINSTANCE;
 	private DAO userDao;

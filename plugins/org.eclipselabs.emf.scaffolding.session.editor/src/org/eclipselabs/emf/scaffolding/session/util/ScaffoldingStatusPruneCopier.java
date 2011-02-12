@@ -19,14 +19,20 @@ import org.eclipse.emf.ecore.util.EcoreUtil.Copier;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatus;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatusAdapterFactory;
 
+/**
+ * Creates a copy of a model with all scaffolded elements removed.
+ * 
+ * @author cvidal
+ *
+ */
 public class ScaffoldingStatusPruneCopier extends Copier {
 
 	@Override
-	public EObject copy(EObject object) {
-		ScaffoldingStatus adapt = ScaffoldingStatusAdapterFactory.adapt(object);
+	public EObject copy(EObject model) {
+		ScaffoldingStatus adapt = ScaffoldingStatusAdapterFactory.adapt(model);
 		EObject copy = null;
 		if (adapt == null || !adapt.isScaffolded()) {
-			copy = super.copy(object);
+			copy = super.copy(model);
 		}
 		return copy;
 	}
