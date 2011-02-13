@@ -12,20 +12,25 @@
 package org.eclipselabs.emf.scaffolding.tests.status;
 
 import org.drools.runtime.StatefulKnowledgeSession;
+import org.eclipselabs.emf.scaffolding.tests.status.strategy.StoreAsideStrategy;
 import org.eclipselabs.emf.scaffolding.tests.status.strategy.ScaffoldingStatusStorageStrategy;
-import org.eclipselabs.emf.scaffolding.tests.status.strategy.TransientStrategy;
 
-public class TransientScaffoldingStatusAdapterTest extends
-		AbstractScaffoldingStatusStorageTest {
+/**
+ * Requires EMF 3.7 because of https://bugs.eclipse.org/bugs/show_bug.cgi?id=336775
+ * 
+ * @author cvidal
+ *
+ */
+public class StoreAsideScaffoldingStatusStrategyTest extends AbstractScaffoldingStatusStorageTest {
 
 	@Override
 	protected ScaffoldingStatusStorageStrategy createScaffoldingStatusStorageStrategy(StatefulKnowledgeSession ksession) {
-		return new TransientStrategy();
+		return new StoreAsideStrategy();
 	}
 
 	@Override
 	protected boolean requiresFiringOnLoad() {
-		return true;
+		return false;
 	}
 
 }

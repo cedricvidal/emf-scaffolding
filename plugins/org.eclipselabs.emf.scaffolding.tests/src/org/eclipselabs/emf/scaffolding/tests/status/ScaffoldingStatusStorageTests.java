@@ -16,9 +16,9 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses(value = { PersistentScaffoldingStatusAdapterTest.class,
-		RecordScaffoldingChangeDescOnPruningTest.class,
-		TransientScaffoldingStatusAdapterTest.class })
+@SuiteClasses(value = { StoreInplaceWithStatusAsideScaffoldingStatusStrategyTest.class,
+		StoreAsideScaffoldingStatusStrategyTest.class,
+		TransientScaffoldingStatusStrategyTest.class })
 public class ScaffoldingStatusStorageTests {
 
 }

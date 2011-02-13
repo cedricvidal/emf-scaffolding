@@ -12,20 +12,15 @@
 package org.eclipselabs.emf.scaffolding.tests.status;
 
 import org.drools.runtime.StatefulKnowledgeSession;
-import org.eclipselabs.emf.scaffolding.tests.status.strategy.StoreAsideStrategy;
 import org.eclipselabs.emf.scaffolding.tests.status.strategy.ScaffoldingStatusStorageStrategy;
+import org.eclipselabs.emf.scaffolding.tests.status.strategy.StoreInplaceWithStatusAsideStrategy;
 
-/**
- * Requires EMF 3.7 because of https://bugs.eclipse.org/bugs/show_bug.cgi?id=336775
- * 
- * @author cvidal
- *
- */
-public class RecordScaffoldingChangeDescOnPruningTest extends AbstractScaffoldingStatusStorageTest {
+public class StoreInplaceWithStatusAsideScaffoldingStatusStrategyTest extends
+		AbstractScaffoldingStatusStorageTest {
 
 	@Override
 	protected ScaffoldingStatusStorageStrategy createScaffoldingStatusStorageStrategy(StatefulKnowledgeSession ksession) {
-		return new StoreAsideStrategy();
+		return new StoreInplaceWithStatusAsideStrategy();
 	}
 
 	@Override

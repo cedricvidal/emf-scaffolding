@@ -12,23 +12,20 @@
 package org.eclipselabs.emf.scaffolding.tests.status;
 
 import org.drools.runtime.StatefulKnowledgeSession;
-import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipselabs.emf.scaffolding.tests.status.strategy.StoreInplaceWithStatusAsideStrategy;
 import org.eclipselabs.emf.scaffolding.tests.status.strategy.ScaffoldingStatusStorageStrategy;
+import org.eclipselabs.emf.scaffolding.tests.status.strategy.TransientStrategy;
 
-public class PersistentScaffoldingStatusAdapterTest extends
+public class TransientScaffoldingStatusStrategyTest extends
 		AbstractScaffoldingStatusStorageTest {
 
 	@Override
 	protected ScaffoldingStatusStorageStrategy createScaffoldingStatusStorageStrategy(StatefulKnowledgeSession ksession) {
-		return new StoreInplaceWithStatusAsideStrategy();
+		return new TransientStrategy();
 	}
-
-	protected Resource cacheResource;
 
 	@Override
 	protected boolean requiresFiringOnLoad() {
-		return false;
+		return true;
 	}
 
 }
