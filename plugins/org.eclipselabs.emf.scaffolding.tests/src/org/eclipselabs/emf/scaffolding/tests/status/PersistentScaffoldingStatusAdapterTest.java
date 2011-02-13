@@ -28,38 +28,43 @@ public class PersistentScaffoldingStatusAdapterTest extends
 	protected ScaffoldingStatusCache cache;
 
 	@Override
-	protected void afterLoad(EObject application) {
+	protected void afterLoad(ScaffoldingStatusStorageStrategy strategy, EObject application) {
 	}
 
 	@Override
-	protected void beforeSave(ResourceSet rs) {
+	protected void beforeSave(ScaffoldingStatusStorageStrategy strategy, ResourceSet rs) {
 	}
 
 	protected ScaffoldingStatusCache getCache() {
 		return cache;
 	}
 
-	protected void prepare(boolean firstRun, ResourceSet resourceSet)
+	protected void beforeLoad(ScaffoldingStatusStorageStrategy strategy, ResourceSet resourceSet)
 			throws IOException {
-		cacheResource = resourceSet.createResource(URI.createURI(FS_ROOT
-				+ "cache.xmi"));
+		try {
+			cacheResource = resourceSet.getResource(URI.createURI(FS_ROOT
+					+ "cache.xmi"), true);
+		} catch (Exception e) {
+			cacheResource = null;
+		}
 		cache = null;
-		if (firstRun) {
+		if(cacheResource == null) {
+			cacheResource = resourceSet.createResource(URI.createURI(FS_ROOT
+					+ "cache.xmi"));
 			cache = ScaffoldingStatusCacheFactory.eINSTANCE
-					.createScaffoldingStatusCache();
-			cacheResource.getContents().add(getCache());
+			.createScaffoldingStatusCache();
+			cacheResource.getContents().add(cache);
 		} else {
-			cacheResource.load(null);
 			cache = (ScaffoldingStatusCache) cacheResource.getContents().get(0);
 		}
 	}
 
 	@Override
-	protected void beforeSave(Resource resource) {
+	protected void beforeSave(ScaffoldingStatusStorageStrategy strategy, Resource resource) {
 	}
 
 	@Override
-	protected void afterSave(Resource resource) {
+	protected void afterSave(ScaffoldingStatusStorageStrategy strategy, Resource resource) {
 	}
 
 	@Override

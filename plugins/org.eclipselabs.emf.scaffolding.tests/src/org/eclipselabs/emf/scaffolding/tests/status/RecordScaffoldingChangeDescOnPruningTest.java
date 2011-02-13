@@ -38,7 +38,7 @@ public class RecordScaffoldingChangeDescOnPruningTest extends AbstractScaffoldin
 	private Resource changedescriptionResource;
 	private ChangeDescription changeDescription;
 
-	protected void afterLoad(EObject application) {
+	protected void afterLoad(ScaffoldingStatusStorageStrategy strategy, EObject application) {
 		FactPublisher factPublisher = ScaffoldingExecutionEnvironment.getFactPublisher(application);
 
 		// We want the elements created from the changeDesc to have their
@@ -59,13 +59,17 @@ public class RecordScaffoldingChangeDescOnPruningTest extends AbstractScaffoldin
 		factPublisher.setImmediateFire(true);
 	}
 
-	protected void prepare(boolean firstRun, ResourceSet resourceSet)
+	protected void beforeLoad(ScaffoldingStatusStorageStrategy strategy, ResourceSet resourceSet)
 			throws IOException {
-		changedescriptionResource = resourceSet.createResource(URI.createURI(FS_ROOT + "changedesc.xmi"));
+		try {
+			changedescriptionResource = resourceSet.getResource(URI.createURI(FS_ROOT + "changedesc.xmi"), true);
+		} catch (Exception e) {
+			changedescriptionResource = null;
+		}
 		changeDescription = null;
-		if(firstRun) {
+		if(changedescriptionResource == null) {
+			changedescriptionResource = resourceSet.createResource(URI.createURI(FS_ROOT + "changedesc.xmi"));
 		} else {
-			changedescriptionResource.load(null);
 			changeDescription = (ChangeDescription) changedescriptionResource.getContents().get(0);
 		}
 	}
@@ -75,7 +79,7 @@ public class RecordScaffoldingChangeDescOnPruningTest extends AbstractScaffoldin
 		return null;
 	}
 
-	protected void beforeSave(ResourceSet rs) {
+	protected void beforeSave(ScaffoldingStatusStorageStrategy strategy, ResourceSet rs) {
 
 		// TODO integrate better with FactPublisher, deactivating immediate fire should be enough
 		for (Resource res : rs.getResources()) {
@@ -90,11 +94,11 @@ public class RecordScaffoldingChangeDescOnPruningTest extends AbstractScaffoldin
 	}
 
 	@Override
-	protected void beforeSave(Resource resource) {
+	protected void beforeSave(ScaffoldingStatusStorageStrategy strategy, Resource resource) {
 	}
 
 	@Override
-	protected void afterSave(Resource resource) {
+	protected void afterSave(ScaffoldingStatusStorageStrategy strategy, Resource resource) {
 	}
 
 	@Override

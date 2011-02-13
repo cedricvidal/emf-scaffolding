@@ -69,6 +69,8 @@ public abstract class AbstractScaffoldingStatusStorageTest {
 
 	protected StatefulKnowledgeSession ksession;
 
+	private ScaffoldingStatusStorageStrategy strategy;
+
 	@Before
 	public void setup() {
 		store  = new HashMap<URI, byte[]>();
@@ -95,7 +97,7 @@ public abstract class AbstractScaffoldingStatusStorageTest {
 		// Create a resource for this file.
 		Resource originalResource = resourceSet.createResource(URI.createURI(FS_ROOT + "original.xmi"));
 
-		prepare(firstRun, resourceSet);
+		beforeLoad(strategy, resourceSet);
 
 		Application application = null;
 		if(firstRun) {
@@ -131,7 +133,7 @@ public abstract class AbstractScaffoldingStatusStorageTest {
 		}
 
 		if(!firstRun) {
-			afterLoad(application);
+			afterLoad(strategy, application);
 		}
 
 		if(firstRun) {
@@ -167,29 +169,29 @@ public abstract class AbstractScaffoldingStatusStorageTest {
 
 	protected void save(ResourceSet resourceSet, Application application)
 			throws IOException {
-		beforeSave(resourceSet);
+		beforeSave(strategy, resourceSet);
 
 		System.out.println("Saving resources in resource set");
 		for (Resource resource : resourceSet.getResources()) {
-			beforeSave(resource);
+			beforeSave(strategy, resource);
 			resource.save(null);
 			System.out.println(" ==> Saving resource " + resource.getURI());
 			resource.save(System.out, null);
-			afterSave(resource);
+			afterSave(strategy, resource);
 		}
 	}
 
-	protected abstract void afterSave(Resource resource);
+	protected void afterLoad(ScaffoldingStatusStorageStrategy strategy, EObject element) {}
+	
+	protected void beforeLoad(ScaffoldingStatusStorageStrategy strategy, ResourceSet resourceSet) throws IOException {}
+	
+	protected void afterSave(ScaffoldingStatusStorageStrategy strategy, Resource resource) {}
 
-	protected abstract void beforeSave(Resource resource);
+	protected void beforeSave(ScaffoldingStatusStorageStrategy strategy, Resource resource) {}
 
-	protected abstract void beforeSave(ResourceSet rs);
-
-	protected abstract void afterLoad(EObject element);
+	protected void beforeSave(ScaffoldingStatusStorageStrategy strategy, ResourceSet rs) {}
 
 	protected abstract ScaffoldingStatusCache getCache();
-
-	protected abstract void prepare(boolean firstRun, ResourceSet resourceSet) throws IOException;
 
 	protected ScaffoldingExecutionEnvironment createAndRegisterScaffoldingContext(ScaffoldingStatusCache cache,
 			Application application, AgendaEventListener listener) {

@@ -17,30 +17,23 @@ import java.util.List;
 
 import org.drools.runtime.StatefulKnowledgeSession;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.util.EcoreUtil.Copier;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingContext;
 import org.eclipselabs.emf.scaffolding.runtime.status.scaffoldingStatusCache.ScaffoldingStatusCache;
-import org.eclipselabs.emf.scaffolding.runtime.status.scaffoldingStatusCache.ScaffoldingStatusCacheFactory;
 import org.eclipselabs.emf.scaffolding.session.util.ScaffoldingStatusPruneCopier;
-import org.eclipselabs.emf.scaffolding.tests.model1.Application;
 
 public class TransientScaffoldingStatusAdapterTest extends
 		AbstractScaffoldingStatusStorageTest {
-
-	protected Resource cacheResource;
-
-	protected ScaffoldingStatusCache cache;
 
 	private List<EObject> contentsBackup;
 
 	private EList<EObject> resourceContents;
 
 	@Override
-	protected void afterLoad(EObject element) {
+	protected void afterLoad(ScaffoldingStatusStorageStrategy strategy, EObject element) {
 		fireScaffoldingRules(element);
 	}
 
@@ -57,30 +50,19 @@ public class TransientScaffoldingStatusAdapterTest extends
 	}
 
 	@Override
-	protected void beforeSave(ResourceSet rs) {
+	protected void beforeSave(ScaffoldingStatusStorageStrategy strategy, ResourceSet rs) {
 	}
 
 	protected ScaffoldingStatusCache getCache() {
-		return cache;
+		return null;
 	}
 
-	protected void prepare(boolean firstRun, ResourceSet resourceSet)
+	protected void beforeLoad(ScaffoldingStatusStorageStrategy strategy, ResourceSet resourceSet)
 			throws IOException {
-		cacheResource = resourceSet.createResource(URI.createURI(FS_ROOT
-				+ "cache.xmi"));
-		cache = null;
-		if (firstRun) {
-			cache = ScaffoldingStatusCacheFactory.eINSTANCE
-					.createScaffoldingStatusCache();
-			cacheResource.getContents().add(getCache());
-		} else {
-			cacheResource.load(null);
-			cache = (ScaffoldingStatusCache) cacheResource.getContents().get(0);
-		}
 	}
 
 	@Override
-	protected void beforeSave(Resource resource) {
+	protected void beforeSave(ScaffoldingStatusStorageStrategy strategy, Resource resource) {
 		resourceContents = resource.getContents();
 
 		contentsBackup = null;
@@ -97,7 +79,7 @@ public class TransientScaffoldingStatusAdapterTest extends
 	}
 
 	@Override
-	protected void afterSave(Resource resource) {
+	protected void afterSave(ScaffoldingStatusStorageStrategy strategy, Resource resource) {
 		// Resource content restore must be done after timestamp check
 		resourceContents.clear();
 		resourceContents.addAll(contentsBackup);
