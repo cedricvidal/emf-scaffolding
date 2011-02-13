@@ -14,7 +14,6 @@ package org.eclipselabs.emf.scaffolding.tests.status.strategy;
 import java.io.IOException;
 
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatusAdapterFactory;
@@ -26,14 +25,6 @@ public class StoreInplaceWithStatusAsideStrategy extends AbstractScaffoldingStat
 	protected Resource cacheResource;
 
 	protected ScaffoldingStatusCache cache;
-
-	@Override
-	public void afterLoad(EObject application) {
-	}
-
-	@Override
-	public void beforeSave(ResourceSet rs) {
-	}
 
 	@Override
 	public void beforeLoad(ResourceSet resourceSet)
@@ -48,20 +39,11 @@ public class StoreInplaceWithStatusAsideStrategy extends AbstractScaffoldingStat
 		if(cacheResource == null) {
 			cacheResource = resourceSet.createResource(URI.createURI(FS_ROOT
 					+ "cache.xmi"));
-			cache = ScaffoldingStatusCacheFactory.eINSTANCE
-			.createScaffoldingStatusCache();
+			cache = ScaffoldingStatusCacheFactory.eINSTANCE.createScaffoldingStatusCache();
 			cacheResource.getContents().add(cache);
 		} else {
 			cache = (ScaffoldingStatusCache) cacheResource.getContents().get(0);
 		}
-	}
-
-	@Override
-	public void beforeSave(Resource resource) {
-	}
-
-	@Override
-	public void afterSave(Resource resource) {
 	}
 
 	@Override
