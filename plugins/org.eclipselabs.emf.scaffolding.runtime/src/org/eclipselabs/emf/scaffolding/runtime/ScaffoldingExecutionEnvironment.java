@@ -26,7 +26,7 @@ public class ScaffoldingExecutionEnvironment extends NotifierImpl {
 	
 	protected FactPublisher factPublisher;
 
-	private StatefulKnowledgeSession statefulKnowledgeSession;
+	private StatefulKnowledgeSession knowledgeSession;
 
 	public ScaffoldingExecutionEnvironment(KnowledgeBase kbase) {
 	    this(createSession(kbase));
@@ -36,7 +36,11 @@ public class ScaffoldingExecutionEnvironment extends NotifierImpl {
 	    this.factPublisher = new FactPublisher();
 	    factPublisher.setStatefulKnowledgeSession(statefulKnowledgeSession);
 	    factPublisher.setScaffoldingExecutionEnvironment(this);
-	    this.statefulKnowledgeSession = statefulKnowledgeSession;
+	    this.knowledgeSession = statefulKnowledgeSession;
+	}
+
+	public StatefulKnowledgeSession getKnowledgeSession() {
+		return knowledgeSession;
 	}
 
 	private static StatefulKnowledgeSession createSession(KnowledgeBase kbase) {

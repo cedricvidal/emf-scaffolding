@@ -11,79 +11,16 @@
  *******************************************************************************/
 package org.eclipselabs.emf.scaffolding.tests.status;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
 import org.drools.runtime.StatefulKnowledgeSession;
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.ecore.util.EcoreUtil.Copier;
-import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingContext;
-import org.eclipselabs.emf.scaffolding.runtime.status.scaffoldingStatusCache.ScaffoldingStatusCache;
-import org.eclipselabs.emf.scaffolding.session.util.ScaffoldingStatusPruneCopier;
+import org.eclipselabs.emf.scaffolding.tests.status.strategy.ScaffoldingStatusStorageStrategy;
+import org.eclipselabs.emf.scaffolding.tests.status.strategy.TransientStrategy;
 
 public class TransientScaffoldingStatusAdapterTest extends
 		AbstractScaffoldingStatusStorageTest {
 
-	private List<EObject> contentsBackup;
-
-	private EList<EObject> resourceContents;
-
 	@Override
-	protected void afterLoad(ScaffoldingStatusStorageStrategy strategy, EObject element) {
-		fireScaffoldingRules(element);
-	}
-
-	protected void fireScaffoldingRules(EObject element) {
-		final StatefulKnowledgeSession knowledgeSession = ksession;
-		if (knowledgeSession != null) {
-			ScaffoldingContext.inScaffoldingSession(new Runnable() {
-				@Override
-				public void run() {
-					knowledgeSession.fireAllRules();
-				}
-			});
-		}
-	}
-
-	@Override
-	protected void beforeSave(ScaffoldingStatusStorageStrategy strategy, ResourceSet rs) {
-	}
-
-	protected ScaffoldingStatusCache getCache() {
-		return null;
-	}
-
-	protected void beforeLoad(ScaffoldingStatusStorageStrategy strategy, ResourceSet resourceSet)
-			throws IOException {
-	}
-
-	@Override
-	protected void beforeSave(ScaffoldingStatusStorageStrategy strategy, Resource resource) {
-		resourceContents = resource.getContents();
-
-		contentsBackup = null;
-
-		contentsBackup = new ArrayList<EObject>();
-		contentsBackup.addAll(resourceContents);
-
-		Copier copier = new ScaffoldingStatusPruneCopier();
-		EObject pruned = copier.copy(resourceContents.get(0));
-		copier.copyReferences();
-
-		resourceContents.clear();
-		resourceContents.add(pruned);
-	}
-
-	@Override
-	protected void afterSave(ScaffoldingStatusStorageStrategy strategy, Resource resource) {
-		// Resource content restore must be done after timestamp check
-		resourceContents.clear();
-		resourceContents.addAll(contentsBackup);
-		resourceContents = null;
+	protected ScaffoldingStatusStorageStrategy createScaffoldingStatusStorageStrategy(StatefulKnowledgeSession ksession) {
+		return new TransientStrategy();
 	}
 
 	@Override

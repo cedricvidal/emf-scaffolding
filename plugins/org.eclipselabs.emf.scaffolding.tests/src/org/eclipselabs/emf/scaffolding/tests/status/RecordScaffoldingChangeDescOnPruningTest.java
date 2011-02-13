@@ -11,20 +11,9 @@
  *******************************************************************************/
 package org.eclipselabs.emf.scaffolding.tests.status;
 
-import java.io.IOException;
-
-import org.eclipse.emf.common.notify.Adapter;
-import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.change.ChangeDescription;
-import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipselabs.emf.scaffolding.runtime.ScaffoldingExecutionEnvironment;
-import org.eclipselabs.emf.scaffolding.runtime.internal.engine.FactPublisher;
-import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingContext;
-import org.eclipselabs.emf.scaffolding.runtime.status.scaffoldingStatusCache.ScaffoldingStatusCache;
-import org.eclipselabs.emf.scaffolding.session.util.ScaffoldingStatusPruner;
+import org.drools.runtime.StatefulKnowledgeSession;
+import org.eclipselabs.emf.scaffolding.tests.status.strategy.StoreAsideStrategy;
+import org.eclipselabs.emf.scaffolding.tests.status.strategy.ScaffoldingStatusStorageStrategy;
 
 /**
  * Requires EMF 3.7 because of https://bugs.eclipse.org/bugs/show_bug.cgi?id=336775
@@ -34,71 +23,9 @@ import org.eclipselabs.emf.scaffolding.session.util.ScaffoldingStatusPruner;
  */
 public class RecordScaffoldingChangeDescOnPruningTest extends AbstractScaffoldingStatusStorageTest {
 
-	private ScaffoldingStatusPruner pruner = new ScaffoldingStatusPruner();
-	private Resource changedescriptionResource;
-	private ChangeDescription changeDescription;
-
-	protected void afterLoad(ScaffoldingStatusStorageStrategy strategy, EObject application) {
-		FactPublisher factPublisher = ScaffoldingExecutionEnvironment.getFactPublisher(application);
-
-		// We want the elements created from the changeDesc to have their
-		// scaffolding status set to true. We therefore need to apply the
-		// changeDesc in a ScaffoldingSession
-		// but we don't want scaffolding to fire, so we need to deactivate
-		// immediate fire while applying the changeDesc
-		factPublisher.setImmediateFire(false);
-
-		final ChangeDescription desc = changeDescription;
-		ScaffoldingContext.inScaffoldingSession(new Runnable() {
-			@Override
-			public void run() {
-				desc.apply();
-			}
-		});
-
-		factPublisher.setImmediateFire(true);
-	}
-
-	protected void beforeLoad(ScaffoldingStatusStorageStrategy strategy, ResourceSet resourceSet)
-			throws IOException {
-		try {
-			changedescriptionResource = resourceSet.getResource(URI.createURI(FS_ROOT + "changedesc.xmi"), true);
-		} catch (Exception e) {
-			changedescriptionResource = null;
-		}
-		changeDescription = null;
-		if(changedescriptionResource == null) {
-			changedescriptionResource = resourceSet.createResource(URI.createURI(FS_ROOT + "changedesc.xmi"));
-		} else {
-			changeDescription = (ChangeDescription) changedescriptionResource.getContents().get(0);
-		}
-	}
-
 	@Override
-	protected ScaffoldingStatusCache getCache() {
-		return null;
-	}
-
-	protected void beforeSave(ScaffoldingStatusStorageStrategy strategy, ResourceSet rs) {
-
-		// TODO integrate better with FactPublisher, deactivating immediate fire should be enough
-		for (Resource res : rs.getResources()) {
-			for (EObject element : res.getContents()) {
-				Adapter factPublisher = EcoreUtil.getExistingAdapter(element, FactPublisher.class);
-				element.eAdapters().remove(factPublisher);
-			}
-		}
-
-		changeDescription = pruner.prune(rs);
-		changedescriptionResource.getContents().add(changeDescription);
-	}
-
-	@Override
-	protected void beforeSave(ScaffoldingStatusStorageStrategy strategy, Resource resource) {
-	}
-
-	@Override
-	protected void afterSave(ScaffoldingStatusStorageStrategy strategy, Resource resource) {
+	protected ScaffoldingStatusStorageStrategy createScaffoldingStatusStorageStrategy(StatefulKnowledgeSession ksession) {
+		return new StoreAsideStrategy();
 	}
 
 	@Override

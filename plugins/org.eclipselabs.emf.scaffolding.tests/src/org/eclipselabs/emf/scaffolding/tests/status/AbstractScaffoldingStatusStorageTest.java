@@ -47,12 +47,12 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipselabs.emf.scaffolding.runtime.ScaffoldingExecutionEnvironment;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatusAdapterFactory;
-import org.eclipselabs.emf.scaffolding.runtime.status.scaffoldingStatusCache.ScaffoldingStatusCache;
 import org.eclipselabs.emf.scaffolding.tests.model1.Application;
 import org.eclipselabs.emf.scaffolding.tests.model1.DAO;
 import org.eclipselabs.emf.scaffolding.tests.model1.Entity;
 import org.eclipselabs.emf.scaffolding.tests.model1.Model1Factory;
 import org.eclipselabs.emf.scaffolding.tests.resources.Resources;
+import org.eclipselabs.emf.scaffolding.tests.status.strategy.ScaffoldingStatusStorageStrategy;
 import org.eclipselabs.emf.scaffolding.tests.util.MemoryUriHandler;
 import org.junit.Before;
 import org.junit.Test;
@@ -65,7 +65,7 @@ public abstract class AbstractScaffoldingStatusStorageTest {
 
 	protected HashMap<URI, byte[]> store;
 
-	protected ScaffoldingExecutionEnvironment ctx;
+	protected ScaffoldingExecutionEnvironment execEnv;
 
 	protected StatefulKnowledgeSession ksession;
 
@@ -74,7 +74,10 @@ public abstract class AbstractScaffoldingStatusStorageTest {
 	@Before
 	public void setup() {
 		store  = new HashMap<URI, byte[]>();
+		strategy = createScaffoldingStatusStorageStrategy(ksession);
 	}
+
+	protected abstract ScaffoldingStatusStorageStrategy createScaffoldingStatusStorageStrategy(StatefulKnowledgeSession ksession);
 
 	@Test
 	public void serialize() throws IOException {
@@ -118,7 +121,8 @@ public abstract class AbstractScaffoldingStatusStorageTest {
 			}
 		};
 
-		ctx = createAndRegisterScaffoldingContext(getCache(), application, agendaListener);
+		execEnv = createAndRegisterScaffoldingContext(application, agendaListener);
+		strategy.setScaffoldingExecutionEnvironment(execEnv);
 
 		assertScaffoldingAdapterIsRegistered(application);
 
@@ -181,20 +185,27 @@ public abstract class AbstractScaffoldingStatusStorageTest {
 		}
 	}
 
-	protected void afterLoad(ScaffoldingStatusStorageStrategy strategy, EObject element) {}
+	final protected void afterLoad(ScaffoldingStatusStorageStrategy strategy, EObject element) {
+		strategy.afterLoad(element);
+	}
 	
-	protected void beforeLoad(ScaffoldingStatusStorageStrategy strategy, ResourceSet resourceSet) throws IOException {}
+	final protected void beforeLoad(ScaffoldingStatusStorageStrategy strategy, ResourceSet resourceSet) throws IOException {
+		strategy.beforeLoad(resourceSet);
+	}
 	
-	protected void afterSave(ScaffoldingStatusStorageStrategy strategy, Resource resource) {}
+	final protected void afterSave(ScaffoldingStatusStorageStrategy strategy, Resource resource) {
+		strategy.afterSave(resource);
+	}
 
-	protected void beforeSave(ScaffoldingStatusStorageStrategy strategy, Resource resource) {}
+	final protected void beforeSave(ScaffoldingStatusStorageStrategy strategy, Resource resource) {
+		strategy.beforeSave(resource);
+	}
 
-	protected void beforeSave(ScaffoldingStatusStorageStrategy strategy, ResourceSet rs) {}
+	final protected void beforeSave(ScaffoldingStatusStorageStrategy strategy, ResourceSet rs) {
+		strategy.beforeSave(rs);
+	}
 
-	protected abstract ScaffoldingStatusCache getCache();
-
-	protected ScaffoldingExecutionEnvironment createAndRegisterScaffoldingContext(ScaffoldingStatusCache cache,
-			Application application, AgendaEventListener listener) {
+	protected ScaffoldingExecutionEnvironment createAndRegisterScaffoldingContext(Application application, AgendaEventListener listener) {
 		//Init Knowledge Base from drl files
 		KnowledgeBase kbase = KnowledgeBaseFactory.newKnowledgeBase();
 		KnowledgeBuilderConfiguration knowledgeBuilderConfig = KnowledgeBuilderFactory.newKnowledgeBuilderConfiguration();
@@ -219,9 +230,7 @@ public abstract class AbstractScaffoldingStatusStorageTest {
 
 		// We need to track scaffolding status
 		ScaffoldingStatusAdapterFactory scaffoldingStatusAdapterFactory = new ScaffoldingStatusAdapterFactory();
-		if(cache != null) {
-			scaffoldingStatusAdapterFactory.setScaffoldingStatusCache(cache);
-		}
+		strategy.configure(scaffoldingStatusAdapterFactory);
 		scaffoldingStatusAdapterFactory.adaptAllNew(application);
 		
 		return execEnv;
