@@ -9,7 +9,7 @@
  *     Cedric Vidal - initial API and implementation
  *
  *******************************************************************************/
-package org.eclipselabs.emf.scaffolding.session.util;
+package org.eclipselabs.emf.scaffolding.runtime.status.storage;
 
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.util.TreeIterator;

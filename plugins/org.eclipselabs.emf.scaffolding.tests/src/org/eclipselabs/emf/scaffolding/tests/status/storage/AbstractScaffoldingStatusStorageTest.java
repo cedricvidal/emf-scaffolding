@@ -9,7 +9,7 @@
  *     Cedric Vidal - initial API and implementation
  *
  *******************************************************************************/
-package org.eclipselabs.emf.scaffolding.tests.status;
+package org.eclipselabs.emf.scaffolding.tests.status.storage;
 
 import static org.eclipselabs.emf.scaffolding.tests.ESAssert.assertNotScaffolded;
 import static org.eclipselabs.emf.scaffolding.tests.ESAssert.assertScaffolded;
@@ -47,12 +47,12 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipselabs.emf.scaffolding.runtime.ScaffoldingExecutionEnvironment;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatusAdapterFactory;
+import org.eclipselabs.emf.scaffolding.runtime.status.storage.ScaffoldingStatusStorageStrategy;
 import org.eclipselabs.emf.scaffolding.tests.model1.Application;
 import org.eclipselabs.emf.scaffolding.tests.model1.DAO;
 import org.eclipselabs.emf.scaffolding.tests.model1.Entity;
 import org.eclipselabs.emf.scaffolding.tests.model1.Model1Factory;
 import org.eclipselabs.emf.scaffolding.tests.resources.Resources;
-import org.eclipselabs.emf.scaffolding.tests.status.strategy.ScaffoldingStatusStorageStrategy;
 import org.eclipselabs.emf.scaffolding.tests.util.MemoryUriHandler;
 import org.junit.Before;
 import org.junit.Test;

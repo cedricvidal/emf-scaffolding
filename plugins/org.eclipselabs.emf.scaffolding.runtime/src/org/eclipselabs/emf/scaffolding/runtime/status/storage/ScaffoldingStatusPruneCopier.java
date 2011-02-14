@@ -9,7 +9,7 @@
  *     Cedric Vidal - initial API and implementation
  *     Jerome Benois - Rewrite compiler and runtime based on new Drools Knowledge API
  *******************************************************************************/
-package org.eclipselabs.emf.scaffolding.session.util;
+package org.eclipselabs.emf.scaffolding.runtime.status.storage;
 
 import java.util.ArrayList;
 import java.util.Collection;

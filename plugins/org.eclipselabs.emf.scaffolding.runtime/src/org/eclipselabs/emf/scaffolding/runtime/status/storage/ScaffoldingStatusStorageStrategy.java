@@ -9,7 +9,7 @@
  *     Cedric Vidal - initial API and implementation
  *
  *******************************************************************************/
-package org.eclipselabs.emf.scaffolding.tests.status.strategy;
+package org.eclipselabs.emf.scaffolding.runtime.status.storage;
 
 import java.io.IOException;
 

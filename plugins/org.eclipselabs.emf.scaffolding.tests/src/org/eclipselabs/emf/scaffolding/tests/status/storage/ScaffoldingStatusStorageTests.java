@@ -9,7 +9,7 @@
  *     Cedric Vidal - initial API and implementation
  *
  *******************************************************************************/
-package org.eclipselabs.emf.scaffolding.tests.status;
+package org.eclipselabs.emf.scaffolding.tests.status.storage;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;

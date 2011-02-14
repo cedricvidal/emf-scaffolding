@@ -9,11 +9,11 @@
  *     Cedric Vidal - initial API and implementation
  *
  *******************************************************************************/
-package org.eclipselabs.emf.scaffolding.tests.status;
+package org.eclipselabs.emf.scaffolding.tests.status.storage;
 
 import org.drools.runtime.StatefulKnowledgeSession;
-import org.eclipselabs.emf.scaffolding.tests.status.strategy.ScaffoldingStatusStorageStrategy;
-import org.eclipselabs.emf.scaffolding.tests.status.strategy.TransientStrategy;
+import org.eclipselabs.emf.scaffolding.runtime.status.storage.ScaffoldingStatusStorageStrategy;
+import org.eclipselabs.emf.scaffolding.runtime.status.storage.TransientStrategy;
 
 public class TransientScaffoldingStatusStrategyTest extends
 		AbstractScaffoldingStatusStorageTest {

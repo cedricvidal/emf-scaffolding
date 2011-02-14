@@ -9,18 +9,23 @@
  *     Cedric Vidal - initial API and implementation
  *
  *******************************************************************************/
-package org.eclipselabs.emf.scaffolding.tests.status;
+package org.eclipselabs.emf.scaffolding.tests.status.storage;
 
 import org.drools.runtime.StatefulKnowledgeSession;
-import org.eclipselabs.emf.scaffolding.tests.status.strategy.ScaffoldingStatusStorageStrategy;
-import org.eclipselabs.emf.scaffolding.tests.status.strategy.StoreInplaceWithStatusAsideStrategy;
+import org.eclipselabs.emf.scaffolding.runtime.status.storage.ScaffoldingStatusStorageStrategy;
+import org.eclipselabs.emf.scaffolding.runtime.status.storage.StoreAsideStrategy;
 
-public class StoreInplaceWithStatusAsideScaffoldingStatusStrategyTest extends
-		AbstractScaffoldingStatusStorageTest {
+/**
+ * Requires EMF 3.7 because of https://bugs.eclipse.org/bugs/show_bug.cgi?id=336775
+ * 
+ * @author cvidal
+ *
+ */
+public class StoreAsideScaffoldingStatusStrategyTest extends AbstractScaffoldingStatusStorageTest {
 
 	@Override
 	protected ScaffoldingStatusStorageStrategy createScaffoldingStatusStorageStrategy(StatefulKnowledgeSession ksession) {
-		return new StoreInplaceWithStatusAsideStrategy();
+		return new StoreAsideStrategy();
 	}
 
 	@Override

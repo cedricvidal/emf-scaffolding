@@ -9,7 +9,7 @@
  *     Cedric Vidal - initial API and implementation
  *
  *******************************************************************************/
-package org.eclipselabs.emf.scaffolding.tests.status.strategy;
+package org.eclipselabs.emf.scaffolding.runtime.status.storage;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.util.URI;
@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipselabs.emf.scaffolding.runtime.ScaffoldingExecutionEnvironment;
 import org.eclipselabs.emf.scaffolding.runtime.internal.engine.FactPublisher;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingContext;
-import org.eclipselabs.emf.scaffolding.session.util.ScaffoldingStatusPruner;
 
 /**
  * Store scaffolded elements in a side resource. Scaffolding status is not
@@ -50,8 +49,6 @@ public class StoreAsideStrategy extends AbstractScaffoldingStatusStorageStrategy
 	 * scaffolding to fire, so we need to deactivate immediate fire while
 	 * applying the {@link ChangeDescription}. Immediate fire is restored after
 	 * load.
-	 * 
-	 * Does nothing if a {@link #changeDescription} hasn't be found.
 	 */
 	@Override
 	public void afterLoad(EObject model) {

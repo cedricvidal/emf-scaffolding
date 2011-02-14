@@ -9,7 +9,7 @@
  *     Cedric Vidal - initial API and implementation
  *
  *******************************************************************************/
-package org.eclipselabs.emf.scaffolding.tests.status.strategy;
+package org.eclipselabs.emf.scaffolding.runtime.status.storage;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,6 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.EcoreUtil.Copier;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingContext;
-import org.eclipselabs.emf.scaffolding.session.util.ScaffoldingStatusPruneCopier;
 
 public class TransientStrategy extends
 		AbstractScaffoldingStatusStorageStrategy {

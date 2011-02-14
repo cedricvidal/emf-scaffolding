@@ -9,7 +9,7 @@
  *     Cedric Vidal - initial API and implementation
  *
  *******************************************************************************/
-package org.eclipselabs.emf.scaffolding.tests.status.strategy;
+package org.eclipselabs.emf.scaffolding.runtime.status.storage;
 
 import java.io.IOException;
 
@@ -29,16 +29,15 @@ public class StoreInplaceWithStatusAsideStrategy extends AbstractScaffoldingStat
 	@Override
 	public void beforeLoad(ResourceSet resourceSet)
 			throws IOException {
+		URI uri = URI.createURI(FS_ROOT + "cache.xmi");
 		try {
-			cacheResource = resourceSet.getResource(URI.createURI(FS_ROOT
-					+ "cache.xmi"), true);
+			cacheResource = resourceSet.getResource(uri, true);
 		} catch (Exception e) {
 			cacheResource = null;
 		}
 		cache = null;
 		if(cacheResource == null) {
-			cacheResource = resourceSet.createResource(URI.createURI(FS_ROOT
-					+ "cache.xmi"));
+			cacheResource = resourceSet.createResource(uri);
 			cache = ScaffoldingStatusCacheFactory.eINSTANCE.createScaffoldingStatusCache();
 			cacheResource.getContents().add(cache);
 		} else {
