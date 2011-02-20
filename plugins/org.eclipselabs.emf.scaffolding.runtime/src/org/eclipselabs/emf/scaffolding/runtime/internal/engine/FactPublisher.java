@@ -78,8 +78,6 @@ public class FactPublisher extends EContentAdapter {
 							statefulKnowledgeSession.fireAllRules();
 						}
 					});
-				} else {
-					System.out.println("Already firing rules");
 				}
 			}
 		}
@@ -106,6 +104,12 @@ public class FactPublisher extends EContentAdapter {
 			if(scaffoldingExecutionEnvironment != null) {
 				scaffoldingExecutionEnvironment.eNotify(new TakeoverNotification(
 						notifier));
+			}
+
+			// Propagate taking over to container
+			EObject container = notifier.eContainer();
+			if(container != null) {
+				takeover(container);
 			}
 
 		}

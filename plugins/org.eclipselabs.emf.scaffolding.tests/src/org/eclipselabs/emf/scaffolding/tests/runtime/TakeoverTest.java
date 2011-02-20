@@ -15,7 +15,7 @@ import static org.eclipselabs.emf.scaffolding.tests.ESAssert.assertNotScaffolded
 import static org.eclipselabs.emf.scaffolding.tests.ESAssert.assertScaffolded;
 import static org.eclipselabs.emf.scaffolding.tests.ESAssert.assertScaffoldingAdapterIsRegistered;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 import static org.junit.Assert.assertTrue;
 
 import java.util.Collection;
@@ -119,6 +119,18 @@ public class TakeoverTest {
 		assertScaffolded(userDao);
 		userDao.setName("coolUserDao");
 		assertTrue(takeover.get());
+		assertNotScaffolded(userDao);
+	}
+
+	@Test
+	public void changindDaoFindByIdNameTakesOverDao() throws Exception {
+		assertScaffolded(userDao);
+		Method findById = userDao.getMethods().get(0);
+		assertEquals("findById", findById.getName());
+		assertScaffolded(findById);
+		findById.setName("findByPk");
+		assertTrue(takeover.get());
+		assertNotScaffolded(findById);
 		assertNotScaffolded(userDao);
 	}
 
