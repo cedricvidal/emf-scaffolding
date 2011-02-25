@@ -27,6 +27,9 @@ Require-Bundle: org.eclipselabs.emf.scaffolding.language,
  com.google.collect,
  org.eclipse.emf.ecore.change;bundle-version="2.5.1",
  org.eclipse.emf.edit;bundle-version="2.7.0",
- org.eclipselabs.emf.scaffolding.tests.model1;bundle-version="1.0.0"
+ org.eclipselabs.emf.scaffolding.tests.model1;bundle-version="1.0.0",
+ org.eclipselabs.emf.scaffolding.tests.model1.edit;bundle-version="1.0.0",
+ org.mockito.mockito-all;bundle-version="1.8.5",
+ org.eclipselabs.emf.scaffolding.edit;bundle-version="1.0.0"
 Import-Package: org.eclipselabs.emf.scaffolding.session.util
 Eclipse-RegisterBuddy: org.eclipselabs.emf.scaffolding.runtime
