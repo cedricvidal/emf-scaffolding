@@ -11,4 +11,5 @@ Require-Bundle: org.eclipselabs.emf.scaffolding.session;bundle-version="1.0.0",
  org.eclipselabs.emf.scaffolding.tests;bundle-version="1.0.0",
  org.junit,
  org.eclipse.core.runtime;bundle-version="3.6.0",
- org.eclipselabs.emf.scaffolding.runtime;bundle-version="1.0.0"
+ org.eclipselabs.emf.scaffolding.runtime;bundle-version="1.0.0",
+ org.eclipselabs.emf.scaffolding.tests.model1;bundle-version="1.0.0"
