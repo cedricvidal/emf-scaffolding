@@ -52,17 +52,7 @@ public class StoreAsideStrategy extends AbstractScaffoldingStatusStorageStrategy
 	 */
 	@Override
 	public void afterLoad(EObject model) {
-		Resource changedescriptionResource = null;
-		try {
-			ResourceSet resourceSet = model.eResource().getResourceSet();
-			changedescriptionResource = resourceSet.getResource(URI.createURI(FS_ROOT + "changedesc.xmi"), true);
-		} catch (Exception e) {
-			changedescriptionResource = null;
-		}
-		ChangeDescription changeDescription = null;
-		if(changedescriptionResource != null) {
-			changeDescription = (ChangeDescription) changedescriptionResource.getContents().get(0);
-		}
+		ChangeDescription changeDescription = findChangeDescription(model);
 
 		if(changeDescription == null) {
 			return;
@@ -86,6 +76,27 @@ public class StoreAsideStrategy extends AbstractScaffoldingStatusStorageStrategy
 	}
 
 	/**
+	 * Tries to find a {@link ChangeDescription} for the given model
+	 * 
+	 * @param model
+	 * @return null of no {@link ChangeDescription} could be found
+	 */
+	protected ChangeDescription findChangeDescription(EObject model) {
+		Resource changedescriptionResource = null;
+		try {
+			ResourceSet resourceSet = model.eResource().getResourceSet();
+			changedescriptionResource = resourceSet.getResource(URI.createURI(FS_ROOT + "changedesc.xmi"), true);
+		} catch (Exception e) {
+			changedescriptionResource = null;
+		}
+		ChangeDescription changeDescription = null;
+		if(changedescriptionResource != null) {
+			changeDescription = (ChangeDescription) changedescriptionResource.getContents().get(0);
+		}
+		return changeDescription;
+	}
+
+	/**
 	 * Prunes scaffolded elements from {@link ResourceSet} and stores them in a
 	 * {@link ChangeDescription}.
 	 */
@@ -101,6 +112,17 @@ public class StoreAsideStrategy extends AbstractScaffoldingStatusStorageStrategy
 		}
 
 		ChangeDescription changeDescription = pruner.prune(rs);
+		saveChangeDescription(rs, changeDescription);
+	}
+
+	/**
+	 * Saves the {@link ChangeDescription}, API is not stable
+	 * 
+	 * @param rs
+	 * @param changeDescription
+	 */
+	protected void saveChangeDescription(ResourceSet rs,
+			ChangeDescription changeDescription) {
 		Resource changedescriptionResource = rs.createResource(URI.createURI(FS_ROOT + "changedesc.xmi"));
 		changedescriptionResource.getContents().add(changeDescription);
 	}

@@ -19,6 +19,12 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipselabs.emf.scaffolding.runtime.ScaffoldingExecutionEnvironment;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatusAdapterFactory;
 
+/**
+ * TODO Find out whether we want handlers to work at EObject, Resource or ResourceSet level
+ * 
+ * @author cvidal
+ *
+ */
 public interface ScaffoldingStatusStorageStrategy {
 
 	public void setScaffoldingExecutionEnvironment(
@@ -26,7 +32,7 @@ public interface ScaffoldingStatusStorageStrategy {
 
 	public ScaffoldingExecutionEnvironment getScaffoldingExecutionEnvironment();
 
-	public void afterLoad(EObject application);
+	public void afterLoad(EObject model);
 
 	public void beforeSave(ResourceSet rs);
 

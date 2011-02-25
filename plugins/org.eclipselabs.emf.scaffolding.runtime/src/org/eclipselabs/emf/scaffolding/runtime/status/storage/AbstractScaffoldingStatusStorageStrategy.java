@@ -38,7 +38,7 @@ public abstract class AbstractScaffoldingStatusStorageStrategy implements
 	}
 
 	@Override
-	public void afterLoad(EObject application) {
+	public void afterLoad(EObject model) {
 	}
 
 	@Override
