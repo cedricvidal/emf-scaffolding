@@ -14,12 +14,10 @@ package org.eclipselabs.emf.scaffolding.runtime.status.storage;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.drools.runtime.StatefulKnowledgeSession;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.EcoreUtil.Copier;
-import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingContext;
 
 public class TransientStrategy extends
 		AbstractScaffoldingStatusStorageStrategy {
@@ -28,22 +26,13 @@ public class TransientStrategy extends
 
 	private EList<EObject> resourceContents;
 
-	public StatefulKnowledgeSession getKnowledgeSession() {
-		return getScaffoldingExecutionEnvironment().getKnowledgeSession();
-	}
-
 	@Override
 	public void afterLoad(EObject element) {
 		fireScaffoldingRules(element);
 	}
 
 	protected void fireScaffoldingRules(EObject element) {
-		ScaffoldingContext.inScaffoldingSession(new Runnable() {
-			@Override
-			public void run() {
-				getKnowledgeSession().fireAllRules();
-			}
-		});
+		getScaffoldingExecutionEnvironment().fire();
 	}
 
 	@Override

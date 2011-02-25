@@ -11,6 +11,9 @@
  *******************************************************************************/
 package org.eclipselabs.emf.scaffolding.runtime;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.drools.KnowledgeBase;
 import org.drools.builder.ResourceType;
 import org.drools.event.rule.DebugWorkingMemoryEventListener;
@@ -19,11 +22,12 @@ import org.eclipse.emf.common.notify.impl.NotifierImpl;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipselabs.emf.scaffolding.runtime.internal.engine.FactPublisher;
+import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingContext;
 
 public class ScaffoldingExecutionEnvironment extends NotifierImpl {
 
 	public static final ResourceType ESL = ResourceType.addResourceTypeToRegistry("ESL", "EMF Scaffolding DSL", "esl");
-	
+
 	protected FactPublisher factPublisher;
 
 	private StatefulKnowledgeSession knowledgeSession;
@@ -48,11 +52,33 @@ public class ScaffoldingExecutionEnvironment extends NotifierImpl {
 		statefulKnowledgeSession.addEventListener(new DebugWorkingMemoryEventListener());
 		return statefulKnowledgeSession;
 	}
-	
+
 	public void register(EObject object) {
 		if (!isConfigured(object)) {
 			object.eAdapters().add(factPublisher);
 		}
+	}
+
+	public void fire() {
+		if (!ScaffoldingContext.isScaffolding()) {
+			ScaffoldingContext.inScaffoldingSession(new Runnable() {
+				@Override
+				public void run() {
+					knowledgeSession.fireAllRules();
+				}
+			});
+			for (ScaffoldingEventListener listener : listeners) {
+				listener.fired();
+			}
+		} else {
+			throw new IllegalStateException("Already firing");
+		}
+	}
+
+	private List<ScaffoldingEventListener> listeners = new ArrayList<ScaffoldingEventListener>();
+
+	public void addEventListener(ScaffoldingEventListener listener) {
+		listeners.add(listener);
 	}
 
 	public static boolean isConfigured(EObject object) {

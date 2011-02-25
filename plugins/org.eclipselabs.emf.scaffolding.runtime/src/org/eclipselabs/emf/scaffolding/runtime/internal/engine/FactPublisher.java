@@ -72,12 +72,7 @@ public class FactPublisher extends EContentAdapter {
 			// Avoid nested firing
 			if (immediateFire) {
 				if (!ScaffoldingContext.isScaffolding()) {
-					ScaffoldingContext.inScaffoldingSession(new Runnable() {
-						@Override
-						public void run() {
-							statefulKnowledgeSession.fireAllRules();
-						}
-					});
+					scaffoldingExecutionEnvironment.fire();
 				}
 			}
 		}

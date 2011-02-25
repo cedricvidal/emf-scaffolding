@@ -172,12 +172,7 @@ public class EMFScaffoldingSessionListener extends EContentAdapter {
 				@Override
 				public IStatus run(IProgressMonitor monitor) {
 					try {
-						ScaffoldingContext.inScaffoldingSession(new Runnable() {
-							@Override
-							public void run() {
-								knowledgeSession.fireAllRules();
-							}
-						});
+						execEnv.fire();
 						return Status.OK_STATUS;
 					} finally {
 						firing.set(false);
