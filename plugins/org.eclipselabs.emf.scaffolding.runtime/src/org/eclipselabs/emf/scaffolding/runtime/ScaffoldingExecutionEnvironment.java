@@ -31,13 +31,19 @@ public class ScaffoldingExecutionEnvironment extends NotifierImpl {
 	protected FactPublisher factPublisher;
 
 	private StatefulKnowledgeSession knowledgeSession;
+	
+	
 
 	public ScaffoldingExecutionEnvironment(KnowledgeBase kbase) {
 	    this(createSession(kbase));
 	}
 
 	public ScaffoldingExecutionEnvironment(StatefulKnowledgeSession statefulKnowledgeSession) {
-	    this.factPublisher = new FactPublisher();
+	    this(statefulKnowledgeSession, new FactPublisher());
+	}
+
+	protected ScaffoldingExecutionEnvironment(StatefulKnowledgeSession statefulKnowledgeSession, FactPublisher factPublisher) {
+	    this.factPublisher = factPublisher;
 	    factPublisher.setStatefulKnowledgeSession(statefulKnowledgeSession);
 	    factPublisher.setScaffoldingExecutionEnvironment(this);
 	    this.knowledgeSession = statefulKnowledgeSession;

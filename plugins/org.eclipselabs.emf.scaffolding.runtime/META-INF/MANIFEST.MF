@@ -8,7 +8,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;bundle-version="2.5.0",
  org.eclipse.jdt.core;bundle-version="3.5.2",
  org.eclipselabs.emf.scaffolding.language,
- org.eclipse.emf.ecore.change
+ org.eclipse.emf.ecore.change,
+ com.google.collect;bundle-version="0.8.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ClassPath: .,
@@ -157,8 +158,8 @@ Export-Package: org.drools,
  org.drools.xml.changeset,
  org.drools.xml.jaxb.util,
  org.eclipselabs.emf.scaffolding.runtime,
- org.eclipselabs.emf.scaffolding.runtime.internal.compiler;x-friends:="org.eclipselabs.emf.scaffolding.tests",
- org.eclipselabs.emf.scaffolding.runtime.internal.engine;x-friends:="org.eclipselabs.emf.scaffolding.tests",
+ org.eclipselabs.emf.scaffolding.runtime.internal.compiler;x-friends:="org.eclipselabs.emf.scaffolding.edit,org.eclipselabs.emf.scaffolding.tests",
+ org.eclipselabs.emf.scaffolding.runtime.internal.engine;x-friends:="org.eclipselabs.emf.scaffolding.tests,org.eclipselabs.emf.scaffolding.edit",
  org.eclipselabs.emf.scaffolding.runtime.status,
  org.eclipselabs.emf.scaffolding.runtime.status.scaffoldingStatusCache,
  org.eclipselabs.emf.scaffolding.runtime.status.storage,

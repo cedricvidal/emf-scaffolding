@@ -18,6 +18,7 @@ import org.drools.runtime.StatefulKnowledgeSession;
 import org.eclipse.emf.common.command.CommandStackListener;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipselabs.emf.scaffolding.runtime.ScaffoldingExecutionEnvironment;
+import org.eclipselabs.emf.scaffolding.runtime.internal.engine.FactPublisher;
 
 public class EditScaffoldingExecutionEnvironment extends ScaffoldingExecutionEnvironment {
 
@@ -30,14 +31,24 @@ public class EditScaffoldingExecutionEnvironment extends ScaffoldingExecutionEnv
 		super(statefulKnowledgeSession);
 	}
 
+	// TODO make this protected
+	public EditScaffoldingExecutionEnvironment(
+			StatefulKnowledgeSession statefulKnowledgeSession,
+			FactPublisher factPublisher) {
+		super(statefulKnowledgeSession, factPublisher);
+	}
+
 	public void useEditingDomain(EditingDomain editingDomain) {
-		editingDomain.getCommandStack().addCommandStackListener(new CommandStackListener() {
-			@Override
-			public void commandStackChanged(EventObject eventObject) {
-				fire();
-			}
-		});
+		editingDomain.getCommandStack().addCommandStackListener(new FireOnCommandStackChanged());
 		factPublisher.setImmediateFire(false);
+	}
+
+	protected class FireOnCommandStackChanged implements
+			CommandStackListener {
+		@Override
+		public void commandStackChanged(EventObject eventObject) {
+			fire();
+		}
 	}
 
 }
