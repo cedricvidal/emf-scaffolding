@@ -14,37 +14,49 @@ package org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.presentati
 import static org.junit.Assert.*;
 
 import org.drools.builder.ResourceType;
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
+import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatusAdapterFactory;
+import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.runners.MockitoJUnitRunner;
 
+@RunWith(MockitoJUnitRunner.class)
 public class EMFScaffoldingSessionListenerTest {
+
+	EMFScaffoldingSessionListener emfScaffoldingSessionListener;
+
+	@Mock ScaffoldingStatusAdapterFactory scaffoldingStatusAdapterFactory = null;
+	@Mock AdapterFactoryEditingDomain editingDomain = null;
+
+	@Before
+	public void setup() {
+		emfScaffoldingSessionListener = new EMFScaffoldingSessionListener(editingDomain, scaffoldingStatusAdapterFactory);
+	}
 
 	@Test
 	public void fileWithDrlExtensionMapsToDrlResourceType() {
-		EMFScaffoldingSessionListener emfScaffoldingSessionListener = new EMFScaffoldingSessionListener(null);
 		assertEquals(ResourceType.DRL, emfScaffoldingSessionListener.getResourceType("test.drl"));
 	}
 
 	@Test
 	public void fileWithDrfExtensionMapsToDrfResourceType() {
-		EMFScaffoldingSessionListener emfScaffoldingSessionListener = new EMFScaffoldingSessionListener(null);
 		assertEquals(ResourceType.DRF, emfScaffoldingSessionListener.getResourceType("test.rf"));
 	}
 
 	@Test
 	public void fileWithXcsExtensionMapsToChangesetResourceType() {
-		EMFScaffoldingSessionListener emfScaffoldingSessionListener = new EMFScaffoldingSessionListener(null);
 		assertEquals(ResourceType.CHANGE_SET, emfScaffoldingSessionListener.getResourceType("test.xcs"));
 	}
 
 	@Test
 	public void fileWithDummyExtensionMapsToDrlResourceType() {
-		EMFScaffoldingSessionListener emfScaffoldingSessionListener = new EMFScaffoldingSessionListener(null);
 		assertEquals(ResourceType.DRL, emfScaffoldingSessionListener.getResourceType("test.xxxx"));
 	}
 
 	@Test
 	public void fileWithNoExtensionMapsToDrlResourceType() {
-		EMFScaffoldingSessionListener emfScaffoldingSessionListener = new EMFScaffoldingSessionListener(null);
 		assertEquals(ResourceType.DRL, emfScaffoldingSessionListener.getResourceType("test"));
 	}
 

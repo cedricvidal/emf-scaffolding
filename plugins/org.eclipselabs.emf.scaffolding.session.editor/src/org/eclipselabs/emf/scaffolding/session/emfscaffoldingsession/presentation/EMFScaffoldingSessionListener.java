@@ -43,7 +43,9 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.EContentAdapter;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.ui.console.MessageConsoleStream;
+import org.eclipselabs.emf.scaffolding.edit.EditScaffoldingExecutionEnvironment;
 import org.eclipselabs.emf.scaffolding.runtime.ScaffoldingExecutionEnvironment;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingContext;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatusAdapterFactory;
@@ -62,14 +64,16 @@ import org.eclipselabs.emf.scaffolding.session.util.ScaffoldingConsoleDroolsEven
 public class EMFScaffoldingSessionListener extends EContentAdapter {
 
 	private ScaffoldingStatusAdapterFactory scaffoldingStatusAdapterFactory;
+	private AdapterFactoryEditingDomain editingDomain;
 
 	public EMFScaffoldingSessionListener(
-			ScaffoldingStatusAdapterFactory scaffoldingStatusAdapterFactory) {
+			AdapterFactoryEditingDomain editingDomain, ScaffoldingStatusAdapterFactory scaffoldingStatusAdapterFactory) {
 		super();
 		this.scaffoldingStatusAdapterFactory = scaffoldingStatusAdapterFactory;
+		this.editingDomain = editingDomain;
 	}
 
-	private ScaffoldingExecutionEnvironment execEnv = null;
+	private EditScaffoldingExecutionEnvironment execEnv = null;
 	private StatefulKnowledgeSession knowledgeSession = null;
 	private KnowledgeBase kbase;
 
@@ -94,7 +98,7 @@ public class EMFScaffoldingSessionListener extends EContentAdapter {
 			/*
 			 * Configure ScaffoldingSession
 			 */
-			ScaffoldingExecutionEnvironment scaffoldingExecutionEnvironment = getScaffoldingExecutionEnvironment();
+			EditScaffoldingExecutionEnvironment scaffoldingExecutionEnvironment = getScaffoldingExecutionEnvironment();
 			ScaffoldingSession session = findScaffoldingSession(notifier);
 			if (scaffoldingExecutionEnvironment != null && session != null) {
 				scaffoldingExecutionEnvironment.register(session);
@@ -236,11 +240,12 @@ public class EMFScaffoldingSessionListener extends EContentAdapter {
 		
 	}
 
-	protected ScaffoldingExecutionEnvironment getScaffoldingExecutionEnvironment() {
+	protected EditScaffoldingExecutionEnvironment getScaffoldingExecutionEnvironment() {
 		StatefulKnowledgeSession knowledgeSession = getKnowledgeSession();
 
 		if(knowledgeSession != null && execEnv == null) {
-			execEnv = new ScaffoldingExecutionEnvironment(knowledgeSession);
+			execEnv = new EditScaffoldingExecutionEnvironment(knowledgeSession);
+			execEnv.useEditingDomain(editingDomain);
 			MessageConsoleStream output = ScaffoldingSessionEditorPlugin.INSTANCE.getConsole().newMessageStream();
 		}
 		return execEnv;

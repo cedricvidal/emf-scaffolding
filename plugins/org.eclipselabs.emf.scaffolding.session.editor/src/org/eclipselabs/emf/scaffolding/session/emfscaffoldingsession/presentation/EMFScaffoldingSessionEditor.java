@@ -980,7 +980,7 @@ public class EMFScaffoldingSessionEditor
 
 		scaffoldingStatusAdapterFactory.adaptAllNew(rootContent);
 
-		EMFScaffoldingSessionListener scaffoldingSessionListener = new EMFScaffoldingSessionListener(scaffoldingStatusAdapterFactory);
+		EMFScaffoldingSessionListener scaffoldingSessionListener = new EMFScaffoldingSessionListener(editingDomain, scaffoldingStatusAdapterFactory);
 		rootContent.eAdapters().add(scaffoldingSessionListener);
 
 		// End of EMF Scaffolding integration

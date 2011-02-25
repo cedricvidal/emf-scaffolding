@@ -19,6 +19,7 @@ import java.net.URISyntaxException;
 import java.net.URL;
 
 import org.drools.runtime.StatefulKnowledgeSession;
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatusAdapterFactory;
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.EMFScaffoldingSessionFactory;
 import org.eclipselabs.emf.scaffolding.session.emfscaffoldingsession.ScaffoldingFile;
@@ -28,11 +29,18 @@ import org.eclipselabs.emf.scaffolding.session.jobs.SynchronousJobScheduler;
 import org.eclipselabs.emf.scaffolding.session.util.KnowledgeSessionListenerManager;
 import org.eclipselabs.emf.scaffolding.tests.model1.Application;
 import org.eclipselabs.emf.scaffolding.tests.resources.Resources;
+import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.runners.MockitoJUnitRunner;
 
 import static junit.framework.Assert.*;
 
+@RunWith(MockitoJUnitRunner.class)
 public class RefreshScaffoldingSessionTest {
+
+	@Mock AdapterFactoryEditingDomain editingDomain;
 
 	@Test
 	public void refreshScaffoldingSession() throws URISyntaxException {
@@ -43,7 +51,7 @@ public class RefreshScaffoldingSessionTest {
 		ScaffoldingSession session = f.createScaffoldingSession();
 		scaffoldingStatusAdapterFactory.adaptAllNew(session);
 
-		EMFScaffoldingSessionListener scaffoldingSessionListener = new EMFScaffoldingSessionListener(
+		EMFScaffoldingSessionListener scaffoldingSessionListener = new EMFScaffoldingSessionListener(editingDomain,
 				scaffoldingStatusAdapterFactory) {
 			@Override
 			protected KnowledgeSessionListenerManager createKnowledgeSessionListenerManager() {
