@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.6"?>
 
-<target name="eclipse-sdk-3.7-xtext-1.0.1" sequenceNumber="4">
+<target name="eclipse-sdk-3.7-xtext-1.0.1" sequenceNumber="5">
 <locations>
 <location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.eclipse.xtext.xbase.feature.group" version="1.0.1.v201008251220"/>
@@ -26,5 +26,6 @@
 <unit id="org.eclipse.emf.compare.sdk.feature.group" version="1.1.1.v201009150357"/>
 <repository location="http://download.eclipse.org/releases/indigo"/>
 </location>
+<location path="${resource_loc:/org.eclipselabs.emf.scaffolding.target/plugins}" type="Directory"/>
 </locations>
 </target>
