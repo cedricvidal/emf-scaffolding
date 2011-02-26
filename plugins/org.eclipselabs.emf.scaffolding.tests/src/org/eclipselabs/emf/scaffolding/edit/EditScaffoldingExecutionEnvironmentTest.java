@@ -24,7 +24,7 @@ import org.eclipse.emf.edit.command.ChangeCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipselabs.emf.scaffolding.edit.EditScaffoldingExecutionEnvironment;
-import org.eclipselabs.emf.scaffolding.edit.EditScaffoldingExecutionEnvironment.FireOnCommandStackChanged;
+import org.eclipselabs.emf.scaffolding.edit.command.ScaffoldingCommandStackDecorator;
 import org.eclipselabs.emf.scaffolding.runtime.ScaffoldingEventListener;
 import org.eclipselabs.emf.scaffolding.runtime.internal.engine.FactPublisher;
 import org.eclipselabs.emf.scaffolding.tests.model1.Application;
@@ -57,12 +57,13 @@ public class EditScaffoldingExecutionEnvironmentTest {
 
 		@Before
 		public void setup() {
-			AdapterFactory adapterFactory = new Model1AdapterFactory();
-			commandStack = new BasicCommandStack();
-			editingDomain = new AdapterFactoryEditingDomain(adapterFactory,commandStack);
-
 			execEnv = new EditScaffoldingExecutionEnvironment(statefulKnowledgeSession);
 			execEnv.addEventListener(scaffoldingEventListener);
+
+			AdapterFactory adapterFactory = new Model1AdapterFactory();
+			commandStack = new BasicCommandStack();
+			editingDomain = new AdapterFactoryEditingDomain(adapterFactory, execEnv.prepareCommandStack(commandStack));
+
 		}
 
 		@Test
@@ -141,6 +142,7 @@ public class EditScaffoldingExecutionEnvironmentTest {
 		@Mock EditingDomain editingDomain;
 		@Mock StatefulKnowledgeSession statefulKnowledgeSession;
 		@Mock FactPublisher factPublisher;
+		@Mock ScaffoldingCommandStackDecorator commandStackDecorator;
 		@Mock CommandStack commandStack;
 
 		private EditScaffoldingExecutionEnvironment execEnv;
@@ -148,14 +150,20 @@ public class EditScaffoldingExecutionEnvironmentTest {
 		@Before
 		public void setup() {
 			execEnv = new EditScaffoldingExecutionEnvironment(statefulKnowledgeSession, factPublisher);
-			given(editingDomain.getCommandStack()).willReturn(commandStack);
 		}
 
 		@Test
-		public void whenUsingAnEditingDomainThenImmediateFireIsOffAndFireOnCommandStackChanged() {
+		public void whenUsingAnEditingDomainThenImmediateFireIsOff() {
+			given(editingDomain.getCommandStack()).willReturn(commandStackDecorator);
 			execEnv.useEditingDomain(editingDomain);
 			verify(factPublisher).setImmediateFire(false);
-			verify(commandStack).addCommandStackListener(isA(FireOnCommandStackChanged.class));
+			assertEquals(editingDomain, execEnv.getEditingDomain());
+		}
+
+		@Test(expected=IllegalStateException.class)
+		public void whenUsingAnEditingDomainNotConfiguredWithCommandStackDecoratorThenThrowIllegalStateException() {
+			given(editingDomain.getCommandStack()).willReturn(commandStack);
+			execEnv.useEditingDomain(editingDomain);
 		}
 
 	}

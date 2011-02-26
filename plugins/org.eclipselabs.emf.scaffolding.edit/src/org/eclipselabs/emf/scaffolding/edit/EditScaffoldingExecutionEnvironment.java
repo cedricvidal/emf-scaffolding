@@ -11,16 +11,21 @@
  *******************************************************************************/
 package org.eclipselabs.emf.scaffolding.edit;
 
-import java.util.EventObject;
-
 import org.drools.KnowledgeBase;
 import org.drools.runtime.StatefulKnowledgeSession;
-import org.eclipse.emf.common.command.CommandStackListener;
+import org.eclipse.emf.common.command.CommandStack;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipselabs.emf.scaffolding.edit.command.ScaffoldingCommandStackDecorator;
 import org.eclipselabs.emf.scaffolding.runtime.ScaffoldingExecutionEnvironment;
 import org.eclipselabs.emf.scaffolding.runtime.internal.engine.FactPublisher;
 
 public class EditScaffoldingExecutionEnvironment extends ScaffoldingExecutionEnvironment {
+
+	private EditingDomain editingDomain;
+
+	public EditingDomain getEditingDomain() {
+		return editingDomain;
+	}
 
 	public EditScaffoldingExecutionEnvironment(KnowledgeBase kbase) {
 		super(kbase);
@@ -39,16 +44,15 @@ public class EditScaffoldingExecutionEnvironment extends ScaffoldingExecutionEnv
 	}
 
 	public void useEditingDomain(EditingDomain editingDomain) {
-		editingDomain.getCommandStack().addCommandStackListener(new FireOnCommandStackChanged());
+		if (!(editingDomain.getCommandStack() instanceof ScaffoldingCommandStackDecorator)) {
+			throw new IllegalStateException("EditingDomain has not been configured with the " + ScaffoldingCommandStackDecorator.class.getName());
+		}
 		factPublisher.setImmediateFire(false);
+		this.editingDomain = editingDomain;
 	}
 
-	protected class FireOnCommandStackChanged implements
-			CommandStackListener {
-		@Override
-		public void commandStackChanged(EventObject eventObject) {
-			fire();
-		}
+	public ScaffoldingCommandStackDecorator prepareCommandStack(CommandStack commandStack) {
+		return new ScaffoldingCommandStackDecorator(commandStack, this);
 	}
 
 }

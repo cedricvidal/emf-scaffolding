@@ -35,7 +35,9 @@ import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.command.CommandStack;
 import org.eclipse.emf.common.command.CommandStackListener;
 import org.eclipse.emf.common.command.CompoundCommand;
+import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.AdapterFactory;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.edit.command.ChangeCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
@@ -54,6 +56,9 @@ import org.eclipselabs.emf.scaffolding.tests.resources.Resources;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.runners.MockitoJUnitRunner;
 
 /**
  * Tests for ChangeCommand. In each case, the model is built, the command is
@@ -61,18 +66,15 @@ import org.junit.Test;
  * executability/undoability/redoability of the command are tested between each
  * step.
  */
+@RunWith(MockitoJUnitRunner.class)
 public class EditingDomainIntegrationTest {
 
 	protected EditingDomain editingDomain;
 	private EditScaffoldingExecutionEnvironment execEnv;
-	private ScaffoldingEventListener scaffoldingEventListener;
+	@Mock ScaffoldingEventListener scaffoldingEventListener;
 
 	@Before
 	public void setup() {
-		AdapterFactory adapterFactory = new Model1AdapterFactory();
-		CommandStack commandStack = new BasicCommandStack();
-		editingDomain = new AdapterFactoryEditingDomain(adapterFactory,
-				commandStack);
 
 		// Init Knowledge Base from drl files
 		KnowledgeBase kbase = KnowledgeBaseFactory.newKnowledgeBase();
@@ -87,11 +89,12 @@ public class EditingDomainIntegrationTest {
 
 		final StatefulKnowledgeSession statefulKnowledgeSession = kbase.newStatefulKnowledgeSession();
 		statefulKnowledgeSession.addEventListener(new DebugWorkingMemoryEventListener());
-
 		execEnv = new EditScaffoldingExecutionEnvironment(statefulKnowledgeSession);
-
-		scaffoldingEventListener = mock(ScaffoldingEventListener.class);
 		execEnv.addEventListener(scaffoldingEventListener);
+
+		AdapterFactory adapterFactory = new Model1AdapterFactory();
+		editingDomain = new AdapterFactoryEditingDomain(adapterFactory,
+				execEnv.prepareCommandStack(new BasicCommandStack()));
 
 		execEnv.useEditingDomain(editingDomain);
 	}
@@ -99,7 +102,7 @@ public class EditingDomainIntegrationTest {
 	@Test
 	public void undoSetEntityNameShouldRemoveScaffoldedDao() {
 
-		Application application = Model1Factory.eINSTANCE.createApplication();
+		final Application application = Model1Factory.eINSTANCE.createApplication();
 
 		// Init Knowledge Base from drl files
 		KnowledgeBase kbase = KnowledgeBaseFactory.newKnowledgeBase();
@@ -116,8 +119,6 @@ public class EditingDomainIntegrationTest {
 		statefulKnowledgeSession.addEventListener(new DebugWorkingMemoryEventListener());
 
 		// Init Exec environment
-		final EditScaffoldingExecutionEnvironment execEnv = new EditScaffoldingExecutionEnvironment(statefulKnowledgeSession);
-		execEnv.useEditingDomain(editingDomain);
 		execEnv.register(application);
 
 		// State 0
@@ -134,11 +135,14 @@ public class EditingDomainIntegrationTest {
 		ChangeCommand command = new ChangeCommand(application) {
 			@Override
 			protected void doExecute() {
+				Entity entity = (Entity)application.getElements().get(0);
 				user.setName("user");
+				verify(scaffoldingEventListener, times(0)).fired();
 			}
 		};
 
 		editingDomain.getCommandStack().execute(command);
+		verify(scaffoldingEventListener, times(1)).fired();
 		assertTrue(command.canExecute());
 		assertTrue(command.canUndo());
 
@@ -150,6 +154,11 @@ public class EditingDomainIntegrationTest {
 		assertNotNull(userDao);
 		assertEquals(user, userDao.getEntity());
 		assertScaffoldingAdapterIsRegistered(userDao);
+
+		// Deactivate FactPublisher because deletion is not synchronized
+		// properly and we only want to check that the commands undo properly
+		Adapter factPublisher = EcoreUtil.getExistingAdapter(application, FactPublisher.class);
+		application.eAdapters().remove(factPublisher);
 
 		editingDomain.getCommandStack().undo();
 		assertTrue(command.canExecute());

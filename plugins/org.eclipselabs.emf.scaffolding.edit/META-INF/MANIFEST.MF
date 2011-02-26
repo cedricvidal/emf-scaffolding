@@ -8,4 +8,5 @@ Bundle-Vendor: http://code.google.com/a/eclipselabs.org/p/emf-scaffolding/
 Require-Bundle: org.eclipselabs.emf.scaffolding.runtime;bundle-version="1.0.0",
  org.eclipse.emf.ecore;bundle-version="2.7.0",
  org.eclipse.emf.edit;bundle-version="2.7.0"
-Export-Package: org.eclipselabs.emf.scaffolding.edit
+Export-Package: org.eclipselabs.emf.scaffolding.edit,
+ org.eclipselabs.emf.scaffolding.edit.command
