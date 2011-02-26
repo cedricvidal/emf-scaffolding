@@ -11,7 +11,7 @@
  *******************************************************************************/
 package org.eclipselabs.emf.scaffolding.edit;
 
-import static org.eclipselabs.emf.scaffolding.tests.ESAssert.assertScaffoldingAdapterIsRegistered;
+import static org.eclipselabs.emf.scaffolding.tests.ESAssert.*;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.*;
@@ -49,6 +49,7 @@ import org.eclipselabs.emf.scaffolding.runtime.ScaffoldingEventListener;
 import org.eclipselabs.emf.scaffolding.runtime.ScaffoldingExecutionEnvironment;
 import org.eclipselabs.emf.scaffolding.runtime.internal.engine.FactPublisher;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingContext;
+import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatusAdapterFactory;
 import org.eclipselabs.emf.scaffolding.tests.model1.Application;
 import org.eclipselabs.emf.scaffolding.tests.model1.DAO;
 import org.eclipselabs.emf.scaffolding.tests.model1.Entity;
@@ -131,6 +132,9 @@ public class EditingDomainIntegrationTest {
 		// Init Exec environment
 		execEnv.register(application);
 
+		ScaffoldingStatusAdapterFactory scaffoldingStatusAdapterFactory = new ScaffoldingStatusAdapterFactory();
+		scaffoldingStatusAdapterFactory.adaptAllNew(application);
+
 		// State 0
 
 		final Entity user = Model1Factory.eINSTANCE.createEntity();
@@ -164,6 +168,9 @@ public class EditingDomainIntegrationTest {
 		assertNotNull(userDao);
 		assertEquals(user, userDao.getEntity());
 		assertScaffoldingAdapterIsRegistered(userDao);
+		assertScaffolded(userDao);
+
+		// UNDO
 
 		editingDomain.getCommandStack().undo();
 		assertTrue(command.canExecute());
@@ -173,6 +180,8 @@ public class EditingDomainIntegrationTest {
 
 		assertNull(user.getName());
 		assertEquals(1, application.getElements().size());
+
+		// REDO
 
 		editingDomain.getCommandStack().redo();
 		assertTrue(command.canExecute());
@@ -187,6 +196,8 @@ public class EditingDomainIntegrationTest {
 		userDao = (DAO) application.getElements().get(1);
 		assertNotNull(userDao);
 		assertEquals(user, userDao.getEntity());
+		assertScaffoldingAdapterIsRegistered(userDao);
+		assertScaffolded(userDao);
 	}
 
 }
