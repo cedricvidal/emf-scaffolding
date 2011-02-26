@@ -31,8 +31,9 @@ public class ScaffoldingExecutionEnvironment extends NotifierImpl {
 	protected FactPublisher factPublisher;
 
 	private StatefulKnowledgeSession knowledgeSession;
-	
-	
+
+	public ScaffoldingExecutionEnvironment() {
+	}
 
 	public ScaffoldingExecutionEnvironment(KnowledgeBase kbase) {
 	    this(createSession(kbase));

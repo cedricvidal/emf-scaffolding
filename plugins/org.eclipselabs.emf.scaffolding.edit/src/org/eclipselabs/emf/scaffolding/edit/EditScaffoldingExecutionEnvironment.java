@@ -15,6 +15,7 @@ import org.drools.KnowledgeBase;
 import org.drools.runtime.StatefulKnowledgeSession;
 import org.eclipse.emf.common.command.CommandStack;
 import org.eclipse.emf.edit.domain.EditingDomain;
+import org.eclipselabs.emf.scaffolding.edit.command.IScaffoldingCommandStackDecorator;
 import org.eclipselabs.emf.scaffolding.edit.command.ScaffoldingCommandStackDecorator;
 import org.eclipselabs.emf.scaffolding.runtime.ScaffoldingExecutionEnvironment;
 import org.eclipselabs.emf.scaffolding.runtime.internal.engine.FactPublisher;
@@ -44,9 +45,14 @@ public class EditScaffoldingExecutionEnvironment extends ScaffoldingExecutionEnv
 	}
 
 	public void useEditingDomain(EditingDomain editingDomain) {
-		if (!(editingDomain.getCommandStack() instanceof ScaffoldingCommandStackDecorator)) {
-			throw new IllegalStateException("EditingDomain has not been configured with the " + ScaffoldingCommandStackDecorator.class.getName());
+		if (!(editingDomain.getCommandStack() instanceof IScaffoldingCommandStackDecorator)) {
+			throw new IllegalStateException("EditingDomain has not been configured with the " + IScaffoldingCommandStackDecorator.class.getName());
 		}
+
+		// TODO Reverse control, the ScaffoldingExecutionEnvironment should be passed to the ScaffoldingCommandStackDecorator on init
+		IScaffoldingCommandStackDecorator scaffoldingCommandStack = (IScaffoldingCommandStackDecorator) editingDomain.getCommandStack();
+		scaffoldingCommandStack.setScaffoldingExecutionEnvironment(this);
+
 		factPublisher.setImmediateFire(false);
 		this.editingDomain = editingDomain;
 	}

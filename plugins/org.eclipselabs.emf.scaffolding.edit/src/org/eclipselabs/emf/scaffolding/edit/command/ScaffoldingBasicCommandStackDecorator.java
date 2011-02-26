@@ -11,13 +11,13 @@
  *******************************************************************************/
 package org.eclipselabs.emf.scaffolding.edit.command;
 
+import org.eclipse.emf.common.command.BasicCommandStack;
 import org.eclipse.emf.common.command.Command;
-import org.eclipse.emf.common.command.CommandStack;
 import org.eclipselabs.emf.scaffolding.edit.EditScaffoldingExecutionEnvironment;
-import org.eclipselabs.emf.scaffolding.edit.util.CommandStackDelegateSupport;
+import org.eclipselabs.emf.scaffolding.edit.util.BasicCommandStackDelegateSupport;
 
-public class ScaffoldingCommandStackDecorator extends
-		CommandStackDelegateSupport implements IScaffoldingCommandStackDecorator {
+public class ScaffoldingBasicCommandStackDecorator extends
+		BasicCommandStackDelegateSupport implements IScaffoldingCommandStackDecorator {
 
 	private EditScaffoldingExecutionEnvironment scaffoldingExecutionEnvironment;
 
@@ -25,19 +25,15 @@ public class ScaffoldingCommandStackDecorator extends
 		return scaffoldingExecutionEnvironment;
 	}
 
-	/* (non-Javadoc)
-	 * @see org.eclipselabs.emf.scaffolding.edit.command.IScaffoldingCommandStackDecorator#setScaffoldingExecutionEnvironment(org.eclipselabs.emf.scaffolding.edit.EditScaffoldingExecutionEnvironment)
-	 */
-	@Override
 	public void setScaffoldingExecutionEnvironment(EditScaffoldingExecutionEnvironment execEnv) {
 		this.scaffoldingExecutionEnvironment = execEnv;
 	}
 
-	public ScaffoldingCommandStackDecorator(CommandStack delegate) {
+	public ScaffoldingBasicCommandStackDecorator(BasicCommandStack delegate) {
 		super(delegate);
 	}
 
-	public ScaffoldingCommandStackDecorator(CommandStack delegate, EditScaffoldingExecutionEnvironment execEnv) {
+	public ScaffoldingBasicCommandStackDecorator(BasicCommandStack delegate, EditScaffoldingExecutionEnvironment execEnv) {
 		super(delegate);
 		this.scaffoldingExecutionEnvironment = execEnv;
 	}

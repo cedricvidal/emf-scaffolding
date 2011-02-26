@@ -125,6 +125,9 @@ import org.eclipse.ui.views.contentoutline.IContentOutlinePage;
 import org.eclipse.ui.views.properties.IPropertySheetPage;
 import org.eclipse.ui.views.properties.PropertySheet;
 import org.eclipse.ui.views.properties.PropertySheetPage;
+import org.eclipselabs.emf.scaffolding.edit.command.ScaffoldingBasicCommandStackDecorator;
+import org.eclipselabs.emf.scaffolding.edit.command.ScaffoldingCommand;
+import org.eclipselabs.emf.scaffolding.edit.command.ScaffoldingCommandStackDecorator;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatusAdapterFactory;
 import org.eclipselabs.emf.scaffolding.runtime.status.ScaffoldingStatusChangedNotification;
 import org.eclipselabs.emf.scaffolding.runtime.status.scaffoldingStatusCache.ScaffoldingStatusCache;
@@ -711,6 +714,7 @@ public class EMFScaffoldingSessionEditor
 		// Create the command stack that will notify this editor as commands are executed.
 		//
 		BasicCommandStack commandStack = new BasicCommandStack();
+		ScaffoldingBasicCommandStackDecorator scaffoldingCommandStack = new ScaffoldingBasicCommandStackDecorator(commandStack);
 
 		// Add a listener to set the most recent command's affected objects to be the selection of the viewer with focus.
 		//
@@ -738,7 +742,7 @@ public class EMFScaffoldingSessionEditor
 
 		// Create the editing domain with a special command stack.
 		//
-		editingDomain = new AdapterFactoryEditingDomain(adapterFactory, commandStack, new HashMap<Resource, Boolean>());
+		editingDomain = new AdapterFactoryEditingDomain(adapterFactory, scaffoldingCommandStack, new HashMap<Resource, Boolean>());
 	}
 
 	protected StoreAsideStrategy createScaffoldingStatusStorageStrategy() {
