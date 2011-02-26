@@ -11,58 +11,66 @@
  *******************************************************************************/
 package org.eclipselabs.emf.scaffolding.edit.command;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
+import static org.mockito.BDDMockito.*;
 
-import java.util.List;
-
+import org.eclipse.emf.common.command.BasicCommandStack;
 import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.command.CommandStack;
+import org.eclipse.emf.ecore.change.util.ChangeRecorder;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipselabs.emf.scaffolding.edit.EditScaffoldingExecutionEnvironment;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.ArgumentCaptor;
+import org.mockito.InOrder;
 import org.mockito.Mock;
+import org.mockito.invocation.InvocationOnMock;
 import org.mockito.runners.MockitoJUnitRunner;
-import static org.mockito.BDDMockito.*;
+import org.mockito.stubbing.Answer;
 
-/**
- * @author cvidal
- *
- */
 @RunWith(MockitoJUnitRunner.class)
-public class ScaffoldingCommandStackDecoratorTest {
+public class FiringCommandTest {
 
 	@Mock EditScaffoldingExecutionEnvironment execEnv;
 	@Mock CommandStack delegate;
 	@Mock Command originalCommand;
 	@Mock EditingDomain editingDomain;
 	@Mock ResourceSet resourceSet;
+	@Mock ChangeRecorder changeRecorder;
 
-	ScaffoldingCommandStackDecorator scaffoldingCommandStackDecorator;
+	FiringCommand firingCommand;
 
 	@Before
 	public void setup() {
 		given(execEnv.getEditingDomain()).willReturn(editingDomain);
 		given(editingDomain.getResourceSet()).willReturn(resourceSet);
 		given(originalCommand.canExecute()).willReturn(true);
-		scaffoldingCommandStackDecorator = new ScaffoldingCommandStackDecorator(delegate, execEnv);
+		firingCommand = new FiringCommand(execEnv, changeRecorder);
 	}
 
-	/**
-	 * Test method for {@link org.eclipselabs.emf.scaffolding.edit.command.ScaffoldingCommandStackDecorator#execute(org.eclipse.emf.common.command.Command)}.
-	 */
 	@Test
-	public void executeShouldDecorateTheCommandWithScaffoldingCommand() {
-		scaffoldingCommandStackDecorator.execute(originalCommand);
-		ArgumentCaptor<ScaffoldingCommand> argument = ArgumentCaptor.forClass(ScaffoldingCommand.class);
-		verify(delegate).execute(argument.capture());
-		List<Command> commands = argument.getValue().getCommandList();
-		assertEquals(2, commands.size());
-		assertEquals(originalCommand, commands.get(0));
-		assertTrue(commands.get(1) instanceof FiringCommand);
+	public void executeShouldRecordAndFire() {
+		firingCommand.execute();
+		InOrder inOrder = inOrder(changeRecorder, execEnv);
+		inOrder.verify(changeRecorder).beginRecording(anyCollectionOf(ResourceSet.class));
+		inOrder.verify(execEnv).fire();
 	}
+//
+//	@Test
+//	public void changeset() {
+//		
+//		doAnswer(new Answer<Void>() {
+//
+//			@Override
+//			public Void answer(InvocationOnMock invocation) throws Throwable {
+//				// TODO Auto-generated method stub
+//				return null;
+//			}
+//		}).when(execEnv).fire();
+//
+//		firingCommand.execute();
+//	}
 
 }

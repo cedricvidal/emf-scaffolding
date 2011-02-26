@@ -12,9 +12,9 @@
 package org.eclipselabs.emf.scaffolding.edit.command;
 
 import static org.junit.Assert.*;
+import static org.mockito.BDDMockito.*;
 
-import java.util.List;
-
+import org.eclipse.emf.common.command.BasicCommandStack;
 import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.command.CommandStack;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -23,46 +23,52 @@ import org.eclipselabs.emf.scaffolding.edit.EditScaffoldingExecutionEnvironment;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-import static org.mockito.BDDMockito.*;
 
 /**
  * @author cvidal
  *
  */
 @RunWith(MockitoJUnitRunner.class)
-public class ScaffoldingCommandStackDecoratorTest {
+public class ScaffoldingCommandTest {
 
 	@Mock EditScaffoldingExecutionEnvironment execEnv;
 	@Mock CommandStack delegate;
 	@Mock Command originalCommand;
 	@Mock EditingDomain editingDomain;
 	@Mock ResourceSet resourceSet;
+	@Mock FiringCommand firingCommand;
+	CommandStack commandStack = new BasicCommandStack();
 
-	ScaffoldingCommandStackDecorator scaffoldingCommandStackDecorator;
+	ScaffoldingCommand scaffoldingCommand;
 
 	@Before
 	public void setup() {
 		given(execEnv.getEditingDomain()).willReturn(editingDomain);
 		given(editingDomain.getResourceSet()).willReturn(resourceSet);
 		given(originalCommand.canExecute()).willReturn(true);
-		scaffoldingCommandStackDecorator = new ScaffoldingCommandStackDecorator(delegate, execEnv);
+		given(firingCommand.canExecute()).willReturn(true);
+		scaffoldingCommand = new ScaffoldingCommand(originalCommand, execEnv, firingCommand);
 	}
 
-	/**
-	 * Test method for {@link org.eclipselabs.emf.scaffolding.edit.command.ScaffoldingCommandStackDecorator#execute(org.eclipse.emf.common.command.Command)}.
-	 */
 	@Test
-	public void executeShouldDecorateTheCommandWithScaffoldingCommand() {
-		scaffoldingCommandStackDecorator.execute(originalCommand);
-		ArgumentCaptor<ScaffoldingCommand> argument = ArgumentCaptor.forClass(ScaffoldingCommand.class);
-		verify(delegate).execute(argument.capture());
-		List<Command> commands = argument.getValue().getCommandList();
-		assertEquals(2, commands.size());
-		assertEquals(originalCommand, commands.get(0));
-		assertTrue(commands.get(1) instanceof FiringCommand);
+	public void executeShouldExecuteOriginalAndFiringCommands() {
+		scaffoldingCommand.execute();
+		verify(originalCommand, times(1)).execute();
+		verify(firingCommand, times(1)).execute();
+	}
+
+	@Test
+	public void commandStackExecuteShouldExecuteOriginalAndFiringCommands() {
+		commandStack.execute(scaffoldingCommand);
+		verify(originalCommand, times(1)).execute();
+		verify(firingCommand, times(1)).execute();
+	}
+
+	@Test
+	public void scaffoldingCommandCanExecuteIfOriginalCommandCan() {
+		assertTrue(scaffoldingCommand.canExecute());
 	}
 
 }

@@ -24,10 +24,20 @@ public class ScaffoldingCommand extends CompoundCommand {
 	private static final String DESCRIPTION = "Decorates a command with scaffolding";
 	private static final String LABEL = "Scaffolding";
 
+	protected Command decorated;
+	protected FiringCommand firingCommand;
+
 	public ScaffoldingCommand(Command decorated, EditScaffoldingExecutionEnvironment execEnv) {
-		super(LABEL, DESCRIPTION);
+		this(decorated, execEnv, new FiringCommand(execEnv));
+	}
+
+	// TODO make it protected for Unit Test only
+	public ScaffoldingCommand(Command decorated, EditScaffoldingExecutionEnvironment execEnv, FiringCommand firingCommand) {
+		super(0, LABEL, DESCRIPTION);
+		this.decorated = decorated;
+		this.firingCommand = firingCommand;
 		append(decorated);
-		append(new FiringCommand(execEnv));
+		append(firingCommand);
 	}
 
 }

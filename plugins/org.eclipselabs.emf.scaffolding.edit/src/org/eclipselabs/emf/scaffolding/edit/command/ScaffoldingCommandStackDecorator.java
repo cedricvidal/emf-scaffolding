@@ -28,7 +28,7 @@ public class ScaffoldingCommandStackDecorator extends
 
 	@Override
 	public void execute(Command command) {
-		ScaffoldingCommand wrapper = new ScaffoldingCommand(command, execEnv);
+		ScaffoldingCommand wrapper = new ScaffoldingCommand(command, execEnv, new FiringCommand(execEnv));
 		super.execute(wrapper);
 	}
 

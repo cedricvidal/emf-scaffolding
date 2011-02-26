@@ -19,6 +19,7 @@ import static org.mockito.Mockito.*;
 
 import java.util.Collection;
 import java.util.EventObject;
+import java.util.HashMap;
 
 import org.drools.KnowledgeBase;
 import org.drools.KnowledgeBaseFactory;
@@ -37,6 +38,8 @@ import org.eclipse.emf.common.command.CommandStackListener;
 import org.eclipse.emf.common.command.CompoundCommand;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.AdapterFactory;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.edit.command.ChangeCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
@@ -53,6 +56,7 @@ import org.eclipselabs.emf.scaffolding.tests.model1.Model1Factory;
 import org.eclipselabs.emf.scaffolding.tests.model1.Model1Package;
 import org.eclipselabs.emf.scaffolding.tests.model1.util.Model1AdapterFactory;
 import org.eclipselabs.emf.scaffolding.tests.resources.Resources;
+import org.eclipselabs.emf.scaffolding.tests.util.MemoryUriHandler;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -95,14 +99,20 @@ public class EditingDomainIntegrationTest {
 		AdapterFactory adapterFactory = new Model1AdapterFactory();
 		editingDomain = new AdapterFactoryEditingDomain(adapterFactory,
 				execEnv.prepareCommandStack(new BasicCommandStack()));
+		HashMap<URI, byte[]> store = new HashMap<URI, byte[]>();
+		editingDomain.getResourceSet().getURIConverter().getURIHandlers().add(0, new MemoryUriHandler(store));
 
 		execEnv.useEditingDomain(editingDomain);
 	}
 
+	protected static final String FS_ROOT = "memory:";
+
 	@Test
 	public void undoSetEntityNameShouldRemoveScaffoldedDao() {
 
+		Resource res = editingDomain.getResourceSet().createResource(URI.createURI(FS_ROOT + "model.xmi"));
 		final Application application = Model1Factory.eINSTANCE.createApplication();
+		res.getContents().add(application);
 
 		// Init Knowledge Base from drl files
 		KnowledgeBase kbase = KnowledgeBaseFactory.newKnowledgeBase();
@@ -155,11 +165,6 @@ public class EditingDomainIntegrationTest {
 		assertEquals(user, userDao.getEntity());
 		assertScaffoldingAdapterIsRegistered(userDao);
 
-		// Deactivate FactPublisher because deletion is not synchronized
-		// properly and we only want to check that the commands undo properly
-		Adapter factPublisher = EcoreUtil.getExistingAdapter(application, FactPublisher.class);
-		application.eAdapters().remove(factPublisher);
-
 		editingDomain.getCommandStack().undo();
 		assertTrue(command.canExecute());
 		assertTrue(command.canUndo());
@@ -168,7 +173,6 @@ public class EditingDomainIntegrationTest {
 
 		assertNull(user.getName());
 		assertEquals(1, application.getElements().size());
-		assertScaffoldingAdapterIsRegistered(user);
 
 		editingDomain.getCommandStack().redo();
 		assertTrue(command.canExecute());
@@ -183,7 +187,6 @@ public class EditingDomainIntegrationTest {
 		userDao = (DAO) application.getElements().get(1);
 		assertNotNull(userDao);
 		assertEquals(user, userDao.getEntity());
-		assertScaffoldingAdapterIsRegistered(userDao);
 	}
 
 }

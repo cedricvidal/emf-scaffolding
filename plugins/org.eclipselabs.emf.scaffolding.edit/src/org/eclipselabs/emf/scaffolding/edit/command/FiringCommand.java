@@ -11,6 +11,8 @@
  *******************************************************************************/
 package org.eclipselabs.emf.scaffolding.edit.command;
 
+import org.eclipse.emf.ecore.change.ChangeDescription;
+import org.eclipse.emf.ecore.change.util.ChangeRecorder;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.edit.command.ChangeCommand;
 import org.eclipselabs.emf.scaffolding.edit.EditScaffoldingExecutionEnvironment;
@@ -32,6 +34,16 @@ public class FiringCommand extends ChangeCommand {
 		this.execEnv = execEnv;
 	}
 
+	/**
+	 * @param execEnv 
+	 * @param changeRecorder TODO
+	 */
+	// TODO make it protected for Unit Test only
+	public FiringCommand(EditScaffoldingExecutionEnvironment execEnv, ChangeRecorder changeRecorder) {
+		super(changeRecorder, notifier(execEnv));
+		this.execEnv = execEnv;
+	}
+
 	private static ResourceSet notifier(
 			EditScaffoldingExecutionEnvironment execEnv) {
 		return execEnv.getEditingDomain().getResourceSet();
@@ -45,4 +57,11 @@ public class FiringCommand extends ChangeCommand {
 		execEnv.fire();
 	}
 
+	/* (non-Javadoc)
+	 * @see org.eclipse.emf.edit.command.ChangeCommand#getChangeDescription()
+	 */
+	@Override
+	protected ChangeDescription getChangeDescription() {
+		return super.getChangeDescription();
+	}
 }
