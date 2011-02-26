@@ -11,10 +11,9 @@
  *******************************************************************************/
 package org.eclipselabs.emf.scaffolding.edit.command;
 
-import static org.junit.Assert.assertTrue;
 import static org.mockito.BDDMockito.*;
+import static java.util.Collections.*;
 
-import org.eclipse.emf.common.command.BasicCommandStack;
 import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.command.CommandStack;
 import org.eclipse.emf.ecore.change.util.ChangeRecorder;
@@ -26,9 +25,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InOrder;
 import org.mockito.Mock;
-import org.mockito.invocation.InvocationOnMock;
 import org.mockito.runners.MockitoJUnitRunner;
-import org.mockito.stubbing.Answer;
 
 @RunWith(MockitoJUnitRunner.class)
 public class FiringCommandTest {
@@ -51,26 +48,11 @@ public class FiringCommandTest {
 	}
 
 	@Test
-	public void executeShouldRecordAndFire() {
+	public void executeShouldRecordEditingDomainResourceSetAndFire() {
 		firingCommand.execute();
 		InOrder inOrder = inOrder(changeRecorder, execEnv);
-		inOrder.verify(changeRecorder).beginRecording(anyCollectionOf(ResourceSet.class));
+		inOrder.verify(changeRecorder).beginRecording(eq(singleton(resourceSet)));
 		inOrder.verify(execEnv).fire();
 	}
-//
-//	@Test
-//	public void changeset() {
-//		
-//		doAnswer(new Answer<Void>() {
-//
-//			@Override
-//			public Void answer(InvocationOnMock invocation) throws Throwable {
-//				// TODO Auto-generated method stub
-//				return null;
-//			}
-//		}).when(execEnv).fire();
-//
-//		firingCommand.execute();
-//	}
 
 }
