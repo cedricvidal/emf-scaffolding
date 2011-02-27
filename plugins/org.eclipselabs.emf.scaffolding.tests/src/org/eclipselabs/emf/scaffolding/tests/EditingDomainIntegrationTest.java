@@ -9,7 +9,7 @@
  *     Cedric Vidal - initial API and implementation
  *
  *******************************************************************************/
-package org.eclipselabs.emf.scaffolding.edit;
+package org.eclipselabs.emf.scaffolding.tests;
 
 import static org.eclipselabs.emf.scaffolding.tests.ESAssert.*;
 import static org.junit.Assert.assertEquals;
